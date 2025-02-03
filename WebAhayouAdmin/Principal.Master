@@ -1,0 +1,207 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="WebAhayouAdmin.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+	<title>Ahayou administrador</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="/assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="/assets/css/default/app.min.css" rel="stylesheet" />
+	<!-- ================== END core-css ================== -->
+
+	<!-- ================== BEGIN page-css ================== -->
+	<link href="assets/plugins/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" />
+	<!-- ================== END page-css ================== -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+	  <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
+  <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
+</head>
+<body style="background-image:url('Imagenes/fondo_negro.png')">
+    <form id="form1" runat="server" >
+		<!-- BEGIN #loader -->
+		<div id="loader" class="app-loader">
+			<span class="spinner"></span>
+		</div>
+		<!-- END #loader -->
+		<!-- BEGIN #app -->
+	<div id="app" class="app app-header-fixed app-sidebar-fixed " >
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN navbar-header -->
+			<div class="navbar-header" style="background-color:black">
+				<a href="index.html" class="navbar-brand"><asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/logo-ahayou.png" /> </a>
+				<button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- END navbar-header -->
+			<!-- BEGIN header-nav -->
+			<div class="navbar-nav" style="background-color:black">
+				<div class="navbar-item navbar-form">
+					
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+						</div>
+					
+				</div>
+				<div class="navbar-item dropdown">
+					<a href="#" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon">
+						<i class="fa fa-bell"></i>
+						<span class="badge">5</span>
+					</a>
+					<div class="dropdown-menu media-list dropdown-menu-end">
+						<div class="dropdown-header">NOTIFICATIONS (5)</div>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-bug media-object bg-gray-500"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+								<div class="text-muted fs-10px">3 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
+								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">John Smith</h6>
+								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+								<div class="text-muted fs-10px">25 minutes ago</div>
+							</div>
+						</a>
+						
+						<div class="dropdown-footer text-center">
+							<a href="javascript:;" class="text-decoration-none">View more</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="navbar-item navbar-user dropdown">
+					<a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+						<img src="../assets/img/user/user-13.jpg" alt="" /> 
+						<span>
+							<asp:Label ID="lblUsuario" ForeColor="White" runat="server" Text=""></asp:Label>
+							<b class="caret"></b>
+						</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-1">
+						<a href="extra_profile.html" class="dropdown-item">Edit Profile</a>
+						<a href="email_inbox.html" class="dropdown-item d-flex align-items-center">
+							Inbox
+							<span class="badge bg-danger rounded-pill ms-auto pb-4px">2</span> 
+						</a>
+						<a href="calendar.html" class="dropdown-item">Calendar</a>
+						<a href="extra_settings_page.html" class="dropdown-item">Settings</a>
+						<div class="dropdown-divider"></div>
+						<a href="login.html" class="dropdown-item">Log Out</a>
+					</div>
+				</div>
+			</div>
+			<!-- END header-nav -->
+		</div>
+		<!-- END #header -->
+	
+		<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar" data-bs-theme="dark" style="border-radius:30px;background-image:url('Imagenes/fondo_negro.png');opacity:0.9" >
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%" style="position: relative;border-radius:30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust transparency for top side */ transparent);">
+				<!-- BEGIN menu -->
+				<div class="menu">
+						<asp:ObjectDataSource ID="odsMenuPadre" runat="server" SelectMethod="PR_SEG_GET_MENUS_PADRE_ROL" TypeName="WebAhayouAdmin.Clases.Ingreso_app">
+							<SelectParameters>
+								<asp:ControlParameter ControlID="lblUsuario" Name="pV_USUARIO" Type="String" />
+								<asp:Parameter DefaultValue="AHAYOUADM" Name="pV_SISTEMA" Type="String" />
+							</SelectParameters>
+						</asp:ObjectDataSource>
+
+					<asp:Repeater ID="Repeater1" DataSourceID="odsMenuPadre" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
+						<ItemTemplate>
+							<div class="menu-item has-sub" id="<%# Eval("COD_MENU") %>">
+											<a href="javascript:;" class="menu-link">
+												<div class="menu-icon">
+													<i class="fa fa-note-sticky"></i>							</div>
+												<div class="menu-text"><%# Eval("DESCRIPCION") %></div>
+												<div class="menu-caret"></div>
+											</a>
+								<asp:Label ID="lblCodPadre" runat="server" Visible="false" Text='<%# Eval("COD_MENU") %>'></asp:Label>
+											<div class="menu-submenu">
+												 <asp:Repeater ID="Repeater2" runat="server">
+																<ItemTemplate>
+																	<div class="menu-item">
+																		<asp:LinkButton ID="lbtnMenuHijo" class="menu-link" OnClick="lbtnMenuHijo_Click" CommandArgument='<%# Eval("DETALLE") %>' CausesValidation="false" runat="server"><%# Eval("DESCRIPCION") %></asp:LinkButton> 
+																	</div>
+																</ItemTemplate>
+												 </asp:Repeater>
+											</div>
+							</div>
+           						
+									
+						</ItemTemplate>
+					</asp:Repeater>
+					
+					
+					<!-- BEGIN minify-button -->
+					<div class="menu-item d-flex">
+						<a href="javascript:;" class="app-sidebar-minify-btn ms-auto d-flex align-items-center text-decoration-none" data-toggle="app-sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+					</div>
+					<!-- END minify-button -->
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<div class="app-sidebar-bg" data-bs-theme="dark"></div>
+		<div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a></div>
+		<!-- END #sidebar -->
+		
+		<!-- BEGIN #content -->
+		<div id="content" style="background-image:url('Imagenes/fondo_negro.png'); color:white;height:100%">
+			 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			 </asp:ContentPlaceHolder>
+		 </div>
+		<!-- END #content -->
+	
+		
+		<!-- BEGIN scroll-top-btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-theme btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+		<!-- END scroll-top-btn -->
+	</div>
+	<!-- END #app -->
+       
+    </form>
+
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="/assets/js/vendor.min.js"></script>
+	<script src="/assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+		<!-- ================== BEGIN page-js ================== -->
+	<script src="/assets/plugins/datatables.net/js/dataTables.min.js"></script>
+	<script src="/assets/plugins/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+	<script src="/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+	<script src="/assets/plugins/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+	<script src="/assets/js/demo/table-manage-responsive.demo.js"></script>
+
+	<!-- ================== END page-js ================== -->
+
+	  
+</body>
+</html>
