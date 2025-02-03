@@ -12,8 +12,8 @@
 	<meta content="" name="author" />
 	
 	<!-- ================== BEGIN core-css ================== -->
-	<link href="/assets/css/vendor.min.css" rel="stylesheet" />
-	<link href="/assets/css/default/app.min.css" rel="stylesheet" />
+	<link href="assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="assets/css/default/app.min.css" rel="stylesheet" />
 	<!-- ================== END core-css ================== -->
 
 	<!-- ================== BEGIN page-css ================== -->
