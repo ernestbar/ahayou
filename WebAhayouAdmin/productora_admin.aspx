@@ -83,7 +83,7 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
 														<td><asp:Label ID="lblNombreSucursal" runat="server" Text='<%# Eval("DESCRIPCION") %>'></asp:Label></td>
 															<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
 														<td>
-															<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" ForeColor="Black" CommandArgument='<%# Eval("COD_PRODUCTORA") %>' OnClick="btnEditar_Click" runat="server" Text="Edit" ToolTip="Editar" />
+															<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" ForeColor="Black" CommandArgument='<%# Eval("COD_PRODUCTORA") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
 															<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" BackColor="Transparent" ForeColor="Black" CommandArgument='<%# Eval("COD_PRODUCTORA") + "|" + Eval("DESC_ESTADO") %>' OnClick="btnEliminar_Click"  runat="server" Text="Activar/Desactivar" ToolTip="Activa o desactiva registro" />
 															<%--<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" CommandArgument='<%# Eval("SUC_ID_SUCURSAL") +"|" + Eval("DESC_ESTADO")  %>' OnClick="btnEliminar_Click" runat="server" OnClientClick="return confirm('Seguro que desea eliminar el registro???')" Text="Activar/Desactivar" ToolTip='<%# Eval("CLI_ESTADO") %>' />--%>
                                                             
