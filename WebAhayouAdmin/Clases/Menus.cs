@@ -164,11 +164,11 @@ namespace WebAhayouAdmin.Clases
                     cmd.CommandText = "PR_SEG_ABM_MENUS";
                     cmd.Parameters.AddWithValue("PV_TIPO_OPERACION", PV_TIPO_OPERACION);
                     if (PB_COD_MENU == 0)
-                        cmd.Parameters.AddWithValue("PB_COD_MENU", null);
+                        cmd.Parameters.AddWithValue("PB_COD_MENU", "");
                     else
                         cmd.Parameters.AddWithValue("PB_COD_MENU", PB_COD_MENU);
                     if (PB_COD_MENU_PADRE == 0)
-                        cmd.Parameters.AddWithValue("PB_COD_MENU_PADRE", null);
+                        cmd.Parameters.AddWithValue("PB_COD_MENU_PADRE", 0);
                     else
                         cmd.Parameters.AddWithValue("PB_COD_MENU_PADRE", PB_COD_MENU_PADRE);
                     cmd.Parameters.AddWithValue("PV_DESCRIPCIONMEN", PV_DESCRIPCIONMEN);

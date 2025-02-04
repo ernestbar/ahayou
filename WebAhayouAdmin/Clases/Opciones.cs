@@ -133,7 +133,7 @@ namespace WebAhayouAdmin.Clases
                     else
                         cmd.Parameters.AddWithValue("PB_COD_MENU", PB_COD_MENU);
                     if (PB_COD_OPCION == "")
-                        cmd.Parameters.AddWithValue("PB_COD_OPCION", null);
+                        cmd.Parameters.AddWithValue("PB_COD_OPCION", "");
                     else
                         cmd.Parameters.AddWithValue("PB_COD_OPCION", PB_COD_OPCION);
                     cmd.Parameters.AddWithValue("PV_DESCRIPCIONMEN", PV_DESCRIPCIONMEN);

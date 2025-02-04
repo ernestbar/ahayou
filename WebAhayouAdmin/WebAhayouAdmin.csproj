@@ -25104,6 +25104,7 @@
     <Content Include="assets\plugins\x-editable-bs4\test\unit\typeahead.js" />
     <Content Include="assets\plugins\x-editable-bs4\test\unit\typeaheadjs.js" />
     <Content Include="assets\plugins\x-editable-bs4\test\unit\wysihtml5.js" />
+    <Content Include="cambiar_password.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
     <Content Include="Imagenes\fondo.jpg" />
@@ -25325,17 +25326,27 @@
     <Content Include="opciones_admin.aspx" />
     <Content Include="opciones_roles_admin.aspx" />
     <Content Include="personal_admin.aspx" />
+    <Content Include="productora_admin.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cambiar_password.aspx.cs">
+      <DependentUpon>cambiar_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cambiar_password.aspx.designer.cs">
+      <DependentUpon>cambiar_password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Dominios.cs" />
+    <Compile Include="Clases\enviar_correo.cs" />
     <Compile Include="Clases\Ingreso_app.cs" />
     <Compile Include="Clases\Menus.cs" />
     <Compile Include="Clases\Menus_roles.cs" />
     <Compile Include="Clases\Opciones.cs" />
     <Compile Include="Clases\Opciones_roles.cs" />
+    <Compile Include="Clases\Productoras.cs" />
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Dashboard.aspx.cs">
@@ -25400,6 +25411,13 @@
     </Compile>
     <Compile Include="Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="productora_admin.aspx.cs">
+      <DependentUpon>productora_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="productora_admin.aspx.designer.cs">
+      <DependentUpon>productora_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="roles_admin.aspx.cs">

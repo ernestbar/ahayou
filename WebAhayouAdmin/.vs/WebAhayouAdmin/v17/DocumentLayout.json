@@ -1,30 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\",
+  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|c:\\github\\ahayou\\webahayouadmin\\principal.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:principal.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|c:\\github\\ahayou\\webahayouadmin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|c:\\github\\ahayou\\webahayouadmin\\clases\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|c:\\github\\ahayou\\webahayouadmin\\clases\\dominios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\dominios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\personal_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:personal_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|c:\\github\\ahayou\\webahayouadmin\\opciones_roles_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:opciones_roles_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|c:\\github\\ahayou\\webahayouadmin\\menu_rol_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:menu_rol_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\personal_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:personal_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,80 +98,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Principal.Master",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Principal.Master",
-              "RelativeDocumentMoniker": "Principal.Master",
-              "ToolTip": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Principal.Master",
-              "RelativeToolTip": "Principal.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-04T02:30:55.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Login.aspx",
-              "RelativeDocumentMoniker": "Login.aspx",
-              "ToolTip": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Login.aspx",
-              "RelativeToolTip": "Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-04T02:27:29.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dominios.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Clases\\Dominios.cs",
-              "RelativeDocumentMoniker": "Clases\\Dominios.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Clases\\Dominios.cs",
-              "RelativeToolTip": "Clases\\Dominios.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEsAAAANAAAAAAAAAA==",
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Login.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Login.aspx.cs",
+              "RelativeToolTip": "Login.aspx.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwCoAAAChAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T02:01:11.042Z",
+              "WhenOpened": "2025-02-04T19:46:47.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Clases\\Usuarios.cs",
-              "RelativeDocumentMoniker": "Clases\\Usuarios.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\Clases\\Usuarios.cs",
-              "RelativeToolTip": "Clases\\Usuarios.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAwKIAAABUAAAAAAAAAA==",
+              "Title": "personal_admin.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\personal_admin.aspx.cs",
+              "RelativeDocumentMoniker": "personal_admin.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\personal_admin.aspx.cs",
+              "RelativeToolTip": "personal_admin.aspx.cs",
+              "ViewState": "AgIAAK0BAAAAAAAAAAAxwL8BAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T02:00:53.418Z",
+              "WhenOpened": "2025-02-04T19:46:10.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "opciones_roles_admin.aspx.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\opciones_roles_admin.aspx.cs",
-              "RelativeDocumentMoniker": "opciones_roles_admin.aspx.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\opciones_roles_admin.aspx.cs",
-              "RelativeToolTip": "opciones_roles_admin.aspx.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAIoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T01:26:24.28Z",
+              "DocumentIndex": 3,
+              "Title": "personal_admin.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\personal_admin.aspx",
+              "RelativeDocumentMoniker": "personal_admin.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\personal_admin.aspx",
+              "RelativeToolTip": "personal_admin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-04T19:45:36.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "menu_rol_admin.aspx.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\menu_rol_admin.aspx.cs",
-              "RelativeDocumentMoniker": "menu_rol_admin.aspx.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\WebAhayouAdmin\\menu_rol_admin.aspx.cs",
-              "RelativeToolTip": "menu_rol_admin.aspx.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAmwIoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T01:26:18.338Z",
+              "DocumentIndex": 0,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Login.aspx",
+              "RelativeDocumentMoniker": "Login.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Login.aspx",
+              "RelativeToolTip": "Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-04T19:44:55.289Z",
               "EditorCaption": ""
             }
           ]

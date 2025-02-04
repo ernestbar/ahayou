@@ -150,7 +150,7 @@
 					<div class="form-group row m-b-10">
 									<label class="col-md-3 text-md-right col-form-label">Descripcion:</label>
 									<div class="col-md-6">
-							 <asp:TextBox ID="txtDescripcion" class="form-control" ReadOnly="true" runat="server"></asp:TextBox>
+							 <asp:TextBox ID="txtDescripcion" class="form-control" runat="server"></asp:TextBox>
 										<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcion" Font-Bold="True"></asp:RequiredFieldValidator>
 									</div>
 					</div>

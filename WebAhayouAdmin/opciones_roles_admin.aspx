@@ -135,9 +135,9 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
 														</asp:Repeater>
 													</table>
 												</td>
-								</tr>
-				</tbody>
-</table>
+											</tr>
+										</tbody>
+									</table>
 										</div>
 										<!-- end table-responsive -->
 												</div>
