@@ -29,7 +29,7 @@
 	<!-- BEGIN #app -->
 	<div id="app" class="app">
 		<!-- BEGIN login -->
-		<div class="login login-v1"   style="background-image:url('Imagenes/fondo_negro.png'); color:white;height:100%">
+		<div class="login login-v1"   style="background-image:url('Imagenes/fondo_negro.png'); background-repeat: no-repeat; background-size: 100% 100%;">
 			<!-- BEGIN login-container -->
 			<div class="login-container">
 				<!-- BEGIN login-header -->
@@ -60,7 +60,7 @@
 								<label for="emailAddress" class="d-flex align-items-center">Correo Electronico</label>
 							</div>
 							<div class="form-floating mb-20px">
-								<asp:TextBox ID="txtPassword"  class="form-control fs-13px h-45px" runat="server"></asp:TextBox>
+								<asp:TextBox ID="txtPassword" TextMode="Password"  class="form-control fs-13px h-45px" runat="server"></asp:TextBox>
 								<label for="password" class="d-flex align-items-center">Password</label>
 							</div>
 							<div class="form-check mb-20px">

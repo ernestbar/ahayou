@@ -25324,6 +25324,7 @@
     <Content Include="menu_rol_admin.aspx" />
     <Content Include="opciones_admin.aspx" />
     <Content Include="opciones_roles_admin.aspx" />
+    <Content Include="personal_admin.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="Web.config" />
@@ -25336,6 +25337,7 @@
     <Compile Include="Clases\Opciones.cs" />
     <Compile Include="Clases\Opciones_roles.cs" />
     <Compile Include="Clases\Roles.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -25384,6 +25386,13 @@
     </Compile>
     <Compile Include="opciones_roles_admin.aspx.designer.cs">
       <DependentUpon>opciones_roles_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="personal_admin.aspx.cs">
+      <DependentUpon>personal_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="personal_admin.aspx.designer.cs">
+      <DependentUpon>personal_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>

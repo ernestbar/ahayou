@@ -89,7 +89,7 @@ namespace WebAhayouAdmin.Clases
             }
 
         }
-        public static DataTable PR_PAR_GET_ONLY_DOMINIOS()
+        public static DataTable PR_SEG_GET_OPCIONES_ROLES(Int64 pd_MEN_COD_MENU, string pV_USUARIO)
         {
             try
             {
@@ -97,7 +97,9 @@ namespace WebAhayouAdmin.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_PAR_GET_ONLY_DOMINIOS";
+                    cmd.CommandText = "PR_SEG_GET_OPCIONES_ROLES";
+                    cmd.Parameters.AddWithValue("PV_USUARIO", pV_USUARIO);
+                    cmd.Parameters.AddWithValue("pd_MEN_COD_MENU", pd_MEN_COD_MENU);
                     cmd.Connection = conn;
                     conn.Open();
                     var dataReader = cmd.ExecuteReader();

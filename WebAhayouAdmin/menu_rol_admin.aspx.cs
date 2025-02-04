@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,18 @@ namespace WebAhayouAdmin
         {
             if (!Page.IsPostBack)
             {
-                //MultiView1.ActiveViewIndex = 0;
-                lblUsuario.Text = "1";//aqui debe ir el usuario logeado
+                if (Session["usuario"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    
+                    lblUsuario.Text = Session["usuario"].ToString();
+                   
+                    lblCodMenuRol.Text = Request.QueryString["RME"].ToString();
+                   
+                }
             }
         }
 
@@ -90,12 +101,42 @@ namespace WebAhayouAdmin
 
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+            if (e.Item.ItemType == ListItemType.Item ||
+               e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Button bQuitar = (Button)e.Item.FindControl("btnQuitar");
+                bQuitar.Visible = false;
+                DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES( Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["DESCRIPCION"].ToString().ToUpper() == "QUITAR")
+                            bQuitar.Visible = true;
+                    }
 
+                }
+            }
         }
 
         protected void Repeater2_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+            if (e.Item.ItemType == ListItemType.Item ||
+               e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Button bAgregar = (Button)e.Item.FindControl("btnAgregar");
+                bAgregar.Visible = false;
+                DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["DESCRIPCION"].ToString().ToUpper() == "AGREGAR")
+                            bAgregar.Visible = true;
+                    }
 
+                }
+            }
         }
     }
 }

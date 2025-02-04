@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,27 @@ namespace WebAhayouAdmin
         {
             if (!Page.IsPostBack)
             {
-                MultiView1.ActiveViewIndex = 0;
-                lblUsuario.Text = "1";//aqui debe ir el usuario logeado
+                if (Session["usuario"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    MultiView1.ActiveViewIndex = 0;
+                    lblUsuario.Text = Session["usuario"].ToString();
+                    btnNuevo.Visible = false;
+                    lblCodMenuRol.Text = Request.QueryString["RME"].ToString();
+                    DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (dr["DESCRIPCION"].ToString().ToUpper() == "NUEVO")
+                                btnNuevo.Visible = true;
+                        }
+
+                    }
+                }
             }
 
         }
