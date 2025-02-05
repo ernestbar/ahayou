@@ -52,7 +52,7 @@ namespace WebAhayouAdmin
             lblCodigo.Text = "";
             txtDescripcion.Text = "";
             txtValCar.Text = "";
-            //txtValFecha.Text = "";
+            //txtVa.Text = "";
             txtValNum.Text = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -146,7 +146,7 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    Clases.Dominios obj_m = new Clases.Dominios("D", lblDominio.Text, lblCodigo.Text, "", "", "", "", lblUsuario.Text);
+                    Clases.Dominios obj_m = new Clases.Dominios("A", lblDominio.Text, lblCodigo.Text, "", "", "", "", lblUsuario.Text);
                     obj_m.ABM();
                     lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 }

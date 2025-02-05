@@ -151,7 +151,7 @@
 					<div class="form-group row m-b-10">
 									<label class="col-md-3 text-md-right col-form-label">Dominio:</label>
 									<div class="col-md-6">
-							 <asp:TextBox ID="txtDominio" class="form-control" ReadOnly="true" runat="server"></asp:TextBox>
+							 <asp:TextBox ID="txtDominio" class="form-control" runat="server"></asp:TextBox>
 										<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDominio" Font-Bold="True"></asp:RequiredFieldValidator>
 									</div>
 					</div>

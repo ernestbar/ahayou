@@ -191,10 +191,8 @@ namespace WebAhayouAdmin.Clases
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "PR_ABM_DOMINIOS";
                     cmd.Parameters.AddWithValue("PV_TIPO_OPERACION", PV_TIPO_OPERACION);
-                    if (PV_DOMINIO == "")
-                        cmd.Parameters.AddWithValue("PV_DOMINIO", null);
-                    else
-                        cmd.Parameters.AddWithValue("PV_DOMINIO", PV_DOMINIO);
+                    
+                    cmd.Parameters.AddWithValue("PV_DOMINIO", PV_DOMINIO);
                     cmd.Parameters.AddWithValue("PV_CODIGO", PV_CODIGO);
                     cmd.Parameters.AddWithValue("PV_DESCRIPCION", PV_DESCRIPCION);
                     cmd.Parameters.AddWithValue("PV_VALOR_CARACTER", PV_VALOR_CARACTER);
