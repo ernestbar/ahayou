@@ -44,15 +44,20 @@ namespace WebAhayouAdmin
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiar();
+            if (ddlDominio.SelectedIndex > 0)
+                txtDominio.Text = ddlDominio.SelectedValue;
+            else
+                txtDominio.Text = "";
             MultiView1.ActiveViewIndex = 1;
         }
         public void limpiar()
         {
             lblAviso.Text = "";
             lblCodigo.Text = "";
+            txtDominio.Text = "";
             txtDescripcion.Text = "";
             txtValCar.Text = "";
-            //txtVa.Text = "";
+            txtCodigo.Text = "";
             txtValNum.Text = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -66,11 +71,12 @@ namespace WebAhayouAdmin
             {
                 if (lblCodigo.Text == "")
                 {
-                    Clases.Dominios obj = new Clases.Dominios("I",lblDominio.Text, txtCodigo.Text, txtDescripcion.Text,txtValCar.Text,txtValNum.Text,hfFechaSalida.Value, lblUsuario.Text);
+                    Clases.Dominios obj = new Clases.Dominios("I",txtDominio.Text, txtCodigo.Text, txtDescripcion.Text,txtValCar.Text,txtValNum.Text,hfFechaSalida.Value, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
                     Repeater1.DataBind();
+                    ddlDominio.DataBind();
                 }
                 else
                 {
@@ -79,6 +85,7 @@ namespace WebAhayouAdmin
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
                     Repeater1.DataBind();
+                    ddlDominio.DataBind();
                 }
                 string script = string.Format("alert('{0}');", lblAviso.Text);
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
@@ -114,6 +121,7 @@ namespace WebAhayouAdmin
                 txtDescripcion.Text = obj_m.PV_DESCRIPCION;
                 txtValCar.Text=obj_m.PV_VALOR_CARACTER;
                 txtValNum.Text = obj_m.PV_VALOR_NUMERICO;
+                txtDominio.Text = ddlDominio.SelectedValue;
                 MultiView1.ActiveViewIndex = 1;
 
             }

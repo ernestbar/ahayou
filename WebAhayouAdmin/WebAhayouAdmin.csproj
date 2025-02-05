@@ -25326,6 +25326,8 @@
     <Content Include="opciones_admin.aspx" />
     <Content Include="opciones_roles_admin.aspx" />
     <Content Include="personal_admin.aspx" />
+    <Content Include="planes_admin.aspx" />
+    <Content Include="preguntas_frecuentes_admin.aspx" />
     <Content Include="productora_admin.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
@@ -25346,6 +25348,8 @@
     <Compile Include="Clases\Menus_roles.cs" />
     <Compile Include="Clases\Opciones.cs" />
     <Compile Include="Clases\Opciones_roles.cs" />
+    <Compile Include="Clases\Planes_paquetes.cs" />
+    <Compile Include="Clases\Preguntas_frecuentes.cs" />
     <Compile Include="Clases\Productoras.cs" />
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Usuarios.cs" />
@@ -25404,6 +25408,20 @@
     </Compile>
     <Compile Include="personal_admin.aspx.designer.cs">
       <DependentUpon>personal_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="planes_admin.aspx.cs">
+      <DependentUpon>planes_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="planes_admin.aspx.designer.cs">
+      <DependentUpon>planes_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="preguntas_frecuentes_admin.aspx.cs">
+      <DependentUpon>preguntas_frecuentes_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="preguntas_frecuentes_admin.aspx.designer.cs">
+      <DependentUpon>preguntas_frecuentes_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
