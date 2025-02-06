@@ -24,6 +24,7 @@ namespace WebAhayouAdmin.Clases
         public string PV_MUNDO { get; set; }
         public string PV_CARACTERISTICAS { get; set; }
         public string PV_CARACTERISTICAS_INGLES { get; set; }
+        public Int64 PB_CANT_PERFIL { get; set; }
         public string PV_MONEDA { get; set; }
         public string PV_USUARIO { get; set; }
         public string PV_ESTADOPR { get; set; }
@@ -40,7 +41,8 @@ namespace WebAhayouAdmin.Clases
         public Planes_paquetes(string pV_TIPO_OPERACION, Int64 pB_CODIGO_PLAN,
             Int64 pB_NRO_PLAN, string pV_PLAN, string pV_PLAN_INGLES, Int64 pB_CANT_MES,
             string pV_MUNDO, string pV_MONEDA,decimal pD_MONTO, 
-            string pV_CARACTERISTICAS,string pV_CARACTERISTICAS_INGLES,string pV_USUARIO)
+            string pV_CARACTERISTICAS,string pV_CARACTERISTICAS_INGLES,
+            Int64 pB_CANT_PERFIL,string pV_USUARIO)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PB_CODIGO_PLAN = pB_CODIGO_PLAN;
@@ -53,6 +55,7 @@ namespace WebAhayouAdmin.Clases
             PD_MONTO = pD_MONTO;
             PV_CARACTERISTICAS = pV_CARACTERISTICAS;
             PV_CARACTERISTICAS_INGLES = pV_CARACTERISTICAS_INGLES;
+            PB_CANT_PERFIL = pB_CANT_PERFIL;
             PV_USUARIO = pV_USUARIO;
         }
         #endregion
@@ -195,6 +198,10 @@ namespace WebAhayouAdmin.Clases
                                 PV_CARACTERISTICAS_INGLES = "";
                             else
                                 PV_CARACTERISTICAS_INGLES = (string)dr["CARACTERISTICAS_INGLES"];
+                            if (string.IsNullOrEmpty(dr["CANT_PERFIL"].ToString()))
+                                PB_CANT_PERFIL = 0;
+                            else
+                                PB_CANT_PERFIL = Int64.Parse(dr["CANT_PERFIL"].ToString());
                         }
 
                     }
@@ -224,6 +231,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PV_MUNDO", PV_MUNDO);
                     cmd.Parameters.AddWithValue("PV_MONEDA", PV_MONEDA);
                     cmd.Parameters.AddWithValue("PB_CANT_MES", PB_CANT_MES);
+                    cmd.Parameters.AddWithValue("PB_CANT_PERFIL", PB_CANT_PERFIL);
                     cmd.Parameters.AddWithValue("PD_MONTO", PD_MONTO);
                     cmd.Parameters.AddWithValue("PV_CARACTERISTICAS", PV_CARACTERISTICAS);
                     cmd.Parameters.AddWithValue("PV_CARACTERISTICAS_INGLES", PV_CARACTERISTICAS_INGLES);

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="redes_sociales_admin.aspx.cs" Inherits="WebAhayouAdmin.redes_sociales_admin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" ValidateRequest="false" CodeBehind="redes_sociales_admin.aspx.cs" Inherits="WebAhayouAdmin.redes_sociales_admin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style>
 .dataTables_wrapper .myfilter .dataTables_filter {
@@ -59,7 +59,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-	   <asp:ObjectDataSource ID="odsRoles" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES" TypeName="WebAhayouAdmin.Clases.Redes_sociales">
+	   <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES" TypeName="WebAhayouAdmin.Clases.Redes_sociales">
 	</asp:ObjectDataSource>
     <!-- begin #content -->
 		<div class="app-content" style="position: relative;border-radius:30px;
@@ -82,7 +82,7 @@
 										<div class="form-group row m-b-10">
 											
 											<div class="col-md-6">
-                                                <asp:Button ID="btnNuevo" class="btn btn-success btn-lg col-md-12" BackColor="Transparent" OnClick="btnNuevo_Click" runat="server" Text="Nuevo Rol" />
+                                                <asp:Button ID="btnNuevo" class="btn btn-success btn-lg col-md-12" BackColor="Transparent" OnClick="btnNuevo_Click" runat="server" Text="Nueva red social" />
 												<%--<input type="text" name="Ruta" placeholder="" class="form-control" />--%>
 											</div>
 										</div>
@@ -103,7 +103,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<asp:Repeater ID="Repeater1" DataSourceID="odsRoles" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
+									<asp:Repeater ID="Repeater1" DataSourceID="odsRedesSociales" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
 									<ItemTemplate>
 													
 										<tr class="gradeA">

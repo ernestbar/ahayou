@@ -73,7 +73,7 @@
 								<asp:Button ID="btnIngresar"  BackColor="Transparent" BorderColor="White" class="btn btn-theme h-45px d-block w-100 btn-lg" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
 							</div><br />
 						<div class="login-buttons">
-										<asp:Button ID="btnResetear"  BackColor="Transparent" BorderColor="Red" class="btn btn-danger h-45px d-block w-100 btn-lg" runat="server" Text="Resetear contraseña" OnClientClick="return confirm('Esta seguro de resetear su password???')"  OnClick="btnResetear_Click" />
+										<asp:Button ID="btnResetear"  BackColor="Transparent" BorderColor="Red" ForeColor="Red" class="btn btn-danger h-45px d-block w-100 btn-lg" runat="server" Text="Resetear contraseña" OnClientClick="return confirm('Esta seguro de resetear su password???')"  OnClick="btnResetear_Click" />
 						</div>
 
 					</div>

@@ -60,7 +60,7 @@ namespace WebAhayouAdmin.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_PAR_GET_PROMOCIONES";
+                    cmd.CommandText = "PR_PAR_GET_PROMOCION";
                     cmd.Connection = conn;
                     conn.Open();
                     var dataReader = cmd.ExecuteReader();
@@ -132,6 +132,7 @@ namespace WebAhayouAdmin.Clases
                         foreach (DataRow dr in dataTable.Rows)
                         {
                             PB_CODIGO_PLAN = Int64.Parse(dr["CODIGO_PLAN"].ToString());
+
                             if (string.IsNullOrEmpty(dr["PROMOCION"].ToString()))
                                 PV_PROMOCION = "";
                             else
@@ -141,15 +142,17 @@ namespace WebAhayouAdmin.Clases
                                 PD_FECHA_DESDE = DateTime.Parse("01/01/3000");
                             else
                                 PD_FECHA_DESDE = DateTime.Parse(dr["FECHA_DESDE"].ToString());
+
                             if (string.IsNullOrEmpty(dr["MUNDO"].ToString()))
                                 PV_MUNDO = "";
                             else
                                 PV_MUNDO = (string)dr["MUNDO"];
                            
-                            if (string.IsNullOrEmpty(dr["PROCENTAJE"].ToString()))
+                            if (string.IsNullOrEmpty(dr["PORCENTAJE"].ToString()))
                                 PD_PROCENTAJE = 0;
                             else
-                                PD_PROCENTAJE = decimal.Parse(dr["PROCENTAJE"].ToString());
+                                PD_PROCENTAJE = decimal.Parse(dr["PORCENTAJE"].ToString());
+
                             if (string.IsNullOrEmpty(dr["FECHA_HASTA"].ToString()))
                                 PD_FECHA_HASTA = DateTime.Parse("01/01/3000");
                             else
@@ -182,7 +185,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PV_PROMOCION", PV_PROMOCION);
                     cmd.Parameters.AddWithValue("PD_FECHA_DESDE", PD_FECHA_DESDE);
                     cmd.Parameters.AddWithValue("PV_MUNDO", PV_MUNDO);
-                    cmd.Parameters.AddWithValue("PD_PROCENTAJE", PD_PROCENTAJE);
+                    cmd.Parameters.AddWithValue("PD_PORCENTAJE", PD_PROCENTAJE);
                     cmd.Parameters.AddWithValue("PD_FECHA_HASTA", PD_FECHA_HASTA);
                     cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;

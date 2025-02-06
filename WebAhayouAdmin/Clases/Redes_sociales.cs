@@ -37,7 +37,7 @@ namespace WebAhayouAdmin.Clases
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PV_RED_SOCIAL = pV_RED_SOCIAL;
             PV_ICONO= pV_ICONO;
-            PV_URL = PV_URL;
+            PV_URL = pV_URL;
             PV_USUARIO = pV_USUARIO;
         }
         #endregion
@@ -108,7 +108,7 @@ namespace WebAhayouAdmin.Clases
                     {
                         foreach (DataRow dr in dataTable.Rows)
                         {
-                            PV_ICONO= (string)dr["DESCRIPCION"];
+                            PV_ICONO= (string)dr["ICONO"];
                             PV_URL = (string)dr["URL"];
                         }
 

@@ -209,7 +209,7 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
 														<td><asp:Label ID="lblArea" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
 														<td>
 															<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("COD_PERSONAL") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
-															<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("COD_PERSONAL") + "|" + Eval("DESC_ESTADO") %>' OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you shure to delete register???')" runat="server" Text="Activar/Deactivar" ToolTip="Borrar registro" />
+															<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("COD_PERSONAL") + "|" + Eval("DESC_ESTADO") %>' OnClick="btnEliminar_Click" OnClientClick="return confirm('Estas seguro de eliminar el registro???')" runat="server" Text="Activar/Deactivar" ToolTip="Borrar registro" />
 															<asp:Button ID="btnUsuarios" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("COD_PERSONAL") %>' OnClick="btnUsuarios_Click" runat="server" Text="Usuarios" ToolTip="Usuarios del personal" />
 														</td>
 														

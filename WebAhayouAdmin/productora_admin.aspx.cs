@@ -88,12 +88,12 @@ namespace WebAhayouAdmin
             }
             catch (Exception ex)
             {
-                string nombre_archivo = "error_sucurasles_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
+                string nombre_archivo = "error_productora_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
                 string directorio2 = Server.MapPath("~/Logs");
                 StreamWriter writer5 = new StreamWriter(directorio2 + "\\" + nombre_archivo, true, Encoding.Unicode);
                 writer5.WriteLine(ex.ToString());
                 writer5.Close();
-                lblAviso.Text = "We have some problems consult with the administrator.";
+                lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
             }
 
         }
@@ -124,12 +124,12 @@ namespace WebAhayouAdmin
             }
             catch (Exception ex)
             {
-                string nombre_archivo = "error_sucurasles_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
+                string nombre_archivo = "error_productora_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
                 string directorio2 = Server.MapPath("~/Logs");
                 StreamWriter writer5 = new StreamWriter(directorio2 + "\\" + nombre_archivo, true, Encoding.Unicode);
                 writer5.WriteLine(ex.ToString());
                 writer5.Close();
-                lblAviso.Text = "We have some problems consult with the administrator.";
+                lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
             }
 
         }
@@ -161,12 +161,12 @@ namespace WebAhayouAdmin
             }
             catch (Exception ex)
             {
-                string nombre_archivo = "error_sucurasles_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
+                string nombre_archivo = "error_productora_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
                 string directorio2 = Server.MapPath("~/Logs");
                 StreamWriter writer5 = new StreamWriter(directorio2 + "\\" + nombre_archivo, true, Encoding.Unicode);
                 writer5.WriteLine(ex.ToString());
                 writer5.Close();
-                lblAviso.Text = "We have some problems consult with the administrator.";
+                lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
             }
 
 

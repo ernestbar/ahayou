@@ -19,6 +19,7 @@
 	<!-- ================== BEGIN page-css ================== -->
 	<link href="assets/plugins/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
 	<link href="assets/plugins/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" />
 	<!-- ================== END page-css ================== -->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -200,6 +201,17 @@
 	<script src="assets/plugins/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
 	<script src="assets/js/demo/table-manage-responsive.demo.js"></script>
 
+	<script src="assets/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="assets/plugins/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+	<script src="assets/plugins/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+	<script src="assets/plugins/datatables.net-buttons/js/buttons.html5.min.js"></script>
+	<script src="assets/plugins/datatables.net-buttons/js/buttons.print.min.js"></script>
+	<script src="assets/plugins/pdfmake/build/pdfmake.min.js"></script>
+	<script src="assets/plugins/pdfmake/build/vfs_fonts.js"></script>
+	<script src="assets/plugins/jszip/dist/jszip.min.js"></script>
+	<script src="assets/js/demo/table-manage-buttons.demo.js"></script>
+	<script src="assets/plugins/@highlightjs/cdn-assets/highlight.min.js"></script>
+	<script src="assets/js/demo/render.highlight.js"></script>
 	<!-- ================== END page-js ================== -->
 
 	  

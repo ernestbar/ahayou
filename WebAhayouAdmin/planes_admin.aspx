@@ -116,6 +116,7 @@
 													<th class="text-nowrap">MONTO</th>
 													<th class="text-nowrap">PAGO MES</th>
 													<th class="text-nowrap">AHORRO</th>
+													<th class="text-nowrap">CANTIDAD DE PERFILES</th>
 													<th class="text-nowrap">ESTADO</th>
 
 									<th class="text-nowrap" data-orderable="false">OPCIONES</th>
@@ -139,6 +140,7 @@
 																	<td><asp:Label ID="Label323" runat="server" Text='<%# Eval("MONTO") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label3231" runat="server" Text='<%# Eval("PAGO_MES") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label3232" runat="server" Text='<%# Eval("AHORRO") %>'></asp:Label></td>
+																	<td><asp:Label ID="Label3132" runat="server" Text='<%# Eval("CANT_PERFIL") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label3233" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
 													<td>
 																	<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("codigo_plan") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
@@ -241,12 +243,20 @@
 			<div class="form-group row m-b-10">
 				<label class="col-md-3 text-md-right col-form-label">Cantidad meses:</label>
 				<div class="col-md-6">
-<asp:TextBox ID="txtCantMes" TextMode="Number" class="form-control" runat="server"></asp:TextBox>
+					<asp:TextBox ID="txtCantMes" TextMode="Number" class="form-control" runat="server"></asp:TextBox>
 					<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCantMes" Font-Bold="True"></asp:RequiredFieldValidator>
 				</div>
 			</div>
 			<!-- end form-group row -->
-					
+																			<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+					<label class="col-md-3 text-md-right col-form-label">Cantidad perfiles:</label>
+					<div class="col-md-6">
+						<asp:TextBox ID="txtCantPerfiles" TextMode="Number" class="form-control" runat="server"></asp:TextBox>
+						<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCantPerfiles" Font-Bold="True"></asp:RequiredFieldValidator>
+					</div>
+				</div>
+				<!-- end form-group row -->
 					
 						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
 							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />

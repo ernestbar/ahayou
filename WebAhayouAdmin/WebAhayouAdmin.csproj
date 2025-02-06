@@ -25333,6 +25333,7 @@
     <Content Include="redes_sociales_admin.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
+    <Content Include="suscriptores_admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -25356,7 +25357,7 @@
     <Compile Include="Clases\Promociones.cs" />
     <Compile Include="Clases\Redes_sociales.cs" />
     <Compile Include="Clases\Roles.cs" />
-    <Compile Include="Clases\Susucriptores.cs" />
+    <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -25463,6 +25464,13 @@
     </Compile>
     <Compile Include="roles_admin.aspx.designer.cs">
       <DependentUpon>roles_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="suscriptores_admin.aspx.cs">
+      <DependentUpon>suscriptores_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="suscriptores_admin.aspx.designer.cs">
+      <DependentUpon>suscriptores_admin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
