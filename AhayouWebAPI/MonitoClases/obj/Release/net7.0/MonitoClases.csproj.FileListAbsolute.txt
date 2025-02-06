@@ -1,0 +1,11 @@
+D:\Monito\MonitoWebAPI\MonitoClases\bin\Release\net7.0\MonitoClases.deps.json
+D:\Monito\MonitoWebAPI\MonitoClases\bin\Release\net7.0\MonitoClases.dll
+D:\Monito\MonitoWebAPI\MonitoClases\bin\Release\net7.0\MonitoClases.pdb
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\MonitoClases.GeneratedMSBuildEditorConfig.editorconfig
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\MonitoClases.AssemblyInfoInputs.cache
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\MonitoClases.AssemblyInfo.cs
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\MonitoClases.csproj.CoreCompileInputs.cache
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\MonitoClases.dll
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\refint\MonitoClases.dll
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\MonitoClases.pdb
+D:\Monito\MonitoWebAPI\MonitoClases\obj\Release\net7.0\ref\MonitoClases.dll

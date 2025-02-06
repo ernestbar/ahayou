@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MonitoClases/1.0.0": {
+        "runtime": {
+          "MonitoClases.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MonitoClases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

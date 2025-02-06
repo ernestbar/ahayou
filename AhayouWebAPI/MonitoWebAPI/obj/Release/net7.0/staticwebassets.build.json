@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "M96Tw1D3iSHwd7uxgApIFnsYtlZ2SG2LSiZ/ptJa1Bw=",
+  "Source": "MonitoWebAPI",
+  "BasePath": "_content/MonitoWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
