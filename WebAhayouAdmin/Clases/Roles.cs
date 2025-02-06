@@ -134,7 +134,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.CommandText = "PR_ABM_ROL";
                     cmd.Parameters.AddWithValue("PV_TIPO_OPERACION", PV_TIPO_OPERACION);
                     if (PV_ROL=="")
-                        cmd.Parameters.AddWithValue("PV_ROL", null);
+                        cmd.Parameters.AddWithValue("PV_ROL", "");
                     else
                         cmd.Parameters.AddWithValue("PV_ROL", PV_ROL);
                     cmd.Parameters.AddWithValue("PV_NOMBRE_ROL", PV_NOMBRE_ROL);

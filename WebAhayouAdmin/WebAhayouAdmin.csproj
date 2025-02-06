@@ -25329,6 +25329,8 @@
     <Content Include="planes_admin.aspx" />
     <Content Include="preguntas_frecuentes_admin.aspx" />
     <Content Include="productora_admin.aspx" />
+    <Content Include="promociones_admin.aspx" />
+    <Content Include="redes_sociales_admin.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="Web.config" />
@@ -25351,7 +25353,10 @@
     <Compile Include="Clases\Planes_paquetes.cs" />
     <Compile Include="Clases\Preguntas_frecuentes.cs" />
     <Compile Include="Clases\Productoras.cs" />
+    <Compile Include="Clases\Promociones.cs" />
+    <Compile Include="Clases\Redes_sociales.cs" />
     <Compile Include="Clases\Roles.cs" />
+    <Compile Include="Clases\Susucriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -25437,7 +25442,21 @@
     <Compile Include="productora_admin.aspx.designer.cs">
       <DependentUpon>productora_admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="promociones_admin.aspx.cs">
+      <DependentUpon>promociones_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="promociones_admin.aspx.designer.cs">
+      <DependentUpon>promociones_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="redes_sociales_admin.aspx.cs">
+      <DependentUpon>redes_sociales_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="redes_sociales_admin.aspx.designer.cs">
+      <DependentUpon>redes_sociales_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="roles_admin.aspx.cs">
       <DependentUpon>roles_admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

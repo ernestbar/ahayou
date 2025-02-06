@@ -113,7 +113,6 @@ C:\GITHUB\ahayou\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPl
 C:\GITHUB\ahayou\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.AssemblyReference.cache
 C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CoreCompileInputs.cache
-C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayo.89DC20F7.Up2Date
 C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.dll
 C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.pdb
 E:\ERNESTO\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.dll.config
@@ -175,3 +174,4 @@ E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CoreCompileInpu
 E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayo.89DC20F7.Up2Date
 E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.dll
 E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.pdb
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CopyComplete

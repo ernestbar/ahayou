@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="planes_admin.aspx.cs" Inherits="WebAhayouAdmin.planes_admin" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="planes_admin.aspx.cs" Inherits="WebAhayouAdmin.planes_admin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style>
 .dataTables_wrapper .myfilter .dataTables_filter {
