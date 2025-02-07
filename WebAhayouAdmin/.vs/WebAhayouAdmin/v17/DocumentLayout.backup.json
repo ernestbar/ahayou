@@ -110,8 +110,8 @@
               "Title": "Principal.Master",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master",
               "RelativeDocumentMoniker": "Principal.Master",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master*",
-              "RelativeToolTip": "Principal.Master*",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master",
+              "RelativeToolTip": "Principal.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-02-06T19:43:12.112Z",
@@ -176,7 +176,8 @@
               "RelativeToolTip": "suscriptores_admin.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-06T18:15:29.851Z"
+              "WhenOpened": "2025-02-06T18:15:29.851Z",
+              "EditorCaption": ""
             }
           ]
         }

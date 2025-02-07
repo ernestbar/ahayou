@@ -14,7 +14,7 @@ namespace AhayouClases
 
 		[Display(Name = "Usuario")]
 		[Required(ErrorMessage = "Debe ingresar el nombre de usuario")]
-		public string nombre_usuario { get; set; } = "";
+		public string nombres { get; set; } = "";
 
 		[Display(Name = "Clave")]
 		[Required(ErrorMessage = "Debe ingresar la clave")]

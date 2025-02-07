@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "nuiXT/Yx/bZi7Ozlr4JSJgcpHB78FbaxA8WSnQiG8QI=",
-  "Source": "MonitoWebAPI",
-  "BasePath": "_content/MonitoWebAPI",
+  "Hash": "bTZGud+QXmR2gxdgDCMEXznj03PRO5PTcGGkGKcHv8E=",
+  "Source": "AhayouWebAPI",
+  "BasePath": "_content/AhayouWebAPI",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

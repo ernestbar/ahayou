@@ -13,5 +13,6 @@ namespace AhayouClases
         public List<string> mensajesError { get; set; }
         public bool exitoso { get; set; } = false;
 		public object resultado { get; set; }
-	}
+        public bool temporal { get; set; } = false;
+    }
 }

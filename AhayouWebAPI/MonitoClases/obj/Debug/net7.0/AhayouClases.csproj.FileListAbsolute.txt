@@ -22,3 +22,15 @@ C:\GITHUB\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.dll
 C:\GITHUB\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\refint\AhayouClases.dll
 C:\GITHUB\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.pdb
 C:\GITHUB\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\ref\AhayouClases.dll
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\bin\Debug\net7.0\AhayouClases.deps.json
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\bin\Debug\net7.0\AhayouClases.dll
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\bin\Debug\net7.0\AhayouClases.pdb
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.GeneratedMSBuildEditorConfig.editorconfig
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.AssemblyInfoInputs.cache
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.AssemblyInfo.cs
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.csproj.CoreCompileInputs.cache
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.sourcelink.json
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.dll
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\refint\AhayouClases.dll
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\AhayouClases.pdb
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoClases\obj\Debug\net7.0\ref\AhayouClases.dll

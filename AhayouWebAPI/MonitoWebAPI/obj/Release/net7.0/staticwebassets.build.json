@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "M96Tw1D3iSHwd7uxgApIFnsYtlZ2SG2LSiZ/ptJa1Bw=",
-  "Source": "MonitoWebAPI",
-  "BasePath": "_content/MonitoWebAPI",
+  "Hash": "VbJoVXEGR07/zO5ZXYDXm+b9Gz7CLvXhrsBxQeS4Ctg=",
+  "Source": "AhayouWebAPI",
+  "BasePath": "_content/AhayouWebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
