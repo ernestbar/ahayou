@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonitoClases.Validaciones
+namespace AhayouClases.Validaciones
 {
     public class NumeroDecimalAttribute : ValidationAttribute
     {

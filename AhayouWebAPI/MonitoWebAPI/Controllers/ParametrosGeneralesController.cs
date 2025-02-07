@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Data;
-using MonitoClases;
+using AhayouClases;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace MonitoWebAPI.Controllers
+namespace AhayouWebAPI.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]

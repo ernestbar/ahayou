@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AgendaController",
+    "ContainingType": "AhayouWebAPI.Controllers.AgendaController",
     "Method": "EliminarAgenda",
     "RelativePath": "api/Agenda/EliminarAgenda/{id_agenda}",
     "HttpMethod": "DELETE",
@@ -31,7 +31,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AgendaController",
+    "ContainingType": "AhayouWebAPI.Controllers.AgendaController",
     "Method": "GuardarAgenda",
     "RelativePath": "api/Agenda/GuardarAgenda",
     "HttpMethod": "POST",
@@ -40,7 +40,7 @@
     "Parameters": [
       {
         "Name": "oAgenda",
-        "Type": "MonitoClases.Agenda",
+        "Type": "AhayouClases.Agenda",
         "IsRequired": true
       }
     ],
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AgendaController",
+    "ContainingType": "AhayouWebAPI.Controllers.AgendaController",
     "Method": "ListarAgenda",
     "RelativePath": "api/Agenda/ListarAgenda",
     "HttpMethod": "GET",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AgendaController",
+    "ContainingType": "AhayouWebAPI.Controllers.AgendaController",
     "Method": "ListarAgendaActivo",
     "RelativePath": "api/Agenda/ListarAgendaActivo/{id_usuario}",
     "HttpMethod": "GET",
@@ -118,7 +118,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AgendaController",
+    "ContainingType": "AhayouWebAPI.Controllers.AgendaController",
     "Method": "ListarAgendaIndividual",
     "RelativePath": "api/Agenda/ListarAgendaIndividual/{id_agenda}",
     "HttpMethod": "GET",
@@ -149,7 +149,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AvisoController",
+    "ContainingType": "AhayouWebAPI.Controllers.AvisoController",
     "Method": "EliminarAviso",
     "RelativePath": "api/Aviso/EliminarAviso/{id_aviso}",
     "HttpMethod": "DELETE",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AvisoController",
+    "ContainingType": "AhayouWebAPI.Controllers.AvisoController",
     "Method": "GuardarAviso",
     "RelativePath": "api/Aviso/GuardarAviso",
     "HttpMethod": "POST",
@@ -189,7 +189,7 @@
     "Parameters": [
       {
         "Name": "oAviso",
-        "Type": "MonitoClases.Aviso",
+        "Type": "AhayouClases.Aviso",
         "IsRequired": true
       }
     ],
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AvisoController",
+    "ContainingType": "AhayouWebAPI.Controllers.AvisoController",
     "Method": "ListarAviso",
     "RelativePath": "api/Aviso/ListarAviso",
     "HttpMethod": "GET",
@@ -236,7 +236,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AvisoController",
+    "ContainingType": "AhayouWebAPI.Controllers.AvisoController",
     "Method": "ListarAvisoActivo",
     "RelativePath": "api/Aviso/ListarAvisoActivo/{id_usuario}",
     "HttpMethod": "GET",
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.AvisoController",
+    "ContainingType": "AhayouWebAPI.Controllers.AvisoController",
     "Method": "ListarAvisoIndividual",
     "RelativePath": "api/Aviso/ListarAvisoIndividual/{id_aviso}",
     "HttpMethod": "GET",
@@ -298,7 +298,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.CapitalAdeudadoUrbanizacionController",
+    "ContainingType": "AhayouWebAPI.Controllers.CapitalAdeudadoUrbanizacionController",
     "Method": "ListarUrbanizacionParametro",
     "RelativePath": "api/CapitalAdeudadoUrbanizacion/ListarUrbanizacionParametro/{id_urbanizacion}",
     "HttpMethod": "GET",
@@ -329,7 +329,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.CapitalAdeudadoUrbanizacionController",
+    "ContainingType": "AhayouWebAPI.Controllers.CapitalAdeudadoUrbanizacionController",
     "Method": "VerificarUrbanizacion",
     "RelativePath": "api/CapitalAdeudadoUrbanizacion/VerificarUrbanizacion/{id_urbanizacion}",
     "HttpMethod": "GET",
@@ -360,7 +360,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ClienteController",
+    "ContainingType": "AhayouWebAPI.Controllers.ClienteController",
     "Method": "ListarClienteIndividual",
     "RelativePath": "api/Cliente/ListarClienteIndividual/{id_cliente}",
     "HttpMethod": "GET",
@@ -391,7 +391,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ContratoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ContratoController",
     "Method": "ListarContratoCliente",
     "RelativePath": "api/Contrato/ListarContratoCliente/{ci}",
     "HttpMethod": "GET",
@@ -422,7 +422,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ContratoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ContratoController",
     "Method": "ListarContratoIndividual",
     "RelativePath": "api/Contrato/ListarContratoIndividual/{id_contrato}",
     "HttpMethod": "GET",
@@ -453,7 +453,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ContratoVentaController",
+    "ContainingType": "AhayouWebAPI.Controllers.ContratoVentaController",
     "Method": "ListarContratoVentaIndividual",
     "RelativePath": "api/ContratoVenta/ListarContratoVentaIndividual/{id_contrato}",
     "HttpMethod": "GET",
@@ -484,7 +484,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ContratoVentaController",
+    "ContainingType": "AhayouWebAPI.Controllers.ContratoVentaController",
     "Method": "SiguienteNumero",
     "RelativePath": "api/ContratoVenta/SiguienteNumero",
     "HttpMethod": "GET",
@@ -509,7 +509,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.GrupoVentaController",
+    "ContainingType": "AhayouWebAPI.Controllers.GrupoVentaController",
     "Method": "ListarGrupoVentaActivoConPromotor",
     "RelativePath": "api/GrupoVenta/ListarGrupoVentaActivoConPromotor/{id_grupoventa}",
     "HttpMethod": "GET",
@@ -540,7 +540,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LocalizacionController",
+    "ContainingType": "AhayouWebAPI.Controllers.LocalizacionController",
     "Method": "ListarLocalizacionConUrbanizacionDDL",
     "RelativePath": "api/Localizacion/ListarLocalizacionConUrbanizacionDDL/{id_localizacion}",
     "HttpMethod": "GET",
@@ -571,7 +571,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LocalizacionUsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.LocalizacionUsuarioController",
     "Method": "EliminarLocalizacion",
     "RelativePath": "api/LocalizacionUsuario/EliminarLocalizacion/{id_localizacionusuario}",
     "HttpMethod": "DELETE",
@@ -602,7 +602,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LocalizacionUsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.LocalizacionUsuarioController",
     "Method": "GuardarLocalizacion",
     "RelativePath": "api/LocalizacionUsuario/GuardarLocalizacion",
     "HttpMethod": "POST",
@@ -611,7 +611,7 @@
     "Parameters": [
       {
         "Name": "oLocalizacion",
-        "Type": "MonitoClases.LocalizacionUsuario",
+        "Type": "AhayouClases.LocalizacionUsuario",
         "IsRequired": true
       }
     ],
@@ -633,7 +633,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LocalizacionUsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.LocalizacionUsuarioController",
     "Method": "ListarLocalizacion",
     "RelativePath": "api/LocalizacionUsuario/ListarLocalizacion",
     "HttpMethod": "GET",
@@ -658,7 +658,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LocalizacionUsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.LocalizacionUsuarioController",
     "Method": "ListarLocalizacionIndividual",
     "RelativePath": "api/LocalizacionUsuario/ListarLocalizacionIndividual/{id_localizacionusuario}",
     "HttpMethod": "GET",
@@ -689,7 +689,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LocalizacionUsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.LocalizacionUsuarioController",
     "Method": "ListarUltimaLocalizacion",
     "RelativePath": "api/LocalizacionUsuario/ListarUltimaLocalizacion/{id_usuario}",
     "HttpMethod": "GET",
@@ -720,7 +720,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LoteController",
+    "ContainingType": "AhayouWebAPI.Controllers.LoteController",
     "Method": "ListarLoteDisponible",
     "RelativePath": "api/Lote/ListarLoteDisponible/{id_manzano}",
     "HttpMethod": "GET",
@@ -751,7 +751,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LoteController",
+    "ContainingType": "AhayouWebAPI.Controllers.LoteController",
     "Method": "ListarLoteIndividual",
     "RelativePath": "api/Lote/ListarLoteIndividual/{id_lote}",
     "HttpMethod": "GET",
@@ -782,7 +782,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LoteController",
+    "ContainingType": "AhayouWebAPI.Controllers.LoteController",
     "Method": "ListarLoteUrbanizacion",
     "RelativePath": "api/Lote/ListarLoteUrbanizacion/{id_urbanizacion}",
     "HttpMethod": "GET",
@@ -813,7 +813,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LugarCedulaController",
+    "ContainingType": "AhayouWebAPI.Controllers.LugarCedulaController",
     "Method": "ListarLugarCedula",
     "RelativePath": "api/LugarCedula/ListarLugarCedula",
     "HttpMethod": "GET",
@@ -838,7 +838,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.LugarCobroController",
+    "ContainingType": "AhayouWebAPI.Controllers.LugarCobroController",
     "Method": "ListarLugarCobro",
     "RelativePath": "api/LugarCobro/ListarLugarCobro",
     "HttpMethod": "GET",
@@ -863,7 +863,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ManzanoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ManzanoController",
     "Method": "ListarManzanoDDL",
     "RelativePath": "api/Manzano/ListarManzanoDDL/{id_urbanizacion}",
     "HttpMethod": "GET",
@@ -894,7 +894,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.MonedaController",
+    "ContainingType": "AhayouWebAPI.Controllers.MonedaController",
     "Method": "ListarMoneda",
     "RelativePath": "api/Moneda/ListarMoneda",
     "HttpMethod": "GET",
@@ -919,7 +919,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ParametrosGeneralesController",
+    "ContainingType": "AhayouWebAPI.Controllers.ParametrosGeneralesController",
     "Method": "EliminarParametrosGenerales",
     "RelativePath": "api/ParametrosGenerales/EliminarParametrosGenerales/{id_parametrogeneral}",
     "HttpMethod": "DELETE",
@@ -950,7 +950,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ParametrosGeneralesController",
+    "ContainingType": "AhayouWebAPI.Controllers.ParametrosGeneralesController",
     "Method": "GuardarParametrosGenerales",
     "RelativePath": "api/ParametrosGenerales/GuardarParametrosGenerales",
     "HttpMethod": "POST",
@@ -959,7 +959,7 @@
     "Parameters": [
       {
         "Name": "oParametrosGenerales",
-        "Type": "MonitoClases.ParametrosGenerales",
+        "Type": "AhayouClases.ParametrosGenerales",
         "IsRequired": true
       }
     ],
@@ -981,7 +981,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ParametrosGeneralesController",
+    "ContainingType": "AhayouWebAPI.Controllers.ParametrosGeneralesController",
     "Method": "ListarParametrosGenerales",
     "RelativePath": "api/ParametrosGenerales/ListarParametrosGenerales",
     "HttpMethod": "GET",
@@ -1006,7 +1006,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ParametrosGeneralesController",
+    "ContainingType": "AhayouWebAPI.Controllers.ParametrosGeneralesController",
     "Method": "ListarParametrosGeneralesActivo",
     "RelativePath": "api/ParametrosGenerales/ListarParametrosGeneralesActivo",
     "HttpMethod": "GET",
@@ -1031,7 +1031,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ParametrosGeneralesController",
+    "ContainingType": "AhayouWebAPI.Controllers.ParametrosGeneralesController",
     "Method": "ListarParametrosGeneralesIndividual",
     "RelativePath": "api/ParametrosGenerales/ListarParametrosGeneralesIndividual/{id_parametrogeneral}",
     "HttpMethod": "GET",
@@ -1062,7 +1062,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProductoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProductoController",
     "Method": "EliminarProducto",
     "RelativePath": "api/Producto/EliminarProducto/{id_producto}",
     "HttpMethod": "DELETE",
@@ -1093,7 +1093,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProductoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProductoController",
     "Method": "GuardarProducto",
     "RelativePath": "api/Producto/GuardarProducto",
     "HttpMethod": "POST",
@@ -1102,7 +1102,7 @@
     "Parameters": [
       {
         "Name": "oProducto",
-        "Type": "MonitoClases.Producto",
+        "Type": "AhayouClases.Producto",
         "IsRequired": true
       }
     ],
@@ -1124,7 +1124,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProductoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProductoController",
     "Method": "ListarProducto",
     "RelativePath": "api/Producto/ListarProducto",
     "HttpMethod": "GET",
@@ -1149,7 +1149,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProductoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProductoController",
     "Method": "ListarProductoActivo",
     "RelativePath": "api/Producto/ListarProductoActivo/{id_prospecto}",
     "HttpMethod": "GET",
@@ -1180,7 +1180,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProductoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProductoController",
     "Method": "ListarProductoIndividual",
     "RelativePath": "api/Producto/ListarProductoIndividual/{id_producto}",
     "HttpMethod": "GET",
@@ -1211,7 +1211,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.PromotorController",
+    "ContainingType": "AhayouWebAPI.Controllers.PromotorController",
     "Method": "ListarPromotorActivoXGrupo",
     "RelativePath": "api/Promotor/ListarPromotorActivoXGrupo/{id_grupoventa}/{id_grupopromotor}",
     "HttpMethod": "GET",
@@ -1247,7 +1247,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProspectoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProspectoController",
     "Method": "EliminarProspecto",
     "RelativePath": "api/Prospecto/EliminarProspecto/{id_prospecto}",
     "HttpMethod": "DELETE",
@@ -1278,7 +1278,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProspectoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProspectoController",
     "Method": "GuardarProspecto",
     "RelativePath": "api/Prospecto/GuardarProspecto",
     "HttpMethod": "POST",
@@ -1287,7 +1287,7 @@
     "Parameters": [
       {
         "Name": "oProspecto",
-        "Type": "MonitoClases.Prospecto",
+        "Type": "AhayouClases.Prospecto",
         "IsRequired": true
       }
     ],
@@ -1309,7 +1309,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProspectoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProspectoController",
     "Method": "ListarProspecto",
     "RelativePath": "api/Prospecto/ListarProspecto",
     "HttpMethod": "GET",
@@ -1334,7 +1334,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProspectoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProspectoController",
     "Method": "ListarProspectoActivo",
     "RelativePath": "api/Prospecto/ListarProspectoActivo/{id_usuario}",
     "HttpMethod": "GET",
@@ -1365,7 +1365,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ProspectoController",
+    "ContainingType": "AhayouWebAPI.Controllers.ProspectoController",
     "Method": "ListarProspectoIndividual",
     "RelativePath": "api/Prospecto/ListarProspectoIndividual/{id_prospecto}",
     "HttpMethod": "GET",
@@ -1396,7 +1396,32 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.RolController",
+    "ContainingType": "AhayouWebAPI.Controllers.RedesSocialesController",
+    "Method": "ListarRedes",
+    "RelativePath": "api/RedesSociales/ListarRedes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.RolController",
     "Method": "EliminarRol",
     "RelativePath": "api/Rol/EliminarRol/{id_rol}",
     "HttpMethod": "DELETE",
@@ -1427,7 +1452,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.RolController",
+    "ContainingType": "AhayouWebAPI.Controllers.RolController",
     "Method": "GuardarRol",
     "RelativePath": "api/Rol/GuardarRol",
     "HttpMethod": "POST",
@@ -1436,7 +1461,7 @@
     "Parameters": [
       {
         "Name": "oRol",
-        "Type": "MonitoClases.Rol",
+        "Type": "AhayouClases.Rol",
         "IsRequired": true
       }
     ],
@@ -1458,7 +1483,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.RolController",
+    "ContainingType": "AhayouWebAPI.Controllers.RolController",
     "Method": "ListarRol",
     "RelativePath": "api/Rol/ListarRol",
     "HttpMethod": "GET",
@@ -1483,7 +1508,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.RolController",
+    "ContainingType": "AhayouWebAPI.Controllers.RolController",
     "Method": "ListarRolActivo",
     "RelativePath": "api/Rol/ListarRolActivo",
     "HttpMethod": "GET",
@@ -1508,7 +1533,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.RolController",
+    "ContainingType": "AhayouWebAPI.Controllers.RolController",
     "Method": "ListarRolIndividual",
     "RelativePath": "api/Rol/ListarRolIndividual/{id_rol}",
     "HttpMethod": "GET",
@@ -1539,7 +1564,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UrbanizacionController",
+    "ContainingType": "AhayouWebAPI.Controllers.UrbanizacionController",
     "Method": "ListarUrbanizacionActivo",
     "RelativePath": "api/Urbanizacion/ListarUrbanizacionActivo",
     "HttpMethod": "GET",
@@ -1564,7 +1589,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UrbanizacionController",
+    "ContainingType": "AhayouWebAPI.Controllers.UrbanizacionController",
     "Method": "ListarUrbanizacionActivoDDL",
     "RelativePath": "api/Urbanizacion/ListarUrbanizacionActivoDDL/{id_localizacion}/{activo}",
     "HttpMethod": "GET",
@@ -1600,7 +1625,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "CambiarPasswordUsuario",
     "RelativePath": "api/Usuario/CambiarPasswordUsuario",
     "HttpMethod": "POST",
@@ -1609,7 +1634,7 @@
     "Parameters": [
       {
         "Name": "oUsuario",
-        "Type": "MonitoClases.Usuario",
+        "Type": "AhayouClases.Usuario",
         "IsRequired": true
       }
     ],
@@ -1631,7 +1656,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "EliminarUsuario",
     "RelativePath": "api/Usuario/EliminarUsuario/{id_usuario}",
     "HttpMethod": "DELETE",
@@ -1662,7 +1687,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "GuardarUsuario",
     "RelativePath": "api/Usuario/GuardarUsuario",
     "HttpMethod": "POST",
@@ -1671,7 +1696,7 @@
     "Parameters": [
       {
         "Name": "oUsuario",
-        "Type": "MonitoClases.Usuario",
+        "Type": "AhayouClases.Usuario",
         "IsRequired": true
       }
     ],
@@ -1693,7 +1718,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "ListarUsuario",
     "RelativePath": "api/Usuario/ListarUsuario",
     "HttpMethod": "GET",
@@ -1718,7 +1743,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "ListarUsuarioActivo",
     "RelativePath": "api/Usuario/ListarUsuarioActivo",
     "HttpMethod": "GET",
@@ -1743,7 +1768,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "ListarUsuarioIndividual",
     "RelativePath": "api/Usuario/ListarUsuarioIndividual/{id_usuario}",
     "HttpMethod": "GET",
@@ -1774,7 +1799,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "ListarUsuarioSupervisor",
     "RelativePath": "api/Usuario/ListarUsuarioSupervisor",
     "HttpMethod": "GET",
@@ -1799,7 +1824,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "ListarVendedorXSupervisor",
     "RelativePath": "api/Usuario/ListarVendedorXSupervisor/{id_usuario}",
     "HttpMethod": "GET",
@@ -1830,7 +1855,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.UsuarioController",
+    "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "Login",
     "RelativePath": "api/Usuario/Login/{nombre_usuario}/{password}",
     "HttpMethod": "GET",
@@ -1866,7 +1891,7 @@
     ]
   },
   {
-    "ContainingType": "MonitoWebAPI.Controllers.ZonaController",
+    "ContainingType": "AhayouWebAPI.Controllers.ZonaController",
     "Method": "ListarZona",
     "RelativePath": "api/Zona/ListarZona/{id_sector}",
     "HttpMethod": "GET",

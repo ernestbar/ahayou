@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using MonitoClases;
+using AhayouClases;
 using System.Data;
 using System.Net;
 
-namespace MonitoWebAPI.Controllers
+namespace AhayouWebAPI.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
