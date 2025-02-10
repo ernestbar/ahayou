@@ -1,0 +1,1 @@
+﻿en este direcctorio se guardan los logs de las respuestas del sintesis

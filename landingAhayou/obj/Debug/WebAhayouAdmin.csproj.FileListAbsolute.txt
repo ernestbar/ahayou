@@ -1,0 +1,177 @@
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\WebAhayouAdmin.dll.config
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\WebAhayouAdmin.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\WebAhayouAdmin.pdb
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\csc.exe
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\csc.exe.config
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\csc.rsp
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\csi.exe
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\csi.exe.config
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\csi.rsp
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.AppContext.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Collections.Immutable.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Console.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Globalization.Calendars.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.IO.Compression.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.IO.FileSystem.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Net.Http.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Net.Sockets.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Reflection.Metadata.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.ValueTuple.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Xml.XPath.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\vbc.exe
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\vbc.exe.config
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\vbc.rsp
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\VBCSCompiler.exe
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\roslyn\VBCSCompiler.exe.config
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.AssemblyReference.cache
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CoreCompileInputs.cache
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\obj\Debug\WebAhayo.89DC20F7.Up2Date
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.dll
+E:\ERNESTO\PROY AHAYOU\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.pdb
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.dll.config
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.pdb
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\csc.exe
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\csc.exe.config
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\csc.rsp
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\csi.exe
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\csi.exe.config
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\csi.rsp
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.AppContext.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Collections.Immutable.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Console.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Globalization.Calendars.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.Compression.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.FileSystem.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Net.Http.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Net.Sockets.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Reflection.Metadata.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.ValueTuple.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.XPath.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\vbc.exe
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\vbc.exe.config
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\vbc.rsp
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\VBCSCompiler.exe
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\roslyn\VBCSCompiler.exe.config
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.AssemblyReference.cache
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CoreCompileInputs.cache
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.dll
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.pdb
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.dll.config
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\WebAhayouAdmin.pdb
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\csc.exe
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\csc.exe.config
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\csc.rsp
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\csi.exe
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\csi.exe.config
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\csi.rsp
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.AppContext.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Collections.Immutable.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Console.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Globalization.Calendars.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.Compression.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.FileSystem.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Net.Http.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Net.Sockets.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Reflection.Metadata.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.ValueTuple.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.XPath.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\vbc.exe
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\vbc.exe.config
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\vbc.rsp
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\VBCSCompiler.exe
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\roslyn\VBCSCompiler.exe.config
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.AssemblyReference.cache
+E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CoreCompileInputs.cache
+E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayo.89DC20F7.Up2Date
+E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.dll
+E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.pdb
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CopyComplete
