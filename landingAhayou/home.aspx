@@ -4,815 +4,314 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Index - Day Bootstrap Template</title>
+    <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Ahayou</title>
   <meta name="description" content=""/>
-  <meta name="keywords" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon"/>
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+  <!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="assets/css/blog/vendor.min.css" rel="stylesheet" />
+	<link href="assets/css/blog/app.min.css" rel="stylesheet" />
+	<!-- ================== END core-css ================== -->
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet"/>
-
-  <!-- =======================================================
-  * Template Name: Day
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
     <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
-       <header id="header" class="header fixed-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
-    <div class="branding d-flex align-items-center">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Day</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-
-    </div>
-
-  </header>
-
-  <main class="main" >
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section" style="background-image:url('Imagenes/fondo1.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-
-      
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-start">
-          <div class="col-lg-8">
-              
-            <h2>Welcome to Day</h2>
-            <p>We are team of talented designers making websites with Bootstrap</p>
-            <a href="#about" class="btn-get-started">Get Started</a>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section" style="background-image:url('Imagenes/fondo2.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>About Us<br></span>
-        <h2>About Us<br></h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-            </ul>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Cards Section -->
-    <section id="cards" class="cards section" style="background-image:url('Imagenes/fondo3.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-
-      <div class="container">
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="100">
-            <span>01</span>
-            <h4>Lorem Ipsum</h4>
-            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
-            <span>02</span>
-            <h4>Repellat Nihil</h4>
-            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
-            <span>03</span>
-            <h4> Ad ad velit qui</h4>
-            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
-            <span>04</span>
-            <h4>Repellendus molestiae</h4>
-            <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
-            <span>05</span>
-            <h4>Sapiente Magnam</h4>
-            <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
-            <span>06</span>
-            <h4>Facilis Impedit</h4>
-            <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
-          </div><!-- End Card Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Cards Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background" style="background-image:url('Imagenes/fondo4.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-
-      <div class="container">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section"  style="background-image:url('Imagenes/fondo5.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Services</span>
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Nesciunt Mete</h3>
-              </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Eosle Commodi</h3>
-              </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Ledo Markt</h3>
-              </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
-              </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Velit Doloremque</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Dolori Architecto</h3>
-              </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/fondo_inicial.png" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Call To Action Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Portfolio</span>
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Pricing</span>
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row g-4 g-lg-0">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4 featured" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Team</span>
-        <h2>Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Walter White</h4>
-                <span>Web Development</span>
-                <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+    
+    <form id="form1" runat="server" class="col-12">
+         <header class="position-relative" style="background-image:url('img/header-img.jpg');position:absolute; top,left:0px; width,max-height:100%; border:0;">
+            <nav class="navbar navbar-expand">
+                <div class="container">
+                    <img src="Imagenes/logo-ahayou.png" alt="logo"/>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <asp:Button ID="btnSuscribirse" class="btn btn-danger rounded-5" runat="server" Text="Suscribase" />
+                        <asp:Button ID="btnLogin" class="btn btn-green rounded-5" runat="server" Text="Iniciar Sesion" />
+                        <asp:ImageButton ID="ibtnSP" CssClass="btn rounded-5" ImageUrl="~/Images/español.png" Height="50" runat="server" />
+                        <asp:ImageButton ID="ibtnUS" CssClass="btn rounded-5" ImageUrl="~/Images/usa.png" Height="50" runat="server" />
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
+            </nav>
 
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Sarah Jhinson</h4>
-                <span>Marketing</span>
-                <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <section class="hero container h-75 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="hero-title text-white text-center">Streaming con Alma Boliviana</h1>
+                <p class="hero-second-p text-white text-center">Una experiencia mejorada no te pierdas los estrenos mas anticipados y tus clásicos favoritos</p>
+
+                <div class="row g-3 d-flex align-items-center justify-content-center w-100 w-lg-75">
+                    <div class="form-floating col-auto">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="get-started-btn red-btn fw-bold">Get Started</button>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
+            </section>
+        </header>
+        <%-- <section class="purple-section position-absolute d-flex justify-content-center">
+             <div class="container-md d-row d-md-flex justify-content-center">
+                 <div class="d-flex align-items-center justify-content-end px-4 col-12 col-md-5">
+                     <img class="img-fluid" src="/img/popcorn-logo.png" alt="popcorn"/>
+                 </div>
+                 <div class="d-flex flex-column justify-content-center col-12 col-md-7"/>
+                     <p>The Netflix you love for just £4.99</p>
+                     <p>Get the Standard with adverts plan.</p>
+                     <a href="#">Learn More</a>
+                 </div>
+         </section>--%>
 
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>William Anderson</h4>
-                <span>Content</span>
-                <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
+         <section class="enjoy-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_02.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+             <h1 class="section-title text-center text-lg-start">PROXIMOS ESTRENOS</h1>
+             <div class="container d-flex row m-auto">
+                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6">
+                     <h2 class="section-title text-center text-lg-start">Enjoy on your TV</h2>
+                     <p class="section-paragraph text-center text-lg-start">Watch on smart Tvs, PlayStation, Xbox, Chromecast, Apple TV, Blu-Ray players and more.</p>
+                 </div>
+                 <div class="col-12 col-lg-6">
+                     <img class="img-fluid" src="img/tv.png" alt="tv"/>
+                 </div>
+             </div>
+         </section>
 
-        </div>
+         <section class="watch-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_03.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+             <div class="container d-flex row m-auto">
+                 <div class="col-12 col-lg-6">
+                     <img class="img-fluid" src="img/mobile-img.png" alt="mobile"/>
+                 </div>
+                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6 order-first order-lg-last">
+                     <h2 class="section-title text-center text-lg-start">Watch everywhere</h2>
+                     <p class="section-paragraph text-center text-lg-start">Stream unlimited films and TV programmes on your phone, tablet, laptop and TV.</p>
+                 </div>
+             </div>
+         </section>
 
-      </div>
+         <section class="children-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_04.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+             <div class="container d-flex row m-auto">
+                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6">
+                     <h2 class="section-title text-center text-lg-start">Create profiles for children</h2>
+                     <p class="section-paragraph text-center text-lg-start">Send children on adventures with their favourite characters in a space made just for them - free with your membership.</p>
+                 </div>
+                 <div class="col-12 col-lg-6">
+                     <img class="img-fluid" src="img/children-img.png" alt="children"/>
+                 </div>
+             </div>
+         </section>
 
-    </section><!-- /Team Section -->
+         <section class="download-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_05.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+             <div class="container d-flex row m-auto">
+                 <div class="col-12 col-lg-6">
+                     <img class="img-fluid" src="img/download-img.jpg" alt="download"/>
+                 </div>
+                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6 order-first order-lg-last">
+                     <h2 class="section-title text-center text-lg-start">Download your programmes to watch offline</h2>
+                     <p class="section-paragraph text-center text-lg-start">Only available on advert-free plans.</p>
+                 </div>
+             </div>
+         </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+         <section class="faq-section py-5 bg-black text-light" style="background-image:url('Imagenes/landingpage-AHAYOU_01.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+             <div class="container">
+                 <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+                 <div class="accordion" id="accordionExample" >
+                     <div class="accordion-item mb-2">
+                         <h2 class="accordion-header">
+                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                 What is Netflix?
+                             </button>
+                         </h2>
+                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                             <div class="accordion-body">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate harum cumque maxime consequuntur assumenda maiores obcaecati iusto beatae nihil! Voluptates esse, magnam dolores non porro aperiam. Voluptatem, labore magni quod, quasi ab provident dolor amet dolorem molestiae blanditiis illo dolorum incidunt cum itaque laborum vero quam facere voluptatibus fuga minima?
+                             </div>
+                         </div>
+                     </div>
+                     <div class="accordion-item mb-2">
+                         <h2 class="accordion-header">
+                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                 How much does Netflix cost?
+                             </button>
+                         </h2>
+                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                             <div class="accordion-body">
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium et corporis distinctio quos expedita, quae, eos necessitatibus ea consectetur nam cum porro veritatis illum repudiandae nobis tempora eum excepturi quibusdam tempore non asperiores? Error, illo perspiciatis? Cum, rem quam quibusdam at accusantium alias mollitia labore magnam repellat, eveniet odio quas saepe illum neque! Deleniti facere omnis culpa modi rerum vitae sunt facilis minus nostrum! Esse cum facilis qui sapiente eos dignissimos, perferendis delectus inventore minus, neque amet quo aspernatur quaerat alias dolore cumque sint. Sapiente vel numquam ratione maxime. Veritatis, optio reiciendis voluptatibus praesentium sed vitae assumenda quaerat velit!
+                             </div>
+                         </div>
+                     </div>
+                     <div class="accordion-item mb-2">
+                         <h2 class="accordion-header">
+                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 Where can I watch?
+                             </button>
+                         </h2>
+                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                             <div class="accordion-body">
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio hic temporibus delectus veniam distinctio repellendus error architecto? Magnam quas, quo placeat quibusdam dolores vitae corporis quaerat velit! Temporibus illo corrupti praesentium atque consequuntur! Deserunt amet explicabo magni dignissimos sunt.
+                             </div>
+                         </div>
+                     </div>
+                     <div class="accordion-item mb-2">
+                         <h2 class="accordion-header">
+                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                 How do I cancel?
+                             </button>
+                         </h2>
+                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                             <div class="accordion-body">
+                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus vero voluptates quasi reprehenderit pariatur necessitatibus maiores cum voluptatem possimus! Quod fuga dignissimos quo debitis iure eius ratione neque unde libero deleniti doloribus facilis animi est sunt ut deserunt beatae, dicta illum aut non totam! Deleniti in rerum totam laboriosam autem accusamus nihil! Voluptas quibusdam voluptatum tempora ducimus libero, quae reiciendis.
+                             </div>
+                         </div>
+                     </div>
+                     <div class="accordion-item mb-2">
+                         <h2 class="accordion-header">
+                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                 What can I watch on Netflix?
+                             </button>
+                         </h2>
+                         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                             <div class="accordion-body">
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum consequuntur corporis incidunt ullam ipsam suscipit nam eius velit deleniti unde voluptatem, iure sequi necessitatibus iusto.
+                             </div>
+                         </div>
+                     </div>
+                     <div class="accordion-item mb-2">
+                         <h2 class="accordion-header">
+                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                 Is Netflix good for children?
+                             </button>
+                         </h2>
+                         <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                             <div class="accordion-body">
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, dolores quod tempore nisi est sequi veniam vitae quia odio, harum consequatur at corporis totam vel, facere quidem et eos nihil iste fugit! Iusto iste, nihil vel eos ipsa culpa minus assumenda quaerat ut? Facilis quibusdam maxime asperiores voluptates maiores, alias adipisci odit placeat. Dolore temporibus labore praesentium commodi quam. Possimus praesentium omnis maiores dolorum non voluptatibus consequuntur autem, eveniet aut alias id impedit perspiciatis officia?
+                             </div>
+                         </div>
+                     </div>
+                 </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Contact</span>
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+                 <h3 class="text-center mt-5">
+                     Ready to watch? Enter your email to create or restrat your membership.
+                 </h3>
+                 <form class="row g-3 d-flex align-items-center justify-content-center w-100 w-lg-75 m-auto">
+                     <div class="form-floating col-auto">
+                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+                         <label for="floatingInput">Email address</label>
+                     </div>
+                     <div class="col-auto">
+                         <button type="submit" class="get-started-btn red-btn fw-bold">Get Started</button>
+                     </div>
+                 </form>
+             </div>
+         </section>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
-              <p>info@example.com</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!-- End Google Maps -->
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="footer-about">
-            <a href="index.html" class="logo sitename">Day</a>
-            <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
-            </div>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Day</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-
-  </footer>
+         <footer class="py-5 bg-black text-light">
+             <div class="container"> 
+                 <div>
+                     <p>Questions? Call <a href="#">0900900900</a></p>
+                 </div>
+                 <div class="row">
+                     <div class="col-12 col-sm-4">
+                         <ul>
+                             <li class="mb-2">
+                                 <a href="#">FAQ</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Media Center</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Netflix Shop</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Ways to Watch</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Cookie Preferences</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Speed Text</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Only on Netflix</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="col-12 col-sm-4">
+                         <ul>
+                             <li class="mb-2">
+                                 <a href="#">Help Center</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Investor Relations</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Redeem gift cards</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Terms of Use</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Corporate Information</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Legal Guarantee</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Advert ChoiCes</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="col-12 col-sm-4">
+                         <ul>
+                             <li class="mb-2">
+                                 <a href="#">Account</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Jobs</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Buy Gift Cards</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Privacy</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Contact us</a>
+                             </li>
+                             <li class="mb-2">
+                                 <a href="#">Legal Notices</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="py-3">
+                     <div class="position-absolute">
+                         <img class="position-absolute" width="17" src="img/globe-icon.png" alt="globe"/>
+                     </div>
+                     <div class="position-absolute">
+                         <div class="arrow-down position-absolute"></div>
+                     </div>
+                     <select class="position-relative py-1" name="" id="">
+                         <option value="">English</option>
+                     </select>
+                 </div>
+                 <p>Netflix United Kingdom</p>
+             </div>
+         </footer>
     </form>
       <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <!-- ================== BEGIN core-js ================== -->
+	<script src="assets/js/blog/vendor.min.js"></script>
+	<script src="assets/js/blog/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+    <script src="" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
