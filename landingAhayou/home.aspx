@@ -101,16 +101,17 @@
 
   </header>
 
-  <main class="main" style="background-image:src('assets/img/fondo_landing.jpg')">
+  <main class="main" >
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section" style="background-image:url('Imagenes/fondo1.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 
-      <img src="assets/img/fondo_inicial.png" alt="" data-aos="fade-in">
+      
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-start">
           <div class="col-lg-8">
+              
             <h2>Welcome to Day</h2>
             <p>We are team of talented designers making websites with Bootstrap</p>
             <a href="#about" class="btn-get-started">Get Started</a>
@@ -121,7 +122,7 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section" style="background-image:url('Imagenes/fondo2.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -159,7 +160,7 @@
     </section><!-- /About Section -->
 
     <!-- Cards Section -->
-    <section id="cards" class="cards section">
+    <section id="cards" class="cards section" style="background-image:url('Imagenes/fondo3.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 
       <div class="container">
 
@@ -208,7 +209,7 @@
     </section><!-- /Cards Section -->
 
     <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
+    <section id="clients" class="clients section light-background" style="background-image:url('Imagenes/fondo4.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 
       <div class="container">
 
@@ -263,7 +264,7 @@
     </section><!-- /Clients Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="services" class="services section"  style="background-image:url('Imagenes/fondo5.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">

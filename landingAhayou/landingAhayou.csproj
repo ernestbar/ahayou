@@ -148,6 +148,11 @@
     <Content Include="home.aspx" />
     <Content Include="Imagenes\fondo-AHAYOU.png" />
     <Content Include="Imagenes\fondo.jpg" />
+    <Content Include="Imagenes\fondo1.jpg" />
+    <Content Include="Imagenes\fondo2.jpg" />
+    <Content Include="Imagenes\fondo3.jpg" />
+    <Content Include="Imagenes\fondo4.jpg" />
+    <Content Include="Imagenes\fondo5.jpg" />
     <Content Include="Imagenes\fondo_negro.png" />
     <Content Include="Imagenes\logo-ahayou.png" />
     <Content Include="Imagenes\logo1.jpg" />
