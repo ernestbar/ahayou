@@ -25104,6 +25104,7 @@
     <Content Include="assets\plugins\x-editable-bs4\test\unit\typeahead.js" />
     <Content Include="assets\plugins\x-editable-bs4\test\unit\typeaheadjs.js" />
     <Content Include="assets\plugins\x-editable-bs4\test\unit\wysihtml5.js" />
+    <Content Include="avatares_admin.aspx" />
     <Content Include="cambiar_password.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
@@ -25337,6 +25338,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="avatares_admin.aspx.cs">
+      <DependentUpon>avatares_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="avatares_admin.aspx.designer.cs">
+      <DependentUpon>avatares_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cambiar_password.aspx.cs">
       <DependentUpon>cambiar_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -25344,6 +25352,7 @@
     <Compile Include="cambiar_password.aspx.designer.cs">
       <DependentUpon>cambiar_password.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Avatares.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />
     <Compile Include="Clases\Ingreso_app.cs" />

@@ -5,16 +5,24 @@
 <html>
 <head runat="server">
 <meta charset="utf-8" />
-<title>Color Admin | One Page Parallax Front End Theme</title>
+<title>Ahayou</title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />
 
 <!-- ================== BEGIN core-css ================== -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-<link href="../assets/css/one-page-parallax/vendor.min.css" rel="stylesheet" />
-<link href="../assets/css/one-page-parallax/app.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet" />
+
+<link href="assets/css/one-page-parallax/vendor.min.css" rel="stylesheet" />
+<link href="assets/css/one-page-parallax/app.min.css" rel="stylesheet" />
 <!-- ================== END core-css ================== -->
+<%--	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">--%>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	   <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
+   <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -55,31 +63,78 @@
 				<!-- end #header -->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-			<!-- begin #footer -->
-			<div id="footer" class="footer">
-				<div class="container">
-					<div class="footer-brand">
-						<div class="footer-brand-logo"></div>
-						Color Admin
+		
+	
+<!-- begin #footer -->
+	<div id="footer" class="footer" style="background-image:url('Imagenes/landingpage-AHAYOU_01.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+		<!-- begin container -->
+		<div class="container">
+			<!-- begin row -->
+			<div class="row">
+				<!-- begin col-3 -->
+				<div class="col-md-3 col-6">
+					<!-- begin section-container -->
+					<div class="section-container">
+						<img src="Images/LogoNaranja.png" />
 					</div>
-					<p>
-						&copy; Copyright Color Admin 2021 <br />
-						An admin & front end theme with serious impact. Created by <a href="#">SeanTheme</a>
-					</p>
-					<p class="social-list">
-						<a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
-						<a href="#"><i class="fab fa-instagram fa-fw"></i></a>
-						<a href="#"><i class="fab fa-twitter fa-fw"></i></a>
-						<a href="#"><i class="fab fa-google-plus-g fa-fw"></i></a>
-						<a href="#"><i class="fab fa-dribbble fa-fw"></i></a>
-					</p>
+					<!-- end section-container -->
 				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-md-3 col-6">
+					<!-- begin section-container -->
+					<div class="section-container">
+						<h4 class="footer-title">
+						<ul class="archives">
+							<li><a href="#">Preguntas frecuentes</a></li>
+							<li><a href="#">Privacidad</a></li>
+						</ul></h4>
+					</div>
+					<!-- end section-container -->
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-md-3 col-6">
+								<!-- begin section-container -->
+								<div class="section-container">
+									<h4 class="footer-title">
+									<ul class="archives">
+										<li><a href="#">Centro de ayuda</a></li>
+										<li><a href="#">Avisos Legales</a></li>
+									</ul></h4>
+								</div>
+								<!-- end section-container -->
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-md-3 col-6">
+											<!-- begin section-container -->
+											<div class="section-container">
+												<h4 class="footer-title">
+												<ul class="archives">
+													<li><a href="#">Terminos de uso</a></li>
+													<li><a href="#">Contacto</a></li>
+												</ul></h4>
+											</div>
+											<!-- end section-container -->
+				</div>
+				<hr /> 
+				<!-- end col-3 -->
+
 			</div>
-			<!-- end #footer -->
+			<!-- end row -->
+		</div>
+		<!-- end container -->
+	</div>
+	<!-- end #footer -->
+	
         </div>
     </form>
     <!-- ================== BEGIN BASE JS ================== -->
-<script src="../assets/js/one-page-parallax/vendor.min.js"></script>
-<script src="../assets/js/one-page-parallax/app.min.js"></script>
+<script src="assets/js/one-page-parallax/vendor.min.js"></script>
+<script src="assets/js/one-page-parallax/app.min.js"></script>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

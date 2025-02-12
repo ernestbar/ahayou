@@ -5054,8 +5054,9 @@
     <Content Include="assets\plugins\summernote\dist\summernote.js" />
     <Content Include="assets\plugins\summernote\dist\summernote.min.css" />
     <Content Include="assets\plugins\summernote\dist\summernote.min.js" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
-    <Content Include="hime2.aspx" />
     <Content Include="home.aspx" />
     <Content Include="Imagenes\fondo-AHAYOU.png" />
     <Content Include="Imagenes\fondo.jpg" />
@@ -5283,11 +5284,17 @@
     <Content Include="img\download-img.jpg" />
     <Content Include="img\globe-icon.png" />
     <Content Include="img\header-img.jpg" />
+    <Content Include="img\left-arrow.svg" />
     <Content Include="img\logo.png" />
     <Content Include="img\mobile-img.png" />
     <Content Include="img\popcorn-logo.png" />
+    <Content Include="img\right-arrow.svg" />
+    <Content Include="img\slide-1.jpg" />
+    <Content Include="img\slide-2.jpg" />
+    <Content Include="img\slide-3.jpg" />
     <Content Include="img\tv.png" />
     <Content Include="index.html" />
+    <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\konami.js" />
     <Content Include="js\main.js" />
     <Content Include="js\pwacompat.min.js" />
@@ -5320,13 +5327,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hime2.aspx.cs">
-      <DependentUpon>hime2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hime2.aspx.designer.cs">
-      <DependentUpon>hime2.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>

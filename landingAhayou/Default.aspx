@@ -3,404 +3,284 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- begin #home -->
-<div id="home" class="content has-bg home">
-	<!-- begin content-bg -->
-	<div class="content-bg" style="background-image: url(Imagenes/landingpage-AHAYOU_01.png);" 
-		data-paroller="true" 
-		data-paroller-type="foreground" 
-		data-paroller-factor="-0.25">
-	</div>
-	<!-- end content-bg -->
-	<!-- begin container -->
-	<div class="container home-content">
-		<!-- begin carousel -->
-		<div class="content bg-light" >
-			<!-- begin container -->
-			<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
-					<!-- begin col-6 -->
-					<div class="col-lg-12">
-						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-							<!-- Indicators -->
-							<ol class="carousel-indicators">
-								<li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
-								<li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
-								<li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
-							</ol>
-							<!-- Wrapper for slides -->
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="../assets/img/carousel/carousel-1.jpg" class="w-100" alt="Carousel 1">
-									<div class="carousel-caption">
-										<h4 class="m-b-5">Caption Title 1</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-									</div>
-								</div>
-								<div class="carousel-item">
-									<img src="../assets/img/carousel/carousel-2.jpg" class="w-100" alt="Carousel 2">
-									<div class="carousel-caption">
-										<h4 class="m-b-5">Caption Title 2</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-									</div>
-								</div>
-								<div class="carousel-item">
-									<img src="../assets/img/carousel/carousel-3.jpg" class="w-100" alt="Carousel 3">
-									<div class="carousel-caption">
-										<h4 class="m-b-5">Caption Title 3</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-									</div>
-								</div>
+<%--<div id="home" class="content home" style="background-image:url('Imagenes/landingpage-AHAYOU_01.png'); background-repeat: no-repeat; background-position:center center;background-size:cover;background-attachment:fixed;">--%>
+	<div id="home" class="content" data-scrollview="true"  style="background-image:url('Imagenes/landingpage-AHAYOU_01.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+	<div class="container">
+		<section class="home">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-controls">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="" style="background-image: url(img/header-img.jpg);"></li>
+        <li data-target="#carousel" data-slide-to="" style="background-image: url(img/slide-2.jpg);"></li>
+        <li data-target="#carousel" data-slide-to="" style="background-image: url(img/slide-3.jpg);"></li>
+      </ol>
+
+      <a class="carousel-control-prev" role="button" data-slide="prev" href="#carousel">
+        <img src="img/left-arrow.svg" alt="Previous">
+      </a>
+      <a class="carousel-control-next" role="button" data-slide="next" href="#carousel">
+        <img src="img/right-arrow.svg" alt="Next">
+      </a>
+
+    </div>
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url(img/header-img.jpg);background-attachment:fixed">
+        <div class="container">
+         <h1>Streaming con Alma Boliviana</h1>
+		<p>Una experiencia mejorada, no te pierdas los estrenos mas anticipados y tus clásicos favoritos.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url(img/slide-2.jpg);">
+        <div class="container">
+          <h2>I'm Ronda</h2>
+          <p>App Developer</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url(img/slide-3.jpg);">
+        <div class="container">
+          <h2>I'm Linda</h2>
+          <p>Web Developer</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</section>
+				<%--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
+						<li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
+						<li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner align-items-lg-center">
+						<div class="carousel-item active">
+							<img src="img/header-img.jpg" class="w-100 h-100" alt="Carousel 1" />
+							<div class="carousel-caption align">
+								<h1>Streaming con Alma Boliviana</h1>
+								<p>Una experiencia mejorada, no te pierdas los estrenos mas anticipados y tus clásicos favoritos.</p>
 							</div>
-							<a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-bs-slide="prev">
-							<i class="fa fa-chevron-left"></i>
-							</a>
-							<a class="carousel-control-next" href="#carousel-example-generic" role="button" data-bs-slide="next">
-							<i class="fa fa-chevron-right"></i>
-							</a>
+							
+						</div>
+						<div class="carousel-item">
+							<img src="assets/img/carousel/carousel-2.jpg" class="w-100" alt="Carousel 2" />
+							<div class="carousel-caption">
+								<h4 class="m-b-5">Caption Title 2</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="assets/img/carousel/carousel-3.jpg" class="w-100" alt="Carousel 3" />
+							<div class="carousel-caption">
+								<h4 class="m-b-5">Caption Title 3</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
 						</div>
 					</div>
-					<!-- end col-6 -->
+					<a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-bs-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+					</a>
+					<a class="carousel-control-next" href="#carousel-example-generic" role="button" data-bs-slide="next">
+					<i class="fa fa-chevron-right"></i>
+					</a>
 				
-			</div>
-			<!-- end container -->
-		</div>
-		<!-- end carousel -->
-		
+				</div>--%>
 	</div>
-	<!-- end container -->
+	
 </div>
 <!-- end #home -->
-
+	
 <!-- begin #about -->
-<div id="about" class="content" data-scrollview="true" style="background-image: url(Imagenes/landingpage-AHAYOU_02.png);">
+<div id="nuevos" class="content" data-scrollview="true"  style="background-image:url('Imagenes/landingpage-AHAYOU_02.png'); background-repeat: no-repeat; background-size: 100% 100%;">
 	<!-- begin container -->
-	<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
-		<h2 class="content-title">About Us</h2>
-		<p class="content-desc">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-			sed bibendum turpis luctus eget
-		</p>
-		<!-- begin row -->
-		<div class="row">
-			<!-- begin col-4 -->
-			<div class="col-lg-4">
-				<!-- begin about -->
-				<div class="about">
-					<h3 class="mb-3">Our Story</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						Vestibulum posuere augue eget ante porttitor fringilla. 
-						Aliquam laoreet, sem eu dapibus congue, velit justo ullamcorper urna, 
-						non rutrum dolor risus non sapien. Vivamus vel tincidunt quam. 
-						Donec ultrices nisl ipsum, sed elementum ex dictum nec. 
-					</p>
-					<p>
-						In non libero at orci rutrum viverra at ac felis. 
-						Curabitur a efficitur libero, eu finibus quam. 
-						Pellentesque pretium ante vitae est molestie, ut faucibus tortor commodo. 
-						Donec gravida, eros ac pretium cursus, est erat dapibus quam, 
-						sit amet dapibus nisl magna sit amet orci. 
-					</p>
-				</div>
-				<!-- end about -->
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4">
-				<h3 class="mb-3">Our Philosophy</h3>
-				<!-- begin about-author -->
-				<div class="about-author">
-					<div class="quote">
-						<i class="fa fa-quote-left"></i>
-						<h3>We work harder,<br /><span>to let our user keep simple</span></h3>
-						<i class="fa fa-quote-right"></i>
-					</div>
-					<div class="author">
-						<div class="image">
-							<img src="../assets/img/user/user-1.jpg" alt="Sean Ngu" />
+	<div class="container">
+		<h1 class="content-title text-white">Nuevos agregados</h1>
+		
+		<div>
+			
+			<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
+					<li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
+					<li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
+				</ol>
+				<!-- Wrapper for slides -->
+				
+				<div class="carousel-inner col-3">
+					<div class="carousel-item active">
+						<img src="img/header-img.jpg" class="w-100" alt="Carousel 1" />
+						<div class="carousel-caption align-top">
+							<h1>Streaming con Alma Boliviana</h1>
+							<p>Una experiencia mejorada, no te pierdas los estrenos mas anticipados y tus clásicos favoritos.</p>
 						</div>
-						<div class="info">
-							Sean Ngu
-							<small>Front End Developer</small>
+						
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel/carousel-2.jpg" class="w-100" alt="Carousel 2" />
+						<div class="carousel-caption">
+							<h4 class="m-b-5">Caption Title 2</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel/carousel-3.jpg" class="w-100" alt="Carousel 3" />
+						<div class="carousel-caption">
+							<h4 class="m-b-5">Caption Title 3</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 					</div>
 				</div>
-				<!-- end about-author -->
+				<a class="carousel-control-prev" href="#carousel-example-generic1" role="button" data-bs-slide="prev">
+				<i class="fa fa-chevron-left"></i>
+				</a>
+				<a class="carousel-control-next" href="#carousel-example-generic1" role="button" data-bs-slide="next">
+				<i class="fa fa-chevron-right"></i>
+				</a>
 			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4">
-				<h3 class="mb-3">Our Experience</h3>
-				<!-- begin skills -->
-				<div class="skills">
-					<div class="skills-name">Front End</div>
-					<div class="progress mb-3">
-						<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 95%">
-							<span class="progress-number">95%</span>
-						</div>
-					</div>
-					<div class="skills-name">Programming</div>
-					<div class="progress mb-3">
-						<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 90%">
-							<span class="progress-number">90%</span>
-						</div>
-					</div>
-					<div class="skills-name">Database Design</div>
-					<div class="progress mb-3">
-						<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 85%">
-							<span class="progress-number">85%</span>
-						</div>
-					</div>
-					<div class="skills-name">Wordpress</div>
-					<div class="progress mb-3">
-						<div class="progress-bar progress-bar-striped progress-bar-animated bg-theme" style="width: 80%">
-							<span class="progress-number">80%</span>
-						</div>
-					</div>
-				</div>
-				<!-- end skills -->
-			</div>
-			<!-- end col-4 -->
-		</div>
-		<!-- end row -->
+</div>
 	</div>
 	<!-- end container -->
 </div>
 <!-- end #about -->
 
-<!-- begin #milestone -->
-<div id="milestone" class="content bg-black-darker has-bg" data-scrollview="true">
-	<!-- begin content-bg -->
-	<div class="content-bg" style="background-image: url(../assets/img/bg/bg-milestone.jpg)"></div>
-	<!-- end content-bg -->
-	<!-- begin container -->
-	<div class="container">
-		<!-- begin row -->
-		<div class="row">
-			<!-- begin col-3 -->
-			<div class="col-lg-3 milestone-col">
-				<div class="milestone">
-					<div class="number" data-animation="true" data-animation-type="number" data-final-number="1292">1,292</div>
-					<div class="title">Themes & Template</div>
-				</div>
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 milestone-col">
-				<div class="milestone">
-					<div class="number" data-animation="true" data-animation-type="number" data-final-number="9039">9,039</div>
-					<div class="title">Registered Members</div>
-				</div>
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 milestone-col">
-				<div class="milestone">
-					<div class="number" data-animation="true" data-animation-type="number" data-final-number="89291">89,291</div>
-					<div class="title">Items Sold</div>
-				</div>
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 milestone-col">
-				<div class="milestone">
-					<div class="number" data-animation="true" data-animation-type="number" data-final-number="129">129</div>
-					<div class="title">Theme Authors</div>
-				</div>
-			</div>
-			<!-- end col-3 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
-</div>
-<!-- end #milestone -->
+
 
 <!-- begin #team -->
-<div id="team" class="content" data-scrollview="true">
+<div id="planes" class="content" data-scrollview="true"  style="background-image:url('Imagenes/landingpage-AHAYOU_03.png'); background-repeat: no-repeat; background-size: 100% 100%;">
 	<!-- begin container -->
-	<div class="container">
-		<h2 class="content-title">Our Team</h2>
-		<p class="content-desc">
-			Phasellus suscipit nisi hendrerit metus pharetra dignissim. Nullam nunc ante, viverra quis<br /> 
-			ex non, porttitor iaculis nisi.
-		</p>
-		<!-- begin row -->
-		<div class="row">
-			<!-- begin col-4 -->
-			<div class="col-lg-4">
-				<!-- begin team -->
-				<div class="team">
-					<div class="image" data-animation="true" data-animation-type="animate__flipInX">
-						<img src="../assets/img/user/user-1.jpg" alt="Ryan Teller" />
-					</div>
-					<div class="info">
-						<h3 class="name">Ryan Teller</h3>
-						<div class="title text-theme">FOUNDER</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-						<div class="social">
-							<a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-							<a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-							<a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-						</div>
+<div class="container">
+	<h1 class="content-title text-white">Elije tu Plan</h1>
+	
+	<!-- begin pricing-table -->
+	<ul class="pricing-table pricing-col-4">
+		<li class="highlight" data-animation="true" data-animation-type="animate__fadeInUp">
+			<div class="pricing-container">
+				<h3>Premium</h3>
+				<div class="price">
+					<div class="price-figure">
+						<span class="price-number">$19.99</span>
+						<span class="price-tenure">per month</span>
+						<span class="price-tenure">per month</span>
+						<span class="price-tenure">per month</span>
 					</div>
 				</div>
-				<!-- end team -->
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4">
-				<!-- begin team -->
-				<div class="team">
-					<div class="image" data-animation="true" data-animation-type="animate__flipInX">
-						<img src="../assets/img/user/user-2.jpg" alt="Jonny Cash" />
-					</div>
-					<div class="info">
-						<h3 class="name">Johnny Cash</h3>
-						<div class="title text-theme">WEB DEVELOPER</div>
-						<p>Donec quam felis, ultricies nec, pellentesque eu sem. Nulla consequat massa vierra quis enim.</p>
-						<div class="social">
-							<a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-							<a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-							<a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-						</div>
-					</div>
+				<ul class="features">
+					<li>5GB Storage</li>
+				</ul>
+				<div class="footer">
+					<a href="#" class="btn btn-primary btn-theme btn-block">Buy Now</a>
 				</div>
-				<!-- end team -->
 			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4">
-				<!-- begin team -->
-				<div class="team">
-					<div class="image" data-animation="true" data-animation-type="animate__flipInX">
-						<img src="../assets/img/user/user-3.jpg" alt="Mia Donovan" />
-					</div>
-					<div class="info">
-						<h3 class="name">Mia Donovan</h3>
-						<div class="title text-theme">WEB DESIGNER</div>
-						<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean ligula imperdiet. </p>
-						<div class="social">
-							<a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-							<a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-							<a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-						</div>
-					</div>
-				</div>
-				<!-- end team -->
-			</div>
-			<!-- end col-4 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
+		</li>
+		
+	</ul>
+</div>
+<!-- end container -->
 </div>
 <!-- end #team -->
 
 <!-- begin #quote -->
-<div id="quote" class="content bg-black-darker has-bg" data-scrollview="true">
-	<!-- begin content-bg -->
-	<div class="content-bg" style="background-image: url(../assets/img/bg/bg-quote.jpg)"
-		data-paroller-factor="0.5"
-		data-paroller-factor-md="0.01"
-		data-paroller-factor-xs="0.01">
-	</div>
-	<!-- end content-bg -->
+<div id="faqs" class="content" data-scrollview="true"  style="background-image:url('Imagenes/landingpage-AHAYOU_04.png'); background-repeat: no-repeat; background-size: 100% 100%;">
 	<!-- begin container -->
-	<div class="container" data-animation="true" data-animation-type="animate__fadeInLeft">
-		<!-- begin row -->
-		<div class="row">
-			<!-- begin col-12 -->
-			<div class="col-lg-12 quote">
-				<i class="fa fa-quote-left"></i> Passion leads to design, design leads to performance, <br />
-				performance leads to <span class="text-theme">success</span>!  
-				<i class="fa fa-quote-right"></i>
-				<small>Sean Themes, Developer Teams in Malaysia</small>
+			<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
+				<h2 class="content-title  text-white">Preguntas Frecuentes</h2>
+				<!-- begin accordion -->
+				<div class="accordion overflow-hidden rounded" id="faq">
+					<!-- begin panel -->
+					<div class="accordion-item border-0">
+						<div class="accordion-header">
+							<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">
+								<i class="fa fa-question-circle fa-fw text-theme me-5px"></i> 
+								Question 1
+							</button>
+						</div>
+						<div id="faq-1" class="collapse show" data-bs-parent="#faq">
+							<div class="accordion-body bg-component">
+								<p class="mb-0">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+									3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+									Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+									Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+									synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- begin card -->
+					<div class="accordion-item border-0">
+						<div class="accordion-header">
+							<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">
+								<i class="fa fa-question-circle fa-fw text-theme me-5px"></i> 
+								Question 2
+							</button>
+						</div>
+						<div id="faq-2" class="collapse" data-bs-parent="#faq">
+							<div class="accordion-body bg-component">
+								<p class="mb-0">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+									3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+									Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+									Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+									synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- begin card -->
+					<div class="accordion-item border-0">
+						<div class="accordion-header">
+							<button class="accordion-button bg-gray-800 text-white px-3 py-10px fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">
+								<i class="fa fa-question-circle fa-fw text-theme me-5px"></i> 
+								Question 3
+							</button>
+						</div>
+						<div id="faq-3" class="collapse" data-bs-parent="#faq">
+							<div class="accordion-body bg-component rounded-bottom">
+								<p class="mb-0">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+									3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+									Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+									Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 
+									Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic 
+									synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+				</div>
+				<!-- end accordion -->
 			</div>
-			<!-- end col-12 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
+			<!-- end container -->
 </div>
 <!-- end #quote -->
 
 <!-- beign #service -->
-<div id="service" class="content" data-scrollview="true">
+<div id="service" class="content" data-scrollview="true"  style="background-image:url('Imagenes/landingpage-AHAYOU_05.png'); background-repeat: no-repeat; background-size: 100% 100%;">
 	<!-- begin container -->
 	<div class="container">
-		<h2 class="content-title">Our Services</h2>
+		<h1 class="content-title text-white">Descarga la Web App</h1>
 		<p class="content-desc">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-			sed bibendum turpis luctus eget
+			Con esta PWA, tendrá un sitio web que se comporta como si fuera<br />
+			una aplicacion movil ahorrando espacio en tu dispositivo.
 		</p>
 		<!-- begin row -->
-		<div class="row">
-			<!-- begin col-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service">
-					<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-cog"></i></div>
-					<div class="info">
-						<h4 class="title">Easy to Customize</h4>
-						<p class="desc">Duis in lorem placerat, iaculis nisi vitae, ultrices tortor. Vestibulum molestie ipsum nulla. Maecenas nec hendrerit eros, sit amet maximus leo.</p>
-					</div>
+		<div class="row col-12" style="align-content:center">
+				<div class="form-floating col-6">
+					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+					<label for="floatingInput">Correo Electronico</label>
 				</div>
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service">
-					<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-paint-brush"></i></div>
-					<div class="info">
-						<h4 class="title">Clean & Careful Design</h4>
-						<p class="desc">Etiam nulla turpis, gravida et orci ac, viverra commodo ipsum. Donec nec mauris faucibus, congue nisi sit amet, lobortis arcu.</p>
-					</div>
+				<div class="col-auto">
+					<button type="submit" class="btn btn-orange fw-bold">Suscribete</button>
 				</div>
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service">
-					<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-file"></i></div>
-					<div class="info">
-						<h4 class="title">Well Documented</h4>
-						<p class="desc">Ut vel laoreet tortor. Donec venenatis ex velit, eget bibendum purus accumsan cursus. Curabitur pulvinar iaculis diam.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service">
-					<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-code"></i></div>
-					<div class="info">
-						<h4 class="title">Re-usable Code</h4>
-						<p class="desc">Aenean et elementum dui. Aenean massa enim, suscipit ut molestie quis, pretium sed orci. Ut faucibus egestas mattis.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service">
-					<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-shopping-cart"></i></div>
-					<div class="info">
-						<h4 class="title">Online Shop</h4>
-						<p class="desc">Quisque gravida metus in sollicitudin feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end col-4 -->
-			<!-- begin col-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service">
-					<div class="icon" data-animation="true" data-animation-type="animate__bounceIn"><i class="fa fa-heart"></i></div>
-					<div class="info">
-						<h4 class="title">Free Support</h4>
-						<p class="desc">Integer consectetur, massa id mattis tincidunt, sapien erat malesuada turpis, nec vehicula lacus felis nec libero. Fusce non lorem nisl.</p>
-					</div>
-				</div>
-			</div>
-			<!-- end col-4 -->
 		</div>
 		<!-- end row -->
 	</div>
@@ -408,411 +288,5 @@
 </div>
 <!-- end #service -->
 
-<!-- beign #action-box -->
-<div id="action-box" class="content has-bg" data-scrollview="true">
-	<!-- begin content-bg -->
-	<div class="content-bg" style="background-image: url(../assets/img/bg/bg-action.jpg)"
-		data-paroller-factor="0.5"
-		data-paroller-factor-md="0.01"
-		data-paroller-factor-xs="0.01">
-	</div>
-	<!-- end content-bg -->
-	<!-- begin container -->
-	<div class="container" data-animation="true" data-animation-type="animate__fadeInRight">
-		<!-- begin row -->
-		<div class="row action-box">
-			<!-- begin col-9 -->
-			<div class="col-lg-9">
-				<div class="icon-large text-theme">
-					<i class="fa fa-binoculars"></i>
-				</div>
-				<h3>CHECK OUT OUR ADMIN THEME!</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus magna eu lacinia eleifend.
-				</p>
-			</div>
-			<!-- end col-9 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3">
-				<a href="#" class="btn btn-outline-white btn-theme btn-block">Live Preview</a>
-			</div>
-			<!-- end col-3 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
-</div>
-<!-- end #action-box -->
 
-<!-- begin #work -->
-<div id="work" class="content" data-scrollview="true">
-	<!-- begin container -->
-	<div class="container" data-animation="true" data-animation-type="animate__fadeInDown">
-		<h2 class="content-title">Our Latest Work</h2>
-		<p class="content-desc">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-			sed bibendum turpis luctus eget
-		</p>
-		<!-- begin row -->
-		<div class="row row-space-10">
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-1.jpg" alt="Work 1" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Aliquam molestie</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-2.jpg" alt="Work 2" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Quisque at pulvinar lacus</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-3.jpg" alt="Work 3" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Vestibulum et erat ornare</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-4.jpg" alt="Work 4" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Sed vitae mollis magna</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-5.jpg" alt="Work 5" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Suspendisse at mattis odio</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-6.jpg" alt="Work 6" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Aliquam vitae commodo diam</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-7.jpg" alt="Work 7" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Phasellus eu vehicula lorem</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-			<!-- begin col-3 -->
-			<div class="col-lg-3 col-md-4">
-				<!-- begin work -->
-				<div class="work">
-					<div class="image">
-						<a href="#"><img src="../assets/img/work/work-img-8.jpg" alt="Work 8" /></a>
-					</div>
-					<div class="desc">
-						<span class="desc-title">Morbi bibendum pellentesque</span>
-						<span class="desc-text">Lorem ipsum dolor sit amet</span>
-					</div>
-				</div>
-				<!-- end work -->
-			</div>
-			<!-- end col-3 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
-</div>
-<!-- end #work -->
-
-<!-- begin #client -->
-<div id="client" class="content has-bg bg-green" data-scrollview="true">
-	<!-- begin content-bg -->
-	<div class="content-bg" style="background-image: url(../assets/img/bg/bg-client.jpg)"
-		data-paroller-factor="0.5"
-		data-paroller-factor-md="0.01"
-		data-paroller-factor-xs="0.01">
-	</div>
-	<!-- end content-bg -->
-	<!-- begin container -->
-	<div class="container" data-animation="true" data-animation-type="animate__fadeInUp">
-		<h2 class="content-title">Our Client Testimonials</h2>
-		<!-- begin carousel -->
-		<div class="carousel testimonials slide" data-ride="carousel" id="testimonials">
-			<!-- begin carousel-inner -->
-			<div class="carousel-inner text-center">
-				<!-- begin item -->
-				<div class="carousel-item active">
-					<blockquote>
-						<i class="fa fa-quote-left"></i>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra, nulla ut interdum fringilla,<br />
-						urna massa cursus lectus, eget rutrum lectus neque non ex.
-						<i class="fa fa-quote-right"></i>
-					</blockquote>
-					<div class="name"> — <span class="text-theme">Mark Doe</span>, Designer</div>
-				</div>
-				<!-- end item -->
-				<!-- begin item -->
-				<div class="carousel-item">
-					<blockquote>
-						<i class="fa fa-quote-left"></i>
-						Donec cursus ligula at ante vulputate laoreet. Nulla egestas sit amet lorem non bibendum.<br />
-						Nulla eget risus velit. Pellentesque tincidunt velit vitae tincidunt finibus.
-						<i class="fa fa-quote-right"></i>
-					</blockquote>
-					<div class="name"> — <span class="text-theme">Joe Smith</span>, Developer</div>
-				</div>
-				<!-- end item -->
-				<!-- begin item -->
-				<div class="carousel-item">
-					<blockquote>
-						<i class="fa fa-quote-left"></i>
-						Sed tincidunt quis est sed ultrices. Sed feugiat auctor ipsum, sit amet accumsan elit vestibulum<br />
-						fringilla. In sollicitudin ac ligula eget vestibulum.
-						<i class="fa fa-quote-right"></i>
-					</blockquote>
-					<div class="name"> — <span class="text-theme">Linda Adams</span>, Programmer</div>
-				</div>
-				<!-- end item -->
-			</div>
-			<!-- end carousel-inner -->
-			<!-- begin carousel-indicators -->
-			<ol class="carousel-indicators m-b-0">
-				<li data-bs-target="#testimonials" data-bs-slide-to="0" class="active"></li>
-				<li data-bs-target="#testimonials" data-bs-slide-to="1" class=""></li>
-				<li data-bs-target="#testimonials" data-bs-slide-to="2" class=""></li>
-			</ol>
-			<!-- end carousel-indicators -->
-		</div>
-		<!-- end carousel -->
-	</div>
-	<!-- end containter -->
-</div>
-<!-- end #client -->
-
-<!-- begin #pricing -->
-<div id="pricing" class="content" data-scrollview="true">
-	<!-- begin container -->
-	<div class="container">
-		<h2 class="content-title">Our Price</h2>
-		<p class="content-desc">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-			sed bibendum turpis luctus eget
-		</p>
-		<!-- begin pricing-table -->
-		<ul class="pricing-table pricing-col-4">
-			<li data-animation="true" data-animation-type="animate__fadeInUp">
-				<div class="pricing-container">
-					<h3>Starter</h3>
-					<div class="price">
-						<div class="price-figure">
-							<span class="price-number">FREE</span>
-						</div>
-					</div>
-					<ul class="features">
-						<li>1GB Storage</li>
-						<li>2 Clients</li>
-						<li>5 Active Projects</li>
-						<li>5 Colors</li>
-						<li>Free Goodies</li>
-						<li>24/7 Email support</li>
-					</ul>
-					<div class="footer">
-						<a href="#" class="btn btn-inverse btn-theme btn-block">Buy Now</a>
-					</div>
-				</div>
-			</li>
-			<li data-animation="true" data-animation-type="animate__fadeInUp">
-				<div class="pricing-container">
-					<h3>Basic</h3>
-					<div class="price">
-						<div class="price-figure">
-							<span class="price-number">$9.99</span>
-							<span class="price-tenure">per month</span>
-						</div>
-					</div>
-					<ul class="features">
-						<li>2GB Storage</li>
-						<li>5 Clients</li>
-						<li>10 Active Projects</li>
-						<li>10 Colors</li>
-						<li>Free Goodies</li>
-						<li>24/7 Email support</li>
-					</ul>
-					<div class="footer">
-						<a href="#" class="btn btn-inverse btn-theme btn-block">Buy Now</a>
-					</div>
-				</div>
-			</li>
-			<li class="highlight" data-animation="true" data-animation-type="animate__fadeInUp">
-				<div class="pricing-container">
-					<h3>Premium</h3>
-					<div class="price">
-						<div class="price-figure">
-							<span class="price-number">$19.99</span>
-							<span class="price-tenure">per month</span>
-						</div>
-					</div>
-					<ul class="features">
-						<li>5GB Storage</li>
-						<li>10 Clients</li>
-						<li>20 Active Projects</li>
-						<li>20 Colors</li>
-						<li>Free Goodies</li>
-						<li>24/7 Email support</li>
-					</ul>
-					<div class="footer">
-						<a href="#" class="btn btn-primary btn-theme btn-block">Buy Now</a>
-					</div>
-				</div>
-			</li>
-			<li data-animation="true" data-animation-type="animate__fadeInUp">
-				<div class="pricing-container">
-					<h3>Lifetime</h3>
-					<div class="price">
-						<div class="price-figure">
-							<span class="price-number">$999</span>
-						</div>
-					</div>
-					<ul class="features">
-						<li>Unlimited Storage</li>
-						<li>Unlimited Clients</li>
-						<li>Unlimited Projects</li>
-						<li>Unlimited Colors</li>
-						<li>Free Goodies</li>
-						<li>24/7 Email support</li>
-					</ul>
-					<div class="footer">
-						<a href="#" class="btn btn-inverse btn-theme btn-block">Buy Now</a>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<!-- end container -->
-</div>
-<!-- end #pricing -->
-
-<!-- begin #contact -->
-<div id="contact" class="content bg-light" data-scrollview="true">
-	<!-- begin container -->
-	<div class="container">
-		<h2 class="content-title">Contact Us</h2>
-		<p class="content-desc">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br />
-			sed bibendum turpis luctus eget
-		</p>
-		<!-- begin row -->
-		<div class="row">
-			<!-- begin col-6 -->
-			<div class="col-lg-6" data-animation="true" data-animation-type="animate__fadeInLeft">
-				<h3>If you have a project you would like to discuss, get in touch with us.</h3>
-				<p>
-					Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
-				</p>
-				<p>
-					<strong>SeanTheme Studio, Inc</strong><br />
-					795 Folsom Ave, Suite 600<br />
-					San Francisco, CA 94107<br />
-					P: (123) 456-7890<br />
-				</p>
-				<p>
-					<span class="phone">+11 (0) 123 456 78</span><br />
-					<a href="mailto:hello@emailaddress.com" class="text-theme">seanthemes@support.com</a>
-				</p>
-			</div>
-			<!-- end col-6 -->
-			<!-- begin col-6 -->
-			<div class="col-lg-6 form-col" data-animation="true" data-animation-type="animate__fadeInRight">
-				<form class="form-horizontal">
-					<div class="row mb-3">
-						<label class="col-form-label col-lg-3 text-lg-right">Name <span class="text-theme">*</span></label>
-						<div class="col-lg-9">
-							<input type="text" class="form-control" />
-						</div>
-					</div>
-					<div class="row mb-3">
-						<label class="col-form-label col-lg-3 text-lg-right">Email <span class="text-theme">*</span></label>
-						<div class="col-lg-9">
-							<input type="text" class="form-control" />
-						</div>
-					</div>
-					<div class="row mb-3">
-						<label class="col-form-label col-lg-3 text-lg-right">Message <span class="text-theme">*</span></label>
-						<div class="col-lg-9">
-							<textarea class="form-control" rows="10"></textarea>
-						</div>
-					</div>
-					<div class="row mb-3">
-						<label class="col-form-label col-lg-3 text-lg-right"></label>
-						<div class="col-lg-9 text-left">
-							<button type="submit" class="btn btn-theme btn-primary btn-block">Send Message</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<!-- end col-6 -->
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
-</div>
-<!-- end #contact -->
 </asp:Content>
