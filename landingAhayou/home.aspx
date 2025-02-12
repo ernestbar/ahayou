@@ -28,7 +28,7 @@
 <body>
     
     <form id="form1" runat="server" class="col-12">
-         <header class="position-relative" style="background-image:url('img/header-img.jpg');position:absolute; top,left:0px; width,max-height:100%; border:0;">
+         <header class="position-relative">
             <nav class="navbar navbar-expand">
                 <div class="container">
                     <img src="Imagenes/logo-ahayou.png" alt="logo"/>
@@ -42,17 +42,33 @@
             </nav>
 
             <section class="hero container h-75 d-flex flex-column align-items-center justify-content-center">
-                <h1 class="hero-title text-white text-center">Streaming con Alma Boliviana</h1>
-                <p class="hero-second-p text-white text-center">Una experiencia mejorada no te pierdas los estrenos mas anticipados y tus clásicos favoritos</p>
+                <%--<h1 class="hero-title text-white text-center">Streaming con Alma Boliviana</h1>
+                <p class="hero-second-p text-white text-center">Una experiencia mejorada no te pierdas los estrenos mas anticipados y tus clásicos favoritos</p>--%>
 
-                <div class="row g-3 d-flex align-items-center justify-content-center w-100 w-lg-75">
-                    <div class="form-floating col-auto">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                        <label for="floatingInput">Email address</label>
+               <div id="carouselExampleAutoplaying" class="header container carousel slide  h-100% d-flex flex-column align-items-center justify-content-center" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/header-img.jpg" class="d-block w-100" alt="..."/>
+                        <div class="carousel-caption d-none d-md-block align-items-center">
+                            <h1>First slide label</h1>
+                            <p>Some representative placeholder content for the first slide.</p>
+                          </div>
                     </div>
-                    <div class="col-auto">
-                        <button type="submit" class="get-started-btn red-btn fw-bold">Get Started</button>
+                    <div class="carousel-item">
+                      <img src="..." class="d-block w-100" alt="..."/>
                     </div>
+                    <div class="carousel-item">
+                      <img src="..." class="d-block w-100" alt="..."/>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
             </section>
         </header>

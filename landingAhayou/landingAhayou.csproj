@@ -5054,6 +5054,8 @@
     <Content Include="assets\plugins\summernote\dist\summernote.js" />
     <Content Include="assets\plugins\summernote\dist\summernote.min.css" />
     <Content Include="assets\plugins\summernote\dist\summernote.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="hime2.aspx" />
     <Content Include="home.aspx" />
     <Content Include="Imagenes\fondo-AHAYOU.png" />
     <Content Include="Imagenes\fondo.jpg" />
@@ -5312,6 +5314,20 @@
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hime2.aspx.cs">
+      <DependentUpon>hime2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hime2.aspx.designer.cs">
+      <DependentUpon>hime2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5320,6 +5336,13 @@
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="manifest.json" />
@@ -5539,6 +5562,7 @@
     <Content Include="assets\plugins\summernote\dist\summernote.js.map" />
     <None Include="packages.config" />
     <Content Include="README.md" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
