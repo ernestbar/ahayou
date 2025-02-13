@@ -179,7 +179,7 @@ namespace WebAhayouAdmin
                 StreamWriter writer5 = new StreamWriter(directorio2 + "\\" + nombre_archivo, true, Encoding.Unicode);
                 writer5.WriteLine(ex.ToString());
                 writer5.Close();
-                lblAviso.Text = "We have some problems consult with the administrator.";
+                lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
             }
         }
     }

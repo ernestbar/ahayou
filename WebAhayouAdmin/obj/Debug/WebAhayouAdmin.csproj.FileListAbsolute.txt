@@ -174,4 +174,4 @@ E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CoreCompileInpu
 E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayo.89DC20F7.Up2Date
 E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.dll
 E:\ERNESTO\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.pdb
-C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayouAdmin.csproj.CopyComplete
+C:\GITHUB\ahayou\WebAhayouAdmin\obj\Debug\WebAhayo.89DC20F7.Up2Date

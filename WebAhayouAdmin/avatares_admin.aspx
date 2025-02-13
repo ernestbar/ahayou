@@ -73,7 +73,7 @@
                 <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
 			</asp:SiteMapPath>--%>
 			<asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label> 
-			<asp:Label ID="lblCodRol" runat="server" Text="" Visible="false"></asp:Label>
+			<asp:Label ID="lblCodAvatar" runat="server" Text="" Visible="false"></asp:Label>
 			<asp:Label ID="lblAviso" runat="server" ForeColor="White" Font-Size="Medium" Text=""></asp:Label>
 			  <asp:Label ID="lblCodMenuRol" runat="server" Visible="false" Text=""></asp:Label>
     <asp:MultiView ID="MultiView1" runat="server">
@@ -96,7 +96,7 @@
 									<tr>
 									<th class="text-wrap">CODIGO AVATAR</th>
 													<th class="text-nowrap">AVATAR</th>
-													<th class="text-nowrap">ESTADO</th>
+											<%--		<th class="text-nowrap">ESTADO</th>--%>
 									<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 									</tr>
@@ -108,11 +108,14 @@
 								
 													<%--<td><asp:Image ID="Image1" Height="50px" runat="server" ImageUrl='<%# @"Logos\" + Eval("CLI_ID_CLIENTE") + @"\" +  Eval("CLI_LOGO") %>' /></td>--%>
 													<td><asp:Label ID="lblEsPrincipal" runat="server" Text='<%# Eval("CODIGO_AVATAR") %>'></asp:Label></td>
-																	<td><asp:Label ID="Label2" runat="server" Text='<%# Eval("AVATAR") %>'></asp:Label></td>
-																	<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
+																	<td><img src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'>
+																		<%--<asp:Label ID="Label2" runat="server" Text='<%# Eval("AVATAR") %>'></asp:Label>--%>
+
+																	</td>
+																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
 													<td>
-																	<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("rol") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
-																	<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("rol") + "|" + Eval("DESC_ESTADO") %>' OnClick="btnEliminar_Click" runat="server" Text="Activar/Desactivar" ToolTip="Activa o desactiva el registro" />
+																	<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("CODIGO_AVATAR") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
+																	<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("CODIGO_AVATAR") %>' OnClick="btnEliminar_Click" runat="server" Text="Activar/Desactivar" ToolTip="Activa o desactiva el registro" />
         
 																	<%--<asp:Button ID="btnActivar" class="btn btn-success btn-sm" CommandArgument='<%# Eval("CLI_ID_CLIENTE") %>' OnClick="btnActivar_Click" runat="server" Text="Nuevo" ToolTip="Nueva simulacion" />--%>
 													</td>
@@ -132,11 +135,11 @@
 				<!-- begin col-8 -->
 				<div class="col-md-6 offset-md-2">
 					
-					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16">Registro de Roles</legend>
+					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16">Registro de avatares</legend>
 					
 					<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
-						<label class="col-md-3 text-md-right col-form-label">Codigo Rol:</label>
+						<label class="col-md-3 text-md-right col-form-label">Codigo Avatar:</label>
 						<div class="col-md-6">
                              <asp:TextBox ID="txtCodRol" class="form-control" runat="server"></asp:TextBox>
 							<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodRol" Font-Bold="True"></asp:RequiredFieldValidator>
@@ -145,7 +148,7 @@
 					<!-- end form-group row -->
 				<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
-						<label class="col-md-3 text-md-right col-form-label">Descripcion:</label>
+						<label class="col-md-3 text-md-right col-form-label">Imagen Avatar:</label>
 						<div class="col-md-6">
                              <asp:TextBox ID="txtDescripcion" class="form-control" runat="server"></asp:TextBox>
 							<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcion" Font-Bold="True"></asp:RequiredFieldValidator>
