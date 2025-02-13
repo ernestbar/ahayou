@@ -150,8 +150,8 @@
 					<div class="form-group row m-b-10">
 						<label class="col-md-3 text-md-right col-form-label">Imagen Avatar:</label>
 						<div class="col-md-6">
-                             <asp:TextBox ID="txtDescripcion" class="form-control" runat="server"></asp:TextBox>
-							<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcion" Font-Bold="True"></asp:RequiredFieldValidator>
+							<asp:FileUpload ID="fuAvatar" CssClass="form-control" runat="server" />
+							<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="fuAvatar" Font-Bold="True"></asp:RequiredFieldValidator>
 						</div>
 					</div>
 					<!-- end form-group row -->

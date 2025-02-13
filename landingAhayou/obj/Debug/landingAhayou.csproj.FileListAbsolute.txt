@@ -175,3 +175,5 @@ C:\GITHUB\ahayou\landingAhayou\obj\Debug\landingAhayou.csproj.CoreCompileInputs.
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\landingA.744EE97A.Up2Date
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\WebAhayouAdmin.dll
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\WebAhayouAdmin.pdb
+E:\ERNESTO\ahayou\landingAhayou\bin\Newtonsoft.Json.dll
+E:\ERNESTO\ahayou\landingAhayou\bin\Newtonsoft.Json.xml

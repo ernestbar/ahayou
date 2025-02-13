@@ -52,7 +52,7 @@ namespace WebAhayouAdmin
             lblAviso.Text = "";
             lblCodAvatar.Text = "";
             txtCodRol.Text = "";
-            txtDescripcion.Text = "";
+            //txtDescripcion.Text = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
@@ -82,9 +82,16 @@ namespace WebAhayouAdmin
         {
             try
             {
+                string base64 = "";
+                if (fuAvatar.HasFile)
+                {
+                    var bytes = fuAvatar.FileBytes;
+                    base64 = Convert.ToBase64String(bytes);
+                }
+
                 if (lblCodAvatar.Text == "")
                 {
-                    Clases.Avatares obj = new Clases.Avatares("I", txtCodRol.Text, txtDescripcion.Text, lblUsuario.Text);
+                    Clases.Avatares obj = new Clases.Avatares("I", txtCodRol.Text, base64, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -92,7 +99,8 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    Clases.Roles obj = new Clases.Roles("U", lblCodAvatar.Text, txtDescripcion.Text, lblUsuario.Text);
+                    
+                    Clases.Roles obj = new Clases.Roles("U", lblCodAvatar.Text, base64, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -130,7 +138,7 @@ namespace WebAhayouAdmin
                 txtCodRol.Text = id;
                 txtCodRol.Enabled = false;
                 Clases.Roles obj_m = new Clases.Roles(id);
-                txtDescripcion.Text = obj_m.PV_NOMBRE_ROL;
+                //txtDescripcion.Text = obj_m.PV_NOMBRE_ROL;
                 MultiView1.ActiveViewIndex = 1;
 
             }

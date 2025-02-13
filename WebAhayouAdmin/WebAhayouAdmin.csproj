@@ -25106,6 +25106,7 @@
     <Content Include="assets\plugins\x-editable-bs4\test\unit\wysihtml5.js" />
     <Content Include="avatares_admin.aspx" />
     <Content Include="cambiar_password.aspx" />
+    <Content Include="contenidos_admin.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
     <Content Include="Imagenes\fondo.jpg" />
@@ -25353,6 +25354,7 @@
       <DependentUpon>cambiar_password.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Avatares.cs" />
+    <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />
     <Compile Include="Clases\Ingreso_app.cs" />
@@ -25368,6 +25370,13 @@
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="contenidos_admin.aspx.cs">
+      <DependentUpon>contenidos_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenidos_admin.aspx.designer.cs">
+      <DependentUpon>contenidos_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
