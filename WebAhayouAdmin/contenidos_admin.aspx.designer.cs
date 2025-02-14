@@ -33,13 +33,13 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.Label lblUsuario;
 
         /// <summary>
-        /// Control lblCodRol.
+        /// Control lblCodigo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCodRol;
+        protected global::System.Web.UI.WebControls.Label lblCodigo;
 
         /// <summary>
         /// Control lblAviso.
@@ -105,13 +105,13 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.View View2;
 
         /// <summary>
-        /// Control txtCodRol.
+        /// Control txtCodContenido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodRol;
+        protected global::System.Web.UI.WebControls.TextBox txtCodContenido;
 
         /// <summary>
         /// Control RequiredFieldValidator1.
@@ -148,15 +148,6 @@ namespace WebAhayouAdmin
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfContenido;
-
-        /// <summary>
-        /// Control hfContenido2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfContenido2;
 
         /// <summary>
         /// Control btnGuardar.

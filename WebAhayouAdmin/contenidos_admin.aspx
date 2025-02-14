@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="contenidos_admin.aspx.cs" Inherits="WebAhayouAdmin.contenidos_admin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" ValidateRequest="false" AutoEventWireup="true" CodeBehind="contenidos_admin.aspx.cs" Inherits="WebAhayouAdmin.contenidos_admin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style>
 .dataTables_wrapper .myfilter .dataTables_filter {
@@ -73,7 +73,7 @@
                 <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
 			</asp:SiteMapPath>--%>
 			<asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label> 
-			<asp:Label ID="lblCodRol" runat="server" Text="" Visible="false"></asp:Label>
+			<asp:Label ID="lblCodigo" runat="server" Text="" Visible="false"></asp:Label>
 			<asp:Label ID="lblAviso" runat="server" ForeColor="White" Font-Size="Medium" Text=""></asp:Label>
 			  <asp:Label ID="lblCodMenuRol" runat="server" Visible="false" Text=""></asp:Label>
     <asp:MultiView ID="MultiView1" runat="server">
@@ -142,8 +142,8 @@
 					<div class="form-group row m-b-10">
 						<label class="col-md-3 text-md-right col-form-label">Codigo contenido:</label>
 						<div class="col-md-6">
-                             <asp:TextBox ID="txtCodRol" class="form-control" runat="server"></asp:TextBox>
-							<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodRol" Font-Bold="True"></asp:RequiredFieldValidator>
+                             <asp:TextBox ID="txtCodContenido" class="form-control" runat="server"></asp:TextBox>
+							<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodContenido" Font-Bold="True"></asp:RequiredFieldValidator>
 						</div>
 					</div>
 					<!-- end form-group row -->
@@ -159,7 +159,7 @@
 					<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
 								<label class="col-md-3 text-md-right col-form-label">Contenido español:</label>
-								<div class="col-md-6">
+								<div class="col-md-12">
 								<textarea class="textarea form-control" id="wysihtml5" onchange="recuperarDescripcion()" placeholder="Ingrese el contenido" rows="12"></textarea>
 									<asp:HiddenField ID="hfContenido" runat="server" />
 								</div>
@@ -169,18 +169,18 @@
 			
 			<!-- END panel -->
 					<!-- begin form-group row -->
-					<div class="form-group row m-b-10">
+					<%--<div class="form-group row m-b-10">
 						<label class="col-md-3 text-md-right col-form-label">Contenido ingles:</label>
 						<div class="col-md-6">
 						<textarea class="textarea form-control" id="wysihtml52" onchange="recuperarDescripcion2()" placeholder="Enter the content" rows="12"></textarea>
 							<asp:HiddenField ID="hfContenido2" runat="server" />
 						</div>
-					</div>
+					</div>--%>
 					<!-- end form-group row -->
 					
 					
 						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
-							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
+							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClientClick="recuperarDescripcion()"  OnClick="btnGuardar_Click" Text="Guardar" />
 							<asp:Button ID="btnVolverAlta" CssClass="btn btn-success" BackColor="Transparent"  runat="server" CausesValidation="false" OnClick="btnVolverAlta_Click" Text="Cancelar" />
 						</div>
 					</div>
@@ -200,11 +200,11 @@
 		function setearDescripcion() {
 			document.getElementById('wysihtml5').value = document.getElementById('<%=hfContenido.ClientID%>').value;
 		}
-        function recuperarDescripcion2() {
+        <%--function recuperarDescripcion2() {
             document.getElementById('<%=hfContenido2.ClientID%>').value = document.getElementById('wysihtml52').value;
 		}
 		function setearDescripcion2() {
 			document.getElementById('wysihtml52').value = document.getElementById('<%=hfContenido2.ClientID%>').value;
-		}
+		}--%>
     </script>
 </asp:Content>

@@ -103,8 +103,8 @@ namespace WebAhayouAdmin.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_GET_CONTENIDOES_IND";
-                    cmd.Parameters.AddWithValue("PV_COD_CONTENIDO", PV_COD_CONTENIDO);
+                    cmd.CommandText = "PR_PAR_GET_CONTENIDOS_IND";
+                    cmd.Parameters.AddWithValue("PV_CODIGO_CONTENIDO", PV_COD_CONTENIDO);
                     cmd.Connection = conn;
                     conn.Open();
                     var dataReader = cmd.ExecuteReader();

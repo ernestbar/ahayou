@@ -50,8 +50,8 @@ namespace WebAhayouAdmin
         public void limpiar()
         {
             lblAviso.Text = "";
-            lblCodRol.Text = "";
-            txtCodRol.Text = "";
+            lblCodigo.Text = "";
+            txtCodContenido.Text = "";
             txtDescripcion.Text = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -82,9 +82,9 @@ namespace WebAhayouAdmin
         {
             try
             {
-                if (lblCodRol.Text == "")
+                if (lblCodigo.Text == "")
                 {
-                    Clases.Roles obj = new Clases.Roles("I", txtCodRol.Text, txtDescripcion.Text, lblUsuario.Text);
+                    Clases.Roles obj = new Clases.Roles("I", txtCodContenido.Text, txtDescripcion.Text, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -92,7 +92,7 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    Clases.Roles obj = new Clases.Roles("U", lblCodRol.Text, txtDescripcion.Text, lblUsuario.Text);
+                    Clases.Roles obj = new Clases.Roles("U", lblCodigo.Text, txtDescripcion.Text, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -126,11 +126,13 @@ namespace WebAhayouAdmin
                 string id = "";
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
-                lblCodRol.Text = id;
-                txtCodRol.Text = id;
-                txtCodRol.Enabled = false;
-                Clases.Roles obj_m = new Clases.Roles(id);
-                txtDescripcion.Text = obj_m.PV_NOMBRE_ROL;
+                lblCodigo.Text = id;
+                txtCodContenido.Text = id;
+                txtCodContenido.Enabled = false;
+                Clases.Contenidos obj_m = new Clases.Contenidos(id);
+                txtDescripcion.Text = obj_m.PV_DESCRIPCION;
+                hfContenido.Value = obj_m.PV_CONTENIDO;
+                ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta4", "setearDescripcion();", true);
                 MultiView1.ActiveViewIndex = 1;
 
             }
@@ -154,16 +156,16 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 string[] datos = id.Split('|');
-                lblCodRol.Text = datos[0];
+                lblCodigo.Text = datos[0];
                 if (datos[1] == "ACTIVO")
                 {
-                    Clases.Roles obj_m = new Clases.Roles("D", lblCodRol.Text, "", lblUsuario.Text);
+                    Clases.Roles obj_m = new Clases.Roles("D", lblCodigo.Text, "", lblUsuario.Text);
                     obj_m.ABM();
                     lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 }
                 else
                 {
-                    Clases.Roles obj_m = new Clases.Roles("A", lblCodRol.Text, "", lblUsuario.Text);
+                    Clases.Roles obj_m = new Clases.Roles("A", lblCodigo.Text, "", lblUsuario.Text);
                     obj_m.ABM();
                     lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 }
@@ -174,7 +176,7 @@ namespace WebAhayouAdmin
             }
             catch (Exception ex)
             {
-                string nombre_archivo = "error_roles_admin_" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
+                string nombre_archivo = "error_contenidos_admin" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + ".txt";
                 string directorio2 = Server.MapPath("~/Logs");
                 StreamWriter writer5 = new StreamWriter(directorio2 + "\\" + nombre_archivo, true, Encoding.Unicode);
                 writer5.WriteLine(ex.ToString());
