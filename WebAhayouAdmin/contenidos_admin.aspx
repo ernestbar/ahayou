@@ -59,7 +59,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-	   <asp:ObjectDataSource ID="odsGrilla" runat="server" SelectMethod="PR_GET_CONTENIDOS" TypeName="WebAhayouAdmin.Clases.Contenidos">
+	   <asp:ObjectDataSource ID="odsGrilla" runat="server" SelectMethod="PR_PAR_GET_CONTENIDOS" TypeName="WebAhayouAdmin.Clases.Contenidos">
 	</asp:ObjectDataSource>
     <!-- begin #content -->
 		<div class="app-content" style="position: relative;border-radius:30px;
@@ -98,7 +98,7 @@
 													<th class="text-nowrap">DESCRIPCION</th>
 													<th class="text-nowrap">CONTENIDO</th>
 													<th class="text-nowrap">CONTENIDO INGLES</th>
-													<th class="text-nowrap">ESTADO</th>
+													<%--<th class="text-nowrap">ESTADO</th>--%>
 									<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 									</tr>
@@ -113,7 +113,7 @@
 																	<td><asp:Label ID="Label2" runat="server" Text='<%# Eval("DESCRIPCION") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label21" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label22" runat="server" Text='<%# Eval("CONTENIDO_INGLES") %>'></asp:Label></td>
-																	<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
+																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
 													<td>
 																	<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("COD_CONTENIDO") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
 																	<asp:Button ID="btnEliminar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("COD_CONTENIDO")  %>' OnClick="btnEliminar_Click" runat="server" Text="Activar/Desactivar" ToolTip="Activa o desactiva el registro" />
@@ -156,7 +156,27 @@
 						</div>
 					</div>
 					<!-- end form-group row -->
-					
+					<!-- begin form-group row -->
+					<div class="form-group row m-b-10">
+								<label class="col-md-3 text-md-right col-form-label">Contenido español:</label>
+								<div class="col-md-6">
+								<textarea class="textarea form-control" id="wysihtml5" onchange="recuperarDescripcion()" placeholder="Ingrese el contenido" rows="12"></textarea>
+									<asp:HiddenField ID="hfContenido" runat="server" />
+								</div>
+					</div>
+					<!-- end form-group row -->
+					<!-- BEGIN panel -->
+			
+			<!-- END panel -->
+					<!-- begin form-group row -->
+					<div class="form-group row m-b-10">
+						<label class="col-md-3 text-md-right col-form-label">Contenido ingles:</label>
+						<div class="col-md-6">
+						<textarea class="textarea form-control" id="wysihtml52" onchange="recuperarDescripcion2()" placeholder="Enter the content" rows="12"></textarea>
+							<asp:HiddenField ID="hfContenido2" runat="server" />
+						</div>
+					</div>
+					<!-- end form-group row -->
 					
 					
 						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
@@ -173,4 +193,18 @@
 			
 		</div>
 		<!-- end #content -->
+	<script type="text/javascript">
+		function recuperarDescripcion() {
+			document.getElementById('<%=hfContenido.ClientID%>').value = document.getElementById('wysihtml5').value;
+		}
+		function setearDescripcion() {
+			document.getElementById('wysihtml5').value = document.getElementById('<%=hfContenido.ClientID%>').value;
+		}
+        function recuperarDescripcion2() {
+            document.getElementById('<%=hfContenido2.ClientID%>').value = document.getElementById('wysihtml52').value;
+		}
+		function setearDescripcion2() {
+			document.getElementById('wysihtml52').value = document.getElementById('<%=hfContenido2.ClientID%>').value;
+		}
+    </script>
 </asp:Content>

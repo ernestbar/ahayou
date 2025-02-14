@@ -44,7 +44,7 @@ namespace WebAhayouAdmin.Clases
         }
         #endregion
         #region Métodos que NO requieren constructor
-        public static DataTable PR_GET_CONTENIDOS()
+        public static DataTable PR_PAR_GET_CONTENIDOS()
         {
             try
             {
@@ -52,7 +52,7 @@ namespace WebAhayouAdmin.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_GET_CONTENIDOS";
+                    cmd.CommandText = "PR_PAR_GET_CONTENIDOS";
                     //if (PV_ESTADO == "T")
                     //    cmd.Parameters.Add("PV_ESTADO", null);
                     //else
