@@ -30,6 +30,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
+           <asp:ObjectDataSource ID="odsRotador1" runat="server" SelectMethod="PR_STR_GET_BANNER_PRINCIPAL" TypeName="WebAhayouAdmin.Clases.Contenidos">
+            </asp:ObjectDataSource>
        <header class="header">
             <nav class="header__nav">
                 <img
@@ -131,23 +133,14 @@
                     </div>
                 </div>
                 <div class="header__pag-buttons">
-                    <button
-                        class="header__pag-button selected carousel__button"
-                    >
-                        01
-                    </button>
-                    <button class="header__pag-button carousel__button">
-                        02
-                    </button>
-                    <button class="header__pag-button carousel__button">
-                        03
-                    </button>
-                    <button class="header__pag-button carousel__button">
-                        04
-                    </button>
-                    <button class="header__pag-button carousel__button">
-                        05
-                    </button>
+                <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" runat="server">
+				    <ItemTemplate>
+                         <button class="header__pag-button carousel__button">
+                             <%# Eval("Numero") %>
+                         </button>
+				    </ItemTemplate>
+                </asp:Repeater>
+ 
                 </div>
             </section>
         </header>

@@ -72,7 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\arrow.css" />
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\containers.css" />
     <Content Include="css\frequent-questions.css" />
     <Content Include="css\header.css" />
@@ -340,7 +339,6 @@
     <Content Include="img\slide-3.jpg" />
     <Content Include="img\tv.png" />
     <Content Include="index.html" />
-    <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\carousel-new-releases.js" />
     <Content Include="js\carousel.js" />
     <Content Include="js\konami.js" />
