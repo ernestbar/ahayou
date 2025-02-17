@@ -1,0 +1,366 @@
+@import url("main.css");
+
+.web-app-section {
+    background-image: url("../imgs/backgrounds/landingpage-AHAYOU_05.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 75px 0;
+}
+
+.web-app-section__content {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    background-color: var(--container-bg-color-2);
+    flex-grow: 3;
+    position: relative;
+}
+
+.web-app-section__container-description,
+.web-app-section__title {
+    flex: 1;
+}
+
+.web-app-section__title span:nth-child(1) {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.web-app-section__title span:nth-child(2) {
+    font-weight: 300;
+}
+
+.web-app-section__container-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px 0;
+}
+
+.web-app-section__image {
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    left: 10px;
+}
+
+.web-app-section__description {
+    font-size: 1.6em;
+    font-weight: 100;
+    letter-spacing: -1px;
+}
+
+.web-app-section__title {
+    letter-spacing: -10px;
+    word-wrap: break-word;
+    padding: 10px 50px;
+    line-height: 1;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+}
+
+.web-app-section__form {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 0;
+}
+
+.web-app-section__label {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.web-app-section__container-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.web-app-section__container-input > input[type="email"],
+.web-app-section__container-input > input[type="button"] {
+    height: 56px;
+}
+
+.web-app-section__container-input > input[type="button"] {
+    background-color: var(--color-primary);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition: background-color 0.3s;
+}
+
+.web-app-section__container-input > input[type="button"]:hover {
+    background-color: #b24100;
+    transition: background-color 0.3s;
+}
+
+.web-app-section__container-input > input[type="email"] {
+    width: 420px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    color: #000;
+}
+
+.web-app-section__container-input > input[type="email"]::placeholder {
+    color: #9f9f9f;
+    letter-spacing: -1px;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.social-media__img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    width: 80%;
+}
+
+.footer__image-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.footer__content {
+    flex: 8;
+    height: 100%;
+}
+
+.footer__list,
+.footer__data,
+.footer__contacts {
+    display: flex;
+    flex-direction: row;
+    font-weight: 200;
+    gap: 50px;
+}
+
+.footer__list,
+.footer__data {
+    height: 50%;
+}
+
+.footer__data {
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+}
+
+.footer__contacts {
+    justify-content: space-between;
+    font-size: 1.25em;
+    letter-spacing: -1px;
+    width: 50%;
+}
+
+.footer__copyright {
+    width: 50%;
+}
+
+.footer__copyright {
+    text-align: right;
+    letter-spacing: -1px;
+    font-size: 1.1em;
+}
+
+.footer__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+}
+
+.footer__list-item > a {
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+    .web-app-section__title {
+        font-size: 7em;
+    }
+
+    .web-app-section__content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .web-app-section__content {
+        width: 70%;
+    }
+
+    .web-app-section__title {
+        font-size: 6em;
+        letter-spacing: -5px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .web-app-section__title {
+        font-size: 4.5em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer__contacts {
+        width: 60%;
+    }
+
+    .footer__copyright {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .web-app-section__image {
+        width: 170px;
+    }
+
+    .footer__image {
+        width: 80%;
+    }
+
+    .web-app-section {
+        gap: 50px;
+    }
+
+    .footer__list-item > a,
+    .footer__contacts {
+        font-size: 1em;
+    }
+
+    .footer__copyright {
+        font-size: 0.9em;
+    }
+
+    .footer__data {
+        gap: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        width: 100%;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .web-app-section {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 830px) {
+    .footer__contacts {
+        flex: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__image {
+        width: 124px;
+        height: 124px;
+    }
+
+    .social-media__img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 660px) {
+    .web-app-section__title {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 640px) {
+    .web-app-section__container-input > input[type="email"] {
+        width: 100%;
+    }
+
+    .web-app-section__container-input {
+        padding: 0 50px;
+    }
+
+    .web-app-section__container-input > input[type="button"],
+    .web-app-section__description,
+    .web-app-section__label {
+        font-size: 1.25em;
+    }
+
+    .web-app-section__container-input > input[type="email"]::placeholder {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .web-app-section__content {
+        width: 95%;
+    }
+
+    .web-app-section__title {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 520px) {
+    .web-app-section__title {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 320px) {
+    .web-app-section__container-input {
+        padding: 0;
+    }
+}

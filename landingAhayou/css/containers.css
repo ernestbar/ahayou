@@ -1,0 +1,24 @@
+@import url("main.css");
+
+.container {
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--container-bg-color);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom right, var(--color-white), #000)
+        border-box;
+    -webkit-mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}

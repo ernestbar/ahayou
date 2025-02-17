@@ -1,333 +1,513 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="landingAhayou.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="WebAhayouAdmin.home" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Ahayou</title>
-  <meta name="description" content=""/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet" />
-
-
-
-  <!-- ================== BEGIN BASE CSS STYLE ================== -->
-	<link href="assets/css/blog/vendor.min.css" rel="stylesheet" />
-	<link href="assets/css/blog/app.min.css" rel="stylesheet" />
-	<!-- ================== END core-css ================== -->
-
-    <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
-    <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahayou</title>
+    <link
+        rel="icon"
+        href="imgs/logos/logo-ahayou-2.png"
+        type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/containers.css" />
+    <link rel="stylesheet" href="css/arrow.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/new-releases.css" />
+    <link rel="stylesheet" href="css/plans.css" />
+    <link rel="stylesheet" href="css/web-app-section.css" />
+    <link rel="stylesheet" href="css/frequent-questions.css" />
 </head>
 <body>
-    
-    <form id="form1" runat="server" class="col-12">
-         <header class="position-relative">
-            <nav class="navbar navbar-expand">
-                <div class="container">
-                    <img src="Imagenes/logo-ahayou.png" alt="logo"/>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <asp:Button ID="btnSuscribirse" class="btn btn-danger rounded-5" runat="server" Text="Suscribase" />
-                        <asp:Button ID="btnLogin" class="btn btn-green rounded-5" runat="server" Text="Iniciar Sesion" />
-                        <asp:ImageButton ID="ibtnSP" CssClass="btn rounded-5" ImageUrl="~/Images/español.png" Height="50" runat="server" />
-                        <asp:ImageButton ID="ibtnUS" CssClass="btn rounded-5" ImageUrl="~/Images/usa.png" Height="50" runat="server" />
+    <form id="form1" runat="server">
+       <header class="header">
+            <nav class="header__nav">
+                <img
+                    class="header__logo"
+                    src="imgs/logos/logo-ahayou.png"
+                    alt="Logo Ahayou"
+                />
+                <div class="header__nav-buttons">
+                    <button
+                        class="header__button header__button--text header__button--bg-orange"
+                    >
+                        Suscr&iacute;bete
+                    </button>
+                    <button
+                        class="header__button header__button--text header__button--bg-green"
+                    >
+                        Iniciar Sesi&oacute;n
+                    </button>
+                </div>
+                <div class="header__nav-buttons">
+                    <div>
+                        <button
+                            class="header__button header__button--icon"
+                        ></button>
+                        <button
+                            class="header__button header__button--icon"
+                        ></button>
                     </div>
+                  <%--  <button class="header__button header__button--hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>--%>
                 </div>
             </nav>
-
-            <section class="hero container h-75 d-flex flex-column align-items-center justify-content-center">
-                <%--<h1 class="hero-title text-white text-center">Streaming con Alma Boliviana</h1>
-                <p class="hero-second-p text-white text-center">Una experiencia mejorada no te pierdas los estrenos mas anticipados y tus clásicos favoritos</p>--%>
-
-               <div id="carouselExampleAutoplaying" class="header container carousel slide  h-100% d-flex flex-column align-items-center justify-content-center" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="img/header-img.jpg" class="d-block w-100" alt="..."/>
-                        <div class="carousel-caption d-none d-md-block align-items-center">
-                            <h1>First slide label</h1>
-                            <p>Some representative placeholder content for the first slide.</p>
-                          </div>
+            <section class="header__main-content carousel">
+                <div class="header__items-container">
+                    <div
+                        class="arrow__container arrow--rotate carousel__arrow--prev"
+                    >
+                        <div class="arrow absolute orange"></div>
+                        <div class="arrow__border"></div>
                     </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100" alt="..."/>
+                    <div class="header__list carousel__slides">
+                        <div class="header__item carousel__item active">
+                            <h2 class="header__title">
+                                <b>Streaming</b> con <b>Alma Boliviana</b>
+                            </h2>
+                            <p class="header__description">
+                                Una experiencia mejorada no te pierdas los
+                                estrenos m&aacute;s anticipados y tus
+                                cl&aacute;sicos favoritos
+                            </p>
+                        </div>
+                        <div class="header__item carousel__item">
+                            <h2 class="header__title">
+                                <b>2Streaming</b> con <b>Alma Boliviana</b>
+                            </h2>
+                            <p class="header__description">
+                                Una experiencia mejorada no te pierdas los
+                                estrenos m&aacute;s anticipados y tus
+                                cl&aacute;sicos favoritos
+                            </p>
+                        </div>
+                        <div class="header__item carousel__item">
+                            <h2 class="header__title">
+                                <b>3Streaming</b> con <b>Alma Boliviana</b>
+                            </h2>
+                            <p class="header__description">
+                                Una experiencia mejorada no te pierdas los
+                                estrenos m&aacute;s anticipados y tus
+                                cl&aacute;sicos favoritos
+                            </p>
+                        </div>
+                        <div class="header__item carousel__item">
+                            <h2 class="header__title">
+                                <b>4Streaming</b> con <b>Alma Boliviana</b>
+                            </h2>
+                            <p class="header__description">
+                                Una experiencia mejorada no te pierdas los
+                                estrenos m&aacute;s anticipados y tus
+                                cl&aacute;sicos favoritos
+                            </p>
+                        </div>
+                        <div class="header__item carousel__item">
+                            <h2 class="header__title">
+                                <b>5Streaming</b> con <b>Alma Boliviana</b>
+                            </h2>
+                            <p class="header__description">
+                                Una experiencia mejorada no te pierdas los
+                                estrenos m&aacute;s anticipados y tus
+                                cl&aacute;sicos favoritos
+                            </p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100" alt="..."/>
+                    <div class="arrow__container carousel__arrow--next">
+                        <div class="arrow absolute"></div>
+                        <div class="arrow__border"></div>
                     </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+                </div>
+                <div class="header__pag-buttons">
+                    <button
+                        class="header__pag-button selected carousel__button"
+                    >
+                        01
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        02
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        03
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        04
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        05
+                    </button>
                 </div>
             </section>
         </header>
-        <%-- <section class="purple-section position-absolute d-flex justify-content-center">
-             <div class="container-md d-row d-md-flex justify-content-center">
-                 <div class="d-flex align-items-center justify-content-end px-4 col-12 col-md-5">
-                     <img class="img-fluid" src="/img/popcorn-logo.png" alt="popcorn"/>
-                 </div>
-                 <div class="d-flex flex-column justify-content-center col-12 col-md-7"/>
-                     <p>The Netflix you love for just £4.99</p>
-                     <p>Get the Standard with adverts plan.</p>
-                     <a href="#">Learn More</a>
-                 </div>
-         </section>--%>
+        <main>
+            <section class="new-releases carousel">
+                <h2 class="new-releases__title">
+                    <span>Nuevos</span>&nbsp;<span>agregados</span>
+                </h2>
+                <div class="new-releases__content">
+                    <div
+                        class="arrow__container arrow--rotate carousel__arrow--prev"
+                    >
+                        <div class="arrow absolute orange"></div>
+                        <div class="arrow__border"></div>
+                    </div>
+                    <div class="new-releases__list">
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/soren.jpg"
+                                alt="Cartel de soren"
+                            />
+                            <div>
+                                <h3>Soren</h3>
+                                <p>Pel&iacute;cula - Drama</p>
+                            </div>
+                        </article>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/El_día_que_murió_el_silencio_-_afiche_(BC).jpg"
+                                alt="Cartel de El días que murió el silencio"
+                            />
+                            <div>
+                                <h3>
+                                    El d&iacute;a que mur&iacute;o el silencio
+                                </h3>
+                                <p>Pel&iacute;cula - Drama</p>
+                            </div>
+                        </article>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/rio.jpg"
+                                alt="Cartel de El Río"
+                            />
+                            <div>
+                                <h3>El R&iacute;o</h3>
+                                <p>Pel&iacute;cula - Drama</p>
+                            </div>
+                        </article>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/engaño.jpg"
+                                alt="Cartel de Engaño a primera vista"
+                            />
+                            <div>
+                                <h3>Enga&ntilde;o a primera vista</h3>
+                                <p>Pel&iacute;cula - Comedia</p>
+                            </div>
+                        </article>
 
-         <section class="enjoy-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_02.png'); background-repeat: no-repeat; background-size: 100% 100%;">
-             <h1 class="section-title text-center text-lg-start">PROXIMOS ESTRENOS</h1>
-             <div class="container d-flex row m-auto">
-                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6">
-                     <h2 class="section-title text-center text-lg-start">Enjoy on your TV</h2>
-                     <p class="section-paragraph text-center text-lg-start">Watch on smart Tvs, PlayStation, Xbox, Chromecast, Apple TV, Blu-Ray players and more.</p>
-                 </div>
-                 <div class="col-12 col-lg-6">
-                     <img class="img-fluid" src="img/tv.png" alt="tv"/>
-                 </div>
-             </div>
-         </section>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/soren.jpg"
+                                alt="Cartel de soren"
+                            />
+                            <div>
+                                <h3>Soren2</h3>
+                                <p>Pel&iacute;cula - Drama</p>
+                            </div>
+                        </article>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/El_día_que_murió_el_silencio_-_afiche_(BC).jpg"
+                                alt="Cartel de El días que murió el silencio"
+                            />
+                            <div>
+                                <h3>
+                                    El d&iacute;a que mur&iacute;o el silencio2
+                                </h3>
+                                <p>Pel&iacute;cula - Drama</p>
+                            </div>
+                        </article>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/rio.jpg"
+                                alt="Cartel de El Río"
+                            />
+                            <div>
+                                <h3>El R&iacute;o2</h3>
+                                <p>Pel&iacute;cula - Drama</p>
+                            </div>
+                        </article>
+                        <article class="new-releases__item container">
+                            <img
+                                src="imgs/rotator/engaño.jpg"
+                                alt="Cartel de Engaño a primera vista"
+                            />
+                            <div>
+                                <h3>Enga&ntilde;o a primera vista2</h3>
+                                <p>Pel&iacute;cula - Comedia</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="arrow__container carousel__arrow--next">
+                        <div class="arrow absolute"></div>
+                        <div class="arrow__border"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="plans">
+                <h2 class="plans__title">
+                    <span>Elige</span><span>&nbsp;tu Plan</span>
+                </h2>
+                <div class="plans__list">
+                    <article class="plans__item">
+                        <div class="plans__item--type-2">
+                            <div class="plans__item-content container">
+                                <div
+                                    class="arrow green absolute arrow__corner"
+                                ></div>
+                                <h3 class="plans__item-title">
+                                    Plan<br />Mensual
+                                </h3>
+                                <ul class="plans__item-descriptions">
+                                    <li>2 dispositivos a la vez</li>
+                                    <li>Resoluci&oacute;n Full HD</li>
+                                </ul>
+                            </div>
+                            <div class="plans__item-price container">
+                                <div>
+                                    <span class="bs">Bs</span>
+                                    <span class="price__number">30</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans__item-footer--hidden">a</div>
+                    </article>
+                    <article class="plans__item">
+                        <div class="plans__item--type-2">
+                            <div class="plans__item-content container">
+                                <div
+                                    class="arrow orange absolute arrow__corner"
+                                ></div>
+                                <h3 class="plans__item-title">
+                                    Plan<br />Semestral
+                                </h3>
+                                <ul class="plans__item-descriptions">
+                                    <li>2 dispositivos a la vez</li>
+                                    <li>Resoluci&oacute;n Full HD</li>
+                                </ul>
+                            </div>
+                            <div class="plans__item-price container">
+                                <div>
+                                    <span class="bs">Bs</span>
+                                    <div class="price__content">
+                                        <span class="price__description">
+                                            Pago &uacute;nico
+                                        </span>
+                                        <span class="price__number">141</span>
+                                        <span class="price__description"
+                                            >23,5 por mes</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans__item-footer">
+                            <p>Ahorra el 27% del mes</p>
+                        </div>
+                    </article>
+                    <article class="plans__item">
+                        <div class="plans__item--type-2">
+                            <div class="plans__item-content container">
+                                <div
+                                    class="arrow green-yellow absolute arrow__corner"
+                                ></div>
+                                <h3 class="plans__item-title">
+                                    Plan<br />Anual
+                                </h3>
+                                <ul class="plans__item-descriptions">
+                                    <li>2 dispositivos a la vez</li>
+                                    <li>Resoluci&oacute;n Full HD</li>
+                                </ul>
+                            </div>
+                            <div class="plans__item-price container">
+                                <div>
+                                    <span class="bs">Bs</span>
+                                    <div class="price__content">
+                                        <span class="price__description"
+                                            >Pago &uacute;nico
+                                        </span>
+                                        <span class="price__number">258</span>
+                                        <span class="price__description">
+                                            21,5 por mes
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans__item-footer">
+                            <p>Ahorra el 28% del mes</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="frequent-questions">
+                <h2 class="frequent-questions__title">
+                    <span>Preguntas</span>&nbsp;<span>frecuentes</span>
+                </h2>
+                <div class="frequent-questions__content container">
+                    <div class="frequent-questions__image">
+                        <img
+                            src="imgs/etc/electronics.png"
+                            alt="Dispositivos"
+                        />
+                    </div>
+                    <ul class="frequent-questions__list">
+                        <li class="frequent-questions__item underline">
+                            <a href="#">
+                                <p>¿Qu&eacute; es Ah&aacute;you?</p>
+                                <div class="arrow green-yellow"></div>
+                            </a>
+                        </li>
+                        <li class="frequent-questions__item underline">
+                            <a href="#">
+                                <p>¿Cu&aacute;nto cuesta Ah&aacute;you?</p>
+                                <div class="arrow green-yellow"></div>
+                            </a>
+                        </li>
+                        <li class="frequent-questions__item underline">
+                            <a href="#" class="">
+                                <p>¿Donde puedo ver Ah&aacute;you?</p>
+                                <div class="arrow green-yellow"></div>
+                            </a>
+                        </li>
+                        <li class="frequent-questions__item">
+                            <a href="#">
+                                <p>
+                                    Cu&aacute;les son las reglas para descargar
+                                    PWA de ¿Ah&aacute;you?
+                                </p>
+                                <div class="arrow green-yellow"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <section class="web-app-section" id="webAppSection">
+            <div
+                class="web-app-section__content container"
+                id="downloadContainer"
+            >
+                <h2 class="web-app-section__title" id="downloadTitle">
+                    Descarga la Web APP
+                </h2>
+                <div class="web-app-section__container-description">
+                    <img
+                        src="imgs/logos/pwa_logo.png"
+                        alt="PWA"
+                        class="web-app-section__image"
+                    />
+                    <p class="web-app-section__description">
+                        Con esta PWA tendr&aacute; un sitio web que se ve y se
+                        comporta como si fuera una aplicaci&oacute;n
+                        m&oacute;vil ahorrando espacio en tu dispositivo
+                    </p>
+                </div>
+            </div>
+            <form class="web-app-section__form">
+                <label for="email" class="web-app-section__label">
+                    Ya est&aacute;s listo para vivir la experiencia
+                    Ah&aacute;you<br />crea tu cuenta ¡¡¡AQU&lacute;!!!
+                </label>
+                <div class="web-app-section__container-input">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Ingresa tu correo"
+                    />
+                    <input type="button" value="Suscríbete" />
+                </div>
+            </form>
+            <footer class="footer">
+                <div class="footer__image-container">
+                    <img
+                        src="imgs/logos/logo-ahayou-2.png"
+                        alt="Logo Ahayou"
+                        class="footer__image"
+                    />
+                </div>
+                <div class="footer__content">
+                    <div class="footer__list">
+                        <div class="footer__list-item">
+                            <a href="#">Preguntas frecuentes</a>
+                            <a href="#">Privacidad</a>
+                        </div>
+                        <div class="footer__list-item">
+                            <a href="#">Centro de Ayuda</a>
+                            <a href="#">Avisos Legales</a>
+                        </div>
+                        <div class="footer__list-item">
+                            <a href="#">T&eacute;rminos de uso</a>
+                            <a href="#">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="footer__data">
+                        <div class="footer__contacts">
+                            <div>
+                                <span>+(591) 75874441</span>
+                            </div>
+                            <div class="social-media">
+                                <a href="#" class="social-media__link">
+                                    <img
+                                        src="imgs/logos/facebook.svg"
+                                        alt="Facebook"
+                                        class="social-media__img"
+                                    />
+                                </a>
+                                <a href="#" class="social-media__link">
+                                    <img
+                                        src="imgs/logos/x.png"
+                                        alt="X"
+                                        class="social-media__img"
+                                    />
+                                </a>
+                                <a href="#" class="social-media__link">
+                                    <img
+                                        src="imgs/logos/Instagram.svg"
+                                        alt="Instagram"
+                                        class="social-media__img"
+                                    />
+                                </a>
+                                <a href="#" class="social-media__link">
+                                    <img
+                                        src="imgs/logos/linkedln.svg"
+                                        alt="Linkedln"
+                                        class="social-media__img"
+                                    />
+                                </a>
+                                <a href="#" class="social-media__link">
+                                    <img
+                                        src="imgs/logos/whatsapp.svg"
+                                        alt="Whatsapp"
+                                        class="social-media__img"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__copyright">
+                            <p>Copyright 2025 Bolivia</p>
+                            <p>Ahayou</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
 
-         <section class="watch-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_03.png'); background-repeat: no-repeat; background-size: 100% 100%;">
-             <div class="container d-flex row m-auto">
-                 <div class="col-12 col-lg-6">
-                     <img class="img-fluid" src="img/mobile-img.png" alt="mobile"/>
-                 </div>
-                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6 order-first order-lg-last">
-                     <h2 class="section-title text-center text-lg-start">Watch everywhere</h2>
-                     <p class="section-paragraph text-center text-lg-start">Stream unlimited films and TV programmes on your phone, tablet, laptop and TV.</p>
-                 </div>
-             </div>
-         </section>
-
-         <section class="children-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_04.png'); background-repeat: no-repeat; background-size: 100% 100%;">
-             <div class="container d-flex row m-auto">
-                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6">
-                     <h2 class="section-title text-center text-lg-start">Create profiles for children</h2>
-                     <p class="section-paragraph text-center text-lg-start">Send children on adventures with their favourite characters in a space made just for them - free with your membership.</p>
-                 </div>
-                 <div class="col-12 col-lg-6">
-                     <img class="img-fluid" src="img/children-img.png" alt="children"/>
-                 </div>
-             </div>
-         </section>
-
-         <section class="download-section py-5 bg-black text-light"  style="background-image:url('Imagenes/landingpage-AHAYOU_05.png'); background-repeat: no-repeat; background-size: 100% 100%;">
-             <div class="container d-flex row m-auto">
-                 <div class="col-12 col-lg-6">
-                     <img class="img-fluid" src="img/download-img.jpg" alt="download"/>
-                 </div>
-                 <div class="d-flex flex-column justify-content-center col-12 col-lg-6 order-first order-lg-last">
-                     <h2 class="section-title text-center text-lg-start">Download your programmes to watch offline</h2>
-                     <p class="section-paragraph text-center text-lg-start">Only available on advert-free plans.</p>
-                 </div>
-             </div>
-         </section>
-
-         <section class="faq-section py-5 bg-black text-light" style="background-image:url('Imagenes/landingpage-AHAYOU_01.png'); background-repeat: no-repeat; background-size: 100% 100%;">
-             <div class="container">
-                 <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-                 <div class="accordion" id="accordionExample" >
-                     <div class="accordion-item mb-2">
-                         <h2 class="accordion-header">
-                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                 What is Netflix?
-                             </button>
-                         </h2>
-                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                             <div class="accordion-body">
-                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate harum cumque maxime consequuntur assumenda maiores obcaecati iusto beatae nihil! Voluptates esse, magnam dolores non porro aperiam. Voluptatem, labore magni quod, quasi ab provident dolor amet dolorem molestiae blanditiis illo dolorum incidunt cum itaque laborum vero quam facere voluptatibus fuga minima?
-                             </div>
-                         </div>
-                     </div>
-                     <div class="accordion-item mb-2">
-                         <h2 class="accordion-header">
-                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                 How much does Netflix cost?
-                             </button>
-                         </h2>
-                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                             <div class="accordion-body">
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium et corporis distinctio quos expedita, quae, eos necessitatibus ea consectetur nam cum porro veritatis illum repudiandae nobis tempora eum excepturi quibusdam tempore non asperiores? Error, illo perspiciatis? Cum, rem quam quibusdam at accusantium alias mollitia labore magnam repellat, eveniet odio quas saepe illum neque! Deleniti facere omnis culpa modi rerum vitae sunt facilis minus nostrum! Esse cum facilis qui sapiente eos dignissimos, perferendis delectus inventore minus, neque amet quo aspernatur quaerat alias dolore cumque sint. Sapiente vel numquam ratione maxime. Veritatis, optio reiciendis voluptatibus praesentium sed vitae assumenda quaerat velit!
-                             </div>
-                         </div>
-                     </div>
-                     <div class="accordion-item mb-2">
-                         <h2 class="accordion-header">
-                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                 Where can I watch?
-                             </button>
-                         </h2>
-                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                             <div class="accordion-body">
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio hic temporibus delectus veniam distinctio repellendus error architecto? Magnam quas, quo placeat quibusdam dolores vitae corporis quaerat velit! Temporibus illo corrupti praesentium atque consequuntur! Deserunt amet explicabo magni dignissimos sunt.
-                             </div>
-                         </div>
-                     </div>
-                     <div class="accordion-item mb-2">
-                         <h2 class="accordion-header">
-                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                 How do I cancel?
-                             </button>
-                         </h2>
-                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                             <div class="accordion-body">
-                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus vero voluptates quasi reprehenderit pariatur necessitatibus maiores cum voluptatem possimus! Quod fuga dignissimos quo debitis iure eius ratione neque unde libero deleniti doloribus facilis animi est sunt ut deserunt beatae, dicta illum aut non totam! Deleniti in rerum totam laboriosam autem accusamus nihil! Voluptas quibusdam voluptatum tempora ducimus libero, quae reiciendis.
-                             </div>
-                         </div>
-                     </div>
-                     <div class="accordion-item mb-2">
-                         <h2 class="accordion-header">
-                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                 What can I watch on Netflix?
-                             </button>
-                         </h2>
-                         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                             <div class="accordion-body">
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum consequuntur corporis incidunt ullam ipsam suscipit nam eius velit deleniti unde voluptatem, iure sequi necessitatibus iusto.
-                             </div>
-                         </div>
-                     </div>
-                     <div class="accordion-item mb-2">
-                         <h2 class="accordion-header">
-                             <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                 Is Netflix good for children?
-                             </button>
-                         </h2>
-                         <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                             <div class="accordion-body">
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, dolores quod tempore nisi est sequi veniam vitae quia odio, harum consequatur at corporis totam vel, facere quidem et eos nihil iste fugit! Iusto iste, nihil vel eos ipsa culpa minus assumenda quaerat ut? Facilis quibusdam maxime asperiores voluptates maiores, alias adipisci odit placeat. Dolore temporibus labore praesentium commodi quam. Possimus praesentium omnis maiores dolorum non voluptatibus consequuntur autem, eveniet aut alias id impedit perspiciatis officia?
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <h3 class="text-center mt-5">
-                     Ready to watch? Enter your email to create or restrat your membership.
-                 </h3>
-                 <form class="row g-3 d-flex align-items-center justify-content-center w-100 w-lg-75 m-auto">
-                     <div class="form-floating col-auto">
-                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                         <label for="floatingInput">Email address</label>
-                     </div>
-                     <div class="col-auto">
-                         <button type="submit" class="get-started-btn red-btn fw-bold">Get Started</button>
-                     </div>
-                 </form>
-             </div>
-         </section>
-
-         <footer class="py-5 bg-black text-light">
-             <div class="container"> 
-                 <div>
-                     <p>Questions? Call <a href="#">0900900900</a></p>
-                 </div>
-                 <div class="row">
-                     <div class="col-12 col-sm-4">
-                         <ul>
-                             <li class="mb-2">
-                                 <a href="#">FAQ</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Media Center</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Netflix Shop</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Ways to Watch</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Cookie Preferences</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Speed Text</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Only on Netflix</a>
-                             </li>
-                         </ul>
-                     </div>
-                     <div class="col-12 col-sm-4">
-                         <ul>
-                             <li class="mb-2">
-                                 <a href="#">Help Center</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Investor Relations</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Redeem gift cards</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Terms of Use</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Corporate Information</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Legal Guarantee</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Advert ChoiCes</a>
-                             </li>
-                         </ul>
-                     </div>
-                     <div class="col-12 col-sm-4">
-                         <ul>
-                             <li class="mb-2">
-                                 <a href="#">Account</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Jobs</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Buy Gift Cards</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Privacy</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Contact us</a>
-                             </li>
-                             <li class="mb-2">
-                                 <a href="#">Legal Notices</a>
-                             </li>
-                         </ul>
-                     </div>
-                 </div>
-                 <div class="py-3">
-                     <div class="position-absolute">
-                         <img class="position-absolute" width="17" src="img/globe-icon.png" alt="globe"/>
-                     </div>
-                     <div class="position-absolute">
-                         <div class="arrow-down position-absolute"></div>
-                     </div>
-                     <select class="position-relative py-1" name="" id="">
-                         <option value="">English</option>
-                     </select>
-                 </div>
-                 <p>Netflix United Kingdom</p>
-             </div>
-         </footer>
+        <script src="js/carousel.js"></script>
+        <script src="js/carousel-new-releases.js"></script>
+        <script src="js/web-app-title.js"></script>
     </form>
-      <!-- Scroll Top -->
-
-
-  <!-- ================== BEGIN core-js ================== -->
-	<script src="assets/js/blog/vendor.min.js"></script>
-	<script src="assets/js/blog/app.min.js"></script>
-	<!-- ================== END core-js ================== -->
-    <script src="" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

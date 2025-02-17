@@ -1,0 +1,53 @@
+@import url("main.css");
+
+.absolute {
+    position: absolute;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 65%, 25% 50%, 0% 35%);
+}
+
+.green-yellow {
+    background-color: var(--color-green-yellow);
+}
+
+.orange {
+    background-color: var(--color-primary);
+}
+
+.green {
+    background-color: var(--color-secondary);
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.arrow__container {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.arrow__corner {
+    top: 5%;
+    left: 5%;
+}
+
+.arrow__border {
+    position: absolute;
+    clip-path: polygon(-5% -5%, 105% 50%, -5% 105%, -5% 65%, 25% 50%, -5% 35%);
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    top: -2px;
+    left: -2px;
+}
+
+.arrow--rotate {
+    transform: rotate(180deg);
+}

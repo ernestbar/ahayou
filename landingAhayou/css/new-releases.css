@@ -1,0 +1,91 @@
+@import url("main.css");
+
+.new-releases {
+    background-image: url("../imgs/backgrounds/landingpage-AHAYOU_02.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0;
+}
+
+.new-releases__title {
+    text-align: center;
+    letter-spacing: -5px;
+}
+
+.new-releases__title span:nth-child(1) {
+    font-weight: bold;
+}
+
+.new-releases__title span:nth-child(2) {
+    font-weight: var(--second-font-weight);
+    color: var(--color-secondary);
+}
+
+.new-releases__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.new-releases__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    justify-content: center;
+    gap: 0 20px;
+    overflow: hidden;
+    width: 80%;
+    transition: transform 0.3s ease;
+}
+
+.new-releases__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.new-releases__list.slide-out {
+    transform: translateX(-25%);
+    opacity: 0;
+}
+
+.new-releases__list.slide-in {
+    transform: translateX(25%);
+    opacity: 0;
+}
+
+.new-releases__list.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.new-releases__item > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.new-releases__item > div {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.new-releases__item > div > h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.new-releases__item > div > p {
+    text-align: center;
+}
