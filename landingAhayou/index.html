@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ahayou</title>
+
         <link
             rel="icon"
             href="imgs/logos/logo-ahayou-2.png"
@@ -60,7 +61,7 @@
                     <div
                         class="arrow__container arrow--rotate carousel__arrow--prev"
                     >
-                        <div class="arrow absolute orange"></div>
+                        <div class="arrow absolute"></div>
                         <div class="arrow__border"></div>
                     </div>
                     <div class="header__list carousel__slides">
@@ -150,7 +151,7 @@
                     <div
                         class="arrow__container arrow--rotate carousel__arrow--prev"
                     >
-                        <div class="arrow absolute orange"></div>
+                        <div class="arrow absolute"></div>
                         <div class="arrow__border"></div>
                     </div>
                     <div class="new-releases__list">
@@ -251,7 +252,7 @@
                     <span>Elige</span><span>&nbsp;tu Plan</span>
                 </h2>
                 <div class="plans__list">
-                    <article class="plans__item">
+                    <a href="#" class="plans__item">
                         <div class="plans__item--type-2">
                             <div class="plans__item-content container">
                                 <div
@@ -273,8 +274,8 @@
                             </div>
                         </div>
                         <div class="plans__item-footer--hidden">a</div>
-                    </article>
-                    <article class="plans__item">
+                    </a>
+                    <a a href="#" class="plans__item">
                         <div class="plans__item--type-2">
                             <div class="plans__item-content container">
                                 <div
@@ -306,8 +307,8 @@
                         <div class="plans__item-footer">
                             <p>Ahorra el 27% del mes</p>
                         </div>
-                    </article>
-                    <article class="plans__item">
+                    </a>
+                    <a href="#" class="plans__item">
                         <div class="plans__item--type-2">
                             <div class="plans__item-content container">
                                 <div
@@ -339,7 +340,7 @@
                         <div class="plans__item-footer">
                             <p>Ahorra el 28% del mes</p>
                         </div>
-                    </article>
+                    </a>
                 </div>
             </section>
             <section class="frequent-questions">
@@ -351,35 +352,88 @@
                         <img
                             src="imgs/etc/electronics.png"
                             alt="Dispositivos"
+                            id="frequentQuestionsImg"
                         />
                     </div>
                     <ul class="frequent-questions__list">
                         <li class="frequent-questions__item underline">
-                            <a href="#">
-                                <p>¿Qu&eacute; es Ah&aacute;you?</p>
-                                <div class="arrow green-yellow"></div>
-                            </a>
+                            <details
+                                name="frequent-questions"
+                                class="frequent-questions-detail"
+                            >
+                                <summary>
+                                    <span>¿Qué es Aháyou?</span>
+                                    <div class="arrow green-yellow"></div>
+                                </summary>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Aliquid possimus odit
+                                    exercitationem officiis harum quod beatae
+                                    officia culpa ducimus, vel ex voluptatum
+                                    facere quia sunt, sit, alias libero.
+                                    Distinctio, tenetur?
+                                </p>
+                            </details>
                         </li>
                         <li class="frequent-questions__item underline">
-                            <a href="#">
-                                <p>¿Cu&aacute;nto cuesta Ah&aacute;you?</p>
-                                <div class="arrow green-yellow"></div>
-                            </a>
+                            <details
+                                name="frequent-questions"
+                                class="frequent-questions-detail"
+                            >
+                                <summary>
+                                    <span>¿Cuánto cuesta Aháyou? </span>
+                                    <div class="arrow green-yellow"></div>
+                                </summary>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Aliquid possimus odit
+                                    exercitationem officiis harum quod beatae
+                                    officia culpa ducimus, vel ex voluptatum
+                                    facere quia sunt, sit, alias libero.
+                                    Distinctio, tenetur?
+                                </p>
+                            </details>
                         </li>
                         <li class="frequent-questions__item underline">
-                            <a href="#" class="">
-                                <p>¿Donde puedo ver Ah&aacute;you?</p>
-                                <div class="arrow green-yellow"></div>
-                            </a>
+                            <details
+                                name="frequent-questions"
+                                class="frequent-questions-detail"
+                            >
+                                <summary>
+                                    <span>¿Dónde puedo ver Aháyou?</span>
+                                    <div class="arrow green-yellow"></div>
+                                </summary>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Aliquid possimus odit
+                                    exercitationem officiis harum quod beatae
+                                    officia culpa ducimus, vel ex voluptatum
+                                    facere quia sunt, sit, alias libero.
+                                    Distinctio, tenetur?
+                                </p>
+                            </details>
                         </li>
                         <li class="frequent-questions__item">
-                            <a href="#">
+                            <details
+                                name="frequent-questions"
+                                class="frequent-questions-detail"
+                            >
+                                <summary>
+                                    <span>
+                                        ¿Cuáles son las reglas para descargar la
+                                        PWA de Aháyou?
+                                    </span>
+                                    <div class="arrow green-yellow"></div>
+                                </summary>
                                 <p>
-                                    Cu&aacute;les son las reglas para descargar
-                                    PWA de ¿Ah&aacute;you?
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Aliquid possimus odit
+                                    exercitationem officiis harum quod beatae
+                                    officia culpa ducimus, vel ex voluptatum
+                                    facere quia sunt, sit, alias libero.
+                                    Distinctio, tenetur?
                                 </p>
-                                <div class="arrow green-yellow"></div>
-                            </a>
+                            </details>
                         </li>
                     </ul>
                 </div>
@@ -498,5 +552,6 @@
         <script src="js/carousel.js"></script>
         <script src="js/carousel-new-releases.js"></script>
         <script src="js/web-app-title.js"></script>
+        <script src="js/open-accordion-image.js"></script>
     </body>
 </html>

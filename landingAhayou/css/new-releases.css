@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    overflow: hidden;
+    gap: 10px;
 }
 
 .new-releases__list {
@@ -51,7 +51,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
+    height: 480px;
+    width: 100%;
 }
 
 .new-releases__list.slide-out {
@@ -71,7 +72,7 @@
 
 .new-releases__item > img {
     width: 100%;
-    height: auto;
+    height: 85%;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -84,8 +85,17 @@
 .new-releases__item > div > h3 {
     font-weight: bold;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .new-releases__item > div > p {
     text-align: center;
+    word-wrap: break-word;
 }
+
+
+/* @media(max-width:400px){
+    .new-releases__item {
+        width: 120px;
+    }
+} */

@@ -13,5 +13,26 @@ namespace WebAhayouAdmin
         {
 
         }
+
+        protected void Repeater1_DataBinding(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item ||
+                e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Label id = (Label)e.Item.FindControl("lblIdNumero");
+                if (id.Text == "01")
+                {
+                    string javaScript = "document.getElementById('"+id.Text+ "').class = 'header__pag-button carousel__button selected'";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
+                }
+
+            }
+        }
     }
 }

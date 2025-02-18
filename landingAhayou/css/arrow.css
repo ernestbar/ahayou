@@ -2,6 +2,19 @@
 
 .absolute {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow__container {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow {
@@ -26,16 +39,9 @@
     background-color: transparent;
 }
 
-.arrow__container {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    cursor: pointer;
-}
-
 .arrow__corner {
-    top: 5%;
-    left: 5%;
+    top: 15%;
+    left: 10%;
 }
 
 .arrow__border {
@@ -58,6 +64,10 @@
         height: 34px;
     }
 
+    .arrow--rotate {
+        transform: translate(0, -25%) rotate(180deg);
+    }
+
     .arrow {
         width: 30px;
         height: 30px;
@@ -73,5 +83,9 @@
     .arrow {
         width: 20px;
         height: 20px;
+    }
+
+    .arrow--rotate {
+        transform: translate(0, -50%) rotate(180deg);
     }
 }

@@ -60,6 +60,15 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.ObjectDataSource odsPlanes;
 
         /// <summary>
+        /// Control odsRedesSociales.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsRedesSociales;
+
+        /// <summary>
         /// Control lblMundo.
         /// </summary>
         /// <remarks>
@@ -103,5 +112,14 @@ namespace WebAhayouAdmin
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Repeater3;
+
+        /// <summary>
+        /// Control Repeater5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater5;
     }
 }
