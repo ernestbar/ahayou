@@ -27,11 +27,23 @@
     <link rel="stylesheet" href="css/plans.css" />
     <link rel="stylesheet" href="css/web-app-section.css" />
     <link rel="stylesheet" href="css/frequent-questions.css" />
+    <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
+    <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
            <asp:ObjectDataSource ID="odsRotador1" runat="server" SelectMethod="PR_STR_GET_BANNER_PRINCIPAL" TypeName="WebAhayouAdmin.Clases.Contenidos">
             </asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="odsUltimos" runat="server" SelectMethod="PR_STR_GET_NUEVOS_AGREGADOS" TypeName="WebAhayouAdmin.Clases.Contenidos">
+ </asp:ObjectDataSource>
+         <asp:ObjectDataSource ID="odsPreguntas" runat="server" SelectMethod="PR_PAR_GET_PREGUNTAS_FRECUENTES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
+        </asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="odsPlanes" runat="server" SelectMethod="PR_PAR_GET_PLANES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="lblMundo" Name="PV_MUNDO" Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+        <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
        <header class="header">
             <nav class="header__nav">
                 <img
@@ -157,7 +169,19 @@
                         <div class="arrow__border"></div>
                     </div>
                     <div class="new-releases__list">
-                        <article class="new-releases__item container">
+                          <asp:Repeater ID="Repeater4" DataSourceID="odsUltimos" runat="server">
+		                            <ItemTemplate>
+                                   <article class="new-releases__item container">
+                                    <img src='<%# "data:image/jpg;base64," + Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />
+                                    <div>
+                                        <h3><%# Eval("nombre_contenido") %></h3>
+                                        <p><%# Eval("descripcion") %></p>
+                                    </div>
+                                </article>
+		                            </ItemTemplate>
+                          </asp:Repeater>
+
+                        <%--<article class="new-releases__item container">
                             <img
                                 src="imgs/rotator/soren.jpg"
                                 alt="Cartel de soren"
@@ -241,7 +265,7 @@
                                 <h3>Enga&ntilde;o a primera vista2</h3>
                                 <p>Pel&iacute;cula - Comedia</p>
                             </div>
-                        </article>
+                        </article>--%>
                     </div>
                     <div class="arrow__container carousel__arrow--next">
                         <div class="arrow absolute"></div>
@@ -254,7 +278,45 @@
                     <span>Elige</span><span>&nbsp;tu Plan</span>
                 </h2>
                 <div class="plans__list">
-                    <article class="plans__item">
+                     <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
+	                    <ItemTemplate>
+                            <article class="plans__item">
+                                <div class="plans__item--type-2">
+                                    <div class="plans__item-content container">
+                                        <div
+                                            class="arrow orange absolute arrow__corner"
+                                        ></div>
+                                        <h3 class="plans__item-title">
+                                            <%# Eval("planes") %>
+                                        </h3>
+                                        <ul class="plans__item-descriptions">
+                                            <li><%# Eval("caracteristicas").ToString().Replace("|","<br />") %></li>
+                                            <%--<li>Resoluci&oacute;n Full HD</li>--%>
+                                        </ul>
+                                    </div>
+                                    <div class="plans__item-price container">
+                                        <div>
+                                            <span class="bs">Bs</span>
+                                            <div class="price__content">
+                                                <span class="price__description">
+                                                    Pago &uacute;nico
+                                                </span>
+                                                <span class="price__number"><%# Eval("monto") %></span>
+                                                <span class="price__description"><%# Eval("pago_mes") %></span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plans__item-footer">
+                                    <p><%# Eval("ahorro") %></p>
+                                </div>
+                            </article>
+	                    </ItemTemplate>
+                     </asp:Repeater>
+
+
+                    <%--<article class="plans__item">
                         <div class="plans__item--type-2">
                             <div class="plans__item-content container">
                                 <div
@@ -342,7 +404,7 @@
                         <div class="plans__item-footer">
                             <p>Ahorra el 28% del mes</p>
                         </div>
-                    </article>
+                    </article>--%>
                 </div>
             </section>
             <section class="frequent-questions">
@@ -357,13 +419,18 @@
                         />
                     </div>
                     <ul class="frequent-questions__list">
-                        <li class="frequent-questions__item underline">
-                            <a href="#">
-                                <p>¿Qu&eacute; es Ah&aacute;you?</p>
-                                <div class="arrow green-yellow"></div>
-                            </a>
-                        </li>
-                        <li class="frequent-questions__item underline">
+                         <asp:Repeater ID="Repeater3" DataSourceID="odsPreguntas" runat="server">
+                            <ItemTemplate>
+                                <li class="frequent-questions__item underline">
+                                    <a href="#">
+                                        <p> <%# Eval("pregunta") %></p>
+                                        <div class="arrow green-yellow"></div>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                             </asp:Repeater>
+                        
+                        <%--<li class="frequent-questions__item underline">
                             <a href="#">
                                 <p>¿Cu&aacute;nto cuesta Ah&aacute;you?</p>
                                 <div class="arrow green-yellow"></div>
@@ -383,7 +450,7 @@
                                 </p>
                                 <div class="arrow green-yellow"></div>
                             </a>
-                        </li>
+                        </li>--%>
                     </ul>
                 </div>
             </section>

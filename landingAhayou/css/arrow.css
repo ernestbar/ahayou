@@ -51,3 +51,27 @@
 .arrow--rotate {
     transform: rotate(180deg);
 }
+
+@media (max-width: 640px) {
+    .arrow__border {
+        width: 34px;
+        height: 34px;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .arrow__border {
+        width: 24px;
+        height: 24px;
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+    }
+}

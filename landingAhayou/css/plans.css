@@ -241,6 +241,15 @@
     .plans__item {
         width: 75%;
     }
+
+    .plans__item-title {
+        font-size: 1.75em;
+    }
+
+    .plans__item-descriptions > li,
+    .plans__item-footer {
+        font-size: 1.1em;
+    }
 }
 
 @media (max-width: 640px) {
@@ -258,4 +267,51 @@
         width: 100%;
         padding: 0 10px;
     }
+
+    .plans__item-title {
+        font-size: 1.5em;
+    }
+
+    .plans__item-descriptions > li,
+    .plans__item-footer {
+        font-size: 1em;
+    }
 }
+
+@media (max-width: 450px) {
+    .plans__item-price > div {
+        width: 125px;
+        height: 125px;
+    }
+
+    .bs {
+        font-size: 1em;
+        top: 2.5px;
+        left: 2.5px;
+    }
+
+    .price__description {
+        font-size: 1em;
+    }
+
+    .price__description:first-of-type {
+        position: relative;
+        left: 10px;
+    }
+
+    .price__number {
+        font-size: 3.5em;
+    }
+}
+
+@media(max-width:370px){
+    .plans__item-price > div{
+        right: 15px;
+    }
+}
+/* 
+@media(max-width:370px){
+    .plans__item-price > div{
+        right: 30px;
+    }
+} */

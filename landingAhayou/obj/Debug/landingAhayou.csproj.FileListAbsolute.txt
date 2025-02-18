@@ -177,3 +177,5 @@ C:\GITHUB\ahayou\landingAhayou\obj\Debug\WebAhayouAdmin.dll
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\WebAhayouAdmin.pdb
 E:\ERNESTO\ahayou\landingAhayou\bin\Newtonsoft.Json.dll
 E:\ERNESTO\ahayou\landingAhayou\bin\Newtonsoft.Json.xml
+C:\GITHUB\ahayou\landingAhayou\bin\Newtonsoft.Json.dll
+C:\GITHUB\ahayou\landingAhayou\bin\Newtonsoft.Json.xml

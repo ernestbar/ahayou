@@ -372,6 +372,7 @@
     <Content Include="Images\Icons\iconos.zip" />
     <Content Include="Images\Icons\iconoss.zip" />
     <Content Include="Images\Icons\manifest.json" />
+    <Content Include="manifest.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

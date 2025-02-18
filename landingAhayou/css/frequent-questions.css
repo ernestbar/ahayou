@@ -160,25 +160,35 @@
 
 @media (max-width: 420px) {
     .frequent-questions__image {
-        top: 400px;
+        top: 350px;
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 290px) {
     .frequent-questions__image {
-        top: 420px;
+        top: 475px;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 275px) {
     .frequent-questions__image {
-        top: 450px;
+        top: 500px;
     }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 250px) {
     .frequent-questions__image {
-        top: 450px;
+        top: 575px;
     }
 }
 
+
+@media (max-width: 250px) {
+    .frequent-questions__image {
+        display: none;
+    }
+
+    .frequent-questions__content{
+        padding: 25px;
+    }
+}

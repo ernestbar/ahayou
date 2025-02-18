@@ -110,6 +110,7 @@
     border-radius: 5px;
     padding: 5px 20px;
     transition: background-color 0.3s;
+    word-wrap: break-word;
 }
 
 .web-app-section__container-input > input[type="button"]:hover {
@@ -171,6 +172,10 @@
     flex-direction: row;
     font-weight: 200;
     gap: 50px;
+}
+
+.footer__list {
+    padding-bottom: 40px;
 }
 
 .footer__list,
@@ -299,6 +304,12 @@
     }
 }
 
+@media (max-width: 860px) {
+    .footer__contacts {
+        gap: 0px;
+    }
+}
+
 @media (max-width: 830px) {
     .footer__contacts {
         flex: 3;
@@ -332,14 +343,20 @@
         padding: 0 50px;
     }
 
-    .web-app-section__container-input > input[type="button"],
     .web-app-section__description,
     .web-app-section__label {
         font-size: 1.25em;
     }
 
-    .web-app-section__container-input > input[type="email"]::placeholder {
+    .web-app-section__container-input > input[type="email"]::placeholder,
+    .web-app-section__container-input > input[type="email"],
+    .web-app-section__container-input > input[type="button"] {
         font-size: 1em;
+    }
+
+    .footer__image {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -351,16 +368,76 @@
     .web-app-section__title {
         font-size: 3.5em;
     }
+
+    .web-app-section__container-input {
+        padding: 0 25px;
+    }
+
+    .footer__image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer__contacts {
+        width: 70%;
+    }
+
+    .footer__copyright {
+        width: 30%;
+    }
 }
 
 @media (max-width: 520px) {
     .web-app-section__title {
         font-size: 3em;
     }
+
+    .web-app-section__description{
+        font-size: 1em;
+    }
+
+    .web-app-section__image {
+        width: 125px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer__image-container {
+        display: none;
+    }
+
+    .web-app-section__container-input > input[type="email"],
+    .web-app-section__container-input > input[type="button"] {
+        height: 48px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 490px) {
+    .web-app-section__title {
+        font-size: 2.5em;
+    }
+
+    .footer__list {
+        gap: 10px;
+    }
+
+    .footer__list {
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 320px) {
     .web-app-section__container-input {
-        padding: 0;
+        padding: 0 5px;
+    }
+
+    .web-app-section__container-input > input[type="email"],
+    .web-app-section__container-input > input[type="button"] {
+        height: 40px;
+    }
+
+    .web-app-section__container-input > input[type="button"] {
+        white-space: no-wrap;
     }
 }
