@@ -11,7 +11,7 @@ namespace WebAhayouAdmin
 {
 
 
-    public partial class home
+    public partial class contenidos
     {
 
         /// <summary>
@@ -51,15 +51,6 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.ObjectDataSource odsPreguntas;
 
         /// <summary>
-        /// Control odsPlanes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsPlanes;
-
-        /// <summary>
         /// Control odsRedesSociales.
         /// </summary>
         /// <remarks>
@@ -69,49 +60,22 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.ObjectDataSource odsRedesSociales;
 
         /// <summary>
-        /// Control lblMundo.
+        /// Control odsContenidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMundo;
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsContenidos;
 
         /// <summary>
-        /// Control Repeater6.
+        /// Control lblContenido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater6;
-
-        /// <summary>
-        /// Control Repeater1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
-
-        /// <summary>
-        /// Control Repeater4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater4;
-
-        /// <summary>
-        /// Control Repeater2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+        protected global::System.Web.UI.WebControls.Label lblContenido;
 
         /// <summary>
         /// Control Repeater3.

@@ -82,22 +82,23 @@ namespace WebAhayouAdmin
         {
             try
             {
-                if (lblCodigo.Text == "")
-                {
-                    Clases.Roles obj = new Clases.Roles("I", txtCodContenido.Text, txtDescripcion.Text, lblUsuario.Text);
-                    obj.ABM();
-                    lblAviso.Text = obj.PV_DESCRIPCIONPR;
-                    MultiView1.ActiveViewIndex = 0;
-                    Repeater1.DataBind();
-                }
-                else
-                {
-                    Clases.Roles obj = new Clases.Roles("U", lblCodigo.Text, txtDescripcion.Text, lblUsuario.Text);
-                    obj.ABM();
-                    lblAviso.Text = obj.PV_DESCRIPCIONPR;
-                    MultiView1.ActiveViewIndex = 0;
-                    Repeater1.DataBind();
-                }
+                string contenido = hfContenido.Value;
+                //if (lblCodigo.Text == "")
+                //{
+                //    Clases.Roles obj = new Clases.Roles("I", txtCodContenido.Text, txtDescripcion.Text, lblUsuario.Text);
+                //    obj.ABM();
+                //    lblAviso.Text = obj.PV_DESCRIPCIONPR;
+                //    MultiView1.ActiveViewIndex = 0;
+                //    Repeater1.DataBind();
+                //}
+                //else
+                //{
+                //    Clases.Roles obj = new Clases.Roles("U", lblCodigo.Text, txtDescripcion.Text, lblUsuario.Text);
+                //    obj.ABM();
+                //    lblAviso.Text = obj.PV_DESCRIPCIONPR;
+                //    MultiView1.ActiveViewIndex = 0;
+                //    Repeater1.DataBind();
+                //}
                 string script = string.Format("alert('{0}');", lblAviso.Text);
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
             }

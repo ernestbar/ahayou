@@ -71,15 +71,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="contenidos.aspx" />
     <Content Include="css\arrow.css" />
     <Content Include="css\containers.css" />
     <Content Include="css\frequent-questions.css" />
+    <Content Include="css\header-movies.css" />
     <Content Include="css\header.css" />
     <Content Include="css\main.css" />
     <Content Include="css\new-releases.css" />
     <Content Include="css\plans.css" />
     <Content Include="css\style.css" />
     <Content Include="css\web-app-section.css" />
+    <Content Include="fotos_peliculas\0\banner_principal.png" />
+    <Content Include="fotos_peliculas\0\header-img.jpg" />
     <Content Include="fotos_peliculas\10\FotoHorizontalPelicula_71_20241213155319PLATO-PACEÑO-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
     <Content Include="fotos_peliculas\10\FotoMiniaturaPelicula_71_20241213155353PLATO-PACEÑO-AFICHE-HORIZONTAL-1200X800.jpg" />
     <Content Include="fotos_peliculas\10\foto_horizontal.png" />
@@ -404,6 +409,8 @@
     <Content Include="Images\VerAhora.png" />
     <Content Include="Images\WebApp_img.png" />
     <Content Include="Images\Whatsapp_37229.png" />
+    <Content Include="imgs\backgrounds\avengers.jpg" />
+    <Content Include="imgs\backgrounds\cobra-kai.jpeg" />
     <Content Include="imgs\backgrounds\header-img.jpg" />
     <Content Include="imgs\backgrounds\landingpage-AHAYOU_01.png" />
     <Content Include="imgs\backgrounds\landingpage-AHAYOU_02.png" />
@@ -413,15 +420,18 @@
     <Content Include="imgs\etc\electronics.png" />
     <Content Include="imgs\flags\eeuu.png" />
     <Content Include="imgs\flags\spain.png" />
+    <Content Include="imgs\logos\Cobra-Kai-logo.png" />
     <Content Include="imgs\logos\facebook.svg" />
     <Content Include="imgs\logos\Instagram.svg" />
     <Content Include="imgs\logos\LINKEDIN.svg" />
+    <Content Include="imgs\logos\linkedln.svg" />
     <Content Include="imgs\logos\logo-ahayou-2.png" />
     <Content Include="imgs\logos\logo-ahayou.png" />
     <Content Include="imgs\logos\logo1.jpg" />
     <Content Include="imgs\logos\pwa_logo.png" />
     <Content Include="imgs\logos\whatsapp.svg" />
     <Content Include="imgs\logos\TWITTER.svg" />
+    <Content Include="imgs\logos\x.png" />
     <Content Include="imgs\rotator\El_día_que_murió_el_silencio_-_afiche_%28BC%29.jpg" />
     <Content Include="imgs\rotator\engaño.jpg" />
     <Content Include="imgs\rotator\rio.jpg" />
@@ -456,6 +466,13 @@
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="contenidos.aspx.cs">
+      <DependentUpon>contenidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenidos.aspx.designer.cs">
+      <DependentUpon>contenidos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

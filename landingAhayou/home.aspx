@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="css/plans.css" />
     <link rel="stylesheet" href="css/web-app-section.css" />
     <link rel="stylesheet" href="css/frequent-questions.css" />
+    <link rel="stylesheet" href="css/header-movies.css" />
+
+
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
     <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
 </head>
@@ -46,8 +49,8 @@
         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
         </asp:ObjectDataSource>
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
-       <header class="header">
-            <nav class="header__nav">
+       <header class="header" id="header__movies">
+            <nav class="header__nav" style="background-color:black">
                 <img class="header__logo" src="imgs/logos/logo-ahayou.png" alt="Logo Ahayou"/>
                 <div class="header__nav-buttons">
                     <button class="header__button header__button--text header__button--bg-orange">
@@ -75,7 +78,7 @@
                         <div class="arrow__border"></div>
                     </div>
                     <div class="header__list carousel__slides">
-                        <div class="header__item carousel__item active">
+                        <%--<div class="header__item carousel__item active" data-bg="/imgs/backgrounds/header-img.jpg">
                             <h2 class="header__title">
                                 <b>Streaming</b> con <b>Alma Boliviana</b>
                             </h2>
@@ -84,47 +87,47 @@
                                 estrenos m&aacute;s anticipados y tus
                                 cl&aacute;sicos favoritos
                             </p>
-                        </div>
-                        <div class="header__item carousel__item">
-                            <h2 class="header__title">
-                                <b>2Streaming</b> con <b>Alma Boliviana</b>
-                            </h2>
-                            <p class="header__description">
-                                Una experiencia mejorada no te pierdas los
-                                estrenos m&aacute;s anticipados y tus
-                                cl&aacute;sicos favoritos
-                            </p>
-                        </div>
-                        <div class="header__item carousel__item">
-                            <h2 class="header__title">
-                                <b>3Streaming</b> con <b>Alma Boliviana</b>
-                            </h2>
-                            <p class="header__description">
-                                Una experiencia mejorada no te pierdas los
-                                estrenos m&aacute;s anticipados y tus
-                                cl&aacute;sicos favoritos
-                            </p>
-                        </div>
-                        <div class="header__item carousel__item">
-                            <h2 class="header__title">
-                                <b>4Streaming</b> con <b>Alma Boliviana</b>
-                            </h2>
-                            <p class="header__description">
-                                Una experiencia mejorada no te pierdas los
-                                estrenos m&aacute;s anticipados y tus
-                                cl&aacute;sicos favoritos
-                            </p>
-                        </div>
-                        <div class="header__item carousel__item">
-                            <h2 class="header__title">
-                                <b>5Streaming</b> con <b>Alma Boliviana</b>
-                            </h2>
-                            <p class="header__description">
-                                Una experiencia mejorada no te pierdas los
-                                estrenos m&aacute;s anticipados y tus
-                                cl&aacute;sicos favoritos
-                            </p>
-                        </div>
+                        </div>--%>
+                         <asp:Repeater ID="Repeater6" DataSourceID="odsRotador1" OnItemDataBound="Repeater6_ItemDataBound" runat="server">
+	                        <ItemTemplate>
+                             <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
+                                <asp:Panel ID="panel_banner" runat="server">
+                                     <div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>
+                                         <h2 class="header__title">
+                                             <b>Streaming</b> con <b>Alma Boliviana</b>
+                                         </h2>
+                                         <p class="header__description">
+                                             Una experiencia mejorada no te pierdas los
+                                             estrenos m&aacute;s anticipados y tus
+                                             cl&aacute;sicos favoritos
+                                         </p>
+                                     </div>
+                                </asp:Panel>
+                                <asp:Panel ID="panel_pelicula" runat="server">
+                                    <div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'>
+                                      <div class="movie__container">
+                                          <span class="movie__format"><%# Eval("formato_contenido") %></span>
+                                          <img
+                                              src=' <%# Eval("nombre") %>'
+                                              alt='<%# Eval("nombre_contenido") %>'
+                                              class="movie__image"
+                                          />
+                                          <span class="movie__detail-1">
+                                              <%# Eval("detalle1") %>
+                                          </span>
+                                          <span class="movie__detail-2">
+                                             <%# Eval("detalle2") %>
+                                          </span>
+                                          <p class="movie__description">
+                                              <%# Eval("resumen") %>
+                                          </p>
+                                          <span class="movie__gender"><%# Eval("genero") %></span>
+                                      </div>
+                                  </div>
+                                </asp:Panel>
+                              
+	                        </ItemTemplate>
+                     </asp:Repeater>
                     </div>
                     <div class="arrow__container carousel__arrow--next">
                         <div class="arrow absolute"></div>
