@@ -15,10 +15,20 @@
     border: 1px solid transparent;
     background: linear-gradient(to bottom right, var(--color-white), #000)
         border-box;
+
     -webkit-mask: linear-gradient(var(--color-white) 0 0) padding-box,
         linear-gradient(var(--color-white) 0 0);
     mask: linear-gradient(var(--color-white) 0 0) padding-box,
         linear-gradient(var(--color-white) 0 0);
+
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
+
+    -moz-mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    -moz-mask-composite: exclude;
+
+    -ms-mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    -ms-mask-composite: exclude;
 }

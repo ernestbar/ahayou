@@ -29,8 +29,18 @@
     <link rel="stylesheet" href="css/frequent-questions.css" />
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
     <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
+    <style>
+        .contenedor {
+                      display:block;
+                      width: 100vw;
+                      height: 100vh;
+                      justify-content: center;
+                      align-items: center;
+                      color:black;
+                    }
+    </style>
 </head>
-<body style="background-color:black">
+<body>
     <form id="form1" runat="server">
         <asp:ObjectDataSource ID="odsRotador1" runat="server" SelectMethod="PR_STR_GET_BANNER_PRINCIPAL" TypeName="WebAhayouAdmin.Clases.Contenidos">
         </asp:ObjectDataSource>
@@ -47,7 +57,7 @@
             </SelectParameters>
         </asp:ObjectDataSource>
         <asp:Label ID="lblContenido" runat="server" Visible="false" Text="privacidad"></asp:Label>
-            <nav class="header__nav">
+            <nav class="header__nav" style="background-color:black">
                 <img class="header__logo" src="imgs/logos/logo-ahayou.png" alt="Logo Ahayou"/>
                 <div class="header__nav-buttons">
                     <button class="header__button header__button--text header__button--bg-orange">
@@ -60,7 +70,10 @@
                            </nav>
            <asp:Repeater ID="Repeater3" DataSourceID="odsContenidos" runat="server">
            <ItemTemplate>
-                <%# Eval("contenido") %>
+               <div  class="contenedor" >
+                   <p><%# Eval("contenido") %></p>
+               </div>
+                
                
            </ItemTemplate>
          </asp:Repeater>

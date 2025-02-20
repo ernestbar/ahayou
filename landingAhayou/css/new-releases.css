@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px 0;
+    overflow: hidden;
 }
 
 .new-releases__title {
@@ -51,6 +52,7 @@
     justify-content: center;
     align-items: center;
     height: 480px;
+    overflow: hidden;
     width: 100%;
     transition: transform 0.3s ease;
 }
@@ -85,6 +87,7 @@
 .new-releases__item > div {
     margin-top: 10px;
     width: 100%;
+    height: 15%;
 }
 
 .new-releases__item > div > h3 {
@@ -98,8 +101,99 @@
     word-wrap: break-word;
 }
 
-/* @media(max-width:400px){
+/* RESPONSIVE HEIGHT */
+
+@media (max-height: 768px) {
     .new-releases__item {
-        width: 120px;
+        height: 440px;
     }
-} */
+}
+
+@media (max-height: 700px) {
+    .new-releases__item {
+        height: 400px;
+    }
+}
+
+@media (max-height: 640px) {
+    .new-releases__item {
+        height: 360px;
+    }
+
+    .new-releases__item > div {
+        margin-top: 0;
+    }
+
+    .new-releases__item > img {
+        object-fit: fill;
+    }
+}
+
+@media (max-height: 600px) {
+    .new-releases__item {
+        height: 320px;
+    }
+}
+
+@media (max-height: 560px) {
+    .new-releases__item > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .new-releases__item {
+        height: 280px;
+    }
+}
+
+@media (max-height: 520px) {
+    .new-releases__item {
+        height: 240px;
+    }
+}
+
+@media (max-height: 480px) {
+    .new-releases__item {
+        height: 200px;
+    }
+}
+
+@media (max-height: 440px) {
+    .new-releases__item {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .new-releases__item > div {
+        flex-direction: column;
+    }
+
+    .new-releases__item > img {
+        height: 100%;
+    }
+}
+
+@media (max-height: 400px) {
+    .new-releases__item {
+        height: 160px;
+    }
+
+    .new-releases__item > img {
+        object-fit: cover;
+    }
+}
+
+@media (max-height: 360px) {
+    .new-releases__item {
+        height: 120px;
+    }
+}
+
+@media (max-height: 320px) {
+    .new-releases__title {
+        letter-spacing: -2.5px;
+    }
+}

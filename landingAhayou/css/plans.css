@@ -8,6 +8,7 @@
     height: 100vh;
     width: 100%;
     display: flex;
+    overflow: hidden;
     flex-direction: row;
 }
 
@@ -167,11 +168,21 @@
     border: 1px solid transparent;
     background: linear-gradient(to bottom right, var(--color-white), #000)
         border-box;
+
     -webkit-mask: linear-gradient(var(--color-white) 0 0) padding-box,
         linear-gradient(var(--color-white) 0 0);
+    -webkit-mask-composite: destination-out;
+
+    -moz-mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    -moz-mask-composite: exclude;
+
+    -ms-mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    -ms-mask-composite: exclude;
+
     mask: linear-gradient(var(--color-white) 0 0) padding-box,
         linear-gradient(var(--color-white) 0 0);
-    -webkit-mask-composite: destination-out;
     mask-composite: exclude;
 }
 
@@ -216,9 +227,21 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (max-height: 460px) {
     .plans__title {
         font-size: 5em;
+    }
+}
+
+@media (max-width: 992px) and (max-height: 860px) and (min-height: 525px) {
+    .plans__list {
+        margin: 0 25px;
+        justify-content: start;
+        overflow-y: auto;
+    }
+
+    .plans__list::-webkit-scrollbar-track{
+        background-color: transparent;
     }
 }
 
@@ -268,7 +291,9 @@
         width: 100%;
         padding: 0 10px;
     }
+}
 
+@media (max-width: 576px), (max-height: 640px) {
     .plans__item-title {
         font-size: 1.5em;
     }
@@ -308,5 +333,139 @@
 @media (max-width: 370px) {
     .plans__item-price > div {
         right: 15px;
+    }
+}
+
+/* RESPONSIVE HEIGHT */
+
+@media (max-height: 680px) {
+    .plans__list {
+        gap: 15px;
+    }
+}
+
+@media (max-height: 640px) {
+    .plans__item-content {
+        gap: 15px;
+    }
+
+    .plans__item-price > div {
+        width: 125px;
+        height: 125px;
+    }
+
+    .price__description:first-of-type {
+        position: relative;
+        left: 10px;
+    }
+
+    .bs {
+        font-size: 1em;
+        top: 2.5px;
+        left: 2.5px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-height: 580px) {
+    .plans__item-price > div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bs {
+        top: 2px;
+        left: 2px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .price__number {
+        font-size: 3em;
+    }
+
+    .price__description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-height: 560px) {
+    .plans__title {
+        font-size: 4em;
+    }
+}
+
+@media (max-height: 525px) {
+    .plans {
+        flex-direction: column;
+    }
+
+    .plans__list {
+        flex-direction: row;
+        width: 100%;
+        margin: 0 15px;
+        display: flex;
+    }
+
+    .plans__item {
+        height: 100%;
+        min-width: 300px;
+        max-width: 350px;
+        width: auto;
+    }
+
+    .plans__item-price > div {
+        right: 25px;
+    }
+
+    .plans__item-price {
+        height: 100%;
+    }
+
+    .plans__title {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-height: 525px) and (max-width: 1000px) {
+    .plans__list {
+        float: left;
+        justify-content: start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+    }
+
+    .plans__item {
+        width: auto;
+    }
+}
+
+.plans__list::-webkit-scrollbar {
+    height: 10px;
+}
+
+@media (max-height: 340px) {
+    .plans__title {
+        font-size: 3em;
+        letter-spacing: -2.5px;
+    }
+
+    .plans__list {
+        padding: 0;
+    }
+}
+
+@media (max-height: 300px) {
+    .plans__title {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-height: 220px) {
+    .plans__title {
+        font-size: 2em;
     }
 }

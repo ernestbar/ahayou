@@ -24,11 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (bgImage) {
                 if (index !== 0) {
                     header.style.background = `radial-gradient(circle at right, rgba(0, 0, 0, 0) 20%, #000 80%), url(${bgImage}) center/cover no-repeat`;
-                    header.style.backgroundSize = "cover";
                     header.style.backgroundPosition = "top";
                 } else {
                     header.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, #000000a0 75%,#000000f6 95%), url('${bgImage}')`;
-                    header.style.backgroundSize = "100% 100%";
                     header.style.backgroundPosition = "center";
                 }
             }

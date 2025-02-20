@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 
 .frequent-questions__title {
@@ -128,21 +129,11 @@ details[open] .arrow {
     }
 
     .frequent-questions__image {
-        top: 380px;
-        position: absolute;
-        width: 374px;
-        height: 210px;
-        padding: 0;
+        display: none;
     }
 
     .frequent-questions__item {
-        padding: 10px 10px 10px 10px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .frequent-questions__image {
-        top: 400px;
+        padding: 10px;
     }
 }
 
@@ -152,13 +143,7 @@ details[open] .arrow {
     }
 }
 
-@media (max-width: 600px) {
-    .frequent-questions__image {
-        top: 375px;
-        width: 324px;
-        height: 150px;
-    }
-
+@media (max-width: 600px), (max-height: 640px) {
     .frequent-questions__item > details > summary {
         font-size: 1.5em;
     }
@@ -172,19 +157,7 @@ details[open] .arrow {
     }
 }
 
-@media (max-width: 570px) {
-    .frequent-questions__image {
-        top: 350px;
-    }
-}
-
 @media (max-width: 480px) {
-    .frequent-questions__image {
-        top: 380px;
-        width: 224px;
-        height: 50px;
-    }
-
     .frequent-questions__item > details > summary {
         font-size: 1.25em;
     }
@@ -194,8 +167,61 @@ details[open] .arrow {
     }
 }
 
-@media (max-width: 340px) {
-    .frequent-questions__image {
-        display: none;
+/* RESPONSIVE HEIGHT */
+
+@media (max-height: 640px) {
+    .frequent-questions__item > details {
+        gap: 10px;
+    }
+}
+
+@media (max-height: 430px) {
+    .frequent-questions__content {
+        height: 250px;
+    }
+
+    .frequent-questions__list {
+        justify-content: start;
+        overflow-y: auto;
+        margin-right: 5px;
+    }
+
+    .frequent-questions__list::-webkit-scrollbar {
+        width: 7.5px;
+    }
+}
+
+@media (max-height: 360px) {
+    .frequent-questions__content {
+        height: 200px;
+    }
+}
+
+@media (max-height: 340px) {
+    .frequent-questions__title {
+        letter-spacing: -3px;
+    }
+
+    .frequent-questions__content {
+        height: 150px;
+    }
+}
+
+@media (max-height: 300px) {
+    .frequent-questions__title {
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-height: 270px) {
+    .frequent-questions__content {
+        height: 100px;
+        padding: 15px 25px;
+    }
+}
+
+@media (max-height: 220px) {
+    .frequent-questions__title {
+        letter-spacing: -2px;
     }
 }

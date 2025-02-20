@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const end = start + itemsPerPage;
 
             for (let i = start; i < end && i < items.length; i++) {
-                items[i].style.display = "block";
+                items[i].style.display = "flex";
             }
 
             prevButton.disabled = currentPage === 0;

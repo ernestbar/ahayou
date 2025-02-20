@@ -45,3 +45,41 @@
     font-size: 1.25em;
     font-weight: 500;
 }
+
+@media (max-width: 768px) {
+    .movie__container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .movie__detail-2 {
+        font-size: 1.25em;
+    }
+
+    .movie__description {
+        font-size: 1.1em;
+    }
+
+    .movie__detail-1,
+    .movie__gender,
+    .movie__format {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 350px) {
+    .movie__detail-2 {
+        font-size: 1.15em;
+    }
+
+    .movie__description {
+        font-size: 1em;
+    }
+
+    .movie__detail-1,
+    .movie__gender,
+    .movie__format {
+        font-size: 0.9em;
+    }
+}

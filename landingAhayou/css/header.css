@@ -3,11 +3,6 @@
 .header {
     height: 100vh;
     width: 100%;
-    /* background: radial-gradient(circle at right, rgba(0, 0, 0, 0) 20%, black 80%),
-        url("../imgs/backgrounds/cobra-kai.jpeg") center/cover no-repeat; */
-    /* background-size: cover; */
-    /* background-position: top; */
-    /* background-repeat: no-repeat; */
     background: linear-gradient(
             to bottom,
             transparent 0%,
@@ -17,9 +12,10 @@
         url("../imgs/backgrounds/header-img.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 4fr auto;
+    overflow: hidden;
 }
 
 .header__nav {
@@ -29,7 +25,8 @@
     align-items: center;
     padding: 24px 200px;
     width: 100%;
-    gap: 0 20px;
+    grid-row: 1;
+    gap: 0 50px;
 }
 
 .header__items-container {
@@ -37,8 +34,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex: 4;
     width: 100%;
+    gap: 75px;
+    grid-row: 2;
 }
 
 .header__main-content {
@@ -47,6 +45,7 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
+    height: 100%;
 }
 
 .header__list {
@@ -62,6 +61,7 @@
     display: none;
     width: 100%;
     padding: 10px;
+    height: 100%;
 }
 
 .header__item.active {
@@ -208,10 +208,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 3em;
-    padding: 24px 0;
     width: 100%;
-    flex: 1;
+    grid-row: 3;
 }
 
 .header__pag-button {
@@ -250,6 +250,10 @@
     .header {
         background-size: cover;
     }
+
+    .header__items-container {
+        gap: 50px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -259,6 +263,12 @@
 
     .header__title {
         letter-spacing: -5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__items-container {
+        gap: 25px;
     }
 }
 
@@ -272,8 +282,9 @@
         height: 200px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        z-index: 1000;
+        z-index: 500;
         place-items: center;
+        grid-row: none;
     }
 
     .header__logo,
@@ -298,13 +309,27 @@
     }
 
     .header__items-container {
+        height: 70%;
         padding: 50px;
+        display: flex;
+    }
+
+    .header__pag-buttons {
+        height: 30%;
     }
 
     .header__main-content {
-        margin-top: 200px;
-        height: 100%;
+        position: relative;
+        margin-top: 150px;
+        height: 70%;
         justify-content: center;
+        gap: 0;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .header__item {
@@ -312,6 +337,7 @@
         align-items: center;
         height: 100%;
         position: relative;
+        padding: 0;
     }
 
     .header__title {
@@ -330,7 +356,9 @@
     .header__list {
         width: 100%;
     }
+}
 
+@media (max-width: 992px), (max-height: 600px) {
     .header__pag-button {
         font-size: 1.5em;
         letter-spacing: -2px;
@@ -361,11 +389,11 @@
     }
 
     .header__items-container {
-        padding: 35px;
+        gap: 35px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 600px) {
     .header__pag-buttons {
         gap: 1em;
     }
@@ -377,7 +405,7 @@
 
 @media (max-width: 550px) {
     .header__items-container {
-        padding: 15px;
+        gap: 20px;
     }
 
     .header__logo {
@@ -410,7 +438,7 @@
 
 @media (max-width: 420px) {
     .header__items-container {
-        padding: 5px;
+        gap: 10px;
     }
 
     .header__logo {
@@ -423,5 +451,146 @@
 
     .header__button--text {
         padding: 5px;
+    }
+}
+
+/* RESPONSIVE HEIGHT */
+
+/* @media (max-height: 768px) and (max-width: 615px) {
+    .header__title {
+        font-size: 6em;
+    }
+
+    .header__main-content {
+        gap: 15px;
+    }
+} */
+
+@media (max-height: 600px) {
+    .header__title {
+        font-size: 4em;
+        letter-spacing: -5px;
+    }
+
+    .header__main-content {
+        gap: 5px;
+    }
+
+    .header__main-content {
+        width: 100%;
+    }
+
+    .header__items-container {
+        height: 100%;
+        padding: 0;
+    }
+
+    .header__item {
+        position: relative;
+        height: 100%;
+    }
+
+    .header__description {
+        width: 100%;
+        font-size: 1em;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (max-height: 300px) and (min-width: 992px) {
+    .header__title {
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-height: 450px) {
+    .header__title {
+        font-size: 3em;
+    }
+
+    .header__pag-button {
+        font-size: 1.25em;
+        letter-spacing: -2px;
+    }
+
+    .selected,
+    .header__pag-button:hover {
+        font-size: 1.75em;
+    }
+}
+
+@media (max-height: 300px) {
+    .header__title {
+        font-size: 2.5em;
+    }
+
+    .header__pag-button {
+        font-size: 1em;
+        letter-spacing: -2px;
+    }
+
+    .selected,
+    .header__pag-button:hover {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-height: 220px) {
+    .header__title {
+        font-size: 2em;
+    }
+}
+
+@media (max-height: 540px) {
+    .header__nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        height: 75px;
+        padding: 15px;
+        gap: 0 15px;
+    }
+
+    .header__logo {
+        grid-column: 1;
+        grid-row: 1;
+        object-fit: contain;
+    }
+
+    .header__nav-buttons:first-of-type {
+        grid-column: 2;
+        width: 100%;
+        grid-row: 1;
+    }
+
+    .header__nav-buttons:nth-of-type(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 990px) and (max-height: 450px) {
+    .header__main-content {
+        margin-top: 75px;
+    }
+}
+
+@media (max-height: 420px) {
+    .header__items-container {
+        padding: 0 25px;
+    }
+}
+
+@media (max-height: 360px) {
+    .header__nav {
+        height: 60px;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 990px) and (max-height: 290px) {
+    .header__main-content {
+        margin-top: 50px;
     }
 }

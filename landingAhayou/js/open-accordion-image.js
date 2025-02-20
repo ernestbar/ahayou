@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const details = document.querySelectorAll(".frequent-questions-detail");
+    const details = document.querySelectorAll(".frequent-questions__detail");
     const img = document.getElementById("frequentQuestionsImg");
 
     function checkDetailsState() {

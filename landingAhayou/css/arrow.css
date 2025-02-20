@@ -74,7 +74,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px), (max-height: 300px) {
     .arrow__border {
         width: 24px;
         height: 24px;
@@ -83,6 +83,22 @@
     .arrow {
         width: 20px;
         height: 20px;
+    }
+
+    .arrow--rotate {
+        transform: translate(0, -50%) rotate(180deg);
+    }
+}
+
+@media (max-height: 680px) {
+    .arrow__border {
+        width: 32px;
+        height: 32px;
+    }
+
+    .arrow {
+        width: 28px;
+        height: 28px;
     }
 
     .arrow--rotate {
