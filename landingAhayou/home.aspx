@@ -311,7 +311,7 @@
                             <div class="social-media">
                                  <asp:Repeater ID="Repeater5" DataSourceID="odsRedesSociales" runat="server">
 	                                    <ItemTemplate>
-                                             <a href="<%# Eval("url") + ",_blank" %>" class="social-media__link">
+                                             <a href="<%# Eval("url") %>"  target="_blank" class="social-media__link">
                                                  <img
                                                      src='<%# "imgs/logos/" + Eval("red_social") + ".svg" %>'
                                                      alt='<%# Eval("red_social") %>'
