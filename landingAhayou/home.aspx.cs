@@ -25,17 +25,17 @@ namespace WebAhayouAdmin
             if (e.Item.ItemType == ListItemType.Item ||
                 e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                Label id = (Label)e.Item.FindControl("lblIdNumero");
-                if (id.Text == "01")
-                {
-                    string javaScript = "document.getElementById('" + id.Text + "').class = 'header__pag-button carousel__button selected'";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
-                }
-                else
-                {
-                    string javaScript = "document.getElementById('" + id.Text + "').class = 'header__pag-button carousel__button'";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
-                }
+                //Label id = (Label)e.Item.FindControl("lblIdNumero");
+                //if (id.Text == "01")
+                //{
+                //    string javaScript = "document.getElementById('" + id.Text + "').class = 'header__pag-button carousel__button selected'";
+                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
+                //}
+                //else
+                //{
+                //    string javaScript = "document.getElementById('" + id.Text + "').class = 'header__pag-button carousel__button'";
+                //    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
+                //}
 
             }
         }
@@ -52,6 +52,10 @@ namespace WebAhayouAdmin
                 {
                     panel1.Visible = true;
                     panel2.Visible = false;
+
+                        string javaScript = "document.getElementById('" + panel1.ClientID + "').class = 'header__pag-button carousel__button selected'";
+                       ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
+
                 }
                 else
                 {

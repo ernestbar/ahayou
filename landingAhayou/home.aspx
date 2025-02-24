@@ -19,15 +19,16 @@
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/containers.css" />
-    <link rel="stylesheet" href="css/arrow.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/new-releases.css" />
-    <link rel="stylesheet" href="css/plans.css" />
-    <link rel="stylesheet" href="css/web-app-section.css" />
-    <link rel="stylesheet" href="css/frequent-questions.css" />
-    <link rel="stylesheet" href="css/header-movies.css" />
+     <link rel="stylesheet" href="css/main.css" />
+     <link rel="stylesheet" href="css/containers.css" />
+     <link rel="stylesheet" href="css/arrow.css" />
+     <link rel="stylesheet" href="css/header.css" />
+     <link rel="stylesheet" href="css/new-releases.css" />
+     <link rel="stylesheet" href="css/plans.css" />
+     <link rel="stylesheet" href="css/web-app-section.css" />
+     <link rel="stylesheet" href="css/footer.css" />
+     <link rel="stylesheet" href="css/frequent-questions.css" />
+     <link rel="stylesheet" href="css/header-movies.css" />
 
 
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
@@ -49,14 +50,24 @@
         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
         </asp:ObjectDataSource>
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
-       <header class="header" id="header__movies">
-            <nav class="header__nav" style="background-color:black">
-                <img class="header__logo" src="imgs/logos/logo-ahayou.png" alt="Logo Ahayou"/>
+        <header class="header" id="header__movies">
+            <nav class="header__nav">
+                <a href="home.aspx" class="header__logo">
+                    <img
+                        class="header__logo-img"
+                        src="imgs/logos/logo-ahayou.png"
+                        alt="Logo Ahayou"
+                    />
+                </a>
                 <div class="header__nav-buttons">
-                    <button class="header__button header__button--text header__button--bg-orange">
+                    <button
+                        class="header__button header__button--text header__button--bg-orange"
+                    >
                         Suscr&iacute;bete
                     </button>
-                    <button class="header__button header__button--text header__button--bg-green">
+                    <button
+                        class="header__button header__button--text header__button--bg-green"
+                    >
                         Iniciar Sesi&oacute;n
                     </button>
                 </div>
@@ -73,81 +84,74 @@
             </nav>
             <section class="header__main-content carousel">
                 <div class="header__items-container">
-                    <div class="arrow__container arrow--rotate carousel__arrow--prev">
+                    <div
+                        class="arrow__container arrow--rotate carousel__arrow--prev"
+                    >
                         <div class="arrow absolute"></div>
                         <div class="arrow__border"></div>
                     </div>
                     <div class="header__list carousel__slides">
-                        <%--<div class="header__item carousel__item active" data-bg="/imgs/backgrounds/header-img.jpg">
-                            <h2 class="header__title">
-                                <b>Streaming</b> con <b>Alma Boliviana</b>
-                            </h2>
-                            <p class="header__description">
-                                Una experiencia mejorada no te pierdas los
-                                estrenos m&aacute;s anticipados y tus
-                                cl&aacute;sicos favoritos
-                            </p>
-                        </div>--%>
-                         <asp:Repeater ID="Repeater6" DataSourceID="odsRotador1" OnItemDataBound="Repeater6_ItemDataBound" runat="server">
-	                        <ItemTemplate>
-                             <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
-                                <asp:Panel ID="panel_banner" runat="server">
-                                     <div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>
-                                         <h2 class="header__title">
-                                             <b>Streaming</b> con <b>Alma Boliviana</b>
-                                         </h2>
-                                         <p class="header__description">
-                                             Una experiencia mejorada no te pierdas los
-                                             estrenos m&aacute;s anticipados y tus
-                                             cl&aacute;sicos favoritos
-                                         </p>
-                                     </div>
-                                </asp:Panel>
-                                <asp:Panel ID="panel_pelicula" runat="server">
-                                    <div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'>
-                                      <div class="movie__container">
-                                          <span class="movie__format"><%# Eval("formato_contenido") %></span>
-                                          <img
-                                              src=' <%# Eval("nombre") %>'
-                                              alt='<%# Eval("nombre_contenido") %>'
-                                              class="movie__image"
-                                          />
-                                          <span class="movie__detail-1">
-                                              <%# Eval("detalle1") %>
-                                          </span>
-                                          <span class="movie__detail-2">
-                                             <%# Eval("detalle2") %>
-                                          </span>
-                                          <p class="movie__description">
-                                              <%# Eval("resumen") %>
-                                          </p>
-                                          <span class="movie__gender"><%# Eval("genero") %></span>
-                                      </div>
-                                  </div>
-                                </asp:Panel>
-                              
-	                        </ItemTemplate>
-                     </asp:Repeater>
-                    </div>
+                         
+                            <asp:Repeater ID="Repeater6" DataSourceID="odsRotador1" OnItemDataBound="Repeater6_ItemDataBound" runat="server">
+                               <ItemTemplate>
+                                <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
+                                   <asp:Panel ID="panel_banner" runat="server">
+                                       <div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>
+                                            <h2 class="header__title">
+                                                <b>Streaming</b> con <b>Alma Boliviana</b>
+                                            </h2><br /><br /><br />
+                                            <p class="header__description">
+                                                Una experiencia mejorada no te pierdas los
+                                                estrenos m&aacute;s anticipados y tus
+                                                cl&aacute;sicos favoritos
+                                            </p>
+                                        </div>
+                                   </asp:Panel>
+                                   <asp:Panel ID="panel_pelicula"  Visible="false" runat="server">
+                                        <div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'>
+                                         <div class="movie__container">
+                                             <span class="movie__format"><%# Eval("formato_contenido") %></span>
+                                             <img
+                                                 src=' <%# Eval("nombre") %>'
+                                                 alt='<%# Eval("nombre_contenido") %>'
+                                                 class="movie__image"
+                                             />
+                                             <span class="movie__detail-1">
+                                                 <%# Eval("detalle1") %>
+                                             </span>
+                                             <span class="movie__detail-2">
+                                                <%# Eval("detalle2") %>
+                                             </span>
+                                             <p class="movie__description">
+                                                 <%# Eval("resumen") %>
+                                             </p>
+                                             <span class="movie__gender"><%# Eval("genero") %></span>
+                                         </div>
+                                            </div>
+                                   </asp:Panel>
+         
+                               </ItemTemplate>
+                        </asp:Repeater>
+                             </div>
                     <div class="arrow__container carousel__arrow--next">
                         <div class="arrow absolute"></div>
                         <div class="arrow__border"></div>
                     </div>
-                </div>
+                    </div>
                 <div class="header__pag-buttons">
-                <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
-				    <ItemTemplate>
-                        <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
-                         <button id=' <%# Eval("Numero") %>' class="header__pag-button carousel__button">
-                        <%--<button class='<%# "header__pag-button carousel__button " + Eval("Numero").ToString().Replace("01","selected") %>'>--%>
-                             <%# Eval("Numero") %>
-                         </button>
-				    </ItemTemplate>
-                </asp:Repeater>
- 
+                    <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
+	                    <ItemTemplate>
+                         <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
+                          <button id=' <%# Eval("Numero") %>' class="header__pag-button carousel__button">
+                         <%--<button class='<%# "header__pag-button carousel__button " + Eval("Numero").ToString().Replace("01","selected") %>'>--%>
+                              <%# Eval("Numero") %>
+                          </button>
+	                    </ItemTemplate>
+                 </asp:Repeater>
                 </div>
             </section>
         </header>
+      
         <main>
             <section class="new-releases carousel">
                 <h2 class="new-releases__title">
@@ -216,7 +220,7 @@
                      </asp:Repeater>
                 </div>
             </section>
-            <section class="frequent-questions">
+            <section class="frequent-questions" id="frequent-questions">>
                 <h2 class="frequent-questions__title">
                     <span>Preguntas</span>&nbsp;<span>frecuentes</span>
                 </h2>
@@ -291,8 +295,8 @@
                 <div class="footer__content">
                     <div class="footer__list">
                         <div class="footer__list-item">
-                            <a href="#">Preguntas frecuentes</a>
-                            <a href="#">Privacidad</a>
+                            <a href="#frequent-questions">Preguntas frecuentes</a>
+                            <a href="privacidad.aspx" target="_blank">Privacidad</a>
                         </div>
                         <div class="footer__list-item">
                             <a href="#">Centro de Ayuda</a>
@@ -321,41 +325,7 @@
  
 	                                    </ItemTemplate>
                                  </asp:Repeater>
-                                <%--<a href="#" class="social-media__link">
-                                    <img
-                                        src="imgs/logos/facebook.svg"
-                                        alt="Facebook"
-                                        class="social-media__img"
-                                    />
-                                </a>
-                                <a href="#" class="social-media__link">
-                                    <img
-                                        src="imgs/logos/x.png"
-                                        alt="X"
-                                        class="social-media__img"
-                                    />
-                                </a>
-                                <a href="#" class="social-media__link">
-                                    <img
-                                        src="imgs/logos/Instagram.svg"
-                                        alt="Instagram"
-                                        class="social-media__img"
-                                    />
-                                </a>
-                                <a href="#" class="social-media__link">
-                                    <img
-                                        src="imgs/logos/linkedln.svg"
-                                        alt="Linkedln"
-                                        class="social-media__img"
-                                    />
-                                </a>
-                                <a href="#" class="social-media__link">
-                                    <img
-                                        src="imgs/logos/whatsapp.svg"
-                                        alt="Whatsapp"
-                                        class="social-media__img"
-                                    />
-                                </a>--%>
+                               
                             </div>
                         </div>
                         <div class="footer__copyright">
@@ -370,7 +340,6 @@
        <script src="js/carousel.js"></script>
         <script src="js/carousel-new-releases.js"></script>
         <script src="js/web-app-title.js"></script>
-        <script src="js/open-accordion-image.js"></script>
     </form>
 </body>
 </html>

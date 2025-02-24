@@ -6,7 +6,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 50px;
     align-items: center;
     overflow: hidden;
 }
@@ -52,6 +53,7 @@
 .frequent-questions__image > img {
     width: 100%;
     height: auto;
+    max-height: 100%;
     object-fit: contain;
 }
 
@@ -119,7 +121,7 @@ details[open] .arrow {
 
 @media (max-width: 1280px) {
     .frequent-questions {
-        justify-content: center;
+        gap: 25px;
     }
 
     .frequent-questions__content {
@@ -144,6 +146,10 @@ details[open] .arrow {
 }
 
 @media (max-width: 600px), (max-height: 640px) {
+    .frequent-questions {
+        gap: 15px;
+    }
+
     .frequent-questions__item > details > summary {
         font-size: 1.5em;
     }

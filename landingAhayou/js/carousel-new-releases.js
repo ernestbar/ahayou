@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function updateItemsPerPage() {
             const screenWidth = window.innerWidth;
-            if (screenWidth >= 1600) {
+            if (screenWidth >= 1680) {
                 itemsPerPage = 4;
-            } else if (screenWidth >= 1300) {
+            } else if (screenWidth >= 1380) {
                 itemsPerPage = 3;
-            } else if (screenWidth >= 800) {
+            } else if (screenWidth >= 880) {
                 itemsPerPage = 2;
             } else {
                 itemsPerPage = 1;

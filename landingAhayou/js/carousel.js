@@ -25,20 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (index !== 0) {
                     header.style.background = `radial-gradient(circle at right, rgba(0, 0, 0, 0) 20%, #000 80%), url(${bgImage}) center/cover no-repeat`;
                     header.style.backgroundPosition = "top";
+                    header.style.objectFit = "fill";
                 } else {
                     header.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, #000000a0 75%,#000000f6 95%), url('${bgImage}')`;
                     header.style.backgroundPosition = "center";
+                    header.style.objectFit = "cover";
                 }
             }
 
             currentIndex = index;
         }
-
-        buttons.forEach((button, i) => {
-            button.addEventListener("click", () => {
-                showSlide(i);
-            });
-        });
 
         prevArrow.addEventListener("click", () => {
             let newIndex = (currentIndex - 1 + slides.length) % slides.length;

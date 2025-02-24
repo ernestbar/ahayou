@@ -75,13 +75,14 @@
     <Content Include="contenidos.aspx" />
     <Content Include="css\arrow.css" />
     <Content Include="css\containers.css" />
+    <Content Include="css\footer.css" />
     <Content Include="css\frequent-questions.css" />
     <Content Include="css\header-movies.css" />
     <Content Include="css\header.css" />
     <Content Include="css\main.css" />
     <Content Include="css\new-releases.css" />
     <Content Include="css\plans.css" />
-    <Content Include="css\style.css" />
+    <Content Include="css\privacy.css" />
     <Content Include="css\web-app-section.css" />
     <Content Include="fotos_peliculas\0\banner_principal.png" />
     <Content Include="fotos_peliculas\0\header-img.jpg" />
@@ -452,13 +453,12 @@
     <Content Include="index.html" />
     <Content Include="js\carousel-new-releases.js" />
     <Content Include="js\carousel.js" />
-    <Content Include="js\konami.js" />
-    <Content Include="js\main.js" />
+    <Content Include="js\footer-visited-color.js" />
     <Content Include="js\open-accordion-image.js" />
-    <Content Include="js\pwacompat.min.js" />
-    <Content Include="js\scripts.js" />
     <Content Include="js\web-app-title.js" />
     <Content Include="Logs\Readme.txt" />
+    <Content Include="privacidad.aspx" />
+    <Content Include="privacy.html" />
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -479,6 +479,13 @@
     </Compile>
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacidad.aspx.cs">
+      <DependentUpon>privacidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacidad.aspx.designer.cs">
+      <DependentUpon>privacidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,0 +1,132 @@
+@import url("main.css");
+
+.header {
+    background: none;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(
+        to bottom,
+        #393c3e 0%,
+        #393c3e 5%,
+        #e4f1f2 30%,
+        #e4f1f2 40%,
+        #e6e6e6 50%,
+        var(--color-white) 80%,
+        var(--color-white) 100%
+    );
+}
+
+.information {
+    width: 100%;
+    padding: 0 100px;
+}
+
+.information__article {
+    margin-top: 100px;
+    margin-right: 0;
+    margin-bottom: 100px;
+    margin-left: 30%;
+}
+
+.information__title {
+    color: var(--color-primary);
+    font-size: 3em;
+}
+
+.information__paragraphs > p,
+.information__paragraphs > li {
+    color: #000;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.information__content {
+    margin-top: 20px;
+}
+
+.information__content,
+.information__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.information__paragraphs--points {
+    list-style: none;
+}
+
+.information__paragraphs--points > li {
+    text-indent: 2em;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-bottom: 24px;
+    margin: 0 auto;
+}
+
+.footer--black * {
+    color: #000;
+    font-weight: 400;
+}
+
+.footer__data {
+    border-top: 1px solid #000;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .information__article {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 992px) and (min-height: 768px) {
+    .information__article {
+        margin-top: 200px;
+    }
+}
+
+@media (max-height: 360px) {
+    .information__article {
+        margin-top: 50px;
+    }
+}
+
+@media (max-height: 200px) {
+    .information__article {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .information__title {
+        font-size: 2em;
+    }
+
+    .information {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .information {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    .information__title {
+        font-size: 1.5em;
+    }
+}
+
+/* @media (max-width: 1024px) and (max-height: 500px) {
+    .information__article {
+        margin-top: 50px;
+    }
+} */
