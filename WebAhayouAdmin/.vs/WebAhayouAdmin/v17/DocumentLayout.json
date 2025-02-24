@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\contenidos_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:contenidos_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\reporte_suscriptores_no_renovados.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:reporte_suscriptores_no_renovados.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\contenidos_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:contenidos_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\reporte_suscriptores_no_renovados.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:reporte_suscriptores_no_renovados.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\avatares_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:avatares_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\reporte_suscripciones_periodo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:reporte_suscripciones_periodo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\clases\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\reporte_suscripciones_periodo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:reporte_suscripciones_periodo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\reporte_suscripciones_pagos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:reporte_suscripciones_pagos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -95,40 +107,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "contenidos_admin.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenidos_admin.aspx",
-              "RelativeDocumentMoniker": "contenidos_admin.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenidos_admin.aspx",
-              "RelativeToolTip": "contenidos_admin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-19T19:23:43.604Z",
+              "Title": "reporte_suscriptores_no_renovados.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscriptores_no_renovados.aspx.cs",
+              "RelativeDocumentMoniker": "reporte_suscriptores_no_renovados.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscriptores_no_renovados.aspx.cs",
+              "RelativeToolTip": "reporte_suscriptores_no_renovados.aspx.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowBQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:17:54.303Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "contenidos_admin.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenidos_admin.aspx.cs",
-              "RelativeDocumentMoniker": "contenidos_admin.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenidos_admin.aspx.cs",
-              "RelativeToolTip": "contenidos_admin.aspx.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAIwGUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T19:21:32.333Z",
+              "Title": "reporte_suscriptores_no_renovados.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscriptores_no_renovados.aspx",
+              "RelativeDocumentMoniker": "reporte_suscriptores_no_renovados.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscriptores_no_renovados.aspx",
+              "RelativeToolTip": "reporte_suscriptores_no_renovados.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-02-24T21:17:33.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "avatares_admin.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\avatares_admin.aspx",
-              "RelativeDocumentMoniker": "avatares_admin.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\avatares_admin.aspx",
-              "RelativeToolTip": "avatares_admin.aspx",
+              "Title": "reporte_suscripciones_periodo.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscripciones_periodo.aspx.cs",
+              "RelativeDocumentMoniker": "reporte_suscripciones_periodo.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscripciones_periodo.aspx.cs",
+              "RelativeToolTip": "reporte_suscripciones_periodo.aspx.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:07:24.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "reporte_suscripciones_periodo.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscripciones_periodo.aspx",
+              "RelativeDocumentMoniker": "reporte_suscripciones_periodo.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscripciones_periodo.aspx",
+              "RelativeToolTip": "reporte_suscripciones_periodo.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-02-17T21:21:13.216Z",
+              "WhenOpened": "2025-02-24T21:05:20.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "reporte_suscripciones_pagos.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscripciones_pagos.aspx.cs",
+              "RelativeDocumentMoniker": "reporte_suscripciones_pagos.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\reporte_suscripciones_pagos.aspx.cs",
+              "RelativeToolTip": "reporte_suscripciones_pagos.aspx.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:56:13.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Reportes.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Reportes.cs",
+              "RelativeDocumentMoniker": "Clases\\Reportes.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Reportes.cs",
+              "RelativeToolTip": "Clases\\Reportes.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:50:42.808Z",
               "EditorCaption": ""
             }
           ]

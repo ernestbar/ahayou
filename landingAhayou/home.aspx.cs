@@ -53,8 +53,8 @@ namespace WebAhayouAdmin
                     panel1.Visible = true;
                     panel2.Visible = false;
 
-                        string javaScript = "document.getElementById('" + panel1.ClientID + "').class = 'header__pag-button carousel__button selected'";
-                       ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
+                       // string javaScript = "document.getElementById('" + panel1.ClientID + "').class = 'header__pag-button carousel__button selected'";
+                       //ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
 
                 }
                 else

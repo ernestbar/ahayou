@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GITHUB\\ahayou\\landingAhayou\\",
+  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\landingAhayou\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\privacidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|E:\\ERNESTO\\ahayou\\landingAhayou\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|E:\\ERNESTO\\ahayou\\landingAhayou\\privacidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:privacidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,11 +98,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "home.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx.cs",
+              "RelativeDocumentMoniker": "home.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx.cs",
+              "RelativeToolTip": "home.aspx.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDgAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:50:20.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "privacidad.aspx",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\privacidad.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\privacidad.aspx",
               "RelativeDocumentMoniker": "privacidad.aspx",
-              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\privacidad.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\privacidad.aspx",
               "RelativeToolTip": "privacidad.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -107,11 +124,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\index.html",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\index.html",
               "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\index.html",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\index.html",
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAGMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
@@ -122,9 +139,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "home.aspx",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\home.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx",
               "RelativeDocumentMoniker": "home.aspx",
-              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\home.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx",
               "RelativeToolTip": "home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",

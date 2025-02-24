@@ -94,9 +94,9 @@
                          
                             <asp:Repeater ID="Repeater6" DataSourceID="odsRotador1" OnItemDataBound="Repeater6_ItemDataBound" runat="server">
                                <ItemTemplate>
-                                <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
-                                   <asp:Panel ID="panel_banner" runat="server">
-                                       <div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>
+                                <asp:Label ID="lblIdNumero"  runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
+                                   <asp:Panel ID="panel_banner" class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'  runat="server" >
+                                       <%--<div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>--%>
                                             <h2 class="header__title">
                                                 <b>Streaming</b> con <b>Alma Boliviana</b>
                                             </h2><br /><br /><br />
@@ -105,11 +105,11 @@
                                                 estrenos m&aacute;s anticipados y tus
                                                 cl&aacute;sicos favoritos
                                             </p>
-                                        </div>
+                                        <%--</div>--%>
                                    </asp:Panel>
-                                   <asp:Panel ID="panel_pelicula"  Visible="false" runat="server">
-                                        <div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'>
-                                         <div class="movie__container">
+                                   <asp:Panel ID="panel_pelicula" class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  Visible="false" runat="server" >
+                                        <%--<div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  >--%>
+                                         <div class="movie__container" >
                                              <span class="movie__format"><%# Eval("formato_contenido") %></span>
                                              <img
                                                  src=' <%# Eval("nombre") %>'
@@ -126,7 +126,7 @@
                                                  <%# Eval("resumen") %>
                                              </p>
                                              <span class="movie__gender"><%# Eval("genero") %></span>
-                                         </div>
+                                        <%-- </div>--%>
                                             </div>
                                    </asp:Panel>
          

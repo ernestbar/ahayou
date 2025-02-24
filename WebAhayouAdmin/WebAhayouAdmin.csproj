@@ -14106,6 +14106,13 @@
     <Content Include="productora_admin.aspx" />
     <Content Include="promociones_admin.aspx" />
     <Content Include="redes_sociales_admin.aspx" />
+    <Content Include="reporte_propietarios.aspx" />
+    <Content Include="reporte_registro_contenidos.aspx" />
+    <Content Include="reporte_suscripciones.aspx" />
+    <Content Include="reporte_suscripciones_pagos.aspx" />
+    <Content Include="reporte_suscripciones_periodo.aspx" />
+    <Content Include="reporte_suscriptores_no_renovados.aspx" />
+    <Content Include="reporte_vista_contenidos.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="suscriptores_admin.aspx" />
@@ -14140,6 +14147,7 @@
     <Compile Include="Clases\Productoras.cs" />
     <Compile Include="Clases\Promociones.cs" />
     <Compile Include="Clases\Redes_sociales.cs" />
+    <Compile Include="Clases\Reportes.cs" />
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
@@ -14248,6 +14256,55 @@
     </Compile>
     <Compile Include="redes_sociales_admin.aspx.designer.cs">
       <DependentUpon>redes_sociales_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_propietarios.aspx.cs">
+      <DependentUpon>reporte_propietarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_propietarios.aspx.designer.cs">
+      <DependentUpon>reporte_propietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_registro_contenidos.aspx.cs">
+      <DependentUpon>reporte_registro_contenidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_registro_contenidos.aspx.designer.cs">
+      <DependentUpon>reporte_registro_contenidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_suscripciones.aspx.cs">
+      <DependentUpon>reporte_suscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_suscripciones.aspx.designer.cs">
+      <DependentUpon>reporte_suscripciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_suscripciones_pagos.aspx.cs">
+      <DependentUpon>reporte_suscripciones_pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_suscripciones_pagos.aspx.designer.cs">
+      <DependentUpon>reporte_suscripciones_pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_suscripciones_periodo.aspx.cs">
+      <DependentUpon>reporte_suscripciones_periodo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_suscripciones_periodo.aspx.designer.cs">
+      <DependentUpon>reporte_suscripciones_periodo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_suscriptores_no_renovados.aspx.cs">
+      <DependentUpon>reporte_suscriptores_no_renovados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_suscriptores_no_renovados.aspx.designer.cs">
+      <DependentUpon>reporte_suscriptores_no_renovados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_vista_contenidos.aspx.cs">
+      <DependentUpon>reporte_vista_contenidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_vista_contenidos.aspx.designer.cs">
+      <DependentUpon>reporte_vista_contenidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="roles_admin.aspx.cs">
       <DependentUpon>roles_admin.aspx</DependentUpon>

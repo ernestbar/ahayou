@@ -62,7 +62,26 @@ namespace WebAhayouAdmin
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+            if (e.Item.ItemType == ListItemType.Item ||
+               e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Button bEdit = (Button)e.Item.FindControl("btnEditar");
+                Button bEliminar = (Button)e.Item.FindControl("btnEliminar");
+                bEdit.Visible = false;
+                bEliminar.Visible = false;
+                DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["DESCRIPCION"].ToString().ToUpper() == "EDITAR")
+                            bEdit.Visible = true;
+                        if (dr["DESCRIPCION"].ToString().ToUpper() == "ELIMINAR")
+                            bEliminar.Visible = true;
+                    }
 
+                }
+            }
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
