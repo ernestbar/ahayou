@@ -40,7 +40,7 @@
 }
 
 .arrow__corner {
-    top: 15%;
+    top: 17.5%;
     left: 10%;
 }
 
@@ -74,10 +74,22 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .arrow {
+        width: 32.5px;
+        height: 32.5px;
+    }
+}
+
 @media (max-width: 1000px), (max-height: 530px) {
     .arrow__corner {
-        top: 17.5%;
-        left: 15%;
+        top: 15%;
+        left: 10%;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
     }
 }
 

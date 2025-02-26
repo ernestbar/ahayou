@@ -310,20 +310,7 @@ namespace WebAhayouAdmin
                         string archivo = txtNumeroDocumento.Text + ".jpg";
                         fuPhoto.PostedFile.SaveAs(Ruta + archivo);
                     }
-                    else
-                    {
-                        string Ruta = Server.MapPath("~/Imagenes/usuarios/");
-                        if (!Directory.Exists(Ruta))
-                        {
-                            Directory.CreateDirectory(Ruta);
-                        }
-                        string archivo_def = "sin_imagen.jpg";
-                        string archivo = txtNumeroDocumento.Text + ".jpg";
-                        string sourceFile = System.IO.Path.Combine(Ruta, archivo_def);
-                        string destFile = System.IO.Path.Combine(Ruta, archivo);
-
-                        System.IO.File.Copy(sourceFile, destFile, true);
-                    }
+                   
 
                     Clases.Usuarios per = new Clases.Usuarios("I", "", ddlSupervisor.SelectedValue, ddlSucursal.SelectedValue, txtNombres.Text,
                         ddlTipoDocumento.SelectedValue, txtNumeroDocumento.Text, ddlExpedido.SelectedValue,

@@ -38,6 +38,110 @@ namespace WebAhayouAdmin.Clases
 
         }
 
+        public static DataTable PR_REP_GET_INGRESOS_PAGOS_EN_MES()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_INGRESOS_PAGOS_EN_MES";
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+        public static DataTable PR_REP_GET_CONTENIDO_MAS_VISTO()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_CONTENIDO_MAS_VISTO";
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+        public static DataTable PR_REP_GET_CONTENIDO_CARGADO_ULTIMO_MES()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_CONTENIDO_CARGADO_ULTIMO_MES";
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+        public static DataTable PR_REP_GET_USUARIOS_SIN_SUSCRIPCION()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_USUARIOS_SIN_SUSCRIPCION";
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
         public static DataTable PR_REP_GET_SUSCRIPCIONES_PERIODO()
         {
             try
@@ -91,6 +195,34 @@ namespace WebAhayouAdmin.Clases
             }
 
         }
+
+        public static DataTable PR_REP_GET_NO_CONSUMIDO_EN_MESES(int PB_MESES)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_NO_CONSUMIDO_EN_MESES";
+                    cmd.Parameters.AddWithValue("pb_meses", PB_MESES);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
         public static DataTable PR_REP_GET_VISTAS_CONTENIDO(DateTime pd_fechaIni,DateTime pd_fechaFin)
         {
             try
@@ -100,6 +232,93 @@ namespace WebAhayouAdmin.Clases
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "PR_REP_GET_VISTAS_CONTENIDO";
+                    cmd.Parameters.AddWithValue("pd_fechaIni", pd_fechaIni);
+                    cmd.Parameters.AddWithValue("pd_fechaFin", pd_fechaFin);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+
+        public static DataTable PR_REP_GET_CONSUMO_POR_PROPIETARIO_CONTENIDO(DateTime pd_fechaIni, DateTime pd_fechaFin)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_CONSUMO_POR_PROPIETARIO_CONTENIDO";
+                    cmd.Parameters.AddWithValue("pd_fechaIni", pd_fechaIni);
+                    cmd.Parameters.AddWithValue("pd_fechaFin", pd_fechaFin);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+
+        public static DataTable PR_REP_GET_CONSUMO_POR_USUARIO(DateTime pd_fechaIni, DateTime pd_fechaFin)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_CONSUMO_POR_USUARIO";
+                    cmd.Parameters.AddWithValue("pd_fechaIni", pd_fechaIni);
+                    cmd.Parameters.AddWithValue("pd_fechaFin", pd_fechaFin);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+
+        public static DataTable PR_REP_GET_CONSUMO_POR_CONTENIDO(DateTime pd_fechaIni, DateTime pd_fechaFin)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_REP_GET_CONSUMO_POR_CONTENIDO";
                     cmd.Parameters.AddWithValue("pd_fechaIni", pd_fechaIni);
                     cmd.Parameters.AddWithValue("pd_fechaFin", pd_fechaFin);
                     cmd.Connection = conn;

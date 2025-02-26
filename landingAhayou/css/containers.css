@@ -1,13 +1,13 @@
 @import url("main.css");
 
-.container {
+.container-common {
     position: relative;
     padding: 10px;
     border-radius: 20px;
     background-color: var(--container-bg-color);
 }
 
-.container::before {
+.container-common::before {
     content: "";
     position: absolute;
     inset: 0;

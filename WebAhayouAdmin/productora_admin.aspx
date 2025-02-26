@@ -64,10 +64,15 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
 												<thead>
 													<tr>
 														<th class="text-nowrap">CODIGO</th>
+														<th class="text-nowrap">NOMBRE PRODUCTORA</th>
+														<th class="text-nowrap">NOMBRE PRODUCTOR</th>
+														<th class="text-nowrap">EMAIL</th>
+														<th class="text-nowrap">CELULAR</th>
+														<th class="text-nowrap">DIRECCION</th>
 														<th class="text-nowrap">PAIS</th>
 														<th class="text-nowrap">CIUDAD</th>
 														<th class="text-nowrap">DIRECCION</th>
-														<th class="text-nowrap">NOMBRE</th>
+														
 														<th class="text-nowrap">ESTADO</th>
 														<th class="text-nowrap" data-orderable="false">OPCIONES</th>															
 														</tr>
@@ -77,10 +82,15 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
 													<ItemTemplate>
 														<tr class="gradeA">																
 														<td><asp:Label ID="Label2" runat="server" Text='<%# Eval("COD_PRODUCTORA") %>'></asp:Label></td>
+														<td><asp:Label ID="lblNombreSucursal" runat="server" Text='<%# Eval("DESCRIPCION") %>'></asp:Label></td>
+														<td><asp:Label ID="lblNombreSucursal1" runat="server" Text='<%# Eval("NOMBRE_PRODUCTOR") %>'></asp:Label></td>
+														<td><asp:Label ID="lblNombreSucursal2" runat="server" Text='<%# Eval("EMAIL") %>'></asp:Label></td>
+														<td><asp:Label ID="lblNombreSucursal3" runat="server" Text='<%# Eval("CELULAR") %>'></asp:Label></td>
+														<td><asp:Label ID="lblNombreSucursal4" runat="server" Text='<%# Eval("DIRECCION") %>'></asp:Label></td>
 															<td><asp:Label ID="lblPias" runat="server" Text='<%# Eval("DESC_PAIS") %>'></asp:Label></td>
 														<td><asp:Label ID="lblCiudad" runat="server" Text='<%# Eval("DESC_CIUDAD") %>'></asp:Label></td>
 														<td><asp:Label ID="lblCiudad1" runat="server" Text='<%# Eval("DIRECCION") %>'></asp:Label></td>
-														<td><asp:Label ID="lblNombreSucursal" runat="server" Text='<%# Eval("DESCRIPCION") %>'></asp:Label></td>
+														
 															<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
 														<td>
 															<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" ForeColor="Black" CommandArgument='<%# Eval("COD_PRODUCTORA") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
@@ -126,6 +136,33 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
                         <asp:TextBox ID="txtNombreSucursal" class="form-control" style="text-transform:uppercase" runat="server"></asp:TextBox>
 						<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="txtNombreSucursal" Font-Bold="True"></asp:RequiredFieldValidator>
 					</div>
+				</div>
+				<!-- end form-group row -->
+				<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+								<label class="col-md-3 text-md-right col-form-label">Nombre productor:</label>
+								<div class="col-md-6">
+						<asp:TextBox ID="txtNombreProductor" class="form-control" style="text-transform:uppercase" runat="server"></asp:TextBox>
+									<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="txtNombreProductor" Font-Bold="True"></asp:RequiredFieldValidator>
+								</div>
+				</div>
+				<!-- end form-group row -->
+				<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Email:</label>
+											<div class="col-md-6">
+									<asp:TextBox ID="txtEmail" class="form-control" style="text-transform:uppercase" runat="server"></asp:TextBox>
+												<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ControlToValidate="txtEmail" Font-Bold="True"></asp:RequiredFieldValidator>
+											</div>
+				</div>
+				<!-- end form-group row -->
+								<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Celular:</label>
+											<div class="col-md-6">
+									<asp:TextBox ID="txtCelular" class="form-control" style="text-transform:uppercase" runat="server"></asp:TextBox>
+												<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ControlToValidate="txtCelular" Font-Bold="True"></asp:RequiredFieldValidator>
+											</div>
 				</div>
 				<!-- end form-group row -->
 				<!-- begin form-group row -->

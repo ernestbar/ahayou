@@ -18,6 +18,9 @@ namespace WebAhayouAdmin.Clases
         public string PV_TIPO_OPERACION { get; set; }
         public string PV_COD_PRODUCTORA { get; set; }
         public string PV_NOMBRE_PRODUCTORA { get; set; }
+        public string PV_NOMBRE_PRODUCTOR { get; set; }
+        public string PV_EMAIL { get; set; }
+        public string PV_CELULAR { get; set; }
         public string PV_DIRECCION { get; set; }
         public string PB_ID_PAIS { get; set; }
         public string PB_ID_CIUDAD { get; set; }
@@ -35,7 +38,8 @@ namespace WebAhayouAdmin.Clases
         }
         public Productoras(string pV_TIPO_OPERACION, string pV_COD_PRODUCTORA,
             string pV_NOMBRE_PRODUCTORA, string pV_DIRECCION, string pB_ID_PAIS,
-            string pB_ID_CIUDAD, string pV_USUARIO)
+            string pB_ID_CIUDAD, string pV_USUARIO, string pV_NOMBRE_PRODUCTOR,
+            string pV_EMAIL,string pV_CELULAR)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PV_COD_PRODUCTORA = pV_COD_PRODUCTORA;
@@ -44,6 +48,9 @@ namespace WebAhayouAdmin.Clases
             PB_ID_PAIS = pB_ID_PAIS;
             PB_ID_CIUDAD = pB_ID_CIUDAD;
             PV_USUARIO = pV_USUARIO;
+            PV_NOMBRE_PRODUCTOR = pV_NOMBRE_PRODUCTOR;
+            PV_EMAIL = pV_EMAIL;
+            PV_CELULAR = pV_CELULAR;
         }
         #endregion
         #region Métodos que NO requieren constructor
@@ -141,6 +148,18 @@ namespace WebAhayouAdmin.Clases
                                 PB_ID_CIUDAD = "";
                             else
                                 PB_ID_CIUDAD = (string)dr["CIUDAD"];
+                            if (string.IsNullOrEmpty(dr["NOMBRE_PRODUCTOR"].ToString()))
+                                PV_NOMBRE_PRODUCTOR = "";
+                            else
+                                PV_NOMBRE_PRODUCTOR = (string)dr["NOMBRE_PRODUCTOR"];
+                            if (string.IsNullOrEmpty(dr["EMAIL"].ToString()))
+                                PV_EMAIL = "";
+                            else
+                                PV_EMAIL = (string)dr["EMAIL"];
+                            if (string.IsNullOrEmpty(dr["CELULAR"].ToString()))
+                                PV_CELULAR = "";
+                            else
+                                PV_CELULAR = (string)dr["CELULAR"];
                         }
 
                     }
@@ -175,6 +194,9 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PB_ID_PAIS", PB_ID_PAIS);
                     cmd.Parameters.AddWithValue("PB_ID_CIUDAD", PB_ID_CIUDAD);
                     cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
+                    cmd.Parameters.AddWithValue("PV_NOMBRE_PRODUCTOR", PV_NOMBRE_PRODUCTOR);
+                    cmd.Parameters.AddWithValue("PV_EMAIL", PV_EMAIL);
+                    cmd.Parameters.AddWithValue("PV_CELULAR", PV_CELULAR);
                     cmd.Parameters.AddWithValue("PV_LATITUD", "");
                     cmd.Parameters.AddWithValue("PV_LONGITUD", "");
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;

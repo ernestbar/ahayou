@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const maxWidth = 768;
+
     document.querySelectorAll(".carousel").forEach((carousel) => {
         const slides = carousel.querySelectorAll(".carousel__item");
         const buttons = carousel.querySelectorAll(".carousel__button");
         const prevArrow = carousel.querySelector(".carousel__arrow--prev");
         const nextArrow = carousel.querySelector(".carousel__arrow--next");
         const header = document.getElementById("header__movies");
-
         let currentIndex = 0;
 
         function showSlide(index) {
@@ -20,16 +21,21 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             const bgImage = slides[index].getAttribute("data-bg");
+            const screenWidth = window.innerWidth;
 
             if (bgImage) {
-                if (index !== 0) {
-                    header.style.background = `radial-gradient(circle at right, rgba(0, 0, 0, 0) 20%, #000 80%), url(${bgImage}) center/cover no-repeat`;
+                if (index !== 0 && screenWidth > maxWidth) {
+                    header.style.background = `radial-gradient(circle at right, rgba(0, 0, 0, 0) 20%, #000 80%), linear-gradient(to bottom, transparent 0%, #000000a0 85%,#000 95%), url(${bgImage}) center/cover no-repeat`;
                     header.style.backgroundPosition = "top";
                     header.style.objectFit = "fill";
                 } else {
-                    header.style.backgroundImage = `linear-gradient(to bottom, transparent 0%, #000000a0 75%,#000000f6 95%), url('${bgImage}')`;
+                    header.style.background = `linear-gradient(to bottom, transparent 0%, #000000a0 75%,#000 95%), url('${
+                        index !== 0 && screenWidth < maxWidth
+                            ? "/imgs/backgrounds/fondo_header_movil.jpg"
+                            : bgImage
+                    }')`;
                     header.style.backgroundPosition = "center";
-                    header.style.objectFit = "cover";
+                    header.style.backgroundSize = "cover";
                 }
             }
 
@@ -45,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
             let newIndex = (currentIndex + 1) % slides.length;
             showSlide(newIndex);
         });
+
+        window.addEventListener("resize", () => showSlide(currentIndex));
 
         showSlide(0);
     });

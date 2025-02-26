@@ -6,29 +6,31 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahayou</title>
-    <link
-        rel="icon"
-        href="imgs/logos/logo-ahayou-2.png"
-        type="image/x-icon"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-        rel="stylesheet"
-    />
-     <link rel="stylesheet" href="css/main.css" />
-     <link rel="stylesheet" href="css/containers.css" />
-     <link rel="stylesheet" href="css/arrow.css" />
-     <link rel="stylesheet" href="css/header.css" />
-     <link rel="stylesheet" href="css/new-releases.css" />
-     <link rel="stylesheet" href="css/plans.css" />
-     <link rel="stylesheet" href="css/web-app-section.css" />
-     <link rel="stylesheet" href="css/footer.css" />
-     <link rel="stylesheet" href="css/frequent-questions.css" />
-     <link rel="stylesheet" href="css/header-movies.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ahayou</title>
+
+<link
+    rel="icon"
+    href="imgs/logos/logo-ahayou-2.png"
+    type="image/x-icon"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/containers.css" />
+<link rel="stylesheet" href="css/arrow.css" />
+<link rel="stylesheet" href="css/header.css" />
+<link rel="stylesheet" href="css/new-releases.css" />
+<link rel="stylesheet" href="css/plans.css" />
+<link rel="stylesheet" href="css/web-app-section.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/frequent-questions.css" />
+<link rel="stylesheet" href="css/header-movies.css" />
+<link rel="stylesheet" href="css/header-options.css" />
 
 
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
@@ -81,6 +83,17 @@
                         ></button>
                     </div>
                 </div>
+                 <div class="options__container">
+                     <button class="options__principal-button" id="menuButton">
+                         <span class="options__div-hamburger"></span>
+                         <span class="options__div-hamburger"></span>
+                         <span class="options__div-hamburger"></span>
+                     </button>
+                     <div class="options__menu" id="optionsMenu">
+                         <button class="options__button">Espa&ntilde;ol</button>
+                         <button class="options__button">Ingl&eacute;s</button>
+                     </div>
+                 </div>
             </nav>
             <section class="header__main-content carousel">
                 <div class="header__items-container">
@@ -109,7 +122,10 @@
                                    </asp:Panel>
                                    <asp:Panel ID="panel_pelicula" class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  Visible="false" runat="server" >
                                         <%--<div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  >--%>
-                                         <div class="movie__container" >
+                                         <div
+                                                class="movie__container movie__container--active"
+                                            >
+                                             <div>
                                              <span class="movie__format"><%# Eval("formato_contenido") %></span>
                                              <img
                                                  src=' <%# Eval("nombre") %>'
@@ -119,6 +135,8 @@
                                              <span class="movie__detail-1">
                                                  <%# Eval("detalle1") %>
                                              </span>
+                                                 </div>
+                                             <div>
                                              <span class="movie__detail-2">
                                                 <%# Eval("detalle2") %>
                                              </span>
@@ -126,8 +144,21 @@
                                                  <%# Eval("resumen") %>
                                              </p>
                                              <span class="movie__gender"><%# Eval("genero") %></span>
-                                        <%-- </div>--%>
+                                                 </div>
                                             </div>
+                                
+                                       <div
+                                            class="movie__container movie__container--second container-common"
+                                        >
+                                            <img
+                                               src=' <%# Eval("contenido_vertical") %>'
+                                                alt='<%# Eval("nombre_contenido") %>'
+                                            />
+                                            <div>
+                                                <h3>'<%# Eval("nombre_contenido") %>'</h3>
+                                                <p><%# Eval("genero") %></p>
+                                            </div>
+                                        </div>
                                    </asp:Panel>
          
                                </ItemTemplate>
@@ -165,7 +196,7 @@
                     <div class="new-releases__list">
                           <asp:Repeater ID="Repeater4" DataSourceID="odsUltimos" runat="server">
 		                            <ItemTemplate>
-                                            <article class="new-releases__item container">
+                                           <article class="new-releases__item container-common">
                                                 <img src='<%# Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />
                                                    <%--<img src='<%# "data:image/jpg;base64," + Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />--%>
                                                 <div>
@@ -192,8 +223,10 @@
 	                    <ItemTemplate>
                             <a href="#" class="plans__item">
                                 <div class="plans__item--type-2">
-                                    <div class="plans__item-content container">
-                                        <div class="arrow green absolute arrow__corner"></div>
+                                   <div class="plans__item-content container-common">
+                                        <div
+                                            class="arrow green absolute arrow__corner"
+                                        ></div>
                                         <h3 class="plans__item-title">
                                             <%# Eval("planes") %>
                                         </h3>
@@ -201,7 +234,7 @@
                                             <li><%# Eval("caracteristicas").ToString().Replace("|","<br />") %></li>
                                         </ul>
                                     </div>
-                                    <div class="plans__item-price container">
+                                   <div class="plans__item-price container-common">
                                         <div>
                                             <span class="bs">Bs</span>
                                             <div class="price__content">
@@ -220,11 +253,11 @@
                      </asp:Repeater>
                 </div>
             </section>
-            <section class="frequent-questions" id="frequent-questions">>
+            <section class="frequent-questions" id="frequent-questions">
                 <h2 class="frequent-questions__title">
                     <span>Preguntas</span>&nbsp;<span>frecuentes</span>
                 </h2>
-                <div class="frequent-questions__content container">
+                 <div class="frequent-questions__content container-common">
                     <div class="frequent-questions__image">
                         <img
                             src="imgs/etc/electronics.png"
@@ -253,23 +286,26 @@
             </section>
         </main>
        <section class="web-app-section" id="webAppSection">
-            <div class="web-app-section__content container" id="downloadContainer">
-                <h2 class="web-app-section__title" id="downloadTitle">
-                    Descarga la Web APP
-                </h2>
-                <div class="web-app-section__container-description">
-                    <img
-                        src="imgs/logos/pwa_logo.png"
-                        alt="PWA"
-                        class="web-app-section__image"
-                    />
-                    <p class="web-app-section__description">
-                        Con esta PWA tendr&aacute; un sitio web que se ve y se
-                        comporta como si fuera una aplicaci&oacute;n
-                        m&oacute;vil ahorrando espacio en tu dispositivo
-                    </p>
-                </div>
-            </div>
+             <button
+                 class="web-app-section__content container-common"
+                 id="downloadContainer"
+             >
+                 <h2 class="web-app-section__title" id="downloadTitle">
+                     Descarga la Web APP
+                 </h2>
+                 <div class="web-app-section__container-description">
+                     <img
+                         src="imgs/logos/pwa_logo.png"
+                         alt="PWA"
+                         class="web-app-section__image"
+                     />
+                     <p class="web-app-section__description">
+                         Con esta PWA tendr&aacute; un sitio web que se ve y se
+                         comporta como si fuera una aplicaci&oacute;n
+                         m&oacute;vil ahorrando espacio en tu dispositivo
+                     </p>
+                 </div>
+             </button>
             <form class="web-app-section__form">
                 <label for="email" class="web-app-section__label">
                     Ya est&aacute;s listo para vivir la experiencia
@@ -295,8 +331,10 @@
                 <div class="footer__content">
                     <div class="footer__list">
                         <div class="footer__list-item">
-                            <a href="#frequent-questions">Preguntas frecuentes</a>
-                            <a href="privacidad.aspx" target="_blank">Privacidad</a>
+                            <a href="#frequent-questions">
+                                Preguntas frecuentes
+                            </a>
+                            <a href="privacy.html">Privacidad</a>
                         </div>
                         <div class="footer__list-item">
                             <a href="#">Centro de Ayuda</a>
@@ -337,9 +375,11 @@
             </footer>
         </section>
 
-       <script src="js/carousel.js"></script>
-        <script src="js/carousel-new-releases.js"></script>
-        <script src="js/web-app-title.js"></script>
+        <script src="js/carousel.js"></script>
+ <script src="js/carousel-new-releases.js"></script>
+ <script src="js/web-app-title.js"></script>
+ <script src="js/open-menu.js"></script>
+ <script src="js/header-movies-responsive.js"></script>
     </form>
 </body>
 </html>

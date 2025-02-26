@@ -84,6 +84,9 @@ namespace WebAhayouAdmin
                 ddlPais.SelectedValue = cli.PB_ID_PAIS.ToString();
                 ddlCiudad.DataBind();
                 ddlCiudad.SelectedValue = cli.PB_ID_CIUDAD.ToString();
+                txtNombreProductor.Text = cli.PV_NOMBRE_PRODUCTOR;
+                txtEmail.Text = cli.PV_EMAIL;
+                txtCelular.Text = cli.PV_CELULAR;
                 MultiView1.ActiveViewIndex = 1;
             }
             catch (Exception ex)
@@ -104,7 +107,7 @@ namespace WebAhayouAdmin
 
                 if (lblCodProductora.Text == "")
                 {
-                    Clases.Productoras cli = new Clases.Productoras("I", txtCodigo.Text, txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue,ddlCiudad.SelectedValue, lblUsuario.Text);
+                    Clases.Productoras cli = new Clases.Productoras("I", txtCodigo.Text, txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue,ddlCiudad.SelectedValue, lblUsuario.Text,txtNombreProductor.Text,txtEmail.Text,txtCelular.Text);
                     cli.ABM();
                     lblAviso.Text = cli.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -112,7 +115,7 @@ namespace WebAhayouAdmin
                 else
                 {
 
-                    Clases.Productoras cli = new Clases.Productoras("U", lblCodProductora.Text, txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue, ddlCiudad.SelectedValue, lblUsuario.Text);
+                    Clases.Productoras cli = new Clases.Productoras("U", lblCodProductora.Text, txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue, ddlCiudad.SelectedValue, lblUsuario.Text, txtNombreProductor.Text, txtEmail.Text, txtCelular.Text);
                     cli.ABM();
                     lblAviso.Text = cli.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -144,14 +147,14 @@ namespace WebAhayouAdmin
                 string[] datos = id.Split('|');
                 if (datos[1] == "ACTIVO")
                 {
-                    Clases.Productoras cli = new Clases.Productoras("D", datos[0], txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue, ddlCiudad.SelectedValue, lblUsuario.Text);
+                    Clases.Productoras cli = new Clases.Productoras("D", datos[0], txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue, ddlCiudad.SelectedValue, lblUsuario.Text, txtNombreProductor.Text, txtEmail.Text, txtCelular.Text);
                     cli.ABM();
                     lblAviso.Text = cli.PV_DESCRIPCIONPR;
                     Repeater1.DataBind();
                 }
                 else
                 {
-                    Clases.Productoras cli = new Clases.Productoras("A", datos[0], txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue, ddlCiudad.SelectedValue, lblUsuario.Text);
+                    Clases.Productoras cli = new Clases.Productoras("A", datos[0], txtNombreSucursal.Text, txtDireccion.Text, ddlPais.SelectedValue, ddlCiudad.SelectedValue, lblUsuario.Text, txtNombreProductor.Text, txtEmail.Text, txtCelular.Text);
                     cli.ABM();
                     lblAviso.Text = cli.PV_DESCRIPCIONPR;
                     Repeater1.DataBind();

@@ -1,17 +1,18 @@
 @import url("main.css");
 
 .new-releases {
-    background-image: url("../imgs/backgrounds/landingpage-AHAYOU_02.png");
+    background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),
+        url("../imgs/backgrounds/landingpage-AHAYOU_02.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: 100% 100%;
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px 0;
-    overflow: hidden;
+    padding-bottom: 10px;
 }
 
 .new-releases__title {
@@ -55,6 +56,7 @@
     overflow: hidden;
     width: 100%;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .new-releases__item:hover {
@@ -123,10 +125,6 @@
     .new-releases__item > div {
         margin-top: 0;
     }
-
-    .new-releases__item > img {
-        object-fit: fill;
-    }
 }
 
 @media (max-height: 600px) {
@@ -179,10 +177,6 @@
 @media (max-height: 400px) {
     .new-releases__item {
         height: 160px;
-    }
-
-    .new-releases__item > img {
-        object-fit: cover;
     }
 }
 

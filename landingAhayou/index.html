@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/frequent-questions.css" />
         <link rel="stylesheet" href="css/header-movies.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
     </head>
     <body>
         <header class="header" id="header__movies">
@@ -59,6 +60,17 @@
                         ></button>
                     </div>
                 </div>
+                <div class="options__container">
+                    <button class="options__principal-button" id="menuButton">
+                        <span class="options__div-hamburger"></span>
+                        <span class="options__div-hamburger"></span>
+                        <span class="options__div-hamburger"></span>
+                    </button>
+                    <div class="options__menu" id="optionsMenu">
+                        <button class="options__button">Espa&ntilde;ol</button>
+                        <button class="options__button">Ingl&eacute;s</button>
+                    </div>
+                </div>
             </nav>
             <section class="header__main-content carousel">
                 <div class="header__items-container">
@@ -86,7 +98,9 @@
                             class="header__item carousel__item"
                             data-bg="/imgs/backgrounds/cobra-kai.jpeg"
                         >
-                            <div class="movie__container">
+                            <div
+                                class="movie__container movie__container--active"
+                            >
                                 <div>
                                     <span class="movie__format">Película</span>
                                     <img
@@ -111,12 +125,26 @@
                                     <span class="movie__gender">Acción</span>
                                 </div>
                             </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/fuertes.jpg"
+                                    alt="Fuertes"
+                                />
+                                <div>
+                                    <h3>Fuertes</h3>
+                                    <p>Pel&iacute;cula - Drama</p>
+                                </div>
+                            </div>
                         </div>
                         <div
                             class="header__item carousel__item"
                             data-bg="/imgs/backgrounds/avengers.jpg"
                         >
-                            <div class="movie__container">
+                            <div
+                                class="movie__container movie__container--active"
+                            >
                                 <div>
                                     <span class="movie__format">Película</span>
                                     <img
@@ -139,6 +167,18 @@
                                         LaRusso. Que comience la contienda.
                                     </p>
                                     <span class="movie__gender">Acción</span>
+                                </div>
+                            </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/sirena.png"
+                                    alt="Sirena"
+                                />
+                                <div>
+                                    <h3>Fuertes</h3>
+                                    <p>Pel&iacute;culas - Documentla</p>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +186,9 @@
                             class="header__item carousel__item"
                             data-bg="/imgs/backgrounds/cobra-kai.jpeg"
                         >
-                            <div class="movie__container">
+                            <div
+                                class="movie__container movie__container--active"
+                            >
                                 <div>
                                     <span class="movie__format">Película</span>
                                     <img
@@ -171,12 +213,26 @@
                                     <span class="movie__gender">Acción</span>
                                 </div>
                             </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/el_chaco.png"
+                                    alt="El chaco"
+                                />
+                                <div>
+                                    <h3>El chaco</h3>
+                                    <p>Pel&iacute;cula - Drama</p>
+                                </div>
+                            </div>
                         </div>
                         <div
                             class="header__item carousel__item"
                             data-bg="/imgs/backgrounds/avengers.jpg"
                         >
-                            <div class="movie__container">
+                            <div
+                                class="movie__container movie__container--active"
+                            >
                                 <div>
                                     <span class="movie__format">Película</span>
                                     <img
@@ -199,6 +255,18 @@
                                         LaRusso. Que comience la contienda.
                                     </p>
                                     <span class="movie__gender">Acción</span>
+                                </div>
+                            </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/sirena.png"
+                                    alt="Sirena"
+                                />
+                                <div>
+                                    <h3>Fuertes</h3>
+                                    <p>Pel&iacute;culas - Documental</p>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +310,7 @@
                         <div class="arrow__border"></div>
                     </div>
                     <div class="new-releases__list">
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/soren.jpg"
                                 alt="Cartel de soren"
@@ -252,7 +320,7 @@
                                 <p>Pel&iacute;cula - Drama</p>
                             </div>
                         </article>
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/El_día_que_murió_el_silencio_-_afiche_(BC).jpg"
                                 alt="Cartel de El días que murió el silencio"
@@ -264,7 +332,7 @@
                                 <p>Pel&iacute;cula - Drama</p>
                             </div>
                         </article>
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/rio.jpg"
                                 alt="Cartel de El Río"
@@ -274,7 +342,7 @@
                                 <p>Pel&iacute;cula - Drama</p>
                             </div>
                         </article>
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/engaño.jpg"
                                 alt="Cartel de Engaño a primera vista"
@@ -285,7 +353,7 @@
                             </div>
                         </article>
 
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/soren.jpg"
                                 alt="Cartel de soren"
@@ -295,7 +363,7 @@
                                 <p>Pel&iacute;cula - Drama</p>
                             </div>
                         </article>
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/El_día_que_murió_el_silencio_-_afiche_(BC).jpg"
                                 alt="Cartel de El días que murió el silencio"
@@ -307,7 +375,7 @@
                                 <p>Pel&iacute;cula - Drama</p>
                             </div>
                         </article>
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/rio.jpg"
                                 alt="Cartel de El Río"
@@ -317,7 +385,7 @@
                                 <p>Pel&iacute;cula - Drama</p>
                             </div>
                         </article>
-                        <article class="new-releases__item container">
+                        <article class="new-releases__item container-common">
                             <img
                                 src="imgs/rotator/engaño.jpg"
                                 alt="Cartel de Engaño a primera vista"
@@ -341,22 +409,22 @@
                 <div class="plans__list">
                     <a href="#" class="plans__item">
                         <div class="plans__item--type-2">
-                            <div class="plans__item-content container">
+                            <div class="plans__item-content container-common">
                                 <div
                                     class="arrow green absolute arrow__corner"
                                 ></div>
                                 <h3 class="plans__item-title">
-                                    Plan<br />Mensual
+                                    Plan Mensual
                                 </h3>
                                 <ul class="plans__item-descriptions">
                                     <li>2 dispositivos a la vez</li>
                                     <li>Resoluci&oacute;n Full HD</li>
                                 </ul>
                             </div>
-                            <div class="plans__item-price container">
+                            <div class="plans__item-price container-common">
                                 <div>
                                     <span class="bs">Bs</span>
-                                    <span class="price__number">30</span>
+                                    <span class="price__number">30.00</span>
                                 </div>
                             </div>
                         </div>
@@ -368,28 +436,30 @@
                     </a>
                     <a a href="#" class="plans__item">
                         <div class="plans__item--type-2">
-                            <div class="plans__item-content container">
+                            <div class="plans__item-content container-common">
                                 <div
                                     class="arrow orange absolute arrow__corner"
                                 ></div>
                                 <h3 class="plans__item-title">
-                                    Plan<br />Semestral
+                                    Plan Semestral
                                 </h3>
                                 <ul class="plans__item-descriptions">
                                     <li>2 dispositivos a la vez</li>
                                     <li>Resoluci&oacute;n Full HD</li>
                                 </ul>
                             </div>
-                            <div class="plans__item-price container">
+                            <div class="plans__item-price container-common">
                                 <div>
                                     <span class="bs">Bs</span>
                                     <div class="price__content">
                                         <span class="price__description">
                                             Pago &uacute;nico
                                         </span>
-                                        <span class="price__number">141</span>
+                                        <span class="price__number"
+                                            >141.00</span
+                                        >
                                         <span class="price__description">
-                                            23,5 por mes
+                                            23,50 por mes
                                         </span>
                                     </div>
                                 </div>
@@ -401,7 +471,7 @@
                     </a>
                     <a href="#" class="plans__item">
                         <div class="plans__item--type-2">
-                            <div class="plans__item-content container">
+                            <div class="plans__item-content container-common">
                                 <div
                                     class="arrow green-yellow absolute arrow__corner"
                                 ></div>
@@ -413,16 +483,18 @@
                                     <li>Resoluci&oacute;n Full HD</li>
                                 </ul>
                             </div>
-                            <div class="plans__item-price container">
+                            <div class="plans__item-price container-common">
                                 <div>
                                     <span class="bs">Bs</span>
                                     <div class="price__content">
                                         <span class="price__description"
                                             >Pago &uacute;nico
                                         </span>
-                                        <span class="price__number">258</span>
+                                        <span class="price__number"
+                                            >258.00</span
+                                        >
                                         <span class="price__description">
-                                            21,5 por mes
+                                            21,50 por mes
                                         </span>
                                     </div>
                                 </div>
@@ -438,7 +510,7 @@
                 <h2 class="frequent-questions__title">
                     <span>Preguntas</span>&nbsp;<span>frecuentes</span>
                 </h2>
-                <div class="frequent-questions__content container">
+                <div class="frequent-questions__content container-common">
                     <div class="frequent-questions__image">
                         <img
                             src="imgs/etc/electronics.png"
@@ -532,7 +604,7 @@
         </main>
         <section class="web-app-section" id="webAppSection">
             <button
-                class="web-app-section__content container"
+                class="web-app-section__content container-common"
                 id="downloadContainer"
             >
                 <h2 class="web-app-section__title" id="downloadTitle">
@@ -645,5 +717,7 @@
         <script src="js/carousel.js"></script>
         <script src="js/carousel-new-releases.js"></script>
         <script src="js/web-app-title.js"></script>
+        <script src="js/open-menu.js"></script>
+        <script src="js/header-movies-responsive.js"></script>
     </body>
 </html>

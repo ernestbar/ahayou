@@ -14106,12 +14106,20 @@
     <Content Include="productora_admin.aspx" />
     <Content Include="promociones_admin.aspx" />
     <Content Include="redes_sociales_admin.aspx" />
+    <Content Include="reporte_consumo_por_contenido.aspx" />
+    <Content Include="reporte_consumo_por_usuario.aspx" />
+    <Content Include="reporte_consumo_propietario_contenido.aspx" />
+    <Content Include="reporte_contenido_mas_visto.aspx" />
+    <Content Include="reporte_contenido_no_consumido_mes.aspx" />
+    <Content Include="reporte_contenido_ultimo_mes.aspx" />
+    <Content Include="reporte_ingresos_mes.aspx" />
     <Content Include="reporte_propietarios.aspx" />
     <Content Include="reporte_registro_contenidos.aspx" />
     <Content Include="reporte_suscripciones.aspx" />
     <Content Include="reporte_suscripciones_pagos.aspx" />
     <Content Include="reporte_suscripciones_periodo.aspx" />
     <Content Include="reporte_suscriptores_no_renovados.aspx" />
+    <Content Include="reporte_usuarios_sin_suscripcion.aspx" />
     <Content Include="reporte_vista_contenidos.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
@@ -14257,6 +14265,55 @@
     <Compile Include="redes_sociales_admin.aspx.designer.cs">
       <DependentUpon>redes_sociales_admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="reporte_consumo_por_contenido.aspx.cs">
+      <DependentUpon>reporte_consumo_por_contenido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_consumo_por_contenido.aspx.designer.cs">
+      <DependentUpon>reporte_consumo_por_contenido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_consumo_por_usuario.aspx.cs">
+      <DependentUpon>reporte_consumo_por_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_consumo_por_usuario.aspx.designer.cs">
+      <DependentUpon>reporte_consumo_por_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_consumo_propietario_contenido.aspx.cs">
+      <DependentUpon>reporte_consumo_propietario_contenido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_consumo_propietario_contenido.aspx.designer.cs">
+      <DependentUpon>reporte_consumo_propietario_contenido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_contenido_mas_visto.aspx.cs">
+      <DependentUpon>reporte_contenido_mas_visto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_contenido_mas_visto.aspx.designer.cs">
+      <DependentUpon>reporte_contenido_mas_visto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_contenido_no_consumido_mes.aspx.cs">
+      <DependentUpon>reporte_contenido_no_consumido_mes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_contenido_no_consumido_mes.aspx.designer.cs">
+      <DependentUpon>reporte_contenido_no_consumido_mes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_contenido_ultimo_mes.aspx.cs">
+      <DependentUpon>reporte_contenido_ultimo_mes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_contenido_ultimo_mes.aspx.designer.cs">
+      <DependentUpon>reporte_contenido_ultimo_mes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_ingresos_mes.aspx.cs">
+      <DependentUpon>reporte_ingresos_mes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_ingresos_mes.aspx.designer.cs">
+      <DependentUpon>reporte_ingresos_mes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="reporte_propietarios.aspx.cs">
       <DependentUpon>reporte_propietarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -14298,6 +14355,13 @@
     </Compile>
     <Compile Include="reporte_suscriptores_no_renovados.aspx.designer.cs">
       <DependentUpon>reporte_suscriptores_no_renovados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_usuarios_sin_suscripcion.aspx.cs">
+      <DependentUpon>reporte_usuarios_sin_suscripcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte_usuarios_sin_suscripcion.aspx.designer.cs">
+      <DependentUpon>reporte_usuarios_sin_suscripcion.aspx</DependentUpon>
     </Compile>
     <Compile Include="reporte_vista_contenidos.aspx.cs">
       <DependentUpon>reporte_vista_contenidos.aspx</DependentUpon>
