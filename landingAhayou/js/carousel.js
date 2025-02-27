@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     header.style.objectFit = "fill";
                 } else {
                     header.style.background = `linear-gradient(to bottom, transparent 0%, #000000a0 75%,#000 95%), url('${
-                        index !== 0 && screenWidth < maxWidth
+                        index !== 0 && screenWidth <= maxWidth
                             ? "/imgs/backgrounds/fondo_header_movil.jpg"
                             : bgImage
                     }')`;

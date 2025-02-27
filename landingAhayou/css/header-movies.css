@@ -1,3 +1,5 @@
+@import url("main.css");
+
 .movie {
     width: 100%;
     padding: 10px;
@@ -20,6 +22,12 @@
     margin: 0 auto;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.movie__container--second:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.3s ease;
 }
 
 .movie__container > div {
@@ -44,8 +52,9 @@
 .movie__format {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.1em;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: var(--color-primary);
 }
 
 .movie__detail-1,
@@ -68,11 +77,12 @@
     display: flex;
 }
 
-.movie__container--second > img {
+.movie__container--second img {
     width: 100%;
-    height: 85%;
+    height: 80%;
     object-fit: fill;
     border-radius: 20px;
+    mask-image: linear-gradient(#000 80%, transparent);
 }
 
 .movie__container--second > div {
@@ -81,13 +91,42 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
-.movie__container--second > div > h3,
+.movie__title--small {
+    font-size: 1.25em;
+}
+
+.movie__data-item--small {
+    font-size: 1em;
+}
+
+.movie__title--small,
 .movie__container--second > div > p {
     width: 100%;
     text-align: center;
+}
+
+.movie__data--small {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+}
+
+.movie__data-item--small {
+    border-top: 1px solid #8b8b8b;
+    border-left: 1px solid #8b8b8b;
+}
+
+.movie__data-item--small:nth-child(-n + 2) {
+    border-top: none;
+}
+
+.movie__data-item--small:nth-child(2n + 1) {
+    border-left: none;
 }
 
 @media (max-width: 992px) {
@@ -139,13 +178,13 @@
         font-size: 1.25em;
     }
 
-    .movie__description {
+    .movie__description,
+    .movie__format {
         font-size: 1.1em;
     }
 
     .movie__detail-1,
-    .movie__gender,
-    .movie__format {
+    .movie__gender {
         font-size: 1em;
     }
 }
@@ -155,14 +194,24 @@
         font-size: 1.15em;
     }
 
-    .movie__description {
+    .movie__description,
+    .movie__format {
         font-size: 1em;
     }
 
     .movie__detail-1,
-    .movie__gender,
-    .movie__format {
+    .movie__gender {
         font-size: 0.9em;
+    }
+}
+
+@media (max-width: 420px) {
+    .movie__title--small {
+        font-size: 1em;
+    }
+
+    .movie__data-item--small {
+        font-size: 0.8em;
     }
 }
 
@@ -171,97 +220,5 @@
 @media (max-height: 786px) {
     .movie__container--second {
         height: 440px;
-    }
-}
-
-@media (max-height: 720px) {
-    .movie__container--second {
-        height: 400px;
-    }
-}
-
-@media (max-height: 670px) {
-    .movie__container--second {
-        height: 360px;
-    }
-
-    .movie__container--second > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    }
-
-    .movie__container--second > div > h3 {
-        text-align: left;
-    }
-
-    .movie__container--second > div > p {
-        text-align: right;
-    }
-}
-
-@media (max-height: 600px) {
-    .movie__container--second {
-        height: 320px;
-    }
-}
-
-@media (max-height: 560px) {
-    .movie__container--second {
-        height: 280px;
-    }
-}
-
-@media (max-height: 450px) {
-    .movie__container--second {
-        flex-direction: row;
-        height: 240px;
-    }
-
-    .movie__container--second > img {
-        height: 100%;
-    }
-
-    .movie__container--second > div {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .movie__container--second > div > h3,
-    .movie__container--second > div > p {
-        text-align: center;
-    }
-}
-
-@media (max-height: 410px) {
-    .movie__container--second {
-        height: 200px;
-    }
-}
-
-@media (max-height: 340px) {
-    .movie__container--second {
-        height: 160px;
-    }
-}
-
-@media (max-height: 260px) {
-    .movie__container--second {
-        height: 120px;
-    }
-}
-/* 
-@media (max-height: 200px) {
-    .movie__container--second {
-        height: 80px;
-    }
-} */
-
-@media (max-height: 300px) {
-    .movie__container > div {
-        gap: 10px;
     }
 }

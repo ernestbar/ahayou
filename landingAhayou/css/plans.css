@@ -91,6 +91,12 @@
     height: 100%;
 }
 
+.plans__item-content,
+.plans__item-price,
+.plans__item-footer {
+    background-color: var(--container-bg-color-2);
+}
+
 .plans__item-price > div {
     position: relative;
     background-color: #fff;

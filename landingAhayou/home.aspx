@@ -112,7 +112,7 @@
                                        <%--<div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>--%>
                                             <h2 class="header__title">
                                                 <b>Streaming</b> con <b>Alma Boliviana</b>
-                                            </h2><br /><br /><br />
+                                            </h2>
                                             <p class="header__description">
                                                 Una experiencia mejorada no te pierdas los
                                                 estrenos m&aacute;s anticipados y tus
@@ -154,10 +154,21 @@
                                                src=' <%# Eval("contenido_vertical") %>'
                                                 alt='<%# Eval("nombre_contenido") %>'
                                             />
-                                            <div>
-                                                <h3>'<%# Eval("nombre_contenido") %>'</h3>
-                                                <p><%# Eval("genero") %></p>
-                                            </div>
+                                            <h3 class="movie__title--small"><%# Eval("nombre_contenido") %></h3>
+                                           <ul class="movie__data--small">
+                                                <li class="movie__data-item--small">
+                                                    <%# Eval("genero") %>
+                                                </li>
+                                                <li class="movie__data-item--small">
+                                                     <%# Eval("detalle1") %>
+                                                </li>
+                                                <li class="movie__data-item--small">
+                                                     <%# Eval("detalle2") %>
+                                                </li>
+                                                <li class="movie__data-item--small">
+                                                    <%# Eval("formato_contenido") %>
+                                                </li>
+                                            </ul>
                                         </div>
                                    </asp:Panel>
          

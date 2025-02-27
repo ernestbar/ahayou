@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function changeContent() {
             const screenWidth = window.innerWidth;
-            const screenHeight = window.innerHeight;
 
-            if (screenWidth > maxWidth && screenHeight > 260) {
+            if (screenWidth > maxWidth) {
                 if (movies[1].classList.contains(activeClass)) {
                     movies[1].classList.remove(activeClass);
                     movies[0].classList.add(activeClass);
