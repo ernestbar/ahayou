@@ -58,7 +58,7 @@
     transform: translate(-50%);
 }
 
-.options__menu.active {
+.options__menu.options__menu--active {
     display: block;
 }
 

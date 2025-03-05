@@ -174,6 +174,31 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.BannersPrincipalController",
+    "Method": "ListarBannersPrincipal",
+    "RelativePath": "api/BannersPrincipal/ListarBannersPrincipal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.DominiosController",
     "Method": "ListarDominiosxDominio",
     "RelativePath": "api/Dominios/ListarDominiosxDominio/{pv_dominio}",
@@ -187,6 +212,31 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.NuevosAgregadosController",
+    "Method": "ListarNuevosAgregados",
+    "RelativePath": "api/NuevosAgregados/ListarNuevosAgregados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Void",

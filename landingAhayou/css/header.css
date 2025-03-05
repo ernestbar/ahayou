@@ -66,11 +66,11 @@
     height: 100%;
 }
 
-.header__item.active:first-of-type {
+.header__item.carousel__item--active:first-of-type {
     display: flex;
 }
 
-.header__item.active:not(:first-of-type) {
+.header__item.carousel__item--active:not(:first-of-type) {
     display: block;
 }
 
@@ -240,14 +240,14 @@
     transition: color, border-bottom, font-size 0.3s;
 }
 
-.selected {
+.header__pag-button--selected {
     color: #adff2f;
     font-size: 3em;
     transition: color, border-bottom, font-size 0.3s;
     position: relative;
 }
 
-.selected::after {
+.header__pag-button--selected::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -381,7 +381,7 @@
         letter-spacing: -2px;
     }
 
-    .selected {
+    .header__pag-button--selected {
         font-size: 2em;
     }
 }
@@ -396,7 +396,7 @@
         padding: 24px;
     }
 
-    .header__item.active:not(:first-of-type) {
+    .header__item.carousel__item--active:not(:first-of-type) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
         justify-content: center;
@@ -416,7 +416,7 @@
         font-size: 1.25em;
     }
 
-    .selected {
+    .header__pag-button--selected {
         font-size: 1.75em;
     }
 
@@ -625,7 +625,7 @@
         letter-spacing: -2px;
     }
 
-    .selected {
+    .header__pag-button--selected {
         font-size: 1.75em;
     }
 }
@@ -649,7 +649,7 @@
         letter-spacing: -2px;
     }
 
-    .selected {
+    .header__pag-button--selected {
         font-size: 1.5em;
     }
 }
@@ -671,7 +671,7 @@
 
 @media (max-height: 480px) and (min-height: 260px),
     (min-width: 992px) and (max-height: 520px) and (min-height: 480px) {
-    .header__list:has(.header__item:first-of-type.active) {
+    .header__list:has(.header__item:first-of-type.carousel__item--active) {
         height: 60vh;
     }
 }
@@ -722,17 +722,17 @@
 }
 
 @media (max-height: 768px) and (min-height: 480px) and (max-width: 768px) {
-    .header__item.active:first-of-type {
+    .header__item.carousel__item--active:first-of-type {
         height: 60vh;
     }
 }
 
 @media (max-height: 460px) {
-    .header__item.active:first-of-type {
+    .header__item.carousel__item--active:first-of-type {
         height: 60vh;
     }
 
-    .header__item.active:not(:first-of-type) {
+    .header__item.carousel__item--active:not(:first-of-type) {
         height: 100%;
     }
 }

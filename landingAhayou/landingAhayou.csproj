@@ -72,7 +72,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="avisos_legales.aspx" />
+    <Content Include="centro_ayuda.aspx" />
     <Content Include="contenidos.aspx" />
+    <Content Include="contenidos_us.aspx" />
     <Content Include="css\arrow.css" />
     <Content Include="css\containers.css" />
     <Content Include="css\footer.css" />
@@ -189,6 +192,7 @@
     <Content Include="fotos_peliculas\9\foto_titulo.png" />
     <Content Include="fotos_peliculas\9\foto_vertical.png" />
     <Content Include="home.aspx" />
+    <Content Include="home_us.aspx" />
     <Content Include="Imagenes\fondo-AHAYOU.png" />
     <Content Include="Imagenes\fondo.jpg" />
     <Content Include="Imagenes\fondo1.jpg" />
@@ -466,9 +470,11 @@
     <Content Include="img\slide-3.jpg" />
     <Content Include="img\tv.png" />
     <Content Include="index.html" />
+    <Content Include="js\carousel-header-index.js" />
     <Content Include="js\carousel-new-releases.js" />
     <Content Include="js\carousel.js" />
     <Content Include="js\footer-visited-color.js" />
+    <Content Include="js\header-background-handler.js" />
     <Content Include="js\header-movies-responsive.js" />
     <Content Include="js\open-accordion-image.js" />
     <Content Include="js\open-menu.js" />
@@ -477,9 +483,24 @@
     <Content Include="privacidad.aspx" />
     <Content Include="privacy.html" />
     <Content Include="Scripts\pwacompat.min.js" />
+    <Content Include="terminos_uso.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="avisos_legales.aspx.cs">
+      <DependentUpon>avisos_legales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="avisos_legales.aspx.designer.cs">
+      <DependentUpon>avisos_legales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="centro_ayuda.aspx.cs">
+      <DependentUpon>centro_ayuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="centro_ayuda.aspx.designer.cs">
+      <DependentUpon>centro_ayuda.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
@@ -490,12 +511,26 @@
     <Compile Include="contenidos.aspx.designer.cs">
       <DependentUpon>contenidos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="contenidos_us.aspx.cs">
+      <DependentUpon>contenidos_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenidos_us.aspx.designer.cs">
+      <DependentUpon>contenidos_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home_us.aspx.cs">
+      <DependentUpon>home_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home_us.aspx.designer.cs">
+      <DependentUpon>home_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="privacidad.aspx.cs">
       <DependentUpon>privacidad.aspx</DependentUpon>
@@ -505,6 +540,13 @@
       <DependentUpon>privacidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="terminos_uso.aspx.cs">
+      <DependentUpon>terminos_uso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terminos_uso.aspx.designer.cs">
+      <DependentUpon>terminos_uso.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons %282%29.zip" />

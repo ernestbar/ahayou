@@ -67,6 +67,7 @@
                     >
                         Suscr&iacute;bete
                     </button>
+               
                     <button
                         class="header__button header__button--text header__button--bg-green"
                     >
@@ -75,12 +76,14 @@
                 </div>
                 <div class="header__nav-buttons">
                     <div>
-                        <button
+                        <%--<button
                             class="header__button header__button--icon"
-                        ></button>
-                        <button
+                        ></button>--%>
+                     <%--   <button
                             class="header__button header__button--icon"
-                        ></button>
+                        ></button>--%>
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
                     </div>
                 </div>
                  <div class="options__container">
@@ -90,8 +93,10 @@
                          <span class="options__div-hamburger"></span>
                      </button>
                      <div class="options__menu" id="optionsMenu">
-                         <button class="options__button">Espa&ntilde;ol</button>
-                         <button class="options__button">Ingl&eacute;s</button>
+                         <%--<button class="options__button">Espa&ntilde;ol</button>
+                         <button class="options__button" >Ingl&eacute;s</button>--%>
+                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Spanish" />
+   <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="English" />
                      </div>
                  </div>
             </nav>
@@ -108,7 +113,8 @@
                             <asp:Repeater ID="Repeater6" DataSourceID="odsRotador1" OnItemDataBound="Repeater6_ItemDataBound" runat="server">
                                <ItemTemplate>
                                 <asp:Label ID="lblIdNumero"  runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
-                                   <asp:Panel ID="panel_banner" class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'  runat="server" >
+                                   <asp:Panel ID="panel_banner" class="header__item carousel__item carousel__item--active" data-bg=' <%# Eval("contenido") %>'  runat="server" >
+                                                                
                                        <%--<div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>--%>
                                             <h2 class="header__title">
                                                 <b>Streaming</b> con <b>Alma Boliviana</b>
@@ -184,7 +190,7 @@
                     <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
 	                    <ItemTemplate>
                          <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
-                          <button id=' <%# Eval("Numero") %>' class="header__pag-button carousel__button">
+                          <button id=' <%# Eval("Numero") %>' class="header__pag-button header__pag-button--selected carousel__button">
                          <%--<button class='<%# "header__pag-button carousel__button " + Eval("Numero").ToString().Replace("01","selected") %>'>--%>
                               <%# Eval("Numero") %>
                           </button>
@@ -345,14 +351,14 @@
                             <a href="#frequent-questions">
                                 Preguntas frecuentes
                             </a>
-                            <a href="privacy.html">Privacidad</a>
+                            <a href="contenidos.aspx?t=privacidad" target="_blank">Privacidad</a>
                         </div>
                         <div class="footer__list-item">
-                            <a href="#">Centro de Ayuda</a>
-                            <a href="#">Avisos Legales</a>
+                            <a href="centro_ayuda.aspx" target="_blank">Centro de Ayuda</a>
+                             <a href="contenidos.aspx?t=avisos legales" target="_blank">Avisos Legales</a>
                         </div>
                         <div class="footer__list-item">
-                            <a href="#">T&eacute;rminos de uso</a>
+                            <a href="contenidos.aspx?t=terminos de uso" target="_blank">T&eacute;rminos de uso</a>
                             <a href="#">Contacto</a>
                         </div>
                     </div>
@@ -386,11 +392,12 @@
             </footer>
         </section>
 
-        <script src="js/carousel.js"></script>
- <script src="js/carousel-new-releases.js"></script>
- <script src="js/web-app-title.js"></script>
- <script src="js/open-menu.js"></script>
- <script src="js/header-movies-responsive.js"></script>
+       <script src="js/header-background-handler.js"></script>
+        <script src="js/carousel-header-index.js"></script>
+        <script src="js/carousel-new-releases.js"></script>
+        <script src="js/web-app-title.js"></script>
+        <script src="js/open-menu.js"></script>
+        <script src="js/header-movies-responsive.js"></script>
     </form>
 </body>
 </html>

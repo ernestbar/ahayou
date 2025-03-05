@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     links.forEach((link) => {
         if (currentUrl.includes(link.href)) {
-            link.classList.add("active");
+            link.classList.add("footer__list-item--active");
         }
     });
 });

@@ -95,7 +95,7 @@
     transition: transform 0.3s ease;
 }
 
-.footer__list-item a.active {
+.footer__list-item a.footer__list-item--active {
     color: var(--color-primary);
 }
 
