@@ -9,7 +9,7 @@ namespace AhayouClases
     public class Banners_principal
     {
         public string nro { get; set; } = "";
-        public string cod_contenido_str { get; set; } = "";
+        public Int64 cod_contenido_str { get; set; } = 0;
         public string formato_contenido { get; set; } = "";
         public string formato_contenido_ingles { get; set; } = "";
         public string nombre_contenido { get; set; } = "";

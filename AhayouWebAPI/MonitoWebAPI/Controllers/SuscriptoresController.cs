@@ -65,6 +65,7 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.AddWithValue("@PV_NOMBRE_COMPLETO", oUsuario.pv_nombre_completo);
                 comando.Parameters.AddWithValue("@PN_CELULA", oUsuario.pv_celular);
                 comando.Parameters.AddWithValue("@PV_EMAIL", oUsuario.pv_email);
+                comando.Parameters.AddWithValue("@PV_CODIGO_AUXILIAR", oUsuario.pv_codigo_auxiliar);
                 comando.Parameters.AddWithValue("@PV_USUARIO", oUsuario.pv_usuario);
                 comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -100,7 +101,7 @@ namespace AhayouWebAPI.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Login(string nombre_usuario, string password)
+        public IActionResult LoginSuscriptor(string nombre_usuario, string password)
         {
             Login oLogin = new Login();
             try
@@ -204,6 +205,7 @@ namespace AhayouWebAPI.Controllers
                                     pv_nombre_completo = (string)dr["nombre_completo"],
                                     pv_email = (string)dr["email"],
                                     pv_celular = (string)dr["celular"],
+                                    pv_codigo_auxiliar = (string)dr["codigo_auxiliar"],
                                     pv_estado = (string)dr["desc_estado"]
                                 }).First();
                 }

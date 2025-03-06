@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="css/footer.css" />
 <link rel="stylesheet" href="css/frequent-questions.css" />
 <link rel="stylesheet" href="css/header-movies.css" />
+<link rel="stylesheet" href="css/forms.css" />
 <link rel="stylesheet" href="css/header-options.css" />
 
 
@@ -53,9 +54,9 @@
         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
         </asp:ObjectDataSource>
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="RM"></asp:Label>
-        <header class="header" id="header__movies">
+         <header class="header header--main" id="header__movies">
             <nav class="header__nav">
-                <a href="home.aspx" class="header__logo">
+                <a href="home_us.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -66,12 +67,12 @@
                     <button
                         class="header__button header__button--text header__button--bg-orange"
                     >
-                        Suscr&iacute;bete
+                        Suscribe
                     </button>
                     <button
                         class="header__button header__button--text header__button--bg-green"
                     >
-                        Iniciar Sesi&oacute;n
+                        Login
                     </button>
                 </div>
                 <div class="header__nav-buttons">
@@ -329,13 +330,20 @@
                     You are now ready to live the Aháyou experience
                     create your account HERE!!!
                 </label>
-                <div class="web-app-section__container-input">
+                <div class="form__input-container form__input-container--main">
                     <input
                         type="email"
                         name="email"
-                        placeholder="Enter you Email"
+                        placeholder="Email"
+                        id="email"
+                        autocomplete="false"
+                        class="form__input form__input--big-font form__input--specific-width"
                     />
-                    <input type="button" value="Suscribe" />
+                    <input
+                        type="submit"
+                        value="Suscribe"
+                        class="form__button"
+                    />
                 </div>
             </form>
             <footer class="footer">
@@ -355,12 +363,12 @@
                             <a href="contenidos_us.aspx?t=privacidad" target="_blank">Privacy</a>
                         </div>
                         <div class="footer__list-item">
-                            <a href="centro_ayuda.aspx" target="_blank">Help Center</a>
+                            <a href="centro_ayuda_us.aspx" target="_blank">Help Center</a>
                              <a href="contenidos_us.aspx?t=avisos legales" target="_blank">Legal Notices</a>
                         </div>
                         <div class="footer__list-item">
                             <a href="contenidos_us.aspx?t=terminos de uso" target="_blank">Terms of Use</a>
-                            <a href="#">Contacto</a>
+                            <a href="contacto_us.aspx" target="_blank">Contacto</a>
                         </div>
                     </div>
                     <div class="footer__data">

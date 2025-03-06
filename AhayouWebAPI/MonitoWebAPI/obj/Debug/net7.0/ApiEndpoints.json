@@ -199,6 +199,37 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.ContenidosController",
+    "Method": "ListarContenidosxContenido",
+    "RelativePath": "api/Contenidos/ListarContenidosxContenido/{PV_CONTENIDO}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_CONTENIDO",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.DominiosController",
     "Method": "ListarDominiosxDominio",
     "RelativePath": "api/Dominios/ListarDominiosxDominio/{pv_dominio}",
@@ -368,8 +399,8 @@
   },
   {
     "ContainingType": "AhayouWebAPI.Controllers.SuscriptoresController",
-    "Method": "Login",
-    "RelativePath": "api/Suscriptores/Login/{nombre_usuario}/{password}",
+    "Method": "LoginSuscriptor",
+    "RelativePath": "api/Suscriptores/LoginSuscriptor/{nombre_usuario}/{password}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

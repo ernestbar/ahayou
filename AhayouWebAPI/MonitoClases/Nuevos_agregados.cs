@@ -8,7 +8,7 @@ namespace AhayouClases
 {
     public class Nuevos_agregados
     {
-        public string cod_contenido_str { get; set; } = "";
+        public Int64 cod_contenido_str { get; set; } = 0;
         public string nombre_contenido { get; set; } = "";
         public string descripcion { get; set; } = "";
         public string descripcion_ingles { get; set; } = "";

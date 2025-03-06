@@ -20,8 +20,10 @@
         />
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
         <link rel="stylesheet" href="css/footer.css" />
-        <link rel="stylesheet" href="css/privacy.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/information.css" />
     </head>
     <body>
          <form id="form1" runat="server">
@@ -60,7 +62,7 @@
                 </div>
             </nav>
         </header>
-        <main class="information">
+        <main class="main main--information">
             <article class="information__article">
                  <asp:Repeater ID="Repeater1" runat="server">
                     <ItemTemplate>
@@ -70,58 +72,57 @@
             </article>
         </main>
         <footer class="footer footer--black">
-            <div class="footer__image-container">
-                <img
-                    src="imgs/logos/logo-ahayou-2.png"
-                    alt="Logo Ahayou"
-                    class="footer__image"
-                />
+    <div class="footer__image-container">
+        <img
+            src="imgs/logos/logo-ahayou-2.png"
+            alt="Logo Ahayou"
+            class="footer__image"
+        />
+    </div>
+    <div class="footer__content">
+        <div class="footer__list">
+            <div class="footer__list-item">
+                  <a href="#">T&eacute;rminos de uso</a>
+                <a href="privacy.html">Privacidad</a>
             </div>
-            <div class="footer__content">
-                <div class="footer__list">
-                    <%--<div class="footer__list-item">
-                        <a href="#frequent-questions"> Preguntas frecuentes </a>
-                        <a href="privacy.html">Privacidad</a>
-                    </div>
-                    <div class="footer__list-item">
-                        <a href="#">Centro de Ayuda</a>
-                        <a href="#">Avisos Legales</a>
-                    </div>
-                    <div class="footer__list-item">
-                        <a href="#">T&eacute;rminos de uso</a>
-                        <a href="#">Contacto</a>
-                    </div>--%>
+            <div class="footer__list-item">
+                <a href="help-center.html">Centro de Ayuda</a>
+                <a href="#">Avisos Legales</a>
+            </div>
+            <div class="footer__list-item">
+                <a href="contacts.html">Contacto</a>
+            </div>
+        </div>
+        <div class="footer__data">
+            <div class="footer__contacts">
+                <div>
+                    <span>+(591) 75874441</span>
                 </div>
-               <div class="footer__data">
-                    <div class="footer__contacts">
-                        <div>
-                            <span>+(591) 75874441</span>
-                        </div>
-                        <div class="social-media">
-                             <asp:Repeater ID="Repeater5" DataSourceID="odsRedesSociales" runat="server">
-                                    <ItemTemplate>
-                                         <a href="<%# Eval("url") %>"  target="_blank" class="social-media__link">
-                                             <img
-                                                 src='<%# "imgs/logos/" + Eval("red_social") + ".svg" %>'
-                                                 alt='<%# Eval("red_social") %>'
-                                                 class="social-media__img"
-                                             />
-                                         </a>
+                 <div class="social-media">
+                      <asp:Repeater ID="Repeater5" DataSourceID="odsRedesSociales" runat="server">
+                             <ItemTemplate>
+                                  <a href="<%# Eval("url") %>"  target="_blank" class="social-media__link">
+                                      <img
+                                          src='<%# "imgs/logos/" + Eval("red_social") + ".svg" %>'
+                                          alt='<%# Eval("red_social") %>'
+                                          class="social-media__img"
+                                      />
+                                  </a>
  
-                                    </ItemTemplate>
-                             </asp:Repeater>
-           
-                        </div>
-                    </div>
-                    <div class="footer__copyright">
-                        <p>Copyright 2025 Bolivia</p>
-                        <p>Ahayou</p>
-                    </div>
-                </div>
+                             </ItemTemplate>
+                      </asp:Repeater>
+    
+                 </div>
             </div>
-        </footer>
+            <div class="footer__copyright">
+                <p>Copyright 2025 Bolivia</p>
+                <p>Ahayou</p>
+            </div>
+        </div>
+    </div>
+</footer>
              </form>
-
         <script src="/js/footer-visited-color.js"></script>
+        <script src="/js/open-menu.js"></script>
     </body>
 </html>

@@ -1,8 +1,6 @@
 @import url("main.css");
 
 .header {
-    height: max-content;
-    min-height: 100vh;
     width: 100%;
     background: linear-gradient(
             to bottom,
@@ -18,6 +16,11 @@
     display: grid;
     grid-template-rows: auto 4fr auto;
     overflow: hidden;
+    height: max-content;
+}
+
+.header--main {
+    min-height: 100vh;
 }
 
 .header__nav {
@@ -46,8 +49,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
     height: 100%;
+}
+
+.header__main-content:has(
+        .header__list:has(.header__item:first-of-type.carousel__item--active)
+    ) {
+    gap: 100px;
 }
 
 .header__list {
@@ -55,7 +63,14 @@
     justify-content: center;
     align-items: center;
     width: 80%;
+}
+
+.header__list:has(.header__item:first-of-type.carousel__item--active) {
     height: 60vh;
+}
+
+.header__list:not(:has(.header__item:first-of-type.carousel__item--active)) {
+    height: 100%;
 }
 
 .header__item {
@@ -64,6 +79,7 @@
     width: 100%;
     padding: 10px;
     height: 100%;
+    transition: translate 0.3s ease;
 }
 
 .header__item.carousel__item--active:first-of-type {
@@ -72,6 +88,14 @@
 
 .header__item.carousel__item--active:not(:first-of-type) {
     display: block;
+}
+
+.header__item.carousel__item--active {
+    translate: 0px 0px;
+
+    @starting-style {
+        translate: 0px -100px;
+    }
 }
 
 .header__item:first-of-type {
@@ -289,16 +313,19 @@
 
 @media (max-width: 992px) {
     .header__nav {
-        position: fixed;
         display: grid;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 150px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         z-index: 500;
         place-items: center;
+    }
+
+    .header--main > .header__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 
     .header__logo,
@@ -370,8 +397,19 @@
         bottom: 0;
     }
 
-    .header__list {
+    .header__list:has(
+            .header__item:first-of-type.header__item.carousel__item--active
+        ) {
         width: 100%;
+    }
+
+    .header__list:not(
+            :has(
+                    .header__item:first-of-type.header__item.carousel__item--active
+                )
+        ) {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -752,6 +790,12 @@
 
 @media (max-height: 300px) {
     .header__main-content {
-        margin-top: 5px;
+        margin-top: 75px;
+    }
+
+    .header__item.carousel__item--active:first-of-type {
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
     }
 }

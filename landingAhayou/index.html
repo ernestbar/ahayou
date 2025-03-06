@@ -26,10 +26,11 @@
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/frequent-questions.css" />
         <link rel="stylesheet" href="css/header-movies.css" />
+        <link rel="stylesheet" href="css/forms.css" />
         <link rel="stylesheet" href="css/header-options.css" />
     </head>
     <body>
-        <header class="header" id="header__movies">
+        <header class="header header--main" id="header__movies">
             <nav class="header__nav">
                 <a href="index.html" class="header__logo">
                     <img
@@ -117,10 +118,12 @@
                                         N. 1 en TV Hoy
                                     </span>
                                     <p class="movie__description">
-                                        Una rivalidad legendaria se reaviva
-                                        cuando Johnny Lawrence vuelve a abrir su
-                                        viejo dojo y se reencuentra con Daniel
-                                        LaRusso. Que comience la contienda.
+                                        Muestra bajo una nueva perspectiva,
+                                        imágenes y situaciones de una tradición
+                                        celebrada entre los trabajadores de la
+                                        construcción, y sus formas de invocar
+                                        algún tipo de bendición en un ritual
+                                        secreto....mas
                                     </p>
                                     <span class="movie__gender">Acción</span>
                                 </div>
@@ -174,10 +177,26 @@
                                         N. 1 en TV Hoy
                                     </span>
                                     <p class="movie__description">
-                                        Una rivalidad legendaria se reaviva
-                                        cuando Johnny Lawrence vuelve a abrir su
-                                        viejo dojo y se reencuentra con Daniel
-                                        LaRusso. Que comience la contienda.
+                                        Bárbara acaba de retornar de Chile a
+                                        donde fue a trabajar. Su familia piensa
+                                        que regresa al hogar, pero su intención
+                                        es despedirse y tramitar su visa a
+                                        España, donde fue aceptada para un
+                                        trabajo. Sin embargo, un grave accidente
+                                        que involucra a su familia hace que
+                                        tenga que modificar sus planes y
+                                        enfrentar circunstancias y personas que
+                                        pretendía dejar atrás....mas Bárbara
+                                        acaba de retornar de Chile a donde fue a
+                                        trabajar. Su familia piensa que regresa
+                                        al hogar, pero su intención es
+                                        despedirse y tramitar su visa a España,
+                                        donde fue aceptada para un trabajo. Sin
+                                        embargo, un grave accidente que
+                                        involucra a su familia hace que tenga
+                                        que modificar sus planes y enfrentar
+                                        circunstancias y personas que pretendía
+                                        dejar atrás....mas
                                     </p>
                                     <span class="movie__gender">Acción</span>
                                 </div>
@@ -349,7 +368,7 @@
                 </div>
             </section>
         </header>
-        <main>
+        <main class="main">
             <section class="new-releases carousel">
                 <h2 class="new-releases__title">
                     <span>Nuevos</span>&nbsp;<span>agregados</span>
@@ -674,19 +693,24 @@
                 </div>
             </button>
             <form class="web-app-section__form">
-                <label for="email" class="web-app-section__label">
+                <label for="email" class="form__label form__label--white">
                     Ya est&aacute;s listo para vivir la experiencia
                     Ah&aacute;you<br />crea tu cuenta ¡¡¡AQU&lacute;!!!
                 </label>
-                <div class="web-app-section__container-input">
+                <div class="form__input-container form__input-container--main">
                     <input
                         type="email"
                         name="email"
                         placeholder="Ingresa tu correo"
                         id="email"
                         autocomplete="false"
+                        class="form__input form__input--big-font form__input--specific-width"
                     />
-                    <input type="button" value="Suscríbete" />
+                    <input
+                        type="submit"
+                        value="Suscríbete"
+                        class="form__button"
+                    />
                 </div>
             </form>
             <footer class="footer">
@@ -706,12 +730,12 @@
                             <a href="privacy.html">Privacidad</a>
                         </div>
                         <div class="footer__list-item">
-                            <a href="#">Centro de Ayuda</a>
+                            <a href="help-center.html">Centro de Ayuda</a>
                             <a href="#">Avisos Legales</a>
                         </div>
                         <div class="footer__list-item">
                             <a href="#">T&eacute;rminos de uso</a>
-                            <a href="#">Contacto</a>
+                            <a href="contacts.html">Contacto</a>
                         </div>
                     </div>
                     <div class="footer__data">

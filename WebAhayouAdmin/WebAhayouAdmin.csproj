@@ -13878,6 +13878,7 @@
     <Content Include="assets\plugins\datatables.net\js\dataTables.mjs" />
     <Content Include="assets\plugins\datatables.net\License.txt" />
     <Content Include="avatares_admin.aspx" />
+    <Content Include="banner_principal_admin.aspx" />
     <Content Include="cambiar_password.aspx" />
     <Content Include="contenidos_admin.aspx" />
     <Content Include="Dashboard.aspx" />
@@ -14134,6 +14135,13 @@
     <Compile Include="avatares_admin.aspx.designer.cs">
       <DependentUpon>avatares_admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="banner_principal_admin.aspx.cs">
+      <DependentUpon>banner_principal_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banner_principal_admin.aspx.designer.cs">
+      <DependentUpon>banner_principal_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cambiar_password.aspx.cs">
       <DependentUpon>cambiar_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -14142,6 +14150,7 @@
       <DependentUpon>cambiar_password.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Avatares.cs" />
+    <Compile Include="Clases\Banners_principales.cs" />
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />

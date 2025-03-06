@@ -48,7 +48,7 @@ namespace AhayouWebAPI.Controllers
                 oRol = (from DataRow dr in dt.Rows
                         select new Nuevos_agregados()
                         {
-                            cod_contenido_str = (string)dr["cod_contenido_str"],
+                            cod_contenido_str = (Int64)dr["cod_contenido_str"],
                             nombre_contenido = (string)dr["nombre_contenido"],
                             descripcion = (string)dr["descripcion"],
                             descripcion_ingles = (string)dr["descripcion_ingles"],

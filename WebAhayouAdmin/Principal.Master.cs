@@ -20,6 +20,8 @@ namespace WebAhayouAdmin
                 else
                 {
                     lblUsuario.Text = Session["usuario"].ToString();
+                    Clases.Usuarios obj = new Clases.Usuarios(lblUsuario.Text, "");
+                    imgUsuario.ImageUrl = "~/Imagenes/usuarios/" + obj.CID + ".jpg";
                 }
 
 

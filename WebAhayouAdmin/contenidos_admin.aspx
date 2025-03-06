@@ -158,13 +158,19 @@
 					<!-- end form-group row -->
 					<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
-								<label class="col-md-3 text-md-right col-form-label">Contenido español:</label>
+								<label class="col-md-3 text-md-right col-form-label"> 
+									<asp:RadioButtonList ID="RadioButtonList1" AutoPostBack="true" CssClass="col-12" RepeatDirection="Horizontal" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" runat="server">
+										<asp:ListItem Selected="True" Text="CONTENIDO ESPAÑOL" Value="CONTENIDO ESPAÑOL" />
+										<asp:ListItem  Text="CONTENIDO INGLES" Value="CONTENIDO INGLES" />
+									</asp:RadioButtonList>
+								</label>
 								<div class="col-md-12">
 								<textarea class="textarea form-control" id="wysihtml5" onchange="recuperarDescripcion()" placeholder="Ingrese el contenido" rows="12"></textarea>
 									<asp:HiddenField ID="hfContenido" runat="server" />
 								</div>
 					</div>
 					<!-- end form-group row -->
+					<asp:TextBox ID="TextBox1" TextMode="MultiLine" Width="800" runat="server"></asp:TextBox>
 					<!-- BEGIN panel -->
 			
 			<!-- END panel -->

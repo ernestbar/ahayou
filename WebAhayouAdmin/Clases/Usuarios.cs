@@ -45,6 +45,7 @@ namespace WebAhayouAdmin.Clases
         public string PV_DESCRIPCIONPR { get; set; }
         public string PV_ERROR { get; set; }
 
+        public string CID { get; set; }
         #endregion
         #region Constructores
         public Usuarios(string pV_USUARIO, string pV_COD_PERSONAL)
@@ -205,20 +206,20 @@ namespace WebAhayouAdmin.Clases
                         {
                             foreach (DataRow dr in dataTable.Rows)
                             {
-                                PV_SUPERVISOR_INMEDIATO = (string)dr["CODIGO"];
-                                PV_COD_PRODUCTORA = (string)dr["DESCRIPCION"];
-                                if (string.IsNullOrEmpty(dr["VALOR_CARACTER"].ToString()))
-                                    PV_NOMBRE_COMPLETO = "";
+                                PV_USUARIO = (string)dr["usuario"];
+                                PV_DESCRIPCION = (string)dr["DESCRIPCION"];
+                                if (string.IsNullOrEmpty(dr["FECHA_DESDE"].ToString()))
+                                    PD_FECHA_DESDE = DateTime.Parse("01/01/3000");
                                 else
-                                    PV_NOMBRE_COMPLETO = (string)dr["VALOR_CARACTER"];
-                                if (string.IsNullOrEmpty(dr["VALOR_NUMERICO"].ToString()))
-                                    PV_TIPO_DOCUMENTO = "";
+                                    PD_FECHA_DESDE = (DateTime)dr["FECHA_DESDE"];
+                                if (string.IsNullOrEmpty(dr["FECHA_HASTA"].ToString()))
+                                    PD_FECHA_HASTA = DateTime.Parse("01/01/3000");
                                 else
-                                    PV_TIPO_DOCUMENTO = (string)dr["VALOR_NUMERICO"];
-                                if (string.IsNullOrEmpty(dr["VALOR_DATE"].ToString()))
-                                    PV_NUMERO_DOCUMENTO = "";
+                                    PD_FECHA_HASTA = (DateTime)dr["FECHA_HASTA"];
+                                if (string.IsNullOrEmpty(dr["CID"].ToString()))
+                                    CID = "";
                                 else
-                                    PV_NUMERO_DOCUMENTO = (string)dr["VALOR_DATE"];
+                                    CID = (string)dr["CID"];
                             }
 
                         }
@@ -279,7 +280,7 @@ namespace WebAhayouAdmin.Clases
 
                
             }
-            catch { }
+            catch (Exception ex) {}
         }
 
 

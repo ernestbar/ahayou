@@ -133,6 +133,7 @@ namespace WebAhayouAdmin
                 Clases.Contenidos obj_m = new Clases.Contenidos(id);
                 txtDescripcion.Text = obj_m.PV_DESCRIPCION;
                 hfContenido.Value = obj_m.PV_CONTENIDO;
+                TextBox1.Text = obj_m.PV_CONTENIDO;
                 ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta4", "setearDescripcion();", true);
                 MultiView1.ActiveViewIndex = 1;
 
@@ -183,6 +184,26 @@ namespace WebAhayouAdmin
                 writer5.WriteLine(ex.ToString());
                 writer5.Close();
                 lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
+            }
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonList1.SelectedValue == "CONTENIDO ESPAÑOL")
+            {
+                
+                Clases.Contenidos obj_m = new Clases.Contenidos(lblCodigo.Text);
+                txtDescripcion.Text = obj_m.PV_DESCRIPCION;
+                hfContenido.Value = obj_m.PV_CONTENIDO;
+                ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta4", "setearDescripcion();", true);
+            }
+            else
+            {
+                
+                Clases.Contenidos obj_m = new Clases.Contenidos(lblCodigo.Text);
+                txtDescripcion.Text = obj_m.PV_DESCRIPCION;
+                hfContenido.Value = obj_m.PV_CONTENIDO_INGLES;
+                ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta4", "setearDescripcion();", true);
             }
         }
     }

@@ -32,6 +32,10 @@ body {
     background-color: #000;
 }
 
+.main {
+    width: 100%;
+}
+
 h2 {
     font-size: var(--titles-font-size);
     word-wrap: break-word;

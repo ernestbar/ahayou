@@ -49,8 +49,8 @@ namespace AhayouWebAPI.Controllers
                 oRol = (from DataRow dr in dt.Rows
                         select new Banners_principal()
                         {
-                            nro = (string)dr["nro"],
-                            cod_contenido_str = (string)dr["cod_contenido_str"],
+                            nro =(string)dr["numero"],
+                            cod_contenido_str = (Int64)dr["cod_contenido_str"],
                             nombre_contenido = (string)dr["nombre_contenido"],
                             formato_contenido = (string)dr["formato_contenido"],
                             formato_contenido_ingles = (string)dr["formato_contenido_ingles"],

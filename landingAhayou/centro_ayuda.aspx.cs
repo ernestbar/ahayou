@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,17 @@ namespace WebAhayouAdmin
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ibtnEnviar_Click(object sender, ImageClickEventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = Clases.Contenidos.PR_PAR_GET_REDES_SOCIALES_STR();
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["red_social"].ToString() == "WHATSAPP")
+                    Response.Redirect(dr["URL"].ToString());
+            }
         }
     }
 }
