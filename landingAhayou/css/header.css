@@ -15,7 +15,6 @@
     background-size: cover;
     display: grid;
     grid-template-rows: auto 4fr auto;
-    overflow: hidden;
     height: max-content;
 }
 

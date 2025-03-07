@@ -22,6 +22,7 @@ namespace WebAhayouAdmin.Clases
         public string PV_NOMBRE_COMPLETO { get; set; }
         public string PV_CELULAR { get; set; }
         public string PV_EMAIL { get; set; }
+        public string PV_CODIGO_AUXILIAR { get; set; }
 
         public string PV_USUARIO { get; set; }
         public string PV_EMAILOUT { get; set; }
@@ -37,7 +38,7 @@ namespace WebAhayouAdmin.Clases
             RecuperarDatos();
         }
         public Suscriptores(string pV_TIPO_OPERACION, string pV_USUARIOI, string pV_PASSWORD, string pV_PASSWORD_ANTERIOR,
-            string pV_NOMBRE_COMPLETO, string pV_CELULAR, string pV_EMAIL, string pV_USUARIO)
+            string pV_NOMBRE_COMPLETO, string pV_CELULAR, string pV_EMAIL,string pV_CODIGO_AUXILIAR ,string pV_USUARIO)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PV_USUARIOI = pV_USUARIOI;
@@ -47,6 +48,7 @@ namespace WebAhayouAdmin.Clases
             PV_USUARIOI = pV_USUARIOI;
             PV_PASSWORD = pV_PASSWORD;
             PV_PASSWORD_ANTERIOR = pV_PASSWORD_ANTERIOR;
+            PV_CODIGO_AUXILIAR = pV_CODIGO_AUXILIAR;
             PV_USUARIO = pV_USUARIO;
 
         }
@@ -141,6 +143,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PV_NOMBRE_COMPLETO", PV_NOMBRE_COMPLETO);
                     cmd.Parameters.AddWithValue("PN_CELULAR", PV_CELULAR);
                     cmd.Parameters.AddWithValue("PV_EMAIL", PV_EMAIL);
+                    cmd.Parameters.AddWithValue("PV_CODIGO_AUXILIAR", PV_CODIGO_AUXILIAR);
                     cmd.Parameters.AddWithValue("PV_PASSWORD", PV_PASSWORD);
                     cmd.Parameters.AddWithValue("PV_PASSWORD_ANTERIOR", PV_PASSWORD_ANTERIOR);
                     cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);

@@ -81,7 +81,7 @@
         <main class="main main--form">
             <div class="form-wrapper">
                 <h1 class="form__title">Cont&aacute;ctanos</h1>
-                <form class="form">
+                <asp:Panel runat="server" CssClass="form">
                     <label for="problem" class="form__label">
                         Si nos das m&aacute;s informaci&oacute;n, encontraremos
                         la soluci&oacute;n adecuada
@@ -103,7 +103,7 @@
                             <img src="imgs/etc/arrow.svg" alt="Enviar" />
                         </button>--%>
                     </div>
-                </form>
+                </asp:Panel>
             </div>
         </main>
         <footer class="footer footer--black">

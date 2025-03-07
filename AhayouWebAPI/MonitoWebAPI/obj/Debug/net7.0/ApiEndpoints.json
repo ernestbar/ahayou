@@ -230,6 +230,175 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.ContenidosListasController",
+    "Method": "OperacionesContenidosLista",
+    "RelativePath": "api/ContenidosListas/OperacionesContenidosLista",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oUsuario",
+        "Type": "AhayouClases.Contenido_listas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.ContenidosVistosController",
+    "Method": "ListarContenidosFavoritos",
+    "RelativePath": "api/ContenidosVistos/ListarContenidosFavoritos/{PV_USUARIO}/{PV_COD_PLAN_SUSCRIPTOR}/{PV_COD_PERFIL_SUSCRIPTOR}/{PI_MENU}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_USUARIO",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_COD_PLAN_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_COD_PERFIL_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PI_MENU",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.ContenidosVistosController",
+    "Method": "ListarContenidosSeguirViendo",
+    "RelativePath": "api/ContenidosVistos/ListarContenidosSeguirViendo/{PV_USUARIO}/{PV_COD_PLAN_SUSCRIPTOR}/{PV_COD_PERFIL_SUSCRIPTOR}/{PI_MENU}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_USUARIO",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_COD_PLAN_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_COD_PERFIL_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PI_MENU",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.ContenidosVistosController",
+    "Method": "ListarContenidosVistos",
+    "RelativePath": "api/ContenidosVistos/ListarContenidosVistos/{PV_USUARIO}/{PV_COD_PLAN_SUSCRIPTOR}/{PV_COD_PERFIL_SUSCRIPTOR}/{PI_MENU}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_USUARIO",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_COD_PLAN_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_COD_PERFIL_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PI_MENU",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.DominiosController",
     "Method": "ListarDominiosxDominio",
     "RelativePath": "api/Dominios/ListarDominiosxDominio/{pv_dominio}",
@@ -261,6 +430,31 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.MenuCarteleraController",
+    "Method": "LstarMenuCartelera",
+    "RelativePath": "api/MenuCartelera/LstarMenuCartelera",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.NuevosAgregadosController",
     "Method": "ListarNuevosAgregados",
     "RelativePath": "api/NuevosAgregados/ListarNuevosAgregados",
@@ -268,6 +462,68 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.PerfilesSuscriptorController",
+    "Method": "PerfilesSuscriptor",
+    "RelativePath": "api/PerfilesSuscriptor/PerfilesSuscriptor/{PV_COD_PLAN_SUSCRIPTOR}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_COD_PLAN_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.PlanSuscriptorController",
+    "Method": "PlanSuscriptor",
+    "RelativePath": "api/PlanSuscriptor/PlanSuscriptor/{pv_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pv_usuario",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",

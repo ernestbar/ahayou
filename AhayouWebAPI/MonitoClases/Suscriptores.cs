@@ -35,9 +35,8 @@ namespace AhayouClases
         [Required(ErrorMessage = "Debe ingresar el email")]
         [EmailAddress(ErrorMessage = "El email debe ser válido")]
         [StringLength(maximumLength: 300, ErrorMessage = "El email debe tener como máximo {1} caracteres.")]
-        public string pv_codigo_auxiliar { get; set; }
         public string pv_email { get; set; }
-
+        public string pv_codigo_auxiliar { get; set; }
         public string pv_usuario { get; set; }
         public string pv_estado{ get; set; }
         public string pv_emailout { get; set; }

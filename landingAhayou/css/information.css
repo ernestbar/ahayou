@@ -45,12 +45,7 @@
 @media (max-width: 992px) {
     .information__article {
         margin-left: 0;
-    }
-}
-
-@media (max-width: 992px) and (min-height: 768px) {
-    .information__article {
-        margin-top: 200px;
+        margin-top: 0;
     }
 }
 
@@ -71,13 +66,13 @@
         font-size: 2em;
     }
 
-    .information {
+    .main--information {
         padding: 0 50px;
     }
 }
 
 @media (max-width: 400px) {
-    .information {
+    .main--information {
         padding: 0 15px;
     }
 }

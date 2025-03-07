@@ -87,7 +87,7 @@ namespace WebAhayouAdmin
             {
                 if (lblCodSuscriptor.Text == "")
                 {
-                    Clases.Suscriptores obj = new Clases.Suscriptores("I", txtUsuario.Text, txtPassword.Text, "",txtNombre.Text,txtCelular.Text,txtEmail.Text, lblUsuario.Text);
+                    Clases.Suscriptores obj = new Clases.Suscriptores("I", txtUsuario.Text, txtPassword.Text, "",txtNombre.Text,txtCelular.Text,txtEmail.Text,txtCodigoAuxiliar.Text, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -95,7 +95,7 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    Clases.Suscriptores obj = new Clases.Suscriptores("U", txtUsuario.Text, txtPassword.Text, "", txtNombre.Text, txtCelular.Text, txtEmail.Text, lblUsuario.Text);
+                    Clases.Suscriptores obj = new Clases.Suscriptores("U", txtUsuario.Text, txtPassword.Text, "", txtNombre.Text, txtCelular.Text, txtEmail.Text, txtCodigoAuxiliar.Text, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -162,7 +162,7 @@ namespace WebAhayouAdmin
                 lblCodSuscriptor.Text = datos[0];
                 if (datos[1] == "ACTIVO")
                 {
-                    Clases.Suscriptores obj_m = new Clases.Suscriptores("D",lblCodSuscriptor.Text, txtPassword.Text, "", txtNombre.Text, txtCelular.Text, txtEmail.Text, lblUsuario.Text);
+                    Clases.Suscriptores obj_m = new Clases.Suscriptores("D",lblCodSuscriptor.Text, txtPassword.Text, "", txtNombre.Text, txtCelular.Text, txtEmail.Text, txtCodigoAuxiliar.Text, lblUsuario.Text);
                     obj_m.ABM();
                     lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 }
@@ -195,7 +195,7 @@ namespace WebAhayouAdmin
                 string id = "";
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
-                Clases.Suscriptores obj_m = new Clases.Suscriptores("R", id,"", "", "", "","", lblUsuario.Text);
+                Clases.Suscriptores obj_m = new Clases.Suscriptores("R", id,"", "", "", "","", "",lblUsuario.Text);
                 obj_m.ABM();
                 lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 Clases.enviar_correo objC = new Clases.enviar_correo();

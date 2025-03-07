@@ -13880,9 +13880,12 @@
     <Content Include="avatares_admin.aspx" />
     <Content Include="banner_principal_admin.aspx" />
     <Content Include="cambiar_password.aspx" />
+    <Content Include="clasificacion_contenido_admin.aspx" />
     <Content Include="contenidos_admin.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
+    <Content Include="formato_contenido_admin.aspx" />
+    <Content Include="genero_contenido_admin.aspx" />
     <Content Include="Imagenes\fondo.jpg" />
     <Content Include="Imagenes\fondo_negro.png" />
     <Content Include="Imagenes\logo-ahayou.png" />
@@ -14151,9 +14154,12 @@
     </Compile>
     <Compile Include="Clases\Avatares.cs" />
     <Compile Include="Clases\Banners_principales.cs" />
+    <Compile Include="Clases\Clasificacion_contenidos.cs" />
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />
+    <Compile Include="Clases\Formatos_contenido.cs" />
+    <Compile Include="Clases\Genero_contenidos.cs" />
     <Compile Include="Clases\Ingreso_app.cs" />
     <Compile Include="Clases\Menus.cs" />
     <Compile Include="Clases\Menus_roles.cs" />
@@ -14168,6 +14174,13 @@
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="clasificacion_contenido_admin.aspx.cs">
+      <DependentUpon>clasificacion_contenido_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clasificacion_contenido_admin.aspx.designer.cs">
+      <DependentUpon>clasificacion_contenido_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contenidos_admin.aspx.cs">
       <DependentUpon>contenidos_admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -14188,6 +14201,20 @@
     </Compile>
     <Compile Include="dominios_admin.aspx.designer.cs">
       <DependentUpon>dominios_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="formato_contenido_admin.aspx.cs">
+      <DependentUpon>formato_contenido_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="formato_contenido_admin.aspx.designer.cs">
+      <DependentUpon>formato_contenido_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="genero_contenido_admin.aspx.cs">
+      <DependentUpon>genero_contenido_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="genero_contenido_admin.aspx.designer.cs">
+      <DependentUpon>genero_contenido_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

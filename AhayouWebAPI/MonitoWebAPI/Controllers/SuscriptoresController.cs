@@ -56,7 +56,7 @@ namespace AhayouWebAPI.Controllers
 
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();
-                SqlCommand comando = new SqlCommand("SuscriptoresController", conexion);
+                SqlCommand comando = new SqlCommand("PR_ABM_SUSCRIPTOR", conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@tipo_operacion", oUsuario.pv_tipo_operacion);
                 comando.Parameters.AddWithValue("@PV_USUARIOI", oUsuario.pv_usuarioi);
@@ -75,7 +75,7 @@ namespace AhayouWebAPI.Controllers
                 conexion.Close();
 
                 oUsuario.pv_descripcionpr = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
-                if (string.IsNullOrEmpty(comando.Parameters["@PV_DESCRIPCIONPR"].Value.ToString()))
+                if (string.IsNullOrEmpty(comando.Parameters["@error"].Value.ToString()))
                     error = "";
                 else
                     error = (string)comando.Parameters["@error"].Value;
@@ -200,13 +200,15 @@ namespace AhayouWebAPI.Controllers
                     oUsuario = (from DataRow dr in dt.Rows
                                 select new Suscriptores()
                                 {
-                                    pv_usuarioi = (string)dr["usuario"],
+                                    pv_usuario = (string)dr["usuario"],
                                     pv_password = (string)dr["password"],
                                     pv_nombre_completo = (string)dr["nombre_completo"],
                                     pv_email = (string)dr["email"],
-                                    pv_celular = (string)dr["celular"],
-                                    pv_codigo_auxiliar = (string)dr["codigo_auxiliar"],
-                                    pv_estado = (string)dr["desc_estado"]
+                                    //pv_celular = (string)dr["celular"]
+                                    pv_celular = dr["celular"] == DBNull.Value ? "" : (string)dr["celular"]
+
+                                    //pv_codigo_auxiliar = (string)dr["codigo_auxiliar"],
+                                    //pv_estado = (string)dr["desc_estado"]
                                 }).First();
                 }
 
@@ -228,5 +230,7 @@ namespace AhayouWebAPI.Controllers
                 return BadRequest(oRespuestaAPI);
             }
         }
+
+        
     }
 }

@@ -99,6 +99,7 @@
 													<th class="text-nowrap">NOMBRE COMPLETO</th>
 													<th class="text-nowrap">EMAIL</th>
 													<th class="text-nowrap">CELULAR</th>
+													<th class="text-nowrap">CODIGO AUXILIAR</th>
 													<th class="text-nowrap">ESTADO</th>
 									<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
@@ -115,6 +116,7 @@
 																	<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("NOMBRE_COMPLETO") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label4" runat="server" Text='<%# Eval("EMAIL") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label6" runat="server" Text='<%# Eval("CELULAR") %>'></asp:Label></td>
+																	<td><asp:Label ID="Label61" runat="server" Text='<%# Eval("CODIGO_AUXILIAR") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>
 													<td>
 																	<asp:Button ID="btnEditar" class="btn btn-success btn-sm" BackColor="Transparent" forecolor="Black" CommandArgument='<%# Eval("USUARIO") %>' OnClick="btnEditar_Click" runat="server" Text="Editar" ToolTip="Editar" />
@@ -185,7 +187,14 @@
 					</div>
 				</div>
 				<!-- end form-group row -->
-					
+									<!-- begin form-group row -->
+						<div class="form-group row m-b-10">
+							<label class="col-md-3 text-md-right col-form-label">Codigo Auxiliar:</label>
+							<div class="col-md-6">
+								<asp:TextBox ID="txtCodigoAuxiliar" class="form-control" runat="server"></asp:TextBox>
+							</div>
+						</div>
+						<!-- end form-group row -->
 					
 						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
 							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />

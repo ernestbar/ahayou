@@ -82,7 +82,7 @@
         <main class="main main--form">
             <div class="form-wrapper">
                 <h1 class="form__title">Centro de ayuda</h1>
-                <form class="form">
+                <asp:Panel runat="server" CssClass="form">
                     <label for="question" class="form__label">
                         ¿C&oacute;mo podemos ayudar?
                     </label>
@@ -100,7 +100,7 @@
                             <img src="imgs/etc/arrow.svg" alt="Enviar" />
                         </button>--%>
                     </div>
-                </form>
+                </asp:Panel>
             </div>
         </main>
         <footer class="footer footer--black">
