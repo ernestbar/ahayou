@@ -13882,6 +13882,7 @@
     <Content Include="cambiar_password.aspx" />
     <Content Include="clasificacion_contenido_admin.aspx" />
     <Content Include="contenidos_admin.aspx" />
+    <Content Include="contenido_temporadas_admin.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
     <Content Include="formato_contenido_admin.aspx" />
@@ -14156,6 +14157,7 @@
     <Compile Include="Clases\Banners_principales.cs" />
     <Compile Include="Clases\Clasificacion_contenidos.cs" />
     <Compile Include="Clases\Contenidos.cs" />
+    <Compile Include="Clases\Contenido_temporadas.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />
     <Compile Include="Clases\Formatos_contenido.cs" />
@@ -14187,6 +14189,13 @@
     </Compile>
     <Compile Include="contenidos_admin.aspx.designer.cs">
       <DependentUpon>contenidos_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contenido_temporadas_admin.aspx.cs">
+      <DependentUpon>contenido_temporadas_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenido_temporadas_admin.aspx.designer.cs">
+      <DependentUpon>contenido_temporadas_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
