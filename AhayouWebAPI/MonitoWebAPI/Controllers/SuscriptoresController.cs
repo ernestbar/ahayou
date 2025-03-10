@@ -58,12 +58,12 @@ namespace AhayouWebAPI.Controllers
                 conexion.Open();
                 SqlCommand comando = new SqlCommand("PR_ABM_SUSCRIPTOR", conexion);
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@tipo_operacion", oUsuario.pv_tipo_operacion);
+                comando.Parameters.AddWithValue("@PV_TIPO_OPERACION", oUsuario.pv_tipo_operacion);
                 comando.Parameters.AddWithValue("@PV_USUARIOI", oUsuario.pv_usuarioi);
                 comando.Parameters.AddWithValue("@PV_PASSWORD", oUsuario.pv_password);
                 comando.Parameters.AddWithValue("@PV_PASSWORD_ANTERIOR", oUsuario.pv_password_anterior);
                 comando.Parameters.AddWithValue("@PV_NOMBRE_COMPLETO", oUsuario.pv_nombre_completo);
-                comando.Parameters.AddWithValue("@PN_CELULA", oUsuario.pv_celular);
+                comando.Parameters.AddWithValue("@PN_CELULAR", oUsuario.pv_celular);
                 comando.Parameters.AddWithValue("@PV_EMAIL", oUsuario.pv_email);
                 comando.Parameters.AddWithValue("@PV_CODIGO_AUXILIAR", oUsuario.pv_codigo_auxiliar);
                 comando.Parameters.AddWithValue("@PV_USUARIO", oUsuario.pv_usuario);
@@ -75,10 +75,10 @@ namespace AhayouWebAPI.Controllers
                 conexion.Close();
 
                 oUsuario.pv_descripcionpr = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
-                if (string.IsNullOrEmpty(comando.Parameters["@error"].Value.ToString()))
+                if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
                     error = "";
                 else
-                    error = (string)comando.Parameters["@error"].Value;
+                    error = (string)comando.Parameters["@PV_ERROR"].Value;
 
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = error == "" ? true : false;

@@ -52,13 +52,9 @@
                 </div>
                 <div class="header__nav-buttons">
                     <div>
-                        <button
-                            class="header__button header__button--icon"
-                        ></button>
-                        <button
-                            class="header__button header__button--icon"
-                        ></button>
-                    </div>
+                         <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                         <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" /> 
+                     </div>
                 </div>
             </nav>
         </header>

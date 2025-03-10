@@ -52,12 +52,8 @@
                 </div>
                 <div class="header__nav-buttons">
                     <div>
-                        <button
-                            class="header__button header__button--icon"
-                        ></button>
-                        <button
-                            class="header__button header__button--icon"
-                        ></button>
+                      <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
                     </div>
                 </div>
                 <div class="options__container">
@@ -67,8 +63,8 @@
                         <span class="options__div-hamburger"></span>
                     </button>
                     <div class="options__menu" id="optionsMenu">
-                        <button class="options__button">Espa&ntilde;ol</button>
-                        <button class="options__button">Ingl&eacute;s</button>
+                          <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
                     </div>
                 </div>
             </nav>

@@ -430,6 +430,37 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.ListasContenidoController",
+    "Method": "ListasContenidos",
+    "RelativePath": "api/ListasContenido/ListasContenidos/{pv_cod_formato_contenido}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pv_cod_formato_contenido",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.MenuCarteleraController",
     "Method": "LstarMenuCartelera",
     "RelativePath": "api/MenuCartelera/LstarMenuCartelera",
@@ -462,6 +493,68 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.ObtenerStreamingController",
+    "Method": "ObtenerStreaming",
+    "RelativePath": "api/ObtenerStreaming/ObtenerStreaming/{PV_COD_CONTENIDO_STR}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_COD_CONTENIDO_STR",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.PerfilesSuscriptorController",
+    "Method": "AdecuarDatosPerfilSuscriptor",
+    "RelativePath": "api/PerfilesSuscriptor/AdecuarDatosPerfilSuscriptor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oUsuario",
+        "Type": "AhayouClases.Perfiles_suscriptor",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",
@@ -690,6 +783,37 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.TrailersContenidoController",
+    "Method": "TrailersContenidos",
+    "RelativePath": "api/TrailersContenido/TrailersContenidos/{pv_cod_contenido_str}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pv_cod_contenido_str",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.UsuarioController",
     "Method": "Login",
     "RelativePath": "api/Usuario/Login/{nombre_usuario}/{password}",
@@ -705,6 +829,109 @@
       {
         "Name": "password",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.ValidaPinExistentePerfilController",
+    "Method": "ValidarPinExistentePerfil",
+    "RelativePath": "api/ValidaPinExistentePerfil/ValidarPinExistentePerfil/{PV_COD_PERFIL_SUSCRIPTOR}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_COD_PERFIL_SUSCRIPTOR",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.ValidaVerContenidoController",
+    "Method": "ValidarVerContenidos",
+    "RelativePath": "api/ValidaVerContenido/ValidarVerContenidos/{PV_COD_CONTENIDO_STR}/{PV_USUARIO}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_COD_CONTENIDO_STR",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "PV_USUARIO",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.VerificarPinPerfilIngresadoController",
+    "Method": "VerificiarPinPerfilIngresaro",
+    "RelativePath": "api/VerificarPinPerfilIngresado/VerificiarPinPerfilIngresaro/{PV_COD_PERFIL_SUSCRIPTOR}/{PB_PIN}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PV_COD_PERFIL_SUSCRIPTOR",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "PB_PIN",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],

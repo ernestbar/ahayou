@@ -140,11 +140,11 @@
                                                  alt='<%# Eval("nombre_contenido") %>'
                                                  class="movie__image"
                                              />
+                                                 </div>
+                                             <div>
                                              <span class="movie__detail-1">
                                                  <%# Eval("detalle1_ingles") %>
                                              </span>
-                                                 </div>
-                                             <div>
                                              <span class="movie__detail-2">
                                                 <%# Eval("detalle2_ingles") %>
                                              </span>
@@ -326,7 +326,7 @@
                  </div>
              </button>
             <form class="web-app-section__form">
-                <label for="email" class="web-app-section__label">
+                <label for="email" class="form__label form__label--white">
                     You are now ready to live the Aháyou experience
                     create your account HERE!!!
                 </label>
@@ -407,6 +407,7 @@
         <script src="js/web-app-title.js"></script>
         <script src="js/open-menu.js"></script>
         <script src="js/header-movies-responsive.js"></script>
+        <script src="js/movie-container-hover.js"></script>
     </form>
 </body>
 </html>

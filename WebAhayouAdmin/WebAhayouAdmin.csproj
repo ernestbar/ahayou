@@ -14157,6 +14157,7 @@
     <Compile Include="Clases\Banners_principales.cs" />
     <Compile Include="Clases\Clasificacion_contenidos.cs" />
     <Compile Include="Clases\Contenidos.cs" />
+    <Compile Include="Clases\Contenidos_streaming.cs" />
     <Compile Include="Clases\Contenido_temporadas.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />

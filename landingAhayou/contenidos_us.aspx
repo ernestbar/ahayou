@@ -39,16 +39,16 @@
                     />
                 </a>
                 <div class="header__nav-buttons">
-                    <button
-                        class="header__button header__button--text header__button--bg-orange"
-                    >
-                        Suscribe
-                    </button>
-                    <button
-                        class="header__button header__button--text header__button--bg-green"
-                    >
-                        Login
-                    </button>
+                        <button
+                              class="header__button header__button--text header__button--bg-orange"
+                          >
+                              Suscribe
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                          >
+                              Login
+                          </button>
                 </div>
                 <div class="header__nav-buttons">
                     <div>
@@ -95,19 +95,21 @@
                     class="footer__image"
                 />
             </div>
-            <div class="footer__content">
+           <div class="footer__content">
                 <div class="footer__list">
                     <div class="footer__list-item">
-                        <a href="#frequent-questions"> Preguntas frecuentes </a>
-                        <a href="privacy.html">Privacidad</a>
+                        <a href="#frequent-questions">
+                            FAQ
+                        </a>
+                        <a href="contenidos_us.aspx?t=privacidad" target="_blank">Privacy</a>
                     </div>
                     <div class="footer__list-item">
-                        <a href="help-center.html">Centro de Ayuda</a>
-                        <a href="#">Avisos Legales</a>
+                        <a href="centro_ayuda_us.aspx" target="_blank">Help Center</a>
+                         <a href="contenidos_us.aspx?t=avisos legales" target="_blank">Legal Notices</a>
                     </div>
                     <div class="footer__list-item">
-                        <a href="#">T&eacute;rminos de uso</a>
-                        <a href="contacts.html">Contacto</a>
+                        <a href="contenidos_us.aspx?t=terminos de uso" target="_blank">Terms of Use</a>
+                        <a href="contacto_us.aspx" target="_blank">Contacto</a>
                     </div>
                 </div>
                 <div class="footer__data">
@@ -116,41 +118,19 @@
                             <span>+(591) 75874441</span>
                         </div>
                         <div class="social-media">
-                            <a href="#" class="social-media__link">
-                                <img
-                                    src="imgs/logos/social-media/black/facebook.svg"
-                                    alt="Facebook"
-                                    class="social-media__img"
-                                />
-                            </a>
-                            <a href="#" class="social-media__link">
-                                <img
-                                    src="imgs/logos/social-media/black/x.svg"
-                                    alt="X"
-                                    class="social-media__img"
-                                />
-                            </a>
-                            <a href="#" class="social-media__link">
-                                <img
-                                    src="imgs/logos/social-media/black/Instagram.svg"
-                                    alt="Instagram"
-                                    class="social-media__img"
-                                />
-                            </a>
-                            <a href="#" class="social-media__link">
-                                <img
-                                    src="imgs/logos/social-media/black/linkedln.svg"
-                                    alt="Linkedln"
-                                    class="social-media__img"
-                                />
-                            </a>
-                            <a href="#" class="social-media__link">
-                                <img
-                                    src="imgs/logos/social-media/black/whatsapp.svg"
-                                    alt="Whatsapp"
-                                    class="social-media__img"
-                                />
-                            </a>
+                             <asp:Repeater ID="Repeater5" DataSourceID="odsRedesSociales" runat="server">
+                                    <ItemTemplate>
+                                         <a href="<%# Eval("url") %>"  target="_blank" class="social-media__link">
+                                             <img
+                                                 src='<%# "imgs/logos/" + Eval("red_social") + ".svg" %>'
+                                                 alt='<%# Eval("red_social") %>'
+                                                 class="social-media__img"
+                                             />
+                                         </a>
+ 
+                                    </ItemTemplate>
+                             </asp:Repeater>
+               
                         </div>
                     </div>
                     <div class="footer__copyright">

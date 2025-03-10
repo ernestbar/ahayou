@@ -80,11 +80,11 @@
         </header>
         <main class="main main--form">
             <div class="form-wrapper">
-                <h1 class="form__title">Cont&aacute;ctanos</h1>
+                <h1 class="form__title">Contact us</h1>
                 <asp:Panel runat="server" CssClass="form">
                     <label for="problem" class="form__label">
-                        Si nos das m&aacute;s informaci&oacute;n, encontraremos
-                        la soluci&oacute;n adecuada
+                       
+                    If you give us more information, we will find the most suitable solution.
                     </label>
                     <div class="form__input-container">
                         <input

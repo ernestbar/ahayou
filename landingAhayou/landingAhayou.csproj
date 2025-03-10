@@ -493,6 +493,7 @@
     <Content Include="js\footer-visited-color.js" />
     <Content Include="js\header-background-handler.js" />
     <Content Include="js\header-movies-responsive.js" />
+    <Content Include="js\movie-container-hover.js" />
     <Content Include="js\open-accordion-image.js" />
     <Content Include="js\open-menu.js" />
     <Content Include="js\web-app-title.js" />

@@ -81,10 +81,10 @@
         </header>
         <main class="main main--form">
             <div class="form-wrapper">
-                <h1 class="form__title">Centro de ayuda</h1>
+                <h1 class="form__title">Help center</h1>
                 <asp:Panel runat="server" CssClass="form">
                     <label for="question" class="form__label">
-                        ¿C&oacute;mo podemos ayudar?
+                        How can I help you?
                     </label>
                     <div class="form__input-container">
                         <input
