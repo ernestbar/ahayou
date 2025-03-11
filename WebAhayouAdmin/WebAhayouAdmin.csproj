@@ -13882,6 +13882,7 @@
     <Content Include="cambiar_password.aspx" />
     <Content Include="clasificacion_contenido_admin.aspx" />
     <Content Include="contenidos_admin.aspx" />
+    <Content Include="contenido_str_admin.aspx" />
     <Content Include="contenido_temporadas_admin.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
@@ -14190,6 +14191,13 @@
     </Compile>
     <Compile Include="contenidos_admin.aspx.designer.cs">
       <DependentUpon>contenidos_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contenido_str_admin.aspx.cs">
+      <DependentUpon>contenido_str_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenido_str_admin.aspx.designer.cs">
+      <DependentUpon>contenido_str_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="contenido_temporadas_admin.aspx.cs">
       <DependentUpon>contenido_temporadas_admin.aspx</DependentUpon>

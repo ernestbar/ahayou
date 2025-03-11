@@ -18,9 +18,14 @@ namespace WebAhayouAdmin.Clases
         public string PV_COD_CONTENIDO_STR { get; set; }
         public string PV_NOMBRE_CONTENIDO { get; set; }
         public int PI_COD_FORMATO_CONTENIDO { get; set; }
+        public string FORMATO_CONTENIDO { get; set; }
         public string PV_COD_CLASIFIFICACION_CONTENIDO { get; set; }
+        public string CLASIFICACION_CONTENIDO { get; set; }
         public string PV_COD_GENERO { get; set; }
+        public string GENERO { get; set; }
+
         public string PV_COD_CLASIFICACION_PUBLICO { get; set; }
+        public string CLASIFICACION_PUBLICO { get; set; }
         public string PV_GESTION { get; set; }
         public string PV_ES_TEMPORADA { get; set; }
         public int PI_TEMPORADAS { get; set; }
@@ -34,7 +39,9 @@ namespace WebAhayouAdmin.Clases
         public string PV_DIRECTOR { get; set; }
         public string PV_REPARTO { get; set; }
         public string PV_NACIONALIDAD { get; set; }
+        public string PV_NACIONALIDAD_DESC { get; set; }
         public string PV_IDIOMA_ORIGINAL { get; set; }
+        public string PV_IDIOMA_ORIGINAL_DESC { get; set; }
         public string PV_ES_SUBTITULADA { get; set; }
         public string PV_CREDITOS { get; set; }
         public string PV_FOTO_VERTICAL { get; set; }
@@ -44,6 +51,7 @@ namespace WebAhayouAdmin.Clases
         public DateTime PD_FECHA_PUBLICACION { get; set; }
         public string PV_ESTADO_CONTENIDO { get; set; }
         public string PV_COD_PRODUCTORA { get; set; }
+        public string PRODUCTORA { get; set; }
         public string PV_ES_GRATUITA { get; set; }
         public string PV_USUARIO { get; set; }
         public string PV_ESTADOPR { get; set; }
@@ -172,36 +180,146 @@ namespace WebAhayouAdmin.Clases
                         foreach (DataRow dr in dataTable.Rows)
                         {
                             //PB_AVATAR = (string)dr["AVATAR"];
-                            PV_NOMBRE_CONTENIDO = (string)dr["nombre_contenido"];
-                            PI_COD_FORMATO_CONTENIDO = int.Parse(dr["cod_formato_contenido"].ToString());
-                            PV_COD_CLASIFIFICACION_CONTENIDO = (string)dr["cod_clasifificacion_contenido"];
-                            PV_COD_GENERO = (string)dr["cod_genero"];
-                            PV_COD_CLASIFICACION_PUBLICO = (string)dr["cod_clasificacion_publico"];
-                            PV_GESTION = (string)dr["gestion"];
-                            PV_ES_TEMPORADA = (string)dr["es_temporada"];
-                            PI_TEMPORADAS = int.Parse(dr["temporadas"].ToString());
-                            PV_TIEMPO_HORA = (string)dr["tiempo_hora"];
-                            PV_TIEMPO_MINUTOS = (string)dr["tiempo_minutos"];
-                            PV_TIPO_AUDIO = (string)dr["cod_tipo_audio"];
-                            PV_STORY_LINE = (string)dr["story_line"];
-                            PV_STORY_LINE_INGLES = (string)dr["story_line_ingles"];
-                            PV_SINOPSIS = (string)dr["sinopsis"];
-                            PV_SINOPSIS_INGLES = (string)dr["sinopsis_ingles"];
-                            PV_DIRECTOR = (string)dr["director"];
-                            PV_REPARTO = (string)dr["reparto"];
-                            PV_NACIONALIDAD = (string)dr["cod_nacionalidad"];
-                            PV_IDIOMA_ORIGINAL = (string)dr["cod_idioma_original"];
-                            PV_ES_SUBTITULADA = (string)dr["es_subtitulada"];
-                            PV_CREDITOS = (string)dr["creditos"];
-                            PV_FOTO_VERTICAL = (string)dr["foto_vertical"];
-                            PV_FOTO_HORIZONTAL = (string)dr["foto_horizontal"];
-                            PV_FOTO_MINIATURA = (string)dr["foto_miniatura"];
-                            PV_TITULO = (string)dr["titulo"];
-                            PD_FECHA_PUBLICACION = DateTime.Parse( dr["fecha_publicacion"].ToString());
-                            PV_ESTADO_CONTENIDO = (string)dr["cod_estado_contenido"];
-                            PV_COD_PRODUCTORA= (string)dr["cod_productora"];
-                            PV_ES_GRATUITA= (string)dr["es_gratuita"];
-                            
+                            if (string.IsNullOrEmpty(dr["nombre_contenido"].ToString()))
+                                PV_NOMBRE_CONTENIDO = "";
+                            else
+                                PV_NOMBRE_CONTENIDO = (string)dr["nombre_contenido"];
+                            if (string.IsNullOrEmpty(dr["cod_formato_contenido"].ToString()))
+                                PI_COD_FORMATO_CONTENIDO = 0;
+                            else
+                                PI_COD_FORMATO_CONTENIDO = int.Parse(dr["cod_formato_contenido"].ToString());
+                            if (string.IsNullOrEmpty(dr["formato_contenido"].ToString()))
+                                FORMATO_CONTENIDO = "";
+                            else
+                                FORMATO_CONTENIDO = (string)dr["formato_contenido"];
+                            if (string.IsNullOrEmpty(dr["cod_clasifificacion_contenido"].ToString()))
+                                PV_COD_CLASIFIFICACION_CONTENIDO = "";
+                            else
+                                PV_COD_CLASIFIFICACION_CONTENIDO = (string)dr["cod_clasifificacion_contenido"];
+                            if (string.IsNullOrEmpty(dr["clasifificacion_contenido"].ToString()))
+                                CLASIFICACION_CONTENIDO = "";
+                            else
+                                CLASIFICACION_CONTENIDO = (string)dr["clasifificacion_contenido"];
+                            if (string.IsNullOrEmpty(dr["cod_genero"].ToString()))
+                                PV_COD_GENERO = "";
+                            else
+                                PV_COD_GENERO = (string)dr["cod_genero"];
+                            if (string.IsNullOrEmpty(dr["genero"].ToString()))
+                                GENERO = "";
+                            else
+                                GENERO = (string)dr["genero"];
+                            if (string.IsNullOrEmpty(dr["cod_clasificacion_publico"].ToString()))
+                                PV_COD_CLASIFICACION_PUBLICO = "";
+                            else
+                                PV_COD_CLASIFICACION_PUBLICO = (string)dr["cod_clasificacion_publico"];
+                            if (string.IsNullOrEmpty(dr["clasificacion_publico"].ToString()))
+                                CLASIFICACION_PUBLICO = "";
+                            else
+                                CLASIFICACION_PUBLICO = (string)dr["clasificacion_publico"];
+                            if (string.IsNullOrEmpty(dr["gestion"].ToString()))
+                                PV_GESTION = "";
+                            else
+                                PV_GESTION = (string)dr["gestion"];
+                            if (string.IsNullOrEmpty(dr["es_temporada"].ToString()))
+                                PV_ES_TEMPORADA = "";
+                            else
+                                PV_ES_TEMPORADA = (string)dr["es_temporada"];
+                            if (string.IsNullOrEmpty(dr["temporadas"].ToString()))
+                                PI_TEMPORADAS = 0;
+                            else
+                                PI_TEMPORADAS = int.Parse(dr["temporadas"].ToString());
+                            if (string.IsNullOrEmpty(dr["tiempo_hora"].ToString()))
+                                PV_TIEMPO_HORA = "";
+                            else
+                                PV_TIEMPO_HORA = (string)dr["tiempo_hora"];
+                            if (string.IsNullOrEmpty(dr["tiempo_minutos"].ToString()))
+                                PV_TIEMPO_MINUTOS = "";
+                            else
+                                PV_TIEMPO_MINUTOS = (string)dr["tiempo_minutos"];
+                            if (string.IsNullOrEmpty(dr["cod_tipo_audio"].ToString()))
+                                PV_TIPO_AUDIO = "";
+                            else
+                                PV_TIPO_AUDIO = (string)dr["cod_tipo_audio"];
+                            if (string.IsNullOrEmpty(dr["story_line"].ToString()))
+                                PV_STORY_LINE = "";
+                            else
+                                PV_STORY_LINE = (string)dr["story_line"];
+                            if (string.IsNullOrEmpty(dr["story_line_ingles"].ToString()))
+                                PV_STORY_LINE_INGLES = "";
+                            else
+                                PV_STORY_LINE_INGLES = (string)dr["story_line_ingles"];
+                            if (string.IsNullOrEmpty(dr["sinopsis"].ToString()))
+                                PV_SINOPSIS = "";
+                            else
+                                PV_SINOPSIS = (string)dr["sinopsis"];
+                            if (string.IsNullOrEmpty(dr["sinopsis_ingles"].ToString()))
+                                PV_SINOPSIS_INGLES = "";
+                            else
+                                PV_SINOPSIS_INGLES = (string)dr["sinopsis_ingles"];
+                            if (string.IsNullOrEmpty(dr["director"].ToString()))
+                                PV_DIRECTOR = "";
+                            else
+                                PV_DIRECTOR = (string)dr["director"];
+                            if (string.IsNullOrEmpty(dr["reparto"].ToString()))
+                                PV_REPARTO = "";
+                            else
+                                PV_REPARTO = (string)dr["reparto"];
+                            if (string.IsNullOrEmpty(dr["cod_nacionalidad"].ToString()))
+                                PV_NACIONALIDAD = "";
+                            else
+                                PV_NACIONALIDAD = (string)dr["cod_nacionalidad"];
+                            if (string.IsNullOrEmpty(dr["nacionalidad"].ToString()))
+                                PV_NACIONALIDAD_DESC = "";
+                            else
+                                PV_NACIONALIDAD_DESC = (string)dr["nacionalidad"];
+                            if (string.IsNullOrEmpty(dr["cod_idioma_original"].ToString()))
+                                PV_IDIOMA_ORIGINAL = "";
+                            else
+                                PV_IDIOMA_ORIGINAL = (string)dr["cod_idioma_original"];
+                            if (string.IsNullOrEmpty(dr["idioma_original"].ToString()))
+                                PV_IDIOMA_ORIGINAL_DESC = "";
+                            else
+                                PV_IDIOMA_ORIGINAL_DESC = (string)dr["idioma_original"];
+                            if (string.IsNullOrEmpty(dr["es_subtitulada"].ToString()))
+                                PV_ES_SUBTITULADA = "";
+                            else
+                                PV_ES_SUBTITULADA = (string)dr["es_subtitulada"];
+                            if (string.IsNullOrEmpty(dr["creditos"].ToString()))
+                                PV_CREDITOS = "";
+                            else
+                                PV_CREDITOS = (string)dr["creditos"];
+                            if (string.IsNullOrEmpty(dr["foto_vertical"].ToString()))
+                                PV_FOTO_VERTICAL = "";
+                            else
+                                PV_FOTO_VERTICAL = (string)dr["foto_vertical"];
+                            if (string.IsNullOrEmpty(dr["foto_horizontal"].ToString()))
+                                PV_FOTO_HORIZONTAL = "";
+                            else
+                                PV_FOTO_HORIZONTAL = (string)dr["foto_horizontal"];
+                            if (string.IsNullOrEmpty(dr["foto_miniatura"].ToString()))
+                                PV_FOTO_MINIATURA = "";
+                            else
+                                PV_FOTO_MINIATURA = (string)dr["foto_miniatura"];
+                            if (string.IsNullOrEmpty(dr["titulo"].ToString()))
+                                PV_TITULO = "";
+                            else
+                                PV_TITULO = (string)dr["titulo"];
+                            if (string.IsNullOrEmpty(dr["fecha_publicacion"].ToString()))
+                                PD_FECHA_PUBLICACION = DateTime.Parse("3000/01/01");
+                            else
+                                PD_FECHA_PUBLICACION = (DateTime)dr["fecha_publicacion"];
+                            if (string.IsNullOrEmpty(dr["cod_estado_contenido"].ToString()))
+                                PV_ESTADO_CONTENIDO = "";
+                            else
+                                PV_ESTADO_CONTENIDO = (string)dr["cod_estado_contenido"];
+                            if (string.IsNullOrEmpty(dr["cod_productora"].ToString()))
+                                PV_COD_PRODUCTORA = "";
+                            else
+                                PV_COD_PRODUCTORA = (string)dr["cod_productora"];
+                            if (string.IsNullOrEmpty(dr["es_gratuita"].ToString()))
+                                PV_ES_GRATUITA = "";
+                            else
+                                PV_ES_GRATUITA = (string)dr["es_gratuita"];
                         }
 
                     }

@@ -255,7 +255,7 @@
                                     </div>
                                    <div class="plans__item-price container-common">
                                         <div>
-                                            <span class="bs">$us</span>
+                                            <span class="bs"><%# Eval("moneda") %><</span>
                                             <div class="price__content">
                                                 <span class="price__description">single Payment</span>
                                                 <span class="price__number"><%# Eval("monto") %></span>
