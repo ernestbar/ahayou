@@ -53,7 +53,7 @@
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
         </asp:ObjectDataSource>
-        <asp:Label ID="lblMundo" runat="server" Visible="false" Text="RM"></asp:Label>
+        <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
          <header class="header header--main" id="header__movies">
             <nav class="header__nav">
                 <a href="home_us.aspx" class="header__logo">
