@@ -22,7 +22,7 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    MultiView1.ActiveViewIndex = 0;
+                    MultiView1.ActiveViewIndex = 1;
                     lblUsuario.Text = Session["usuario"].ToString();
                     btnNuevo.Visible = false;
                     lblCodMenuRol.Text = Request.QueryString["RME"].ToString();
@@ -238,16 +238,16 @@ namespace WebAhayouAdmin
             lblCreditos.Text = obj_c.PV_CREDITOS;
 
             if(obj_c.PV_FOTO_HORIZONTAL!="")
-                imgHorizontal.ImageUrl="~/fotos_peliculas/"+id+"/" + obj_c.PV_FOTO_HORIZONTAL;
+                imgHorizontal.ImageUrl= obj_c.PV_FOTO_HORIZONTAL;
 
             if (obj_c.PV_FOTO_VERTICAL != "")
-                imgVertical.ImageUrl = "~/fotos_peliculas/" + id + "/" + obj_c.PV_FOTO_VERTICAL;
+                imgVertical.ImageUrl = obj_c.PV_FOTO_VERTICAL;
 
             if (obj_c.PV_FOTO_MINIATURA != "")
-                imgMiniatura.ImageUrl = "~/fotos_peliculas/" + id + "/" + obj_c.PV_FOTO_MINIATURA;
+                imgMiniatura.ImageUrl = obj_c.PV_FOTO_MINIATURA;
             
             if (obj_c.PV_TITULO != "")
-                imgTitulo.ImageUrl = "~/fotos_peliculas/" + id + "/" + obj_c.PV_TITULO;
+                imgTitulo.ImageUrl =  obj_c.PV_TITULO;
 
         }
     }

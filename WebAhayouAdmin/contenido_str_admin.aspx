@@ -197,40 +197,129 @@
 						<!-- END panel-body -->
         </asp:View>
 		 <asp:View ID="View2" runat="server">
+			 
 			<!-- begin row -->
 			<div class="row">
 				<!-- begin col-8 -->
-				<div class="col-md-6 offset-md-2">
+				<div class="col-md-12 offset-md-0">
 					
-					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16">Registro de clasifiacion contenido</legend>
+					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16">Registro de contenido streaming</legend>
+					<!-- BEGIN #accordion -->
+						<div class="accordion" id="accordion">
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingOne">
+									<button class="accordion-button bg-gray-900 text-white px-3 py-10px pointer-cursor" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+										<i class="fa fa-circle fa-fw text-blue me-2 fs-8px"></i> Collapsible Group Item #1
+									</button>
+								</div>
+								<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										<!-- begin form-group row -->
+											<div class="form-group row m-b-10">
+															<label class="col-md-3 text-md-right col-form-label">Codigo clasificacion contenido:</label>
+															<div class="col-md-6">
+													 <asp:TextBox ID="txtCodigo" Enabled="false" class="form-control" runat="server"></asp:TextBox>
+																<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodigo" Font-Bold="True"></asp:RequiredFieldValidator>--%>
+															</div>
+											</div>
+											<!-- end form-group row -->
+											<!-- begin form-group row -->
+											<div class="form-group row m-b-10">
+																		<label class="col-md-3 text-md-right col-form-label">Formato contenido:</label>
+																		<div class="col-md-6">
+																 <asp:TextBox ID="txtFormatoContenido" Enabled="false" class="form-control" runat="server"></asp:TextBox>
+																			<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodigo" Font-Bold="True"></asp:RequiredFieldValidator>--%>
+																		</div>
+											</div>
+											<!-- end form-group row -->
+											<!-- begin form-group row -->
+											<div class="form-group row m-b-10">
+																		<label class="col-md-3 text-md-right col-form-label">Clasificacion:</label>
+																		<div class="col-md-6">
+																			<%--<asp:DropDownList ID="ddlClasificacion" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacion" DataTextField="DESCRIPCION" DataValueField="CODIGO" OnDataBound="ddlClasificacion_DataBound" runat="server"></asp:DropDownList>
+																			<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlFormatoContenido" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	--%>
+																		</div>
+											</div>
+											<!-- end form-group row -->
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingTwo">
+									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+										<i class="fa fa-circle fa-fw text-indigo me-2 fs-8px"></i> Collapsible Group Item #2
+									</button>
+								</div>
+								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingThree">
+									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+										<i class="fa fa-circle fa-fw text-teal me-2 fs-8px"></i> Collapsible Group Item #3
+									</button>
+								</div>
+								<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingFour">
+									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+										<i class="fa fa-circle fa-fw text-info me-2 fs-8px"></i> Collapsible Group Item #4
+									</button>
+								</div>
+								<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingFive">
+									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+										<i class="fa fa-circle fa-fw text-warning me-2 fs-8px"></i> Collapsible Group Item #5
+									</button>
+								</div>
+								<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingSix">
+									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+										<i class="fa fa-circle fa-fw text-danger me-2 fs-8px"></i> Collapsible Group Item #6
+									</button>
+								</div>
+								<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item border-0">
+								<div class="accordion-header" id="headingSeven">
+									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+										<i class="fa fa-circle fa-fw text-muted me-2 fs-8px"></i> Collapsible Group Item #7
+									</button>
+								</div>
+								<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordion">
+									<div class="accordion-body bg-gray-800 text-white">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
 					
-					<!-- begin form-group row -->
-					<div class="form-group row m-b-10">
-						<label class="col-md-3 text-md-right col-form-label">Codigo clasificacion contenido:</label>
-						<div class="col-md-6">
-                             <asp:TextBox ID="txtCodigo" Enabled="false" class="form-control" runat="server"></asp:TextBox>
-							<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodigo" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 						</div>
-					</div>
-					<!-- end form-group row -->
-					<!-- begin form-group row -->
-					<div class="form-group row m-b-10">
-									<label class="col-md-3 text-md-right col-form-label">Formato contenido:</label>
-									<div class="col-md-6">
-							 <asp:TextBox ID="txtFormatoContenido" Enabled="false" class="form-control" runat="server"></asp:TextBox>
-										<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodigo" Font-Bold="True"></asp:RequiredFieldValidator>--%>
-									</div>
-					</div>
-					<!-- end form-group row -->
-					<!-- begin form-group row -->
-					<div class="form-group row m-b-10">
-									<label class="col-md-3 text-md-right col-form-label">Clasificacion:</label>
-									<div class="col-md-6">
-										<%--<asp:DropDownList ID="ddlClasificacion" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacion" DataTextField="DESCRIPCION" DataValueField="CODIGO" OnDataBound="ddlClasificacion_DataBound" runat="server"></asp:DropDownList>
-										<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlFormatoContenido" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	--%>
-									</div>
-					</div>
-					<!-- end form-group row -->
+						<!-- END #accordion -->
+					
 						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
 							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
 							<asp:Button ID="btnVolverAlta" CssClass="btn btn-success" BackColor="Transparent"  runat="server" CausesValidation="false" OnClick="btnVolverAlta_Click" Text="Cancelar" />
@@ -274,17 +363,17 @@
 										<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>--%>
 									</div>
 									<ul>
-										<li> Formato: <asp:Label ID="lblFormato" runat="server" Text="Label"></asp:Label></li>
-										<li> Clasificacion contenido: <asp:Label ID="lblClasificacionContenido" runat="server" Text=""></asp:Label></li>
-										<li> Genero: <asp:Label ID="lblGenero" runat="server" Text=""></asp:Label></li>
-										<li> Clasificacion publico: <asp:Label ID="lblClasificacionPublico" runat="server" Text=""></asp:Label></li>
-										<li> Gestion: <asp:Label ID="lblGestion" runat="server" Text=""></asp:Label></li>
-										<li> Tiempo: <asp:Label ID="lblTiempoHoras" runat="server" Text=""></asp:Label>: <asp:Label ID="lblTiempoMinutos" runat="server" Text=""></asp:Label></li>
-										<li> Audio: <asp:Label ID="lblAudio" runat="server" Text=""></asp:Label></li>
-										<li> Fecha de publicacion: <asp:Label ID="lblFechaPublicacion" runat="server" Text=""></asp:Label></li>
-										<li> Nacionalidad: <asp:Label ID="lblNacionalidad" runat="server" Text=""></asp:Label></li>
-										<li> Idioma Original: <asp:Label ID="lblIdiomaOriginal" runat="server" Text=""></asp:Label></li>
-										<li> Es subtitulada: <asp:Label ID="lblEsSubtitulada" runat="server" Text=""></asp:Label></li>
+										<li><strong>Formato:</strong>  <asp:Label ID="lblFormato" runat="server" Text="Label"></asp:Label></li>
+										<li><strong>Clasificacion contenido:</strong>  <asp:Label ID="lblClasificacionContenido" runat="server" Text=""></asp:Label></li>
+										<li><strong>Genero:</strong>  <asp:Label ID="lblGenero" runat="server" Text=""></asp:Label></li>
+										<li><strong>Clasificacion publico:</strong>  <asp:Label ID="lblClasificacionPublico" runat="server" Text=""></asp:Label></li>
+										<li><strong>Gestion:</strong>  <asp:Label ID="lblGestion" runat="server" Text=""></asp:Label></li>
+										<li><strong>Tiempo(hh:mm):</strong>  <asp:Label ID="lblTiempoHoras" runat="server" Text=""></asp:Label>: <asp:Label ID="lblTiempoMinutos" runat="server" Text=""></asp:Label></li>
+										<li><strong>Audio:</strong>  <asp:Label ID="lblAudio" runat="server" Text=""></asp:Label></li>
+										<li><strong>Fecha de publicacion:</strong>  <asp:Label ID="lblFechaPublicacion" runat="server" Text=""></asp:Label></li>
+										<li><strong>Nacionalidad:</strong>  <asp:Label ID="lblNacionalidad" runat="server" Text=""></asp:Label></li>
+										<li><strong>Idioma Original:</strong>  <asp:Label ID="lblIdiomaOriginal" runat="server" Text=""></asp:Label></li>
+										<li><strong>Es subtitulada:</strong>  <asp:Label ID="lblEsSubtitulada" runat="server" Text=""></asp:Label></li>
 									</ul>
 									<%--Color Admin Admin Template transformed our workflow. 
 									The customization options are unparalleled, and the support team is incredibly responsive.
@@ -350,7 +439,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-2 d-none d-xl-block"></div>
+					<%--<div class="col-xl-3 d-none d-xl-block"></div>--%>
 					<div class="col-xl-4 col-md-6">
 						<div class="card p-4 border-0 h-100 rounded-5">
 							<div class="d-flex align-items-center mb-3">
@@ -453,13 +542,13 @@
 								<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
 								<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>--%>
 							</div>
-						<strong>Foto vertical:</strong> <asp:Image ID="imgVertical" runat="server" />
+						<strong>Foto vertical:</strong> <asp:Image ID="imgVertical" runat="server" Height="100" />
 							<br /><br />
-						<strong>Foto horizontal:</strong> <asp:Image ID="imgHorizontal" runat="server" />
+						<strong>Foto horizontal:</strong> <asp:Image ID="imgHorizontal" runat="server" Width="100" />
 							<br /><br />
-						<strong>Foto miniatura:</strong> <asp:Image ID="imgMiniatura" runat="server" />
+						<strong>Foto miniatura:</strong> <asp:Image ID="imgMiniatura" runat="server" Width="100" />
 							<br /><br />
-						<strong>Foto Titulo:</strong> <asp:Image ID="imgTitulo" runat="server" />
+						<strong>Foto Titulo:</strong> <asp:Image ID="imgTitulo" runat="server" Height="50" BackColor="Black"/>
 						</div>
 						<div class="d-flex align-items-end">
 							<i class="fa fa-quote-right fa-2x text-body text-opacity-15"></i>
