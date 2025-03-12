@@ -16,6 +16,7 @@ namespace WebAhayouAdmin.Clases
         //Propiedades públicas
         public string PV_TIPO_OPERACION { get; set; }
         public string PV_COD_CONTENIDO_STR { get; set; }
+        public string PV_COD_CONTENIDO_STR_OUT { get; set; }
         public string PV_NOMBRE_CONTENIDO { get; set; }
         public int PI_COD_FORMATO_CONTENIDO { get; set; }
         public string FORMATO_CONTENIDO { get; set; }
@@ -340,11 +341,14 @@ namespace WebAhayouAdmin.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_PAR_ABM_AVATARES";
+                    cmd.CommandText = "PR_STR_ABM_GENERAR_CONTENIDO";
                     cmd.Parameters.AddWithValue("PV_TIPO_OPERACION", PV_TIPO_OPERACION);
+                    cmd.Parameters.AddWithValue("PV_COD_CONTENIDO_STR", PV_COD_CONTENIDO_STR);
+                    cmd.Parameters.AddWithValue("PV_NOMBRE_CONTENIDO", PV_NOMBRE_CONTENIDO);
                     cmd.Parameters.AddWithValue("PI_COD_FORMATO_CONTENIDO", PI_COD_FORMATO_CONTENIDO);
                     cmd.Parameters.AddWithValue("PV_COD_CLASIFIFICACION_CONTENIDO", PV_COD_CLASIFIFICACION_CONTENIDO);
-                    cmd.Parameters.AddWithValue("@PV_COD_CLASIFICACION_PUBLICO", @PV_COD_CLASIFICACION_PUBLICO);
+                    cmd.Parameters.AddWithValue("PV_COD_GENERO", PV_COD_GENERO);
+                    cmd.Parameters.AddWithValue("PV_COD_CLASIFICACION_PUBLICO", @PV_COD_CLASIFICACION_PUBLICO);
                     cmd.Parameters.AddWithValue("PV_GESTION", PV_GESTION);
                     cmd.Parameters.AddWithValue("PV_ES_TEMPORADA", PV_ES_TEMPORADA);
                     cmd.Parameters.AddWithValue("PI_TEMPORADAS", PI_TEMPORADAS);
@@ -373,6 +377,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("PV_DESCRIPCIONPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("PV_ERROR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("PV_COD_CONTENIDO_STR_OUT", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Connection = conn;
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -383,6 +388,10 @@ namespace WebAhayouAdmin.Clases
                         PV_ERROR = "";
                     else
                         PV_ERROR = (string)cmd.Parameters["PV_ERROR"].Value;
+                    if (string.IsNullOrEmpty(cmd.Parameters["PV_COD_CONTENIDO_STR_OUT"].Value.ToString()))
+                        PV_COD_CONTENIDO_STR_OUT = "";
+                    else
+                        PV_COD_CONTENIDO_STR_OUT = (string)cmd.Parameters["PV_COD_CONTENIDO_STR_OUT"].Value;
                     conn.Close();
                 }
 

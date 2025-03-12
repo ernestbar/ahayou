@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,9 +13,48 @@ namespace WebAhayouAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                //string pais = GetCountryFromRequest();
+                //if (pais == "BO")
+                //    lblMundo.Text = "BO";
+                //else
+                //    lblMundo.Text = "RM";
 
+                //Repeater2.DataBind();
+
+
+            }
         }
+        private string GetCountryFromRequest()
+        {
+            string clientIP = GetClientIpAddress();
 
+            using (var client = new HttpClient())
+            {
+                var response = client.GetAsync("http://ipinfo.io/" + clientIP + "/json").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        var json = response.Content.ReadAsStringAsync().Result;
+                        var data = JObject.Parse(json);
+                        return (data["country"] == null) ? "Unknown" : data["country"].ToString();
+                    }
+                    catch
+                    {
+                        return "Unknown";
+                    }
+                }
+            }
+
+            return "Unknown";
+        }
+        private string GetClientIpAddress()
+        {
+            // ... Helper function from previous examples ...
+            return Request.UserHostAddress;
+        }
         protected void Repeater1_DataBinding(object sender, EventArgs e)
         {
 

@@ -65,6 +65,52 @@
 			<asp:Parameter DefaultValue="CLASIFICACION" Name="pV_DOMINIO" />
 	</SelectParameters>--%>
 </asp:ObjectDataSource>
+		<asp:ObjectDataSource ID="odsFormato" runat="server" SelectMethod="PR_STR_GET_FORMATO_CONTENIDO" TypeName="WebAhayouAdmin.Clases.Formatos_contenido">
+</asp:ObjectDataSource>
+		<asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_STR" TypeName="WebAhayouAdmin.Clases.Contenidos_streaming">
+	</asp:ObjectDataSource>
+	   <asp:ObjectDataSource ID="odsClasificacionContenido" runat="server" SelectMethod="PR_STR_GET_CLASIFICACION_CONTENIDO" TypeName="WebAhayouAdmin.Clases.Clasificacion_contenidos">
+	   <SelectParameters>
+			<asp:ControlParameter ControlID="ddlFormato" Name="pB_COD_FORMATO_CONTENIDO" />
+	</SelectParameters>
+</asp:ObjectDataSource>
+		   <asp:ObjectDataSource ID="odsGenero" runat="server" SelectMethod="PR_STR_GET_LISTA_GENERO_CONTENIDO" TypeName="WebAhayouAdmin.Clases.Genero_contenidos">
+	   <SelectParameters>
+			<asp:ControlParameter ControlID="ddlFormato" Name="pB_COD_FORMATO_CONTENIDO" />
+	</SelectParameters>
+</asp:ObjectDataSource>
+	<asp:ObjectDataSource ID="odsProductoras" runat="server" SelectMethod="PR_PAR_GET_PRODUCTORA" TypeName="WebAhayouAdmin.Clases.Productoras">
+</asp:ObjectDataSource>
+   <asp:ObjectDataSource ID="odsClasificacionPublico" runat="server" SelectMethod="PR_PAR_GET_DOMINIOS" TypeName="WebAhayouAdmin.Clases.Dominios">
+   <SelectParameters>
+		<asp:Parameter DefaultValue="CALIFICACION PUBLICO" Name="pV_DOMINIO" />
+</SelectParameters>
+	   </asp:ObjectDataSource>
+	   <asp:ObjectDataSource ID="odsOpcion" runat="server" SelectMethod="PR_PAR_GET_DOMINIOS" TypeName="WebAhayouAdmin.Clases.Dominios">
+   <SelectParameters>
+		<asp:Parameter DefaultValue="OPCION" Name="pV_DOMINIO" />
+</SelectParameters>
+	   </asp:ObjectDataSource>
+		   <asp:ObjectDataSource ID="odsTipoAudio" runat="server" SelectMethod="PR_PAR_GET_DOMINIOS" TypeName="WebAhayouAdmin.Clases.Dominios">
+   <SelectParameters>
+		<asp:Parameter DefaultValue="TIPO AUDIO" Name="pV_DOMINIO" />
+</SelectParameters>
+	   </asp:ObjectDataSource>
+			   <asp:ObjectDataSource ID="odsNAcionalidad" runat="server" SelectMethod="PR_PAR_GET_DOMINIOS" TypeName="WebAhayouAdmin.Clases.Dominios">
+   <SelectParameters>
+		<asp:Parameter DefaultValue="NACIONALIDAD" Name="pV_DOMINIO" />
+</SelectParameters>
+	   </asp:ObjectDataSource>
+			   <asp:ObjectDataSource ID="odsIdiomaOriginal" runat="server" SelectMethod="PR_PAR_GET_DOMINIOS" TypeName="WebAhayouAdmin.Clases.Dominios">
+   <SelectParameters>
+		<asp:Parameter DefaultValue="IDIOMA ORIGINAL" Name="pV_DOMINIO" />
+</SelectParameters>
+	   </asp:ObjectDataSource>
+				   <asp:ObjectDataSource ID="odsEstadoContenido" runat="server" SelectMethod="PR_PAR_GET_DOMINIOS" TypeName="WebAhayouAdmin.Clases.Dominios">
+   <SelectParameters>
+		<asp:Parameter DefaultValue="ESTADO CONTENIDO" Name="pV_DOMINIO" />
+</SelectParameters>
+	   </asp:ObjectDataSource>
     <!-- begin #content -->
 		<div class="app-content" style="position: relative;border-radius:30px;
     background: rgba(255, 255, 255, 0.2);
@@ -209,127 +255,338 @@
 							<div class="accordion-item border-0">
 								<div class="accordion-header" id="headingOne">
 									<button class="accordion-button bg-gray-900 text-white px-3 py-10px pointer-cursor" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-										<i class="fa fa-circle fa-fw text-blue me-2 fs-8px"></i> Collapsible Group Item #1
+										<i class="fa fa-circle fa-fw text-blue me-2 fs-8px"></i> DATOS GENERALES
 									</button>
 								</div>
 								<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
 									<div class="accordion-body bg-gray-800 text-white">
 										<!-- begin form-group row -->
 											<div class="form-group row m-b-10">
-															<label class="col-md-3 text-md-right col-form-label">Codigo clasificacion contenido:</label>
+																					<label class="col-md-3 text-md-right col-form-label">Nombre contenido streaming:</label>
+																					<div class="col-md-6">
+																			 <asp:TextBox ID="txtNombreContenido" Enabled="true" class="form-control" runat="server"></asp:TextBox>
+																						<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtNombreContenido" Font-Bold="True"></asp:RequiredFieldValidator>
+																					</div>
+											</div>
+											<!-- end form-group row -->
+											<!-- begin form-group row -->
+											<div class="form-group row m-b-10">
+															<label class="col-md-3 text-md-right col-form-label">Formato contenido:</label>
 															<div class="col-md-6">
-													 <asp:TextBox ID="txtCodigo" Enabled="false" class="form-control" runat="server"></asp:TextBox>
-																<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodigo" Font-Bold="True"></asp:RequiredFieldValidator>--%>
+																<asp:DropDownList ID="ddlFormato" class="form-select-lg col-lg-6" AutoPostBack="true"  DataSourceID="odsFormato" DataTextField="FORMATO_CONTENIDO" DataValueField="COD_FORMATO_CONTENIDO" OnDataBound="ddlFormato_DataBound" runat="server"></asp:DropDownList>
+																<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlFormato" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
 															</div>
 											</div>
 											<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Clasificacion contenido:</label>
+													<div class="col-md-6">
+														<asp:DropDownList ID="ddlClasificacionContenido" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacionContenido" DataTextField="CLASIFICACION" DataValueField="COD_CLASIFIFICACION_CONTENIDO" OnDataBound="ddlClasificacionContenido_DataBound" runat="server"></asp:DropDownList>
+														<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlClasificacionContenido" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+													</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Clasificacion contenido publico:</label>
+												<div class="col-md-6">
+															<asp:DropDownList ID="ddlClasificacionPublico" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacionPublico" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlClasificacionPublico_DataBound" runat="server"></asp:DropDownList>
+															<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlClasificacionPublico" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Tipo audio:</label>
+												<div class="col-md-6">
+															<asp:DropDownList ID="ddlTipoAudio" class="form-select-lg col-lg-6"  DataSourceID="odsTipoAudio" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlTipoAudio_DataBound" runat="server"></asp:DropDownList>
+															<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlTipoAudio" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Nacionalidad:</label>
+												<div class="col-md-6">
+															<asp:DropDownList ID="ddlNacionalidad" class="form-select-lg col-lg-6"  DataSourceID="odsNacionalidad" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlNacionalidad_DataBound" runat="server"></asp:DropDownList>
+															<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlNacionalidad" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Idioma original:</label>
+												<div class="col-md-6">
+															<asp:DropDownList ID="ddlIdiomaOriginal" class="form-select-lg col-lg-6"  DataSourceID="odsIdiomaOriginal" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlIdiomaOriginal_DataBound" runat="server"></asp:DropDownList>
+															<asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlIdiomaOriginal" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Es subtitulada?:</label>
+												<div class="col-md-6">
+													<asp:DropDownList ID="ddlEsSubtitulada" class="form-select-lg col-lg-6"  DataSourceID="odsOpcion" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlEsSubtitulada_DataBound" runat="server"></asp:DropDownList>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlIdiomaOriginal" InitialValue="ddlEsSubtitulada"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
 											<!-- begin form-group row -->
 											<div class="form-group row m-b-10">
-																		<label class="col-md-3 text-md-right col-form-label">Formato contenido:</label>
-																		<div class="col-md-6">
-																 <asp:TextBox ID="txtFormatoContenido" Enabled="false" class="form-control" runat="server"></asp:TextBox>
-																			<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCodigo" Font-Bold="True"></asp:RequiredFieldValidator>--%>
-																		</div>
+												<label class="col-md-3 text-md-right col-form-label">Gestion:</label>
+														<div class="col-md-1">
+															 <asp:TextBox ID="txtGestion" Enabled="true" TextMode="Number" class="form-control" Text="2000" runat="server"></asp:TextBox>
+															<asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtGestion" Font-Bold="True"></asp:RequiredFieldValidator>
+													</div>
+											</div>
+											<!-- end form-group row -->
+										<!-- begin form-group row -->
+											<div class="form-group row m-b-10">
+												<label class="col-md-3 text-md-right col-form-label">Duracion(hh:mm):</label>
+													<div class="col-md-1">
+														 <asp:TextBox ID="txtHoras" Enabled="true"  class="form-control" Text="00" runat="server"></asp:TextBox>
+														<asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtHoras" Font-Bold="True"></asp:RequiredFieldValidator>
+													</div>
+													<div class="col-md-1">
+														<asp:TextBox ID="txtMinutos" Enabled="true" class="form-control" Text="00" runat="server"></asp:TextBox>
+															<asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtMinutos" Font-Bold="True"></asp:RequiredFieldValidator>
+													</div>
 											</div>
 											<!-- end form-group row -->
 											<!-- begin form-group row -->
 											<div class="form-group row m-b-10">
-																		<label class="col-md-3 text-md-right col-form-label">Clasificacion:</label>
+																		<label class="col-md-3 text-md-right col-form-label">Genero:</label>
 																		<div class="col-md-6">
+																			<asp:CheckBoxList ID="cblGenero" CssClass="form-check" DataSourceID="odsGenero" DataTextField="genero" DataValueField="cod_genero" RepeatColumns="4" RepeatDirection="Horizontal" runat="server"></asp:CheckBoxList>
 																			<%--<asp:DropDownList ID="ddlClasificacion" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacion" DataTextField="DESCRIPCION" DataValueField="CODIGO" OnDataBound="ddlClasificacion_DataBound" runat="server"></asp:DropDownList>
 																			<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlFormatoContenido" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	--%>
 																		</div>
 											</div>
 											<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Es Gratuita?:</label>
+												<div class="col-md-6">
+													<asp:DropDownList ID="ddlEsGratis" class="form-select-lg col-lg-6"  DataSourceID="odsOpcion" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlEsGratis_DataBound" runat="server"></asp:DropDownList>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlEsGratis" InitialValue="ddlEsSubtitulada"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Productora:</label>
+												<div class="col-md-6">
+													<asp:DropDownList ID="ddlProductora" class="form-select-lg col-lg-6"  DataSourceID="odsProductoras" DataTextField="descripcion" DataValueField="cod_productora" OnDataBound="ddlProductora_DataBound" runat="server"></asp:DropDownList>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlProductora" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+														<label class="col-md-3 text-md-right col-form-label">Fecha de publicacion:</label>
+														<div class="col-md-2">
+															<asp:Label ID="lblFechaDesde" Visible="false" runat="server" Text=""></asp:Label>
+															<input id="fecha_salida" class="form-control" onfocus="bloquear()" style="background:#ecf1fa" type="date"><asp:HiddenField ID="hfFechaSalida" runat="server" />
+														</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Estado contenido:</label>
+													<div class="col-md-6">
+														<asp:DropDownList ID="ddlEstadoContenido" class="form-select-lg col-lg-6"  DataSourceID="odsEstadoContenido" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlEstadoContenido_DataBound" runat="server"></asp:DropDownList>
+														<asp:RequiredFieldValidator ID="RequiredFieldValidator23" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlEstadoContenido" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+													</div>
+										</div>
+										<!-- end form-group row -->
 									</div>
 								</div>
 							</div>
 							<div class="accordion-item border-0">
 								<div class="accordion-header" id="headingTwo">
 									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-										<i class="fa fa-circle fa-fw text-indigo me-2 fs-8px"></i> Collapsible Group Item #2
+										<i class="fa fa-circle fa-fw text-indigo me-2 fs-8px"></i> TEMPORADAS
 									</button>
 								</div>
 								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
 									<div class="accordion-body bg-gray-800 text-white">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Tiene temporadas:</label>
+												<div class="col-md-6">
+													<asp:DropDownList ID="ddlEsTemporadas" class="form-select-lg col-lg-6"  DataSourceID="odsOpcion" DataTextField="descripcion" DataValueField="codigo" OnDataBound="ddlEsTemporadas_DataBound" runat="server"></asp:DropDownList>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlEsTemporadas" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
+												</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Cantidad de temporadas:</label>
+														<div class="col-md-6">
+													 <asp:TextBox ID="txtTemporadas" TextMode="Number" Enabled="true" class="form-control" Text="0" runat="server"></asp:TextBox>
+												<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtTemporadas" Font-Bold="True"></asp:RequiredFieldValidator>
+										</div>
+										</div>
+										<!-- end form-group row -->
 									</div>
 								</div>
 							</div>
 							<div class="accordion-item border-0">
 								<div class="accordion-header" id="headingThree">
 									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-										<i class="fa fa-circle fa-fw text-teal me-2 fs-8px"></i> Collapsible Group Item #3
+										<i class="fa fa-circle fa-fw text-teal me-2 fs-8px"></i> STORY LINES
 									</button>
 								</div>
 								<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
 									<div class="accordion-body bg-gray-800 text-white">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Story line:</label>
+												<div class="col-md-6">
+													 <asp:TextBox ID="txtStoryLine" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtStoryLine" Font-Bold="True"></asp:RequiredFieldValidator>
+										</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Story line ingles:</label>
+												<div class="col-md-6">
+													<asp:TextBox ID="txtStoryLineIngles" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtStoryLineIngles" Font-Bold="True"></asp:RequiredFieldValidator>
+											</div>
+										</div>
+										<!-- end form-group row -->
 									</div>
 								</div>
 							</div>
 							<div class="accordion-item border-0">
 								<div class="accordion-header" id="headingFour">
 									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-										<i class="fa fa-circle fa-fw text-info me-2 fs-8px"></i> Collapsible Group Item #4
+										<i class="fa fa-circle fa-fw text-info me-2 fs-8px"></i> SINOPSIS
 									</button>
 								</div>
 								<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion">
 									<div class="accordion-body bg-gray-800 text-white">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Sinopsis:</label>
+												<div class="col-md-6">
+													 <asp:TextBox ID="txtSinopsis" TextMode="MultiLine" Height="200" Enabled="true" class="form-control" runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSinopsis" Font-Bold="True"></asp:RequiredFieldValidator>
+										</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Sinopsis ingles:</label>
+												<div class="col-md-6">
+													<asp:TextBox ID="txtSinopsisIngles" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSinopsisIngles" Font-Bold="True"></asp:RequiredFieldValidator>
+											</div>
+										</div>
+										<!-- end form-group row -->
 									</div>
 								</div>
 							</div>
 							<div class="accordion-item border-0">
 								<div class="accordion-header" id="headingFive">
 									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-										<i class="fa fa-circle fa-fw text-warning me-2 fs-8px"></i> Collapsible Group Item #5
+										<i class="fa fa-circle fa-fw text-warning me-2 fs-8px"></i> DIRECTOR, REPARTO Y CREDITOS
 									</button>
 								</div>
 								<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion">
 									<div class="accordion-body bg-gray-800 text-white">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Director:</label>
+												<div class="col-md-6">
+													 <asp:TextBox ID="txtDirector" TextMode="MultiLine" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDirector" Font-Bold="True"></asp:RequiredFieldValidator>
+										</div>
+										</div>
+										<!-- end form-group row -->
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Reparto:</label>
+												<div class="col-md-6">
+													<asp:TextBox ID="txtReparto" TextMode="MultiLine" Height="200" Enabled="true" class="form-control" runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtReparto" Font-Bold="True"></asp:RequiredFieldValidator>
+											</div>
+										</div>
+										<!-- end form-group row -->	
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-md-3 text-md-right col-form-label">Creditos:</label>
+												<div class="col-md-6">
+													<asp:TextBox ID="txtCreditos" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+													<asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCreditos" Font-Bold="True"></asp:RequiredFieldValidator>
+											</div>
+										</div>
+										<!-- end form-group row -->							
 									</div>
 								</div>
 							</div>
 							<div class="accordion-item border-0">
 								<div class="accordion-header" id="headingSix">
 									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-										<i class="fa fa-circle fa-fw text-danger me-2 fs-8px"></i> Collapsible Group Item #6
+										<i class="fa fa-circle fa-fw text-danger me-2 fs-8px"></i> FOTOS CONTENIDO
 									</button>
 								</div>
 								<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordion">
 									<div class="accordion-body bg-gray-800 text-white">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item border-0">
-								<div class="accordion-header" id="headingSeven">
-									<button class="accordion-button bg-gray-900 text-white px-3 pt-10px pb-10px pointer-cursor collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
-										<i class="fa fa-circle fa-fw text-muted me-2 fs-8px"></i> Collapsible Group Item #7
-									</button>
-								</div>
-								<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordion">
-									<div class="accordion-body bg-gray-800 text-white">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										<table id="data-table-responsive" width="100%" class="table table-striped table-bordered align-middle text-nowrap" style="background-color:white;">
+											<thead>
+												<tr>
+												<th class="text-wrap" style="width:10px">FOTO VERTICAL</th>
+																<th class="text-nowrap">FOTO HORIZONTAL</th>
+																<th class="text-nowrap">FOTO MINIATURA</th>
+																<th class="text-nowrap">FOTO TITULO</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+												<tr class="gradeA">
+													<td><asp:FileUpload ID="fuVertical" runat="server" /> </td>
+													<td><asp:FileUpload ID="fuHorizontal" runat="server" /> </td>
+													<td><asp:FileUpload ID="fuMiniatura" runat="server" /> </td>
+													<td><asp:FileUpload ID="fuTitulo" runat="server" /> </td>
+												</tr>
+												<tr>
+													<td>1200x8000</td>
+													<td>1200x8000</td>
+													<td>1200x8000</td>
+													<td>1200x8000</td>
+												</tr>
+											</tbody>
+										</table>										
 									</div>
 								</div>
 							</div>
 					
 						</div>
 						<!-- END #accordion -->
-					
-						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
-							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
-							<asp:Button ID="btnVolverAlta" CssClass="btn btn-success" BackColor="Transparent"  runat="server" CausesValidation="false" OnClick="btnVolverAlta_Click" Text="Cancelar" />
-						</div>
+					<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
+						<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" OnClientClick="recuperarFechaSalida()" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
+						<asp:Button ID="btnVolverAlta" CssClass="btn btn-success" BackColor="Transparent"  runat="server" CausesValidation="false" OnClick="btnVolverAlta_Click" Text="Cancelar" />
+					</div>
+						
 					</div>
 				</div>				
 				<!-- end col-8 -->
 			
         </asp:View>
 		<asp:View ID="View3" runat="server">
+			<!-- begin form-group row -->
+							<div class="form-group row m-b-10">
+								
+								<div class="col-md-6">
+                                    <asp:Button ID="btnVolver" class="btn btn-success btn-lg col-md-12" BackColor="Transparent" OnClick="btnVolver_Click" runat="server" Text="Volver a regsitros" />
+									<%--<input type="text" name="Ruta" placeholder="" class="form-control" />--%>
+								</div>
+							</div>
+							<!-- end form-group row -->
 			<!-- BEGIN #testimonials -->
 		<div id="testimonials" class="py-5">
 			<div class="container-xxl p-3 p-lg-5">
@@ -566,4 +823,14 @@
 			
 		</div>
 		<!-- end #content -->
+	<script type="text/javascript">
+
+        function recuperarFechaSalida() {
+            document.getElementById('<%=hfFechaSalida.ClientID%>').value = document.getElementById('fecha_salida').value;
+		}
+		function setearFechaSalida() {
+			document.getElementById('fecha_salida').value = document.getElementById('<%=hfFechaSalida.ClientID%>').value;
+		}
+    
+    </script>
 </asp:Content>

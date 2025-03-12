@@ -72,6 +72,37 @@ namespace WebAhayouAdmin.Clases
             }
 
         }
+
+        public static DataTable PR_STR_GET_LISTA_GENERO_CONTENIDO(string pB_COD_FORMATO_CONTENIDO)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_STR_GET_LISTA_GENERO_CONTENIDO";
+                    if (pB_COD_FORMATO_CONTENIDO == "SELECCIONAR")
+                        cmd.Parameters.AddWithValue("PB_COD_FORMATO_CONTENIDO", 0);
+                    else
+                        cmd.Parameters.AddWithValue("PB_COD_FORMATO_CONTENIDO", pB_COD_FORMATO_CONTENIDO);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
         //public static DataTable PR_SEG_GET_ROLES_ACTIVOS()
         //{
         //    try

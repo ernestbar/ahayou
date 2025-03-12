@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.Web.Caching;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -22,7 +23,7 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    MultiView1.ActiveViewIndex = 1;
+                    MultiView1.ActiveViewIndex = 0;
                     lblUsuario.Text = Session["usuario"].ToString();
                     btnNuevo.Visible = false;
                     lblCodMenuRol.Text = Request.QueryString["RME"].ToString();
@@ -51,7 +52,30 @@ namespace WebAhayouAdmin
         {
             lblAviso.Text = "";
             lblCodigo.Text = "";
-            txtCodigo.Text = "";
+            txtCreditos.Text = "";
+            txtDirector.Text = "";
+            txtGestion.Text = "2000";
+            txtHoras.Text = "00";
+            txtMinutos.Text = "00";
+            txtNombreContenido.Text = "";
+            txtReparto.Text = "";
+            txtSinopsis.Text = "";
+            txtSinopsisIngles.Text = "";
+            txtStoryLine.Text = "";
+            txtStoryLineIngles.Text = "";
+            txtTemporadas.Text = "0";
+            ddlClasificacionContenido.DataBind();
+            ddlClasificacionPublico.DataBind();
+            ddlEsGratis.DataBind();
+            ddlEsSubtitulada.DataBind();
+            ddlEsTemporadas.DataBind();
+            ddlFormato.DataBind();
+            ddlIdiomaOriginal.DataBind();
+            ddlNacionalidad.DataBind();
+            ddlProductora.DataBind();
+            ddlTipoAudio.DataBind();
+            cblGenero.DataBind();
+            //txtCodigo.Text = "";
             //ddlClasificacion.DataBind();
             //txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
         }
@@ -83,22 +107,130 @@ namespace WebAhayouAdmin
         {
             try
             {
-
-
+                
+                string fecha_salida = DateTime.Now.ToShortDateString();
+                if (hfFechaSalida.Value != "")
+                    fecha_salida = hfFechaSalida.Value;
+                string cod_genero = "";
+                int i = 0;
+                foreach (ListItem item in cblGenero.Items)
+                {
+                    if (item.Selected == true)
+                    {
+                        if (i == 0)
+                            cod_genero = item.Value;
+                        else
+                            cod_genero = cod_genero + "," + item.Value;
+                    }
+                    i++;
+                }
                 if (lblCodigo.Text == "")
                 {
-                    //Clases.Clasificacion_contenidos obj = new Clases.Clasificacion_contenidos("I", 0, Int64.Parse(ddlFormatoContenido.SelectedValue), ddlClasificacion.SelectedValue, lblUsuario.Text);
-                    //obj.ABM();
-                    //lblAviso.Text = obj.PV_DESCRIPCIONPR;
+                    Clases.Contenidos_streaming obj = new Clases.Contenidos_streaming("I", "", txtNombreContenido.Text, int.Parse(ddlFormato.SelectedValue), ddlClasificacionContenido.SelectedValue,
+                        cod_genero, ddlClasificacionPublico.SelectedValue, txtGestion.Text, ddlEsTemporadas.SelectedValue, int.Parse(txtTemporadas.Text),
+                        txtHoras.Text, txtMinutos.Text, ddlTipoAudio.SelectedValue, txtStoryLine.Text, txtStoryLineIngles.Text, txtSinopsis.Text, txtSinopsisIngles.Text,
+                        txtDirector.Text, txtReparto.Text, ddlNacionalidad.SelectedValue, ddlIdiomaOriginal.SelectedValue, ddlEsSubtitulada.SelectedValue, txtCreditos.Text,
+                        "foto_vertical.png", "foto_miniatura.png", "foto_horizontal.png", "foto_titulo.png", DateTime.Parse(fecha_salida), ddlEstadoContenido.SelectedValue,
+                        ddlProductora.SelectedValue, ddlEsGratis.SelectedValue, lblUsuario.Text);
+                    obj.ABM();
+                    lblAviso.Text = obj.PV_DESCRIPCIONPR;
+                    if (obj.PV_COD_CONTENIDO_STR_OUT != "")
+                    {
+                        if (fuHorizontal.HasFile)
+                        {
+                            string Ruta = Server.MapPath("~/fotos_peliculas/"+obj.PV_COD_CONTENIDO_STR_OUT+"/");
+                            if (!Directory.Exists(Ruta))
+                            {
+                                Directory.CreateDirectory(Ruta);
+                            }
+                            string archivo = "foto_horizontal.png";
+                            fuHorizontal.PostedFile.SaveAs(Ruta + archivo);
+                        }
+                        if (fuVertical.HasFile)
+                        {
+                            string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                            if (!Directory.Exists(Ruta))
+                            {
+                                Directory.CreateDirectory(Ruta);
+                            }
+                            string archivo = "foto_vertical.png";
+                            fuVertical.PostedFile.SaveAs(Ruta + archivo);
+                        }
+                        if (fuMiniatura.HasFile)
+                        {
+                            string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                            if (!Directory.Exists(Ruta))
+                            {
+                                Directory.CreateDirectory(Ruta);
+                            }
+                            string archivo = "foto_miniatura.png";
+                            fuMiniatura.PostedFile.SaveAs(Ruta + archivo);
+                        }
+                        if (fuTitulo.HasFile)
+                        {
+                            string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                            if (!Directory.Exists(Ruta))
+                            {
+                                Directory.CreateDirectory(Ruta);
+                            }
+                            string archivo = "foto_titulo.png";
+                            fuTitulo.PostedFile.SaveAs(Ruta + archivo);
+                        }
+                    }
                     MultiView1.ActiveViewIndex = 0;
                     Repeater1.DataBind();
                 }
                 else
                 {
 
-                    //Clases.Clasificacion_contenidos obj = new Clases.Clasificacion_contenidos("U", Int64.Parse(lblCodigo.Text), Int64.Parse(ddlFormatoContenido.SelectedValue), ddlClasificacion.SelectedValue, lblUsuario.Text);
-                    //obj.ABM();
-                    //lblAviso.Text = obj.PV_DESCRIPCIONPR;
+                    Clases.Contenidos_streaming obj = new Clases.Contenidos_streaming("U", lblCodigo.Text, txtNombreContenido.Text, int.Parse(ddlFormato.SelectedValue), ddlClasificacionContenido.SelectedValue,
+                       cod_genero, ddlClasificacionPublico.SelectedValue, txtGestion.Text, ddlEsTemporadas.SelectedValue, int.Parse(txtTemporadas.Text),
+                       txtHoras.Text, txtMinutos.Text, ddlTipoAudio.SelectedValue, txtStoryLine.Text, txtStoryLineIngles.Text, txtSinopsis.Text, txtSinopsisIngles.Text,
+                       txtDirector.Text, txtReparto.Text, ddlNacionalidad.SelectedValue, ddlIdiomaOriginal.SelectedValue, ddlEsSubtitulada.SelectedValue, txtCreditos.Text,
+                       "foto_vertical.png", "foto_miniatura.png", "foto_horizontal.png", "foto_titulo.png", DateTime.Parse(fecha_salida), ddlEstadoContenido.SelectedValue,
+                       ddlProductora.SelectedValue, ddlEsGratis.SelectedValue, lblUsuario.Text);
+                    obj.ABM();
+                    lblAviso.Text = obj.PV_DESCRIPCIONPR;
+                    if (fuHorizontal.HasFile)
+                    {
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        if (!Directory.Exists(Ruta))
+                        {
+                            Directory.CreateDirectory(Ruta);
+                        }
+                        string archivo = "foto_horizontal.png";
+                        fuHorizontal.PostedFile.SaveAs(Ruta + archivo);
+                    }
+                    if (fuVertical.HasFile)
+                    {
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        if (!Directory.Exists(Ruta))
+                        {
+                            Directory.CreateDirectory(Ruta);
+                        }
+                        string archivo = "foto_vertical.png";
+                        fuVertical.PostedFile.SaveAs(Ruta + archivo);
+                    }
+                    if (fuMiniatura.HasFile)
+                    {
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        if (!Directory.Exists(Ruta))
+                        {
+                            Directory.CreateDirectory(Ruta);
+                        }
+                        string archivo = "foto_miniatura.png";
+                        fuMiniatura.PostedFile.SaveAs(Ruta + archivo);
+                    }
+                    if (fuTitulo.HasFile)
+                    {
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        if (!Directory.Exists(Ruta))
+                        {
+                            Directory.CreateDirectory(Ruta);
+                        }
+                        string archivo = "foto_titulo.png";
+                        fuTitulo.PostedFile.SaveAs(Ruta + archivo);
+                    }
                     MultiView1.ActiveViewIndex = 0;
                     Repeater1.DataBind();
                 }
@@ -131,10 +263,10 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 lblCodigo.Text = id;
-                txtCodigo.Text = id;
-                txtCodigo.Enabled = false;
+                //txtCodigo.Text = id;
+                //txtCodigo.Enabled = false;
                 Clases.Clasificacion_contenidos obj_m = new Clases.Clasificacion_contenidos(Int64.Parse(lblCodigo.Text));
-                txtCodigo.Text = obj_m.PB_COD_CLASIFICACION_CONTENIDO.ToString();
+                //txtCodigo.Text = obj_m.PB_COD_CLASIFICACION_CONTENIDO.ToString();
                // txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
                 //ddlClasificacion.DataBind();
                 //ddlClasificacion.SelectedValue = obj_m.PV_CLASIFICACION;
@@ -249,6 +381,66 @@ namespace WebAhayouAdmin
             if (obj_c.PV_TITULO != "")
                 imgTitulo.ImageUrl =  obj_c.PV_TITULO;
 
+        }
+
+        protected void ddlFormato_DataBound(object sender, EventArgs e)
+        {
+            ddlFormato.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlClasificacionContenido_DataBound(object sender, EventArgs e)
+        {
+            ddlClasificacionContenido.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlClasificacionPublico_DataBound(object sender, EventArgs e)
+        {
+            ddlClasificacionPublico.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlEsTemporadas_DataBound(object sender, EventArgs e)
+        {
+            ddlEsTemporadas.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlTipoAudio_DataBound(object sender, EventArgs e)
+        {
+            ddlTipoAudio.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlNacionalidad_DataBound(object sender, EventArgs e)
+        {
+            ddlNacionalidad.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlIdiomaOriginal_DataBound(object sender, EventArgs e)
+        {
+            ddlIdiomaOriginal.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlEsSubtitulada_DataBound(object sender, EventArgs e)
+        {
+            ddlEsSubtitulada.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlEsGratis_DataBound(object sender, EventArgs e)
+        {
+            ddlEsGratis.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void ddlProductora_DataBound(object sender, EventArgs e)
+        {
+            ddlProductora.Items.Insert(0, "SELECCIONAR");
+        }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 0;
+        }
+
+        protected void ddlEstadoContenido_DataBound(object sender, EventArgs e)
+        {
+            ddlEstadoContenido.Items.Insert(0, "SELECCIONAR");
         }
     }
 }
