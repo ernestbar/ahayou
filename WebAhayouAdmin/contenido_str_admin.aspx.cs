@@ -121,8 +121,9 @@ namespace WebAhayouAdmin
                             cod_genero = item.Value;
                         else
                             cod_genero = cod_genero + "," + item.Value;
+                        i++;
                     }
-                    i++;
+                    
                 }
                 if (lblCodigo.Text == "")
                 {
