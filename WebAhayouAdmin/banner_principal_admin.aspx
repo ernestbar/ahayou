@@ -112,11 +112,11 @@
 									<ItemTemplate>
 													<tr class="gradeA">
 								
-													<%--<td><asp:Image ID="Image1" Height="50px" runat="server" ImageUrl='<%# @"Logos\" + Eval("CLI_ID_CLIENTE") + @"\" +  Eval("CLI_LOGO") %>' /></td>--%>
+													
 													<td><asp:Label ID="lblEsPrincipal" runat="server" Text='<%# Eval("COD_BANNER") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label2" runat="server" Text='<%# Eval("DESCRIPCION") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label21" runat="server" Text='<%# Eval("DESCRIPCION1") %>'></asp:Label></td>
-																	<td><asp:Label ID="Label22" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>
+																	<td><asp:Image ID="Image1" Height="50px" runat="server" ImageUrl='<%#  Eval("CONTENIDO") %>' /></td>
 																	<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("DESCRIPCION_INGLES") %>'></asp:Label></td>
 																	<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("DESCRIPCION1_INGLES") %>'></asp:Label></td>
 													<td>
@@ -154,9 +154,9 @@
 					<!-- end form-group row -->
 				<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
-						<label class="col-md-3 text-md-right col-form-label">Descripcion:</label>
+						<label class="col-md-3 text-md-right col-form-label">Descripcion 1:</label>
 						<div class="col-md-6">
-                             <asp:TextBox ID="txtDescripcion" TextMode="MultiLine" class="form-control" runat="server"></asp:TextBox>
+                             <asp:TextBox ID="txtDescripcion" TextMode="MultiLine" Height="150" class="form-control" runat="server"></asp:TextBox>
 							<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcion" Font-Bold="True"></asp:RequiredFieldValidator>
 						</div>
 					</div>
@@ -164,14 +164,14 @@
 					
 					<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
-						<label class="col-md-3 text-md-right col-form-label">Descripcion1:</label>
+						<label class="col-md-3 text-md-right col-form-label">Descripcion 2:</label>
 						<div class="col-md-6">
-							<asp:TextBox ID="txtDescripcion1" TextMode="MultiLine" class="form-control" runat="server"></asp:TextBox>
+							<asp:TextBox ID="txtDescripcion1" TextMode="MultiLine" Height="150" class="form-control" runat="server"></asp:TextBox>
 							<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcion1" Font-Bold="True"></asp:RequiredFieldValidator>
 						</div>
 					</div>
 					<!-- end form-group row -->
-							<!-- begin form-group row -->
+					<%--<!-- begin form-group row -->
 					<div class="form-group row m-b-10">
 						<label class="col-md-3 text-md-right col-form-label">Contenido:</label>
 						<div class="col-md-6">
@@ -179,12 +179,12 @@
 							<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtContenido" Font-Bold="True"></asp:RequiredFieldValidator>
 						</div>
 					</div>
-					<!-- end form-group row -->
+					<!-- end form-group row -->--%>
 					<!-- begin form-group row -->
 						<div class="form-group row m-b-10">
-							<label class="col-md-3 text-md-right col-form-label">Descripcion Ingles:</label>
+							<label class="col-md-3 text-md-right col-form-label">Descripcion 1 Ingles:</label>
 							<div class="col-md-6">
-					 <asp:TextBox ID="txtDescripcionIngles" TextMode="MultiLine" class="form-control" runat="server"></asp:TextBox>
+					 <asp:TextBox ID="txtDescripcionIngles" TextMode="MultiLine" Height="150" class="form-control" runat="server"></asp:TextBox>
 								<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcionIngles" Font-Bold="True"></asp:RequiredFieldValidator>
 							</div>
 						</div>
@@ -192,13 +192,33 @@
 				
 						<!-- begin form-group row -->
 						<div class="form-group row m-b-10">
-							<label class="col-md-3 text-md-right col-form-label">Descripcion1 Ingles:</label>
+							<label class="col-md-3 text-md-right col-form-label">Descripcion 2 Ingles:</label>
 							<div class="col-md-6">
-								<asp:TextBox ID="txtDescripcion1Ingles" TextMode="MultiLine" class="form-control" runat="server"></asp:TextBox>
+								<asp:TextBox ID="txtDescripcion1Ingles" TextMode="MultiLine" Height="150" class="form-control" runat="server"></asp:TextBox>
 								<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDescripcion1Ingles" Font-Bold="True"></asp:RequiredFieldValidator>
 							</div>
 						</div>
 						<!-- end form-group row -->
+						<table id="data-table-responsive" width="100%" class="table table-striped table-bordered align-middle text-nowrap" style="background-color:white;">
+							<thead>
+								<tr>
+									<th class="text-wrap">FOTO BANNER</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="gradeA">
+									<td><asp:FileUpload ID="fuVertical" runat="server" /> </td>
+								</tr>
+								<tr>
+									<td>1920x1080</td>
+								</tr>
+								<asp:Panel ID="PanelFotos" Visible="false" runat="server">
+								<tr>
+									<td><asp:Image ID="ImageVertical" Height="100" runat="server" /></td>
+								</tr>
+								</asp:Panel>
+							</tbody>
+						</table>
 					
 						<div class="btn-toolbar mr-2 sw-btn-group float-right" role="group">
 							<asp:Button ID="btnGuardar" CssClass="btn btn-success" BackColor="Transparent" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />

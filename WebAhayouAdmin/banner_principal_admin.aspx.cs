@@ -49,14 +49,15 @@ namespace WebAhayouAdmin
         }
         public void limpiar()
         {
+            PanelFotos.Visible = false;
             lblAviso.Text = "";
             lblCodBanner.Text = "";
             txtCodBanner.Text = "";
             txtDescripcion.Text = "";
             txtDescripcion1.Text = "";
-            txtContenido.Text = "";
             txtDescripcion1Ingles.Text = "";
             txtDescripcionIngles.Text = "";
+            ImageVertical.ImageUrl = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
@@ -88,7 +89,17 @@ namespace WebAhayouAdmin
             {
                 if (lblCodBanner.Text == "")
                 {
-                    Clases.Banners_principales obj = new Clases.Banners_principales("I", "", txtDescripcion.Text, txtDescripcion1.Text, txtContenido.Text, txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
+                    if (fuVertical.HasFile)
+                    {
+                        string Ruta = Server.MapPath("~/fotos_peliculas/0/");
+                        if (!Directory.Exists(Ruta))
+                        {
+                            Directory.CreateDirectory(Ruta);
+                        }
+                        string archivo = "banner_principal.png";
+                        fuVertical.PostedFile.SaveAs(Ruta + archivo);
+                    }
+                    Clases.Banners_principales obj = new Clases.Banners_principales("I", "", txtDescripcion.Text, txtDescripcion1.Text, "banner_principal.png", txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -96,7 +107,17 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    Clases.Banners_principales obj = new Clases.Banners_principales("U", lblCodBanner.Text, txtDescripcion.Text, txtDescripcion1.Text, txtContenido.Text, txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
+                    if (fuVertical.HasFile)
+                    {
+                        string Ruta = Server.MapPath("~/fotos_peliculas/0/");
+                        if (!Directory.Exists(Ruta))
+                        {
+                            Directory.CreateDirectory(Ruta);
+                        }
+                        string archivo = "banner_principal.png";
+                        fuVertical.PostedFile.SaveAs(Ruta + archivo);
+                    }
+                    Clases.Banners_principales obj = new Clases.Banners_principales("U", lblCodBanner.Text, txtDescripcion.Text, txtDescripcion1.Text, "banner_principal.png", txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -138,7 +159,11 @@ namespace WebAhayouAdmin
                 txtDescripcion1.Text = obj_m.PV_DESCRIPCION1;
                 txtDescripcionIngles.Text = obj_m.PV_DESCRIPCION_INGLES;
                 txtDescripcion1Ingles.Text = obj_m.PV_DESCRIPCION1_INGLES;
-                txtContenido.Text = obj_m.PV_CONTENIDO;
+                if (obj_m.PV_CONTENIDO != "")
+                { ImageVertical.ImageUrl = obj_m.PV_CONTENIDO; PanelFotos.Visible = true; }
+                else
+                    ImageVertical.ImageUrl = "~/Imagenes/sin_imagen.png";
+
                 MultiView1.ActiveViewIndex = 1;
 
             }
@@ -162,7 +187,7 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 lblCodBanner.Text = id;
-                Clases.Banners_principales obj_m = new Clases.Banners_principales("D", lblCodBanner.Text, txtDescripcion.Text, txtDescripcion1.Text, txtContenido.Text, txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
+                Clases.Banners_principales obj_m = new Clases.Banners_principales("D", lblCodBanner.Text, txtDescripcion.Text, txtDescripcion1.Text, "", txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
                 obj_m.ABM();
                 lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
 

@@ -282,7 +282,7 @@
 										<div class="form-group row m-b-10">
 											<label class="col-md-3 text-md-right col-form-label">Clasificacion contenido:</label>
 													<div class="col-md-6">
-														<asp:DropDownList ID="ddlClasificacionContenido" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacionContenido" DataTextField="CLASIFICACION" DataValueField="COD_CLASIFIFICACION_CONTENIDO" OnDataBound="ddlClasificacionContenido_DataBound" runat="server"></asp:DropDownList>
+														<asp:DropDownList ID="ddlClasificacionContenido" class="form-select-lg col-lg-6"  DataSourceID="odsClasificacionContenido" DataTextField="CLASIFICACION" DataValueField="COD_CLAFIFICACION" OnDataBound="ddlClasificacionContenido_DataBound" runat="server"></asp:DropDownList>
 														<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="ddlClasificacionContenido" InitialValue="SELECCIONAR"  Font-Bold="True"></asp:RequiredFieldValidator>	
 													</div>
 										</div>
@@ -554,11 +554,19 @@
 													<td><asp:FileUpload ID="fuTitulo" runat="server" /> </td>
 												</tr>
 												<tr>
-													<td>1200x8000</td>
-													<td>1200x8000</td>
-													<td>1200x8000</td>
-													<td>1200x8000</td>
+													<td>665x1200</td>
+													<td>1920x1080</td>
+													<td>120x90</td>
+													<td>1200x316</td>
 												</tr>
+												<asp:Panel ID="PanelFotos" Visible="false" runat="server">
+												<tr>
+													<td><asp:Image ID="ImageVertical" Height="100" runat="server" /></td>
+													<td><asp:Image ID="ImageHorizontal" Width="100" runat="server" /></td>
+													<td><asp:Image ID="ImageMiniatura" Width="100" runat="server" /></td>
+													<td><asp:Image ID="ImageTitulo" Width="200" BackColor="Black" runat="server" /></td>
+												</tr>
+												</asp:Panel>
 											</tbody>
 										</table>										
 									</div>

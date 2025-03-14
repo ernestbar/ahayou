@@ -13882,8 +13882,10 @@
     <Content Include="cambiar_password.aspx" />
     <Content Include="clasificacion_contenido_admin.aspx" />
     <Content Include="contenidos_admin.aspx" />
+    <Content Include="contenido_peliculas_admin.aspx" />
     <Content Include="contenido_str_admin.aspx" />
     <Content Include="contenido_temporadas_admin.aspx" />
+    <Content Include="contenido_trailers_admin.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
     <Content Include="formato_contenido_admin.aspx" />
@@ -13892,6 +13894,7 @@
     <Content Include="Imagenes\fondo_negro.png" />
     <Content Include="Imagenes\logo-ahayou.png" />
     <Content Include="Imagenes\logo1.jpg" />
+    <Content Include="Imagenes\sin_imagen.png" />
     <Content Include="Images\4306889.png" />
     <Content Include="Images\4518930_mcdonalds_icon.png" />
     <Content Include="Images\Avatars\boy.png" />
@@ -14159,7 +14162,9 @@
     <Compile Include="Clases\Clasificacion_contenidos.cs" />
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Contenidos_streaming.cs" />
+    <Compile Include="Clases\Contenido_peliculas.cs" />
     <Compile Include="Clases\Contenido_temporadas.cs" />
+    <Compile Include="Clases\Contenido_trailers.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />
     <Compile Include="Clases\Formatos_contenido.cs" />
@@ -14192,6 +14197,13 @@
     <Compile Include="contenidos_admin.aspx.designer.cs">
       <DependentUpon>contenidos_admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="contenido_peliculas_admin.aspx.cs">
+      <DependentUpon>contenido_peliculas_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenido_peliculas_admin.aspx.designer.cs">
+      <DependentUpon>contenido_peliculas_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contenido_str_admin.aspx.cs">
       <DependentUpon>contenido_str_admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -14205,6 +14217,13 @@
     </Compile>
     <Compile Include="contenido_temporadas_admin.aspx.designer.cs">
       <DependentUpon>contenido_temporadas_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contenido_trailers_admin.aspx.cs">
+      <DependentUpon>contenido_trailers_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contenido_trailers_admin.aspx.designer.cs">
+      <DependentUpon>contenido_trailers_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

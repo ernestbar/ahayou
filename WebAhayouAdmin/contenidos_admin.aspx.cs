@@ -133,7 +133,8 @@ namespace WebAhayouAdmin
                 Clases.Contenidos obj_m = new Clases.Contenidos(id);
                 txtDescripcion.Text = obj_m.PV_DESCRIPCION;
                 hfContenido.Value = obj_m.PV_CONTENIDO;
-                TextBox1.Text = obj_m.PV_CONTENIDO;
+                //TextBox1.Text = obj_m.PV_CONTENIDO;
+                string[] contenido=obj_m.PV_CONTENIDO.Split(' ');
                 ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta4", "setearDescripcion();", true);
                 MultiView1.ActiveViewIndex = 1;
 

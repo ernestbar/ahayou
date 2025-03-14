@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace WebAhayouAdmin
 {
-    public partial class contenido_temporadas_admin : System.Web.UI.Page
+    public partial class contenido_trailers_admin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,8 +23,8 @@ namespace WebAhayouAdmin
                 {
                     MultiView1.ActiveViewIndex = 0;
                     lblUsuario.Text = Session["usuario"].ToString();
-                    lblCodContenidoSTR.Text= Session["cod_contenido_str"].ToString();
-                    Clases.Contenidos_streaming obj=new Clases.Contenidos_streaming(lblCodContenidoSTR.Text);
+                    lblCodContenidoSTR.Text = Session["cod_contenido_str"].ToString();
+                    Clases.Contenidos_streaming obj = new Clases.Contenidos_streaming(lblCodContenidoSTR.Text);
                     lblTitulo.Text = obj.PV_NOMBRE_CONTENIDO;
                     txtNombreContenido.Text = obj.PV_NOMBRE_CONTENIDO;
                     //btnNuevo.Visible = false;
@@ -56,27 +54,9 @@ namespace WebAhayouAdmin
         {
             lblAviso.Text = "";
             lblCodigo.Text = "";
-            lblContenido.Text = "";
-            lblEpisodiio.Text = "";
-            lblOrden.Text = "";
-            lblSinopsis.Text = "";
-            lblSinopsisIngles.Text = "";
-            lblStoryLine.Text = "";
-            lblStoryLineIngles.Text = "";
-            lblTemporada.Text = "";
-            lblTiempoHoras.Text = "";
-            lblTiempoMinutos.Text = "";
             txtContenido.Text = "";
-            txtEpisodio.Text = "";
-            txtHoras.Text = "";
-            txtMinutos.Text = "";
             txtOrden.Text = "";
-            txtSinopsis.Text = "";
-            txtSinopsisIngles.Text = "";
-            txtStoryLine.Text = "";
-            txtStoryLineIngles.Text = "";
-            txtTemporada.Text = "";
-            
+
             //txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -111,9 +91,8 @@ namespace WebAhayouAdmin
 
                 if (lblCodigo.Text == "")
                 {
-                    Clases.Contenido_temporadas obj = new Clases.Contenido_temporadas("I", 0, lblCodContenidoSTR.Text, int.Parse(txtOrden.Text),int.Parse(txtTemporada.Text),
-                        int.Parse(txtEpisodio.Text),txtHoras.Text,txtMinutos.Text,txtStoryLine.Text,txtSinopsis.Text,txtStoryLineIngles.Text,
-                        txtSinopsisIngles.Text,txtContenido.Text,lblUsuario.Text);
+                    Clases.Contenido_trailers obj = new Clases.Contenido_trailers("I", 0, lblCodContenidoSTR.Text, txtNombreContenido.Text,
+                        txtContenido.Text,int.Parse(txtOrden.Text), lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -121,10 +100,8 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-
-                    Clases.Contenido_temporadas obj = new Clases.Contenido_temporadas("U",int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text, int.Parse(txtOrden.Text), int.Parse(txtTemporada.Text),
-                        int.Parse(txtEpisodio.Text), txtHoras.Text, txtMinutos.Text, txtStoryLine.Text, txtSinopsis.Text, txtStoryLineIngles.Text,
-                        txtSinopsisIngles.Text, txtContenido.Text, lblUsuario.Text);
+                    Clases.Contenido_trailers obj = new Clases.Contenido_trailers("U", int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text, txtNombreContenido.Text,
+                       txtContenido.Text, int.Parse(txtOrden.Text), lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -159,18 +136,10 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 lblCodigo.Text = id;
-               
-                Clases.Contenido_temporadas obj_m = new Clases.Contenido_temporadas(int.Parse(lblCodigo.Text));
+                Clases.Contenido_trailers obj_m = new Clases.Contenido_trailers(int.Parse(lblCodigo.Text));
+                txtNombreContenido.Text = obj_m.PV_NOMBRE_CONTENIDO_STR.ToString();
+                txtContenido.Text = obj_m.PV_CONTENIDO.ToString();
                 txtOrden.Text=obj_m.PI_ORDEN.ToString();
-                txtEpisodio.Text = obj_m.PI_EPISODIO.ToString();
-                txtTemporada.Text = obj_m.PI_TEMPORADA.ToString();
-                txtMinutos.Text = obj_m.PV_TIEMPO_MINUTOS.ToString();
-                txtHoras.Text = obj_m.PV_TIEMPO_HORA.ToString();
-                txtSinopsis.Text = obj_m.PV_SINOPSIS.ToString();
-                txtSinopsisIngles.Text = obj_m.PV_SINOPSIS_INGLES.ToString();
-                txtStoryLine.Text = obj_m.PV_STORY_LINE.ToString();
-                txtStoryLineIngles.Text = obj_m.PV_STORY_LINE_INGLES.ToString();
-                txtContenido.Text=obj_m.PV_CONTENIDO.ToString(); 
                 MultiView1.ActiveViewIndex = 1;
 
             }
@@ -194,8 +163,7 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 lblCodigo.Text = id;
-                Clases.Contenido_temporadas obj_m = new Clases.Contenido_temporadas("D", int.Parse(id), lblCodContenidoSTR.Text, 0, 0,
-                        0, "", "", "", "", "", "", "", lblUsuario.Text);
+                Clases.Contenido_trailers obj_m = new Clases.Contenido_trailers("D", int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text, "", "",0, lblUsuario.Text);
                 obj_m.ABM();
                 lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 Repeater1.DataBind();
@@ -211,36 +179,6 @@ namespace WebAhayouAdmin
                 writer5.Close();
                 lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
             }
-        }
-
-        
-
-        protected void btnVer_Click(object sender, EventArgs e)
-        {
-            limpiar();
-            string id = "";
-            Button obj = (Button)sender;
-            id = obj.CommandArgument.ToString();
-            lblCodigo.Text = id;
-            Clases.Contenido_temporadas temporada = new Clases.Contenido_temporadas(int.Parse(id));
-            lblOrden.Text = temporada.PI_ORDEN.ToString();
-            lblTemporada.Text=temporada.PI_TEMPORADA.ToString();
-            lblEpisodiio.Text=temporada.PI_EPISODIO.ToString();
-            lblTiempoHoras.Text = temporada.PV_TIEMPO_HORA.ToString();
-            lblTiempoMinutos.Text=temporada.PV_TIEMPO_MINUTOS.ToString();
-            lblSinopsis.Text = temporada.PV_SINOPSIS;
-            lblSinopsisIngles.Text = temporada.PV_SINOPSIS_INGLES;
-            lblStoryLine.Text = temporada.PV_STORY_LINE;
-            lblStoryLineIngles.Text = temporada.PV_STORY_LINE_INGLES;
-            lblContenido.Text = temporada.PV_CONTENIDO;
-
-            MultiView1.ActiveViewIndex = 2;
-        }
-
-        protected void btnVolver_Click(object sender, EventArgs e)
-        {
-            limpiar();
-            MultiView1.ActiveViewIndex = 0;
         }
     }
 }

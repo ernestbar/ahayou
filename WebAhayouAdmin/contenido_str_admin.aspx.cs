@@ -50,6 +50,11 @@ namespace WebAhayouAdmin
         }
         public void limpiar()
         {
+            PanelFotos.Visible = false;
+            ImageVertical.ImageUrl = "";
+            ImageHorizontal.ImageUrl = "";
+            ImageMiniatura.ImageUrl = "";
+            ImageTitulo.ImageUrl = "";
             lblAviso.Text = "";
             lblCodigo.Text = "";
             txtCreditos.Text = "";
@@ -75,6 +80,7 @@ namespace WebAhayouAdmin
             ddlProductora.DataBind();
             ddlTipoAudio.DataBind();
             cblGenero.DataBind();
+            ddlEstadoContenido.DataBind();
             //txtCodigo.Text = "";
             //ddlClasificacion.DataBind();
             //txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
@@ -127,6 +133,7 @@ namespace WebAhayouAdmin
                 }
                 if (lblCodigo.Text == "")
                 {
+                   
                     Clases.Contenidos_streaming obj = new Clases.Contenidos_streaming("I", "", txtNombreContenido.Text, int.Parse(ddlFormato.SelectedValue), ddlClasificacionContenido.SelectedValue,
                         cod_genero, ddlClasificacionPublico.SelectedValue, txtGestion.Text, ddlEsTemporadas.SelectedValue, int.Parse(txtTemporadas.Text),
                         txtHoras.Text, txtMinutos.Text, ddlTipoAudio.SelectedValue, txtStoryLine.Text, txtStoryLineIngles.Text, txtSinopsis.Text, txtSinopsisIngles.Text,
@@ -264,11 +271,79 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 lblCodigo.Text = id;
-                //txtCodigo.Text = id;
-                //txtCodigo.Enabled = false;
-                Clases.Clasificacion_contenidos obj_m = new Clases.Clasificacion_contenidos(Int64.Parse(lblCodigo.Text));
+            
+                Clases.Contenidos_streaming obj_m = new Clases.Contenidos_streaming(lblCodigo.Text);
+                txtCreditos.Text =obj_m.PV_CREDITOS;
+                txtDirector.Text = obj_m.PV_DIRECTOR;
+                txtGestion.Text = obj_m.PV_GESTION;
+                txtHoras.Text = obj_m.PV_TIEMPO_HORA;
+                txtMinutos.Text = obj_m.PV_TIEMPO_MINUTOS;
+                txtNombreContenido.Text = obj_m.PV_NOMBRE_CONTENIDO;
+                txtReparto.Text = obj_m.PV_REPARTO;
+                txtSinopsis.Text = obj_m.PV_SINOPSIS;
+                txtSinopsisIngles.Text = obj_m.PV_SINOPSIS_INGLES;
+                txtStoryLine.Text = obj_m.PV_STORY_LINE;
+                txtStoryLineIngles.Text = obj_m.PV_STORY_LINE_INGLES;
+                txtTemporadas.Text = obj_m.PI_TEMPORADAS.ToString();
+                ddlFormato.SelectedValue = obj_m.PI_COD_FORMATO_CONTENIDO.ToString();
+                ddlClasificacionContenido.DataBind();
+                ddlClasificacionContenido.SelectedValue= obj_m.PV_COD_CLASIFIFICACION_CONTENIDO;
+                ddlClasificacionPublico.SelectedValue = obj_m.PV_COD_CLASIFICACION_PUBLICO;
+                ddlEsGratis.SelectedValue = obj_m.PV_ES_GRATUITA;
+                ddlEsSubtitulada.SelectedValue = obj_m.PV_ES_SUBTITULADA;
+                ddlEsTemporadas.SelectedValue = obj_m.PV_ES_TEMPORADA;
+                ddlIdiomaOriginal.SelectedValue = obj_m.PV_IDIOMA_ORIGINAL;
+                ddlNacionalidad.SelectedValue = obj_m.PV_NACIONALIDAD;
+                ddlProductora.SelectedValue = obj_m.PV_COD_PRODUCTORA;
+                ddlTipoAudio.SelectedValue = obj_m.PV_TIPO_AUDIO;
+                ddlEstadoContenido.SelectedValue = obj_m.PV_ESTADO_CONTENIDO;
+                cblGenero.DataBind();
+                string[] genero = obj_m.PV_COD_GENERO.Split(',');
+                foreach (string s in genero)
+                {
+                    foreach (ListItem item in cblGenero.Items)
+                    {
+                        if (s == item.Value)
+                            item.Selected = true;
+                    }
+                }
+                if (obj_m.PD_FECHA_PUBLICACION == DateTime.Parse("3000/01/01"))
+                { }
+                else
+                {
+                    DateTime fecha1 = obj_m.PD_FECHA_PUBLICACION;
+                    string dia = "";
+                    string mes = "";
+                    if (fecha1.Day.ToString().Length == 1)
+                        dia = "0" + fecha1.Day.ToString();
+                    else
+                        dia = fecha1.Day.ToString();
+                    if (fecha1.Month.ToString().Length == 1)
+                        mes = "0" + fecha1.Month.ToString();
+                    else
+                        mes = fecha1.Month.ToString();
+                    hfFechaSalida.Value = fecha1.Year.ToString() + "-" + mes + "-" + dia;
+                    ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta", "setearFechaSalida();", true);
+                }
+                if (obj_m.PV_FOTO_VERTICAL != "")
+                { ImageVertical.ImageUrl = obj_m.PV_FOTO_VERTICAL; PanelFotos.Visible = true; }
+                 else
+                    ImageVertical.ImageUrl = "~/Imagenes/sin_imagen.png";
+                if (obj_m.PV_FOTO_HORIZONTAL != "")
+                { ImageHorizontal.ImageUrl = obj_m.PV_FOTO_HORIZONTAL; PanelFotos.Visible = true; }
+                else
+                    ImageHorizontal.ImageUrl = "~/Imagenes/sin_imagen.png";
+                if (obj_m.PV_FOTO_MINIATURA != "")
+                { ImageMiniatura.ImageUrl = obj_m.PV_FOTO_MINIATURA; PanelFotos.Visible = true; }
+                else
+                 ImageMiniatura.ImageUrl = "~/Imagenes/sin_imagen.png";
+                if (obj_m.PV_TITULO != "")
+                { ImageTitulo.ImageUrl = obj_m.PV_TITULO; PanelFotos.Visible = true; }
+                else
+                    ImageTitulo.ImageUrl = "~/Imagenes/sin_imagen.png";
+
                 //txtCodigo.Text = obj_m.PB_COD_CLASIFICACION_CONTENIDO.ToString();
-               // txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
+                // txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
                 //ddlClasificacion.DataBind();
                 //ddlClasificacion.SelectedValue = obj_m.PV_CLASIFICACION;
                 MultiView1.ActiveViewIndex = 1;
@@ -325,17 +400,29 @@ namespace WebAhayouAdmin
 
         protected void btnTrailer_Click(object sender, EventArgs e)
         {
-
+            string id = "";
+            Button obj = (Button)sender;
+            id = obj.CommandArgument.ToString();
+            Session["cod_contenido_str"] = id;
+            Response.Redirect("contenido_trailers_admin.aspx");
         }
 
         protected void btnTemporadas_Click(object sender, EventArgs e)
         {
-
+            string id = "";
+            Button obj = (Button)sender;
+            id = obj.CommandArgument.ToString();
+            Session["cod_contenido_str"] = id;
+            Response.Redirect("contenido_temporadas_admin.aspx");
         }
 
         protected void btnPeliculas_Click(object sender, EventArgs e)
         {
-
+            string id = "";
+            Button obj = (Button)sender;
+            id = obj.CommandArgument.ToString();
+            Session["cod_contenido_str"] = id;
+            Response.Redirect("contenido_peliculas_admin.aspx");
         }
 
         protected void btnVer_Click(object sender, EventArgs e)
@@ -372,15 +459,23 @@ namespace WebAhayouAdmin
 
             if(obj_c.PV_FOTO_HORIZONTAL!="")
                 imgHorizontal.ImageUrl= obj_c.PV_FOTO_HORIZONTAL;
+            else
+                imgHorizontal.ImageUrl = "~/Imagenes/sin_imagen.png";
 
             if (obj_c.PV_FOTO_VERTICAL != "")
                 imgVertical.ImageUrl = obj_c.PV_FOTO_VERTICAL;
+            else
+                imgVertical.ImageUrl = "~/Imagenes/sin_imagen.png";
 
             if (obj_c.PV_FOTO_MINIATURA != "")
                 imgMiniatura.ImageUrl = obj_c.PV_FOTO_MINIATURA;
-            
+            else
+                imgMiniatura.ImageUrl = "~/Imagenes/sin_imagen.png";
+
             if (obj_c.PV_TITULO != "")
                 imgTitulo.ImageUrl =  obj_c.PV_TITULO;
+            else
+                imgTitulo.ImageUrl = "~/Imagenes/sin_imagen.png";
 
         }
 

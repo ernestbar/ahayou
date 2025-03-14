@@ -681,6 +681,51 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.FileUpload fuTitulo;
 
         /// <summary>
+        /// Control PanelFotos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelFotos;
+
+        /// <summary>
+        /// Control ImageVertical.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageVertical;
+
+        /// <summary>
+        /// Control ImageHorizontal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageHorizontal;
+
+        /// <summary>
+        /// Control ImageMiniatura.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageMiniatura;
+
+        /// <summary>
+        /// Control ImageTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImageTitulo;
+
+        /// <summary>
         /// Control btnGuardar.
         /// </summary>
         /// <remarks>

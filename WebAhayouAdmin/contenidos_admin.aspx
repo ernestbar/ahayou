@@ -82,14 +82,14 @@
 										<div class="form-group row m-b-10">
 											
 											<div class="col-md-6">
-                                                <asp:Button ID="btnNuevo" class="btn btn-success btn-lg col-md-12" BackColor="Transparent" OnClick="btnNuevo_Click" runat="server" Text="Nuevo Rol" />
+                                                <asp:Button ID="btnNuevo" class="btn btn-success btn-lg col-md-12" BackColor="Transparent" OnClick="btnNuevo_Click" runat="server" Text="Nuevo contenido" />
 												<%--<input type="text" name="Ruta" placeholder="" class="form-control" />--%>
 											</div>
 										</div>
 										<!-- end form-group row -->
 									
 										<!-- begin page-header -->
-											<h1 class="page-header">Administrador de roles <small></small></h1>
+											<h1 class="page-header">Contenidos admin <small></small></h1>
 											<div class="panel-body">
 							<table id="data-table-responsive" width="100%" class="table table-striped table-bordered align-middle text-nowrap" style="background-color:white;">
 								<thead>
@@ -170,7 +170,7 @@
 								</div>
 					</div>
 					<!-- end form-group row -->
-					<asp:TextBox ID="TextBox1" TextMode="MultiLine" Width="800" runat="server"></asp:TextBox>
+					<%--<asp:TextBox ID="TextBox1" TextMode="MultiLine" Width="800" runat="server"></asp:TextBox>--%>
 					<!-- BEGIN panel -->
 			
 			<!-- END panel -->
