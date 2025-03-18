@@ -81,6 +81,10 @@ namespace WebAhayouAdmin
             ddlTipoAudio.DataBind();
             cblGenero.DataBind();
             ddlEstadoContenido.DataBind();
+            lblFotoVerticalAnt.Text = "";
+            lblFotoHorizontalAnt.Text = "";
+            lblFotoMiniaturaAnt.Text = "";
+            lblFotoTituloAnt.Text = "";
             //txtCodigo.Text = "";
             //ddlClasificacion.DataBind();
             //txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
@@ -113,7 +117,11 @@ namespace WebAhayouAdmin
         {
             try
             {
-                
+                string foto_vertical = "";
+                string foto_horizontal = "";
+                string foto_miniatura = "";
+                string foto_titulo = "";
+
                 string fecha_salida = DateTime.Now.ToShortDateString();
                 if (hfFechaSalida.Value != "")
                     fecha_salida = hfFechaSalida.Value;
@@ -133,12 +141,48 @@ namespace WebAhayouAdmin
                 }
                 if (lblCodigo.Text == "")
                 {
-                   
+                    if (fuHorizontal.HasFile)
+                    {
+                        foto_horizontal = fuHorizontal.FileName;
+                    }
+                    else 
+                    { 
+                        if(lblFotoHorizontalAnt.Text!="")
+                            foto_horizontal= lblFotoHorizontalAnt.Text;
+                    }
+                    if (fuVertical.HasFile)
+                    {
+                        foto_vertical = fuVertical.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoVerticalAnt.Text != "")
+                            foto_vertical = lblFotoVerticalAnt.Text;
+                    }
+                    if (fuMiniatura.HasFile)
+                    {
+                     
+                        foto_miniatura=fuMiniatura.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoMiniaturaAnt.Text != "")
+                            foto_miniatura = lblFotoMiniaturaAnt.Text;
+                    }
+                    if (fuTitulo.HasFile)
+                    {
+                        foto_titulo=fuTitulo.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoTituloAnt.Text != "")
+                            foto_titulo = lblFotoTituloAnt.Text;
+                    }
                     Clases.Contenidos_streaming obj = new Clases.Contenidos_streaming("I", "", txtNombreContenido.Text, int.Parse(ddlFormato.SelectedValue), ddlClasificacionContenido.SelectedValue,
                         cod_genero, ddlClasificacionPublico.SelectedValue, txtGestion.Text, ddlEsTemporadas.SelectedValue, int.Parse(txtTemporadas.Text),
                         txtHoras.Text, txtMinutos.Text, ddlTipoAudio.SelectedValue, txtStoryLine.Text, txtStoryLineIngles.Text, txtSinopsis.Text, txtSinopsisIngles.Text,
                         txtDirector.Text, txtReparto.Text, ddlNacionalidad.SelectedValue, ddlIdiomaOriginal.SelectedValue, ddlEsSubtitulada.SelectedValue, txtCreditos.Text,
-                        "foto_vertical.png", "foto_miniatura.png", "foto_horizontal.png", "foto_titulo.png", DateTime.Parse(fecha_salida), ddlEstadoContenido.SelectedValue,
+                        foto_vertical, foto_miniatura, foto_horizontal, foto_titulo, DateTime.Parse(fecha_salida), ddlEstadoContenido.SelectedValue,
                         ddlProductora.SelectedValue, ddlEsGratis.SelectedValue, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
@@ -146,12 +190,12 @@ namespace WebAhayouAdmin
                     {
                         if (fuHorizontal.HasFile)
                         {
-                            string Ruta = Server.MapPath("~/fotos_peliculas/"+obj.PV_COD_CONTENIDO_STR_OUT+"/");
+                            string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
                             if (!Directory.Exists(Ruta))
                             {
                                 Directory.CreateDirectory(Ruta);
                             }
-                            string archivo = "foto_horizontal.png";
+                            string archivo = fuHorizontal.FileName;
                             fuHorizontal.PostedFile.SaveAs(Ruta + archivo);
                         }
                         if (fuVertical.HasFile)
@@ -161,7 +205,7 @@ namespace WebAhayouAdmin
                             {
                                 Directory.CreateDirectory(Ruta);
                             }
-                            string archivo = "foto_vertical.png";
+                            string archivo = fuVertical.FileName;
                             fuVertical.PostedFile.SaveAs(Ruta + archivo);
                         }
                         if (fuMiniatura.HasFile)
@@ -171,7 +215,7 @@ namespace WebAhayouAdmin
                             {
                                 Directory.CreateDirectory(Ruta);
                             }
-                            string archivo = "foto_miniatura.png";
+                            string archivo = fuMiniatura.FileName;
                             fuMiniatura.PostedFile.SaveAs(Ruta + archivo);
                         }
                         if (fuTitulo.HasFile)
@@ -181,7 +225,7 @@ namespace WebAhayouAdmin
                             {
                                 Directory.CreateDirectory(Ruta);
                             }
-                            string archivo = "foto_titulo.png";
+                            string archivo = fuTitulo.FileName;
                             fuTitulo.PostedFile.SaveAs(Ruta + archivo);
                         }
                     }
@@ -190,53 +234,89 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
+                    if (fuHorizontal.HasFile)
+                    {
+                        foto_horizontal = fuHorizontal.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoHorizontalAnt.Text != "")
+                            foto_horizontal = lblFotoHorizontalAnt.Text;
+                    }
+                    if (fuVertical.HasFile)
+                    {
+                        foto_vertical = fuVertical.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoVerticalAnt.Text != "")
+                            foto_vertical = lblFotoVerticalAnt.Text;
+                    }
+                    if (fuMiniatura.HasFile)
+                    {
 
+                        foto_miniatura = fuMiniatura.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoMiniaturaAnt.Text != "")
+                            foto_miniatura = lblFotoMiniaturaAnt.Text;
+                    }
+                    if (fuTitulo.HasFile)
+                    {
+                        foto_titulo = fuTitulo.FileName;
+                    }
+                    else
+                    {
+                        if (lblFotoTituloAnt.Text != "")
+                            foto_titulo = lblFotoTituloAnt.Text;
+                    }
                     Clases.Contenidos_streaming obj = new Clases.Contenidos_streaming("U", lblCodigo.Text, txtNombreContenido.Text, int.Parse(ddlFormato.SelectedValue), ddlClasificacionContenido.SelectedValue,
                        cod_genero, ddlClasificacionPublico.SelectedValue, txtGestion.Text, ddlEsTemporadas.SelectedValue, int.Parse(txtTemporadas.Text),
                        txtHoras.Text, txtMinutos.Text, ddlTipoAudio.SelectedValue, txtStoryLine.Text, txtStoryLineIngles.Text, txtSinopsis.Text, txtSinopsisIngles.Text,
                        txtDirector.Text, txtReparto.Text, ddlNacionalidad.SelectedValue, ddlIdiomaOriginal.SelectedValue, ddlEsSubtitulada.SelectedValue, txtCreditos.Text,
-                       "foto_vertical.png", "foto_miniatura.png", "foto_horizontal.png", "foto_titulo.png", DateTime.Parse(fecha_salida), ddlEstadoContenido.SelectedValue,
+                       foto_vertical, foto_miniatura, foto_horizontal, foto_titulo, DateTime.Parse(fecha_salida), ddlEstadoContenido.SelectedValue,
                        ddlProductora.SelectedValue, ddlEsGratis.SelectedValue, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     if (fuHorizontal.HasFile)
                     {
-                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + lblCodigo.Text + "/");
                         if (!Directory.Exists(Ruta))
                         {
                             Directory.CreateDirectory(Ruta);
                         }
-                        string archivo = "foto_horizontal.png";
+                        string archivo = fuHorizontal.FileName;
                         fuHorizontal.PostedFile.SaveAs(Ruta + archivo);
                     }
                     if (fuVertical.HasFile)
                     {
-                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + lblCodigo.Text + "/");
                         if (!Directory.Exists(Ruta))
                         {
                             Directory.CreateDirectory(Ruta);
                         }
-                        string archivo = "foto_vertical.png";
+                        string archivo = fuVertical.FileName;
                         fuVertical.PostedFile.SaveAs(Ruta + archivo);
                     }
                     if (fuMiniatura.HasFile)
                     {
-                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + lblCodigo.Text + "/");
                         if (!Directory.Exists(Ruta))
                         {
                             Directory.CreateDirectory(Ruta);
                         }
-                        string archivo = "foto_miniatura.png";
+                        string archivo = fuMiniatura.FileName;
                         fuMiniatura.PostedFile.SaveAs(Ruta + archivo);
                     }
                     if (fuTitulo.HasFile)
                     {
-                        string Ruta = Server.MapPath("~/fotos_peliculas/" + obj.PV_COD_CONTENIDO_STR_OUT + "/");
+                        string Ruta = Server.MapPath("~/fotos_peliculas/" + lblCodigo.Text + "/");
                         if (!Directory.Exists(Ruta))
                         {
                             Directory.CreateDirectory(Ruta);
                         }
-                        string archivo = "foto_titulo.png";
+                        string archivo = fuTitulo.FileName;
                         fuTitulo.PostedFile.SaveAs(Ruta + archivo);
                     }
                     MultiView1.ActiveViewIndex = 0;
@@ -326,19 +406,43 @@ namespace WebAhayouAdmin
                     ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "myFuncionAlerta", "setearFechaSalida();", true);
                 }
                 if (obj_m.PV_FOTO_VERTICAL != "")
-                { ImageVertical.ImageUrl = obj_m.PV_FOTO_VERTICAL; PanelFotos.Visible = true; }
+                { 
+                    ImageVertical.ImageUrl = obj_m.PV_FOTO_VERTICAL;
+                    PanelFotos.Visible = true;
+                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    int tamaño = foto_name.Length-1;
+                    lblFotoVerticalAnt.Text = foto_name[tamaño];
+                }
                  else
                     ImageVertical.ImageUrl = "~/Imagenes/sin_imagen.png";
                 if (obj_m.PV_FOTO_HORIZONTAL != "")
-                { ImageHorizontal.ImageUrl = obj_m.PV_FOTO_HORIZONTAL; PanelFotos.Visible = true; }
+                { 
+                    ImageHorizontal.ImageUrl = obj_m.PV_FOTO_HORIZONTAL; 
+                    PanelFotos.Visible = true;
+                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    int tamaño = foto_name.Length - 1;
+                    lblFotoHorizontalAnt.Text = foto_name[tamaño];
+                }
                 else
                     ImageHorizontal.ImageUrl = "~/Imagenes/sin_imagen.png";
                 if (obj_m.PV_FOTO_MINIATURA != "")
-                { ImageMiniatura.ImageUrl = obj_m.PV_FOTO_MINIATURA; PanelFotos.Visible = true; }
+                { 
+                    ImageMiniatura.ImageUrl = obj_m.PV_FOTO_MINIATURA; 
+                    PanelFotos.Visible = true;
+                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    int tamaño = foto_name.Length - 1;
+                    lblFotoMiniaturaAnt.Text = foto_name[tamaño];
+                }
                 else
                  ImageMiniatura.ImageUrl = "~/Imagenes/sin_imagen.png";
                 if (obj_m.PV_TITULO != "")
-                { ImageTitulo.ImageUrl = obj_m.PV_TITULO; PanelFotos.Visible = true; }
+                { 
+                    ImageTitulo.ImageUrl = obj_m.PV_TITULO;
+                    PanelFotos.Visible = true;
+                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    int tamaño = foto_name.Length - 1;
+                    lblFotoTituloAnt.Text = foto_name[tamaño];
+                }
                 else
                     ImageTitulo.ImageUrl = "~/Imagenes/sin_imagen.png";
 
@@ -446,8 +550,8 @@ namespace WebAhayouAdmin
             lblNacionalidad.Text = obj_c.PV_NACIONALIDAD_DESC;
             lblIdiomaOriginal.Text = obj_c.PV_IDIOMA_ORIGINAL_DESC;
             lblEsSubtitulada.Text = obj_c.PV_ES_SUBTITULADA;
-            
 
+            lblEstado.Text = obj_c.PV_ESTADO_CONTENIDO_DESC;
             lblStoryLine.Text=obj_c.PV_STORY_LINE;
             lblStoryLineIngles.Text=obj_c.PV_STORY_LINE_INGLES;
             lblSinopsis.Text = obj_c.PV_SINOPSIS;

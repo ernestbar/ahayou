@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebAhayouAdmin
+namespace landingAhayou
 {
     public partial class home_us : System.Web.UI.Page
     {
@@ -15,6 +15,7 @@ namespace WebAhayouAdmin
         {
             if (!Page.IsPostBack)
             {
+                
                 //string pais = GetCountryFromRequest();
                 //if (pais == "BO")
                 //    lblMundo.Text = "BO";

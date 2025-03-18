@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 
-namespace WebAhayouAdmin.Clases
+namespace landingAhayou.Clases
 {
     public class Contenidos
     {

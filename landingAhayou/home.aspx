@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="WebAhayouAdmin.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="landingAhayou.home" %>
 
 <!DOCTYPE html>
 
@@ -36,21 +36,35 @@
 
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
     <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
+   <script>
+       if ('serviceWorker' in navigator) {
+           window.addEventListener('load', () => {
+               navigator.serviceWorker.register('service-worker.js')
+                   .then(registration => {
+                       console.log('Service Worker registered with scope:', registration.scope);
+                   })
+                   .catch(error => {
+                       console.error('Service Worker registration failed:', error);
+                   });
+           });
+       }
+   </script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ObjectDataSource ID="odsRotador1" runat="server" SelectMethod="PR_STR_GET_BANNER_PRINCIPAL" TypeName="WebAhayouAdmin.Clases.Contenidos">
+        <asp:ObjectDataSource ID="odsRotador1" runat="server" SelectMethod="PR_STR_GET_BANNER_PRINCIPAL" TypeName="landingAhayou.Clases.Contenidos">
         </asp:ObjectDataSource>
-        <asp:ObjectDataSource ID="odsUltimos" runat="server" SelectMethod="PR_STR_GET_NUEVOS_AGREGADOS" TypeName="WebAhayouAdmin.Clases.Contenidos">
+        <asp:ObjectDataSource ID="odsUltimos" runat="server" SelectMethod="PR_STR_GET_NUEVOS_AGREGADOS" TypeName="landingAhayou.Clases.Contenidos">
         </asp:ObjectDataSource>
-        <asp:ObjectDataSource ID="odsPreguntas" runat="server" SelectMethod="PR_PAR_GET_PREGUNTAS_FRECUENTES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
+        <asp:ObjectDataSource ID="odsPreguntas" runat="server" SelectMethod="PR_PAR_GET_PREGUNTAS_FRECUENTES_STR" TypeName="landingAhayou.Clases.Contenidos">
         </asp:ObjectDataSource>
-        <asp:ObjectDataSource ID="odsPlanes" runat="server" SelectMethod="PR_PAR_GET_PLANES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
+        <asp:ObjectDataSource ID="odsPlanes" runat="server" SelectMethod="PR_PAR_GET_PLANES_STR" TypeName="landingAhayou.Clases.Contenidos">
             <SelectParameters>
                 <asp:ControlParameter ControlID="lblMundo" Name="PV_MUNDO" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
-        <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
+        <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
         </asp:ObjectDataSource>
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
          <header class="header header--main" id="header__movies">
@@ -307,7 +321,7 @@
        <section class="web-app-section" id="webAppSection">
              <button
                  class="web-app-section__content container-common"
-                 id="downloadContainer"
+                 id="downloadContainer" 
              >
                  <h2 class="web-app-section__title" id="downloadTitle">
                      Descarga la Web APP
@@ -316,7 +330,7 @@
                      <img
                          src="imgs/logos/pwa_logo.png"
                          alt="PWA"
-                         class="web-app-section__image"
+                         class="web-app-section__image" style="width:250px"
                      />
                      <p class="web-app-section__description">
                          Con esta PWA tendr&aacute; un sitio web que se ve y se
@@ -408,6 +422,43 @@
         <script src="js/open-menu.js"></script>
         <script src="js/header-movies-responsive.js"></script>
         <script src="js/movie-container-hover.js"></script>
+      
+         <script>
+             let deferredPrompt;
+
+             function isIOS() {
+                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+             }
+
+             if (isIOS()) {
+                 const iosInstructions = document.getElementById('ios-instructions');
+                 iosInstructions.style.display = 'block';
+
+                 document.getElementById('ios-close-btn').addEventListener('click', () => {
+                     iosInstructions.style.display = 'none';
+                 });
+             }
+
+             window.addEventListener('beforeinstallprompt', (e) => {
+                 e.preventDefault();
+                 deferredPrompt = e;
+                 document.getElementById('downloadContainer').style.display = 'block';
+             });
+
+             document.getElementById('downloadContainer').addEventListener('click', async () => {
+                 if (deferredPrompt) {
+                     deferredPrompt.prompt();
+                     const { outcome } = await deferredPrompt.userChoice;
+                     console.log(`User response: ${outcome}`);
+                     deferredPrompt = null;
+                 }
+             });
+
+             window.addEventListener('appinstalled', () => {
+                 console.log('PWA installed');
+                 document.getElementById('downloadContainer').style.display = 'none';
+             });
+         </script>
     </form>
 </body>
 </html>

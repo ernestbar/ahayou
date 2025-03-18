@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebAhayouAdmin
+namespace landingAhayou
 {
 
 

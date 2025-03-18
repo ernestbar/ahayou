@@ -124,6 +124,10 @@
 			</asp:SiteMapPath>--%>
 			<asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label> 
 			<asp:Label ID="lblCodigo" runat="server" Text="" Visible="false"></asp:Label>
+			<asp:Label ID="lblFotoVerticalAnt" runat="server" Text="" Visible="false"></asp:Label>
+			<asp:Label ID="lblFotoHorizontalAnt" runat="server" Text="" Visible="false"></asp:Label>
+			<asp:Label ID="lblFotoMiniaturaAnt" runat="server" Text="" Visible="false"></asp:Label>
+			<asp:Label ID="lblFotoTituloAnt" runat="server" Text="" Visible="false"></asp:Label>
 			<asp:Label ID="lblAviso" runat="server" ForeColor="White" Font-Size="Medium" Text=""></asp:Label>
 			  <asp:Label ID="lblCodMenuRol" runat="server" Visible="false" Text=""></asp:Label>
     <asp:MultiView ID="MultiView1" runat="server">
@@ -445,7 +449,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Story line:</label>
 												<div class="col-md-6">
 													 <asp:TextBox ID="txtStoryLine" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtStoryLine" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtStoryLine" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 										</div>
 										</div>
 										<!-- end form-group row -->
@@ -454,7 +458,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Story line ingles:</label>
 												<div class="col-md-6">
 													<asp:TextBox ID="txtStoryLineIngles" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtStoryLineIngles" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtStoryLineIngles" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 											</div>
 										</div>
 										<!-- end form-group row -->
@@ -474,7 +478,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Sinopsis:</label>
 												<div class="col-md-6">
 													 <asp:TextBox ID="txtSinopsis" TextMode="MultiLine" Height="200" Enabled="true" class="form-control" runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSinopsis" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSinopsis" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 										</div>
 										</div>
 										<!-- end form-group row -->
@@ -483,7 +487,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Sinopsis ingles:</label>
 												<div class="col-md-6">
 													<asp:TextBox ID="txtSinopsisIngles" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSinopsisIngles" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtSinopsisIngles" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 											</div>
 										</div>
 										<!-- end form-group row -->
@@ -503,7 +507,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Director:</label>
 												<div class="col-md-6">
 													 <asp:TextBox ID="txtDirector" TextMode="MultiLine" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDirector" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDirector" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 										</div>
 										</div>
 										<!-- end form-group row -->
@@ -512,7 +516,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Reparto:</label>
 												<div class="col-md-6">
 													<asp:TextBox ID="txtReparto" TextMode="MultiLine" Height="200" Enabled="true" class="form-control" runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtReparto" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtReparto" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 											</div>
 										</div>
 										<!-- end form-group row -->	
@@ -521,7 +525,7 @@
 											<label class="col-md-3 text-md-right col-form-label">Creditos:</label>
 												<div class="col-md-6">
 													<asp:TextBox ID="txtCreditos" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
-													<asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCreditos" Font-Bold="True"></asp:RequiredFieldValidator>
+													<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtCreditos" Font-Bold="True"></asp:RequiredFieldValidator>--%>
 											</div>
 										</div>
 										<!-- end form-group row -->							
@@ -639,6 +643,7 @@
 										<li><strong>Nacionalidad:</strong>  <asp:Label ID="lblNacionalidad" runat="server" Text=""></asp:Label></li>
 										<li><strong>Idioma Original:</strong>  <asp:Label ID="lblIdiomaOriginal" runat="server" Text=""></asp:Label></li>
 										<li><strong>Es subtitulada:</strong>  <asp:Label ID="lblEsSubtitulada" runat="server" Text=""></asp:Label></li>
+										<li><strong>Estado:</strong>  <asp:Label ID="lblEstado" runat="server" Text=""></asp:Label></li>
 									</ul>
 									<%--Color Admin Admin Template transformed our workflow. 
 									The customization options are unparalleled, and the support team is incredibly responsive.

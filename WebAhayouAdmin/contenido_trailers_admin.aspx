@@ -92,7 +92,14 @@
 											</div>
 										</div>
 										<!-- end form-group row -->
-									
+																<br />
+													<div class="form-group row m-b-10">
+	
+																<div class="col-md-6">
+														<asp:Button ID="btnVolverContenidosSTR" class="btn btn-success btn-lg col-md-12" BackColor="Transparent" OnClick="btnVolverContenidosSTR_Click" runat="server" Text="Volver a contenidos streaming" />
+																				<%--<input type="text" name="Ruta" placeholder="" class="form-control" />--%>
+																</div>
+									</div>
 										<!-- begin page-header -->
 												<!-- begin page-header -->
 																<h1 class="page-header">Contenido trailers admin <asp:Label ID="lblTitulo" runat="server" Text=""></asp:Label> <small> </small></h1>

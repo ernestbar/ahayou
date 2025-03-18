@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebAhayouAdmin
+namespace landingAhayou
 {
     public partial class contenidos_us : System.Web.UI.Page
     {

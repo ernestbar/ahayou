@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contenidos_us.aspx.cs" Inherits="WebAhayouAdmin.contenidos_us" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contenidos_us.aspx.cs" Inherits="landingAhayou.contenidos_us" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
     </head>
     <body>
          <form id="form1" runat="server">
-         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="WebAhayouAdmin.Clases.Contenidos">
+         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
         </asp:ObjectDataSource>
         <header class="header--privacy">
             <nav class="header__nav">

@@ -180,5 +180,10 @@ namespace WebAhayouAdmin
                 lblAviso.Text = "Tenemos problemas en el proceso, verifique los logs con el administrador.";
             }
         }
+
+        protected void btnVolverContenidosSTR_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("contenido_str_admin.aspx?RME=119");
+        }
     }
 }

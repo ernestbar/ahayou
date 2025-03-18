@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebAhayouAdmin
+namespace landingAhayou
 {
     public partial class centro_ayuda : System.Web.UI.Page
     {

@@ -180,8 +180,9 @@ namespace WebAhayouAdmin
             }
         }
 
-
-
-        
+        protected void btnVolverContenidosSTR_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("contenido_str_admin.aspx?RME=119");
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebAhayouAdmin
+namespace landingAhayou
 {
     public partial class home : System.Web.UI.Page
     {
@@ -23,6 +23,8 @@ namespace WebAhayouAdmin
                 ////lblMundo.Text = pais;
                 //Repeater2.DataBind();
                 //lblMundo.Text= GetClientIpAddress();
+                Clases.Suscriptores obj=new Clases.Suscriptores("ernesto.barron@gmail.com","123");
+                string salida = obj.PV_DESCRIPCIONPR;
 
 
             }

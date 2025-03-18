@@ -499,7 +499,11 @@
     <Content Include="js\web-app-title.js" />
     <Content Include="Logs\Readme.txt" />
     <Content Include="privacy.html" />
+    <Content Include="Scripts\konami.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\pwacompat.min.js" />
+    <Content Include="service-worker.js" />
+    <Content Include="sw.js" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -582,6 +586,7 @@
     <Content Include="Images\Icons\iconoss.zip" />
     <Content Include="Images\Icons\manifest.json" />
     <Content Include="manifest.json" />
+    <Content Include="manifest2.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

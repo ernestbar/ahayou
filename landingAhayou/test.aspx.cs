@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebAhayouAdmin
+namespace landingAhayou
 {
     public partial class test : System.Web.UI.Page
     {
@@ -16,7 +16,7 @@ namespace WebAhayouAdmin
             if (!Page.IsPostBack)
             {
                 string pais = GetCountryFromRequest();
-                Label1.Text = pais;
+                //Label1.Text = pais;
             }
         }
         private string GetCountryFromRequest()

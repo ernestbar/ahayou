@@ -51,6 +51,7 @@ namespace WebAhayouAdmin.Clases
         public string PV_TITULO { get; set; }
         public DateTime PD_FECHA_PUBLICACION { get; set; }
         public string PV_ESTADO_CONTENIDO { get; set; }
+        public string PV_ESTADO_CONTENIDO_DESC { get; set; }
         public string PV_COD_PRODUCTORA { get; set; }
         public string PRODUCTORA { get; set; }
         public string PV_ES_GRATUITA { get; set; }
@@ -230,11 +231,11 @@ namespace WebAhayouAdmin.Clases
                             else
                                 PI_TEMPORADAS = int.Parse(dr["temporadas"].ToString());
                             if (string.IsNullOrEmpty(dr["tiempo_hora"].ToString()))
-                                PV_TIEMPO_HORA = "";
+                                PV_TIEMPO_HORA = "00";
                             else
                                 PV_TIEMPO_HORA = (string)dr["tiempo_hora"];
                             if (string.IsNullOrEmpty(dr["tiempo_minutos"].ToString()))
-                                PV_TIEMPO_MINUTOS = "";
+                                PV_TIEMPO_MINUTOS = "00";
                             else
                                 PV_TIEMPO_MINUTOS = (string)dr["tiempo_minutos"];
                             if (string.IsNullOrEmpty(dr["cod_tipo_audio"].ToString()))
@@ -313,6 +314,10 @@ namespace WebAhayouAdmin.Clases
                                 PV_ESTADO_CONTENIDO = "";
                             else
                                 PV_ESTADO_CONTENIDO = (string)dr["cod_estado_contenido"];
+                            if (string.IsNullOrEmpty(dr["estado_contenido_desc"].ToString()))
+                                PV_ESTADO_CONTENIDO_DESC = "";
+                            else
+                                PV_ESTADO_CONTENIDO_DESC = (string)dr["estado_contenido_desc"];
                             if (string.IsNullOrEmpty(dr["cod_productora"].ToString()))
                                 PV_COD_PRODUCTORA = "";
                             else
@@ -328,7 +333,7 @@ namespace WebAhayouAdmin.Clases
                 }
 
             }
-            catch { }
+            catch(Exception ex) { string e = ex.ToString(); }
         }
 
 

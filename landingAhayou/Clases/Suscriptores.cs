@@ -28,6 +28,7 @@ namespace landingAhayou.Clases
         public string PV_ESTADOPR { get; set; }
         public string PV_DESCRIPCIONPR { get; set; }
         public string PV_ERROR { get; set; }
+        public string PV_TEMPORAL { get; set; }
 
         #endregion
         #region Constructores
@@ -35,6 +36,12 @@ namespace landingAhayou.Clases
         {
             PV_USUARIOI = pV_USUARIOI;
             RecuperarDatos();
+        }
+        public Suscriptores(string pV_USUARIOI, string pV_PASSWORD)
+        {
+            PV_USUARIOI = pV_USUARIOI;
+            PV_PASSWORD = pV_PASSWORD;
+            PR_INGRESO_APP(pV_USUARIOI,pV_PASSWORD);
         }
         public Suscriptores(string pV_TIPO_OPERACION, string pV_USUARIOI, string pV_PASSWORD, string pV_PASSWORD_ANTERIOR,
             string pV_NOMBRE_COMPLETO, string pV_CELULAR, string pV_EMAIL, string pV_USUARIO)
@@ -81,7 +88,49 @@ namespace landingAhayou.Clases
             }
         }
 
-        
+        public string PR_INGRESO_APP(string nombre_usuario, string password)
+        {
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_INGRESO_APP";
+                    cmd.Parameters.AddWithValue("pv_usuario", nombre_usuario);
+                    cmd.Parameters.AddWithValue("pv_password", password);
+                    cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("PV_DESCRIPCIONPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("PV_TEMPORAL", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
+                    cmd.Connection = conn;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    if (string.IsNullOrEmpty(cmd.Parameters["PV_ESTADOPR"].Value.ToString()))
+                        PV_ESTADOPR = "";
+                    else
+                        PV_ESTADOPR = (string)cmd.Parameters["PV_ESTADOPR"].Value;
+                    if (string.IsNullOrEmpty(cmd.Parameters["PV_DESCRIPCIONPR"].Value.ToString()))
+                        PV_DESCRIPCIONPR = "";
+                    else
+                        PV_DESCRIPCIONPR = (string)cmd.Parameters["PV_DESCRIPCIONPR"].Value;
+                    if (string.IsNullOrEmpty(cmd.Parameters["PV_TEMPORAL"].Value.ToString()))
+                        PV_TEMPORAL = "";
+                    else
+                        PV_TEMPORAL = (string)cmd.Parameters["PV_TEMPORAL"].Value;
+                    conn.Close();
+
+                }
+                return PV_DESCRIPCIONPR;
+            }
+            catch (Exception ex)
+            {
+              return ex.ToString();
+              
+            }
+        }
+
 
 
 
