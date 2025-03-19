@@ -1,4 +1,4 @@
-@import url("main.css");
+@import url("/css/common/main.css");
 
 .web-app-section {
     background-image: url("../imgs/backgrounds/landingpage-AHAYOU_05.png");
@@ -31,6 +31,7 @@
 .web-app-section__content:hover {
     transition: background-color 0.3s;
     background-color: #000;
+    cursor: pointer;
 }
 
 .web-app-section__container-description,

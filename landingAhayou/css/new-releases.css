@@ -1,4 +1,4 @@
-@import url("main.css");
+@import url("/css/common/main.css");
 
 .new-releases {
     background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),

@@ -65,18 +65,18 @@
                 </div>
             </div>
              <div class="options__container">
-                 <button class="options__principal-button" id="menuButton">
-                     <span class="options__div-hamburger"></span>
-                     <span class="options__div-hamburger"></span>
-                     <span class="options__div-hamburger"></span>
-                 </button>
-                 <div class="options__menu" id="optionsMenu">
-                     <%--<button class="options__button" onclick='window.location.href="home.aspx"'>Spanish</button>
-                     <button class="options__button" >English</button>--%>
-                      <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Spanish" />
-                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="English" />
-                 </div>
-             </div>
+                 <button class="hamburger__button" id="menuButton">
+                      <span class="hamburger__line hamburger__line--white"></span>
+                   <span class="hamburger__line hamburger__line--white"></span>
+                   <span class="hamburger__line hamburger__line--white"></span>
+                </button>
+                <div class="options__menu" id="optionsMenu">
+                    <%--<button class="options__button" onclick='window.location.href="home.aspx"'>Spanish</button>
+                    <button class="options__button" >English</button>--%>
+                     <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Spanish" />
+                       <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="English" />
+                </div>
+            </div>
             </nav>
         </header>
         <main class="main main--form">

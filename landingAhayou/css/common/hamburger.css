@@ -1,0 +1,43 @@
+.hamburger__button {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger__button:hover {
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease;
+}
+
+.hamburger__line {
+    position: absolute;
+    width: 90%;
+    height: 5px;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger__line--white {
+    background-color: var(--color-white);
+}
+
+.hamburger__line--black {
+    background-color: #000;
+}
+
+.hamburger__line:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger__line:nth-child(3) {
+    top: 75%;
+}

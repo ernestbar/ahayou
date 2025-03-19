@@ -56,17 +56,19 @@
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
                     </div>
                 </div>
-                <div class="options__container">
-                    <button class="options__principal-button" id="menuButton">
-                        <span class="options__div-hamburger"></span>
-                        <span class="options__div-hamburger"></span>
-                        <span class="options__div-hamburger"></span>
-                    </button>
-                    <div class="options__menu" id="optionsMenu">
-                          <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                            <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                    </div>
-                </div>
+                 <div class="options__container">
+                     <button class="hamburger__button" id="menuButton">
+                           <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                     </button>
+                     <div class="options__menu" id="optionsMenu">
+                         <%--<button class="options__button">Espa&ntilde;ol</button>
+                         <button class="options__button" >Ingl&eacute;s</button>--%>
+                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                     </div>
+                 </div>
             </nav>
         </header>
         <main class="main main--form">

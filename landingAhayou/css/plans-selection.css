@@ -1,0 +1,22 @@
+.plans-selection {
+    gap: 25px;
+}
+
+.plans-selection__item {
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.plans-selection__padding,
+.plans-selection {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@media (max-width: 1570px) {
+    .plans-selection__list {
+        gap: 50px;
+    }
+}

@@ -21,18 +21,21 @@
     href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet"
 />
-<link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/containers.css" />
-<link rel="stylesheet" href="css/arrow.css" />
-<link rel="stylesheet" href="css/header.css" />
-<link rel="stylesheet" href="css/new-releases.css" />
-<link rel="stylesheet" href="css/plans.css" />
-<link rel="stylesheet" href="css/web-app-section.css" />
-<link rel="stylesheet" href="css/footer.css" />
-<link rel="stylesheet" href="css/frequent-questions.css" />
-<link rel="stylesheet" href="css/header-movies.css" />
-<link rel="stylesheet" href="css/forms.css" />
-<link rel="stylesheet" href="css/header-options.css" />
+<link rel="stylesheet" href="css/common/main.css" />
+        <link rel="stylesheet" href="css/common/containers.css" />
+        <link rel="stylesheet" href="css/common/arrow.css" />
+        <link rel="stylesheet" href="css/header/header.css" />
+        <link rel="stylesheet" href="css/new-releases.css" />
+        <link rel="stylesheet" href="css/plans.css" />
+        <link rel="stylesheet" href="css/web-app-section.css" />
+        <link rel="stylesheet" href="css/forms/forms.css" />
+        <link rel="stylesheet" href="css/frequent-questions.css" />
+        <link rel="stylesheet" href="css/header/header-movies.css" />
+        <link rel="stylesheet" href="css/forms/forms.css" />
+        <link rel="stylesheet" href="css/header/header-options.css" />
+        <link rel="stylesheet" href="css/common/footer.css" />
+        <link rel="stylesheet" href="css/common/buttons.css" />
+        <link rel="stylesheet" href="css/common/hamburger.css" />
 
 
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
@@ -89,10 +92,10 @@
                     </div>
                 </div>
                  <div class="options__container">
-                     <button class="options__principal-button" id="menuButton">
-                         <span class="options__div-hamburger"></span>
-                         <span class="options__div-hamburger"></span>
-                         <span class="options__div-hamburger"></span>
+                      <button class="hamburger__button" id="menuButton">
+                           <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
                      </button>
                      <div class="options__menu" id="optionsMenu">
                          <%--<button class="options__button" onclick='window.location.href="home.aspx"'>Spanish</button>
@@ -402,12 +405,12 @@
         </section>
 
        <script src="js/header-background-handler.js"></script>
-        <script src="js/carousel-header-index.js"></script>
-        <script src="js/carousel-new-releases.js"></script>
-        <script src="js/web-app-title.js"></script>
-        <script src="js/open-menu.js"></script>
-        <script src="js/header-movies-responsive.js"></script>
-        <script src="js/movie-container-hover.js"></script>
+ <script src="js/carousel-header-index.js"></script>
+ <script src="js/carousel-new-releases.js"></script>
+ <script src="js/web-app-title.js"></script>
+ <script src="js/open-menu.js"></script>
+ <script src="js/header-movies-responsive.js"></script>
+ <script src="js/movie-container-hover.js"></script>
     </form>
 </body>
 </html>
