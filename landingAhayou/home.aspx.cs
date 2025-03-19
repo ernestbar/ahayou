@@ -15,6 +15,14 @@ namespace landingAhayou
         {
             if (!Page.IsPostBack) 
             {
+                if (Session["usuario"] == null)
+                {
+                    lblUsuario.Text = "";
+                }
+                else
+                {
+                    lblUsuario.Text = Session["usuario"].ToString();
+                }
                 //string pais = GetCountryFromRequest();
                 //if (pais == "BO")
                 //    lblMundo.Text = "BO";

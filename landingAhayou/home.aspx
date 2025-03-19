@@ -86,11 +86,13 @@
                         Suscr&iacute;bete
                     </button>
                
-                    <button
+                    <%--<button
                         class="header__button header__button--text header__button--bg-green"
                     >
                         Iniciar Sesi&oacute;n
-                    </button>
+                    </button>--%>
+                    <input class="header__button header__button--text header__button--bg-green" type="button" onclick="location.href='login.aspx';" value="Iniciar session" />
+                    <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="header__nav-buttons">
                     <div>

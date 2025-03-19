@@ -108,7 +108,7 @@ namespace AhayouWebAPI.Controllers
             {
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();
-                SqlCommand comando = new SqlCommand("PR_INGRESO_APP", conexion);
+                SqlCommand comando = new SqlCommand("PR_INGRESO_APP_STR", conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 //comando.Parameters.AddWithValue("@tipo_operacion", "B");
                 comando.Parameters.AddWithValue("@pv_usuario", nombre_usuario);

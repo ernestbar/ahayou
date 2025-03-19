@@ -97,7 +97,7 @@ namespace landingAhayou.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_INGRESO_APP";
+                    cmd.CommandText = "PR_INGRESO_APP_STR";
                     cmd.Parameters.AddWithValue("pv_usuario", nombre_usuario);
                     cmd.Parameters.AddWithValue("pv_password", password);
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;

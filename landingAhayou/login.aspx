@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="WebAhayouAdmin.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="login.aspx.cs" Inherits="landingAhayou.login" %>
 
 <!DOCTYPE html>
 
@@ -35,7 +35,9 @@
 <body>
     <form id="form1" runat="server">
           <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
-  </asp:ObjectDataSource>
+          </asp:ObjectDataSource>
+          <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_AVATARES" TypeName="landingAhayou.Clases.Avatares">
+          </asp:ObjectDataSource>
         <header class="header">
             <nav class="header__nav">
                 <a href="home.aspx" class="header__logo">
@@ -68,6 +70,7 @@
                         ></button>--%>
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                  <div class="options__container">
@@ -86,120 +89,124 @@
             </nav>
         </header>
         <main class="main main--flex">
-            <section class="container__wrapper">
-                <h1>Inicio de sesión</h1>
-                <div class="alert container--green">
-                    <p class="alert__text alert__text--center">
-                        <span class="alert__text--bold"
-                            >Contraseña incorrecta</span
-                        >
-                        para
-                        <span class="alert__text--bold"
-                            >gustavo.zalles.arrieta@gmail.com</span
-                        >
-                        Puedes usar un código de inicio de sesión, restablecer
-                        tu contraseña o reintentarlo.
-                    </p>
-                </div>
-                <form class="form container--shiny container--padding-width" id="form">
-                    <div class="form__input-container">
-                        <label
-                            for="email"
-                            class="form__label form__label--second"
-                        >
-                            Email o n&uacute;mero de celular
-                        </label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            minlength="6"
-                            maxlength="320"
-                            autocomplete="off"
-                            class="form__input form__input--dark"
-                        />
-                    </div>
-                    <div class="form__input-container">
-                        <label
-                            for="password"
-                            class="form__label form__label--second"
-                        >
-                            Contrase&ntilde;a
-                        </label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            autocomplete="off"
-                            class="form__input form__input--dark"
-                        />
-                    </div>
-                    <input
-                        type="submit"
-                        value="Suscríbete"
-                        class="button button--orange full-width button--border"
-                    />
-                    <p>o</p>
-                    <div class="form__input-container">
-                        <label
-                            for="code"
-                            class="form__label form__label--second form__label--center form__label--bold"
-                        >
-                            Usar c&oacute;digo de inicio de sesi&oacute;n
-                        </label>
-                        <input
-                            type="text"
-                            name="code"
-                            id="code"
-                            autocomplete="off"
-                            class="form__input form__input--dark"
-                            maxlength="50"
-                        />
-                    </div>
-                    <a href="" class="form__link"
-                        >¿Olvidaste tu contrase&ntilde;a?</a
-                    >
-                    <div
-                        class="form__input-container form__input-container--checkbox"
-                    >
-                        <input
-                            type="checkbox"
-                            name="remember"
-                            id="remember"
-                            class="form__input form__checkbox"
-                        />
-                        <label
-                            for="remember"
-                            class="form__label form__label--second"
-                        >
-                            Recordarme este dispositivo
-                        </label>
-                    </div>
-                </form>
-                <p class="login-footer__text">
-                    ¿Primera vez en Ahayou?&nbsp;<a
-                        href=""
-                        class="login-footer__link"
-                        >Suscribete ya.</a
-                    >
-                </p>
-                <p class="text text--light full-width">
-                    Esta página está protegida por Google reCAPTCHA para
-                    comprobar que no eres un robot.<br />
-                    La información recopilada por Google reCAPTCHA está sujeta a
-                    la
-                    <a href="" class="common-paragraph__link"
-                        >Política de privacidad</a
-                    >
-                    y a las
-                    <a href="" class="common-paragraph__link"
-                        >Condiciones de servicio de Google</a
-                    >, y se utiliza para proporcionar, mantenerel servicio de
-                    reCPTCHA, así como para fines generales de seguridad (Google
-                    no la utiliza para personalizar publicidad).
-                </p>
-            </section>
-        </main>
+                    <section class="container__wrapper">
+                        <h1>Inicio de sesión</h1>
+                        <div class="alert container--green">
+                            <p class="alert__text alert__text--center">
+                                <span class="alert__text--bold"
+                                    >Contraseña incorrecta</span
+                                >
+                                para
+                                <span class="alert__text--bold"
+                                    >gustavo.zalles.arrieta@gmail.com</span
+                                >
+                                Puedes usar un código de inicio de sesión, restablecer
+                                tu contraseña o reintentarlo.
+                            </p>
+                        </div>
+                        <form class="form container--shiny container--padding-width" id="form">
+                            <div class="form__input-container">
+                                <label
+                                    for="email"
+                                    class="form__label form__label--second"
+                                >
+                                    Email o n&uacute;mero de celular
+                                </label>
+                                <%--<input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    minlength="6"
+                                    maxlength="320"
+                                    autocomplete="off"
+                                    class="form__input form__input--dark"
+                                />--%>
+                                <asp:TextBox class="form__input form__input--dark" ID="txtUsuario" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form__input-container">
+                                <label
+                                    for="password"
+                                    class="form__label form__label--second"
+                                >
+                                    Contrase&ntilde;a
+                                </label>
+                                <%--<input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    autocomplete="off"
+                                    class="form__input form__input--dark"
+                                />--%>
+                                 <asp:TextBox class="form__input form__input--dark" ID="txtPassword" runat="server"></asp:TextBox>
+                            </div>
+                            <%--<input
+                                type="submit"
+                                value="Suscríbete"
+                                class="button button--orange full-width button--border"
+                            />--%>
+                            <asp:Button class="button button--orange full-width button--border" OnClick="btnLogin_Click" ID="btnLogin" runat="server" Text="Iniciar Sesion" />
+                            <p>o</p>
+                            <div class="form__input-container">
+                                <label
+                                    for="code"
+                                    class="form__label form__label--second form__label--center form__label--bold"
+                                >
+                                    Usar c&oacute;digo de inicio de sesi&oacute;n
+                                </label>
+                                <input
+                                    type="text"
+                                    name="code"
+                                    id="code"
+                                    autocomplete="off"
+                                    class="form__input form__input--dark"
+                                    maxlength="50"
+                                />
+                            </div>
+                            <a href="" class="form__link"
+                                >¿Olvidaste tu contrase&ntilde;a?</a
+                            >
+                            <div
+                                class="form__input-container form__input-container--checkbox"
+                            >
+                                <input
+                                    type="checkbox"
+                                    name="remember"
+                                    id="remember"
+                                    class="form__input form__checkbox"
+                                />
+                                <label
+                                    for="remember"
+                                    class="form__label form__label--second"
+                                >
+                                    Recordarme este dispositivo
+                                </label>
+                            </div>
+                        </form>
+                        <p class="login-footer__text">
+                            ¿Primera vez en Ahayou?&nbsp;<a
+                                href=""
+                                class="login-footer__link"
+                                >Suscribete ya.</a
+                            >
+                        </p>
+                        <p class="text text--light full-width">
+                            Esta página está protegida por Google reCAPTCHA para
+                            comprobar que no eres un robot.<br />
+                            La información recopilada por Google reCAPTCHA está sujeta a
+                            la
+                            <a href="" class="common-paragraph__link"
+                                >Política de privacidad</a
+                            >
+                            y a las
+                            <a href="" class="common-paragraph__link"
+                                >Condiciones de servicio de Google</a
+                            >, y se utiliza para proporcionar, mantenerel servicio de
+                            reCPTCHA, así como para fines generales de seguridad (Google
+                            no la utiliza para personalizar publicidad).
+                        </p>
+                    </section>
+                </main>
+        
         <footer class="footer">
             <div class="footer__image-container">
                 <img

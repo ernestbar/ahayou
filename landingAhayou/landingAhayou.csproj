@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="cambio_password.aspx" />
     <Content Include="centro_ayuda.aspx" />
     <Content Include="contacto.aspx" />
     <Content Include="contacto_us.aspx" />
@@ -538,6 +539,7 @@
     <Content Include="js\web-app-title.js" />
     <Content Include="login.aspx" />
     <Content Include="Logs\Readme.txt" />
+    <Content Include="perfiles.aspx" />
     <Content Include="privacy.html" />
     <Content Include="Scripts\konami.js" />
     <Content Include="Scripts\main.js" />
@@ -548,6 +550,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cambio_password.aspx.cs">
+      <DependentUpon>cambio_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cambio_password.aspx.designer.cs">
+      <DependentUpon>cambio_password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="centro_ayuda.aspx.cs">
       <DependentUpon>centro_ayuda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -555,6 +564,7 @@
     <Compile Include="centro_ayuda.aspx.designer.cs">
       <DependentUpon>centro_ayuda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Avatares.cs" />
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
@@ -613,6 +623,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfiles.aspx.cs">
+      <DependentUpon>perfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfiles.aspx.designer.cs">
+      <DependentUpon>perfiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test.aspx.cs">
