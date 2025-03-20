@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebAhayouAdmin</RootNamespace>
+    <RootNamespace>landingAhayou</RootNamespace>
     <AssemblyName>WebAhayouAdmin</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
@@ -117,109 +117,7 @@
     <Content Include="css\web-app-section.css" />
     <Content Include="centro_ayuda_us.aspx" />
     <Content Include="css\welcome.css" />
-    <Content Include="fotos_peliculas\0\banner_principal.png" />
-    <Content Include="fotos_peliculas\0\header-img.jpg" />
-    <Content Include="fotos_peliculas\10\FotoHorizontalPelicula_71_20241213155319PLATO-PACEÑO-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\10\FotoMiniaturaPelicula_71_20241213155353PLATO-PACEÑO-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\10\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\10\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\10\foto_titulo.png" />
-    <Content Include="fotos_peliculas\10\foto_vertical.png" />
-    <Content Include="fotos_peliculas\11\FotoHorizontalPelicula_72_20241213171226BARBARA-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\11\FotoMiniaturaPelicula_72_20241213171219BARBARA AFICHE HORIZONTAL MINIATURA 1200X900.jpg" />
-    <Content Include="fotos_peliculas\11\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\11\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\11\foto_titulo.png" />
-    <Content Include="fotos_peliculas\11\foto_vertical.png" />
-    <Content Include="fotos_peliculas\12\FotoHorizontalPelicula_74_20241213173727MAX-JUTAM-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\12\FotoMiniaturaPelicula_74_20241213173703MAX-JUTAM-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\12\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\12\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\12\foto_titulo.png" />
-    <Content Include="fotos_peliculas\12\foto_vertical.png" />
-    <Content Include="fotos_peliculas\13\FotoHorizontalPelicula_75_20241213182931MARTES-DE-CH%27ALLA-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\13\FotoMiniaturaPelicula_75_20241213182916MARTES-DE-CH%27ALLA-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\13\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\13\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\13\foto_titulo.png" />
-    <Content Include="fotos_peliculas\13\foto_vertical.png" />
-    <Content Include="fotos_peliculas\14\FotoHorizontalPelicula_76_20241213185435LA-INVASÍON-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\14\FotoMiniaturaPelicula_76_20241213185422LA-INVASIÓN-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\14\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\14\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\14\foto_titulo.png" />
-    <Content Include="fotos_peliculas\14\foto_vertical.png" />
-    <Content Include="fotos_peliculas\15\FotoHorizontalPelicula_77_20241213191723EL-DE-LAS-ROSAS-BLANCAS-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\15\FotoMiniaturaPelicula_77_20241213191712EL-DE-LAS-ROSAS-BLANCAS-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\15\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\15\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\15\foto_titulo.png" />
-    <Content Include="fotos_peliculas\15\foto_vertical.png" />
-    <Content Include="fotos_peliculas\16\FotoMiniaturaPelicula_78_20241213194341DÍA-DE-LA-MESA-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\16\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\16\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\16\foto_titulo.png" />
-    <Content Include="fotos_peliculas\16\foto_vertical.png" />
-    <Content Include="fotos_peliculas\17\FotoHorizontalPelicula_79_20241213203942AMAZONAS-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\17\FotoMiniaturaPelicula_79_20241213203914AMAZONAS-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\17\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\17\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\17\foto_titulo.png" />
-    <Content Include="fotos_peliculas\17\foto_vertical.png" />
-    <Content Include="fotos_peliculas\18\FotoHorizontalPelicula_80_20241213205004CHACO-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\18\FotoMiniaturaPelicula_80_20241213204948CHACO-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\18\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\18\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\18\foto_titulo.png" />
-    <Content Include="fotos_peliculas\18\foto_vertical.png" />
-    <Content Include="fotos_peliculas\1\FotoHorizontalPelicula_1_20231127120808fuertes portada.png" />
-    <Content Include="fotos_peliculas\1\FotoHorizontalPelicula_1_20241209145943fuertes.png" />
-    <Content Include="fotos_peliculas\1\FotoVerticalPelicula_1_20241213145051Fuertes 3.png" />
-    <Content Include="fotos_peliculas\1\foto_horizontal.jpg" />
-    <Content Include="fotos_peliculas\1\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\1\foto_titulo.png" />
-    <Content Include="fotos_peliculas\1\foto_vertical.jpg" />
-    <Content Include="fotos_peliculas\1\foto_vertical.png" />
-    <Content Include="fotos_peliculas\2\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\2\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\2\foto_vertical.png" />
-    <Content Include="fotos_peliculas\3\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\3\foto_miniatura.jpeg" />
-    <Content Include="fotos_peliculas\3\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\3\foto_titulo.png" />
-    <Content Include="fotos_peliculas\3\foto_vertical.png" />
-    <Content Include="fotos_peliculas\4\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\4\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\4\foto_titulo.png" />
-    <Content Include="fotos_peliculas\4\foto_vertical.png" />
-    <Content Include="fotos_peliculas\5\FotoHorizontalPelicula_64_20241029191238BUSCH-AFICHE-HORIZONTAL-1200X900.jpg" />
-    <Content Include="fotos_peliculas\5\FotoMiniaturaPelicula_64_20241029191212BUSCH-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\5\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\5\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\5\foto_titulo.png" />
-    <Content Include="fotos_peliculas\5\foto_vertical.png" />
-    <Content Include="fotos_peliculas\6\FotoHorizontalPelicula_65_20241029171139Miniatura-Puerto-Escondido-1200x900.jpg" />
-    <Content Include="fotos_peliculas\6\FotoMiniaturaPelicula_65_20241213144634Puerto-Escondido 3.jpg" />
-    <Content Include="fotos_peliculas\6\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\6\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\6\foto_titulo.png" />
-    <Content Include="fotos_peliculas\6\foto_vertical.png" />
-    <Content Include="fotos_peliculas\7\FotoHorizontalPelicula_66_20241211143920CORAZÓN-DE-DRAGON-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\7\FotoMiniaturaPelicula_66_20241211143855Encabezado Corazón.jpg" />
-    <Content Include="fotos_peliculas\7\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\7\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\7\foto_titulo.png" />
-    <Content Include="fotos_peliculas\7\foto_vertical.png" />
-    <Content Include="fotos_peliculas\8\FotoMiniaturaPelicula_68_20241210194512SANTA-CLARA-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\8\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\8\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\8\foto_vertical.png" />
-    <Content Include="fotos_peliculas\9\FotoHorizontalPelicula_70_20241210200056SIRENA-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
-    <Content Include="fotos_peliculas\9\FotoMiniaturaPelicula_70_20241210200019SIRENA-AFICHE-HORIZONTAL-1200X800.jpg" />
-    <Content Include="fotos_peliculas\9\foto_horizontal.png" />
-    <Content Include="fotos_peliculas\9\foto_miniatura.png" />
-    <Content Include="fotos_peliculas\9\foto_titulo.png" />
-    <Content Include="fotos_peliculas\9\foto_vertical.png" />
+    <Content Include="forma_pago.aspx" />
     <Content Include="help-center.html" />
     <Content Include="home.aspx" />
     <Content Include="home_us.aspx" />
@@ -244,7 +142,6 @@
     <Content Include="Images\Avatars\female.png" />
     <Content Include="Images\Avatars\girl.png" />
     <Content Include="Images\Avatars\male.png" />
-    <Content Include="Images\baner.gif" />
     <Content Include="Images\Banner.jpg" />
     <Content Include="Images\Banner.png" />
     <Content Include="Images\banner3.png" />
@@ -263,8 +160,6 @@
     <Content Include="Images\español.png" />
     <Content Include="Images\Fondo1.png" />
     <Content Include="Images\Fondo301.png" />
-    <Content Include="Images\Fondo302 - Copy.png" />
-    <Content Include="Images\Fondo302.png" />
     <Content Include="Images\Fondo303.png" />
     <Content Include="Images\Fondo304.png" />
     <Content Include="Images\Fondo305Logo.png" />
@@ -272,9 +167,7 @@
     <Content Include="Images\FondoApp.png" />
     <Content Include="Images\FondoPipocas.png" />
     <Content Include="Images\footer 1920 x 500.png" />
-    <Content Include="Images\gif viviendaSucre.gif" />
     <Content Include="Images\gif-arriba.gif" />
-    <Content Include="Images\gif-MinGob.gif" />
     <Content Include="Images\Icono147.png" />
     <Content Include="Images\Icono28.png" />
     <Content Include="Images\Icono294.png" />
@@ -523,7 +416,6 @@
     <Content Include="img\slide-2.jpg" />
     <Content Include="img\slide-3.jpg" />
     <Content Include="img\tv.png" />
-    <Content Include="index.html" />
     <Content Include="js\carousel-header-index.js" />
     <Content Include="js\carousel-new-releases.js" />
     <Content Include="js\carousel.js" />
@@ -541,12 +433,16 @@
     <Content Include="Logs\Readme.txt" />
     <Content Include="perfiles.aspx" />
     <Content Include="privacy.html" />
+    <Content Include="reset_password.aspx" />
     <Content Include="Scripts\konami.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\pwacompat.min.js" />
+    <Content Include="selecciona_plan.aspx" />
     <Content Include="service-worker.js" />
+    <Content Include="suscribete.aspx" />
     <Content Include="sw.js" />
     <Content Include="test.aspx" />
+    <Content Include="verificar_correo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -603,6 +499,13 @@
     <Compile Include="centro_ayuda_us.aspx.designer.cs">
       <DependentUpon>centro_ayuda_us.aspx</DependentUpon>
     </Compile>
+    <Compile Include="forma_pago.aspx.cs">
+      <DependentUpon>forma_pago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forma_pago.aspx.designer.cs">
+      <DependentUpon>forma_pago.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -632,6 +535,27 @@
       <DependentUpon>perfiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reset_password.aspx.cs">
+      <DependentUpon>reset_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reset_password.aspx.designer.cs">
+      <DependentUpon>reset_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="selecciona_plan.aspx.cs">
+      <DependentUpon>selecciona_plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="selecciona_plan.aspx.designer.cs">
+      <DependentUpon>selecciona_plan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="suscribete.aspx.cs">
+      <DependentUpon>suscribete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="suscribete.aspx.designer.cs">
+      <DependentUpon>suscribete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -639,12 +563,15 @@
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="verificar_correo.aspx.cs">
+      <DependentUpon>verificar_correo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verificar_correo.aspx.designer.cs">
+      <DependentUpon>verificar_correo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Icons %282%29.zip" />
-    <Content Include="Images\Icons %283%29.zip" />
-    <Content Include="Images\Icons %284%29.zip" />
-    <Content Include="Images\Icons.zip" />
     <Content Include="Images\Icons\.DS_Store" />
     <Content Include="Images\Icons\iconos.zip" />
     <Content Include="Images\Icons\iconoss.zip" />

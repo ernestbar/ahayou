@@ -22,6 +22,7 @@ namespace landingAhayou.Clases
         public string PV_NOMBRE_COMPLETO { get; set; }
         public string PV_CELULAR { get; set; }
         public string PV_EMAIL { get; set; }
+        public string PV_CODIGO_AUXILIAR { get; set; }
 
         public string PV_USUARIO { get; set; }
         public string PV_EMAILOUT { get; set; }
@@ -44,13 +45,14 @@ namespace landingAhayou.Clases
             PR_INGRESO_APP(pV_USUARIOI,pV_PASSWORD);
         }
         public Suscriptores(string pV_TIPO_OPERACION, string pV_USUARIOI, string pV_PASSWORD, string pV_PASSWORD_ANTERIOR,
-            string pV_NOMBRE_COMPLETO, string pV_CELULAR, string pV_EMAIL, string pV_USUARIO)
+            string pV_NOMBRE_COMPLETO, string pV_CELULAR, string pV_EMAIL,string pV_CODIGO_AUXILIAR, string pV_USUARIO)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PV_USUARIOI = pV_USUARIOI;
             PV_NOMBRE_COMPLETO = pV_NOMBRE_COMPLETO;
             PV_CELULAR = pV_CELULAR;
             PV_EMAIL = pV_EMAIL;
+            PV_CODIGO_AUXILIAR = pV_CODIGO_AUXILIAR;
             PV_USUARIOI = pV_USUARIOI;
             PV_PASSWORD = pV_PASSWORD;
             PV_PASSWORD_ANTERIOR = pV_PASSWORD_ANTERIOR;
@@ -131,8 +133,61 @@ namespace landingAhayou.Clases
             }
         }
 
+        public static DataTable PR_PAR_GET_PLAN_SUSCRIPTOR(string nombre_usuario)
+        {
 
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_PAR_GET_PLAN_SUSCRIPTOR";
+                    cmd.Parameters.AddWithValue("pv_usuario", nombre_usuario);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
 
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dt= new DataTable();
+                return dt;
+
+            }
+        }
+
+        public static DataTable PR_PAR_GET_PERFILES_SUSCRIPTOR(string pV_COD_PLAN_SUSCRIPTOR)
+        {
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_PAR_GET_PERFILES_SUSCRIPTOR";
+                    cmd.Parameters.AddWithValue("PV_COD_PLAN_SUSCRIPTOR", pV_COD_PLAN_SUSCRIPTOR);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dt = new DataTable();
+                return dt;
+
+            }
+        }
 
 
         #endregion
@@ -187,11 +242,12 @@ namespace landingAhayou.Clases
                     cmd.CommandText = "PR_ABM_SUSCRIPTOR";
                     cmd.Parameters.AddWithValue("PV_TIPO_OPERACION", PV_TIPO_OPERACION);
                     cmd.Parameters.AddWithValue("PV_USUARIOI", PV_USUARIOI);
+                    cmd.Parameters.AddWithValue("PV_PASSWORD_ANTERIOR", PV_PASSWORD_ANTERIOR);
+                    cmd.Parameters.AddWithValue("PV_PASSWORD", PV_PASSWORD);
                     cmd.Parameters.AddWithValue("PV_NOMBRE_COMPLETO", PV_NOMBRE_COMPLETO);
                     cmd.Parameters.AddWithValue("PN_CELULAR", PV_CELULAR);
                     cmd.Parameters.AddWithValue("PV_EMAIL", PV_EMAIL);
-                    cmd.Parameters.AddWithValue("PV_PASSWORD", PV_PASSWORD);
-                    cmd.Parameters.AddWithValue("PV_PASSWORD_ANTERIOR", PV_PASSWORD_ANTERIOR);
+                    cmd.Parameters.AddWithValue("PV_CODIGO_AUXILIAR", PV_CODIGO_AUXILIAR);
                     cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("PV_DESCRIPCIONPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;

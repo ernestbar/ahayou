@@ -1,0 +1,80 @@
+@import url("/css/common/main.css");
+
+body {
+    background: url("/imgs/backgrounds/fondo-AHAYOU.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 50px;
+    padding: 10px;
+}
+
+.profiles__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profiles__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 0 1 20%;
+    min-width: 150px;
+    max-width: 350px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.profiles__item:hover {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--container-bg-color);
+}
+
+.profiles__item-image {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 5px solid var(--color-green-yellow);
+}
+
+.profiles__item-text {
+    font-size: 2em;
+}
+
+@media (max-width: 1200px) {
+    .profiles {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .profiles {
+        width: 100%;
+    }
+
+    .profiles__item-text {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 430px) {
+    .profiles__item-text {
+        font-size: 1.25em;
+    }
+}

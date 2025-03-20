@@ -38,7 +38,7 @@ namespace AhayouWebAPI.Controllers
             {
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();
-                SqlCommand comando = new SqlCommand("PR_STR_GET_BANNER_PRINCIPAL", conexion);
+                SqlCommand comando = new SqlCommand("PR_STR_GET_BANNER_PRINCIPAL_MOBILE", conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 //comando.Parameters.AddWithValue("@tipo_operacion", "L");
                 SqlDataAdapter da = new SqlDataAdapter(comando);
@@ -49,8 +49,8 @@ namespace AhayouWebAPI.Controllers
                 oRol = (from DataRow dr in dt.Rows
                         select new Banners_principal()
                         {
-                            nro =(string)dr["numero"],
-                            cod_contenido_str = (Int64)dr["cod_contenido_str"],
+                            nro ="",
+                            cod_contenido_str = (Int32)dr["cod_contenido_str"],
                             nombre_contenido = (string)dr["nombre_contenido"],
                             formato_contenido = (string)dr["formato_contenido"],
                             formato_contenido_ingles = (string)dr["formato_contenido_ingles"],

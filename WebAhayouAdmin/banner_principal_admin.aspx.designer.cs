@@ -42,6 +42,15 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.Label lblCodBanner;
 
         /// <summary>
+        /// Control lblImagenAnt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImagenAnt;
+
+        /// <summary>
         /// Control lblAviso.
         /// </summary>
         /// <remarks>

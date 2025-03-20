@@ -18,22 +18,15 @@ namespace landingAhayou
                 if (Session["usuario"] == null)
                 {
                     lblUsuario.Text = "";
+                    btnLogin.Visible = true;
+                    btnSuscribete.Visible = true;
                 }
                 else
                 {
                     lblUsuario.Text = Session["usuario"].ToString();
+                    btnLogin.Visible = false;
+                    btnSuscribete.Visible = false;
                 }
-                //string pais = GetCountryFromRequest();
-                //if (pais == "BO")
-                //    lblMundo.Text = "BO";
-                //else 
-                //    lblMundo.Text = "RM";
-                ////lblMundo.Text = pais;
-                //Repeater2.DataBind();
-                //lblMundo.Text= GetClientIpAddress();
-                Clases.Suscriptores obj=new Clases.Suscriptores("ernesto.barron@gmail.com","123");
-                string salida = obj.PV_DESCRIPCIONPR;
-
 
             }
         }
@@ -124,6 +117,11 @@ namespace landingAhayou
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("login.aspx");
+        }
+
+        protected void btnSuscribete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("suscribete.aspx");
         }
     }
 }

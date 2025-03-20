@@ -1,0 +1,120 @@
+@import url("/css/common/main.css");
+
+.new-releases {
+    background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),
+        url("../imgs/backgrounds/landingpage-AHAYOU_02.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0;
+    padding-bottom: 10px;
+    padding-top: 25px;
+}
+
+.new-releases__title {
+    text-align: center;
+    letter-spacing: -5px;
+}
+
+.new-releases__title span:nth-child(1) {
+    font-weight: bold;
+}
+
+.new-releases__title span:nth-child(2) {
+    font-weight: var(--second-font-weight);
+    color: var(--color-secondary);
+}
+
+.new-releases__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.new-releases__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
+    justify-content: center;
+    gap: 0 20px;
+    width: 80%;
+    transition: transform 0.3s ease;
+}
+
+.new-releases__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: var(--container-bg-color-2);
+}
+
+.new-releases__item:hover {
+    transform: scale(1.1, 1.1);
+    transition: transform 0.3s ease;
+}
+
+.new-releases__list.slide-out {
+    transform: translateX(-25%);
+    opacity: 0;
+}
+
+.new-releases__list.slide-in {
+    transform: translateX(25%);
+    opacity: 0;
+}
+
+.new-releases__list.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.new-releases__item > img {
+    width: 100%;
+    height: 85%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.new-releases__item > div {
+    margin-top: 10px;
+    width: 100%;
+    height: 15%;
+}
+
+.new-releases__item > div > h3 {
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.new-releases__item > div > p {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* RESPONSIVE HEIGHT */
+
+@media (max-height: 768px) {
+    .new-releases__item {
+        height: 440px;
+    }
+}
+
+@media (max-height: 700px) {
+    .new-releases__item {
+        height: 400px;
+    }
+}

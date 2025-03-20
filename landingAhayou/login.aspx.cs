@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Collections.Specialized.BitVector32;
 
 namespace landingAhayou
 {
@@ -24,7 +26,21 @@ namespace landingAhayou
 			{
 				Session["usuario"] = email.Text;
 				lblUsuario.Text = email.Text;
-				Response.Redirect("perfiles.aspx");
+				DataTable dt = new DataTable();
+				dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(lblUsuario.Text);
+				if (dt.Rows.Count > 0)
+                {
+					foreach (DataRow dr in dt.Rows)
+					{
+						Session["cod_plan_suscriptor"]= dr["cod_plan_suscriptor"];
+					}
+					Response.Redirect("perfiles.aspx");
+				}
+				else
+				{
+                    Response.Redirect("home.aspx");
+                }
+				
 			}
 			else
 			{
@@ -33,5 +49,26 @@ namespace landingAhayou
 			}
 		}
         
+
+        protected void btnSuscribete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("suscribete.aspx");
+        }
+
+        protected void btnInicia_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void lbtnReset_Click(object sender, EventArgs e)
+        {
+			Session["email"]=email.Text;
+			Response.Redirect("reset_password.aspx");
+        }
+
+        protected void lbtnSuscribete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("suscribete.aspx");
+        }
     }
 }

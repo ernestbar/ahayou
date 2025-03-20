@@ -1,0 +1,24 @@
+.login-footer__text {
+    width: 100%;
+    text-align: justify;
+    padding-left: 50px;
+    font-size: 1.15em;
+    font-weight: 300;
+}
+
+.login-footer__link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .login-footer__text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-footer__text {
+        padding-left: 0;
+    }
+}

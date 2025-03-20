@@ -11,13 +11,24 @@ namespace landingAhayou
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario"] == null)
+            if (!Page.IsPostBack)
             {
-                Response.Redirect("login.aspx");
-            }
-            else
-            {
-                lblUsuario.Text = Session["usuario"].ToString();
+                if (Session["usuario"] == null)
+                {
+                    lblUsuario.Text = "";
+                    btnLogin.Visible = true;
+                    btnSuscribete.Visible = true;
+                }
+                else
+                {
+                    lblCodPlanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                    lblUsuario.Text = Session["usuario"].ToString();
+                    btnLogin.Visible = false;
+                    btnSuscribete.Visible = false;
+                }
+              
+
+
             }
         }
 
@@ -25,6 +36,16 @@ namespace landingAhayou
         {
             Session["usuario"] = lblUsuario.Text;
             Response.Redirect("home.aspx");
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void btnSuscribete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("suscribete.aspx");
         }
     }
 }

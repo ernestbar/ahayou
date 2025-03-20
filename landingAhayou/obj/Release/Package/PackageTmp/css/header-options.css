@@ -1,0 +1,139 @@
+@import url("main.css");
+
+/* OPTIONS HAMBURGER BUTTON */
+
+.options__container {
+    position: relative;
+    display: none;
+}
+
+.options__principal-button {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.options__principal-button:hover {
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease;
+}
+
+.options__div-hamburger {
+    position: absolute;
+    background-color: var(--color-white);
+    width: 90%;
+    height: 5px;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.options__div-hamburger:nth-child(1) {
+    top: 25%;
+}
+
+.options__div-hamburger:nth-child(3) {
+    top: 75%;
+}
+
+.options__menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-primary);
+    top: 100%;
+    left: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    z-index: 1000;
+    border-radius: 15px;
+    transform: translate(-50%);
+}
+
+.options__menu.options__menu--active {
+    display: block;
+}
+
+.options__button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    word-wrap: break-word;
+    font-size: 1em;
+}
+
+.options__button:not(:last-child) {
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.options__button:hover {
+    background-color: #bf4600;
+    transition: background-color 0.3s ease;
+}
+
+.options__menu::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent transparent var(--color-primary) transparent;
+    border-top-width: 0;
+    cursor: auto;
+}
+
+@media (max-width: 768px) {
+    .options__container {
+        display: inline-block;
+    }
+
+    .options__menu {
+        width: 125px;
+    }
+
+    .options__button {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 480px) {
+    .options__principal-button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .options__div-hamburger:nth-child(1) {
+        top: 30%;
+    }
+
+    .options__div-hamburger:nth-child(3) {
+        top: 70%;
+    }
+
+    .options__div-hamburger {
+        height: 3px;
+    }
+
+    .options__menu {
+        width: 100px;
+    }
+
+    .options__button {
+        font-size: 0.6em;
+    }
+}

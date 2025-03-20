@@ -58,6 +58,7 @@ namespace WebAhayouAdmin
             txtDescripcion1Ingles.Text = "";
             txtDescripcionIngles.Text = "";
             ImageVertical.ImageUrl = "";
+            lblImagenAnt.Text = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
@@ -87,8 +88,19 @@ namespace WebAhayouAdmin
         {
             try
             {
+                string foto_imagen = "";
                 if (lblCodBanner.Text == "")
                 {
+                    if (fuVertical.HasFile)
+                    {
+                        foto_imagen = fuVertical.FileName;
+                    }
+                    else
+                    {
+                        if (lblImagenAnt.Text != "")
+                            foto_imagen = lblImagenAnt.Text;
+                    }
+                    string archivo = "";
                     if (fuVertical.HasFile)
                     {
                         string Ruta = Server.MapPath("~/fotos_peliculas/0/");
@@ -96,10 +108,10 @@ namespace WebAhayouAdmin
                         {
                             Directory.CreateDirectory(Ruta);
                         }
-                        string archivo = "banner_principal.png";
+                        archivo = fuVertical.FileName;
                         fuVertical.PostedFile.SaveAs(Ruta + archivo);
                     }
-                    Clases.Banners_principales obj = new Clases.Banners_principales("I", "", txtDescripcion.Text, txtDescripcion1.Text, "banner_principal.png", txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
+                    Clases.Banners_principales obj = new Clases.Banners_principales("I", "", txtDescripcion.Text, txtDescripcion1.Text, txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, foto_imagen, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -109,15 +121,25 @@ namespace WebAhayouAdmin
                 {
                     if (fuVertical.HasFile)
                     {
+                        foto_imagen = fuVertical.FileName;
+                    }
+                    else
+                    {
+                        if (lblImagenAnt.Text != "")
+                            foto_imagen = lblImagenAnt.Text;
+                    }
+                    string archivo = "";
+                    if (fuVertical.HasFile)
+                    {
                         string Ruta = Server.MapPath("~/fotos_peliculas/0/");
                         if (!Directory.Exists(Ruta))
                         {
                             Directory.CreateDirectory(Ruta);
                         }
-                        string archivo = "banner_principal.png";
+                        archivo = fuVertical.FileName;
                         fuVertical.PostedFile.SaveAs(Ruta + archivo);
                     }
-                    Clases.Banners_principales obj = new Clases.Banners_principales("U", lblCodBanner.Text, txtDescripcion.Text, txtDescripcion1.Text, "banner_principal.png", txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, lblUsuario.Text);
+                    Clases.Banners_principales obj = new Clases.Banners_principales("U", lblCodBanner.Text, txtDescripcion.Text, txtDescripcion1.Text,  txtDescripcionIngles.Text, txtDescripcion1Ingles.Text, foto_imagen, lblUsuario.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -160,7 +182,13 @@ namespace WebAhayouAdmin
                 txtDescripcionIngles.Text = obj_m.PV_DESCRIPCION_INGLES;
                 txtDescripcion1Ingles.Text = obj_m.PV_DESCRIPCION1_INGLES;
                 if (obj_m.PV_CONTENIDO != "")
-                { ImageVertical.ImageUrl = obj_m.PV_CONTENIDO; PanelFotos.Visible = true; }
+                { 
+                    ImageVertical.ImageUrl = obj_m.PV_CONTENIDO; 
+                    PanelFotos.Visible = true;
+                    string[] foto_name = obj_m.PV_CONTENIDO.Split('/');
+                    int tamaño = foto_name.Length - 1;
+                    lblImagenAnt.Text = foto_name[tamaño];
+                }
                 else
                     ImageVertical.ImageUrl = "~/Imagenes/sin_imagen.png";
 
