@@ -419,7 +419,7 @@ namespace WebAhayouAdmin
                 { 
                     ImageHorizontal.ImageUrl = obj_m.PV_FOTO_HORIZONTAL; 
                     PanelFotos.Visible = true;
-                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    string[] foto_name = obj_m.PV_FOTO_HORIZONTAL.Split('/');
                     int tamaño = foto_name.Length - 1;
                     lblFotoHorizontalAnt.Text = foto_name[tamaño];
                 }
@@ -429,7 +429,7 @@ namespace WebAhayouAdmin
                 { 
                     ImageMiniatura.ImageUrl = obj_m.PV_FOTO_MINIATURA; 
                     PanelFotos.Visible = true;
-                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    string[] foto_name = obj_m.PV_FOTO_MINIATURA.Split('/');
                     int tamaño = foto_name.Length - 1;
                     lblFotoMiniaturaAnt.Text = foto_name[tamaño];
                 }
@@ -439,7 +439,7 @@ namespace WebAhayouAdmin
                 { 
                     ImageTitulo.ImageUrl = obj_m.PV_TITULO;
                     PanelFotos.Visible = true;
-                    string[] foto_name = obj_m.PV_FOTO_VERTICAL.Split('/');
+                    string[] foto_name = obj_m.PV_TITULO.Split('/');
                     int tamaño = foto_name.Length - 1;
                     lblFotoTituloAnt.Text = foto_name[tamaño];
                 }

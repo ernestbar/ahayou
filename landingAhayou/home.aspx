@@ -80,18 +80,20 @@
                     />
                 </a>
                 <div class="header__nav-buttons">
-                    <button
+                    <%--<button
                         class="header__button header__button--text header__button--bg-orange"
                     >
                         Suscr&iacute;bete
-                    </button>
+                    </button>--%>
+                    <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" runat="server" Text="Suscribete" />
                
                     <%--<button
                         class="header__button header__button--text header__button--bg-green"
                     >
                         Iniciar Sesi&oacute;n
                     </button>--%>
-                    <input class="header__button header__button--text header__button--bg-green" type="button" onclick="location.href='login.aspx';" value="Iniciar session" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                    <%--<input class="header__button header__button--text header__button--bg-green" type="button" onclick="location.href='login.aspx';" value="Iniciar session" />--%>
                     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="header__nav-buttons">
@@ -115,6 +117,7 @@
                      <div class="options__menu" id="optionsMenu">
                          <%--<button class="options__button">Espa&ntilde;ol</button>
                          <button class="options__button" >Ingl&eacute;s</button>--%>
+                         
                           <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                         <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
                      </div>

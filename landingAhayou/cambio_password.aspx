@@ -45,6 +45,7 @@
                          class="header__logo-img"
                          src="imgs/logos/logo-ahayou.png"
                          alt="Logo Ahayou"
+                         style="background-color:black"
                      />
                  </a>
                  <div class="header__nav-buttons">

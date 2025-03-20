@@ -19,19 +19,19 @@ namespace landingAhayou
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-			Clases.Suscriptores obj=new Clases.Suscriptores(txtUsuario.Text,txtPassword.Text);
+			Clases.Suscriptores obj = new Clases.Suscriptores(email.Text, password.Text);
 			if (obj.PV_DESCRIPCIONPR == "Login correcto")
 			{
-				Session["usuario"] = txtUsuario.Text;
-				lblUsuario.Text = txtUsuario.Text;
+				Session["usuario"] = email.Text;
+				lblUsuario.Text = email.Text;
 				Response.Redirect("perfiles.aspx");
 			}
 			else
 			{
-                string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
-            }
-        }
+				string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+				ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+			}
+		}
         
     }
 }

@@ -121,7 +121,7 @@
                                     autocomplete="off"
                                     class="form__input form__input--dark"
                                 />--%>
-                                <asp:TextBox class="form__input form__input--dark" ID="txtUsuario" runat="server"></asp:TextBox>
+                                <asp:TextBox class="form__input form__input--dark" ID="email" runat="server"></asp:TextBox>
                             </div>
                             <div class="form__input-container">
                                 <label
@@ -137,7 +137,7 @@
                                     autocomplete="off"
                                     class="form__input form__input--dark"
                                 />--%>
-                                 <asp:TextBox class="form__input form__input--dark" ID="txtPassword" runat="server"></asp:TextBox>
+                                 <asp:TextBox class="form__input form__input--dark" ID="password" runat="server"></asp:TextBox>
                             </div>
                             <%--<input
                                 type="submit"
