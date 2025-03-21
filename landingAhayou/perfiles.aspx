@@ -18,14 +18,14 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
         <link rel="stylesheet" href="css/profiles.css" />
-        <link rel="stylesheet" href="css/common/default-background.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
 </head>
 <body>
     <form id="form1" runat="server">

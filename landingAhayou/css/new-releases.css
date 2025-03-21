@@ -1,4 +1,19 @@
-@import url("/css/common/main.css");
+@import url("main.css");
+
+/*
+    NEW-RELEASES.CSS
+
+    Description: Styles for new-releases section inside
+    index.html. It is based in changing the background
+    image, containers and its texts.
+*/
+
+.new-releases,
+.new-releases__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .new-releases {
     background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),
@@ -7,34 +22,14 @@
     background-position: center;
     background-size: 100% 100%;
     height: 100%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px 0;
     padding-bottom: 10px;
     padding-top: 25px;
 }
 
-.new-releases__title {
-    text-align: center;
-    letter-spacing: -5px;
-}
-
-.new-releases__title span:nth-child(1) {
-    font-weight: bold;
-}
-
-.new-releases__title span:nth-child(2) {
-    font-weight: var(--second-font-weight);
-    color: var(--color-secondary);
-}
-
 .new-releases__content {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     gap: 10px;
 }
@@ -63,17 +58,19 @@
 
 .new-releases__item:hover {
     transform: scale(1.1, 1.1);
-    transition: transform 0.3s ease;
+}
+
+.new-releases__list.slide-out,
+.new-releases__list.slide-in {
+    opacity: 0;
 }
 
 .new-releases__list.slide-out {
     transform: translateX(-25%);
-    opacity: 0;
 }
 
 .new-releases__list.slide-in {
     transform: translateX(25%);
-    opacity: 0;
 }
 
 .new-releases__list.show {
@@ -94,18 +91,42 @@
     height: 15%;
 }
 
-.new-releases__item > div > h3 {
-    font-weight: bold;
+/*
+    Section: Texts
+
+    Description: Styles for texts in new-realeses.css
+*/
+
+.new-releases__title {
     text-align: center;
-    word-wrap: break-word;
+    letter-spacing: -5px;
 }
 
+.new-releases__title span:nth-child(1) {
+    font-weight: bold;
+}
+
+.new-releases__title span:nth-child(2) {
+    font-weight: var(--second-font-weight);
+    color: var(--color-secondary);
+}
+
+.new-releases__item > div > h3 {
+    font-weight: bold;
+}
+
+.new-releases__item > div > h3,
 .new-releases__item > div > p {
     text-align: center;
     word-wrap: break-word;
 }
 
-/* RESPONSIVE HEIGHT */
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from 
+    new-releases.css
+*/
 
 @media (max-height: 768px) {
     .new-releases__item {

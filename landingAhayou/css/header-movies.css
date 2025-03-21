@@ -1,5 +1,15 @@
 @import url("main.css");
 
+/*
+    HEADER-MOVIES.CSS
+
+    Description: This css file is used for the movie component,
+    a component used for involve the movie item from the header
+    in index.html. These styles includes all the properties of
+    the container like display, size, background, hovers, and
+    others.
+*/
+
 .movie {
     width: 100%;
     padding: 10px;
@@ -15,8 +25,8 @@
 }
 
 .movie__container--second {
-    gap: 5px;
     width: 100%;
+    gap: 5px;
     height: 480px;
     border-radius: 20px;
     padding: 10px;
@@ -26,16 +36,24 @@
     transition: transform 0.3s ease;
 }
 
-    .movie__container--second:hover {
-        transform: scale(1.05, 1.05);
-        transition: transform 0.3s ease;
-    }
+.movie__container--second > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.movie__container--second:hover {
+    transform: scale(1.05, 1.05);
+}
 
 .movie__container > div {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px 10px;
-    position: relative;
     justify-content: center;
 }
 
@@ -44,20 +62,32 @@
     max-height: 100%;
 }
 
-    .movie__container:not(.movie__container--second) > div:nth-of-type(2),
-    .movie__container:not(.movie__container--second):hover > div:nth-of-type(2) {
-        opacity: 1;
-        transition: all 0.75s ease;
-    }
+.movie__container:not(.movie__container--second) > div:nth-of-type(2) {
+    opacity: 1;
+    transition: opacity 0.75s ease;
+}
 
-@media (min-height: 501px) {
-    .movie__container:not(.movie__container--second) > div:nth-of-type(2) {
-        opacity: 0;
-    }
+.movie__container:not(.movie__container--second):hover > div:nth-of-type(2) {
+    opacity: 1;
+}
 
-    .movie__container:not(.movie__container--second):hover > div:nth-of-type(2) {
-        opacity: 1;
-    }
+.movie__container--active {
+    display: flex;
+}
+
+/*
+    Component: movie__container--second img, movie__image
+
+    Description: Style for the img of movie__container--second and
+    movie__image
+*/
+
+.movie__container--second img {
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+    border-radius: 20px;
+    mask-image: linear-gradient(#000 80%, transparent);
 }
 
 .movie__image {
@@ -66,10 +96,17 @@
     object-fit: fill;
 }
 
+/*
+    Section: Movie's texts
+
+    Description: Style for all the span, p and other text tags
+    for movie component
+*/
+
 .movie__container span,
 .movie__container p {
-    text-align: justify;
     width: 100%;
+    text-align: justify;
 }
 
 .movie__format {
@@ -82,8 +119,8 @@
 
 .movie__detail-1,
 .movie__gender {
-    letter-spacing: 1px;
     font-size: 1.1em;
+    letter-spacing: 1px;
 }
 
 .movie__detail-2 {
@@ -94,27 +131,6 @@
 .movie__description {
     font-size: 1.25em;
     font-weight: 500;
-}
-
-.movie__container--active {
-    display: flex;
-}
-
-.movie__container--second img {
-    width: 100%;
-    height: 80%;
-    object-fit: fill;
-    border-radius: 20px;
-    mask-image: linear-gradient(#000 80%, transparent);
-}
-
-.movie__container--second > div {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 }
 
 .movie__title--small {
@@ -144,13 +160,20 @@
     border-left: 1px solid #8b8b8b;
 }
 
-    .movie__data-item--small:nth-child(-n + 2) {
-        border-top: none;
-    }
+.movie__data-item--small:nth-child(-n + 2) {
+    border-top: none;
+}
 
-    .movie__data-item--small:nth-child(2n + 1) {
-        border-left: none;
-    }
+.movie__data-item--small:nth-child(2n + 1) {
+    border-left: none;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the movie container and its children component.
+*/
 
 @media (max-width: 992px) {
     .header__items-container:has(.movie__container) {
@@ -235,5 +258,16 @@
 @media (max-height: 786px) {
     .movie__container--second {
         height: 440px;
+    }
+}
+
+@media (min-height: 501px) {
+    .movie__container:not(.movie__container--second) > div:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .movie__container:not(.movie__container--second):hover
+        > div:nth-of-type(2) {
+        opacity: 1;
     }
 }

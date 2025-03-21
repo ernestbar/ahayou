@@ -123,5 +123,11 @@ namespace landingAhayou
         {
             Response.Redirect("suscribete.aspx");
         }
+
+        protected void btnSuscribeteEmail_Click(object sender, EventArgs e)
+        {
+            Session["email"] = email.Text;
+            Response.Redirect("suscribete.aspx");
+        }
     }
 }

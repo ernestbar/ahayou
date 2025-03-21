@@ -1,15 +1,25 @@
 @import url("main.css");
 
-.absolute {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/*
+    ARROW.CSS
 
+    Description: This css file is used for make a arrow
+    with a clip-path. Also this file includes all its
+    properties like size, background color and others.
+*/
+
+.arrow,
 .arrow__container {
     width: 40px;
     height: 40px;
+}
+
+.arrow {
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 65%, 25% 50%, 0% 35%);
+}
+
+.arrow__container,
+.arrow__container--small {
     position: relative;
     cursor: pointer;
     display: flex;
@@ -17,31 +27,14 @@
     align-items: center;
 }
 
-.arrow {
-    width: 40px;
-    height: 40px;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 65%, 25% 50%, 0% 35%);
-}
-
-.green-yellow {
-    background-color: var(--color-green-yellow);
-}
-
-.orange {
-    background-color: var(--color-primary);
-}
-
-.green {
-    background-color: var(--color-secondary);
-}
-
-.transparent {
-    background-color: transparent;
+.arrow__container--small {
+    width: 30px;
+    height: 30px;
 }
 
 .arrow__corner {
-    top: 17.5%;
-    left: 10%;
+    top: 17.5% !important;
+    left: 10% !important;
 }
 
 .arrow__border {
@@ -58,7 +51,53 @@
     transform: rotate(180deg);
 }
 
+/*
+    Section: Colors
+
+    Description: Colors and position modifiers
+    for the arrow component.
+*/
+
+.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.green-yellow {
+    background-color: var(--color-green-yellow);
+}
+
+.orange {
+    background-color: var(--color-primary);
+}
+
+.green {
+    background-color: var(--color-secondary);
+}
+
+.black {
+    background-color: #000;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the arrow component.
+*/
+
 @media (max-width: 640px) {
+    .arrow {
+        width: 30px;
+        height: 30px;
+    }
+
     .arrow__border {
         width: 34px;
         height: 34px;
@@ -66,11 +105,6 @@
 
     .arrow--rotate {
         transform: translate(0, -25%) rotate(180deg);
-    }
-
-    .arrow {
-        width: 30px;
-        height: 30px;
     }
 }
 
@@ -82,26 +116,26 @@
 }
 
 @media (max-width: 1000px), (max-height: 530px) {
-    .arrow__corner {
-        top: 15%;
-        left: 10%;
-    }
-
     .arrow {
         width: 30px;
         height: 30px;
     }
+
+    .arrow__corner {
+        top: 15% !important;
+        left: 10% !important;
+    }
 }
 
 @media (max-width: 400px), (max-height: 300px) {
-    .arrow__border {
-        width: 24px;
-        height: 24px;
-    }
-
     .arrow {
         width: 20px;
         height: 20px;
+    }
+
+    .arrow__border {
+        width: 24px;
+        height: 24px;
     }
 
     .arrow--rotate {
@@ -110,14 +144,14 @@
 }
 
 @media (max-height: 680px) {
-    .arrow__border {
-        width: 32px;
-        height: 32px;
-    }
-
     .arrow {
         width: 28px;
         height: 28px;
+    }
+
+    .arrow__border {
+        width: 32px;
+        height: 32px;
     }
 
     .arrow--rotate {

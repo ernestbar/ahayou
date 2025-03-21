@@ -1,4 +1,12 @@
-@import url("/css/common/main.css");
+@import url("main.css");
+
+/*
+    ALERTS.CSS
+
+    Description: This css file is used for the alert
+    container for the actions of login page and
+    other forms.
+*/
 
 .alert {
     display: none;

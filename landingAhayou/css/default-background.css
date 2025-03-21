@@ -1,0 +1,14 @@
+/*
+    DEFAULT-BACKGROUND.CSS
+
+    Description: This css file gives the default background
+    image for the body. Use this file in the page that you
+    want.
+*/
+
+body {
+    background: url("../imgs/backgrounds/fondo-AHAYOU.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}

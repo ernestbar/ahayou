@@ -1,7 +1,15 @@
-@import url("/css/common/main.css");
+@import url("main.css");
+
+/*
+    PROFILES.CSS
+
+    Description: This css file is used for the profiles.html
+    page. It is composed with body changes for background,
+    profiles__container and its items.
+*/
 
 body {
-    background: url("/imgs/backgrounds/fondo-AHAYOU.png");
+    background: url("../imgs/backgrounds/fondo-AHAYOU.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -56,6 +64,13 @@ body {
 .profiles__item-text {
     font-size: 2em;
 }
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles int profiles.html
+    page.
+*/
 
 @media (max-width: 1200px) {
     .profiles {

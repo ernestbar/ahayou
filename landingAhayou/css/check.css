@@ -1,4 +1,12 @@
-@import url("/css/common/main.css");
+@import url("main.css");
+
+/*
+    CHECK.CSS
+
+    Description: This css file is used for making a check
+    image with css. It include its size, its border, stroke
+    and others.
+*/
 
 .check {
     position: relative;
@@ -23,17 +31,28 @@
     stroke: var(--color-white);
 }
 
+.check--orange {
+    stroke: var(--color-primary);
+}
+
 .check--white::before {
     background-color: var(--color-white);
+}
+
+/*
+    Component: Checked-list
+
+    Description: Styles for a ul or list div to make
+    its children marker appear with a check image.
+*/
+
+.checked-list > li {
+    position: relative;
 }
 
 .check--orange::before,
 .checked-list.check--orange > li::before {
     background-color: var(--color-primary);
-}
-
-.check--orange {
-    stroke: var(--color-primary);
 }
 
 .checked-list {
@@ -43,10 +62,6 @@
     list-style: none;
     padding: 0;
     margin-left: 25px;
-}
-
-.checked-list > li {
-    position: relative;
 }
 
 .check::before,
@@ -68,9 +83,22 @@
     );
 }
 
+.checked-list > li::before {
+    left: -10%;
+    width: 50px;
+    height: 50px;
+}
+
 .check--small::before {
     transform: translate(-50%, -50%) scale(0.5);
 }
+
+/*
+    Component: Shield
+
+    Description: Styles for making a shield with css,
+    based in a svg image with id #shield on a page.
+*/
 
 .check--shield::before {
     content: "";
@@ -83,11 +111,12 @@
     transform: translate(-50%, -50%);
 }
 
-.checked-list > li::before {
-    left: -10%;
-    width: 50px;
-    height: 50px;
-}
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the check.
+*/
 
 @media (max-width: 500px) {
     .check {

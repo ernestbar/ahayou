@@ -24,22 +24,32 @@ namespace landingAhayou
 			Clases.Suscriptores obj = new Clases.Suscriptores(email.Text, password.Text);
 			if (obj.PV_DESCRIPCIONPR == "Login correcto")
 			{
-				Session["usuario"] = email.Text;
-				lblUsuario.Text = email.Text;
-				DataTable dt = new DataTable();
-				dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(lblUsuario.Text);
-				if (dt.Rows.Count > 0)
-                {
-					foreach (DataRow dr in dt.Rows)
-					{
-						Session["cod_plan_suscriptor"]= dr["cod_plan_suscriptor"];
-					}
-					Response.Redirect("perfiles.aspx");
+                Session["usuario"] = email.Text;
+                lblUsuario.Text = email.Text;
+                if (obj.PV_TEMPORAL == "1")
+				{
+                    Session["password_anterior"] = password.Text;
+					Response.Redirect("cambio_password.aspx");
 				}
 				else
 				{
-                    Response.Redirect("home.aspx");
+                    
+                    DataTable dt = new DataTable();
+                    dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(lblUsuario.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
+                        }
+                        Response.Redirect("perfiles.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("home.aspx");
+                    }
                 }
+				
 				
 			}
 			else

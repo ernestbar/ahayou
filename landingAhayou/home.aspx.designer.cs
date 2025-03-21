@@ -150,6 +150,33 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.Repeater Repeater3;
 
         /// <summary>
+        /// Control downloadContainer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton downloadContainer;
+
+        /// <summary>
+        /// Control email.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox email;
+
+        /// <summary>
+        /// Control btnSuscribeteEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSuscribeteEmail;
+
+        /// <summary>
         /// Control Repeater5.
         /// </summary>
         /// <remarks>

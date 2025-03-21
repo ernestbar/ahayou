@@ -11,7 +11,10 @@ namespace landingAhayou
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack) 
+            {
+                lblEmail.Text = Session["email"].ToString();
+            }
         }
         protected void btnSuscribete_Click(object sender, EventArgs e)
         {

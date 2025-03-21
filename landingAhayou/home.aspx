@@ -21,20 +21,20 @@
     rel="stylesheet"
 />
 <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/common/containers.css" />
-        <link rel="stylesheet" href="css/common/arrow.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/arrow.css" />
+        <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/new-releases.css" />
         <link rel="stylesheet" href="css/plans.css" />
         <link rel="stylesheet" href="css/web-app-section.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
+        <link rel="stylesheet" href="css/forms.css" />
         <link rel="stylesheet" href="css/frequent-questions.css" />
-        <link rel="stylesheet" href="css/header/header-movies.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/common/buttons.css" />
-        <link rel="stylesheet" href="css/common/hamburger.css" />
+        <link rel="stylesheet" href="css/header-movies.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
 
 
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
@@ -316,7 +316,7 @@
             </section>
         </main>
        <section class="web-app-section" id="webAppSection">
-             <button
+             <%--<button
                  class="web-app-section__content container-common"
                  id="downloadContainer" 
              >
@@ -335,26 +335,34 @@
                          m&oacute;vil ahorrando espacio en tu dispositivo
                      </p>
                  </div>
-             </button>
+             </button>--%>
+           <asp:LinkButton class="web-app-section__content container-common" ID="downloadContainer" runat="server">
+               <h2 class="web-app-section__title" id="downloadTitle">
+                        Descarga la Web APP
+                    </h2>
+                    <div class="web-app-section__container-description">
+                        <img
+                            src="imgs/logos/pwa_logo.png"
+                            alt="PWA"
+                            class="web-app-section__image" style="width:250px"
+                        />
+                        <p class="web-app-section__description">
+                            Con esta PWA tendr&aacute; un sitio web que se ve y se
+                            comporta como si fuera una aplicaci&oacute;n
+                            m&oacute;vil ahorrando espacio en tu dispositivo
+                        </p>
+                    </div>
+
+           </asp:LinkButton>
             <form class="web-app-section__form">
                 <label for="email" class="form__label form__label--white">
                     Ya est&aacute;s listo para vivir la experiencia
                     Ah&aacute;you<br />crea tu cuenta ¡¡¡AQU&lacute;!!!
                 </label>
-                <div class="form__input-container form__input-container--main">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Ingresa tu correo"
-                        id="email"
-                        autocomplete="false"
-                        class="form__input form__input--big-font form__input--specific-width"
-                    />
-                    <input
-                        type="submit"
-                        value="Suscríbete"
-                        class="form__button"
-                    />
+                <div class="form__input-container form__input-container--main form__input-container--no-gap">
+                    <asp:TextBox ID="email" class="form__input form__input--big-font form__input--specific-width" placeholder="Ingresa tu correo" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnSuscribeteEmail" OnClick="btnSuscribeteEmail_Click" class="button button--orange button--no-wrap" runat="server" Text="Suscríbete" />
+                    
                 </div>
             </form>
             <footer class="footer">

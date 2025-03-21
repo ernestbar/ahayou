@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cambio_password.aspx.cs" Inherits="WebAhayouAdmin.cambio_password" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="cambio_password.aspx.cs" Inherits="landingAhayou.cambio_password" %>
 
 <!DOCTYPE html>
 
@@ -19,17 +19,17 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="css/common/containers.css" />
-        <link rel="stylesheet" href="css/common/check.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/common/buttons.css" />
-        <link rel="stylesheet" href="css/common/hamburger.css" />
-        <link rel="stylesheet" href="css/common/arrow.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/check.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
+        <link rel="stylesheet" href="css/arrow.css" />
+        <link rel="stylesheet" href="css/forms.css" />
         <link rel="stylesheet" href="css/settings.css" />
 </head>
 <body>
@@ -49,17 +49,9 @@
                      />
                  </a>
                  <div class="header__nav-buttons">
-                     <button
-                         class="header__button header__button--text header__button--bg-orange"
-                     >
-                         Suscr&iacute;bete
-                     </button>
-   
-                     <button
-                         class="header__button header__button--text header__button--bg-green"
-                     >
-                         Iniciar Sesi&oacute;n
-                     </button>
+                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                   <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                  </div>
                  <div class="header__nav-buttons">
                      <div>
@@ -71,7 +63,7 @@
                          ></button>--%>
                          <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                          <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                         <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                         
                      </div>
                  </div>
                   <div class="options__container">
@@ -97,6 +89,7 @@
                     <h1 class="text text--bold text--left text--extra-large">
                         Cambiar contrase&ntilde;a
                     </h1>
+                    <p><asp:Label ID="lblPasswordAnterior" Visible="false" runat="server" Text=""></asp:Label></p>
                     <form class="form" id="form">
                         <p class="text text--light">
                             Proteger tu cuenta con una contrase&ntilde;a
@@ -109,37 +102,17 @@
                             >
                                 Email actual
                             </label>
-                            <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                minlength="6"
-                                maxlength="320"
-                                autocomplete="off"
-                                class="form__input container--border-gray"
-                            />
+                            <asp:TextBox ID="email" ReadOnly="true" class="form__input container--border-gray" runat="server"></asp:TextBox>
                         </div>
                         <div class="form__input-container">
-                            <input
-                                type="password"
-                                name="password"
-                                id="password"
-                                autocomplete="off"
-                                class="form__input container--border-gray"
-                                placeholder="Contraseña nueva (6-60 caracteres)"
-                            />
+                            <asp:TextBox ID="password" TextMode="Password" placeholder="Contraseña nueva (6-60 caracteres)" class="form__input container--border-gray" runat="server"></asp:TextBox>
                         </div>
                         <div class="form__input-container">
-                            <input
-                                type="password"
-                                name="password"
-                                id="password"
-                                autocomplete="off"
-                                class="form__input container--border-gray"
-                                placeholder="Reescribe la contraseña nueva"
-                            />
+                            <asp:TextBox ID="password2" TextMode="Password" placeholder="Contraseña nueva (6-60 caracteres)" class="form__input container--border-gray" runat="server"></asp:TextBox>
                         </div>
-                        <div
+                        <asp:CompareValidator ID="cfvNumeroCelular" runat="server"  ControlToCompare="password" ControlToValidate="password2" Operator="Equal" Type="Integer" Display="Dynamic" ErrorMessage="* Las nuevas contraseñas no coinciden." ></asp:CompareValidator>
+                        <p><asp:Label ID="lblAviso" runat="server" Text=""></asp:Label></p>
+                        <%--<div
                             class="form__input-container form__input-container--checkbox"
                         >
                             <input
@@ -154,20 +127,12 @@
                             >
                                 Cerrar sesi&oacute;n en todos los dispositivos
                             </label>
-                        </div>
+                        </div>--%>
                         <div
                             class="container--flex full-width container--justify-content-start container--align-center"
                         >
-                            <input
-                                type="submit"
-                                value="Guardar"
-                                class="button button--sky-blue full-width button--border"
-                            />
-                            <input
-                                type="reset"
-                                value="Cancelar"
-                                class="button button--gray full-width button--border"
-                            />
+                            <asp:Button ID="btnGuardar" class="button button--sky-blue full-width button--border" OnClick="btnGuardar_Click" runat="server" Text="Guardar" />
+                            <asp:Button ID="btnCancelar" class="button button--sky-blue full-width button--border" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" />
                         </div>
                     </form>
                 </div>

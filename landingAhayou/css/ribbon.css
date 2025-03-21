@@ -1,3 +1,14 @@
+/*
+    RIBBON.CSS
+
+    Description: This css file is intended for make a ribbon.
+    It has a clip-path to create a diagonal to the 15% at X
+    in the container, and also it use a mask-image with linear
+    gradient to show only the 70% of the ribbon and after that
+    is a gradient to hide the rest of the container. It must be 
+    inside of the specific container that you want this to have. 
+*/
+
 .ribbon {
     position: absolute;
     top: -7%;

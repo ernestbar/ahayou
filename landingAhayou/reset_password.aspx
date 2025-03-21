@@ -19,18 +19,18 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="/css/common/main.css" />
-        <link rel="stylesheet" href="/css/header/header.css" />
-        <link rel="stylesheet" href="/css/header/header-options.css" />
-        <link rel="stylesheet" href="/css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="/css/common/containers.css" />
-        <link rel="stylesheet" href="/css/common/check.css" />
-        <link rel="stylesheet" href="/css/common/footer.css" />
-        <link rel="stylesheet" href="/css/common/buttons.css" />
-        <link rel="stylesheet" href="/css/common/hamburger.css" />
-        <link rel="stylesheet" href="/css/common/arrow.css" />
-        <link rel="stylesheet" href="/css/settings.css" />
-        <link rel="stylesheet" href="/css/plans-selection.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/check.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
+        <link rel="stylesheet" href="css/arrow.css" />
+        <link rel="stylesheet" href="css/settings.css" />
+        <link rel="stylesheet" href="css/plans-selection.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -98,6 +98,7 @@
                             cont&aacute;ctanos.
                         </p>
                         <p>El equipo de AHAYOU</p>
+                        <p><asp:Label ID="lblAviso" runat="server" Text=""></asp:Label></p>
                     </div>
                     <asp:Button class="button button--orange full-width button--border" OnClick="btnReset_Click" ID="btnReset" runat="server" Text="Resetear contraseña" />
                 </div>

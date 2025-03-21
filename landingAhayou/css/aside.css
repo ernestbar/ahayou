@@ -1,4 +1,15 @@
-@import url("/css/common/main.css");
+@import url("main.css");
+
+/*
+    ASIDE.CSS
+
+    Description: This css file is used for the aside
+    component that is the sidebar. This include its
+    container, a specific container for the main tag
+    that is called aside__content. Also, the aside__list
+    is destinated for the list of the options in the
+    sidebar, and its items.
+*/
 
 .aside {
     width: 30%;
@@ -40,6 +51,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the aside component and its children.
+*/
+
 @media (max-width: 900px) {
     .aside {
         position: fixed;
@@ -74,7 +92,7 @@
 
     .aside__button-close {
         display: inline-block;
-        position: fixed; /* Fijo para que no se mueva con el aside */
+        position: fixed;
         left: 15px;
         top: 15px;
         z-index: 1100;
@@ -86,15 +104,12 @@
         padding-top: 20px;
     }
 
-    .aside__item > p {
+    .aside__item > p,
+    .aside__title > p {
         display: none;
     }
 
     .aside__title > img {
         display: block;
-    }
-
-    .aside__title > p {
-        display: none;
     }
 }

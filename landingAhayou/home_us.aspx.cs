@@ -15,15 +15,18 @@ namespace landingAhayou
         {
             if (!Page.IsPostBack)
             {
-                
-                //string pais = GetCountryFromRequest();
-                //if (pais == "BO")
-                //    lblMundo.Text = "BO";
-                //else
-                //    lblMundo.Text = "RM";
-
-                //Repeater2.DataBind();
-
+                if (Session["usuario"] == null)
+                {
+                    lblUsuario.Text = "";
+                    btnLogin.Visible = true;
+                    btnSuscribete.Visible = true;
+                }
+                else
+                {
+                    lblUsuario.Text = Session["usuario"].ToString();
+                    btnLogin.Visible = false;
+                    btnSuscribete.Visible = false;
+                }
 
             }
         }
@@ -106,6 +109,20 @@ namespace landingAhayou
                 }
 
             }
+        }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void btnSuscribete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("suscribete.aspx");
+        }
+        protected void btnSuscribeteEmail_Click(object sender, EventArgs e)
+        {
+            Session["email"] = email.Text;
+            Response.Redirect("suscribete.aspx");
         }
     }
 }

@@ -1,4 +1,12 @@
-@import url("/css/common/main.css");
+@import url("main.css");
+
+/*
+    SETTINGS.CSS
+
+    Description: This css file is used for the settings pages.
+    its includes changes in body and the header for the settings
+    page.
+*/
 
 body {
     background-color: var(--color-white) !important;

@@ -19,18 +19,18 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-         <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="css/common/default-background.css" />
-        <link rel="stylesheet" href="css/common/containers.css" />
-        <link rel="stylesheet" href="css/common/check.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/common/buttons.css" />
-        <link rel="stylesheet" href="css/common/hamburger.css" />
+         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/check.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
         <link rel="stylesheet" href="css/plans-selection.css" />
-        <link rel="stylesheet" href="css/common/ribbon.css" />
+        <link rel="stylesheet" href="css/ribbon.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -83,7 +83,7 @@
                  </div>
             </nav>
         </header>
-        <main class="main main--flex">
+        <main class="main main--flex plans-selection__width">
             <section
                 class="container--flex container--flex-column full-width plans-selection full-height"
             >
@@ -92,7 +92,7 @@
                 </span>
                 <h1>Selecciona el plan ideal para ti</h1>
                 <div
-                    class="plans-selection__list container--flex-wrap container--flex container--justify-content-center"
+                    class="plans-selection__list plans__list--second full-width"
                 >
                 <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
                     <ItemTemplate>
