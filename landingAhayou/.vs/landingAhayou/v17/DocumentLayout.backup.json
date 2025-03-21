@@ -1,7 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\landingAhayou\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\GITHUB\\ahayou\\landingAhayou\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\css\\forms\\forms.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:css\\forms\\forms.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GITHUB\\ahayou\\landingAhayou\\css\\common\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:css\\common\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GITHUB\\ahayou\\landingAhayou\\css\\header\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:css\\header\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GITHUB\\ahayou\\landingAhayou\\css\\common\\buttons.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:css\\common\\buttons.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,6 +95,55 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\common\\main.css",
+              "RelativeDocumentMoniker": "css\\common\\main.css",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\common\\main.css",
+              "RelativeToolTip": "css\\common\\main.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-21T00:17:43.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "forms.css",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\forms\\forms.css",
+              "RelativeDocumentMoniker": "css\\forms\\forms.css",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\forms\\forms.css",
+              "RelativeToolTip": "css\\forms\\forms.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-21T00:16:03.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "header.css",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\header\\header.css",
+              "RelativeDocumentMoniker": "css\\header\\header.css",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\header\\header.css",
+              "RelativeToolTip": "css\\header\\header.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-21T00:15:29.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "buttons.css",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\common\\buttons.css",
+              "RelativeDocumentMoniker": "css\\common\\buttons.css",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\css\\common\\buttons.css",
+              "RelativeToolTip": "css\\common\\buttons.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-21T00:07:54.896Z"
             }
           ]
         }
