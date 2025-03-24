@@ -32,3 +32,36 @@
         rgba(0, 0, 0, 0) 90%
     );
 }
+
+/*
+    Component: ribbon--under
+    Description: Styles for a ribbon that will be located
+    below a container
+*/
+
+.ribbon--under {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: 36px;
+    width: 70%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-bottom-right-radius: 20px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 7.5% 100%);
+}
+
+/*
+    Section: Responsive
+    Description: These are the media queries and styles for
+    diferents widths of the ribbon
+*/
+
+@media (max-width: 320px) {
+    .ribbon--under {
+        width: 90%;
+    }
+}

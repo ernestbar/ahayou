@@ -1,0 +1,128 @@
+/*
+    PLAYLIST.CSS
+
+    Description: This css file is intented for styles for a playlist
+    in playlist.html, it includes its containers, images, spaces,
+    and others.
+*/
+
+.playlist__start {
+    background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),
+        url("../imgs/backgrounds/fondo-AHAYOU_2.png");
+}
+
+.playlist__number {
+    position: absolute;
+    font-size: 13.5em;
+    font-weight: 700;
+    left: -2.5%;
+}
+
+.playlist__footer {
+    margin-top: 50px;
+}
+
+.playlist__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.playlist__container:last-of-type {
+    padding-bottom: 0;
+}
+
+.playlist__content {
+    padding: 0px 100px;
+}
+
+.playlist__container--with-arrows {
+    height: inherit;
+}
+
+.playlist__movies {
+    gap: 50px 25px;
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.playlist__movie {
+    height: inherit;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.playlist__movie > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    aspect-ratio: 16 / 9;
+}
+
+.playlist__movie--second > img {
+    width: 60%;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the containers of playlist, including, text, spaces
+    size and others
+*/
+
+@media (max-width: 1500px) {
+    .playlist__number {
+        font-size: 10em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .playlist__number {
+        font-size: 13.5em;
+    }
+}
+
+@media (max-width: 900px) {
+    .playlist__content {
+        padding: 0 75px;
+    }
+
+    .playlist__number {
+        font-size: 10em;
+    }
+}
+
+@media (max-width: 750px) {
+    .playlist__content {
+        padding: 0 50px;
+    }
+
+    .playlist__number {
+        font-size: 13.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .playlist__content {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .playlist__number {
+        font-size: 10em;
+    }
+}
+
+@media (max-width: 375px) {
+    .playlist__number {
+        font-size: 7.5em;
+    }
+}
+
+@media (max-width: 330px) {
+    .playlist__number {
+        font-size: 5em;
+    }
+}

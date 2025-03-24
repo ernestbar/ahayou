@@ -1,0 +1,24 @@
+/*
+    CAROUSEL.CSS
+
+    Description: This css file is intented for styles for
+    the slide animation in carousel
+*/
+
+.slide-out,
+.slide-in {
+    opacity: 0;
+}
+
+.slide-out {
+    transform: translateX(-25%);
+}
+
+.slide-in {
+    transform: translateX(25%);
+}
+
+.show {
+    transform: translateX(0);
+    opacity: 1;
+}

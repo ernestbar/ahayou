@@ -91,6 +91,10 @@
     border: none;
 }
 
+.container--no-border-radius {
+    border-radius: 0;
+}
+
 .container--border-gray {
     border: 1.5px solid var(--color-gray) !important;
 }
@@ -119,6 +123,16 @@
 .container--turquoise {
     background-color: var(--color-turquoise) !important;
 }
+
+.container--orange {
+    background-color: var(--color-primary) !important;
+}
+
+/*
+    Section: Containers flex
+
+    Description: Styles for flex properties in the containers
+*/
 
 .container--flex {
     display: flex;

@@ -10,6 +10,8 @@ namespace landingAhayou.Clases
 {
     public class Contenidos
     {
+        
+
         #region Métodos que NO requieren constructor
         public static DataTable PR_STR_GET_BANNER_PRINCIPAL()
         {

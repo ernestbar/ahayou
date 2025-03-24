@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="cambio_password.aspx" />
+    <Content Include="cartelera.aspx" />
     <Content Include="centro_ayuda.aspx" />
     <Content Include="contacto.aspx" />
     <Content Include="contacto_us.aspx" />
@@ -83,7 +84,9 @@
     <Content Include="css\alerts.css" />
     <Content Include="css\arrow.css" />
     <Content Include="css\aside.css" />
+    <Content Include="css\backgrounds-divs.css" />
     <Content Include="css\buttons.css" />
+    <Content Include="css\carousel.css" />
     <Content Include="css\check.css" />
     <Content Include="css\containers.css" />
     <Content Include="css\default-background.css" />
@@ -100,6 +103,7 @@
     <Content Include="css\new-releases.css" />
     <Content Include="css\plans-selection.css" />
     <Content Include="css\plans.css" />
+    <Content Include="css\playlist.css" />
     <Content Include="css\profiles.css" />
     <Content Include="css\ribbon.css" />
     <Content Include="css\settings.css" />
@@ -331,6 +335,7 @@
     <Content Include="imgs\backgrounds\avengers.jpg" />
     <Content Include="imgs\backgrounds\cobra-kai.jpeg" />
     <Content Include="imgs\backgrounds\fondo-AHAYOU.png" />
+    <Content Include="imgs\backgrounds\fondo-AHAYOU_2.png" />
     <Content Include="imgs\backgrounds\fondo_header_movil.jpg" />
     <Content Include="imgs\backgrounds\header-img.jpg" />
     <Content Include="imgs\backgrounds\horizontal\avengers.jpg" />
@@ -386,6 +391,14 @@
     <Content Include="imgs\logos\whatsapp.svg" />
     <Content Include="imgs\logos\TWITTER.svg" />
     <Content Include="imgs\logos\x.png" />
+    <Content Include="imgs\movies\dia_que_murio_el_silencio.png" />
+    <Content Include="imgs\movies\dia_que_murio_el_silencio_vertical.png" />
+    <Content Include="imgs\movies\fuertes.png" />
+    <Content Include="imgs\movies\fuertes_vertical.jpg" />
+    <Content Include="imgs\movies\katari.png" />
+    <Content Include="imgs\movies\katari_vertical.png" />
+    <Content Include="imgs\movies\santa_clara.png" />
+    <Content Include="imgs\movies\santa_clara_vertical.png" />
     <Content Include="imgs\rotator\El_día_que_murió_el_silencio_-_afiche_%28BC%29.jpg" />
     <Content Include="imgs\rotator\engaño.jpg" />
     <Content Include="imgs\rotator\rio.jpg" />
@@ -408,6 +421,7 @@
     <Content Include="img\tv.png" />
     <Content Include="js\carousel-header-index.js" />
     <Content Include="js\carousel-new-releases.js" />
+    <Content Include="js\carousel.js" />
     <Content Include="js\detect-mobile.js" />
     <Content Include="js\footer-visited-color.js" />
     <Content Include="js\header-background-handler.js" />
@@ -442,6 +456,13 @@
     <Compile Include="cambio_password.aspx.designer.cs">
       <DependentUpon>cambio_password.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cartelera.aspx.cs">
+      <DependentUpon>cartelera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cartelera.aspx.designer.cs">
+      <DependentUpon>cartelera.aspx</DependentUpon>
+    </Compile>
     <Compile Include="centro_ayuda.aspx.cs">
       <DependentUpon>centro_ayuda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -450,6 +471,7 @@
       <DependentUpon>centro_ayuda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Avatares.cs" />
+    <Compile Include="Clases\Carteleras.cs" />
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />

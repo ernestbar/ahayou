@@ -67,6 +67,12 @@
     background-color: var(--color-green-dark-hover);
 }
 
+.button--disabled {
+    opacity: 0;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 /*
     Section: Responsive
 
