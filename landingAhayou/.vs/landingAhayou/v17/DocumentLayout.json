@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\landingAhayou\\",
+  "WorkspaceRootPath": "C:\\GITHUB\\ahayou\\landingAhayou\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\clases\\carteleras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GITHUB\\ahayou\\landingAhayou\\clases\\carteleras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:clases\\carteleras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -96,11 +96,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "cartelera.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx.cs",
               "RelativeDocumentMoniker": "cartelera.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx.cs",
               "RelativeToolTip": "cartelera.aspx.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAADwv3cAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAuwGQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T20:52:15.686Z",
               "EditorCaption": ""
@@ -109,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "cartelera.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx",
               "RelativeDocumentMoniker": "cartelera.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx",
               "RelativeToolTip": "cartelera.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -122,11 +122,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Carteleras.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Carteleras.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\Clases\\Carteleras.cs",
               "RelativeDocumentMoniker": "Clases\\Carteleras.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Carteleras.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\Clases\\Carteleras.cs",
               "RelativeToolTip": "Clases\\Carteleras.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAqwI4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T19:57:59.665Z",
               "EditorCaption": ""

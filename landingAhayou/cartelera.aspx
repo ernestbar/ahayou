@@ -241,10 +241,12 @@
                                     <div
                                             class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
                                         >
-                                      <asp:Repeater ID="Repeater1" OnItemDataBound="Repeater1_ItemDataBound1" runat="server">
+                                        
+                                      <asp:Repeater ID="Repeater1"  runat="server">
                                         <ItemTemplate>
-                                            <asp:Panel ID="Panel_normal" runat="server">
-                                                <asp:Label ID="lblNro" runat="server" Visible="false" Text=<%# Eval("contenido") %>></asp:Label>
+                                            <asp:Label ID="lblNro" runat="server" Visible="false" Text='<%# Eval("contenido") %>'></asp:Label>
+                                           
+                                                
                                                 <a
                                                     href="#"
                                                     class="playlist__movie container--justify-content-center carousel__item"
@@ -254,31 +256,39 @@
                                                         alt="Pelicula"
                                                     /><!--Put the name of the movie in the alt-->
                                                     </a>
-                                            </asp:Panel>
-                                            <asp:Panel ID="Panel_mas_visto" runat="server">
-                                                <a
-                                                     href="#"
-                                                     class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
-                                                 >
-                                                     <div class="playlist__number">
-                                                         <p class="text--only-stroke text--green">
-                                                             <%# Eval("codigo") %>
-                                                         </p>
-                                                     </div>
-                                                     <img
-                                                         src='<%# Eval("contenido") %>'
-                                                         alt="Pelicula"
-                                                     /><!--Put the name of the movie in the alt-->
-                                                     <div class="ribbon--under container--orange">
-                                                         <p class="text text--bold">
-                                                             Recien agregados
-                                                         </p>
-                                                     </div>
-                                                 </a>
-                                            </asp:Panel>    
-                                                 
+                                         
+                                             
                                         </ItemTemplate>
                                         </asp:Repeater>
+                                        
+                                       
+                                               <asp:Repeater ID="Repeater3"  runat="server">
+                                               <ItemTemplate>
+                                                
+                                                 <a
+                                                         href="#"
+                                                         class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                                                     >
+
+                                                         <div class="playlist__number">
+                                                             <p class="text--only-stroke text--green">
+                                                                 <%# Eval("numero") %>
+                                                             </p>
+                                                         </div>
+                                                         <img
+                                                             src='<%# Eval("contenido") %>'
+                                                             alt="Pelicula"
+                                                         /><!--Put the name of the movie in the alt-->
+                                                         <div class="ribbon--under container--orange">
+                                                             <p class="text text--bold">
+                                                                 Recien agregados
+                                                             </p>
+                                                         </div>
+                                                     </a>
+                                               </ItemTemplate>
+                                        </asp:Repeater>
+                                        
+                                           
                                     </div>
                                     <div class="arrow__container carousel__arrow--next">
                                         <div class="arrow absolute"></div>
@@ -290,7 +300,7 @@
                 </asp:Repeater>
             </div>
                 
-                <footer class="footer">
+                <footer class="footer playlist__footer">
                      <div class="footer__image-container">
                          <img
                              src="imgs/logos/logo-ahayou-2.png"

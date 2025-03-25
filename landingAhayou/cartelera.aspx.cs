@@ -90,24 +90,31 @@ namespace landingAhayou
                  e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 Label id = (Label)e.Item.FindControl("lblSeccion");
-                Panel panel1=(Panel)e.Item.FindControl("Panel_normal");
-                Panel panel2=(Panel)e.Item.FindControl("Panel_mas_visto");
+                //Panel panel1 = (Panel)e.Item.FindControl("Panel_normal");
+                //Panel panel2 = (Panel)e.Item.FindControl("Panel_mas_visto");
+
                 if (id != null)
                 {
-                    if (id.Text.ToUpper().Contains("MAS VISTOS") || id.Text.ToUpper().Contains("MAS VISTAS"))
+                    if (id.Text.ToUpper().Contains("MAS VISTOS") || id.Text.ToUpper().Contains("MAS VISTAS") || id.Text.ToUpper().Contains("MOST VIEWED"))
                     {
-                        panel1.Visible = false;
-                        panel2.Visible = true;
+                        //panel1.Visible = false;
+                        //panel2.Visible = true;
+                        Repeater rSegmentos2 = (Repeater)e.Item.FindControl("Repeater3");
+                        rSegmentos2.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
+                        rSegmentos2.DataBind();
                     }
                     else
                     {
-                        panel1.Visible = true;
-                        panel2.Visible = false;
+                        //panel1.Visible = true;
+                        //panel2.Visible = false;
+                        Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
+                        rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
+                        rSegmentos.DataBind();
                     }
-                    Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
-                    rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text,lblplanSuscriptor.Text,lblPerfilSuscriptor.Text,lblMenu.Text,id.Text);
-                    rSegmentos.DataBind();
+                    
                 }
+
+                
 
             }
         }
@@ -117,27 +124,28 @@ namespace landingAhayou
             if (e.Item.ItemType == ListItemType.Item ||
                  e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                Label id = (Label)e.Item.FindControl("lblSeccion");
-                Panel panel1 = (Panel)e.Item.FindControl("Panel_normal");
-                Panel panel2 = (Panel)e.Item.FindControl("Panel_mas_visto");
-                if (id != null)
-                {
-                    if (id.Text.ToUpper().Contains("MAS VISTOS") || id.Text.ToUpper().Contains("MAS VISTAS"))
-                    {
-                        panel1.Visible = false;
-                        panel2.Visible = true;
-                    }
-                    else
-                    {
-                        panel1.Visible = true;
-                        panel2.Visible = false;
-                    }
-                    Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
-                    rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
-                    rSegmentos.DataBind();
-                }
+                
+                //Label nro = (Label)e.Item.FindControl("lblNro");
+                //Panel panel1 = (Panel)e.Item.FindControl("Panel_normal");
+                //Panel panel2 = (Panel)e.Item.FindControl("Panel_mas_visto");
+               
+                //    if (nro.Text.Contains("vertical"))
+                //    {
+                //        panel1.Visible = false;
+                //        panel2.Visible = true;
+                //    }
+                //    else
+                //    {
+                //        panel1.Visible = true;
+                //        panel2.Visible = false;
+                //    }
+                //    Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
+                 
+                
 
             }
         }
+
+        
     }
 }
