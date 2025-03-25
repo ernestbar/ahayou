@@ -21,14 +21,15 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/forms.css" />
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/vanilla-page.css" />
-        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
     </head>
     <body>
-         <form id="form1" runat="server">
-                         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
-</asp:ObjectDataSource>
+         
         <header class="header">
             <nav class="header__nav">
                 <a href="home.aspx" class="header__logo">
@@ -71,14 +72,22 @@
                  </div>
             </nav>
         </header>
-        <main class="main main--form">
-            <div class="form-wrapper">
+                         <form id="form1" runat="server">
+                         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
+</asp:ObjectDataSource>
+      <main class="main main--flex">
+            <div class="container__wrapper container__wrapper--black">
+                <form class="form">
                 <h1 class="form__title">Centro de ayuda</h1>
-                <asp:Panel runat="server" CssClass="form">
-                    <label for="question" class="form__label">
+                     <label
+                        for="question"
+                        class="form__label form__label--first text--black"
+                    >
                         ¿C&oacute;mo podemos ayudar?
                     </label>
-                    <div class="form__input-container">
+                     <div
+                        class="form__input-container form__input-container--row form__input-container--no-gap"
+                    >
                         <input
                             type="text"
                             name="question"
@@ -87,14 +96,15 @@
                             autocomplete="false"
                             class="form__input form--shadow-left"
                         />
-                         <asp:ImageButton ID="ibtnEnviar" class="form__button form--shadow-right" OnClick="ibtnEnviar_Click" ImageUrl="~/imgs/etc/arrow.svg" runat="server" />
+                         <asp:ImageButton ID="ibtnEnviar" class="button button--orange form--shadow-right" OnClick="ibtnEnviar_Click" ImageUrl="~/imgs/etc/arrow.svg" runat="server" />
                         <%--<button type="submit" class="form__button form--shadow-right">
                             <img src="imgs/etc/arrow.svg" alt="Enviar" />
                         </button>--%>
                     </div>
-                </asp:Panel>
+                    </form>
             </div>
         </main>
+                 
         <footer class="footer footer--black">
             <div class="footer__image-container">
                 <img

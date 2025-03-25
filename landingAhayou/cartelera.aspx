@@ -79,13 +79,16 @@
                     />
                 </a>
                 <div class="header__nav-buttons">
-           
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnInicio" OnClick="btnInicio_Click" runat="server" Text="Inicio" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnPeliculas" OnClick="btnPeliculas_Click" runat="server" Text="Peliculas" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnTV" OnClick="btnTV_Click" runat="server" Text="TV" />
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
                     <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="header__nav-buttons">
                     <div>
+                        
                         <%--<button
                             class="header__button header__button--icon"
                         ></button>--%>
@@ -137,7 +140,7 @@
                                             </p>
                                         <%--</div>--%>
                                    </asp:Panel>
-                                   <asp:Panel ID="panel_pelicula" class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  Visible="false" runat="server" >
+                                   <asp:Panel ID="panel_pelicula" HorizontalAlign="Left" class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  Visible="false" runat="server" >
                                         <%--<div class="header__item carousel__item" data-bg=' <%# Eval("contenido") %>'  >--%>
                                          <div
                                                 class="movie__container movie__container--active"
@@ -199,7 +202,7 @@
                     </div>
                     </div>
                 <div class="header__pag-buttons">
-                    <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
+                    <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1"  runat="server">
                         <ItemTemplate>
                          <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
                           <button id=' <%# Eval("Numero") %>' class="header__pag-button header__pag-button--selected carousel__button">
@@ -211,26 +214,24 @@
                 </div>
             </section>
         </header>
-
-                <main class="main">
+        <main class="main">
             <div
-                class="background container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container playlist__start"
+                class="background container--flex container--flex-column container--justify-content-start container--align-start container--no-border-radius container--gap-big playlist__container playlist__start"
             >
 
                    <asp:Repeater ID="Repeater2" DataSourceID="odsSecciones" OnItemDataBound="Repeater2_ItemDataBound" runat="server">
                        <ItemTemplate>
                         <asp:Label ID="lblSeccion" runat="server" Text=' <%# Eval("descripcion") %>' Visible="false"></asp:Label>
-                            <section
-                                class="playlist__content container--flex container--flex-column container--flex-wrap full-width"
-                            >
+                           <asp:Panel class="playlist__content container--flex container--flex-column container--flex-wrap full-width" ID="Panel_normal" runat="server">
+                           
                                 <h2
                                     class="text--extra-large text--light text--letter-spacing-small"
                                 >
                                     <span class="text--bold"><%# Eval("descripcion") %></span>
                                 </h2>
-                                  
+      
                                 <div
-                                    class="container--flex container--align-center full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                                    class="container--flex container--align-start full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
                                 >
                                     <div
                                         class="arrow__container arrow--rotate carousel__arrow--prev"
@@ -239,75 +240,111 @@
                                         <div class="green-yellow arrow__border"></div>
                                     </div>
                                     <div
-                                            class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
+                                            class="container--flex container--justify-content-start playlist__movies full-width carousel__list"
                                         >
-                                        
                                       <asp:Repeater ID="Repeater1"  runat="server">
                                         <ItemTemplate>
                                             <asp:Label ID="lblNro" runat="server" Visible="false" Text='<%# Eval("contenido") %>'></asp:Label>
-                                           
-                                                
                                                 <a
                                                     href="#"
-                                                    class="playlist__movie container--justify-content-center carousel__item"
+                                                    class="playlist__movie container--justify-content-start carousel__item"
                                                     >
                                                     <img
                                                         src='<%# Eval("contenido") %>'
                                                         alt="Pelicula"
                                                     /><!--Put the name of the movie in the alt-->
                                                     </a>
-                                         
-                                             
                                         </ItemTemplate>
                                         </asp:Repeater>
-                                        
-                                       
-                                               <asp:Repeater ID="Repeater3"  runat="server">
-                                               <ItemTemplate>
-                                                
-                                                 <a
-                                                         href="#"
-                                                         class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
-                                                     >
-
-                                                         <div class="playlist__number">
-                                                             <p class="text--only-stroke text--green">
-                                                                 <%# Eval("numero") %>
-                                                             </p>
-                                                         </div>
-                                                         <img
-                                                             src='<%# Eval("contenido") %>'
-                                                             alt="Pelicula"
-                                                         /><!--Put the name of the movie in the alt-->
-                                                         <div class="ribbon--under container--orange">
-                                                             <p class="text text--bold">
-                                                                 Recien agregados
-                                                             </p>
-                                                         </div>
-                                                     </a>
-                                               </ItemTemplate>
-                                        </asp:Repeater>
-                                        
-                                           
+           
+            
                                     </div>
                                     <div class="arrow__container carousel__arrow--next">
                                         <div class="arrow absolute"></div>
                                         <div class="green-yellow arrow__border"></div>
                                     </div>
                                 </div>
-                            </section>                  
+                            
+                               </asp:Panel>
+                           
+
+
                        </ItemTemplate>
                 </asp:Repeater>
-            </div>
+                </div>
                 
+            <div
+                class="background background__two container--flex container--flex-column container--justify-content-start container--align-start container--no-border-radius container--gap-big playlist__container"
+            >
+
+                    <asp:Repeater ID="Repeater4" DataSourceID="odsSecciones" OnItemDataBound="Repeater4_ItemDataBound" runat="server">
+                           <ItemTemplate>
+                               <asp:Label ID="lblSeccion" runat="server" Text=' <%# Eval("descripcion") %>' Visible="false"></asp:Label>
+                               <asp:Panel class="playlist__content container--flex container--flex-column container--flex-wrap full-width" ID="Panel_nas_vistos" runat="server">
+                               
+                                        <h2
+                                            class="text--extra-large text--light text--letter-spacing-small"
+                                        >
+                                            <span class="text--bold"><%# Eval("descripcion") %></span>
+                                        </h2>
+                                        <div
+                                            class="container--flex container--align-start full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                                        >
+                                            <div
+                                                class="arrow__container arrow--rotate carousel__arrow--prev"
+                                            >
+                                                <div class="arrow absolute"></div>
+                                                <div class="green-yellow arrow__border"></div>
+                                            </div>
+                                            <div
+                                                class="container--flex container--justify-content-start playlist__movies full-width carousel__list"
+                                            >
+                                    <asp:Repeater ID="Repeater3"  runat="server">
+                                        <ItemTemplate>
+                                              <a
+                                                      href="#"
+                                                      class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-start container--align-end container--no-border-radius carousel__item"
+                                                  >
+                                                      <div class="playlist__number">
+                                                          <p class="text--only-stroke text--green">
+                                                              <%# Eval("numero") %>
+                                                          </p>
+                                                      </div>
+                                                  <%--<asp:ImageButton ID="ibtnContenidoNormal" ImageUrl='<%# Eval("contenido") %>'  runat="server" />--%>
+                                                      <img
+                                                          src='<%# Eval("contenido") %>'
+                                                          alt="Pelicula" 
+                                                      /><!--Put the name of the movie in the alt-->
+                                                      <div class="ribbon--under container--orange">
+                                                          <p class="text text--bold">
+                                                              Recien agregados
+                                                          </p>
+                                                      </div>
+                                                  </a>
+                                            </ItemTemplate>
+                                     </asp:Repeater>
+                                        </div>
+                            <div class="arrow__container carousel__arrow--next">
+                                <div class="arrow absolute"></div>
+                                <div class="green-yellow arrow__border"></div>
+                            </div>
+                        </div>
+                               </asp:Panel>
+                               
+                           </ItemTemplate>
+                    </asp:Repeater>
+           
+
+
+
                 <footer class="footer playlist__footer">
-                     <div class="footer__image-container">
-                         <img
-                             src="imgs/logos/logo-ahayou-2.png"
-                             alt="Logo Ahayou"
-                             class="footer__image"
-                         />
-                     </div>
+                    <div class="footer__image-container">
+                        <img
+                            src="imgs/logos/logo-ahayou-2.png"
+                            alt="Logo Ahayou"
+                            class="footer__image"
+                        />
+                    </div>
                      <div class="footer__content">
                          <div class="footer__list">
                              <div class="footer__list-item">
@@ -353,7 +390,7 @@
                          </div>
                      </div>
                  </footer>
-            </div>
+                 </div>
         </main>
 
         <script src="js/header-background-handler.js"></script>

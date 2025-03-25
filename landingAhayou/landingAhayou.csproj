@@ -435,6 +435,7 @@
     <Content Include="login.aspx" />
     <Content Include="Logs\Readme.txt" />
     <Content Include="perfiles.aspx" />
+    <Content Include="playlist.html" />
     <Content Include="privacy.html" />
     <Content Include="reset_password.aspx" />
     <Content Include="Scripts\konami.js" />

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ahayou</title>
+
+        <link
+            rel="icon"
+            href="imgs/logos/logo-ahayou-2.png"
+            type="image/x-icon"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/arrow.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-movies.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
+        <link rel="stylesheet" href="css/ribbon.css" />
+        <link rel="stylesheet" href="css/playlist.css" />
+        <link rel="stylesheet" href="css/backgrounds-divs.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/carousel.css" />
+    </head>
+    <body>
+        <header class="header header--main" id="header__movies">
+            <nav class="header__nav">
+                <a href="/index.html" class="header__logo">
+                    <img
+                        class="header__logo-img"
+                        src="imgs/logos/logo-ahayou.png"
+                        alt="Logo Ahayou"
+                    />
+                </a>
+                <div class="header__nav-buttons">
+                    <button
+                        class="header__button header__button--text header__button--bg-orange"
+                    >
+                        Suscr&iacute;bete
+                    </button>
+                    <button
+                        class="header__button header__button--text header__button--bg-green"
+                    >
+                        Iniciar Sesi&oacute;n
+                    </button>
+                </div>
+                <div class="header__nav-buttons">
+                    <div>
+                        <button
+                            class="header__button header__button--icon"
+                        ></button>
+                        <button
+                            class="header__button header__button--icon"
+                        ></button>
+                    </div>
+                </div>
+                <div class="options__container">
+                    <button class="hamburger__button" id="menuButton">
+                        <span
+                            class="hamburger__line hamburger__line--white"
+                        ></span>
+                        <span
+                            class="hamburger__line hamburger__line--white"
+                        ></span>
+                        <span
+                            class="hamburger__line hamburger__line--white"
+                        ></span>
+                    </button>
+                    <div class="options__menu" id="optionsMenu">
+                        <button class="options__button">Espa&ntilde;ol</button>
+                        <button class="options__button">Ingl&eacute;s</button>
+                    </div>
+                </div>
+            </nav>
+            <section class="header__main-content carousel">
+                <div class="header__items-container">
+                    <div
+                        class="arrow__container arrow--rotate carousel__arrow--prev"
+                    >
+                        <div class="arrow absolute"></div>
+                        <div class="arrow__border"></div>
+                    </div>
+                    <div class="header__list carousel__slides">
+                        <div
+                            class="header__item carousel__item carousel__item--active"
+                            data-bg="imgs/backgrounds/header-img.jpg"
+                        >
+                            <h2 class="header__title">
+                                <b>Streaming</b> con <b>Alma Boliviana</b>
+                            </h2>
+                            <p class="header__description">
+                                Una experiencia mejorada no te pierdas los
+                                estrenos m&aacute;s anticipados y tus
+                                cl&aacute;sicos favoritos
+                            </p>
+                        </div>
+                        <div
+                            class="header__item carousel__item"
+                            data-bg="imgs/backgrounds/horizontal/plato_paceno.png"
+                        >
+                            <div
+                                class="movie__container movie__container--active"
+                            >
+                                <div>
+                                    <span class="movie__format">Película</span>
+                                    <img
+                                        src="imgs/logos/plato_paceno.png"
+                                        alt="Cobra Kai"
+                                        class="movie__image"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="movie__detail-1">
+                                        2024 - Estéreo
+                                    </span>
+                                    <span class="movie__detail-2">
+                                        N. 1 en TV Hoy
+                                    </span>
+                                    <p class="movie__description">
+                                        Muestra bajo una nueva perspectiva,
+                                        imágenes y situaciones de una tradición
+                                        celebrada entre los trabajadores de la
+                                        construcción, y sus formas de invocar
+                                        algún tipo de bendición en un ritual
+                                        secreto....mas
+                                    </p>
+                                    <span class="movie__gender">Acción</span>
+                                </div>
+                            </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/fuertes.jpg"
+                                    alt="Fuertes"
+                                />
+                                <div>
+                                    <h3 class="movie__title--small">Fuertes</h3>
+                                    <ul class="movie__data--small">
+                                        <li class="movie__data-item--small">
+                                            Pel&iacute;cula - Drama
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            2024 - Estéreo
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            N. 1 en TV Hoy
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            Acción
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="header__item carousel__item"
+                            data-bg="imgs/backgrounds/horizontal/barbara.png"
+                        >
+                            <div
+                                class="movie__container movie__container--active"
+                            >
+                                <div>
+                                    <span class="movie__format">Película</span>
+                                    <img
+                                        src="imgs/logos/barbara.png"
+                                        alt="Cobra Kai"
+                                        class="movie__image"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="movie__detail-1">
+                                        2024 - Estéreo
+                                    </span>
+                                    <span class="movie__detail-2">
+                                        N. 1 en TV Hoy
+                                    </span>
+                                    <p class="movie__description">
+                                        Bárbara acaba de retornar de Chile a
+                                        donde fue a trabajar. Su familia piensa
+                                        que regresa al hogar, pero su intención
+                                        es despedirse y tramitar su visa a
+                                        España, donde fue aceptada para un
+                                        trabajo. Sin embargo, un grave accidente
+                                        que involucra a su familia hace que
+                                        tenga que modificar sus planes y
+                                        enfrentar circunstancias y personas que
+                                        pretendía dejar atrás....mas Bárbara
+                                        acaba de retornar de Chile a donde fue a
+                                        trabajar. Su familia piensa que regresa
+                                        al hogar, pero su intención es
+                                        despedirse y tramitar su visa a España,
+                                        donde fue aceptada para un trabajo. Sin
+                                        embargo, un grave accidente que
+                                        involucra a su familia hace que tenga
+                                        que modificar sus planes y enfrentar
+                                        circunstancias y personas que pretendía
+                                        dejar atrás....mas
+                                    </p>
+                                    <span class="movie__gender">Acción</span>
+                                </div>
+                            </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/sirena.png"
+                                    alt="Sirena"
+                                />
+                                <div>
+                                    <h3 class="movie__title--small">Fuertes</h3>
+                                    <ul class="movie__data--small">
+                                        <li class="movie__data-item--small">
+                                            Pel&iacute;cula - Drama
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            2024 - Estéreo
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            N. 1 en TV Hoy
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            Acción
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="header__item carousel__item"
+                            data-bg="imgs/backgrounds/horizontal/max_jutam.png"
+                        >
+                            <div
+                                class="movie__container movie__container--active"
+                            >
+                                <div>
+                                    <span class="movie__format">Película</span>
+                                    <img
+                                        src="imgs/logos/max_jutam.png"
+                                        alt="Cobra Kai"
+                                        class="movie__image"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="movie__detail-1">
+                                        2024 - Estéreo
+                                    </span>
+                                    <span class="movie__detail-2">
+                                        N. 1 en TV Hoy
+                                    </span>
+                                    <p class="movie__description">
+                                        Una rivalidad legendaria se reaviva
+                                        cuando Johnny Lawrence vuelve a abrir su
+                                        viejo dojo y se reencuentra con Daniel
+                                        LaRusso. Que comience la contienda.
+                                    </p>
+                                    <span class="movie__gender">Acción</span>
+                                </div>
+                            </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/el_chaco.png"
+                                    alt="El chaco"
+                                />
+                                <div>
+                                    <h3 class="movie__title--small">Fuertes</h3>
+                                    <ul class="movie__data--small">
+                                        <li class="movie__data-item--small">
+                                            Pel&iacute;cula - Drama
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            2024 - Estéreo
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            N. 1 en TV Hoy
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            Acción
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="header__item carousel__item"
+                            data-bg="imgs/backgrounds/horizontal/avengers.jpg"
+                        >
+                            <div
+                                class="movie__container movie__container--active"
+                            >
+                                <div>
+                                    <span class="movie__format">Película</span>
+                                    <img
+                                        src="imgs/logos/Cobra-Kai-logo.png"
+                                        alt="Cobra Kai"
+                                        class="movie__image"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="movie__detail-1">
+                                        2024 - Estéreo
+                                    </span>
+                                    <span class="movie__detail-2">
+                                        N. 1 en TV Hoy
+                                    </span>
+                                    <p class="movie__description">
+                                        Una rivalidad legendaria se reaviva
+                                        cuando Johnny Lawrence vuelve a abrir su
+                                        viejo dojo y se reencuentra con Daniel
+                                        LaRusso. Que comience la contienda.
+                                    </p>
+                                    <span class="movie__gender">Acción</span>
+                                </div>
+                            </div>
+                            <div
+                                class="movie__container movie__container--second container-common"
+                            >
+                                <img
+                                    src="imgs/backgrounds/vertical/sirena.png"
+                                    alt="Sirena"
+                                />
+                                <div>
+                                    <h3 class="movie__title--small">Fuertes</h3>
+                                    <ul class="movie__data--small">
+                                        <li class="movie__data-item--small">
+                                            Pel&iacute;cula - Drama
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            2024 - Estéreo
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            N. 1 en TV Hoy
+                                        </li>
+                                        <li class="movie__data-item--small">
+                                            Acción
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow__container carousel__arrow--next">
+                        <div class="arrow absolute"></div>
+                        <div class="arrow__border"></div>
+                    </div>
+                </div>
+                <div class="header__pag-buttons">
+                    <button
+                        class="header__pag-button header__pag-button--selected carousel__button"
+                    >
+                        01
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        02
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        03
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        04
+                    </button>
+                    <button class="header__pag-button carousel__button">
+                        05
+                    </button>
+                </div>
+            </section>
+        </header>
+        <main class="main">
+            <div
+                class="background container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container playlist__start"
+            >
+                <section
+                    class="playlist__content container--flex container--flex-column container--flex-wrap full-width"
+                >
+                    <h2
+                        class="text--extra-large text--light text--letter-spacing-small"
+                    >
+                        <span class="text--bold">Continuar</span>&nbsp;viendo...
+                    </h2>
+                    <div
+                        class="container--flex container--align-center full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                    >
+                        <div
+                            class="arrow__container arrow--rotate carousel__arrow--prev"
+                        >
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                        <div
+                            class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
+                        >
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/fuertes.png"
+                                    alt="Pelicula"
+                                /><!--Put the name of the movie in the alt-->
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/santa_clara.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                        </div>
+                        <div class="arrow__container carousel__arrow--next">
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="playlist__content container--flex container--flex-column container--flex-wrap full-width"
+                >
+                    <h2
+                        class="text--extra-large text--light text--letter-spacing-small"
+                    >
+                        <span class="text--bold">Mi lista</span>&nbsp;de
+                        preferidos...
+                    </h2>
+                    <div
+                        class="container--flex container--align-center full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                    >
+                        <div
+                            class="arrow__container arrow--rotate carousel__arrow--prev"
+                        >
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                        <div
+                            class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
+                        >
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/fuertes.png"
+                                    alt="Pelicula"
+                                /><!--Put the name of the movie in the alt-->
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/santa_clara.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                        </div>
+                        <div class="arrow__container carousel__arrow--next">
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="playlist__content container--flex container--flex-column container--flex-wrap full-width"
+                >
+                    <h2
+                        class="text--extra-large text--light text--letter-spacing-small"
+                    >
+                        <span class="text--bold">Drama</span>
+                    </h2>
+                    <div
+                        class="container--flex container--align-center full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                    >
+                        <div
+                            class="arrow__container arrow--rotate carousel__arrow--prev"
+                        >
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                        <div
+                            class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
+                        >
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/fuertes.png"
+                                    alt="Pelicula"
+                                /><!--Put the name of the movie in the alt-->
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/santa_clara.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                        </div>
+                        <div class="arrow__container carousel__arrow--next">
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div
+                class="background background__two container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container"
+            >
+                <section
+                    class="playlist__content container--flex container--flex-column container--flex-wrap full-width"
+                >
+                    <h2
+                        class="text--extra-large text--light text--letter-spacing-small"
+                    >
+                        <span class="text--bold">Las 10 pel&iacute;culas</span
+                        >&nbsp;m&aacute;s populares preferidos...
+                    </h2>
+                    <div
+                        class="container--flex container--align-center full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                    >
+                        <div
+                            class="arrow__container arrow--rotate carousel__arrow--prev"
+                        >
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                        <div
+                            class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
+                        >
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        10
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/fuertes_vertical.jpg"
+                                    alt="Pelicula"
+                                /><!--Put the name of the movie in the alt-->
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        2
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/santa_clara_vertical.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        3
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio_vertical.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        4
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        1
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/fuertes_vertical.jpg"
+                                    alt="Pelicula"
+                                /><!--Put the name of the movie in the alt-->
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        2
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/santa_clara_vertical.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        3
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio_vertical.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        4
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/katari_vertical.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                            >
+                                <div class="playlist__number">
+                                    <p class="text--only-stroke text--green">
+                                        4
+                                    </p>
+                                </div>
+                                <img
+                                    src="imgs/movies/katari_vertical.png"
+                                    alt="Pelicula"
+                                />
+                                <div class="ribbon--under container--orange">
+                                    <p class="text text--bold">
+                                        Recien agregados
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="arrow__container carousel__arrow--next">
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="playlist__content container--flex container--flex-column container--flex-wrap full-width"
+                >
+                    <h2
+                        class="text--extra-large text--light text--letter-spacing-small"
+                    >
+                        <span class="text--bold">Acci&oacute;n</span>
+                    </h2>
+                    <div
+                        class="container--flex container--align-center full-width container--gap-medium container--justify-content-space-between carousel__container playlist__container--with-arrows"
+                    >
+                        <div
+                            class="arrow__container arrow--rotate carousel__arrow--prev"
+                        >
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                        <div
+                            class="container--flex container--justify-content-center playlist__movies full-width carousel__list"
+                        >
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/fuertes.png"
+                                    alt="Pelicula"
+                                /><!--Put the name of the movie in the alt-->
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/santa_clara.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/dia_que_murio_el_silencio.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                class="playlist__movie container--justify-content-center carousel__item"
+                            >
+                                <img
+                                    src="imgs/movies/katari.png"
+                                    alt="Pelicula"
+                                />
+                            </a>
+                        </div>
+                        <div class="arrow__container carousel__arrow--next">
+                            <div class="arrow absolute"></div>
+                            <div class="green-yellow arrow__border"></div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="footer playlist__footer">
+                    <div class="footer__image-container">
+                        <img
+                            src="imgs/logos/logo-ahayou-2.png"
+                            alt="Logo Ahayou"
+                            class="footer__image"
+                        />
+                    </div>
+                    <div class="footer__content">
+                        <div class="footer__list">
+                            <div class="footer__list-item">
+                                <a href="#frequent-questions">
+                                    Preguntas frecuentes
+                                </a>
+                                <a href="/pages/contacts.html">Privacidad</a>
+                            </div>
+                            <div class="footer__list-item">
+                                <a href="/pages/help-center.html">
+                                    Centro de Ayuda
+                                </a>
+                                <a href="#">Avisos Legales</a>
+                            </div>
+                            <div class="footer__list-item">
+                                <a href="#">T&eacute;rminos de uso</a>
+                                <a href="/pages/contacts.html">Contacto</a>
+                            </div>
+                        </div>
+                        <div class="footer__data footer__data--white">
+                            <div class="footer__contacts">
+                                <div>
+                                    <span>+(591) 75874441</span>
+                                </div>
+                                <div class="social-media">
+                                    <a href="#" class="social-media__link">
+                                        <img
+                                            src="imgs/logos/social-media/white/facebook.svg"
+                                            alt="Facebook"
+                                            class="social-media__img"
+                                        />
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img
+                                            src="imgs/logos/social-media/white/x.png"
+                                            alt="X"
+                                            class="social-media__img"
+                                        />
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img
+                                            src="imgs/logos/social-media/white/Instagram.svg"
+                                            alt="Instagram"
+                                            class="social-media__img"
+                                        />
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img
+                                            src="imgs/logos/social-media/white/linkedln.svg"
+                                            alt="Linkedln"
+                                            class="social-media__img"
+                                        />
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img
+                                            src="imgs/logos/social-media/white/whatsapp.svg"
+                                            alt="Whatsapp"
+                                            class="social-media__img"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer__copyright">
+                                <p>Copyright 2025 Bolivia</p>
+                                <p>Ahayou</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <script src="/js/header-background-handler.js"></script>
+        <script src="/js/carousel-header-index.js"></script>
+        <script defer src="/js/carousel.js"></script>
+        <script src="/js/open-menu.js"></script>
+        <script src="/js/header-movies-responsive.js"></script>
+        <script src="/js/movie-container-hover.js"></script>
+    </body>
+</html>

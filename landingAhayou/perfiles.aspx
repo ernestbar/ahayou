@@ -36,7 +36,7 @@
                  <asp:ControlParameter ControlID="lblCodPlanSuscriptor" Name="pV_COD_PLAN_SUSCRIPTOR" />
              </SelectParameters>
  </asp:ObjectDataSource>
-        <asp:Label ID="lblCodPlanSuscriptor" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblCodPlanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
       <header class="header">
           <nav class="header__nav">
               <a href="home.aspx" class="header__logo">
@@ -85,7 +85,7 @@
                 <div class="profiles__container">
                       <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" runat="server">
                         <ItemTemplate>
-                            <asp:LinkButton class="profiles__item" ID="lbtnPerfil" OnClick="lbtnPerfil_Click" runat="server"> <img
+                            <asp:LinkButton class="profiles__item" ID="lbtnPerfil" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfil_Click" runat="server"> <img
                                      src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                      alt="Foto de perfil"
                                      class="profiles__item-image"

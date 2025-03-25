@@ -34,8 +34,11 @@ namespace landingAhayou
 
         protected void lbtnPerfil_Click(object sender, EventArgs e)
         {
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
             Session["usuario"] = lblUsuario.Text;
-            Response.Redirect("home.aspx");
+            Session["cod_perfil_suscriptor"] = id;
+            Response.Redirect("cartelera.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

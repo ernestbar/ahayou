@@ -19,14 +19,17 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/forms.css" />
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/vanilla-page.css" />
-        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
     </head>
     <body>
         <header class="header">
             <nav class="header__nav">
-                <a href="index.html" class="header__logo">
+                <a href="/index.html" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -56,10 +59,16 @@
                     </div>
                 </div>
                 <div class="options__container">
-                    <button class="options__principal-button" id="menuButton">
-                        <span class="options__div-hamburger"></span>
-                        <span class="options__div-hamburger"></span>
-                        <span class="options__div-hamburger"></span>
+                    <button class="hamburger__button" id="menuButton">
+                        <span
+                            class="hamburger__line hamburger__line--white"
+                        ></span>
+                        <span
+                            class="hamburger__line hamburger__line--white"
+                        ></span>
+                        <span
+                            class="hamburger__line hamburger__line--white"
+                        ></span>
                     </button>
                     <div class="options__menu" id="optionsMenu">
                         <button class="options__button">Espa&ntilde;ol</button>
@@ -68,23 +77,33 @@
                 </div>
             </nav>
         </header>
-        <main class="main main--form">
-            <div class="form-wrapper">
+        <main class="main main--flex">
+            <div class="container__wrapper container__wrapper--black">
                 <h1 class="form__title">Centro de ayuda</h1>
                 <form class="form">
-                    <label for="question" class="form__label">
+                    <label
+                        for="question"
+                        class="form__label form__label--first text--black"
+                    >
                         ¿C&oacute;mo podemos ayudar?
                     </label>
-                    <div class="form__input-container">
+                    <div
+                        class="form__input-container form__input-container--row form__input-container--no-gap"
+                    >
                         <input
                             type="text"
                             name="question"
                             placeholder="Escribe una pregunta, un tema o un problema"
                             id="question"
-                            autocomplete="false"
+                            minlength="3"
+                            maxlength="500"
+                            autocomplete="off"
                             class="form__input form--shadow-left"
                         />
-                        <button type="submit" class="form__button form--shadow-right">
+                        <button
+                            type="submit"
+                            class="button button--orange form--shadow-right"
+                        >
                             <img src="imgs/etc/arrow.svg" alt="Enviar" />
                         </button>
                     </div>
@@ -103,18 +122,18 @@
                 <div class="footer__list">
                     <div class="footer__list-item">
                         <a href="#frequent-questions">Preguntas frecuentes</a>
-                        <a href="privacy.html">Privacidad</a>
+                        <a href="/pages/privacy.html">Privacidad</a>
                     </div>
                     <div class="footer__list-item">
-                        <a href="help-center.html">Centro de Ayuda</a>
+                        <a href="/pages/help-center.html">Centro de Ayuda</a>
                         <a href="#">Avisos Legales</a>
                     </div>
                     <div class="footer__list-item">
                         <a href="#">T&eacute;rminos de uso</a>
-                        <a href="contacts.html">Contacto</a>
+                        <a href="/pages/contacts.html">Contacto</a>
                     </div>
                 </div>
-                <div class="footer__data">
+                <div class="footer__data footer__data--black">
                     <div class="footer__contacts">
                         <div>
                             <span>+(591) 75874441</span>
