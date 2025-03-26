@@ -1,5 +1,7 @@
-﻿using System;
+﻿using landingAhayou.Clases;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -23,10 +25,22 @@ namespace landingAhayou
                 else
                 {
                     lblUsuario.Text = Session["usuario"].ToString();
-                    lblPerfilSuscriptor.Text= Session["cod_plan_suscriptor"].ToString();
+                    lblplanSuscriptor.Text= Session["cod_plan_suscriptor"].ToString();
                     lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
                     btnLogin.Visible = false;
                     btnSuscribete.Visible = false;
+                    DataTable dt = new DataTable();
+                    dt=Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                        {
+                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                        }
+                    }
+                    if (Session["menu"] == null) { lblMenu.Text = "0"; }
+                    else { lblMenu.Text = Session["menu"].ToString(); }
                 }
 
             }
@@ -142,23 +156,13 @@ namespace landingAhayou
 
         }
 
-        protected void btnInicio_Click(object sender, EventArgs e)
+        
+        protected void btnMenu_Click(object sender, EventArgs e)
         {
-            lblMenu.Text = "0";
+            Button obj = (Button)sender;
+            string id = obj.CommandArgument.ToString();
+            lblMenu.Text = id;
             Repeater2.DataBind();
-        }
-
-        protected void btnPeliculas_Click(object sender, EventArgs e)
-        {
-            lblMenu.Text = "1";
-            Repeater2.DataBind();
-        }
-
-        protected void btnTV_Click(object sender, EventArgs e)
-        {
-            lblMenu.Text = "4";
-            Repeater2.DataBind();
-
         }
     }
 }

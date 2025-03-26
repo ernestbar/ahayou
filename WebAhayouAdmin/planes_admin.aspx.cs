@@ -57,6 +57,7 @@ namespace WebAhayouAdmin
             txtNroPlan.Text = "";
             txtPlan.Text = "";
             txtPlanUs.Text = "";
+            txtUrlPasarela.Text = "";
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
@@ -88,7 +89,7 @@ namespace WebAhayouAdmin
             {
                 if (lblCodPlan.Text == "")
                 {
-                    Clases.Planes_paquetes obj = new Clases.Planes_paquetes("I", 0, Int64.Parse(txtNroPlan.Text), txtPlan.Text, txtPlanUs.Text,Int64.Parse(txtCantMes.Text),ddlMundo.SelectedValue,ddlMoneda.SelectedValue,decimal.Parse(txtMonto.Text),txtCaracteristicas.Text,txtCaracteristicasUs.Text,Int64.Parse(txtCantPerfiles.Text),lblUsuario.Text);
+                    Clases.Planes_paquetes obj = new Clases.Planes_paquetes("I", 0, Int64.Parse(txtNroPlan.Text), txtPlan.Text, txtPlanUs.Text,Int64.Parse(txtCantMes.Text),ddlMundo.SelectedValue,ddlMoneda.SelectedValue,decimal.Parse(txtMonto.Text),txtCaracteristicas.Text,txtCaracteristicasUs.Text,Int64.Parse(txtCantPerfiles.Text),lblUsuario.Text,txtUrlPasarela.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -96,7 +97,7 @@ namespace WebAhayouAdmin
                 }
                 else
                 {
-                    Clases.Planes_paquetes obj = new Clases.Planes_paquetes("U", Int64.Parse(lblCodPlan.Text), Int64.Parse(txtNroPlan.Text), txtPlan.Text, txtPlanUs.Text, Int64.Parse(txtCantMes.Text), ddlMundo.SelectedValue, ddlMoneda.SelectedValue, decimal.Parse(txtMonto.Text), txtCaracteristicas.Text, txtCaracteristicasUs.Text, Int64.Parse(txtCantPerfiles.Text), lblUsuario.Text);
+                    Clases.Planes_paquetes obj = new Clases.Planes_paquetes("U", Int64.Parse(lblCodPlan.Text), Int64.Parse(txtNroPlan.Text), txtPlan.Text, txtPlanUs.Text, Int64.Parse(txtCantMes.Text), ddlMundo.SelectedValue, ddlMoneda.SelectedValue, decimal.Parse(txtMonto.Text), txtCaracteristicas.Text, txtCaracteristicasUs.Text, Int64.Parse(txtCantPerfiles.Text), lblUsuario.Text, txtUrlPasarela.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -139,6 +140,7 @@ namespace WebAhayouAdmin
                 txtCantPerfiles.Text = obj_m.PB_CANT_PERFIL.ToString();
                 txtCaracteristicas.Text = obj_m.PV_CARACTERISTICAS;
                 txtCaracteristicasUs.Text = obj_m.PV_CARACTERISTICAS_INGLES;
+                txtUrlPasarela.Text=obj_m.PV_URL_PASARELA.ToString();
                 txtMonto.Text=obj_m.PD_MONTO.ToString();
                 ddlMoneda.DataBind();
                 ddlMoneda.SelectedValue = obj_m.PV_MONEDA;
@@ -170,13 +172,13 @@ namespace WebAhayouAdmin
                 lblCodPlan.Text = datos[0];
                 if (datos[1] == "ACTIVO")
                 {
-                    Clases.Planes_paquetes obj_m = new Clases.Planes_paquetes("D", Int64.Parse(lblCodPlan.Text), 0, "", "", 0, "", "", 0, "", "",0, lblUsuario.Text);
+                    Clases.Planes_paquetes obj_m = new Clases.Planes_paquetes("D", Int64.Parse(lblCodPlan.Text), 0, "", "", 0, "", "", 0, "", "",0, lblUsuario.Text,"");
                     obj_m.ABM();
                     lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 }
                 else 
                 {
-                    Clases.Planes_paquetes obj_m = new Clases.Planes_paquetes("A", Int64.Parse(lblCodPlan.Text), 0, "", "", 0, "", "", 0, "", "",0, lblUsuario.Text);
+                    Clases.Planes_paquetes obj_m = new Clases.Planes_paquetes("A", Int64.Parse(lblCodPlan.Text), 0, "", "", 0, "", "", 0, "", "",0, lblUsuario.Text,"");
                     obj_m.ABM();
                     lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 }

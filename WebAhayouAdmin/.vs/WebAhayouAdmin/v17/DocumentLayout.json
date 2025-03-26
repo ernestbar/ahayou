@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\banner_principal_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:banner_principal_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\planes_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:planes_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\banner_principal_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:banner_principal_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\planes_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:planes_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\principal.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:principal.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\suscriptores_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:suscriptores_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\clases\\enviar_correo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\enviar_correo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\clases\\planes_paquetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\planes_paquetes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,77 +94,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Principal.Master.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master.cs",
-              "RelativeDocumentMoniker": "Principal.Master.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master.cs",
-              "RelativeToolTip": "Principal.Master.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAANAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "planes_admin.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\planes_admin.aspx.cs",
+              "RelativeDocumentMoniker": "planes_admin.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\planes_admin.aspx.cs",
+              "RelativeToolTip": "planes_admin.aspx.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAUwL4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T20:57:09.1Z",
+              "WhenOpened": "2025-03-26T21:05:32.448Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Login.aspx",
-              "RelativeDocumentMoniker": "Login.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Login.aspx",
-              "RelativeToolTip": "Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-21T13:59:27.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "suscriptores_admin.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\suscriptores_admin.aspx.cs",
-              "RelativeDocumentMoniker": "suscriptores_admin.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\suscriptores_admin.aspx.cs",
-              "RelativeToolTip": "suscriptores_admin.aspx.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T13:36:25.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "enviar_correo.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\enviar_correo.cs",
-              "RelativeDocumentMoniker": "Clases\\enviar_correo.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\enviar_correo.cs",
-              "RelativeToolTip": "Clases\\enviar_correo.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T16:54:22.608Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "banner_principal_admin.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\banner_principal_admin.aspx",
-              "RelativeDocumentMoniker": "banner_principal_admin.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\banner_principal_admin.aspx",
-              "RelativeToolTip": "banner_principal_admin.aspx",
+              "Title": "planes_admin.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\planes_admin.aspx",
+              "RelativeDocumentMoniker": "planes_admin.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\planes_admin.aspx",
+              "RelativeToolTip": "planes_admin.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-20T15:42:39.442Z",
+              "WhenOpened": "2025-03-26T21:03:34.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "banner_principal_admin.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\banner_principal_admin.aspx.cs",
-              "RelativeDocumentMoniker": "banner_principal_admin.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\banner_principal_admin.aspx.cs",
-              "RelativeToolTip": "banner_principal_admin.aspx.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAiwK4AAAA0AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Planes_paquetes.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Planes_paquetes.cs",
+              "RelativeDocumentMoniker": "Clases\\Planes_paquetes.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Planes_paquetes.cs",
+              "RelativeToolTip": "Clases\\Planes_paquetes.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAiwPAAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T15:42:05.087Z",
+              "WhenOpened": "2025-03-26T20:59:49.138Z",
               "EditorCaption": ""
             }
           ]

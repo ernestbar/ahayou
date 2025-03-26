@@ -1,3 +1,5 @@
+@import url("main.css");
+
 .background {
     background-repeat: no-repeat;
     background-position: center;
@@ -10,4 +12,8 @@
 
 .background__two {
     background-image: url("../imgs/backgrounds/fondo-AHAYOU.png");
+}
+
+.background__black {
+    background-color: var(--color-dark-2);
 }

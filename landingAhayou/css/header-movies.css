@@ -169,6 +169,96 @@
 }
 
 /*
+    Component: movie__buttons, movie__button
+
+    Description: Style for the container and button component
+    for the header movies section. It includes spaces, colors,
+    backgrounds and other styles.
+*/
+
+.movie__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.movie__button {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 56px;
+    font-weight: bold;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.movie__button--white {
+    background-color: var(--color-white);
+}
+
+.movie__button--white:hover {
+    background-color: #b4b4b4;
+}
+
+.movie__button--gray,
+.movie__button--black:hover {
+    background-color: var(--color-gray);
+}
+
+.movie__button--black,
+.movie__button--gray:hover {
+    background-color: var(--color-dark-2);
+}
+
+.movie__button--only-icon {
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    padding: 0;
+}
+
+.movie__button--only-icon > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    max-width: none !important;
+}
+
+.movie__button > img {
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.movie__button > p {
+    flex: 5;
+    font-size: 1em;
+}
+
+.movie__button--white > p {
+    color: #000;
+}
+
+.movie__button--gray > p {
+    color: var(--color-white);
+}
+
+/*
     Section: Responsive
 
     Description: Media queries that change styles from
@@ -202,6 +292,16 @@
 @media (max-width: 600px) {
     .header__items-container:has(.movie__container) {
         padding: 0 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .movie__button {
+        justify-content: center;
+    }
+
+    .movie__button > p {
+        display: none;
     }
 }
 
@@ -240,6 +340,22 @@
     .movie__detail-1,
     .movie__gender {
         font-size: 0.9em;
+    }
+}
+
+@media (max-width: 300px) {
+    .movie__detail-2 {
+        font-size: 1em;
+    }
+
+    .movie__description,
+    .movie__format {
+        font-size: 0.9em;
+    }
+
+    .movie__detail-1,
+    .movie__gender {
+        font-size: 0.8em;
     }
 }
 

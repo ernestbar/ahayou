@@ -26,6 +26,7 @@ namespace WebAhayouAdmin.Clases
         public string PV_CARACTERISTICAS_INGLES { get; set; }
         public Int64 PB_CANT_PERFIL { get; set; }
         public string PV_MONEDA { get; set; }
+        public string PV_URL_PASARELA { get; set; }
         public string PV_USUARIO { get; set; }
         public string PV_ESTADOPR { get; set; }
         public string PV_DESCRIPCIONPR { get; set; }
@@ -42,7 +43,7 @@ namespace WebAhayouAdmin.Clases
             Int64 pB_NRO_PLAN, string pV_PLAN, string pV_PLAN_INGLES, Int64 pB_CANT_MES,
             string pV_MUNDO, string pV_MONEDA,decimal pD_MONTO, 
             string pV_CARACTERISTICAS,string pV_CARACTERISTICAS_INGLES,
-            Int64 pB_CANT_PERFIL,string pV_USUARIO)
+            Int64 pB_CANT_PERFIL,string pV_USUARIO,string pV_URL_PASARELA)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PB_CODIGO_PLAN = pB_CODIGO_PLAN;
@@ -57,6 +58,7 @@ namespace WebAhayouAdmin.Clases
             PV_CARACTERISTICAS_INGLES = pV_CARACTERISTICAS_INGLES;
             PB_CANT_PERFIL = pB_CANT_PERFIL;
             PV_USUARIO = pV_USUARIO;
+            PV_URL_PASARELA=pV_URL_PASARELA;
         }
         #endregion
         #region Métodos que NO requieren constructor
@@ -202,6 +204,10 @@ namespace WebAhayouAdmin.Clases
                                 PB_CANT_PERFIL = 0;
                             else
                                 PB_CANT_PERFIL = Int64.Parse(dr["CANT_PERFIL"].ToString());
+                            if (string.IsNullOrEmpty(dr["URL_PASARELA"].ToString()))
+                                PV_URL_PASARELA = "";
+                            else
+                                PV_URL_PASARELA = (string)dr["URL_PASARELA"];
                         }
 
                     }
@@ -232,6 +238,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PV_MONEDA", PV_MONEDA);
                     cmd.Parameters.AddWithValue("PB_CANT_MES", PB_CANT_MES);
                     cmd.Parameters.AddWithValue("PB_CANT_PERFIL", PB_CANT_PERFIL);
+                    cmd.Parameters.AddWithValue("PV_URL_PASARELA", PV_URL_PASARELA);
                     cmd.Parameters.AddWithValue("PD_MONTO", PD_MONTO);
                     cmd.Parameters.AddWithValue("PV_CARACTERISTICAS", PV_CARACTERISTICAS);
                     cmd.Parameters.AddWithValue("PV_CARACTERISTICAS_INGLES", PV_CARACTERISTICAS_INGLES);

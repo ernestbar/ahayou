@@ -33,6 +33,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.ObjectDataSource odsRotador1;
 
         /// <summary>
+        /// Control odsMenus.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsMenus;
+
+        /// <summary>
         /// Control odsUltimos.
         /// </summary>
         /// <remarks>
@@ -87,6 +96,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.ObjectDataSource odsMasVistos;
 
         /// <summary>
+        /// Control odsAvatares.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsAvatares;
+
+        /// <summary>
         /// Control lblMundo.
         /// </summary>
         /// <remarks>
@@ -132,33 +150,6 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.Label lblMenu;
 
         /// <summary>
-        /// Control btnInicio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInicio;
-
-        /// <summary>
-        /// Control btnPeliculas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPeliculas;
-
-        /// <summary>
-        /// Control btnTV.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTV;
-
-        /// <summary>
         /// Control btnSuscribete.
         /// </summary>
         /// <remarks>
@@ -184,6 +175,33 @@ namespace landingAhayou
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUsuario;
+
+        /// <summary>
+        /// Control imgPerfil.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgPerfil;
+
+        /// <summary>
+        /// Control Repeater7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater7;
+
+        /// <summary>
+        /// Control Repeater8.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater8;
 
         /// <summary>
         /// Control Repeater6.

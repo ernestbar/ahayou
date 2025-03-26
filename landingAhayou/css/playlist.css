@@ -45,6 +45,10 @@
     transition: transform 0.3s ease;
 }
 
+.playlist__movies--vertical {
+    height: 300px;
+}
+
 .playlist__movie {
     height: inherit;
     position: relative;

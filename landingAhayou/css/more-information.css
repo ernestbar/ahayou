@@ -1,0 +1,90 @@
+@import url("main.css");
+
+/*
+    MORE-INFORMATION.CSS
+
+    Description: This css file is used for the more-information.html.
+    Its include its spaces in its divs and other properties
+*/
+
+.more-information__main {
+    padding: 50px 0;
+}
+
+.more-information__header-content {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #202020 90%,
+        var(--color-dark-2) 95%
+    );
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    gap: 25px 50px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.more-information__header-data,
+.more-information__header-data > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.more-information__header-data {
+    flex: 1;
+}
+
+.more-information__header-data > ul {
+    list-style: none;
+}
+
+.more-information__section {
+    margin: 0 100px;
+}
+
+.more-information__video {
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 30%;
+}
+
+.more-information__video > iframe {
+    height: 250px;
+}
+
+.footer {
+    margin-bottom: 24px;
+    margin: 0 auto;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the more-information.html page and its children component.
+*/
+
+@media (max-width: 800px) {
+    .more-information__header-content {
+        flex-direction: column;
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 530px) {
+    .more-information__section {
+        margin: 0 15px;
+    }
+
+    .more-information__header-content {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        padding-top: 150px;
+    }
+}

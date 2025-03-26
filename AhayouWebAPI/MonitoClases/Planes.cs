@@ -18,5 +18,6 @@ namespace AhayouClases
         public string caracteristicas { get; set; }
         public string caracteristicas_ingles { get; set; }
         public string moneda { get; set; }
+        public string url_pasarela { get; set; }
     }
 }

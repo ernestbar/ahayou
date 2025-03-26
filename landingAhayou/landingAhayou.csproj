@@ -100,6 +100,7 @@
     <Content Include="css\information.css" />
     <Content Include="css\login.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\more-information.css" />
     <Content Include="css\new-releases.css" />
     <Content Include="css\plans-selection.css" />
     <Content Include="css\plans.css" />
@@ -332,11 +333,17 @@
     <Content Include="Images\VerAhora.png" />
     <Content Include="Images\WebApp_img.png" />
     <Content Include="Images\Whatsapp_37229.png" />
+    <Content Include="imgs\avatars\Avatar 12.png" />
+    <Content Include="imgs\avatars\Avatar 3.png" />
+    <Content Include="imgs\avatars\Avatar 6.png" />
+    <Content Include="imgs\avatars\Avatar 7.png" />
+    <Content Include="imgs\avatars\Avatar 8.png" />
     <Content Include="imgs\backgrounds\avengers.jpg" />
     <Content Include="imgs\backgrounds\cobra-kai.jpeg" />
     <Content Include="imgs\backgrounds\fondo-AHAYOU.png" />
     <Content Include="imgs\backgrounds\fondo-AHAYOU_2.png" />
     <Content Include="imgs\backgrounds\fondo_header_movil.jpg" />
+    <Content Include="imgs\backgrounds\franja colores.png" />
     <Content Include="imgs\backgrounds\header-img.jpg" />
     <Content Include="imgs\backgrounds\horizontal\avengers.jpg" />
     <Content Include="imgs\backgrounds\horizontal\barbara.png" />
@@ -357,12 +364,18 @@
     <Content Include="imgs\etc\profile_image.png" />
     <Content Include="imgs\flags\eeuu.png" />
     <Content Include="imgs\flags\spain.png" />
+    <Content Include="imgs\icons\add.svg" />
+    <Content Include="imgs\icons\administration.svg" />
     <Content Include="imgs\icons\alert.svg" />
     <Content Include="imgs\icons\bell.svg" />
     <Content Include="imgs\icons\cellphone.svg" />
     <Content Include="imgs\icons\exit.svg" />
+    <Content Include="imgs\icons\help-center.svg" />
     <Content Include="imgs\icons\home.svg" />
+    <Content Include="imgs\icons\like-favorites.svg" />
     <Content Include="imgs\icons\lock.svg" />
+    <Content Include="imgs\icons\play.svg" />
+    <Content Include="imgs\icons\profile.svg" />
     <Content Include="imgs\icons\return.svg" />
     <Content Include="imgs\icons\shield-check.svg" />
     <Content Include="imgs\icons\shield.svg" />
@@ -430,10 +443,14 @@
     <Content Include="js\open-accordion-image.js" />
     <Content Include="js\open-menu.js" />
     <Content Include="js\open-sidebar.js" />
+    <Content Include="js\open-submenu.js" />
+    <Content Include="js\show-one-bg.js" />
     <Content Include="js\show-validation-alert.js" />
     <Content Include="js\web-app-title.js" />
     <Content Include="login.aspx" />
     <Content Include="Logs\Readme.txt" />
+    <Content Include="mas_informacion.aspx" />
+    <Content Include="more-information.html" />
     <Content Include="perfiles.aspx" />
     <Content Include="playlist.html" />
     <Content Include="privacy.html" />
@@ -540,6 +557,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mas_informacion.aspx.cs">
+      <DependentUpon>mas_informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mas_informacion.aspx.designer.cs">
+      <DependentUpon>mas_informacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="perfiles.aspx.cs">
       <DependentUpon>perfiles.aspx</DependentUpon>

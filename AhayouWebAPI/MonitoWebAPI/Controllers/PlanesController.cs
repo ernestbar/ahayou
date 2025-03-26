@@ -57,7 +57,7 @@ namespace AhayouWebAPI.Controllers
                                 pago_mes = (string)dr["PAGO_MES"],
                                 pago_mes_ingles = (string)dr["PAGO_MES_INGLES"],
                                 ahorro = (string)dr["AHORRO"],
-                                ahorro_mes = (string)dr["AHORRO_MES"]
+                                url_pasarela = dr["url_pasarela"] == DBNull.Value ? "" : (string)dr["url_pasarela"]
                             }).ToList();
 
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
