@@ -27,6 +27,7 @@ namespace landingAhayou
                     lblUsuario.Text = Session["usuario"].ToString();
                     lblplanSuscriptor.Text= Session["cod_plan_suscriptor"].ToString();
                     lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+                    lblCodigoPlan.Text = Session["codigo_plan"].ToString();
 
                     btnLogin.Visible = false;
                     btnSuscribete.Visible = false;

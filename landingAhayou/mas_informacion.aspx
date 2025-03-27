@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mas_informacion.aspx.cs" Inherits="landingAhayou.mas_informacion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mas_informacion.aspx.cs" EnableEventValidation="false" Inherits="landingAhayou.mas_informacion" %>
 
 <!DOCTYPE html>
 
@@ -51,20 +51,19 @@
     </asp:ObjectDataSource>
     <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
     </asp:ObjectDataSource>
-    <asp:ObjectDataSource ID="odsSecciones" runat="server" SelectMethod="PR_STR_GET_VER_SECCIONES_CARTELERA" TypeName="landingAhayou.Clases.Carteleras">
+    <asp:ObjectDataSource ID="odsContenidoInd" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_STR_IND" TypeName="landingAhayou.Clases.Contenidos">
     <SelectParameters>
-        <asp:ControlParameter ControlID="lblUsuario1" Name="PV_USUARIO" Type="String" />
-        <asp:ControlParameter ControlID="lblplanSuscriptor" Name="PV_COD_PLAN_SUSCRIPTOR" Type="String" />
-        <asp:ControlParameter ControlID="lblPerfilSuscriptor" Name="PV_COD_PERFIL_SUSCRIPTOR" Type="String" />
-        <asp:ControlParameter ControlID="lblMenu" Name="PI_MENU" Type="String" />
+        <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
     </SelectParameters>
     </asp:ObjectDataSource>
-    <asp:ObjectDataSource ID="odsMasVistos" runat="server" SelectMethod="PR_STR_GET_FAVORITOS" TypeName="landingAhayou.Clases.Carteleras">
+    <asp:ObjectDataSource ID="odsTrailers" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_TRAILER" TypeName="landingAhayou.Clases.Contenidos">
     <SelectParameters>
-        <asp:ControlParameter ControlID="lblUsuario1" Name="PV_USUARIO" Type="String" />
-        <asp:ControlParameter ControlID="lblplanSuscriptor" Name="PV_COD_PLAN_SUSCRIPTOR" Type="String" />
-        <asp:ControlParameter ControlID="lblPerfilSuscriptor" Name="PV_COD_PERFIL_SUSCRIPTOR" Type="String" />
-        <asp:ControlParameter ControlID="lblMenu" Name="PI_MENU" Type="String" />
+        <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
+    </SelectParameters>
+    </asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="odsTemporadas" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_TEMPORADAS" TypeName="landingAhayou.Clases.Contenidos">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
     </SelectParameters>
     </asp:ObjectDataSource>
     <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_PERFILES_SUSCRIPTOR" TypeName="landingAhayou.Clases.Suscriptores">
@@ -73,9 +72,11 @@
         </SelectParameters>
     </asp:ObjectDataSource>
     <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
-    <asp:Label ID="lblUsuario1" runat="server" Visible="false" Text="yisus.patata111@gmail.com"></asp:Label>
-    <asp:Label ID="lblplanSuscriptor" runat="server" Visible="false" Text="31"></asp:Label>
-    <asp:Label ID="lblPerfilSuscriptor" runat="server" Visible="false" Text="61"></asp:Label>
+    <asp:Label ID="lblUsuario1" runat="server" Visible="false" Text=""></asp:Label>
+    <asp:Label ID="lblplanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+    <asp:Label ID="lblPerfilSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+         <asp:Label ID="lblCodigoPlan" runat="server" Visible="false" Text=""></asp:Label>
+        <asp:Label ID="lblCodContenidoStr" runat="server" Visible="false" Text=""></asp:Label>
     <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
      <header class="header header--main" id="header__movies">
         <nav class="header__nav">
@@ -178,150 +179,146 @@
                 </div>
             </div>
         </nav>
-            
-         <section
-        class="more-information__header-content"
-        id="itemWithBackground"
-        data-bg="imgs/backgrounds/horizontal/plato_paceno.png"
-    >
-        <div class="more-information__header-data">
-            <span class="movie__format">Película</span>
-            <img
-                src="imgs/logos/plato_paceno.png"
-                alt="Cobra Kai"
-                class="movie__image"
-            />
-            <div class="movie__buttons">
-                <a href="#" class="movie__button movie__button--white">
-                    <img
-                        src="imgs/icons/play.svg"
-                        alt="Icono reproducir"
-                    />
-                    <p>Reproducir</p>
-                </a>
-                <button
-                    class="movie__button movie__button--only-icon movie__button--black"
+      <asp:Repeater ID="Repeater1" DataSourceID="odsContenidoInd" runat="server">
+            <ItemTemplate>
+                     <section
+                    class="more-information__header-content"
+                    id="itemWithBackground"
+                    data-bg='<%# Eval("foto_horizontal") %>'
                 >
-                    <img
-                        src="imgs/icons/add.svg"
-                        alt="Añadir a favoritos"
-                    />
-                </button>
-                <button
-                    class="movie__button movie__button--only-icon movie__button--black"
-                >
-                    <img
-                        src="imgs/icons/like-favorites.svg"
-                        alt="Me gusta"
-                    />
-                </button>
-            </div>
-            <span class="movie__detail-1">2024 - Estéreo</span>
-            <span class="movie__detail-2">N. 1 en TV Hoy</span>
-            <p class="movie__description">
-                Muestra bajo una nueva perspectiva, imágenes y
-                situaciones de una tradición celebrada entre los
-                trabajadores de la construcción, y sus formas de invocar
-                algún tipo de bendición en un ritual secreto....mas
-            </p>
-            <span class="movie__gender">Acción</span>
-        </div>
-        <div class="more-information__header-data">
-            <ul>
-                <li>
-                    <p class="text text--light">
-                        <span class="text--bold">Director:</span
-                        >&nbsp;Gerente General RTP: Jorge Luis Palenque
-                    </p>
-                </li>
-                <li>
-                    <p class="text text--light">
-                        <span class="text--bold">Presentadores:</span
-                        >&nbsp;rayssa arias, asbel valenzuela y ana
-                        tapia
-                    </p>
-                </li>
-                <li>
-                    <p class="text text--light">
-                        <span class="text--bold">Reparto Invitado:</span
-                        >&nbsp;Catedráticos del gran poder
-                    </p>
-                </li>
-                <li>
-                    <p class="text text--light">
-                        <span class="text--bold">Protagonistas:</span
-                        >&nbsp;Mercado tejada rectangular, mercadop
-                        villadela
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
+                    <div class="more-information__header-data">
+                        <span class="movie__format"><%# Eval("formato_contenido") %></span>
+                        <img
+                            src='<%# Eval("titulo") %>'
+                            alt=""
+                            class="movie__image"
+                        />
+                        <div class="movie__buttons">
+                            <a href="#" class="movie__button movie__button--white">
+                                <img
+                                    src="imgs/icons/play.svg"
+                                    alt="Icono reproducir"
+                                />
+                                <p>Reproducir</p>
+                            </a>
+                            <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnFavoritos_Click" ImageUrl="imgs/icons/add.svg" ID="ibtnFavoritos" runat="server" />
+                            <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnLike_Click" ImageUrl="imgs/icons/like-favorites.svg" ID="ibtnLike" runat="server" />
+                            
+                        </div>
+                        <span class="movie__detail-1"><%# Eval("gestion") %> - <%# Eval("tipo_audio") %></span>
+                       <%-- <span class="movie__detail-2">N. 1 en TV Hoy</span>--%>
+                        <p class="movie__description">
+                            <%# Eval("sinopsis") %>
+                        </p>
+                        <span class="movie__gender"><%# Eval("genero") %></span>
+                    </div>
+                    <div class="more-information__header-data">
+                        <ul>
+                            <li>
+                                <p class="text text--light">
+                                    <span class="text--bold">Director:</span
+                                    >&nbsp;<%# Eval("director") %>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text text--light">
+                                    <span class="text--bold">Productora:</span
+                                    >&nbsp;<%# Eval("productora") %>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text text--light">
+                                    <span class="text--bold">Reparto Invitado:</span
+                                    >&nbsp;<%# Eval("reparto") %>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text text--light">
+                                    <span class="text--bold">Idioma:</span
+                                    >&nbsp;<%# Eval("idioma_original") %>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </ItemTemplate>
+        </asp:Repeater>
+         
 </header>
+           
         <main
             class="main container--flex container--flex-column container--gap-big more-information__main"
         >
             <section
                 class="container--flex container--flex-column container--gap-medium more-information__section"
             >
-                <h2 class="text--large">Tr&aacute;ilers</h2>
+                <h2 class="text--large">
+                    <asp:Label ID="lblTituloTrailers" runat="server" Text="Trailers"></asp:Label></h2>
                 <div
                     class="container--flex container--flex-row container--justify-content-center container--flex-wrap"
                 >
-                    <article
-                        class="container--flex container--flex-column full-width more-information__video"
-                    >
-                        <iframe
-                            src="https://www.youtube.com/embed/6stlCkUDG_s?si=0P8VSdD7LQj7AEGS"
-                            title="Titulo"
-                            frameborder="0"
-                            allowfullscreen
-                        ></iframe>
-                        <p class="text text--center text--light">
-                            Lucha caceritas &#40;Trailer 1&#41;
-                        </p>
-                    </article>
-                    <article
-                        class="container--flex container--flex-column full-width more-information__video"
-                    >
-                        <iframe
-                            src="https://www.youtube.com/embed/6stlCkUDG_s?si=0P8VSdD7LQj7AEGS"
-                            title="Titulo"
-                            frameborder="0"
-                            allowfullscreen
-                        ></iframe>
-                        <p class="text text--center text--light">
-                            Lucha caceritas &#40;Trailer 2&#41;
-                        </p>
-                    </article>
-                    <article
-                        class="container--flex container--flex-column more-information__video"
-                    >
-                        <iframe
-                            src="https://www.youtube.com/embed/6stlCkUDG_s?si=0P8VSdD7LQj7AEGS"
-                            title="Titulo"
-                            frameborder="0"
-                            allowfullscreen
-                        ></iframe>
-                        <p class="text text--center text--light">
-                            Lucha caceritas &#40;Trailer 3&#41;
-                        </p>
-                    </article>
+                    <asp:Panel ID="Panel_trailers" class="container--flex container--flex-row container--justify-content-center container--flex-wrap" runat="server">
+                        <asp:Repeater ID="Repeater2" DataSourceID="odsTrailers" runat="server">
+                            <ItemTemplate>
+                                <article
+                                    class="container--flex container--flex-column full-width more-information__video"
+                                >
+                                    <%# Eval("contenido") %>
+                                    <%--<iframe
+                                        src='<%# Eval("contenido") %>'
+                                        title='<%# Eval("nombre_contenido_str") %>'
+                                        frameborder="0"
+                                        allowfullscreen
+                                    ></iframe>--%>
+                                    <p class="text text--center text--light">
+                                        <%# Eval("nombre_contenido_str") %>
+                                    </p>
+                                </article>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </asp:Panel>
+                    <h2 class="text--large">
+                     <asp:Label ID="lblTituloTemporadas" runat="server" Text="Temporadas"></asp:Label></h2>
+                    <asp:Panel ID="Panel_temporadas" class="container--flex container--flex-row container--justify-content-center container--flex-wrap" runat="server">
+                    <asp:Repeater ID="Repeater4" DataSourceID="odsTemporadas" runat="server">
+                        <ItemTemplate>
+                            <article
+                                class="container--flex container--flex-column full-width more-information__video"
+                            >
+                                <%# Eval("contenido") %>
+                                <%--<iframe
+                                    src='<%# Eval("contenido") %>'
+                                    title='<%# Eval("nombre_contenido_str") %>'
+                                    frameborder="0"
+                                    allowfullscreen
+                                ></iframe>--%>
+                                <p class="text text--center text--light">
+                                    <%# Eval("story_line") %>
+                                </p>
+                                  <p class="text text--center text--light">
+                                      <%# Eval("sinopsis") %>
+                                  </p>
+                            </article>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </asp:Panel>
+                
                 </div>
             </section>
-            <section
-                class="container--flex container--flex-column container--gap-medium more-information__section"
-            >
-                <h2 class="text--large text--light">
-                    Acerca de&nbsp;<span class="text--bold">Fuertes</span>
-                </h2>
-                <p class="text text--light">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Dicta eos quam eveniet nam sequi libero ullam sint, pariatur
-                    amet, officia exercitationem necessitatibus natus ipsam
-                    aspernatur quae itaque cumque! Dolor, ipsum.
-                </p>
-            </section>
+             <asp:Repeater ID="Repeater3" DataSourceID="odsContenidoInd" runat="server">
+                <ItemTemplate>
+                    <section
+                        class="container--flex container--flex-column container--gap-medium more-information__section"
+                    >
+                        <h2 class="text--large text--light">
+                            Acerca de&nbsp;<span class="text--bold"><%# Eval("nombre_contenido") %></span>
+                        </h2>
+                        <p class="text text--light">
+                            <%# Eval("story_line") %>
+                        </p>
+                    </section>
+               </ItemTemplate>
+            </asp:Repeater>
         </main>
 
         <footer class="footer playlist__footer">

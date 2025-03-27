@@ -49,7 +49,7 @@
               <div class="header__nav-buttons">
                  <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                  <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />   
-                  <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                  <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
               </div>
               <div class="header__nav-buttons">
                   <div>

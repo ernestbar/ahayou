@@ -27,7 +27,8 @@ namespace landingAhayou
                     lblUsuario.Text = Session["usuario"].ToString();
                     lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
                     lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
-
+                    lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                    lblCodContenidoStr.Text= Request.QueryString["ID"];
                     btnLogin.Visible = false;
                     btnSuscribete.Visible = false;
                     DataTable dt = new DataTable();
@@ -39,6 +40,33 @@ namespace landingAhayou
                             imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
                         }
                     }
+
+                    DataTable dt2= new DataTable();
+                    dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
+                    foreach (DataRow dr2 in dt2.Rows)
+                    {
+                        if (dr2["trailers"].ToString() == "SI")
+                        {
+                            lblTituloTrailers.Visible = true;
+                            Panel_trailers.Visible = true;
+                        }
+                        else
+                        {
+                            lblTituloTrailers.Visible = false;
+                            Panel_trailers.Visible = false;
+                        }
+                        if (dr2["temporadas_episodios"].ToString() == "SI")
+                        {
+                            lblTituloTemporadas.Visible = true;
+                            Panel_temporadas.Visible = true;
+                        }
+                        else
+                        {
+                            lblTituloTemporadas.Visible = false;
+                            Panel_temporadas.Visible = false;
+                        }
+                    }
+
                 }
 
             }
@@ -62,6 +90,22 @@ namespace landingAhayou
             Session["menu"] = id;
             Response.Redirect("cartelera.aspx");
             //Repeater2.DataBind();
+        }
+
+        protected void ibtnFavoritos_Click(object sender, ImageClickEventArgs e)
+        {
+            Carteleras obj = new Carteleras("F",lblPerfilSuscriptor.Text,lblplanSuscriptor.Text,lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text,"",lblUsuario.Text);
+            obj.ABM();
+            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+        }
+
+        protected void ibtnLike_Click(object sender, ImageClickEventArgs e)
+        {
+            Carteleras obj = new Carteleras("L", lblPerfilSuscriptor.Text, lblplanSuscriptor.Text, lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text, "", lblUsuario.Text);
+            obj.ABM();
+            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
         }
     }
 }

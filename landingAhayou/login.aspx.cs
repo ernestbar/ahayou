@@ -41,6 +41,7 @@ namespace landingAhayou
                         foreach (DataRow dr in dt.Rows)
                         {
                             Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
+                            Session["codigo_plan"] = dr["codigo_plan"];
                         }
                         Response.Redirect("perfiles.aspx");
                     }

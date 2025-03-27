@@ -35,7 +35,7 @@ namespace landingAhayou.Clases
             //RecuperarDatos();
         }
      
-         Carteleras(string pV_TIPO_OPERACION, string pV_COD_PERFIL_SUSCRIPTOR, string pV_COD_PLAN_SUSCRIPTOR,
+         public Carteleras(string pV_TIPO_OPERACION, string pV_COD_PERFIL_SUSCRIPTOR, string pV_COD_PLAN_SUSCRIPTOR,
          string pV_USUARIO_STR, int pI_CODIGO_PLAN, string pV_COD_CONTENIDO_STR, string pV_TIEMPO_VISTO,
          string pV_USUARIO)
         {

@@ -52,7 +52,7 @@
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="odsSecciones" runat="server" SelectMethod="PR_STR_GET_VER_SECCIONES_CARTELERA" TypeName="landingAhayou.Clases.Carteleras">
         <SelectParameters>
-            <asp:ControlParameter ControlID="lblUsuario1" Name="PV_USUARIO" Type="String" />
+            <asp:ControlParameter ControlID="lblUsuario" Name="PV_USUARIO" Type="String" />
             <asp:ControlParameter ControlID="lblplanSuscriptor" Name="PV_COD_PLAN_SUSCRIPTOR" Type="String" />
             <asp:ControlParameter ControlID="lblPerfilSuscriptor" Name="PV_COD_PERFIL_SUSCRIPTOR" Type="String" />
             <asp:ControlParameter ControlID="lblMenu" Name="PI_MENU" Type="String" />
@@ -60,7 +60,7 @@
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="odsMasVistos" runat="server" SelectMethod="PR_STR_GET_FAVORITOS" TypeName="landingAhayou.Clases.Carteleras">
         <SelectParameters>
-            <asp:ControlParameter ControlID="lblUsuario1" Name="PV_USUARIO" Type="String" />
+            <asp:ControlParameter ControlID="lblUsuario" Name="PV_USUARIO" Type="String" />
             <asp:ControlParameter ControlID="lblplanSuscriptor" Name="PV_COD_PLAN_SUSCRIPTOR" Type="String" />
             <asp:ControlParameter ControlID="lblPerfilSuscriptor" Name="PV_COD_PERFIL_SUSCRIPTOR" Type="String" />
             <asp:ControlParameter ControlID="lblMenu" Name="PI_MENU" Type="String" />
@@ -72,9 +72,10 @@
             </SelectParameters>
         </asp:ObjectDataSource>
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
-        <asp:Label ID="lblUsuario1" runat="server" Visible="false" Text="yisus.patata111@gmail.com"></asp:Label>
-        <asp:Label ID="lblplanSuscriptor" runat="server" Visible="false" Text="31"></asp:Label>
-        <asp:Label ID="lblPerfilSuscriptor" runat="server" Visible="false" Text="61"></asp:Label>
+        <asp:Label ID="lblUsuario1" runat="server" Visible="false" Text=""></asp:Label>
+        <asp:Label ID="lblplanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+        <asp:Label ID="lblPerfilSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+        <asp:Label ID="lblCodigoPlan" runat="server" Visible="false" Text=""></asp:Label>
         <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
          <header class="header header--main" id="header__movies">
             <nav class="header__nav">
@@ -89,7 +90,7 @@
                     
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                    <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
                 </div>
                 <div
                     class="header__nav-buttons submenu__container options__container--second"
@@ -317,8 +318,8 @@
         </header>
         <main class="main">
             <div
-                class="background container--flex container--flex-column container--justify-content-start container--align-start container--no-border-radius container--gap-big playlist__container playlist__start"
-            >
+                    class="background container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container playlist__start"
+                >
 
                    <asp:Repeater ID="Repeater2" DataSourceID="odsSecciones" OnItemDataBound="Repeater2_ItemDataBound" runat="server">
                        <ItemTemplate>
@@ -348,7 +349,7 @@
                                             <asp:Label ID="lblNro" runat="server" Visible="false" Text='<%# Eval("contenido") %>'></asp:Label>
                                                 <a
                                                     href=' <%# "mas_informacion.aspx?ID=" + Eval("codigo") %>'
-                                                    class="playlist__movie container--justify-content-start carousel__item"
+                                                    class="playlist__movie container--justify-content-center carousel__item"
                                                     >
                                                     <img
                                                         src='<%# Eval("contenido") %>'
