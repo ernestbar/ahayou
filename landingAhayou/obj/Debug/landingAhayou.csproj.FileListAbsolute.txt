@@ -89,7 +89,6 @@ C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.IO.Compression.dll
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.IO.Compression.ZipFile.dll
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.IO.FileSystem.dll
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.Net.Http.dll
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.Net.Sockets.dll
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.Reflection.Metadata.dll
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
@@ -109,14 +108,12 @@ C:\GITHUB\ahayou\landingAhayou\bin\roslyn\vbc.exe.config
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\vbc.rsp
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\VBCSCompiler.exe
 C:\GITHUB\ahayou\landingAhayou\bin\roslyn\VBCSCompiler.exe.config
-C:\GITHUB\ahayou\landingAhayou\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\GITHUB\ahayou\landingAhayou\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\landingAhayou.csproj.AssemblyReference.cache
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\landingAhayou.csproj.CoreCompileInputs.cache
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\landingA.744EE97A.Up2Date
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\WebAhayouAdmin.dll
 C:\GITHUB\ahayou\landingAhayou\obj\Debug\WebAhayouAdmin.pdb
-C:\GITHUB\ahayou\landingAhayou\bin\Newtonsoft.Json.dll
 C:\GITHUB\ahayou\landingAhayou\bin\Newtonsoft.Json.xml
 E:\ERNESTO\ahayou\landingAhayou\bin\WebAhayouAdmin.dll.config
 E:\ERNESTO\ahayou\landingAhayou\bin\WebAhayouAdmin.dll

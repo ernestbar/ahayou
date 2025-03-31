@@ -38,45 +38,39 @@
  </asp:ObjectDataSource>
          <header class="header">
                     <nav class="header__nav">
-                        <a href="home.aspx" class="header__logo">
-                            <img
-                                class="header__logo-img"
-                                src="imgs/logos/logo-ahayou.png"
-                                style="background-color:black"
-                                alt="Logo Ahayou"
-                            />
-                        </a>
-                        <div class="header__nav-buttons">
-                             <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                                <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnInicia" OnClick="btnInicia_Click" runat="server" Text="Iniciar Session" />
-                        </div>
-                        <div class="header__nav-buttons">
-                            <div>
-                                <%--<button
-                                    class="header__button header__button--icon"
-                                ></button>--%>
-                             <%--   <button
-                                    class="header__button header__button--icon"
-                                ></button>--%>
-                                <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                                <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                                <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                            </div>
-                        </div>
-                         <div class="options__container">
-                             <button class="hamburger__button" id="menuButton">
-                                   <span class="hamburger__line hamburger__line--white"></span>
-                                <span class="hamburger__line hamburger__line--white"></span>
-                                <span class="hamburger__line hamburger__line--white"></span>
-                             </button>
-                             <div class="options__menu" id="optionsMenu">
-                                 <%--<button class="options__button">Espa&ntilde;ol</button>
-                                 <button class="options__button" >Ingl&eacute;s</button>--%>
-                                  <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                                <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                             </div>
+                    <a href="home.aspx" class="header__logo">
+                        <img
+                            class="header__logo-img"
+                            src="imgs/logos/logo-ahayou.png"
+                            alt="Logo Ahayou"
+                            style="background-color:black"
+                        />
+                    </a>
+                    <div class="header__nav-buttons header__nav-buttons--with-text">
+       
+                        <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
+                        <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                        <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
+                    </div>
+                    <div class="repetitive-buttons">
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                    </div>
+                     <div class="options__container" style="background-color:black">
+                         <button class="hamburger__button" id="menuButton">
+                               <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                         </button>
+                         <div class="options__menu" id="optionsMenu">
+                             <%--<button class="options__button">Espa&ntilde;ol</button>
+                             <button class="options__button" >Ingl&eacute;s</button>--%>
+             
+                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
                          </div>
-                    </nav>
+                     </div>
+                </nav>
                 </header>
 
         <main class="main main--flex">

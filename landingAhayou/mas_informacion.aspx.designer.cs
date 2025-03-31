@@ -96,6 +96,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.ObjectDataSource odsTrailers;
 
         /// <summary>
+        /// Control odsSoloTemporadas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsSoloTemporadas;
+
+        /// <summary>
         /// Control odsTemporadas.
         /// </summary>
         /// <remarks>
@@ -240,31 +249,13 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.Repeater Repeater1;
 
         /// <summary>
-        /// Control lblTituloTrailers.
+        /// Control Panel_temporadas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTituloTrailers;
-
-        /// <summary>
-        /// Control Panel_trailers.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel_trailers;
-
-        /// <summary>
-        /// Control Repeater2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+        protected global::System.Web.UI.WebControls.Panel Panel_temporadas;
 
         /// <summary>
         /// Control lblTituloTemporadas.
@@ -276,13 +267,13 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.Label lblTituloTemporadas;
 
         /// <summary>
-        /// Control Panel_temporadas.
+        /// Control ddlSoloTemporadas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel_temporadas;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSoloTemporadas;
 
         /// <summary>
         /// Control Repeater4.
@@ -292,6 +283,33 @@ namespace landingAhayou
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Repeater4;
+
+        /// <summary>
+        /// Control Panel_trailers.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_trailers;
+
+        /// <summary>
+        /// Control lblTituloTrailers.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTituloTrailers;
+
+        /// <summary>
+        /// Control Repeater2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater2;
 
         /// <summary>
         /// Control Repeater3.

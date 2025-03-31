@@ -34,6 +34,7 @@ namespace landingAhayou
 
         protected void lbtnPerfil_Click(object sender, EventArgs e)
         {
+            
             LinkButton obj = (LinkButton)sender;
             string id = obj.CommandArgument.ToString();
             Session["usuario"] = lblUsuario.Text;
@@ -49,6 +50,26 @@ namespace landingAhayou
         protected void btnSuscribete_Click(object sender, EventArgs e)
         {
             Response.Redirect("suscribete.aspx");
+        }
+
+        protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item ||
+               e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                TextBox texto_pin = (TextBox)e.Item.FindControl("txtPin");
+                TextBox texto_pin2 = (TextBox)e.Item.FindControl("txtPin2");
+                Panel panel_pin = (Panel)e.Item.FindControl("panel_pin");
+                if (texto_pin2.Text == "0")
+                {
+                    panel_pin.Visible = false;
+                }
+                else
+                {
+                    panel_pin.Visible = true;
+                }
+
+            }
         }
     }
 }

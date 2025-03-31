@@ -19,22 +19,24 @@
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/containers.css" />
-    <link rel="stylesheet" href="css/arrow.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/header-movies.css" />
-    <link rel="stylesheet" href="css/header-options.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/hamburger.css" />
-    <link rel="stylesheet" href="css/ribbon.css" />
-    <link rel="stylesheet" href="css/playlist.css" />
-    <link rel="stylesheet" href="css/backgrounds-divs.css" />
-    <link rel="stylesheet" href="css/buttons.css" />
-    <link rel="stylesheet" href="css/carousel.css" />
-    <link rel="stylesheet" href="css/more-information.css" />
+     <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/arrow.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-movies.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
+        <link rel="stylesheet" href="css/ribbon.css" />
+        <link rel="stylesheet" href="css/playlist.css" />
+        <link rel="stylesheet" href="css/backgrounds-divs.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/carousel.css" />
+        <link rel="stylesheet" href="css/more-information.css" />
+        <link rel="stylesheet" href="css/show-list.css" />
+    <script src="https://cdn.flowplayer.com/releases/native/3/stable/default/flowplayer.js"></script>
 </head>
-<body>
+ <body class="background__black">
     <form id="form1" runat="server">
    <asp:ObjectDataSource ID="odsRotador1" runat="server" SelectMethod="PR_STR_GET_BANNER_PRINCIPAL" TypeName="landingAhayou.Clases.Contenidos">
     </asp:ObjectDataSource>
@@ -61,9 +63,16 @@
         <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
     </SelectParameters>
     </asp:ObjectDataSource>
-    <asp:ObjectDataSource ID="odsTemporadas" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_TEMPORADAS" TypeName="landingAhayou.Clases.Contenidos">
+     <asp:ObjectDataSource ID="odsSoloTemporadas" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_TEMPORADAS" TypeName="landingAhayou.Clases.Contenidos">
     <SelectParameters>
         <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
+    </SelectParameters>
+    </asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="odsTemporadas" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_POR_TEMPORADAS" TypeName="landingAhayou.Clases.Contenidos">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
+        <asp:ControlParameter ControlID="ddlSoloTemporadas" Name="PV_TEMPORADA" Type="String" />
+        
     </SelectParameters>
     </asp:ObjectDataSource>
     <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_PERFILES_SUSCRIPTOR" TypeName="landingAhayou.Clases.Suscriptores">
@@ -78,7 +87,10 @@
          <asp:Label ID="lblCodigoPlan" runat="server" Visible="false" Text=""></asp:Label>
         <asp:Label ID="lblCodContenidoStr" runat="server" Visible="false" Text=""></asp:Label>
     <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
-     <header class="header header--main" id="header__movies">
+     <header
+            class="header header--main more-information__header"
+            id="header__movies"
+        >
         <nav class="header__nav">
             <a href="home.aspx" class="header__logo">
                 <img
@@ -87,15 +99,14 @@
                     alt="Logo Ahayou"
                 />
             </a>
-            <div class="header__nav-buttons">
+             <div class="header__nav-buttons header__nav-buttons--with-text">
                 
                 <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                 <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
                 <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
             </div>
-            <div
-                class="header__nav-buttons submenu__container options__container--second"
-            >
+            <div class="header__nav-buttons header__nav-buttons--only-img">
+             <div class="submenu__container options__container--second">
                 <button
                     class="header__button header__button--with-img submenu__button"
                 >
@@ -103,8 +114,8 @@
                     <%--<img src="imgs/avatars/Avatar 12.png" alt="Perfil" />--%>
                 </button>
                 <div
-                    class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
-                >
+                            class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
+                        >
                     <div class="container--flex container--flex-column">
                         <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
                             <ItemTemplate>
@@ -178,6 +189,7 @@
                     </button>
                 </div>
             </div>
+            </div>
         </nav>
       <asp:Repeater ID="Repeater1" DataSourceID="odsContenidoInd" runat="server">
             <ItemTemplate>
@@ -201,8 +213,8 @@
                                 />
                                 <p>Reproducir</p>
                             </a>
-                            <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnFavoritos_Click" ImageUrl="imgs/icons/add.svg" ID="ibtnFavoritos" runat="server" />
-                            <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnLike_Click" ImageUrl="imgs/icons/like-favorites.svg" ID="ibtnLike" runat="server" />
+                            <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnFavoritos_Click" Width="100" ImageUrl="~/imgs/icons/add.svg" ID="ibtnFavoritos" runat="server" />
+                            <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnLike_Click" Width="100" ImageUrl="~/imgs/icons/like-favorites.svg" ID="ibtnLike" runat="server" />
                             
                         </div>
                         <span class="movie__detail-1"><%# Eval("gestion") %> - <%# Eval("tipo_audio") %></span>
@@ -247,23 +259,82 @@
 </header>
            
         <main
-            class="main container--flex container--flex-column container--gap-big more-information__main"
-        >
-            <section
-                class="container--flex container--flex-column container--gap-medium more-information__section"
-            >
-                <h2 class="text--large">
-                    <asp:Label ID="lblTituloTrailers" runat="server" Text="Trailers"></asp:Label></h2>
-                <div
-                    class="container--flex container--flex-row container--justify-content-center container--flex-wrap"
-                >
-                    <asp:Panel ID="Panel_trailers" class="container--flex container--flex-row container--justify-content-center container--flex-wrap" runat="server">
+                 class="main container--flex container--flex-column container--gap-big more-information__main"
+             >
+                <asp:Panel ID="Panel_temporadas" class="container--flex container--flex-column container--gap-medium more-information__section" runat="server">
+                    <div
+                            class="container--flex container--flex-row container--align-center container--justify-content-space-between"
+                        >
+                     <h2 class="text--large">
+                    <asp:Label ID="lblTituloTemporadas" runat="server" Text="Temporadas"></asp:Label></h2>
+                    <%--<div>
+                    <h2 class="text--large">Episodios</h2>
+                    <p class="text">
+                        Temporada 1&#58;&nbsp;
+                        <span class="text--bold"
+                            >3&#43;&nbsp;Programas</span
+                        >
+                    </p>
+                </div>--%>
+                        
+                <div>
+                    <asp:DropDownList ID="ddlSoloTemporadas" class="season__selector text text--bold" DataSourceID="odsSoloTemporadas" DataTextField="temporada" DataValueField="cod_temporada" runat="server"></asp:DropDownList>
+                    <%--<select class="season__selector text text--bold">
+                        <option value="season_1" selected>
+                            Temporada 1
+                        </option>
+                        <option value="season_2">Temporada 2</option>
+                        <option value="season_3">Temporada 3</option>
+                        <option value="season_4">Temporada 4</option>
+                        <option value="season_5">Temporada 5</option>
+                    </select>--%>
+                    </div>
+                </div>
+                    <ol class="episodes__list show__list">
+                <asp:Repeater ID="Repeater4" DataSourceID="odsTemporadas" runat="server">
+                    <ItemTemplate>
+                        <li class="episode show__element">
+                            <div class="episode__iframe">
+                                 <%# Eval("contenido") %>
+                            </div>
+                            
+                            <div class="episode__info">
+                                <div class="episode__metadata text">
+                                    <h3><%# Eval("story_line") %></h3>
+                                    <span>56 min</span>
+                                </div>
+                                <p class="episode__synopsis text">
+                                    <%# Eval("sinopsis") %>
+                                </p>
+                            </div>
+                        </li>
+            
+                    </ItemTemplate>
+                </asp:Repeater>
+                        </ol>
+                        <div class="show-more__container">
+                            <button class="show-more__button" type="button">
+                                <img src="imgs/icons/arrow-down.svg" alt="Ver mas" />
+                            </button>
+                        </div>
+            </asp:Panel>
+            
+          
+                    <asp:Panel ID="Panel_trailers" class="container--flex container--flex-column container--gap-medium more-information__section" runat="server">
+                        
+                              <h2 class="text--large">
+                                  <asp:Label ID="lblTituloTrailers" runat="server" Text="Trailers"></asp:Label></h2>
+                              <div
+                                  class="container--flex container--flex-row container--justify-content-center container--flex-wrap"
+                              >
                         <asp:Repeater ID="Repeater2" DataSourceID="odsTrailers" runat="server">
                             <ItemTemplate>
                                 <article
-                                    class="container--flex container--flex-column full-width more-information__video"
-                                >
+                                        class="container--flex container--flex-column full-width more-information__video"
+                                    >       
+                                    <div style="width:600px;height:300px" class="container--flex container--flex-column full-width more-information__video">
                                     <%# Eval("contenido") %>
+                                    </div>
                                     <%--<iframe
                                         src='<%# Eval("contenido") %>'
                                         title='<%# Eval("nombre_contenido_str") %>'
@@ -276,35 +347,11 @@
                                 </article>
                             </ItemTemplate>
                         </asp:Repeater>
+                        </div>
                     </asp:Panel>
-                    <h2 class="text--large">
-                     <asp:Label ID="lblTituloTemporadas" runat="server" Text="Temporadas"></asp:Label></h2>
-                    <asp:Panel ID="Panel_temporadas" class="container--flex container--flex-row container--justify-content-center container--flex-wrap" runat="server">
-                    <asp:Repeater ID="Repeater4" DataSourceID="odsTemporadas" runat="server">
-                        <ItemTemplate>
-                            <article
-                                class="container--flex container--flex-column full-width more-information__video"
-                            >
-                                <%# Eval("contenido") %>
-                                <%--<iframe
-                                    src='<%# Eval("contenido") %>'
-                                    title='<%# Eval("nombre_contenido_str") %>'
-                                    frameborder="0"
-                                    allowfullscreen
-                                ></iframe>--%>
-                                <p class="text text--center text--light">
-                                    <%# Eval("story_line") %>
-                                </p>
-                                  <p class="text text--center text--light">
-                                      <%# Eval("sinopsis") %>
-                                  </p>
-                            </article>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </asp:Panel>
+                   
+                    
                 
-                </div>
-            </section>
              <asp:Repeater ID="Repeater3" DataSourceID="odsContenidoInd" runat="server">
                 <ItemTemplate>
                     <section
@@ -376,9 +423,11 @@
              </footer>
     </form>
     <script src="js/show-one-bg.js"></script>
-    <script src="js/open-menu.js"></script>
-    <script src="js/open-submenu.js"></script>
-    <script src="js/header-movies-responsive.js"></script>
-    <script src="js/movie-container-hover.js"></script>
+        <script src="js/show-list.js"></script>
+        <script src="js/open-menu.js"></script>
+        <script src="js/open-submenu.js"></script>
+        <script src="js/header-movies-responsive.js"></script>
+        <script src="js/movie-container-hover.js"></script>
+     
 </body>
 </html>

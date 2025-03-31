@@ -19,7 +19,19 @@ namespace landingAhayou
                     Repeater1.DataSource = Clases.Contenidos.PR_PAR_GET_CONTENIDOS_STR(tipo);
                     Repeater1.DataBind();
                 }
-                
+                if (Session["usuario"] == null)
+                {
+                    lblUsuario.Text = "";
+                    btnLogin.Visible = true;
+                    btnSuscribete.Visible = true;
+                }
+                else
+                {
+                    lblUsuario.Text = Session["usuario"].ToString();
+                    btnLogin.Visible = false;
+                    btnSuscribete.Visible = false;
+                }
+
             }
         }
     }

@@ -91,70 +91,8 @@
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to the PWA Sample App</h1>
-    </header>
-    <main>
-        <h2>Home Page</h2>
-        <p>This is a sample Progressive Web App demonstrating the install button and offline capabilities.</p>
-    </main>
-    <footer>
-        <p>&copy; 2023 PWA Sample App</p>
-    </footer>
-
-    <!-- Install Button -->
-    <button id="install-button">
-        Install App
-    </button>
-
-    <!-- iOS Instructions -->
-    <div id="ios-instructions">
-        <p>To install this app on your iPhone or iPad:</p>
-        <ol>
-            <li>Tap the <strong>Share</strong> button in Safari.</li>
-            <li>Scroll down and select <strong>Add to Home Screen</strong>.</li>
-            <li>Follow the on-screen instructions.</li>
-        </ol>
-        <button id="ios-close-btn">
-            Got it
-        </button>
-    </div>
-    <script>
-        let deferredPrompt;
-
-        function isIOS() {
-            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-        }
-
-        if (isIOS()) {
-            const iosInstructions = document.getElementById('ios-instructions');
-            iosInstructions.style.display = 'block';
-
-            document.getElementById('ios-close-btn').addEventListener('click', () => {
-                iosInstructions.style.display = 'none';
-            });
-        }
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            document.getElementById('install-button').style.display = 'block';
-        });
-
-        document.getElementById('install-button').addEventListener('click', async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                console.log(`User response: ${outcome}`);
-                deferredPrompt = null;
-            }
-        });
-
-        window.addEventListener('appinstalled', () => {
-            console.log('PWA installed');
-            document.getElementById('install-button').style.display = 'none';
-        });
-    </script>
+   <div class="flowplayer-embed-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width:100%;">          <iframe webkitAllowFullScreen mozallowfullscreen allowfullscreen src="https://ljsp.lwcdn.com/api/video/embed.jsp?id=d30d20f7-b073-4f6f-bac4-370e1b686050&pi=cb8bd2b7-897f-4e9f-a9fd-7179f891e6b4" title="0" byline="0" portrait="0" frameborder="0" allow="autoplay" style="position: absolute; top: 0; left: 0; width: 500px; height: 300px;"></iframe>        </div>
+    
 </body>
 
 </html>

@@ -33,7 +33,8 @@ namespace landingAhayou
 				}
 				else
 				{
-                    
+                    Session["password_anterior"] = password.Text;
+
                     DataTable dt = new DataTable();
                     dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(lblUsuario.Text);
                     if (dt.Rows.Count > 0)

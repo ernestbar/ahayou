@@ -39,51 +39,44 @@
         <asp:Label ID="lblCodPlanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
       <header class="header">
           <nav class="header__nav">
-              <a href="home.aspx" class="header__logo">
-                  <img
-                      class="header__logo-img"
-                      src="imgs/logos/logo-ahayou.png"
-                      alt="Logo Ahayou"
-                  />
-              </a>
-              <div class="header__nav-buttons">
-                 <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                 <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />   
-                  <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
-              </div>
-              <div class="header__nav-buttons">
-                  <div>
-                      <%--<button
-                          class="header__button header__button--icon"
-                      ></button>--%>
-                   <%--   <button
-                          class="header__button header__button--icon"
-                      ></button>--%>
-                      <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                      <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                      
-                  </div>
-              </div>
-               <div class="options__container">
-                   <button class="hamburger__button" id="menuButton">
-                         <span class="hamburger__line hamburger__line--white"></span>
-                      <span class="hamburger__line hamburger__line--white"></span>
-                      <span class="hamburger__line hamburger__line--white"></span>
-                   </button>
-                   <div class="options__menu" id="optionsMenu">
-                       <%--<button class="options__button">Espa&ntilde;ol</button>
-                       <button class="options__button" >Ingl&eacute;s</button>--%>
-                        <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                      <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                   </div>
-               </div>
-          </nav>
+                <a href="home.aspx" class="header__logo">
+                    <img
+                        class="header__logo-img"
+                        src="imgs/logos/logo-ahayou.png"
+                        alt="Logo Ahayou"
+                    />
+                </a>
+                <div class="header__nav-buttons header__nav-buttons--with-text">
+       
+                    <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                    <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
+                </div>
+                <div class="repetitive-buttons">
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                </div>
+                 <div class="options__container">
+                     <button class="hamburger__button" id="menuButton">
+                           <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                     </button>
+                     <div class="options__menu" id="optionsMenu">
+                         <%--<button class="options__button">Espa&ntilde;ol</button>
+                         <button class="options__button" >Ingl&eacute;s</button>--%>
+             
+                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                     </div>
+                 </div>
+            </nav>
       </header>
         <main class="main main--flex">
             <section class="profiles">
                 <h1>Perfiles</h1>
                 <div class="profiles__container">
-                      <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" runat="server">
+                      <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
                         <ItemTemplate>
                             <asp:LinkButton class="profiles__item" ID="lbtnPerfil" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfil_Click" runat="server"> <img
                                      src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
@@ -91,8 +84,21 @@
                                      class="profiles__item-image"
                                  />
                                  <span class="profiles__item-text"><%# Eval("nombre_perfil") %></span>
-
+                                <asp:Panel ID="panel_pin"  class="profiles__item" runat="server">
+                                      <label
+                                          for="email"
+                                          class="form__label form__label--second"
+                                      >
+                                          Ingresa tu PIN
+                                      </label>
+                                    <asp:TextBox class="form__input form__input--dark"  ID="txtPin" Text="" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form__input form__input--dark" ReadOnly="true" Height="0" ForeColor="Black" ID="txtPin2" Visible="true"  Text='<%# Eval("pin") %>' runat="server"></asp:TextBox>
+                                     <asp:CompareValidator ID="cfvNumeroCelular" runat="server"  ControlToCompare="txtPin2" ControlToValidate="txtPin" Operator="Equal" Type="Integer" Display="Dynamic" ErrorMessage="* PIN incorrecto." ></asp:CompareValidator>
+                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Orange" ControlToValidate="txtPin" ErrorMessage="* Debes ingresar tu pin"></asp:RequiredFieldValidator>
+                                </asp:Panel>
                             </asp:LinkButton>
+                            
+                              
 <%--                            <button class="profiles__item">
                                     <img
                                         src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'

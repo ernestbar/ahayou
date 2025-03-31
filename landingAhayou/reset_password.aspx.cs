@@ -16,14 +16,14 @@ namespace landingAhayou
                 lblEmail.Text = Session["email"].ToString();
             }
         }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
         protected void btnSuscribete_Click(object sender, EventArgs e)
         {
             Response.Redirect("suscribete.aspx");
-        }
-
-        protected void btnInicia_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("login.aspx");
         }
 
         protected void btnReset_Click(object sender, EventArgs e)

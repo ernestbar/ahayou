@@ -25,7 +25,6 @@
         <link rel="stylesheet" href="css/vanilla-page.css" />
         <link rel="stylesheet" href="css/default-background.css" />
         <link rel="stylesheet" href="css/containers.css" />
-        <link rel="stylesheet" href="css/check.css" />
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/buttons.css" />
         <link rel="stylesheet" href="css/hamburger.css" />
@@ -51,22 +50,15 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons">
-                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                        <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnInicia" OnClick="btnInicia_Click" runat="server" Text="Iniciar Session" />
+                <div class="header__nav-buttons header__nav-buttons--with-text">
+       
+                    <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                    <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="header__nav-buttons">
-                    <div>
-                        <%--<button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                     <%--   <button
-                            class="header__button header__button--icon"
-                        ></button>--%>
+                <div class="repetitive-buttons">
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                        <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                    </div>
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -77,14 +69,15 @@
                      <div class="options__menu" id="optionsMenu">
                          <%--<button class="options__button">Espa&ntilde;ol</button>
                          <button class="options__button" >Ingl&eacute;s</button>--%>
+             
                           <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                         <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
                      </div>
                  </div>
             </nav>
         </header>
-        <main class="main main--flex plans-selection__width">
-            <section
+        <main class="main main--flex">
+             <section
                 class="container--flex container--flex-column full-width plans-selection full-height"
             >
                 <span class="text text--light text--center full-width">
@@ -92,7 +85,7 @@
                 </span>
                 <h1>Selecciona el plan ideal para ti</h1>
                 <div
-                    class="plans-selection__list plans__list--second full-width"
+                    class="plans-selection__list container--flex-wrap container--flex container--justify-content-center"
                 >
                 <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
                     <ItemTemplate>

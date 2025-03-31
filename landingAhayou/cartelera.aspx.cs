@@ -104,7 +104,7 @@ namespace landingAhayou
                         {
                             panel1.Visible = true;
                             Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
-                            rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
+                            rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
                             rSegmentos.DataBind();
                         }
                     
@@ -136,7 +136,7 @@ namespace landingAhayou
                             panel1.Visible = true;
                             //panel2.Visible = true;
                             Repeater rSegmentos2 = (Repeater)e.Item.FindControl("Repeater3");
-                            rSegmentos2.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
+                            rSegmentos2.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
                             rSegmentos2.DataBind();
                         }
                         else
@@ -164,6 +164,12 @@ namespace landingAhayou
             string id = obj.CommandArgument.ToString();
             lblMenu.Text = id;
             Repeater2.DataBind();
+        }
+
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("home.aspx");
         }
     }
 }

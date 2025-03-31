@@ -57,6 +57,89 @@
     height: 250px;
 }
 
+/*
+    Component: Season selector
+
+    Description: These are styles for the select component
+    of seasons in more-information.html
+*/
+
+.season__selector {
+    padding: 5px 10px;
+    background-color: var(--color-dark-2);
+}
+
+.season__selector > option {
+    color: var(--color-white);
+}
+
+.season__selector option:hover {
+    cursor: pointer;
+}
+
+/*
+    Component: Episodes list
+
+    Description: These are styles for the episodes list
+    and its items, like figures, texts and others.
+*/
+
+.episodes__list {
+    width: 100%;
+    list-style: decimal !important;
+    counter-reset: episode-counter;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.episode {
+    counter-increment: episode-counter;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--color-white-border);
+    height: 225px;
+    padding-bottom: 25px;
+}
+
+.episode::before {
+    content: counter(episode-counter);
+    font-size: 1.75em;
+}
+
+.episode__iframe {
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.episode__info {
+    height: 100%;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.episode__metadata {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.episode__metadata > span {
+    text-align: right;
+}
+
+.episode__synopsis {
+    font-weight: 500;
+}
+
 .footer {
     margin-bottom: 24px;
     margin: 0 auto;
@@ -68,6 +151,24 @@
     Description: Media queries that change styles from
     the more-information.html page and its children component.
 */
+
+@media (max-width: 1500px) {
+    .episode__info {
+        flex: 2;
+    }
+}
+
+@media (max-width: 1030px) {
+    .episode {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .episode__iframe {
+        height: clamp(250px, 50vw, 350px);
+        flex-basis: unset;
+    }
+}
 
 @media (max-width: 800px) {
     .more-information__header-content {

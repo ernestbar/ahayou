@@ -20,52 +20,59 @@ namespace landingAhayou
                     lblUsuario.Text = "";
                     btnLogin.Visible = true;
                     btnSuscribete.Visible = true;
+                    Response.Redirect("login.aspx");
 
                 }
                 else
                 {
-                    lblUsuario.Text = Session["usuario"].ToString();
-                    lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
-                    lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
-                    lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-                    lblCodContenidoStr.Text= Request.QueryString["ID"];
-                    btnLogin.Visible = false;
-                    btnSuscribete.Visible = false;
-                    DataTable dt = new DataTable();
-                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-                    foreach (DataRow dr in dt.Rows)
+                    if (Session["cod_plan_suscriptor"] == null)
+                        Response.Redirect("selecciona_plan.aspx");
+                    else 
                     {
-                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                        lblCodContenidoStr.Text = Request.QueryString["ID"];
+                        btnLogin.Visible = false;
+                        btnSuscribete.Visible = false;
+                        DataTable dt = new DataTable();
+                        dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                        foreach (DataRow dr in dt.Rows)
                         {
-                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            }
                         }
-                    }
 
-                    DataTable dt2= new DataTable();
-                    dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
-                    foreach (DataRow dr2 in dt2.Rows)
-                    {
-                        if (dr2["trailers"].ToString() == "SI")
+                        DataTable dt2 = new DataTable();
+                        dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
+                        foreach (DataRow dr2 in dt2.Rows)
                         {
-                            lblTituloTrailers.Visible = true;
-                            Panel_trailers.Visible = true;
-                        }
-                        else
-                        {
-                            lblTituloTrailers.Visible = false;
-                            Panel_trailers.Visible = false;
-                        }
-                        if (dr2["temporadas_episodios"].ToString() == "SI")
-                        {
-                            lblTituloTemporadas.Visible = true;
-                            Panel_temporadas.Visible = true;
-                        }
-                        else
-                        {
-                            lblTituloTemporadas.Visible = false;
-                            Panel_temporadas.Visible = false;
+                            if (dr2["trailers"].ToString() == "SI")
+                            {
+                                lblTituloTrailers.Visible = true;
+                                Panel_trailers.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTrailers.Visible = false;
+                                Panel_trailers.Visible = false;
+                            }
+                            if (dr2["temporadas_episodios"].ToString() == "SI")
+                            {
+                                lblTituloTemporadas.Visible = true;
+                                Panel_temporadas.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTemporadas.Visible = false;
+                                Panel_temporadas.Visible = false;
+                            }
                         }
                     }
+                    
 
                 }
 

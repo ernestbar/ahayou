@@ -95,12 +95,12 @@
                 <div
                     class="header__nav-buttons submenu__container options__container--second"
                 >
-                    <button
+                    <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
+                    <%--<button
                         class="header__button header__button--with-img submenu__button"
                     >
                         <asp:Image class="header__button header__button--with-img submenu__button"  ID="imgPerfil" runat="server"  />
-                        <%--<img src="imgs/avatars/Avatar 12.png" alt="Perfil" />--%>
-                    </button>
+                    </button>--%>
                     <div
                         class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
                     >
@@ -170,11 +170,8 @@
                              <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
                          </ItemTemplate>
                      </asp:Repeater>
-                        <button
-                            class="options__button--last text--light text--center text--small"
-                        >
-                            Cerrar sesi&oacute;n
-                        </button>
+                        <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
+                        
                     </div>
                 </div>
               <%--  <div class="header__nav-buttons">

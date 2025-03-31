@@ -20,14 +20,13 @@
     href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet"
 />
-<link rel="stylesheet" href="css/common/main.css" />
+        <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/containers.css" />
         <link rel="stylesheet" href="css/arrow.css" />
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/new-releases.css" />
         <link rel="stylesheet" href="css/plans.css" />
         <link rel="stylesheet" href="css/web-app-section.css" />
-        <link rel="stylesheet" href="css/forms.css" />
         <link rel="stylesheet" href="css/frequent-questions.css" />
         <link rel="stylesheet" href="css/header-movies.css" />
         <link rel="stylesheet" href="css/forms.css" />
@@ -79,23 +78,15 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons">
+                <div class="header__nav-buttons header__nav-buttons--with-text">
                    
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                    <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="header__nav-buttons">
-                    <div>
-                        <%--<button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                     <%--   <button
-                            class="header__button header__button--icon"
-                        ></button>--%>
+                <div class="repetitive-buttons">
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                    </div>
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -150,7 +141,28 @@
                                                  alt='<%# Eval("nombre_contenido") %>'
                                                  class="movie__image"
                                              />
-                                             
+                                              <div class="movie__buttons">
+                                                         <a
+                                                             href="#"
+                                                             class="movie__button movie__button--white"
+                                                         >
+                                                             <img
+                                                                 src="imgs/icons/play.svg"
+                                                                 alt="Icono reproducir"
+                                                             />
+                                                             <p>Reproducir</p>
+                                                         </a>
+                                                         <a
+                                                             href=' <%# "mas_informacion.aspx?ID=" + Eval("cod_contenido_str") %>'
+                                                             class="movie__button movie__button--gray"
+                                                         >
+                                                             <img
+                                                                 src="imgs/icons/help-center.svg"
+                                                                 alt="Icono mas informacion"
+                                                             />
+                                                             <p>M&aacute;s informaci&oacute;n</p>
+                                                         </a>
+                                                     </div>
                                                  </div>
                                              <div>
                                              <span class="movie__detail-1">
@@ -174,6 +186,7 @@
                                                 alt='<%# Eval("nombre_contenido") %>'
                                             />
                                             <h3 class="movie__title--small"><%# Eval("nombre_contenido") %></h3>
+                                               
                                            <ul class="movie__data--small">
                                                 <li class="movie__data-item--small">
                                                     <%# Eval("genero") %>
@@ -188,6 +201,7 @@
                                                     <%# Eval("formato_contenido") %>
                                                 </li>
                                             </ul>
+                                              
                                         </div>
                                    </asp:Panel>
          
