@@ -48,6 +48,8 @@ namespace AhayouWebAPI.Controllers
                 oUsuario = (from DataRow dr in dt.Rows
                             select new Planes()
                             {
+                                codigo_plan =Int64.Parse(dr["codigo_plan"].ToString()),
+                                cant_perfiles = Int64.Parse(dr["cant_perfil"].ToString()),
                                 plan = (string)dr["PLANES"],
                                 plan_ingles = (string)dr["PLAN_INGLES"],
                                 moneda = (string)dr["MONEDA"],

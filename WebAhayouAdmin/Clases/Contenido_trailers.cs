@@ -20,6 +20,8 @@ namespace WebAhayouAdmin.Clases
         public string PV_COD_CONTENIDO_STR { get; set; }
         public string PV_NOMBRE_CONTENIDO_STR { get; set; }
         public string PV_CONTENIDO { get; set; }
+
+        public string PV_CONTENIDO_MOBILE { get; set; }
         public int PI_ORDEN { get; set; }
         public string PV_USUARIO { get; set; }
         public string PV_ESTADOPR { get; set; }
@@ -35,13 +37,14 @@ namespace WebAhayouAdmin.Clases
         }
         public Contenido_trailers(string pV_TIPO_OPERACION, int pI_COD_CONTENIDO_PELICULA,
          string pV_COD_CONTENIDO_STR, string pV_NOMBRE_CONTENIDO_STR, string pV_CONTENIDO,
-         int pI_ORDEN, string pV_USUARIO)
+         int pI_ORDEN, string pV_USUARIO,string pV_CONTENIDO_MOBILE)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PI_COD_CONTENIDO_PELICULA = pI_COD_CONTENIDO_PELICULA;
             PV_COD_CONTENIDO_STR = pV_COD_CONTENIDO_STR;
             PV_NOMBRE_CONTENIDO_STR = pV_NOMBRE_CONTENIDO_STR;
             PV_CONTENIDO = pV_CONTENIDO;
+            PV_CONTENIDO_MOBILE = pV_CONTENIDO_MOBILE;
             PI_ORDEN = pI_ORDEN;    
             PV_USUARIO = pV_USUARIO;
         }
@@ -117,6 +120,7 @@ namespace WebAhayouAdmin.Clases
                             PV_COD_CONTENIDO_STR = (string)dr["cod_contenido_str"];
                             PV_NOMBRE_CONTENIDO_STR = (string)dr["nombre_contenido_str"];
                             PV_CONTENIDO = (string)dr["contenido"];
+                            PV_CONTENIDO_MOBILE = (string)dr["contenido_mobile"];
                             PI_ORDEN = int.Parse(dr["orden"].ToString());
                         }
 
@@ -144,6 +148,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PV_COD_CONTENIDO_STR", PV_COD_CONTENIDO_STR);
                     cmd.Parameters.AddWithValue("PV_NOMBRE_CONTENIDO_STR", PV_NOMBRE_CONTENIDO_STR);
                     cmd.Parameters.AddWithValue("PV_CONTENIDO", PV_CONTENIDO);
+                    cmd.Parameters.AddWithValue("PV_CONTENIDO_MOBILE", PV_CONTENIDO_MOBILE);
                     cmd.Parameters.AddWithValue("PI_ORDEN", PI_ORDEN);
                     cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;

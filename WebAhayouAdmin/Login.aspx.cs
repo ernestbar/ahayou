@@ -13,6 +13,11 @@ namespace WebAhayouAdmin
         {
             if (!Page.IsPostBack) 
             {
+                if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+                {
+                    txtEmail.Text = Request.Cookies["UserName"].Value;
+                    txtPassword.Attributes["value"] = Request.Cookies["Password"].Value;
+                }
                 txtEmail.Focus();
             }
         }
@@ -23,6 +28,19 @@ namespace WebAhayouAdmin
             obj.INGRESAR();
             if (obj.PV_DESCRIPCIONPR == "Login correcto")
             {
+                if (rememberMe.Checked)
+                {
+                    Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(30);
+                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
+                }
+                else
+                {
+                    Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+                }
+                Response.Cookies["UserName"].Value = txtEmail.Text.Trim();
+                Response.Cookies["Password"].Value = txtPassword.Text.Trim();
+
                 Session["usuario"]=txtEmail.Text;
                 Response.Redirect("Dashboard.aspx");
             }

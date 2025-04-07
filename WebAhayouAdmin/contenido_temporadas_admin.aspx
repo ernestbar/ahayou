@@ -122,6 +122,7 @@
 																	<th class="text-nowrap">TIEMPO HORA</th>
 																	<th class="text-nowrap">TIEMPO MIN</th>
 																	<th class="text-nowrap">CONTENIDO</th>
+																	<th class="text-nowrap">CONTENIDO MOBILE</th>
 													<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 													</tr>
@@ -138,6 +139,7 @@
 														<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("TIEMPO_HORA") %>'></asp:Label></td>
 														<td><asp:Label ID="Label2" runat="server" Text='<%# Eval("TIEMPO_MINUTOS") %>'></asp:Label></td>
 														<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>
+														<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("CONTENIDO_MOBILE") %>'></asp:Label></td>
 																	
 																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
 													<td>
@@ -303,7 +305,16 @@
 											<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtContenido" Font-Bold="True"></asp:RequiredFieldValidator>
 										</div>
 								</div>
-								<!-- end form-group row -->									
+								<!-- end form-group row -->	
+							<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+								<label class="col-md-3 text-md-right col-form-label">URL del contenido mobile:</label>
+									<div class="col-md-6">
+										<asp:TextBox ID="txtContenidoMobile" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+										<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtContenidoMobile" Font-Bold="True"></asp:RequiredFieldValidator>
+									</div>
+				</div>
+				<!-- end form-group row -->	
 						</div>
 					</div>
 				</div>
@@ -524,6 +535,43 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="col-xl-4 col-md-6">
+				<div class="card p-4 border-0 h-100 rounded-5">
+					<div class="d-flex align-items-center mb-3">
+						<%--<img src="../assets/img/user/user-5.jpg" class="rounded-circle me-3 w-50px" alt="Client 1">--%>
+						<div>
+							<h5 class="mb-0">Contenido mobile:</h5>
+							<%--<small class="text-muted">CEO, Company</small>--%>
+						</div>
+					</div>
+					<div class="mb-4 d-flex">
+						<i class="fa fa-quote-left fa-2x text-body text-opacity-15"></i>
+						<div class="p-3 fs-5">
+							<div class="text-warning d-flex mb-2">
+								<%--<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
+								<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
+								<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
+								<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
+								<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>--%>
+							</div>
+							<table id="data-table" width="100%" class="table table-striped table-bordered align-middle text-nowrap" style="background-color:white;">
+								<thead>
+									<tr>
+										<th style="width:400px"><asp:Label ID="lblContenidoMobile" runat="server" Text=""></asp:Label> </th>
+										</tr>
+									</thead>
+								
+						</table>
+							
+						</div>
+						<div class="d-flex align-items-end">
+							<i class="fa fa-quote-right fa-2x text-body text-opacity-15"></i>
+						</div>
+					</div>
+				</div>
+</div>
+
 				</div>
 			</div>
 		</div>

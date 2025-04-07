@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="css/hamburger.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btnLogin">
           <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
           </asp:ObjectDataSource>
           <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_AVATARES" TypeName="landingAhayou.Clases.Avatares">
@@ -156,18 +156,20 @@
                             <div
                                 class="form__input-container form__input-container--checkbox"
                             >
-                                <input
+                               <asp:CheckBox ID="cbRecuerdame" class="form__input" Font-Size="X-Large" Text="Recordarme este dispositivo" runat="server" />
+                               <%-- <input
                                     type="checkbox"
                                     name="remember"
                                     id="remember"
                                     class="form__input form__checkbox"
                                 />
-                                <label
+                                 --%>
+                                <%--<label
                                     for="remember"
                                     class="form__label form__label--second"
                                 >
                                     Recordarme este dispositivo
-                                </label>
+                                </label>--%>
                             </div>
                         </form>
                         <p class="login-footer__text">

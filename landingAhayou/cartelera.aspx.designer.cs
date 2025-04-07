@@ -159,6 +159,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.Label lblMenu;
 
         /// <summary>
+        /// Control Panel_logout.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_logout;
+
+        /// <summary>
         /// Control btnSuscribete.
         /// </summary>
         /// <remarks>
@@ -184,6 +193,15 @@ namespace landingAhayou
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUsuario;
+
+        /// <summary>
+        /// Control Panel_login.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_login;
 
         /// <summary>
         /// Control imgPerfil.

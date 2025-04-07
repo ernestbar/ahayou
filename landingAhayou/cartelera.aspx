@@ -86,15 +86,30 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons">
-                    
+                <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
                     <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
-                </div>
-                <div
-                    class="header__nav-buttons submenu__container options__container--second"
-                >
+                    <div class="repetitive-buttons">
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                    </div>
+                     <div class="options__container">
+                         <button class="hamburger__button" id="menuButton">
+                               <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                         </button>
+                         <div class="options__menu" id="optionsMenu">
+                             <%--<button class="options__button">Espa&ntilde;ol</button>
+                             <button class="options__button" >Ingl&eacute;s</button>--%>
+         
+                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                         </div>
+                     </div>
+                </asp:Panel>
+                <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
                     <%--<button
                         class="header__button header__button--with-img submenu__button"
@@ -107,17 +122,19 @@
                         <div class="container--flex container--flex-column">
                             <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
                                 <ItemTemplate>
-                                     <a href="#" class="options__button--flex">
+                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfiles_Click" runat="server">
                                          <img
                                              src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                              alt="Foto perfil"
                                          />
                                          <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
-                                     </a>
+
+                                    </asp:LinkButton>
+                                     
                                 </ItemTemplate>
                             </asp:Repeater>
-                           
-                            
+       
+        
                             <a href="#" class="options__button--flex">
                                 <img
                                     src="imgs/icons/administration.svg"
@@ -164,33 +181,16 @@
                                 </p>
                             </a>
                         </div>
-                        
+    
                         <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">
                          <ItemTemplate>
                              <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
                          </ItemTemplate>
                      </asp:Repeater>
                         <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
-                        
+    
                     </div>
-                </div>
-              <%--  <div class="header__nav-buttons">
-                    <div>
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                    </div>
-                </div>--%>
-                 <%--<div class="options__container">
-                     <button class="hamburger__button" id="menuButton">
-                           <span class="hamburger__line hamburger__line--white"></span>
-                        <span class="hamburger__line hamburger__line--white"></span>
-                        <span class="hamburger__line hamburger__line--white"></span>
-                     </button>
-                     <div class="options__menu" id="optionsMenu">
-                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                     </div>
-                 </div>--%>
+                </asp:Panel>
             </nav>
             <section class="header__main-content carousel">
                 <div class="header__items-container">
@@ -231,8 +231,15 @@
                                                  class="movie__image"
                                              />
                                                 <div class="movie__buttons">
-                                                    <a
-                                                        href="#"
+                                                    <asp:LinkButton ID="lbtnReproducir" CommandArgument='<%# Eval("cod_contenido_str") %>' OnClick="lbtnReproducir_Click" class="movie__button movie__button--white" runat="server">
+                                                         <img
+                                                             src="imgs/icons/play.svg"
+                                                             alt="Icono reproducir"
+                                                         />
+                                                         <p>Reproducir</p>
+                                                    </asp:LinkButton>
+                                                    <%--<a
+                                                        href=' <%# "ver_streaming.aspx?ID=" + Eval("cod_contenido_str") %>'
                                                         class="movie__button movie__button--white"
                                                     >
                                                         <img
@@ -240,7 +247,7 @@
                                                             alt="Icono reproducir"
                                                         />
                                                         <p>Reproducir</p>
-                                                    </a>
+                                                    </a>--%>
                                                     <a
                                                         href=' <%# "mas_informacion.aspx?ID=" + Eval("cod_contenido_str") %>'
                                                         class="movie__button movie__button--gray"

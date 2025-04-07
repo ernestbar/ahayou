@@ -15,8 +15,12 @@ namespace landingAhayou
 		{
 			if (!Page.IsPostBack)
 			{
-				//MultiView1.ActiveViewIndex = 0;
-			}
+                if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+                {
+                    email.Text = Request.Cookies["UserName"].Value;
+                    password.Attributes["value"] = Request.Cookies["Password"].Value;
+                }
+            }
 		}
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -33,16 +37,32 @@ namespace landingAhayou
 				}
 				else
 				{
+                    if (cbRecuerdame.Checked)
+                    {
+                        Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(30);
+                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
+                    }
+                    else
+                    {
+                        Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+                    }
+                    Response.Cookies["UserName"].Value = email.Text.Trim();
+                    Response.Cookies["Password"].Value = password.Text.Trim();
                     Session["password_anterior"] = password.Text;
 
                     DataTable dt = new DataTable();
                     dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(lblUsuario.Text);
                     if (dt.Rows.Count > 0)
                     {
+                        //Response.Cookies["cod_plan_susucriptor"].Expires = DateTime.Now.AddDays(30);
+                        //Response.Cookies["codigo_plan"].Expires = DateTime.Now.AddDays(30);
                         foreach (DataRow dr in dt.Rows)
                         {
                             Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
                             Session["codigo_plan"] = dr["codigo_plan"];
+                            //Response.Cookies["cod_plan_susucriptor"].Value = dr["cod_plan_suscriptor"].ToString();
+                            //Response.Cookies["codigo_plan"].Value = dr["codigo_plan"].ToString();
                         }
                         Response.Redirect("perfiles.aspx");
                     }

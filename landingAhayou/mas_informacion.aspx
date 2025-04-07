@@ -63,7 +63,7 @@
         <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
     </SelectParameters>
     </asp:ObjectDataSource>
-     <asp:ObjectDataSource ID="odsSoloTemporadas" runat="server" SelectMethod="PR_STR_GET_CONTENIDO_TEMPORADAS" TypeName="landingAhayou.Clases.Contenidos">
+     <asp:ObjectDataSource ID="odsSoloTemporadas" runat="server" SelectMethod="PR_STR_GET_LISTADO_TEMPORADAS" TypeName="landingAhayou.Clases.Contenidos">
     <SelectParameters>
         <asp:ControlParameter ControlID="lblCodContenidoStr" Name="PV_COD_CONTENIDO_STR" Type="String" />
     </SelectParameters>
@@ -92,7 +92,7 @@
             id="header__movies"
         >
         <nav class="header__nav">
-            <a href="home.aspx" class="header__logo">
+            <a href="cartelera.aspx" class="header__logo">
                 <img
                     class="header__logo-img"
                     src="imgs/logos/logo-ahayou.png"
@@ -182,11 +182,12 @@
                          <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
                      </ItemTemplate>
                  </asp:Repeater>
-                    <button
+                     <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
+                   <%-- <button
                         class="options__button--last text--light text--center text--small"
                     >
                         Cerrar sesi&oacute;n
-                    </button>
+                    </button>--%>
                 </div>
             </div>
             </div>
@@ -206,13 +207,13 @@
                             class="movie__image"
                         />
                         <div class="movie__buttons">
-                            <a href="#" class="movie__button movie__button--white">
-                                <img
-                                    src="imgs/icons/play.svg"
-                                    alt="Icono reproducir"
-                                />
-                                <p>Reproducir</p>
-                            </a>
+                             <asp:LinkButton ID="lbtnReproducir" CommandArgument='<%# Eval("cod_contenido_str") %>' OnClick="lbtnReproducir_Click" class="movie__button movie__button--white" runat="server">
+                                  <img
+                                      src="imgs/icons/play.svg"
+                                      alt="Icono reproducir"
+                                  />
+                                  <p>Reproducir</p>
+                             </asp:LinkButton>
                             <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnFavoritos_Click" Width="100" ImageUrl="~/imgs/icons/add.svg" ID="ibtnFavoritos" runat="server" />
                             <asp:ImageButton class="movie__button movie__button--only-icon movie__button--black" OnClick="ibtnLike_Click" Width="100" ImageUrl="~/imgs/icons/like-favorites.svg" ID="ibtnLike" runat="server" />
                             
@@ -294,10 +295,23 @@
                 <asp:Repeater ID="Repeater4" DataSourceID="odsTemporadas" runat="server">
                     <ItemTemplate>
                         <li class="episode show__element">
-                            <div class="episode__iframe">
-                                 <%# Eval("contenido") %>
-                            </div>
-                            
+                           
+                            <%--<iframe runat="server" id="ifrmTemp"
+                                src='<%# Eval("contenido_mobile") %>'
+                                 title=""
+                                frameborder="0"
+                                autoplay="0"
+                               allowfullscreen="1"
+                                
+                            ></iframe>--%>
+                            <iframe
+                                src='<%# Eval("contenido_mobile") %>'
+                                class="episode__iframe iframe__video"
+                                title="Titulo"
+                                frameborder="0"
+                                allowfullscreen
+                                allow="autoplay 'none'" autoplay="0" autostart="false"
+                            ></iframe>
                             <div class="episode__info">
                                 <div class="episode__metadata text">
                                     <h3><%# Eval("story_line") %></h3>
@@ -307,6 +321,13 @@
                                     <%# Eval("sinopsis") %>
                                 </p>
                             </div>
+                            <asp:LinkButton ID="lbtnReproducirT" CommandArgument='<%# Eval("contenido_mobile") %>' OnClick="lbtnReproducirT_Click" class="movie__button movie__button--white" runat="server">
+                                 <img
+                                     src="imgs/icons/play.svg"
+                                     alt="Icono reproducir"
+                                 />
+                                 <p>Reproducir</p>
+                            </asp:LinkButton>
                         </li>
             
                     </ItemTemplate>
@@ -332,15 +353,16 @@
                                 <article
                                         class="container--flex container--flex-column full-width more-information__video"
                                     >       
-                                    <div style="width:600px;height:300px" class="container--flex container--flex-column full-width more-information__video">
+                                    <%--<div style="width:600px;height:300px" class="container--flex container--flex-column full-width more-information__video">
                                     <%# Eval("contenido") %>
-                                    </div>
-                                    <%--<iframe
-                                        src='<%# Eval("contenido") %>'
+                                    </div>--%>
+
+                                    <iframe
+                                        src='<%# Eval("contenido_mobile") %>'
                                         title='<%# Eval("nombre_contenido_str") %>'
                                         frameborder="0"
                                         allowfullscreen
-                                    ></iframe>--%>
+                                    ></iframe>
                                     <p class="text text--center text--light">
                                         <%# Eval("nombre_contenido_str") %>
                                     </p>
@@ -428,6 +450,7 @@
         <script src="js/open-submenu.js"></script>
         <script src="js/header-movies-responsive.js"></script>
         <script src="js/movie-container-hover.js"></script>
-     
+        <script src="js/stop-autoplay.js"></script>
+    
 </body>
 </html>

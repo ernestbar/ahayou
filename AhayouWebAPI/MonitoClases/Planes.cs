@@ -8,6 +8,8 @@ namespace AhayouClases
 {
     public class Planes
     {
+        public Int64 codigo_plan { get; set; }
+        public Int64 cant_perfiles { get; set; }
         public decimal monto { get; set; }
         public string pago_mes { get; set; }
         public string pago_mes_ingles { get; set; }

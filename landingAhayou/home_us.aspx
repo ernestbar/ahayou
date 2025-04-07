@@ -236,7 +236,8 @@
                 <div class="plans__list">
                      <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
 	                    <ItemTemplate>
-                            <a href="#" class="plans__item">
+                            <asp:LinkButton ID="lbtnSeleccionPlan" CommandArgument='<%# Eval("url_pasarela") %>' OnClick="lbtnSeleccionPlan_Click" class="plans__item" runat="server">
+                               <%-- <a href="#" class="plans__item">--%>
                                 <div class="plans__item--type-2">
                                    <div class="plans__item-content container-common">
                                         <div
@@ -263,7 +264,10 @@
                                 <div class="plans__item-footer">
                                     <p><%# Eval("ahorro_mes") %></p>
                                 </div>
-                            </a>
+                           <%-- </a>--%>
+
+                            </asp:LinkButton>
+                            
 	                    </ItemTemplate>
                      </asp:Repeater>
                 </div>

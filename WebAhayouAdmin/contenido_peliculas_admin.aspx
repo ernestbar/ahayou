@@ -113,6 +113,7 @@
 													<tr>
 													<th class="text-wrap">NOMBRE CONTENIDO</th>
 																	<th class="text-nowrap">CONTENIDO</th>
+														<th class="text-nowrap">CONTENIDO MOBILE</th>
 													<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 													</tr>
@@ -125,6 +126,7 @@
 													<%--<td><asp:Image ID="Image1" Height="50px" runat="server" ImageUrl='<%# @"Logos\" + Eval("CLI_ID_CLIENTE") + @"\" +  Eval("CLI_LOGO") %>' /></td>--%>
 													<td><asp:Label ID="lblEsPrincipal1" runat="server" Text='<%# Eval("NOMBRE_CONTENIDO_STR") %>'></asp:Label></td>
 														<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>
+														<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("CONTENIDO_MOBILE") %>'></asp:Label></td>
 																	
 																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
 													<td>
@@ -178,7 +180,16 @@
 										<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtContenido" Font-Bold="True"></asp:RequiredFieldValidator>
 									</div>
 								</div>
-							<!-- end form-group row -->				
+							<!-- end form-group row -->		
+											<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+								<label class="col-md-3 text-md-right col-form-label">URL del contenido mobile:</label>
+								<div class="col-md-6">
+									<asp:TextBox ID="txtContenidoMobile" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+									<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtContenidoMobile" Font-Bold="True"></asp:RequiredFieldValidator>
+								</div>
+				</div>
+<!-- end form-group row -->		
 								
 								
 						</div>

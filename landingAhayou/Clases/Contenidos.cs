@@ -176,7 +176,90 @@ namespace landingAhayou.Clases
             }
 
         }
+
+        public static DataTable PR_STR_GET_CONTENIDO_PELICULA_IND(string PV_COD_CONTENIDO_STR)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_STR_GET_CONTENIDO_PELICULA_IND";
+                    cmd.Parameters.AddWithValue("PI_COD_CONTENIDO_PELICULA", PV_COD_CONTENIDO_STR);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+        public static DataTable PR_STR_GET_CONTENIDO_PELICULA(string PV_COD_CONTENIDO_STR)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_STR_GET_CONTENIDO_PELICULA";
+                    cmd.Parameters.AddWithValue("PV_COD_CONTENIDO_STR", PV_COD_CONTENIDO_STR);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+            
+        }
         public static DataTable PR_STR_GET_CONTENIDO_TEMPORADAS(string PV_COD_CONTENIDO_STR)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_STR_GET_CONTENIDO_TEMPORADAS";
+                    cmd.Parameters.AddWithValue("PV_COD_CONTENIDO_STR", PV_COD_CONTENIDO_STR);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+
+        public static DataTable PR_STR_GET_LISTADO_TEMPORADAS(string PV_COD_CONTENIDO_STR)
         {
             try
             {
@@ -203,8 +286,6 @@ namespace landingAhayou.Clases
             }
 
         }
-       
-
         public static DataTable PR_STR_GET_CONTENIDO_POR_TEMPORADAS(string PV_COD_CONTENIDO_STR,string PV_TEMPORADA)
         {
             try

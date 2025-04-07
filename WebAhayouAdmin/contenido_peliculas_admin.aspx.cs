@@ -55,7 +55,7 @@ namespace WebAhayouAdmin
             lblAviso.Text = "";
             lblCodigo.Text = "";
             txtContenido.Text = "";
-
+            txtContenidoMobile.Text = "";
             //txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
         }
         protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -91,7 +91,7 @@ namespace WebAhayouAdmin
                 if (lblCodigo.Text == "")
                 {
                     Clases.Contenido_peliculas obj = new Clases.Contenido_peliculas("I", 0, lblCodContenidoSTR.Text,txtNombreContenido.Text,
-                        txtContenido.Text, lblUsuario.Text);
+                        txtContenido.Text, lblUsuario.Text,txtContenidoMobile.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -101,7 +101,7 @@ namespace WebAhayouAdmin
                 {
 
                     Clases.Contenido_peliculas obj = new Clases.Contenido_peliculas("U", int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text, txtNombreContenido.Text,
-                        txtContenido.Text, lblUsuario.Text);
+                        txtContenido.Text, lblUsuario.Text,txtContenidoMobile.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -139,6 +139,7 @@ namespace WebAhayouAdmin
                 Clases.Contenido_peliculas obj_m = new Clases.Contenido_peliculas(int.Parse(lblCodigo.Text));
                 txtNombreContenido.Text = obj_m.PV_NOMBRE_CONTENIDO_STR.ToString();
                 txtContenido.Text = obj_m.PV_CONTENIDO.ToString();
+                txtContenidoMobile.Text = obj_m.PV_CONTENIDO_MOBILE.ToString();
                 MultiView1.ActiveViewIndex = 1;
 
             }
@@ -162,7 +163,7 @@ namespace WebAhayouAdmin
                 Button obj = (Button)sender;
                 id = obj.CommandArgument.ToString();
                 lblCodigo.Text = id;
-                Clases.Contenido_peliculas obj_m = new Clases.Contenido_peliculas("D", int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text,"","",lblUsuario.Text);
+                Clases.Contenido_peliculas obj_m = new Clases.Contenido_peliculas("D", int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text,"","",lblUsuario.Text,"");
                 obj_m.ABM();
                 lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 Repeater1.DataBind();

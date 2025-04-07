@@ -50,7 +50,7 @@ namespace AhayouWebAPI.Controllers
                 oUsuario = (from DataRow dr in dt.Rows
                             select new Plan_suscriptor()
                             {
-                                codigo_plan = (string)dr["codigo_plan"],
+                                codigo_plan = Int64.Parse(dr["codigo_plan"].ToString()),
                                 cod_moneda = (string)dr["cod_moneda"],
                                 cod_plan_suscriptor = (string)dr["cod_plan_suscriptor"],
                                 planes = (string)dr["planes"],

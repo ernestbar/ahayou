@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="css/buttons.css" />
     <link rel="stylesheet" href="css/hamburger.css" />
 </head>
-    </head>
     <body>
         
         <header class="header">

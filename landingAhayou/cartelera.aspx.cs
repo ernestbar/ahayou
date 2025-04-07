@@ -17,22 +17,72 @@ namespace landingAhayou
             {
                 if (Session["usuario"] == null)
                 {
+                    Panel_logout.Visible = true;
+                    Panel_login.Visible = false;
                     lblUsuario.Text = "";
                     btnLogin.Visible = true;
                     btnSuscribete.Visible = true;
-                    
+                    if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+                    {
+                        string email = Request.Cookies["UserName"].Value;
+                        DataTable dt = new DataTable();
+                        dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(email);
+                        if (dt.Rows.Count > 0)
+                        {
+
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
+                                Session["codigo_plan"] = dr["codigo_plan"];
+                            }
+                            //Response.Redirect("perfiles.aspx");
+                        }
+                        Session["usuario"] = email;
+                    }
                 }
                 else
                 {
+                    if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+                    {
+                        string email = Request.Cookies["UserName"].Value;
+                        DataTable dt2 = new DataTable();
+                        dt2 = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(email);
+                        if (dt2.Rows.Count > 0)
+                        {
+
+                            foreach (DataRow dr in dt2.Rows)
+                            {
+                                Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
+                                Session["codigo_plan"] = dr["codigo_plan"];
+                            }
+                            //Response.Redirect("perfiles.aspx");
+                        }
+                        Session["usuario"] = email;
+                    }
+                    Panel_logout.Visible = false;
+                    Panel_login.Visible = true;
                     lblUsuario.Text = Session["usuario"].ToString();
-                    lblplanSuscriptor.Text= Session["cod_plan_suscriptor"].ToString();
-                    lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
-                    lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                    if (Session["cod_plan_suscriptor"] == null)
+                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible=true; } 
+                    else
+                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                    if(Session["cod_perfil_suscriptor"] == null)
+                        lblPerfilSuscriptor.Text= "0";
+                    else
+                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+                    
+                    if(Session["codigo_plan"] == null)
+                        lblCodigoPlan.Text= "0";
+                    else
+                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
 
                     btnLogin.Visible = false;
                     btnSuscribete.Visible = false;
+                    imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
                     DataTable dt = new DataTable();
+
                     dt=Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                    
                     foreach (DataRow dr in dt.Rows)
                     {
                         if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
@@ -169,7 +219,65 @@ namespace landingAhayou
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
             Session.Abandon();
+            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("home.aspx");
+        }
+
+        protected void lbtnReproducir_Click(object sender, EventArgs e)
+        {
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
+            DataTable dtCont = Clases.Contenidos.PR_STR_GET_CONTENIDO_STR_IND(id);
+            string pelicula = "";
+            string url_streaming = "";
+            foreach (DataRow drCont in dtCont.Rows)
+            {
+                pelicula = drCont["contenido_peliculas"].ToString();
+            }
+
+            if (pelicula == "SI")
+            {
+                string cod_contenido_pelicula = "";
+                DataTable dtP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA(id);
+                foreach (DataRow dr in dtP.Rows)
+                {
+                    cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
+                }
+                
+                DataTable dtCP= Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
+                foreach (DataRow dr in dtCP.Rows)
+                {
+                    url_streaming = dr["contenido_mobile"].ToString();
+                }
+            }
+            else
+            {
+                DataTable dtT = Clases.Contenidos.PR_STR_GET_CONTENIDO_TEMPORADAS(id);
+                DataTable dtTemp1 = new DataTable();
+                foreach (DataRow dr in dtT.Rows)
+                {
+                    //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
+                    if (dr["episodio"].ToString() == "1")
+                    {
+                        url_streaming = dr["contenido_mobile"].ToString();
+                    }
+                }
+            }
+            Session["url_streaming"] = url_streaming;
+            Response.Redirect("ver_streaming.aspx");
+        }
+
+        protected void lbtnPerfiles_Click(object sender, EventArgs e)
+        {
+
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
+            //Session["usuario"] = lblUsuario.Text;
+            Session["cod_perfil_suscriptor"] = id;
+            lblPerfilSuscriptor.Text = id;
+            Response.Redirect("cartelera.aspx");
+            
         }
     }
 }

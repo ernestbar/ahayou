@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace landingAhayou
@@ -25,6 +26,7 @@ namespace landingAhayou
                 }
                 else
                 {
+                    
                     if (Session["cod_plan_suscriptor"] == null)
                         Response.Redirect("selecciona_plan.aspx");
                     else 
@@ -113,6 +115,65 @@ namespace landingAhayou
             obj.ABM();
             string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
             ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+        }
+
+        protected void lbtnReproducir_Click(object sender, EventArgs e)
+        {
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
+            DataTable dtCont = Clases.Contenidos.PR_STR_GET_CONTENIDO_STR_IND(id);
+            string pelicula = "";
+            string url_streaming = "";
+            foreach (DataRow drCont in dtCont.Rows)
+            {
+                pelicula = drCont["contenido_peliculas"].ToString();
+            }
+
+            if (pelicula == "SI")
+            {
+                string cod_contenido_pelicula = "";
+                DataTable dtP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA(id);
+                foreach (DataRow dr in dtP.Rows)
+                {
+                    cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
+                }
+
+                DataTable dtCP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
+                foreach (DataRow dr in dtCP.Rows)
+                {
+                    url_streaming = dr["contenido_mobile"].ToString();
+                }
+            }
+            else
+            {
+                DataTable dtT = Clases.Contenidos.PR_STR_GET_CONTENIDO_TEMPORADAS(id);
+                foreach (DataRow dr in dtT.Rows)
+                {
+                    //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
+                    if (dr["episodio"].ToString() == "1")
+                    {
+                        url_streaming = dr["contenido_mobile"].ToString();
+                    }
+                }
+            }
+            Session["url_streaming"] = url_streaming;
+            Response.Redirect("ver_streaming.aspx");
+        }
+
+        protected void lbtnReproducirT_Click(object sender, EventArgs e)
+        {
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
+            Session["url_streaming"] = id;
+            Response.Redirect("ver_streaming.aspx");
+        }
+
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect("home.aspx");
         }
     }
 }

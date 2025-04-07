@@ -68,7 +68,18 @@
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
         </asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="odsMenus" runat="server" SelectMethod="PR_PAR_GET_MENU_CARTELERA" TypeName="landingAhayou.Clases.Carteleras">
+        </asp:ObjectDataSource>
+         <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_PERFILES_SUSCRIPTOR" TypeName="landingAhayou.Clases.Suscriptores">
+             <SelectParameters>
+                 <asp:ControlParameter ControlID="lblplanSuscriptor" Name="pV_COD_PLAN_SUSCRIPTOR" />
+             </SelectParameters>
+         </asp:ObjectDataSource>
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
+         <asp:Label ID="lblplanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+         <asp:Label ID="lblPerfilSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+         <asp:Label ID="lblCodigoPlan" runat="server" Visible="false" Text=""></asp:Label>
+         <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
          <header class="header header--main" id="header__movies">
             <nav class="header__nav">
                 <a href="home.aspx" class="header__logo">
@@ -78,30 +89,109 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons header__nav-buttons--with-text">
-                   
+                <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                    <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
-                </div>
-                <div class="repetitive-buttons">
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                </div>
-                 <div class="options__container">
-                     <button class="hamburger__button" id="menuButton">
-                           <span class="hamburger__line hamburger__line--white"></span>
-                        <span class="hamburger__line hamburger__line--white"></span>
-                        <span class="hamburger__line hamburger__line--white"></span>
-                     </button>
-                     <div class="options__menu" id="optionsMenu">
-                         <%--<button class="options__button">Espa&ntilde;ol</button>
-                         <button class="options__button" >Ingl&eacute;s</button>--%>
-                         
-                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+                    <div class="repetitive-buttons">
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                    </div>
+                     <div class="options__container">
+                         <button class="hamburger__button" id="menuButton">
+                               <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                         </button>
+                         <div class="options__menu" id="optionsMenu">
+                             <%--<button class="options__button">Espa&ntilde;ol</button>
+                             <button class="options__button" >Ingl&eacute;s</button>--%>
+         
+                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                         </div>
                      </div>
-                 </div>
+                </asp:Panel>
+                <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
+                    <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
+                    <%--<button
+                        class="header__button header__button--with-img submenu__button"
+                    >
+                        <asp:Image class="header__button header__button--with-img submenu__button"  ID="imgPerfil" runat="server"  />
+                    </button>--%>
+                    <div
+                        class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
+                    >
+                        <div class="container--flex container--flex-column">
+                            <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
+                                <ItemTemplate>
+                                     <a href="#" class="options__button--flex">
+                                         <img
+                                             src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
+                                             alt="Foto perfil"
+                                         />
+                                         <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
+                                     </a>
+                                </ItemTemplate>
+                            </asp:Repeater>
+       
+        
+                            <a href="#" class="options__button--flex">
+                                <img
+                                    src="imgs/icons/administration.svg"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Administraci&oacute;n
+                                </p>
+                            </a>
+                            <a href="#" class="options__button--flex">
+                                <img
+                                    src="imgs/icons/profile.svg"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Cuenta
+                                </p>
+                            </a>
+                            <a href="#" class="options__button--flex">
+                                <img
+                                    src="imgs/icons/help-center.svg"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Centro de ayuda
+                                </p>
+                            </a>
+                            <a href="#" class="options__button--flex">
+                                <img
+                                    src="imgs/flags/spain.png"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Idioma español
+                                </p>
+                            </a>
+                            <a href="#" class="options__button--flex">
+                                <img
+                                    src="imgs/flags/eeuu.png"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Idioma ingles
+                                </p>
+                            </a>
+                        </div>
+    
+                        <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">
+                         <ItemTemplate>
+                             <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
+                         </ItemTemplate>
+                     </asp:Repeater>
+                        <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
+    
+                    </div>
+                </asp:Panel>
             </nav>
             <section class="header__main-content carousel">
                 <div class="header__items-container">
@@ -142,16 +232,13 @@
                                                  class="movie__image"
                                              />
                                               <div class="movie__buttons">
-                                                         <a
-                                                             href="#"
-                                                             class="movie__button movie__button--white"
-                                                         >
-                                                             <img
-                                                                 src="imgs/icons/play.svg"
-                                                                 alt="Icono reproducir"
-                                                             />
-                                                             <p>Reproducir</p>
-                                                         </a>
+                                                          <asp:LinkButton ID="lbtnReproducir" CommandArgument='<%# Eval("cod_contenido_str") %>' OnClick="lbtnReproducir_Click" class="movie__button movie__button--white" runat="server">
+                                                              <img
+                                                                  src="imgs/icons/play.svg"
+                                                                  alt="Icono reproducir"
+                                                              />
+                                                              <p>Reproducir</p>
+                                                         </asp:LinkButton>
                                                          <a
                                                              href=' <%# "mas_informacion.aspx?ID=" + Eval("cod_contenido_str") %>'
                                                              class="movie__button movie__button--gray"
@@ -175,34 +262,38 @@
                                                  <%# Eval("resumen") %>
                                              </p>
                                              <span class="movie__gender"><%# Eval("genero") %></span>
+                                                 <span class="movie__gender"><%# Eval("genero") %></span>
                                                  </div>
                                             </div>
-                                
-                                       <div
-                                            class="movie__container movie__container--second container-common"
-                                        >
-                                            <img
-                                               src=' <%# Eval("contenido_vertical") %>'
-                                                alt='<%# Eval("nombre_contenido") %>'
-                                            />
-                                            <h3 class="movie__title--small"><%# Eval("nombre_contenido") %></h3>
-                                               
-                                           <ul class="movie__data--small">
-                                                <li class="movie__data-item--small">
-                                                    <%# Eval("genero") %>
-                                                </li>
-                                                <li class="movie__data-item--small">
-                                                     <%# Eval("detalle1") %>
-                                                </li>
-                                                <li class="movie__data-item--small">
-                                                     <%# Eval("detalle2") %>
-                                                </li>
-                                                <li class="movie__data-item--small">
-                                                    <%# Eval("formato_contenido") %>
-                                                </li>
-                                            </ul>
-                                              
-                                        </div>
+                                       <asp:LinkButton ID="lbtnBanner" class="movie__container movie__container--second container-common" CommandArgument='<%# Eval("cod_contenido_str") %>' OnClick="lbtnBanner_Click" runat="server">
+                                           <%--<div
+                                                 class="movie__container movie__container--second container-common"
+                                             >--%>
+                                                 <img
+                                                    src=' <%# Eval("contenido_vertical") %>'
+                                                     alt='<%# Eval("nombre_contenido") %>'
+                                                 />
+                                                 <h3 class="movie__title--small"><%# Eval("nombre_contenido") %></h3>
+        
+                                                <ul class="movie__data--small">
+                                                     <li class="movie__data-item--small">
+                                                         <%# Eval("genero") %>
+                                                     </li>
+                                                     <li class="movie__data-item--small">
+                                                          <%# Eval("detalle1") %>
+                                                     </li>
+                                                     <li class="movie__data-item--small">
+                                                          <%# Eval("detalle2") %>
+                                                     </li>
+                                                     <li class="movie__data-item--small">
+                                                         <%# Eval("formato_contenido") %>
+                                                     </li>
+                                                 </ul>
+       
+                                             <%--</div>--%>
+
+                                       </asp:LinkButton>
+                                       
                                    </asp:Panel>
          
                                </ItemTemplate>
@@ -240,14 +331,18 @@
                     <div class="new-releases__list">
                           <asp:Repeater ID="Repeater4" DataSourceID="odsUltimos" runat="server">
 		                            <ItemTemplate>
-                                           <article class="new-releases__item container-common">
-                                                <img src='<%# Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />
-                                                   <%--<img src='<%# "data:image/jpg;base64," + Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />--%>
-                                                <div>
-                                                    <h3><%# Eval("nombre_contenido") %></h3>
-                                                    <p><%# Eval("descripcion") %></p>
-                                                </div>
-                                            </article>
+                                        <asp:LinkButton class="new-releases__item container-common" ID="lbtnNuevoAgregado" OnClick="lbtnNuevoAgregado_Click" CommandArgument='<%# Eval("cod_contenido_str") %>' runat="server">
+                                           <%--<article class="new-releases__item container-common">--%>
+                                             <img src='<%# Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />
+                                                <%--<img src='<%# "data:image/jpg;base64," + Eval("contenido") %>' alt='<%# Eval("nombre_contenido") %>' />--%>
+                                             <div>
+                                                 <h3><%# Eval("nombre_contenido") %></h3>
+                                                 <p><%# Eval("descripcion") %></p>
+                                             </div>
+                                         <%--</article>--%>
+
+                                        </asp:LinkButton>
+                                           
                                    
 		                            </ItemTemplate>
                           </asp:Repeater>
@@ -265,7 +360,8 @@
                 <div class="plans__list">
                      <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
 	                    <ItemTemplate>
-                            <a href="#" class="plans__item">
+                            <asp:LinkButton ID="lbtnSeleccionPlan" CommandArgument='<%# Eval("url_pasarela") %>' OnClick="lbtnSeleccionPlan_Click" class="plans__item" runat="server">
+                            <%--<a href="#" class="plans__item">--%>
                                 <div class="plans__item--type-2">
                                    <div class="plans__item-content container-common">
                                         <div
@@ -292,7 +388,8 @@
                                 <div class="plans__item-footer">
                                     <p><%# Eval("ahorro") %></p>
                                 </div>
-                            </a>
+                           <%-- </a>--%>
+                                </asp:LinkButton>
 	                    </ItemTemplate>
                      </asp:Repeater>
                 </div>
@@ -350,7 +447,8 @@
                      </p>
                  </div>
              </button>--%>
-           <asp:LinkButton class="web-app-section__content container-common" ID="downloadContainer" runat="server">
+           <asp:LinkButton class="web-app-section__content container-common" OnClientClick="event.preventDefault();"  BorderColor="Black" ID="downloadContainer" runat="server">
+             
                <h2 class="web-app-section__title" id="downloadTitle">
                         Descarga la Web APP
                     </h2>
@@ -366,7 +464,7 @@
                             m&oacute;vil ahorrando espacio en tu dispositivo
                         </p>
                     </div>
-
+                  
            </asp:LinkButton>
             <form class="web-app-section__form">
                 <label for="email" class="form__label form__label--white">
@@ -439,6 +537,11 @@
         <script src="js/carousel-new-releases.js"></script>
         <script src="js/web-app-title.js"></script>
         <script src="js/open-menu.js"></script>
+        <script src="js/header-movies-responsive.js"></script>
+        <script src="js/movie-container-hover.js"></script>
+
+        <script defer src="js/carousel.js"></script>
+        <script src="js/open-submenu.js"></script>
         <script src="js/header-movies-responsive.js"></script>
         <script src="js/movie-container-hover.js"></script>
       

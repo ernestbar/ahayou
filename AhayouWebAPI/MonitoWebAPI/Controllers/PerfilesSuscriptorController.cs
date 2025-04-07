@@ -57,6 +57,12 @@ namespace AhayouWebAPI.Controllers
                                 avatar = (string)dr["avatar"]
                             }).ToList();
 
+
+                if (string.IsNullOrEmpty(comando.Parameters["@PV_DESCRIPCIONPR"].Value.ToString()))
+                    error = "";
+                else
+                    error = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
+
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = true;
                 oRespuestaAPI.mensajesError = new List<string>() { "" };

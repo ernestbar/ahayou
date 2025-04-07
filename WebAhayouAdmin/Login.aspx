@@ -64,10 +64,11 @@
 								<label for="password" class="d-flex align-items-center">Password</label>
 							</div>
 							<div class="form-check mb-20px">
-								<input class="form-check-input" type="checkbox" value="" id="rememberMe" />
+								<asp:CheckBox class="form-check-label" ID="rememberMe" Text="Recuerdame" runat="server" />
+								<%--<input class="form-check-input" type="checkbox" value="" id="rememberMe" />
 								<label class="form-check-label" for="rememberMe">
 									Recuerdame
-								</label>
+								</label>--%>
 							</div>
 							<div class="login-buttons">
 								<asp:Button ID="btnIngresar"  BackColor="Transparent" BorderColor="White" class="btn btn-theme h-45px d-block w-100 btn-lg" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,6 +14,23 @@ namespace landingAhayou
         {
             if (!Page.IsPostBack)
             {
+                if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+                {
+                    string email = Request.Cookies["UserName"].Value;
+                    DataTable dt = new DataTable();
+                    dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(email);
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
+                            Session["codigo_plan"] = dr["codigo_plan"];
+                        }
+                        //Response.Redirect("perfiles.aspx");
+                    }
+                    Session["usuario"] = email;
+                }
                 if (Session["usuario"] == null)
                 {
                     lblUsuario.Text = "";

@@ -124,5 +124,13 @@ namespace landingAhayou
             Session["email"] = email.Text;
             Response.Redirect("suscribete.aspx");
         }
+
+        protected void lbtnSeleccionPlan_Click(object sender, EventArgs e)
+        {
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
+            Session["url_pasarela"] = id;
+            Response.Redirect("forma_pago.aspx");
+        }
     }
 }

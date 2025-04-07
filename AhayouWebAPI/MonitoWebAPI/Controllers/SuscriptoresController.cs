@@ -202,12 +202,11 @@ namespace AhayouWebAPI.Controllers
                                 {
                                     pv_usuario = (string)dr["usuario"],
                                     pv_password = (string)dr["password"],
-                                    pv_nombre_completo = (string)dr["nombre_completo"],
+                                    pv_nombre_completo = dr["nombre_completo"] == DBNull.Value ? "" : (string)dr["nombre_completo"],
                                     pv_email = (string)dr["email"],
                                     //pv_celular = (string)dr["celular"]
-                                    pv_celular = dr["celular"] == DBNull.Value ? "" : (string)dr["celular"]
-
-                                    //pv_codigo_auxiliar = (string)dr["codigo_auxiliar"],
+                                    pv_celular = dr["celular"] == DBNull.Value ? "" : (string)dr["celular"],
+                                    pv_codigo_auxiliar = dr["codigo_auxiliar"] == DBNull.Value ? "" : (string)dr["codigo_auxiliar"]
                                     //pv_estado = (string)dr["desc_estado"]
                                 }).First();
                 }

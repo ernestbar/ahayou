@@ -121,6 +121,7 @@
     <Content Include="cambio_password.aspx" />
     <Content Include="cartelera.aspx" />
     <Content Include="centro_ayuda.aspx" />
+    <Content Include="checkout.js" />
     <Content Include="contacto.aspx" />
     <Content Include="contacto_us.aspx" />
     <Content Include="contacts.html" />
@@ -560,6 +561,7 @@
     <Content Include="js\show-list.js" />
     <Content Include="js\show-one-bg.js" />
     <Content Include="js\show-validation-alert.js" />
+    <Content Include="js\stop-autoplay.js" />
     <Content Include="js\web-app-title.js" />
     <Content Include="login.aspx" />
     <Content Include="Logs\Readme.txt" />
@@ -570,6 +572,7 @@
     <Content Include="privacidad.aspx" />
     <Content Include="privacy.html" />
     <Content Include="reset_password.aspx" />
+    <Content Include="return.js" />
     <Content Include="Scripts\konami.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\pwacompat.min.js" />
@@ -581,6 +584,7 @@
     <Content Include="terminos_uso.aspx" />
     <Content Include="test.aspx" />
     <Content Include="verificar_correo.aspx" />
+    <Content Include="ver_streaming.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -745,6 +749,13 @@
     </Compile>
     <Compile Include="verificar_correo.aspx.designer.cs">
       <DependentUpon>verificar_correo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ver_streaming.aspx.cs">
+      <DependentUpon>ver_streaming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ver_streaming.aspx.designer.cs">
+      <DependentUpon>ver_streaming.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

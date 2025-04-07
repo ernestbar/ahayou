@@ -49,7 +49,7 @@ namespace AhayouWebAPI.Controllers
                         select new Trailers_contenidos()
                         {
                             nombre_contenido_str = (string)dr["nombre_contenido_str"],
-                            contenido = (string)dr["contenido"],
+                            contenido = (string)dr["contenido_mobile"],
                             
                         }).ToList();
 

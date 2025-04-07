@@ -114,6 +114,7 @@
 													<th class="text-wrap">NOMBRE CONTENIDO</th>
 													<th class="text-wrap">ORDEN</th>
 																	<th class="text-nowrap">CONTENIDO</th>
+														<th class="text-nowrap">CONTENIDO_MOBILE</th>
 													<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 													</tr>
@@ -127,6 +128,7 @@
 													<td><asp:Label ID="lblEsPrincipal1" runat="server" Text='<%# Eval("NOMBRE_CONTENIDO_STR") %>'></asp:Label></td>
 													<td><asp:Label ID="lblEsPrincipal11" runat="server" Text='<%# Eval("ORDEN") %>'></asp:Label></td>
 														<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>
+														<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("CONTENIDO_MOBILE") %>'></asp:Label></td>
 																	
 																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
 													<td>
@@ -190,7 +192,15 @@
 									</div>
 								</div>
 							<!-- end form-group row -->				
-								
+									<!-- begin form-group row -->
+				<div class="form-group row m-b-10">
+								<label class="col-md-3 text-md-right col-form-label">URL del contenido mobile:</label>
+								<div class="col-md-6">
+									<asp:TextBox ID="txtContenidoMobile" TextMode="MultiLine" Height="200" Enabled="true" class="form-control"  runat="server"></asp:TextBox>
+									<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtContenidoMobile" Font-Bold="True"></asp:RequiredFieldValidator>
+								</div>
+				</div>
+<!-- end form-group row -->			
 								
 						</div>
 					</div>

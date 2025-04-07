@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "C:\\GITHUB\\ahayou\\landingAhayou\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\suscribete.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:suscribete.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\verificar_correo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:verificar_correo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\verificar_correo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:verificar_correo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\mas_informacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\mas_informacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\mas_informacion.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\perfiles.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:perfiles.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\github\\ahayou\\landingahayou\\perfiles.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:perfiles.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,6 +123,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "suscribete.aspx.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\suscribete.aspx.cs",
+              "RelativeDocumentMoniker": "suscribete.aspx.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\suscribete.aspx.cs",
+              "RelativeToolTip": "suscribete.aspx.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T00:16:15.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "verificar_correo.aspx",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\verificar_correo.aspx",
+              "RelativeDocumentMoniker": "verificar_correo.aspx",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\verificar_correo.aspx",
+              "RelativeToolTip": "verificar_correo.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-06T00:15:13.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "verificar_correo.aspx.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\verificar_correo.aspx.cs",
+              "RelativeDocumentMoniker": "verificar_correo.aspx.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\verificar_correo.aspx.cs",
+              "RelativeToolTip": "verificar_correo.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T00:14:58.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "mas_informacion.aspx",
               "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\mas_informacion.aspx",
               "RelativeDocumentMoniker": "mas_informacion.aspx",
@@ -94,7 +169,85 @@
               "RelativeToolTip": "mas_informacion.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-31T01:54:29.32Z",
+              "WhenOpened": "2025-04-05T18:29:50.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "mas_informacion.aspx.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\mas_informacion.aspx.cs",
+              "RelativeDocumentMoniker": "mas_informacion.aspx.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\mas_informacion.aspx.cs",
+              "RelativeToolTip": "mas_informacion.aspx.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAswK8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T18:29:30.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "mas_informacion.aspx.designer.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\mas_informacion.aspx.designer.cs",
+              "RelativeDocumentMoniker": "mas_informacion.aspx.designer.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\mas_informacion.aspx.designer.cs",
+              "RelativeToolTip": "mas_informacion.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T18:29:29.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "perfiles.aspx.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\perfiles.aspx.cs",
+              "RelativeDocumentMoniker": "perfiles.aspx.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\perfiles.aspx.cs",
+              "RelativeToolTip": "perfiles.aspx.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T17:07:56.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "perfiles.aspx",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\perfiles.aspx",
+              "RelativeDocumentMoniker": "perfiles.aspx",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\perfiles.aspx",
+              "RelativeToolTip": "perfiles.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-05T17:07:06.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "cartelera.aspx",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx",
+              "RelativeDocumentMoniker": "cartelera.aspx",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx",
+              "RelativeToolTip": "cartelera.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-05T17:05:10.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "cartelera.aspx.cs",
+              "DocumentMoniker": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx.cs",
+              "RelativeDocumentMoniker": "cartelera.aspx.cs",
+              "ToolTip": "C:\\GITHUB\\ahayou\\landingAhayou\\cartelera.aspx.cs",
+              "RelativeToolTip": "cartelera.aspx.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAUwN8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T17:05:07.722Z",
               "EditorCaption": ""
             }
           ]
