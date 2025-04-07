@@ -348,7 +348,7 @@ namespace AhayouWebAPI.Controllers
 					var token = tokenHandler.CreateToken(tokenDescriptor);
 					oLogin.token = tokenHandler.WriteToken(token);
 				}
-
+                oRespuestaAPI.descripcion = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
 				oRespuestaAPI.exitoso = error == "Login correcto" ? true: false;
                 oRespuestaAPI.mensajesError = new List<string>() { error };

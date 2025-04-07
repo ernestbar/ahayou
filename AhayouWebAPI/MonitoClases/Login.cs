@@ -23,5 +23,9 @@ namespace AhayouClases
 		public string rol { get; set; } = "";
 
 		public string token { get; set; } = "";
+		public string pv_sesion { get; set; } = "";
+        public string pv_estadopr { get; set; }
+        public string pv_descripcionpr { get; set; }
+        public string pv_error { get; set; }
     }
 }

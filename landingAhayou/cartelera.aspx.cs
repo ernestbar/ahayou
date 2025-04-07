@@ -279,5 +279,11 @@ namespace landingAhayou
             Response.Redirect("cartelera.aspx");
             
         }
+
+        protected void btnBusqueda_Click(object sender, EventArgs e)
+        {
+            Session["busqueda"]=txtBusqueda.Text;
+            Response.Redirect("resultado_busqueda.aspx");
+        }
     }
 }

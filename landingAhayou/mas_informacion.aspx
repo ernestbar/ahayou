@@ -452,5 +452,16 @@
         <script src="js/movie-container-hover.js"></script>
         <script src="js/stop-autoplay.js"></script>
     
+
+     <script>
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+            if (event.keyCode == 123) {
+                event.preventDefault();
+            }
+        });
+     </script>
 </body>
 </html>

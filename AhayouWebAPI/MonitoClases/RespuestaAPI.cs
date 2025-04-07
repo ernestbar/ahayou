@@ -9,7 +9,8 @@ namespace AhayouClases
 {
 	public class RespuestaAPI
 	{
-		public HttpStatusCode codigoEstado { get; set; }
+        public string descripcion { get; set; }
+        public HttpStatusCode codigoEstado { get; set; }
         public List<string> mensajesError { get; set; }
         public bool exitoso { get; set; } = false;
 		public object resultado { get; set; }

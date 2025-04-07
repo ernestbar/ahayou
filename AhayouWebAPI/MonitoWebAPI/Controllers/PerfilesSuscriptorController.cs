@@ -58,11 +58,11 @@ namespace AhayouWebAPI.Controllers
                             }).ToList();
 
 
-                if (string.IsNullOrEmpty(comando.Parameters["@PV_DESCRIPCIONPR"].Value.ToString()))
+                if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
                     error = "";
                 else
-                    error = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
-
+                    error = (string)comando.Parameters["@PV_ERROR"].Value;
+                oRespuestaAPI.descripcion = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = true;
                 oRespuestaAPI.mensajesError = new List<string>() { "" };
@@ -120,10 +120,17 @@ namespace AhayouWebAPI.Controllers
                 conexion.Close();
 
                 oUsuario.pv_descripcionpr = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
+                oUsuario.pv_estadopr = (string)comando.Parameters["@pv_estadopr"].Value;
                 if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
+                {
                     error = "";
+                    oUsuario.pv_error = "";
+                }
                 else
+                {
                     error = (string)comando.Parameters["@PV_ERROR"].Value;
+                    oUsuario.pv_error = (string)comando.Parameters["@pv_error"].Value;
+                }
 
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = error == "" ? true : false;

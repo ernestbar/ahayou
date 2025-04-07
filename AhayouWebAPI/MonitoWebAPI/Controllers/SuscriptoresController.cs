@@ -67,7 +67,7 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.AddWithValue("@PV_EMAIL", oUsuario.pv_email);
                 comando.Parameters.AddWithValue("@PV_CODIGO_AUXILIAR", oUsuario.pv_codigo_auxiliar);
                 comando.Parameters.AddWithValue("@PV_USUARIO", oUsuario.pv_usuario);
-                comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
+                comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 30).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_ERROR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_EMAILOUT", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -75,11 +75,20 @@ namespace AhayouWebAPI.Controllers
                 conexion.Close();
 
                 oUsuario.pv_descripcionpr = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
+                oUsuario.pv_estadopr = (string)comando.Parameters["@pv_estadopr"].Value;
                 if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
+                {
                     error = "";
+                    oUsuario.pv_error = "";
+                }
                 else
+                {
                     error = (string)comando.Parameters["@PV_ERROR"].Value;
+                    oUsuario.pv_error = (string)comando.Parameters["@pv_error"].Value;
+                }
 
+
+                oRespuestaAPI.descripcion = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = error == "" ? true : false;
                 oRespuestaAPI.mensajesError = new List<string>() { error };
@@ -116,6 +125,7 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_TEMPORAL", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                comando.Parameters.Add("@PV_SESION", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 SqlDataAdapter da = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -136,6 +146,9 @@ namespace AhayouWebAPI.Controllers
                 }
                 error = (string)comando.Parameters["@pv_descripcionpr"].Value;
                 temporal = (string)comando.Parameters["@pv_temporal"].Value;
+                oLogin.pv_descripcionpr = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
+                oLogin.pv_estadopr = (string)comando.Parameters["@pv_estadopr"].Value;
+                oLogin.pv_sesion = (string)comando.Parameters["@pv_sesion"].Value;
                 if (error == "Login correcto")
                 {
                     // Generar JWT Token
@@ -154,7 +167,7 @@ namespace AhayouWebAPI.Controllers
                     var token = tokenHandler.CreateToken(tokenDescriptor);
                     oLogin.token = tokenHandler.WriteToken(token);
                 }
-
+                oRespuestaAPI.descripcion = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = error == "Login correcto" ? true : false;
                 oRespuestaAPI.mensajesError = new List<string>() { error };

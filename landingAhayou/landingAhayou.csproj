@@ -572,6 +572,7 @@
     <Content Include="privacidad.aspx" />
     <Content Include="privacy.html" />
     <Content Include="reset_password.aspx" />
+    <Content Include="resultado_busqueda.aspx" />
     <Content Include="return.js" />
     <Content Include="Scripts\konami.js" />
     <Content Include="Scripts\main.js" />
@@ -714,6 +715,13 @@
     </Compile>
     <Compile Include="reset_password.aspx.designer.cs">
       <DependentUpon>reset_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resultado_busqueda.aspx.cs">
+      <DependentUpon>resultado_busqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resultado_busqueda.aspx.designer.cs">
+      <DependentUpon>resultado_busqueda.aspx</DependentUpon>
     </Compile>
     <Compile Include="selecciona_plan.aspx.cs">
       <DependentUpon>selecciona_plan.aspx</DependentUpon>

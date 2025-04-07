@@ -30,6 +30,7 @@ namespace landingAhayou.Clases
         public string PV_DESCRIPCIONPR { get; set; }
         public string PV_ERROR { get; set; }
         public string PV_TEMPORAL { get; set; }
+        public string PV_SESION { get; set; }
 
         #endregion
         #region Constructores
@@ -105,6 +106,7 @@ namespace landingAhayou.Clases
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("PV_DESCRIPCIONPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("PV_TEMPORAL", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("PV_SESION", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Connection = conn;
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -121,6 +123,10 @@ namespace landingAhayou.Clases
                         PV_TEMPORAL = "";
                     else
                         PV_TEMPORAL = (string)cmd.Parameters["PV_TEMPORAL"].Value;
+                    if (string.IsNullOrEmpty(cmd.Parameters["PV_SESION"].Value.ToString()))
+                        PV_SESION = "";
+                    else
+                        PV_SESION = (string)cmd.Parameters["PV_SESION"].Value;
                     conn.Close();
 
                 }

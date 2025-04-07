@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="css/backgrounds-divs.css" />
         <link rel="stylesheet" href="css/buttons.css" />
         <link rel="stylesheet" href="css/carousel.css" />
+        <link rel="stylesheet" href="css/forms.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -109,7 +110,14 @@
                          </div>
                      </div>
                 </asp:Panel>
+                <div class="form__input-container form__input-container--main form__input-container--no-gap">
+                    <asp:TextBox ID="txtBusqueda" Width="300" Height="30" class="form__input form__input--dark" ValidationGroup="busqueda" placeholder="Ingresa tu busqueda" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* ingrese su busqueda" ForeColor="Orange" ValidationGroup="busqueda" ControlToValidate="txtBusqueda"></asp:RequiredFieldValidator>
+                    <asp:Button ID="btnBusqueda" Height="30" Font-Size="Small" class="button button--orange button--border" ValidationGroup="busqueda" OnClick="btnBusqueda_Click"  runat="server" Text="Buscar" />
+     
+                </div>
                 <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
+                     
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
                     <%--<button
                         class="header__button header__button--with-img submenu__button"

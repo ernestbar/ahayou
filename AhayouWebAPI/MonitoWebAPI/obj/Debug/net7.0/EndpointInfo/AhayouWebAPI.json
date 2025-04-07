@@ -786,6 +786,57 @@
         }
       }
     },
+    "/api/PagosPlanSuscriptor/PagosPlanSuscriptor": {
+      "post": {
+        "tags": [
+          "PagosPlanSuscriptor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plan_pagos_suscriptor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plan_pagos_suscriptor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Plan_pagos_suscriptor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/PerfilesSuscriptor/PerfilesSuscriptor/{PV_COD_PLAN_SUSCRIPTOR}": {
       "get": {
         "tags": [
@@ -1552,6 +1603,44 @@
             "nullable": true
           },
           "pv_error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Plan_pagos_suscriptor": {
+        "type": "object",
+        "properties": {
+          "pV_TIPO_OPERACION": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_USUARIO_SUSCRIPTOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pI_CODIGO_PLAN": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_DETALLES": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_USUARIO": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_ESTADOPR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_DESCRIPCIONPR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_ERROR": {
             "type": "string",
             "nullable": true
           }

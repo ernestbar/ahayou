@@ -79,6 +79,36 @@ namespace landingAhayou.Clases
             }
 
         }
+        public static DataTable PR_STR_GET_VER_SECCIONES_BUSQUEDA(string PV_USUARIO, string PV_COD_PLAN_SUSCRIPTOR, string PV_COD_PERFIL_SUSCRIPTOR, string PV_BUSQUEDA)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_STR_GET_VER_SECCIONES_BUSQUEDA";
+                    cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
+                    cmd.Parameters.AddWithValue("PV_COD_PLAN_SUSCRIPTOR", PV_COD_PLAN_SUSCRIPTOR);
+                    cmd.Parameters.AddWithValue("PV_COD_PERFIL_SUSCRIPTOR", PV_COD_PERFIL_SUSCRIPTOR);
+                    cmd.Parameters.AddWithValue("PV_BUSQUEDA", PV_BUSQUEDA);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
         public static DataTable PR_STR_GET_VER_SECCIONES_CARTELERA(string PV_USUARIO, string PV_COD_PLAN_SUSCRIPTOR, string PV_COD_PERFIL_SUSCRIPTOR, string PI_MENU)
         {
             try
@@ -109,7 +139,8 @@ namespace landingAhayou.Clases
             }
 
         }
-        public static DataTable PR_STR_GET_VER_CARTELERA(string PV_USUARIO,string PV_COD_PLAN_SUSCRIPTOR,string PV_COD_PERFIL_SUSCRIPTOR,string PI_MENU,string PV_SECCION)
+
+        public static DataTable PR_STR_GET_VER_CARTELERA(string PV_USUARIO,string PV_COD_PLAN_SUSCRIPTOR,string PV_COD_PERFIL_SUSCRIPTOR,string PI_MENU, string PV_SECCION)
         {
             try
             {
@@ -122,6 +153,38 @@ namespace landingAhayou.Clases
                     cmd.Parameters.AddWithValue("PV_COD_PLAN_SUSCRIPTOR", PV_COD_PLAN_SUSCRIPTOR);
                     cmd.Parameters.AddWithValue("PV_COD_PERFIL_SUSCRIPTOR", PV_COD_PERFIL_SUSCRIPTOR);
                     cmd.Parameters.AddWithValue("PI_MENU", PI_MENU);
+                    cmd.Parameters.AddWithValue("PV_SECCION", PV_SECCION);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    return dataTable;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                DataTable dt = new DataTable();
+                return dt;
+            }
+
+        }
+
+        public static DataTable PR_STR_GET_VER_CARTELERA_CONSULTA(string PV_USUARIO, string PV_COD_PLAN_SUSCRIPTOR, string PV_COD_PERFIL_SUSCRIPTOR, string PI_MENU, string PV_SECCION)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_STR_GET_VER_CARTELERA_CONSULTA";
+                    cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
+                    cmd.Parameters.AddWithValue("PV_COD_PLAN_SUSCRIPTOR", PV_COD_PLAN_SUSCRIPTOR);
+                    cmd.Parameters.AddWithValue("PV_COD_PERFIL_SUSCRIPTOR", PV_COD_PERFIL_SUSCRIPTOR);
+                    cmd.Parameters.AddWithValue("PV_BUSQUEDA", PI_MENU);
                     cmd.Parameters.AddWithValue("PV_SECCION", PV_SECCION);
                     cmd.Connection = conn;
                     conn.Open();

@@ -542,6 +542,37 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.PagosPlanSuscriptorController",
+    "Method": "PagosPlanSuscriptor",
+    "RelativePath": "api/PagosPlanSuscriptor/PagosPlanSuscriptor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oPago",
+        "Type": "AhayouClases.Plan_pagos_suscriptor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.PerfilesSuscriptorController",
     "Method": "AdecuarDatosPerfilSuscriptor",
     "RelativePath": "api/PerfilesSuscriptor/AdecuarDatosPerfilSuscriptor",
