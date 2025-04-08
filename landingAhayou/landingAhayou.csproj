@@ -622,6 +622,7 @@
     <Compile Include="Clases\Contenidos.cs" />
     <Compile Include="Clases\Dominios.cs" />
     <Compile Include="Clases\enviar_correo.cs" />
+    <Compile Include="Clases\Sesiones.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="contacto.aspx.cs">

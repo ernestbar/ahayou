@@ -110,14 +110,13 @@
                          </div>
                      </div>
                 </asp:Panel>
-                <div class="form__input-container form__input-container--main form__input-container--no-gap">
-                    <asp:TextBox ID="txtBusqueda" Width="300" Height="30" class="form__input form__input--dark" ValidationGroup="busqueda" placeholder="Ingresa tu busqueda" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* ingrese su busqueda" ForeColor="Orange" ValidationGroup="busqueda" ControlToValidate="txtBusqueda"></asp:RequiredFieldValidator>
-                    <asp:Button ID="btnBusqueda" Height="30" Font-Size="Small" class="button button--orange button--border" ValidationGroup="busqueda" OnClick="btnBusqueda_Click"  runat="server" Text="Buscar" />
+                
+                   
      
-                </div>
                 <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
-                     
+                        <asp:TextBox ID="txtBusqueda" Width="300" Height="30" class="form__input form__input--dark" ValidationGroup="busqueda" placeholder="Ingresa tu busqueda" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* ingrese su busqueda" ForeColor="Orange" ValidationGroup="busqueda" ControlToValidate="txtBusqueda"></asp:RequiredFieldValidator>
+                        <asp:Button ID="btnBusqueda" Height="30" Width="100" Font-Size="Small" class="button button--orange button--border" ValidationGroup="busqueda" OnClick="btnBusqueda_Click"  runat="server" Text="Buscar" />
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
                     <%--<button
                         class="header__button header__button--with-img submenu__button"
@@ -198,6 +197,7 @@
                         <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
     
                     </div>
+                                        
                 </asp:Panel>
             </nav>
             <section class="header__main-content carousel">
@@ -328,11 +328,13 @@
                 </div>
             </section>
         </header>
+
         <main class="main">
+            
             <div
                     class="background container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container playlist__start"
                 >
-
+                           
                    <asp:Repeater ID="Repeater2" DataSourceID="odsSecciones" OnItemDataBound="Repeater2_ItemDataBound" runat="server">
                        <ItemTemplate>
                         <asp:Label ID="lblSeccion" runat="server" Text=' <%# Eval("descripcion") %>' Visible="false"></asp:Label>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AhayouClases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14406bb283ae703e9019a0408bfcc141f3930cef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+306592cbe4f262ec885426ced0e443e0f19f2e3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AhayouClases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AhayouClases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
