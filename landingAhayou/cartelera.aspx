@@ -33,6 +33,10 @@
         <link rel="stylesheet" href="css/buttons.css" />
         <link rel="stylesheet" href="css/carousel.css" />
         <link rel="stylesheet" href="css/forms.css" />
+
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
+        <link rel="stylesheet" href="css/search-results.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -87,6 +91,11 @@
                         alt="Logo Ahayou"
                     />
                 </a>
+                    <div class="header__nav-buttons header__nav-input">
+                            <asp:TextBox ID="txtBusqueda" class="header__input" ValidationGroup="busqueda" placeholder="Buscar..." runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Orange" ValidationGroup="busqueda" ControlToValidate="txtBusqueda"></asp:RequiredFieldValidator>
+                            <asp:ImageButton ID="btnBusqueda1" class="header__button--search" ImageUrl="~/imgs/icons/search.svg" ValidationGroup="busqueda" OnClick="btnBusqueda_Click" runat="server" />
+                    </div>
                 <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
@@ -114,9 +123,10 @@
                    
      
                 <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
-                        <asp:TextBox ID="txtBusqueda" Width="300" Height="30" class="form__input form__input--dark" ValidationGroup="busqueda" placeholder="Ingresa tu busqueda" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* ingrese su busqueda" ForeColor="Orange" ValidationGroup="busqueda" ControlToValidate="txtBusqueda"></asp:RequiredFieldValidator>
-                        <asp:Button ID="btnBusqueda" Height="30" Width="100" Font-Size="Small" class="button button--orange button--border" ValidationGroup="busqueda" OnClick="btnBusqueda_Click"  runat="server" Text="Buscar" />
+                   
+                        
+                        
+                        
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
                     <%--<button
                         class="header__button header__button--with-img submenu__button"
@@ -453,62 +463,62 @@
 
 
 
-                <footer class="footer playlist__footer">
-                    <div class="footer__image-container">
-                        <img
-                            src="imgs/logos/logo-ahayou-2.png"
-                            alt="Logo Ahayou"
-                            class="footer__image"
-                        />
-                    </div>
-                     <div class="footer__content">
-                         <div class="footer__list">
-                             <div class="footer__list-item">
-                                 <a href="#frequent-questions">
-                                     Preguntas frecuentes
-                                 </a>
-                                 <a href="contenidos.aspx?t=privacidad" target="_blank">Privacidad</a>
-                             </div>
-                             <div class="footer__list-item">
-                                 <a href="centro_ayuda.aspx" target="_blank">Centro de Ayuda</a>
-                                  <a href="contenidos.aspx?t=avisos legales" target="_blank">Avisos Legales</a>
-                             </div>
-                             <div class="footer__list-item">
-                                 <a href="contenidos.aspx?t=terminos de uso" target="_blank">T&eacute;rminos de uso</a>
-                                 <a href="contacto.aspx" target="_blank">Contacto</a>
-                             </div>
-                         </div>
-                         <div class="footer__data">
-                             <div class="footer__contacts">
-                                 <div>
-                                     <span>+(591) 75874441</span>
-                                 </div>
-                                 <div class="social-media">
-                                      <asp:Repeater ID="Repeater5" DataSourceID="odsRedesSociales" runat="server">
-                                             <ItemTemplate>
-                                                  <a href="<%# Eval("url") %>"  target="_blank" class="social-media__link">
-                                                      <img
-                                                          src='<%# "imgs/logos/" + Eval("red_social") + ".svg" %>'
-                                                          alt='<%# Eval("red_social") %>'
-                                                          class="social-media__img"
-                                                      />
-                                                  </a>
- 
-                                             </ItemTemplate>
-                                      </asp:Repeater>
-                    
-                                 </div>
-                             </div>
-                             <div class="footer__copyright">
-                                 <p>Copyright 2025 Bolivia</p>
-                                 <p>Ahayou</p>
-                             </div>
-                         </div>
-                     </div>
-                 </footer>
+                
                  </div>
         </main>
-
+        <footer class="footer playlist__footer">
+    <div class="footer__image-container">
+        <img
+            src="imgs/logos/logo-ahayou-2.png"
+            alt="Logo Ahayou"
+            class="footer__image"
+        />
+    </div>
+     <div class="footer__content">
+         <div class="footer__list">
+             <div class="footer__list-item">
+                 <a href="#frequent-questions">
+                     Preguntas frecuentes
+                 </a>
+                 <a href="contenidos.aspx?t=privacidad" target="_blank">Privacidad</a>
+             </div>
+             <div class="footer__list-item">
+                 <a href="centro_ayuda.aspx" target="_blank">Centro de Ayuda</a>
+                  <a href="contenidos.aspx?t=avisos legales" target="_blank">Avisos Legales</a>
+             </div>
+             <div class="footer__list-item">
+                 <a href="contenidos.aspx?t=terminos de uso" target="_blank">T&eacute;rminos de uso</a>
+                 <a href="contacto.aspx" target="_blank">Contacto</a>
+             </div>
+         </div>
+         <div class="footer__data">
+             <div class="footer__contacts">
+                 <div>
+                     <span>+(591) 75874441</span>
+                 </div>
+                 <div class="social-media">
+                      <asp:Repeater ID="Repeater5" DataSourceID="odsRedesSociales" runat="server">
+                             <ItemTemplate>
+                                  <a href="<%# Eval("url") %>"  target="_blank" class="social-media__link">
+                                      <img
+                                          src='<%# "imgs/logos/" + Eval("red_social") + ".svg" %>'
+                                          alt='<%# Eval("red_social") %>'
+                                          class="social-media__img"
+                                      />
+                                  </a>
+ 
+                             </ItemTemplate>
+                      </asp:Repeater>
+    
+                 </div>
+             </div>
+             <div class="footer__copyright">
+                 <p>Copyright 2025 Bolivia</p>
+                 <p>Ahayou</p>
+             </div>
+         </div>
+     </div>
+ </footer>
         <script src="js/header-background-handler.js"></script>
       <script src="js/carousel-header-index.js"></script>
       <script defer src="js/carousel.js"></script>

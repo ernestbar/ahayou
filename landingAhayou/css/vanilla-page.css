@@ -25,6 +25,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto 4fr auto;
     gap: 50px;
+    overflow-x: auto;
 }
 
 /*

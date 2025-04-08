@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     webAppSection.firstChild
                 );
                 downloadTitle.innerHTML =
-                    "<span>Descarga la</span>&nbsp;<span>Web APP</span>";
+                    "<span>Descarga la</span>&nbsp;Web APP";
             }
         }
     }

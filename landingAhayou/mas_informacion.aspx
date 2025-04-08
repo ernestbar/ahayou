@@ -295,23 +295,18 @@
                 <asp:Repeater ID="Repeater4" DataSourceID="odsTemporadas" runat="server">
                     <ItemTemplate>
                         <li class="episode show__element">
-                           
-                            <%--<iframe runat="server" id="ifrmTemp"
-                                src='<%# Eval("contenido_mobile") %>'
-                                 title=""
-                                frameborder="0"
-                                autoplay="0"
-                               allowfullscreen="1"
-                                
-                            ></iframe>--%>
-                            <iframe
+                           <div class="episode__iframe iframe__video">
+                               <%# Eval("contenido") %>
+                           </div>
+                          
+                            <%--<iframe
                                 src='<%# Eval("contenido_mobile") %>'
                                 class="episode__iframe iframe__video"
                                 title="Titulo"
                                 frameborder="0"
                                 allowfullscreen
                                 allow="autoplay 'none'" autoplay="0" autostart="false"
-                            ></iframe>
+                            ></iframe>--%>
                             <div class="episode__info">
                                 <div class="episode__metadata text">
                                     <h3><%# Eval("story_line") %></h3>
@@ -321,7 +316,7 @@
                                     <%# Eval("sinopsis") %>
                                 </p>
                             </div>
-                            <asp:LinkButton ID="lbtnReproducirT" CommandArgument='<%# Eval("contenido_mobile") %>' OnClick="lbtnReproducirT_Click" class="movie__button movie__button--white" runat="server">
+                            <asp:LinkButton ID="lbtnReproducirT" CommandArgument='<%# Eval("contenido") %>' OnClick="lbtnReproducirT_Click" class="movie__button movie__button--white" runat="server">
                                  <img
                                      src="imgs/icons/play.svg"
                                      alt="Icono reproducir"
@@ -356,13 +351,13 @@
                                     <%--<div style="width:600px;height:300px" class="container--flex container--flex-column full-width more-information__video">
                                     <%# Eval("contenido") %>
                                     </div>--%>
-
-                                    <iframe
+                                    <%# Eval("contenido") %>
+                                    <%--<iframe
                                         src='<%# Eval("contenido_mobile") %>'
                                         title='<%# Eval("nombre_contenido_str") %>'
                                         frameborder="0"
                                         allowfullscreen
-                                    ></iframe>
+                                    ></iframe>--%>
                                     <p class="text text--center text--light">
                                         <%# Eval("nombre_contenido_str") %>
                                     </p>

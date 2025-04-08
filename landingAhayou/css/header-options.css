@@ -19,7 +19,9 @@
 }
 
 .options__container--second {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .options__menu,

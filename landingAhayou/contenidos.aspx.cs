@@ -90,6 +90,9 @@ namespace landingAhayou
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
             Session.Abandon();
+            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("home.aspx");
         }
     }

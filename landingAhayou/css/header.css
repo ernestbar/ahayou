@@ -159,6 +159,11 @@
 
 .header__nav-buttons--with-text {
     gap: 10px;
+    white-space: nowrap;
+}
+
+.header__nav-input {
+    gap: 5px;
 }
 
 .repetitive-buttons {
@@ -252,8 +257,12 @@
 }
 
 .header__title {
-    font-weight: var(--second-font-weight);
+    font-weight: 700;
     letter-spacing: -10px;
+}
+
+.header__title > span {
+    font-weight: 100;
 }
 
 .header__description {
@@ -308,6 +317,53 @@
 }
 
 /*
+    Component: header__nav-input
+
+    Description: Styles for a header__nav-input, that
+    contains styles for button and input for the search
+    header nav.
+*/
+
+.header__input {
+    padding: 5px 10px;
+    color: #000;
+    font-size: 1.25rem;
+    height: 46px;
+    border-radius: 10px;
+    width: 250px;
+    border: none;
+}
+
+.header__input:focus {
+    outline: none;
+    border: 2.5px solid var(--color-primary);
+}
+
+.header__button--search {
+    height: 46px;
+    width: 46px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-white);
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__button--search > img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    object-fit: fill;
+}
+
+.header__button--search:hover {
+    background-color: #b4b4b4;
+}
+
+/*
     Section: Responsive
 
     Description: Media queries that change styles from
@@ -316,6 +372,12 @@
     show its items, by changing display values, heights
     and other properties
 */
+
+@media (max-width: 1800px) {
+    .header__input {
+        font-size: 1.15em;
+    }
+}
 
 @media (max-width: 1600px) {
     .header__items-container {
@@ -336,6 +398,10 @@
 @media (max-width: 1024px) {
     .header__items-container {
         gap: 25px;
+    }
+
+    .header__input {
+        font-size: 1em;
     }
 }
 
@@ -368,12 +434,14 @@
     }
 
     .header__logo,
-    .header__nav-buttons--with-text {
+    .header__nav-buttons--with-text,
+    .header__nav-input {
         grid-column: 2;
     }
 
     .header__logo {
         grid-row: 1;
+        margin: auto 0;
     }
 
     .header__nav-buttons--only-img {
@@ -384,7 +452,8 @@
         align-items: center;
     }
 
-    .header__nav-buttons--with-text {
+    .header__nav-buttons--with-text,
+    .header__nav-input {
         grid-row: 2;
     }
 
@@ -439,6 +508,10 @@
         ) {
         height: inherit;
     }
+
+    .header__input {
+        width: auto;
+    }
 }
 
 @media (max-width: 992px), (max-height: 768px) {
@@ -489,6 +562,15 @@
     .header__items-container {
         gap: 35px;
     }
+
+    .header__input {
+        width: 100%;
+    }
+
+    .header__button--with-img {
+        width: 4em;
+        height: 4em;
+    }
 }
 
 @media (max-width: 600px), (max-height: 600px) {
@@ -520,7 +602,8 @@
         margin-bottom: 30px;
     }
 
-    .header__nav-buttons--with-text {
+    .header__nav-buttons--with-text,
+    .header__nav-input {
         grid-column: 3 / span 3;
         width: 100%;
         grid-row: 1;
@@ -529,6 +612,20 @@
     .header__nav-buttons--only-img {
         grid-column: 6;
         grid-row: 1;
+    }
+
+    .header__nav-input {
+        height: 75%;
+    }
+
+    .header__input {
+        height: inherit;
+        width: 100%;
+    }
+
+    .header__button--search {
+        height: inherit;
+        width: 40px;
     }
 }
 
@@ -543,17 +640,23 @@
     }
 
     .header__logo,
-    .header__nav-buttons--with-text {
+    .header__nav-buttons--with-text,
+    .header__nav-input {
         grid-column: 1/3;
     }
 
-    .header__nav-buttons--with-text {
+    .header__nav-buttons--with-text,
+    .header__nav-input {
         width: 100%;
     }
 
     .header__button--text {
         padding: 5px;
         width: 50%;
+    }
+
+    .header__input {
+        width: 100%;
     }
 }
 
@@ -568,6 +671,12 @@
 
     .header__button--text {
         padding: 5px;
+    }
+}
+
+@media (max-width: 300px) {
+    .header__nav-buttons--with-text {
+        white-space: normal;
     }
 }
 
@@ -635,7 +744,8 @@
 }
 
 @media (max-width: 400px) {
-    .header__button {
+    .header__button,
+    .header__input {
         font-size: 0.8em;
     }
 }
@@ -740,7 +850,8 @@
         grid-row: 1;
     }
 
-    .header__nav-buttons--with-text {
+    .header__nav-buttons--with-text,
+    .header__nav-input {
         grid-column: 3 / 5;
         width: 100%;
         grid-row: 1;

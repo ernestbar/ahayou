@@ -148,18 +148,18 @@ namespace landingAhayou
 
                 if (id != null)
                 {
-
-                    if (id.Text.ToUpper().Contains("MAS VISTOS") || id.Text.ToUpper().Contains("MAS VISTAS") || id.Text.ToUpper().Contains("MOST VIEWED"))
-                    {
-                        panel1.Visible = false;
-                    }
-                    else
-                    {
-                        panel1.Visible = true;
-                        Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
-                        rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA_CONSULTA(lblUsuario.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
-                        rSegmentos.DataBind();
-                    }
+                    panel1.Visible = true;
+                    Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
+                    rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA_CONSULTA(lblUsuario.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
+                    rSegmentos.DataBind();
+                    //if (id.Text.ToUpper().Contains("MAS VISTOS") || id.Text.ToUpper().Contains("MAS VISTAS") || id.Text.ToUpper().Contains("MOST VIEWED"))
+                    //{
+                    //    panel1.Visible = false;
+                    //}
+                    //else
+                    //{
+                        
+                    //}
 
 
 
@@ -172,45 +172,7 @@ namespace landingAhayou
 
 
 
-        protected void Repeater4_ItemDataBound(object sender, RepeaterItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListItemType.Item ||
-                 e.Item.ItemType == ListItemType.AlternatingItem)
-            {
-                Label id = (Label)e.Item.FindControl("lblSeccion");
-                Panel panel1 = (Panel)e.Item.FindControl("Panel_nas_vistos");
-                //Panel panel2 = (Panel)e.Item.FindControl("Panel_mas_visto");
-
-                if (id != null)
-                {
-
-                    if (id.Text.ToUpper().Contains("MAS VISTOS") || id.Text.ToUpper().Contains("MAS VISTAS") || id.Text.ToUpper().Contains("MOST VIEWED"))
-                    {
-                        panel1.Visible = true;
-                        //panel2.Visible = true;
-                        Repeater rSegmentos2 = (Repeater)e.Item.FindControl("Repeater3");
-                        rSegmentos2.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA_CONSULTA(lblUsuario.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
-                        rSegmentos2.DataBind();
-                    }
-                    else
-                    {
-                        panel1.Visible = false;
-                        ////panel2.Visible = false;
-                        //Repeater rSegmentos = (Repeater)e.Item.FindControl("Repeater1");
-                        //rSegmentos.DataSource = Clases.Carteleras.PR_STR_GET_VER_CARTELERA(lblUsuario1.Text, lblplanSuscriptor.Text, lblPerfilSuscriptor.Text, lblMenu.Text, id.Text);
-                        //rSegmentos.DataBind();
-                    }
-
-
-                }
-
-
-
-            }
-
-        }
-
-
+        
         protected void btnMenu_Click(object sender, EventArgs e)
         {
             Button obj = (Button)sender;
@@ -225,6 +187,7 @@ namespace landingAhayou
             Session.Abandon();
             Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("home.aspx");
         }
 
@@ -286,7 +249,8 @@ namespace landingAhayou
 
         protected void btnBusqueda_Click(object sender, EventArgs e)
         {
-
+            Session["busqueda"] = txtBusqueda.Text;
+            Response.Redirect("resultado_busqueda.aspx");
         }
     }
 }

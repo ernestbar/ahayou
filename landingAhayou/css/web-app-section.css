@@ -66,20 +66,18 @@
     padding: 10px 50px;
     line-height: 1;
     text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     font-size: 6em;
 }
 
-.web-app-section__title span:nth-child(1) {
+.web-app-section__title span {
     font-weight: bold;
     color: var(--color-primary);
 }
 
-.web-app-section__title span:nth-child(2) {
+/* .web-app-section__title span:nth-child(2) {
     font-weight: 300;
-}
+} */
 
 .web-app-section__container-description {
     display: flex;

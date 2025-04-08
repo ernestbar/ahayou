@@ -221,6 +221,7 @@ namespace landingAhayou
             Session.Abandon();
             Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("home.aspx");
         }
 
@@ -248,7 +249,7 @@ namespace landingAhayou
                 DataTable dtCP= Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
                 foreach (DataRow dr in dtCP.Rows)
                 {
-                    url_streaming = dr["contenido_mobile"].ToString();
+                    url_streaming = dr["contenido"].ToString();
                 }
             }
             else
@@ -260,7 +261,7 @@ namespace landingAhayou
                     //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
                     if (dr["episodio"].ToString() == "1")
                     {
-                        url_streaming = dr["contenido_mobile"].ToString();
+                        url_streaming = dr["contenido"].ToString();
                     }
                 }
             }

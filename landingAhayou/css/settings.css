@@ -11,6 +11,7 @@
 body {
     background-color: var(--color-white) !important;
     background-image: none;
+    overflow-x: auto !important;
 }
 
 body * {
@@ -39,4 +40,13 @@ body * {
 
 .settings__item {
     padding: 10px 0;
+}
+
+.settings__item > a > *:first-child {
+    width: 90%;
+}
+
+.settings__item > a > *:not(:first-child) {
+    width: 10%;
+    max-width: 30px;
 }

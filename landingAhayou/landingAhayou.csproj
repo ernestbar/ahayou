@@ -219,6 +219,7 @@
     <Content Include="css\playlist.css" />
     <Content Include="css\profiles.css" />
     <Content Include="css\ribbon.css" />
+    <Content Include="css\search-results.css" />
     <Content Include="css\settings.css" />
     <Content Include="css\show-list.css" />
     <Content Include="css\type-payment.css" />
@@ -491,6 +492,7 @@
     <Content Include="imgs\icons\play.svg" />
     <Content Include="imgs\icons\profile.svg" />
     <Content Include="imgs\icons\return.svg" />
+    <Content Include="imgs\icons\search.svg" />
     <Content Include="imgs\icons\shield-check.svg" />
     <Content Include="imgs\icons\shield.svg" />
     <Content Include="imgs\logos\barbara.png" />
@@ -583,7 +585,6 @@
     <Content Include="suscribete.aspx" />
     <Content Include="sw.js" />
     <Content Include="terminos_uso.aspx" />
-    <Content Include="test.aspx" />
     <Content Include="verificar_correo.aspx" />
     <Content Include="ver_streaming.aspx" />
     <Content Include="Web.config" />
@@ -744,13 +745,6 @@
     </Compile>
     <Compile Include="terminos_uso.aspx.designer.cs">
       <DependentUpon>terminos_uso.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="verificar_correo.aspx.cs">
       <DependentUpon>verificar_correo.aspx</DependentUpon>
