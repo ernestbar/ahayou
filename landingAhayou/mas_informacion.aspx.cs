@@ -26,54 +26,65 @@ namespace landingAhayou
                 }
                 else
                 {
-                    
+                    lblUsuario.Text = Session["usuario"].ToString();
                     if (Session["cod_plan_suscriptor"] == null)
-                        Response.Redirect("selecciona_plan.aspx");
-                    else 
-                    {
-                        lblUsuario.Text = Session["usuario"].ToString();
+                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                    else
                         lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                    if (Session["cod_perfil_suscriptor"] == null)
+                        lblPerfilSuscriptor.Text = "0";
+                    else
                         lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
-                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-                        lblCodContenidoStr.Text = Request.QueryString["ID"];
-                        btnLogin.Visible = false;
-                        btnSuscribete.Visible = false;
-                        DataTable dt = new DataTable();
-                        dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-                        foreach (DataRow dr in dt.Rows)
-                        {
-                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
-                            {
-                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
-                            }
-                        }
 
-                        DataTable dt2 = new DataTable();
-                        dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
-                        foreach (DataRow dr2 in dt2.Rows)
+                    if (Session["codigo_plan"] == null)
+                        lblCodigoPlan.Text = "0";
+                    else
+                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                    lblCodContenidoStr.Text = Request.QueryString["ID"];
+                    btnLogin.Visible = false;
+                    btnSuscribete.Visible = false;
+                    DataTable dt = new DataTable();
+                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
                         {
-                            if (dr2["trailers"].ToString() == "SI")
-                            {
-                                lblTituloTrailers.Visible = true;
-                                Panel_trailers.Visible = true;
-                            }
-                            else
-                            {
-                                lblTituloTrailers.Visible = false;
-                                Panel_trailers.Visible = false;
-                            }
-                            if (dr2["temporadas_episodios"].ToString() == "SI")
-                            {
-                                lblTituloTemporadas.Visible = true;
-                                Panel_temporadas.Visible = true;
-                            }
-                            else
-                            {
-                                lblTituloTemporadas.Visible = false;
-                                Panel_temporadas.Visible = false;
-                            }
+                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
                         }
                     }
+
+                    DataTable dt2 = new DataTable();
+                    dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
+                    foreach (DataRow dr2 in dt2.Rows)
+                    {
+                        if (dr2["trailers"].ToString() == "SI")
+                        {
+                            lblTituloTrailers.Visible = true;
+                            Panel_trailers.Visible = true;
+                        }
+                        else
+                        {
+                            lblTituloTrailers.Visible = false;
+                            Panel_trailers.Visible = false;
+                        }
+                        if (dr2["temporadas_episodios"].ToString() == "SI")
+                        {
+                            lblTituloTemporadas.Visible = true;
+                            Panel_temporadas.Visible = true;
+                        }
+                        else
+                        {
+                            lblTituloTemporadas.Visible = false;
+                            Panel_temporadas.Visible = false;
+                        }
+                    }
+
+                    //if (Session["cod_plan_suscriptor"] == null)
+                    //    Response.Redirect("selecciona_plan.aspx");
+                    //else 
+                    //{
+                        
+                    //}
                     
 
                 }
@@ -103,18 +114,28 @@ namespace landingAhayou
 
         protected void ibtnFavoritos_Click(object sender, ImageClickEventArgs e)
         {
-            Carteleras obj = new Carteleras("F",lblPerfilSuscriptor.Text,lblplanSuscriptor.Text,lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text,"",lblUsuario.Text);
-            obj.ABM();
-            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            if (lblplanSuscriptor.Text == "0")
+            { Response.Redirect("selecciona_plan.aspx"); }
+            else {
+                Carteleras obj = new Carteleras("F", lblPerfilSuscriptor.Text, lblplanSuscriptor.Text, lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text, "", lblUsuario.Text);
+                obj.ABM();
+                string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            }
+            
         }
 
         protected void ibtnLike_Click(object sender, ImageClickEventArgs e)
         {
-            Carteleras obj = new Carteleras("L", lblPerfilSuscriptor.Text, lblplanSuscriptor.Text, lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text, "", lblUsuario.Text);
-            obj.ABM();
-            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            if (lblplanSuscriptor.Text == "0")
+            { Response.Redirect("selecciona_plan.aspx"); }
+            else
+            {
+                Carteleras obj = new Carteleras("L", lblPerfilSuscriptor.Text, lblplanSuscriptor.Text, lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text, "", lblUsuario.Text);
+                obj.ABM();
+                string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            }
         }
 
         protected void lbtnReproducir_Click(object sender, EventArgs e)
@@ -141,7 +162,7 @@ namespace landingAhayou
                 DataTable dtCP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
                 foreach (DataRow dr in dtCP.Rows)
                 {
-                    url_streaming = dr["contenido_mobile"].ToString();
+                    url_streaming = dr["contenido"].ToString();
                 }
             }
             else
@@ -152,7 +173,7 @@ namespace landingAhayou
                     //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
                     if (dr["episodio"].ToString() == "1")
                     {
-                        url_streaming = dr["contenido_mobile"].ToString();
+                        url_streaming = dr["contenido"].ToString();
                     }
                 }
             }

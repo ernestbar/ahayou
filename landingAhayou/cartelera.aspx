@@ -94,7 +94,7 @@
                     <div class="header__nav-buttons header__nav-input">
                             <asp:TextBox ID="txtBusqueda" class="header__input" ValidationGroup="busqueda" placeholder="Buscar..." runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Orange" ValidationGroup="busqueda" ControlToValidate="txtBusqueda"></asp:RequiredFieldValidator>
-                            <asp:ImageButton ID="btnBusqueda1" class="header__button--search" ImageUrl="~/imgs/icons/search.svg" ValidationGroup="busqueda" OnClick="btnBusqueda_Click" runat="server" />
+                            <asp:ImageButton ID="btnBusqueda1" class="header__button--search" Height="46px" ImageUrl="~/imgs/icons/search.svg" ValidationGroup="busqueda" OnClick="btnBusqueda_Click" runat="server" />
                     </div>
                 <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />

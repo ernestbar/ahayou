@@ -214,6 +214,7 @@
     <Content Include="css\main.css" />
     <Content Include="css\more-information.css" />
     <Content Include="css\new-releases.css" />
+    <Content Include="css\pin.css" />
     <Content Include="css\plans-selection.css" />
     <Content Include="css\plans.css" />
     <Content Include="css\playlist.css" />
@@ -560,6 +561,7 @@
     <Content Include="js\open-menu.js" />
     <Content Include="js\open-sidebar.js" />
     <Content Include="js\open-submenu.js" />
+    <Content Include="js\pin.js" />
     <Content Include="js\show-list.js" />
     <Content Include="js\show-one-bg.js" />
     <Content Include="js\show-validation-alert.js" />
@@ -573,6 +575,7 @@
     <Content Include="playlist.html" />
     <Content Include="privacidad.aspx" />
     <Content Include="privacy.html" />
+    <Content Include="profile-pin.html" />
     <Content Include="reset_password.aspx" />
     <Content Include="resultado_busqueda.aspx" />
     <Content Include="return.js" />

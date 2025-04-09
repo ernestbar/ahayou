@@ -122,7 +122,7 @@
 																	<th class="text-nowrap">TIEMPO HORA</th>
 																	<th class="text-nowrap">TIEMPO MIN</th>
 																	<th class="text-nowrap">CONTENIDO</th>
-																	<th class="text-nowrap">CONTENIDO MOBILE</th>
+																	<th >CONTENIDO MOBILE</th>
 													<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 													</tr>
@@ -138,7 +138,11 @@
 													<td><asp:Label ID="lblEsPrincipal3" runat="server" Text='<%# Eval("EPISODIO") %>'></asp:Label></td>
 														<td><asp:Label ID="Label1" runat="server" Text='<%# Eval("TIEMPO_HORA") %>'></asp:Label></td>
 														<td><asp:Label ID="Label2" runat="server" Text='<%# Eval("TIEMPO_MINUTOS") %>'></asp:Label></td>
-														<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>
+														<%--<td><asp:Label ID="Label3" runat="server" Text='<%# Eval("CONTENIDO") %>'></asp:Label></td>--%>
+														<td style="width:100%;height:100%">
+															<asp:Literal ID="Literal1" runat="server" Text='<%# Eval("CONTENIDO") %>'>
+
+															</asp:Literal></td>
 														<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("CONTENIDO_MOBILE") %>'></asp:Label></td>
 																	
 																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
