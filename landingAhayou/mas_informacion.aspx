@@ -130,34 +130,17 @@
                         </asp:Repeater>
                        
                         
-                        <a href="#" class="options__button--flex">
-                            <img
-                                src="imgs/icons/administration.svg"
-                                alt="Foto perfil"
-                            />
-                            <p class="text--small text text--light">
-                                Administraci&oacute;n
-                            </p>
-                        </a>
-                        <a href="#" class="options__button--flex">
-                            <img
-                                src="imgs/icons/profile.svg"
-                                alt="Foto perfil"
-                            />
-                            <p class="text--small text text--light">
-                                Cuenta
-                            </p>
-                        </a>
-                        <a href="#" class="options__button--flex">
-                            <img
-                                src="imgs/icons/help-center.svg"
-                                alt="Foto perfil"
-                            />
-                            <p class="text--small text text--light">
-                                Centro de ayuda
-                            </p>
-                        </a>
-                        <a href="#" class="options__button--flex">
+                         <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
+                              <img
+                                  src="imgs/icons/administration.svg"
+                                  alt="Foto perfil"
+                              />
+                              <p class="text--small text text--light">
+                                  Cuenta
+                              </p>
+
+                         </asp:LinkButton>
+                        <a href="mas_informacion.aspx" class="options__button--flex">
                             <img
                                 src="imgs/flags/spain.png"
                                 alt="Foto perfil"
@@ -166,7 +149,7 @@
                                 Idioma español
                             </p>
                         </a>
-                        <a href="#" class="options__button--flex">
+                        <a href="mas_informacion_us.aspx" class="options__button--flex">
                             <img
                                 src="imgs/flags/eeuu.png"
                                 alt="Foto perfil"

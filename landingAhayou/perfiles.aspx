@@ -76,64 +76,20 @@
             <section class="profiles">
                 <h1>Perfiles</h1>
                 <div class="profiles__container">
-                      <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
+                      <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" runat="server">
                         <ItemTemplate>
-                            <asp:LinkButton class="profiles__item" ID="lbtnPerfil" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfil_Click" runat="server"> <img
+                            <asp:LinkButton class="profiles__item" ID="lbtnPerfil" CommandArgument='<%# Eval("cod_perfil_suscriptor")+"|"+ Eval("pin") %>' OnClick="lbtnPerfil_Click" runat="server"> <img
                                      src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                      alt="Foto de perfil"
                                      class="profiles__item-image"
                                  />
                                  <span class="profiles__item-text"><%# Eval("nombre_perfil") %></span>
-                                <asp:Panel ID="panel_pin"  class="profiles__item" runat="server">
-                                      <label
-                                          for="email"
-                                          class="form__label form__label--second"
-                                      >
-                                          Ingresa tu PIN
-                                      </label>
-                                    <asp:TextBox class="form__input form__input--dark"  ID="txtPin" Text="" runat="server"></asp:TextBox>
-                                    <asp:TextBox class="form__input form__input--dark" ReadOnly="true" Height="0" ForeColor="Black" ID="txtPin2" Visible="true"  Text='<%# Eval("pin") %>' runat="server"></asp:TextBox>
-                                     <asp:CompareValidator ID="cfvNumeroCelular" runat="server"  ControlToCompare="txtPin2" ControlToValidate="txtPin" Operator="Equal" Type="Integer" Display="Dynamic" ErrorMessage="* PIN incorrecto." ></asp:CompareValidator>
-                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Orange" ControlToValidate="txtPin" ErrorMessage="* Debes ingresar tu pin"></asp:RequiredFieldValidator>
-                                </asp:Panel>
                             </asp:LinkButton>
-                            
-                              
-<%--                            <button class="profiles__item">
-                                    <img
-                                        src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
-                                        alt="Foto de perfil"
-                                        class="profiles__item-image"
-                                    />
-                                    <span class="profiles__item-text"><%# Eval("codigo_avatar") %></span>
-                                </button>--%>
+
                         </ItemTemplate>
                           </asp:Repeater>
                     
-                    <%--<button class="profiles__item">
-                        <img
-                            src="imgs/etc/profile_image.png"
-                            alt="Foto de perfil"
-                            class="profiles__item-image"
-                        />
-                        <span class="profiles__item-text">Perfil 2</span>
-                    </button>
-                    <button class="profiles__item">
-                        <img
-                            src="imgs/etc/profile_image.png"
-                            alt="Foto de perfil"
-                            class="profiles__item-image"
-                        />
-                        <span class="profiles__item-text">Perfil 3</span>
-                    </button>
-                    <button class="profiles__item">
-                        <img
-                            src="imgs/etc/profile_image.png"
-                            alt="Foto de perfil"
-                            class="profiles__item-image"
-                        />
-                        <span class="profiles__item-text">Perfil 4</span>
-                    </button>--%>
+                    
                 </div>
             </section>
         </main>

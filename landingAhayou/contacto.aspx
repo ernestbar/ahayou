@@ -80,58 +80,38 @@
                          </div>
                      </div>
                 </asp:Panel>
-                <asp:Panel ID="Panel_login" Visible="false" class="header__nav-buttons submenu__container options__container--second" runat="server">
+                <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
-                    <%--<button
-                        class="header__button header__button--with-img submenu__button"
-                    >
-                        <asp:Image class="header__button header__button--with-img submenu__button"  ID="imgPerfil" runat="server"  />
-                    </button>--%>
                     <div
                         class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
                     >
                         <div class="container--flex container--flex-column">
                             <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
                                 <ItemTemplate>
-                                     <a href="#" class="options__button--flex">
+                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfiles_Click" runat="server">
                                          <img
                                              src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                              alt="Foto perfil"
                                          />
                                          <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
-                                     </a>
+
+                                    </asp:LinkButton>
+     
                                 </ItemTemplate>
                             </asp:Repeater>
-       
+                            <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
+                                 <img
+                                     src="imgs/icons/administration.svg"
+                                     alt="Foto perfil"
+                                 />
+                                 <p class="text--small text text--light">
+                                     Cuenta
+                                 </p>
+
+                            </asp:LinkButton>
         
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/icons/administration.svg"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Administraci&oacute;n
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/icons/profile.svg"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Cuenta
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/icons/help-center.svg"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Centro de ayuda
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
+           
+                            <a href="contacto.aspx" class="options__button--flex">
                                 <img
                                     src="imgs/flags/spain.png"
                                     alt="Foto perfil"
@@ -140,7 +120,7 @@
                                     Idioma español
                                 </p>
                             </a>
-                            <a href="#" class="options__button--flex">
+                            <a href="contacto_us.aspx" class="options__button--flex">
                                 <img
                                     src="imgs/flags/eeuu.png"
                                     alt="Foto perfil"
@@ -159,6 +139,7 @@
                         <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
     
                     </div>
+        
                 </asp:Panel>
             </nav>
         </header>

@@ -58,11 +58,11 @@ namespace AhayouWebAPI.Controllers
                             }).ToList();
 
 
-                if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
-                    error = "";
-                else
-                    error = (string)comando.Parameters["@PV_ERROR"].Value;
-                oRespuestaAPI.descripcion = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
+                //if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
+                //    error = "";
+                //else
+                //    error = (string)comando.Parameters["@PV_ERROR"].Value;
+                //oRespuestaAPI.descripcion = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = true;
                 oRespuestaAPI.mensajesError = new List<string>() { "" };

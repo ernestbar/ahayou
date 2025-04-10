@@ -1,38 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\",
+  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\sesionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\sesionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\pinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\pinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitoclases\\sesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\sesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\trailerscontenidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\trailerscontenidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\suscriptorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\suscriptorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\suscriptorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\pagosplansuscriptorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\pagosplansuscriptorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\perfilessuscriptorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\perfilessuscriptorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitoclases\\plan_pagos_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\plan_pagos_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|c:\\github\\ahayou\\ahayouwebapi\\monitoclases\\perfiles_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\perfiles_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitoclases\\contenidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\contenidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,103 +94,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrailersContenidoController.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\TrailersContenidoController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\TrailersContenidoController.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\TrailersContenidoController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\TrailersContenidoController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAxwEUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:46:40.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Sesiones.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoClases\\Sesiones.cs",
-              "RelativeDocumentMoniker": "MonitoClases\\Sesiones.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoClases\\Sesiones.cs",
-              "RelativeToolTip": "MonitoClases\\Sesiones.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Title": "SuscriptoresController.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "RelativeToolTip": "MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwGoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:34:32.925Z",
+              "WhenOpened": "2025-04-10T16:04:28.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SesionesController.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SesionesController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\SesionesController.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SesionesController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\SesionesController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAswH4AAAA4AAAAAAAAAA==",
+              "Title": "PinesController.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PinesController.cs",
+              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\PinesController.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PinesController.cs",
+              "RelativeToolTip": "MonitoWebAPI\\Controllers\\PinesController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwFIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:32:15.758Z",
+              "WhenOpened": "2025-04-10T16:04:06.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SuscriptoresController.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAwwIgAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Contenidos.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\Contenidos.cs",
+              "RelativeDocumentMoniker": "MonitoClases\\Contenidos.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\Contenidos.cs",
+              "RelativeToolTip": "MonitoClases\\Contenidos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T15:23:40.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PagosPlanSuscriptorController.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAQwEkAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T15:17:37.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Perfiles_suscriptor.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoClases\\Perfiles_suscriptor.cs",
-              "RelativeDocumentMoniker": "MonitoClases\\Perfiles_suscriptor.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoClases\\Perfiles_suscriptor.cs",
-              "RelativeToolTip": "MonitoClases\\Perfiles_suscriptor.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAoAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:34:14.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Plan_pagos_suscriptor.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoClases\\Plan_pagos_suscriptor.cs",
-              "RelativeDocumentMoniker": "MonitoClases\\Plan_pagos_suscriptor.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoClases\\Plan_pagos_suscriptor.cs",
-              "RelativeToolTip": "MonitoClases\\Plan_pagos_suscriptor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:34:08.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PerfilesSuscriptorController.cs",
-              "DocumentMoniker": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PerfilesSuscriptorController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\PerfilesSuscriptorController.cs",
-              "ToolTip": "C:\\GITHUB\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PerfilesSuscriptorController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\PerfilesSuscriptorController.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAwwIQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:50:37.099Z"
+              "WhenOpened": "2025-04-10T14:10:18.348Z"
             }
           ]
         }

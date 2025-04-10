@@ -88,6 +88,7 @@ namespace landingAhayou
                         if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
                         {
                             imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                                
                         }
                     }
                     if (Session["menu"] == null) { lblMenu.Text = "0"; }
@@ -285,6 +286,30 @@ namespace landingAhayou
         {
             Session["busqueda"]=txtBusqueda.Text;
             Response.Redirect("resultado_busqueda.aspx");
+        }
+
+        protected void lbtnCuenta_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                {
+
+                    if (dr["es_principal"].ToString() == "SI")
+                        Response.Redirect("cuenta_suscriptor.aspx");
+                    else 
+                    {
+                        string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                    }
+
+                }
+            }
+            
         }
     }
 }

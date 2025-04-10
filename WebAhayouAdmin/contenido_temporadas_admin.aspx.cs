@@ -77,6 +77,7 @@ namespace WebAhayouAdmin
             txtStoryLineIngles.Text = "";
             txtTemporada.Text = "";
             txtContenidoMobile.Text = "";
+            txtContenidoPlaylist.Text = "";
             
             //txtFormatoContenido.Text = ddlFormatoContenido.SelectedItem.Text;
         }
@@ -114,7 +115,7 @@ namespace WebAhayouAdmin
                 {
                     Clases.Contenido_temporadas obj = new Clases.Contenido_temporadas("I", 0, lblCodContenidoSTR.Text, int.Parse(txtOrden.Text),int.Parse(txtTemporada.Text),
                         int.Parse(txtEpisodio.Text),txtHoras.Text,txtMinutos.Text,txtStoryLine.Text,txtSinopsis.Text,txtStoryLineIngles.Text,
-                        txtSinopsisIngles.Text,txtContenido.Text,lblUsuario.Text,txtContenidoMobile.Text);
+                        txtSinopsisIngles.Text,txtContenido.Text,lblUsuario.Text,txtContenidoMobile.Text,txtContenidoPlaylist.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -125,7 +126,7 @@ namespace WebAhayouAdmin
 
                     Clases.Contenido_temporadas obj = new Clases.Contenido_temporadas("U",int.Parse(lblCodigo.Text), lblCodContenidoSTR.Text, int.Parse(txtOrden.Text), int.Parse(txtTemporada.Text),
                         int.Parse(txtEpisodio.Text), txtHoras.Text, txtMinutos.Text, txtStoryLine.Text, txtSinopsis.Text, txtStoryLineIngles.Text,
-                        txtSinopsisIngles.Text, txtContenido.Text, lblUsuario.Text, txtContenidoMobile.Text);
+                        txtSinopsisIngles.Text, txtContenido.Text, lblUsuario.Text, txtContenidoMobile.Text, txtContenidoPlaylist.Text);
                     obj.ABM();
                     lblAviso.Text = obj.PV_DESCRIPCIONPR;
                     MultiView1.ActiveViewIndex = 0;
@@ -173,6 +174,7 @@ namespace WebAhayouAdmin
                 txtStoryLineIngles.Text = obj_m.PV_STORY_LINE_INGLES.ToString();
                 txtContenido.Text=obj_m.PV_CONTENIDO.ToString(); 
                 txtContenidoMobile.Text=obj_m.PV_CONTENIDO_MOBILE.ToString();
+                txtContenidoPlaylist.Text=obj_m.PV_CONTENIDO_PLAYLIST.ToString();
                 MultiView1.ActiveViewIndex = 1;
 
             }
@@ -197,7 +199,7 @@ namespace WebAhayouAdmin
                 id = obj.CommandArgument.ToString();
                 lblCodigo.Text = id;
                 Clases.Contenido_temporadas obj_m = new Clases.Contenido_temporadas("D", int.Parse(id), lblCodContenidoSTR.Text, 0, 0,
-                        0, "", "", "", "", "", "", "", lblUsuario.Text,"");
+                        0, "", "", "", "", "", "", "", lblUsuario.Text,"","");
                 obj_m.ABM();
                 lblAviso.Text = obj_m.PV_DESCRIPCIONPR;
                 Repeater1.DataBind();
@@ -236,6 +238,7 @@ namespace WebAhayouAdmin
             lblStoryLineIngles.Text = temporada.PV_STORY_LINE_INGLES;
             lblContenido.Text = temporada.PV_CONTENIDO;
             lblContenidoMobile.Text=temporada.PV_CONTENIDO_MOBILE;
+            litPlaylist.Text=temporada.PV_CONTENIDO_PLAYLIST;
             MultiView1.ActiveViewIndex = 2;
         }
 

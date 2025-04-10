@@ -54,10 +54,17 @@ namespace landingAhayou
         {
             
             LinkButton obj = (LinkButton)sender;
-            string id = obj.CommandArgument.ToString();
+            string[] id = obj.CommandArgument.ToString().Split('|');
             Session["usuario"] = lblUsuario.Text;
-            Session["cod_perfil_suscriptor"] = id;
-            Response.Redirect("cartelera.aspx");
+            Session["cod_perfil_suscriptor"] = id[0];
+            Session["pin"] = id[1];
+            if (id[1] == "0")
+                Response.Redirect("cartelera.aspx");
+            else
+            {
+                Response.Redirect("pin_perfil.aspx");
+            }
+               
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -70,24 +77,6 @@ namespace landingAhayou
             Response.Redirect("suscribete.aspx");
         }
 
-        protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListItemType.Item ||
-               e.Item.ItemType == ListItemType.AlternatingItem)
-            {
-                TextBox texto_pin = (TextBox)e.Item.FindControl("txtPin");
-                TextBox texto_pin2 = (TextBox)e.Item.FindControl("txtPin2");
-                Panel panel_pin = (Panel)e.Item.FindControl("panel_pin");
-                if (texto_pin2.Text == "0")
-                {
-                    panel_pin.Visible = false;
-                }
-                else
-                {
-                    panel_pin.Visible = true;
-                }
-
-            }
-        }
+       
     }
 }

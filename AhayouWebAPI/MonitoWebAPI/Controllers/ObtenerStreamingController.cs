@@ -55,7 +55,7 @@ namespace AhayouWebAPI.Controllers
                             story_line_ingles = dr["story_line_ingles"] == DBNull.Value ? "" : (string)dr["story_line_ingles"],
                             sinopsis = dr["sinopsis"] == DBNull.Value ? "" : (string)dr["sinopsis"],
                             sinopsis_ingles = dr["sinopsis_ingles"] == DBNull.Value ? "" : (string)dr["sinopsis_ingles"],
-                            contenido = dr["contenido_mobile"] == DBNull.Value ? "" : (string)dr["contenido"],
+                            contenido = dr["contenido_mobile"] == DBNull.Value ? "" : (string)dr["contenido_mobile"],
                         }).ToList();
 
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;

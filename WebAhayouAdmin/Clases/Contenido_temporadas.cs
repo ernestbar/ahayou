@@ -29,6 +29,7 @@ namespace WebAhayouAdmin.Clases
         public string PV_SINOPSIS_INGLES { get; set; }
         public string PV_CONTENIDO { get; set; }
         public string PV_CONTENIDO_MOBILE { get; set; }
+        public string PV_CONTENIDO_PLAYLIST { get; set; }
         public string PV_USUARIO { get; set; }
         public string PV_ESTADOPR { get; set; }
         public string PV_DESCRIPCIONPR { get; set; }
@@ -44,7 +45,7 @@ namespace WebAhayouAdmin.Clases
         public Contenido_temporadas(string pV_TIPO_OPERACION,  int pI_COD_CONTENIDO_TEMPORADAS ,
          string pV_COD_CONTENIDO_STR, int pI_ORDEN,  int pI_TEMPORADA, int pI_EPISODIO,
         string pV_TIEMPO_HORA, string pV_TIEMPO_MINUTOS, string pV_STORY_LINE, string pV_SINOPSIS,
-        string pV_STORY_LINE_INGLES, string pV_SINOPSIS_INGLES,string pV_CONTENIDO, string pV_USUARIO,string pV_CONTENIDO_MOBILE)
+        string pV_STORY_LINE_INGLES, string pV_SINOPSIS_INGLES,string pV_CONTENIDO, string pV_USUARIO,string pV_CONTENIDO_MOBILE,string pV_CONTENIDO_PLAYLIST)
         {
             PV_TIPO_OPERACION = pV_TIPO_OPERACION;
             PI_COD_CONTENIDO_TEMPORADAS = pI_COD_CONTENIDO_TEMPORADAS;
@@ -60,6 +61,7 @@ namespace WebAhayouAdmin.Clases
             PV_SINOPSIS_INGLES = pV_SINOPSIS_INGLES;
             PV_CONTENIDO = pV_CONTENIDO;
             PV_CONTENIDO_MOBILE = pV_CONTENIDO_MOBILE;
+            PV_CONTENIDO_PLAYLIST = pV_CONTENIDO_PLAYLIST;
             PV_USUARIO = pV_USUARIO;
         }
         #endregion
@@ -141,8 +143,18 @@ namespace WebAhayouAdmin.Clases
                             PV_STORY_LINE_INGLES = (string)dr["story_line_ingles"];
                             PV_SINOPSIS = (string)dr["sinopsis"];
                             PV_SINOPSIS_INGLES = (string)dr["sinopsis_ingles"];
-                            PV_CONTENIDO = (string)dr["contenido"];
-                            PV_CONTENIDO_MOBILE = (string)dr["contenido_mobile"];
+                            if (string.IsNullOrEmpty(dr["contenido"].ToString()))
+                                PV_CONTENIDO = "";
+                            else
+                                PV_CONTENIDO = (string)dr["contenido"];
+                            if (string.IsNullOrEmpty(dr["contenido_mobile"].ToString()))
+                                PV_CONTENIDO_MOBILE = "";
+                            else
+                                PV_CONTENIDO_MOBILE = (string)dr["contenido_mobile"];
+                            if (string.IsNullOrEmpty(dr["contenido_playlist"].ToString()))
+                                PV_CONTENIDO_PLAYLIST = "";
+                            else
+                                PV_CONTENIDO_PLAYLIST = (string)dr["contenido_playlist"];
                         }
 
                     }
@@ -178,6 +190,7 @@ namespace WebAhayouAdmin.Clases
                     cmd.Parameters.AddWithValue("PV_SINOPSIS_INGLES", PV_SINOPSIS_INGLES);
                     cmd.Parameters.AddWithValue("PV_CONTENIDO", PV_CONTENIDO);
                     cmd.Parameters.AddWithValue("PV_CONTENIDO_MOBILE", PV_CONTENIDO_MOBILE);
+                    cmd.Parameters.AddWithValue("PV_CONTENIDO_PLAYLIST", PV_CONTENIDO_PLAYLIST);
                     cmd.Parameters.AddWithValue("PV_USUARIO", PV_USUARIO);
                     cmd.Parameters.Add("PV_ESTADOPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("PV_DESCRIPCIONPR", SqlDbType.VarChar, 250).Direction = ParameterDirection.Output;

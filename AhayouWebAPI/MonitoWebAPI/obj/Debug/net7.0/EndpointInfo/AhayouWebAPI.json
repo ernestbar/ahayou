@@ -284,6 +284,86 @@
         }
       }
     },
+    "/api/CarteleraMobile/ListarRedes/{PV_USUARIO}/{PV_COD_PLAN_SUSCRIPTOR}/{PV_COD_PERFIL_SUSCRIPTOR}/{PI_MENU}/{PV_SECCION}": {
+      "get": {
+        "tags": [
+          "CarteleraMobile"
+        ],
+        "parameters": [
+          {
+            "name": "PV_USUARIO",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PV_COD_PLAN_SUSCRIPTOR",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PV_COD_PERFIL_SUSCRIPTOR",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PI_MENU",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PV_SECCION",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Contenidos/ListarContenidosxContenido/{PV_CONTENIDO}": {
       "get": {
         "tags": [
@@ -900,6 +980,57 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/Perfiles_suscriptor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pines/CambioPin": {
+      "post": {
+        "tags": [
+          "Pines"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pines"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pines"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pines"
               }
             }
           }
@@ -1699,6 +1830,40 @@
           "pv_error": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Pines": {
+        "type": "object",
+        "properties": {
+          "pV_TIPO_OPERACION": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_USUARIO_STR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_USUARIO": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_ESTADOPR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_DESCRIPCIONPR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pV_ERROR": {
+            "type": "string",
+            "nullable": true
+          },
+          "pB_PIN": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
