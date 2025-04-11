@@ -299,7 +299,7 @@
                                     <%# Eval("sinopsis") %>
                                 </p>
                             </div>
-                            <asp:LinkButton ID="lbtnReproducirT" CommandArgument='<%# Eval("contenido") %>' OnClick="lbtnReproducirT_Click" class="movie__button movie__button--white" runat="server">
+                            <asp:LinkButton ID="lbtnReproducirT" CommandArgument='<%# Eval("contenido_playlist") %>' OnClick="lbtnReproducirT_Click" class="movie__button movie__button--white" runat="server">
                                  <img
                                      src="imgs/icons/play.svg"
                                      alt="Icono reproducir"

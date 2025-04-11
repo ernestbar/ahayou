@@ -95,7 +95,7 @@ namespace landingAhayou
                             imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
                         }
                     }
-                    if (lblCodigoPlan.Text == "0")
+                    if (lblplanSuscriptor.Text == "0")
                     { Response.Redirect("selecciona_plan.aspx"); }
                     else
                     {
@@ -138,49 +138,7 @@ namespace landingAhayou
             Response.Redirect("home.aspx");
         }
 
-        protected void lbtnReproducir_Click(object sender, EventArgs e)
-        {
-            LinkButton obj = (LinkButton)sender;
-            string id = obj.CommandArgument.ToString();
-            DataTable dtCont = Clases.Contenidos.PR_STR_GET_CONTENIDO_STR_IND(id);
-            string pelicula = "";
-            string url_streaming = "";
-            foreach (DataRow drCont in dtCont.Rows)
-            {
-                pelicula = drCont["contenido_peliculas"].ToString();
-            }
-
-            if (pelicula == "SI")
-            {
-                string cod_contenido_pelicula = "";
-                DataTable dtP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA(id);
-                foreach (DataRow dr in dtP.Rows)
-                {
-                    cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
-                }
-
-                DataTable dtCP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
-                foreach (DataRow dr in dtCP.Rows)
-                {
-                    url_streaming = dr["contenido_mobile"].ToString();
-                }
-            }
-            else
-            {
-                DataTable dtT = Clases.Contenidos.PR_STR_GET_CONTENIDO_TEMPORADAS(id);
-                DataTable dtTemp1 = new DataTable();
-                foreach (DataRow dr in dtT.Rows)
-                {
-                    //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
-                    if (dr["episodio"].ToString() == "1")
-                    {
-                        url_streaming = dr["contenido_mobile"].ToString();
-                    }
-                }
-            }
-            Session["url_streaming"] = url_streaming;
-            Response.Redirect("ver_streaming.aspx");
-        }
+        
 
         protected void lbtnPerfiles_Click(object sender, EventArgs e)
         {
@@ -193,7 +151,30 @@ namespace landingAhayou
             Response.Redirect("cartelera.aspx");
 
         }
+        protected void lbtnCuenta_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
 
-       
+            dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                {
+
+                    if (dr["es_principal"].ToString() == "SI")
+                        Response.Redirect("cuenta_suscriptor.aspx");
+                    else
+                    {
+                        string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                    }
+
+                }
+            }
+
+        }
+
+
     }
 }
