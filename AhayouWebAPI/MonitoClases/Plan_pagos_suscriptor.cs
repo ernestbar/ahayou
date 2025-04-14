@@ -10,7 +10,7 @@ namespace AhayouClases
     {
         public string PV_TIPO_OPERACION { get; set; }
         public string PV_USUARIO_SUSCRIPTOR { get; set; }
-        public string PI_CODIGO_PLAN { get; set; }
+        public Int64 PI_CODIGO_PLAN { get; set; }
         public string PV_DETALLES   { get; set; }
         public string PV_USUARIO { get; set; }
         public string PV_ESTADOPR { get; set; }

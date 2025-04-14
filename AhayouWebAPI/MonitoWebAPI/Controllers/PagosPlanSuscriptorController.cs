@@ -52,8 +52,8 @@ namespace AhayouWebAPI.Controllers
                 //    return Ok(oRespuestaAPI);
                 //}
 
-                string id = oPago.PI_CODIGO_PLAN;
-                string operacion = id == "" ? "I" : "U";
+                //string id = oPago.PI_CODIGO_PLAN;
+                //string operacion = id == "" ? "I" : "U";
 
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();
@@ -64,7 +64,7 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.AddWithValue("@PI_CODIGO_PLAN", oPago.PI_CODIGO_PLAN);
                 comando.Parameters.AddWithValue("@PV_DETALLES", oPago.PV_DETALLES);
                 comando.Parameters.AddWithValue("@PV_USUARIO", oPago.PV_USUARIO);
-                comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
+                comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_ERROR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.ExecuteNonQuery();

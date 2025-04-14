@@ -45,9 +45,9 @@ namespace landingAhayou
                     }
                     else
                     {
-                        Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
-                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
-                        Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(1);
                     }
                     Response.Cookies["UserName"].Value = email.Text.Trim();
                     Response.Cookies["Password"].Value = password.Text.Trim();

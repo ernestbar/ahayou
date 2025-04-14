@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Diagnostics;
+using System.Web.UI.WebControls;
 
 
 namespace landingAhayou.Clases
@@ -77,7 +78,40 @@ namespace landingAhayou.Clases
             }
         }
 
-        
+        public static bool PR_PAR_VALIDA_ACCESO_POR_SESIONES(string pV_USUARIO)
+        {
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "PR_PAR_VALIDA_ACCESO_POR_SESIONES ";
+                    cmd.Parameters.AddWithValue("PV_USUARIO", pV_USUARIO);
+                    cmd.Connection = conn;
+                    conn.Open();
+                    var dataReader = cmd.ExecuteReader();
+                    var dataTable = new DataTable();
+                    dataTable.Load(dataReader);
+                    bool permitido = false;
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        if (row[0].ToString() == "0")
+                            permitido = true;
+                        else
+                            permitido= false;
+                    }
+                    return permitido;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                return false;
+            }
+        }
 
         #endregion
         #region Métodos que requieren constructor

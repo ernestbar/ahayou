@@ -54,8 +54,8 @@
                     <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="repetitive-buttons">
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='suscribete.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='suscribete_us.aspx';" />
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -67,8 +67,8 @@
                          <%--<button class="options__button">Espa&ntilde;ol</button>
                          <button class="options__button" >Ingl&eacute;s</button>--%>
              
-                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                          <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Español" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete_us.aspx';" value="Ingles" />
                      </div>
                  </div>
             </nav>

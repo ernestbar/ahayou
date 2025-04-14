@@ -207,9 +207,11 @@ namespace landingAhayou
             DataTable dtCont = Clases.Contenidos.PR_STR_GET_CONTENIDO_STR_IND(id);
             string pelicula = "";
             string url_streaming = "";
+            string es_gratis = "";
             foreach (DataRow drCont in dtCont.Rows)
             {
                 pelicula = drCont["contenido_peliculas"].ToString();
+                es_gratis = drCont["es_gratuita"].ToString();
             }
 
             if (pelicula == "SI")
@@ -224,7 +226,7 @@ namespace landingAhayou
                 DataTable dtCP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
                 foreach (DataRow dr in dtCP.Rows)
                 {
-                    url_streaming = dr["contenido_mobile"].ToString();
+                    url_streaming = dr["contenido"].ToString();
                 }
             }
             else
@@ -236,11 +238,11 @@ namespace landingAhayou
                     //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
                     if (dr["episodio"].ToString() == "1")
                     {
-                        url_streaming = dr["contenido_mobile"].ToString();
+                        url_streaming = dr["contenido_playlist"].ToString();
                     }
                 }
             }
-            Session["url_streaming"] = url_streaming;
+            Session["url_streaming"] = url_streaming+"|"+es_gratis;
             Response.Redirect("ver_streaming.aspx");
         }
         protected void lbtnSeleccionPlan_Click(object sender, EventArgs e)
@@ -282,22 +284,29 @@ namespace landingAhayou
             DataTable dt = new DataTable();
 
             dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-
-            foreach (DataRow dr in dt.Rows)
+            if (dt.Rows.Count > 0)
             {
-                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                foreach (DataRow dr in dt.Rows)
                 {
-
-                    if (dr["es_principal"].ToString() == "SI")
-                        Response.Redirect("cuenta_suscriptor.aspx");
-                    else
+                    if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
                     {
-                        string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
-                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
-                    }
 
+                        if (dr["es_principal"].ToString() == "SI")
+                            Response.Redirect("cuenta_suscriptor.aspx");
+                        else
+                        {
+                            string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                        }
+
+                    }
                 }
             }
+            else
+            {
+                Response.Redirect("selecciona_plan.aspx");
+            }
+            
 
         }
     }

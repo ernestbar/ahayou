@@ -63,7 +63,18 @@ namespace landingAhayou
 
             }
         }
+        protected void lbtnPerfiles_Click(object sender, EventArgs e)
+        {
 
+            LinkButton obj = (LinkButton)sender;
+            string[] id = obj.CommandArgument.ToString().Split('|');
+            Session["cod_perfil_suscriptor"] = id[0];
+            lblPerfilSuscriptor.Text = id[0];
+            if (id[1] == "0")
+                Response.Redirect("cartelera.aspx");
+            else
+                Response.Redirect("pin_perfil.aspx");
+        }
         protected void ibtnEnviar_Click(object sender, ImageClickEventArgs e)
         {
             DataTable dt = new DataTable();

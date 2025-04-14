@@ -18,6 +18,7 @@ namespace landingAhayou
         {
             if (!Page.IsPostBack)
             {
+                string[] datos_streaming= Session["url_streaming"].ToString().Split('|');
                 //lblMenu.Text = Session["busqueda"].ToString();
                 if (Session["usuario"] == null)
                 {
@@ -43,6 +44,10 @@ namespace landingAhayou
                         }
                         Session["usuario"] = email;
                     }
+                    if (datos_streaming[1] == "NO")
+                        Response.Redirect("login.aspx");
+                    else
+                        Literal1.Text = datos_streaming[0];
                 }
                 else
                 {
@@ -95,12 +100,20 @@ namespace landingAhayou
                             imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
                         }
                     }
-                    if (lblplanSuscriptor.Text == "0")
-                    { Response.Redirect("selecciona_plan.aspx"); }
-                    else
-                    {
-                        Literal1.Text = Session["url_streaming"].ToString();
-                    }
+                    
+                        if (lblplanSuscriptor.Text == "0")
+                        {
+                            if (datos_streaming[1] == "NO")
+                                Response.Redirect("selecciona_plan.aspx");
+                            else
+                                Literal1.Text = datos_streaming[0];
+                        }
+                        else
+                        {
+                            Literal1.Text = datos_streaming[0];
+                        }
+                  
+                    
                     //if (Session["menu"] == null) { lblMenu.Text = "0"; }
                     //else { lblMenu.Text = Session["menu"].ToString(); }
                 }
@@ -144,11 +157,13 @@ namespace landingAhayou
         {
 
             LinkButton obj = (LinkButton)sender;
-            string id = obj.CommandArgument.ToString();
-            //Session["usuario"] = lblUsuario.Text;
-            Session["cod_perfil_suscriptor"] = id;
-            lblPerfilSuscriptor.Text = id;
-            Response.Redirect("cartelera.aspx");
+            string[] id = obj.CommandArgument.ToString().Split('|');
+            Session["cod_perfil_suscriptor"] = id[0];
+            lblPerfilSuscriptor.Text = id[0];
+            if (id[1] == "0")
+                Response.Redirect("cartelera.aspx");
+            else
+                Response.Redirect("pin_perfil.aspx");
 
         }
         protected void lbtnCuenta_Click(object sender, EventArgs e)

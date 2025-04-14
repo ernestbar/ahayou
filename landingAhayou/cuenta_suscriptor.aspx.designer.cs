@@ -33,6 +33,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.ObjectDataSource odsMenus;
 
         /// <summary>
+        /// Control odsAvataresEdicion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsAvataresEdicion;
+
+        /// <summary>
         /// Control odsPlanes.
         /// </summary>
         /// <remarks>
@@ -204,13 +213,22 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.Repeater Repeater2;
 
         /// <summary>
-        /// Control celular.
+        /// Control lblCuenta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox celular;
+        protected global::System.Web.UI.WebControls.Label lblCuenta;
+
+        /// <summary>
+        /// Control txtCelular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCelular;
 
         /// <summary>
         /// Control RequiredFieldValidator2.
@@ -222,13 +240,13 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// Control nombre.
+        /// Control txtNombreCompleto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreCompleto;
 
         /// <summary>
         /// Control RequiredFieldValidator3.
@@ -240,13 +258,22 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
-        /// Control codigo_aux.
+        /// Control txtCodigo_aux.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox codigo_aux;
+        protected global::System.Web.UI.WebControls.TextBox txtCodigo_aux;
+
+        /// <summary>
+        /// Control btnGuardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
 
         /// <summary>
         /// Control lbtnCmabiarPass.
@@ -258,13 +285,94 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.LinkButton lbtnCmabiarPass;
 
         /// <summary>
-        /// Control btnGuardar.
+        /// Control Panel_perfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Panel Panel_perfil;
+
+        /// <summary>
+        /// Control Repeater1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+
+        /// <summary>
+        /// Control Panel_perfil_edicion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_perfil_edicion;
+
+        /// <summary>
+        /// Control lblCodPerfilEdicion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCodPerfilEdicion;
+
+        /// <summary>
+        /// Control lblPinEdicion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPinEdicion;
+
+        /// <summary>
+        /// Control txtNombrePerfil.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombrePerfil;
+
+        /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// Control lblCodigoAvatarSeleccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCodigoAvatarSeleccion;
+
+        /// <summary>
+        /// Control Repeater4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater4;
+
+        /// <summary>
+        /// Control btnEdicionAvatar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEdicionAvatar;
 
         /// <summary>
         /// Control Repeater5.

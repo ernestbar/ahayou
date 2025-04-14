@@ -84,7 +84,7 @@
         <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
          <header class="header header--main" id="header__movies">
             <nav class="header__nav">
-                <a href="home.aspx" class="header__logo">
+                <a href="cartelera.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -123,23 +123,14 @@
                    
      
                 <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
-                   
-                        
-                        
-                        
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
-                    <%--<button
-                        class="header__button header__button--with-img submenu__button"
-                    >
-                        <asp:Image class="header__button header__button--with-img submenu__button"  ID="imgPerfil" runat="server"  />
-                    </button>--%>
                     <div
                         class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
                     >
                         <div class="container--flex container--flex-column">
                             <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
                                 <ItemTemplate>
-                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfiles_Click" runat="server">
+                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") + "|"+Eval("pin")  %>' OnClick="lbtnPerfiles_Click" runat="server">
                                          <img
                                              src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                              alt="Foto perfil"
@@ -162,7 +153,7 @@
                             </asp:LinkButton>
         
                            
-                            <a href="catelera.aspx" class="options__button--flex">
+                            <a href="cartelera.aspx" class="options__button--flex">
                                 <img
                                     src="imgs/flags/spain.png"
                                     alt="Foto perfil"
@@ -233,7 +224,8 @@
                                                  class="movie__image"
                                              />
                                                 <div class="movie__buttons">
-                                                    <asp:LinkButton ID="lbtnReproducir" CommandArgument='<%# Eval("cod_contenido_str") %>' OnClick="lbtnReproducir_Click" class="movie__button movie__button--white" runat="server">
+                                                    <asp:LinkButton ID="lbtnReproducir" CommandArgument='<%# Eval("cod_contenido_str") %>' 
+                                                        OnClick="lbtnReproducir_Click" class="movie__button movie__button--white" runat="server">
                                                          <img
                                                              src="imgs/icons/play.svg"
                                                              alt="Icono reproducir"

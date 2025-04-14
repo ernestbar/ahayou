@@ -217,13 +217,23 @@ namespace landingAhayou.Clases
                     {
                         foreach (DataRow dr in dataTable.Rows)
                         {
-                            PV_NOMBRE_COMPLETO = (string)dr["NOMBRE_COMPLETO"];
-                            PV_EMAIL = (string)dr["EMAIL"];
                             if (string.IsNullOrEmpty(dr["CELULAR"].ToString()))
                                 PV_CELULAR = "";
                             else
                                 PV_CELULAR = (string)dr["CELULAR"];
-                           
+                            if (string.IsNullOrEmpty(dr["CODIGO_AUXILIAR"].ToString()))
+                                PV_CODIGO_AUXILIAR = "";
+                            else
+                                PV_CODIGO_AUXILIAR = (string)dr["CODIGO_AUXILIAR"];
+                            if (string.IsNullOrEmpty(dr["NOMBRE_COMPLETO"].ToString()))
+                                PV_NOMBRE_COMPLETO = "";
+                            else
+                                PV_NOMBRE_COMPLETO = (string)dr["NOMBRE_COMPLETO"];
+                            if (string.IsNullOrEmpty(dr["EMAIL"].ToString()))
+                                PV_EMAIL = "";
+                            else
+                                PV_EMAIL = (string)dr["EMAIL"];
+
                         }
 
                     }

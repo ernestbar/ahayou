@@ -92,6 +92,12 @@ namespace landingAhayou
                             imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
                         }
                     }
+
+                    Clases.Suscriptores objS = new Suscriptores(lblUsuario.Text);
+                    txtNombreCompleto.Text = objS.PV_NOMBRE_COMPLETO;
+                    txtCelular.Text = objS.PV_CELULAR;
+                    txtCodigo_aux.Text = objS.PV_CODIGO_AUXILIAR;
+                    lblCuenta.Text = objS.PV_EMAIL;
                     //if (Session["menu"] == null) { lblMenu.Text = "0"; }
                     //else { lblMenu.Text = Session["menu"].ToString(); }
                     //Repeater2.DataBind();
@@ -214,6 +220,71 @@ namespace landingAhayou
                 }
             }
 
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Clases.Suscriptores obj = new Suscriptores("U", lblUsuario.Text, "", "", txtNombreCompleto.Text, txtCelular.Text, lblUsuario.Text, txtCodigo_aux.Text, lblUsuario.Text);
+            obj.ABM();
+            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+        }
+
+        protected void lbtnPerfil_Click(object sender, EventArgs e)
+        {
+            Panel_perfil.Visible = false;
+            Panel_perfil_edicion.Visible = true;
+            LinkButton obj = (LinkButton)sender;
+            string[] id = obj.CommandArgument.ToString().Split('|');
+            lblCodPerfilEdicion.Text = id[0];
+            lblPinEdicion.Text = id[1];
+            txtNombrePerfil.Text = id[2];
+            txtNombrePerfil.Focus();
+            Repeater4.DataBind();
+            DataTable dt = new DataTable();
+
+            dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                {
+                    imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                    imgPerfil.DataBind();
+                }
+            }
+
+
+        }
+
+        protected void lbtnSeleccionAvatar_Click(object sender, EventArgs e)
+        {
+            LinkButton obj = (LinkButton)sender;
+            string id = obj.CommandArgument.ToString();
+            lblCodigoAvatarSeleccion.Text = id;
+            odsAvataresEdicion.FilterExpression="codigo_avatar='"+id+"'";
+            Repeater4.DataBind();
+        }
+
+        protected void btnEdicionAvatar_Click(object sender, EventArgs e)
+        {
+            if (lblCodigoAvatarSeleccion.Text == "")
+            {
+                string script = string.Format("alert('{0}');", "Debe seleccionar un avatar para la edicion.");
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            }
+            else
+            {
+                Clases.Avatares obj = new Avatares("U", lblCodPerfilEdicion.Text, lblCodigoAvatarSeleccion.Text, txtNombrePerfil.Text, Int64.Parse(lblPinEdicion.Text), lblUsuario.Text);
+                obj.ABM();
+                string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                Panel_perfil_edicion.Visible = false;
+                Panel_perfil.Visible = true;
+                Repeater1.DataBind();
+                Repeater7.DataBind();
+
+            }
         }
     }
 }

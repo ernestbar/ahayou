@@ -87,21 +87,21 @@ namespace AhayouWebAPI.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    var errores = (from state in ModelState.Values
-                                   from error in state.Errors
-                                   select error.ErrorMessage).ToList();
+                //if (!ModelState.IsValid)
+                //{
+                //    var errores = (from state in ModelState.Values
+                //                   from error in state.Errors
+                //                   select error.ErrorMessage).ToList();
 
-                    oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
-                    oRespuestaAPI.exitoso = false;
-                    oRespuestaAPI.mensajesError = errores;
-                    oRespuestaAPI.resultado = oUsuario;
-                    return Ok(oRespuestaAPI);
-                }
+                //    oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
+                //    oRespuestaAPI.exitoso = false;
+                //    oRespuestaAPI.mensajesError = errores;
+                //    oRespuestaAPI.resultado = oUsuario;
+                //    return Ok(oRespuestaAPI);
+                //}
 
-                string id = oUsuario.cod_perfil_suscriptor;
-                string operacion = id == "" ? "I" : "U";
+                //string id = oUsuario.cod_perfil_suscriptor;
+                //string operacion = id == "" ? "I" : "U";
 
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();
@@ -113,7 +113,7 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.AddWithValue("@PV_CODIGO_AVATAR", oUsuario.codigo_avatar);
                 comando.Parameters.AddWithValue("@PI_PIN", oUsuario.pin);
                 comando.Parameters.AddWithValue("@PV_USUARIO", oUsuario.usuario);
-                comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
+                comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_ERROR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.ExecuteNonQuery();

@@ -55,7 +55,7 @@
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
         <header class="header">
             <nav class="header__nav">
-                <a href="home.aspx" class="header__logo">
+                <a href="cartelera.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -67,8 +67,8 @@
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
                     <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
                     <div class="repetitive-buttons">
-                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='selecciona_plan.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='selecciona_plan_us.aspx';" />
                     </div>
                      <div class="options__container">
                          <button class="hamburger__button" id="menuButton">
@@ -80,80 +80,62 @@
                              <%--<button class="options__button">Espa&ntilde;ol</button>
                              <button class="options__button" >Ingl&eacute;s</button>--%>
          
-                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                              <input class="options__button" type="button" onclick="location.href='selecciona_plan.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='selecciona_plan_us.aspx';" value="Ingles" />
                          </div>
                      </div>
                 </asp:Panel>
                 <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
-                    <%--<button
-                        class="header__button header__button--with-img submenu__button"
-                    >
-                        <asp:Image class="header__button header__button--with-img submenu__button"  ID="imgPerfil" runat="server"  />
-                    </button>--%>
                     <div
                         class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
                     >
                         <div class="container--flex container--flex-column">
                             <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
                                 <ItemTemplate>
-                                     <a href="#" class="options__button--flex">
+                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") + "|"+Eval("pin")  %>' OnClick="lbtnPerfiles_Click" runat="server">
                                          <img
                                              src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                              alt="Foto perfil"
                                          />
                                          <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
-                                     </a>
+
+                                    </asp:LinkButton>
+         
                                 </ItemTemplate>
                             </asp:Repeater>
        
         
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/icons/administration.svg"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Administraci&oacute;n
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/icons/profile.svg"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Cuenta
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/icons/help-center.svg"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Centro de ayuda
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/flags/spain.png"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Idioma español
-                                </p>
-                            </a>
-                            <a href="#" class="options__button--flex">
-                                <img
-                                    src="imgs/flags/eeuu.png"
-                                    alt="Foto perfil"
-                                />
-                                <p class="text--small text text--light">
-                                    Idioma ingles
-                                </p>
-                            </a>
+                            <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
+                                   <img
+                                       src="imgs/icons/administration.svg"
+                                       alt="Foto perfil"
+                                   />
+                                   <p class="text--small text text--light">
+                                       Cuenta
+                                   </p>
+
+                              </asp:LinkButton>
+        
+         
+                              <a href="cartelera.aspx" class="options__button--flex">
+                                  <img
+                                      src="imgs/flags/spain.png"
+                                      alt="Foto perfil"
+                                  />
+                                  <p class="text--small text text--light">
+                                      Idioma español
+                                  </p>
+                              </a>
+                              <a href="cartelera_us.aspx" class="options__button--flex">
+                                  <img
+                                      src="imgs/flags/eeuu.png"
+                                      alt="Foto perfil"
+                                  />
+                                  <p class="text--small text text--light">
+                                      Idioma ingles
+                                  </p>
+                              </a>
                         </div>
     
                         <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">

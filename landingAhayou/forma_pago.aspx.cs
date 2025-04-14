@@ -112,21 +112,27 @@ namespace landingAhayou
             DataTable dt = new DataTable();
 
             dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-
-            foreach (DataRow dr in dt.Rows)
+            if (dt.Rows.Count > 0)
             {
-                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                foreach (DataRow dr in dt.Rows)
                 {
-
-                    if (dr["es_principal"].ToString() == "SI")
-                        Response.Redirect("cuenta_suscriptor.aspx");
-                    else
+                    if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
                     {
-                        string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
-                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
-                    }
 
+                        if (dr["es_principal"].ToString() == "SI")
+                            Response.Redirect("cuenta_suscriptor.aspx");
+                        else
+                        {
+                            string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                        }
+
+                    }
                 }
+            }
+            else
+            {
+                Response.Redirect("selecciona_plan.aspx");
             }
 
         }

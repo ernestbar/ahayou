@@ -3,23 +3,27 @@
   "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\clases\\avatares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\avatares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\contenido_temporadas_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:contenido_temporadas_admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\contenido_temporadas_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenido_temporadas_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:contenido_temporadas_admin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\clases\\contenido_temporadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\clases\\contenido_temporadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:clases\\contenido_temporadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\principal.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\principal.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:principal.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|e:\\ernesto\\ahayou\\webahayouadmin\\principal.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\principal.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|WebAhayouAdmin.csproj|solutionrelative:principal.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,20 +106,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Avatares.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Avatares.cs",
+              "RelativeDocumentMoniker": "Clases\\Avatares.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Avatares.cs",
+              "RelativeToolTip": "Clases\\Avatares.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:19:26.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Principal.Master",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master",
               "RelativeDocumentMoniker": "Principal.Master",
               "ToolTip": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master",
               "RelativeToolTip": "Principal.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-10T16:21:20.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Principal.Master.cs",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Principal.Master.cs",
               "RelativeDocumentMoniker": "Principal.Master.cs",
@@ -123,12 +139,11 @@
               "RelativeToolTip": "Principal.Master.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:20:58.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T16:20:58.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Contenido_temporadas.cs",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\Clases\\Contenido_temporadas.cs",
               "RelativeDocumentMoniker": "Clases\\Contenido_temporadas.cs",
@@ -136,12 +151,11 @@
               "RelativeToolTip": "Clases\\Contenido_temporadas.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAArwHsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:16:10.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T16:16:10.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "contenido_temporadas_admin.aspx.cs",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenido_temporadas_admin.aspx.cs",
               "RelativeDocumentMoniker": "contenido_temporadas_admin.aspx.cs",
@@ -149,12 +163,11 @@
               "RelativeToolTip": "contenido_temporadas_admin.aspx.cs",
               "ViewState": "AgIAAN0AAAAAAAAAAAA3wO4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:16:01.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T16:16:01.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "contenido_temporadas_admin.aspx",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\WebAhayouAdmin\\contenido_temporadas_admin.aspx",
               "RelativeDocumentMoniker": "contenido_temporadas_admin.aspx",

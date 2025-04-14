@@ -267,19 +267,29 @@ namespace landingAhayou
                 }
             }
             Session["url_streaming"] = url_streaming;
-            Response.Redirect("ver_streaming.aspx");
+            if (Sesiones.PR_PAR_VALIDA_ACCESO_POR_SESIONES(lblUsuario.Text) == true)
+            {
+                Response.Redirect("ver_streaming.aspx");
+            }
+            else
+            {
+                string script = string.Format("alert('{0}');", "Usted supero los dispositivos permitidos de su plan.");
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                //Response.Redirect("mas_informacion.aspx");
+            }
         }
 
         protected void lbtnPerfiles_Click(object sender, EventArgs e)
         {
 
             LinkButton obj = (LinkButton)sender;
-            string id = obj.CommandArgument.ToString();
-            //Session["usuario"] = lblUsuario.Text;
-            Session["cod_perfil_suscriptor"] = id;
-            lblPerfilSuscriptor.Text = id;
-            Response.Redirect("cartelera.aspx");
-            
+            string[] id = obj.CommandArgument.ToString().Split('|');
+            Session["cod_perfil_suscriptor"] = id[0];
+            lblPerfilSuscriptor.Text = id[0];
+            if (id[1]=="0")
+                Response.Redirect("cartelera.aspx");
+            else
+                Response.Redirect("pin_perfil.aspx");
         }
 
         protected void btnBusqueda_Click(object sender, EventArgs e)
@@ -293,23 +303,29 @@ namespace landingAhayou
             DataTable dt = new DataTable();
 
             dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-
-            foreach (DataRow dr in dt.Rows)
+            if (dt.Rows.Count > 0)
             {
-                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                foreach (DataRow dr in dt.Rows)
                 {
-
-                    if (dr["es_principal"].ToString() == "SI")
-                        Response.Redirect("cuenta_suscriptor.aspx");
-                    else 
+                    if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
                     {
-                        string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
-                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
-                    }
 
+                        if (dr["es_principal"].ToString() == "SI")
+                            Response.Redirect("cuenta_suscriptor.aspx");
+                        else
+                        {
+                            string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                        }
+
+                    }
                 }
             }
-            
+            else
+            {
+                Response.Redirect("selecciona_plan.aspx");
+            }
+
         }
     }
 }

@@ -141,7 +141,7 @@
                           <div class="container--flex container--flex-column">
                               <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
                                   <ItemTemplate>
-                                      <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfiles_Click" runat="server">
+                                      <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") + "|"+Eval("pin")  %>' OnClick="lbtnPerfiles_Click" runat="server">
                                            <img
                                                src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                                alt="Foto perfil"
@@ -166,7 +166,7 @@
                                 </asp:LinkButton>
         
                            
-                                <a href="catelera.aspx" class="options__button--flex">
+                                <a href="cartelera.aspx" class="options__button--flex">
                                     <img
                                         src="imgs/flags/spain.png"
                                         alt="Foto perfil"
@@ -199,13 +199,8 @@
                </header>
       
         
-            <main class="main">
-                <div
-                     class="container--flex container--flex-column full-height full-width container--justify-content-center container--align-center"
-                >
-                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-                </div>
-            </main>
+<asp:Literal ID="Literal1"  runat="server"></asp:Literal>
+    
             <footer class="footer playlist__footer">
                 <div class="footer__image-container">
                     <img

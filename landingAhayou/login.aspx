@@ -50,7 +50,7 @@
                 <div class="header__nav-buttons header__nav-buttons--with-text">
        
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" CausesValidation="false" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="Button1" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnCargarLogin" CausesValidation="false" runat="server" Text="Iniciar Session" />
                     <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="repetitive-buttons">

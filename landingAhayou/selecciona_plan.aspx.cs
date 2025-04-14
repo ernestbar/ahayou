@@ -30,7 +30,7 @@ namespace landingAhayou
                     Panel_login.Visible = true;
                     lblUsuario.Text = Session["usuario"].ToString();
                     if (Session["cod_plan_suscriptor"] == null)
-                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = false; }
+                    { lblplanSuscriptor.Text = "0"; }
                     else
                         lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
                     if (Session["cod_perfil_suscriptor"] == null)
@@ -77,8 +77,10 @@ namespace landingAhayou
         {
             Button obj = (Button)sender;
             string id = obj.CommandArgument.ToString();
-            Session["url_pasarela"] = id;
-            Response.Redirect("forma_pago.aspx");
+            //Session["url_pasarela"] = id;
+            string url_final = id + lblUsuario.Text;
+            Response.Write("<script>window.open('"+url_final+"','_blank');</script>");
+            //Response.Redirect("forma_pago.aspx");
         }
         protected void btnMenu_Click(object sender, EventArgs e)
         {
@@ -95,6 +97,48 @@ namespace landingAhayou
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("home.aspx");
+        }
+        protected void lbtnPerfiles_Click(object sender, EventArgs e)
+        {
+
+            LinkButton obj = (LinkButton)sender;
+            string[] id = obj.CommandArgument.ToString().Split('|');
+            Session["cod_perfil_suscriptor"] = id[0];
+            lblPerfilSuscriptor.Text = id[0];
+            if (id[1] == "0")
+                Response.Redirect("cartelera.aspx");
+            else
+                Response.Redirect("pin_perfil.aspx");
+        }
+
+        protected void lbtnCuenta_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                    {
+
+                        if (dr["es_principal"].ToString() == "SI")
+                            Response.Redirect("cuenta_suscriptor.aspx");
+                        else
+                        {
+                            string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("selecciona_plan.aspx");
+            }
+
         }
     }
 }

@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="css/hamburger.css" />
         <link rel="stylesheet" href="css/ribbon.css" />
         <link rel="stylesheet" href="css/playlist.css" />
+    <link rel="stylesheet" href="css/profiles.css" />
         <%--<link rel="stylesheet" href="css/backgrounds-divs.css" />--%>
 
 </head>
@@ -44,7 +45,8 @@
        
         <asp:ObjectDataSource ID="odsMenus" runat="server" SelectMethod="PR_PAR_GET_MENU_CARTELERA" TypeName="landingAhayou.Clases.Carteleras">
         </asp:ObjectDataSource>
-       
+       <asp:ObjectDataSource ID="odsAvataresEdicion" runat="server" SelectMethod="PR_PAR_GET_AVATARES" TypeName="landingAhayou.Clases.Avatares">
+        </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="odsPlanes" runat="server" SelectMethod="PR_PAR_GET_PLAN_SUSCRIPTOR" TypeName="landingAhayou.Clases.Suscriptores">
             <SelectParameters>
                 <asp:ControlParameter ControlID="lblUsuario" Name="nombre_usuario" Type="String" />
@@ -222,6 +224,15 @@
             
                 
                 <form class="form container--shiny container--padding-width" id="form">
+                     <div class="form__input-container">
+                         <label
+                             for="email"
+                             class="form__label form__label--second"
+                         >
+                             Cuenta
+                         </label>
+                         <asp:Label ID="lblCuenta"  class="form__label form__label--second" runat="server" Text=""></asp:Label>
+                     </div>
                     <div class="form__input-container">
                         <label
                             for="email"
@@ -229,8 +240,8 @@
                         >
                             Celular
                         </label>
-                        <asp:TextBox class="form__input form__input--dark" ID="celular" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="datosgenerales"  ControlToValidate="celular" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                        <asp:TextBox class="form__input form__input--dark" ID="txtCelular" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="datosgenerales"  ControlToValidate="txtCelular" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form__input-container">
                         <label
@@ -239,8 +250,8 @@
                         >
                             Nombre completo
                         </label>
-                        <asp:TextBox class="form__input form__input--dark" ID="nombre" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="datosgenerales"  ControlToValidate="nombre" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                        <asp:TextBox class="form__input form__input--dark" ID="txtNombreCompleto" ValidationGroup="datosgenerales" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="datosgenerales"  ControlToValidate="txtNombreCompleto" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form__input-container">
                         <label
@@ -249,23 +260,86 @@
                         >
                             Codigo auxiliar
                         </label>
-                        <asp:TextBox class="form__input form__input--dark" ValidationGroup="datosgenerales"  ID="codigo_aux" runat="server"></asp:TextBox>
+                        <asp:TextBox class="form__input form__input--dark" ValidationGroup="datosgenerales"  ID="txtCodigo_aux" runat="server"></asp:TextBox>
                     </div>
+                    <asp:Button class="button button--orange full-width button--border" ValidationGroup="datosgenerales" OnClick="btnGuardar_Click"   ID="btnGuardar" runat="server"  Text="Guardar datos generales" />
+                    <asp:LinkButton ID="lbtnCmabiarPass" Font-Size="X-Large" OnClick="lbtnCmabiarPass_Click" runat="server">Cambiar Contrase&ntilde;a</asp:LinkButton>
                     <div class="form__input-container">
                         <label
                             for="password"
                             class="form__label form__label--second"
                         >
-                            
+                           Presiona en el perfil que deseas editar
                             
                         </label>
-                        <asp:LinkButton ID="lbtnCmabiarPass" OnClick="lbtnCmabiarPass_Click" runat="server">Cambiar Contrase&ntilde;a</asp:LinkButton>
+                        <asp:Panel ID="Panel_perfil" runat="server">
+                             <section class="profiles" style="width:100px">
+                               <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" runat="server">
+                             <ItemTemplate>
+                                 <asp:LinkButton class="profiles__item" ID="lbtnPerfil" OnClick="lbtnPerfil_Click" CommandArgument='<%# Eval("cod_perfil_suscriptor")+"|"+ Eval("pin")+"|"+ Eval("nombre_perfil") %>'  runat="server"> <img
+                                          src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
+                                          alt="Foto de perfil"
+                                          class="profiles__item-image"
+                                      />
+                                      <span class="profiles__item-text"><%# Eval("nombre_perfil") %></span>
+                                 </asp:LinkButton>
+
+                             </ItemTemplate>
+                               </asp:Repeater>
+                            </section>
+                        </asp:Panel>
+                        <asp:Panel ID="Panel_perfil_edicion" Visible="false" runat="server">
+                            <asp:Label ID="lblCodPerfilEdicion" runat="server" Visible="false" Text=""></asp:Label>
+                             <asp:Label ID="lblPinEdicion" runat="server" Visible="false" Text=""></asp:Label>
+                            <div class="form__input-container">
+                                <label
+                                    for="email"
+                                    class="form__label form__label--second"
+                                >
+                                    Nombre perfil
+                                </label>
+                                <asp:TextBox class="form__input form__input--dark" ID="txtNombrePerfil" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="avatares"  ControlToValidate="txtNombrePerfil" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form__input-container">
+                            <label
+                                for="email"
+                                class="form__label form__label--second"
+                            >
+                                Selecciona tu avatar
+                            </label>
+                                <asp:Label ID="lblCodigoAvatarSeleccion" runat="server" Visible="false" Text=""></asp:Label>
+                                <div
+                                        class="container--flex container--justify-content-start playlist__movies carousel__list" style="width:600px;overflow-x:scroll;"
+                                    >
+                                <asp:Repeater ID="Repeater4" DataSourceID="odsAvataresEdicion" runat="server">
+                                   <ItemTemplate>
+                                         <asp:LinkButton class="profiles__item" ID="lbtnSeleccionAvatar" OnClick="lbtnSeleccionAvatar_Click" CommandArgument='<%# Eval("codigo_avatar") %>'  runat="server"> <img
+                                                  src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
+                                                  alt="Foto de perfil"
+                                                  class="profiles__item-image"
+                                              />
+                                                  <span class="profiles__item-text"><%# Eval("codigo_avatar") %></span>
+                                            </asp:LinkButton>
+                                   </ItemTemplate>
+                            </asp:Repeater>
+                                    </div>
+                                
+                                <asp:Button class="button button--orange full-width button--border" ValidationGroup="avatares" OnClick="btnEdicionAvatar_Click"   ID="btnEdicionAvatar" runat="server"  Text="Guardar perfil" />
+                        </div>
+                        </asp:Panel>
+                        
                     </div>
-                    <asp:Button class="button button--orange full-width button--border" ValidationGroup="datosgenerales"   ID="btnGuardar" runat="server"  Text="Guardar" />
+                    
         
+   
                 </form>
+                 
+                
+        
+           <%-- <section class="profiles">--%>
+             
         </section>
-            
                 </main>
                 <footer class="footer playlist__footer">
                     <div class="footer__image-container">
