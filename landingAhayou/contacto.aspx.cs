@@ -20,8 +20,8 @@ namespace landingAhayou
                     Panel_logout.Visible = false;
                     Panel_login.Visible = false;
                     lblUsuario.Text = "";
-                    btnLogin.Visible = false;
-                    btnSuscribete.Visible = false;
+                    //btnLogin.Visible = false;
+                    //btnSuscribete.Visible = false;
 
                 }
                 else
@@ -43,8 +43,8 @@ namespace landingAhayou
                     else
                         lblCodigoPlan.Text = Session["codigo_plan"].ToString();
 
-                    btnLogin.Visible = false;
-                    btnSuscribete.Visible = false;
+                    //btnLogin.Visible = false;
+                    //btnSuscribete.Visible = false;
                     imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
                     DataTable dt = new DataTable();
 

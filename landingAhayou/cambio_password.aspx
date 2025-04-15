@@ -81,12 +81,22 @@
                         <asp:ImageButton ID="btnBusqueda1" class="header__button--search" Height="46px" ImageUrl="~/imgs/icons/search.svg" ValidationGroup="busqueda" OnClick="btnBusqueda_Click" runat="server" />
                 </div>--%>
             <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
-                <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
                 <div class="repetitive-buttons">
-                <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <div class="header__nav-buttons header__nav-buttons--with-text">
+                          <button
+                              class="header__button header__button--text header__button--bg-orange"
+                            type="button" onclick="location.href='suscribete.aspx';">
+                              Suscr&iacute;bete
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                           type="button" onclick="location.href='login.aspx';">
+                              Iniciar Sesi&oacute;n
+                          </button>
+                      </div> 
+        
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -100,8 +110,11 @@
          
                           <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                         <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                      </div>
                  </div>
+                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
             </asp:Panel>
     
        
@@ -312,7 +325,8 @@
 
 
         <script src="js/footer-visited-color.js"></script>
-    <script src="js/open-menu.js"></script>
+     <script src="js/open-menu.js"></script>
+ <script src="js/open-submenu.js"></script>
     <script src="js/show-validation-alert.js" defer></script>
 
     </form>

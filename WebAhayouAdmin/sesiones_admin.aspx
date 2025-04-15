@@ -16,6 +16,9 @@ background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), /* Adjust
             <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
 		</asp:SiteMapPath>--%>
 		<asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label> 
+		<asp:Label ID="lblNuevo" runat="server" Visible="false" Text=""></asp:Label> 
+		<asp:Label ID="lblEditar" runat="server" Visible="false" Text=""></asp:Label> 
+		<asp:Label ID="lblEliminar" runat="server" Visible="false" Text=""></asp:Label> 
 		<asp:Label ID="lblSesionID" runat="server" Text="" Visible="false"></asp:Label>
 		<asp:Label ID="lblAviso" runat="server" ForeColor="White" Font-Size="Medium" Text=""></asp:Label>
 		  <asp:Label ID="lblCodMenuRol" runat="server" Visible="false" Text=""></asp:Label>

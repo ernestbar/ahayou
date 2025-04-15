@@ -21,8 +21,8 @@ namespace landingAhayou
                     Panel_logout.Visible = true;
                     Panel_login.Visible = false;
                     lblUsuario.Text = "";
-                    btnLogin.Visible = true;
-                    btnSuscribete.Visible = true;
+                    //btnLogin.Visible = true;
+                    //btnSuscribete.Visible = true;
                    
                     if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
                     {
@@ -40,6 +40,40 @@ namespace landingAhayou
                             //Response.Redirect("perfiles.aspx");
                         }
                         Session["usuario"] = email;
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt3 = new DataTable();
+
+                        dt3 = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt3.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+
+                            }
+                        }
+                        if (Session["menu"] == null) { lblMenu.Text = "0"; }
+                        else { lblMenu.Text = Session["menu"].ToString(); }
                     }
                     else
                         Response.Redirect("login.aspx");
@@ -62,6 +96,40 @@ namespace landingAhayou
                             //Response.Redirect("perfiles.aspx");
                         }
                         Session["usuario"] = email;
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt4 = new DataTable();
+
+                        dt4 = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt4.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+
+                            }
+                        }
+                        if (Session["menu"] == null) { lblMenu.Text = "0"; }
+                        else { lblMenu.Text = Session["menu"].ToString(); }
                     }
                     Panel_logout.Visible = false;
                     Panel_login.Visible = true;
@@ -271,6 +339,11 @@ namespace landingAhayou
 
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
+            if (Request.Cookies["Sesion"] != null)
+            {
+                Sesiones obj = new Sesiones("D", lblUsuario.Text, Request.Cookies["Sesion"].ToString(), lblUsuario.Text);
+                obj.ABM();
+            }
             Session.Abandon();
             Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
@@ -330,6 +403,32 @@ namespace landingAhayou
                         lbtnRepro.Visible = true;
                 }
 
+            }
+        }
+
+        protected void ibtnNoFavoritos_Click(object sender, ImageClickEventArgs e)
+        {
+            if (lblplanSuscriptor.Text == "0")
+            { Response.Redirect("selecciona_plan.aspx"); }
+            else
+            {
+                Carteleras obj = new Carteleras("NF", lblPerfilSuscriptor.Text, lblplanSuscriptor.Text, lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text, "", lblUsuario.Text);
+                obj.ABM();
+                string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            }
+        }
+
+        protected void ibtnDislike_Click(object sender, ImageClickEventArgs e)
+        {
+            if (lblplanSuscriptor.Text == "0")
+            { Response.Redirect("selecciona_plan.aspx"); }
+            else
+            {
+                Carteleras obj = new Carteleras("NL", lblPerfilSuscriptor.Text, lblplanSuscriptor.Text, lblUsuario.Text, int.Parse(lblCodigoPlan.Text), lblCodContenidoStr.Text, "", lblUsuario.Text);
+                obj.ABM();
+                string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
             }
         }
 

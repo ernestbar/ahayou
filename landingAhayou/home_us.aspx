@@ -21,14 +21,13 @@
     href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet"
 />
-<link rel="stylesheet" href="css/common/main.css" />
+<link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/containers.css" />
         <link rel="stylesheet" href="css/arrow.css" />
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/new-releases.css" />
         <link rel="stylesheet" href="css/plans.css" />
         <link rel="stylesheet" href="css/web-app-section.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
         <link rel="stylesheet" href="css/frequent-questions.css" />
         <link rel="stylesheet" href="css/header-movies.css" />
         <link rel="stylesheet" href="css/forms.css" />

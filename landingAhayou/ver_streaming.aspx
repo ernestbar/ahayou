@@ -98,28 +98,41 @@
                       <asp:ImageButton ID="btnBusqueda1" class="header__button--search" ImageUrl="~/imgs/icons/search.svg" ValidationGroup="busqueda" OnClick="btnBusqueda_Click" runat="server" />
                   </div>--%>
                   <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
-                      <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                      <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                      <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
-                      <div class="repetitive-buttons">
-                      <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                      <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                      </div>
-                       <div class="options__container">
-                           <button class="hamburger__button" id="menuButton">
-                                 <span class="hamburger__line hamburger__line--white"></span>
-                              <span class="hamburger__line hamburger__line--white"></span>
-                              <span class="hamburger__line hamburger__line--white"></span>
-                           </button>
-                           <div class="options__menu" id="optionsMenu">
-                               <%--<button class="options__button">Espa&ntilde;ol</button>
-                               <button class="options__button" >Ingl&eacute;s</button>--%>
+                        <div class="repetitive-buttons">
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                                <div class="header__nav-buttons header__nav-buttons--with-text">
+                                  <button
+                                      class="header__button header__button--text header__button--bg-orange"
+                                    type="button" onclick="location.href='suscribete.aspx';">
+                                      Suscr&iacute;bete
+                                  </button>
+                                  <button
+                                      class="header__button header__button--text header__button--bg-green"
+                                   type="button" onclick="location.href='login.aspx';">
+                                      Iniciar Sesi&oacute;n
+                                  </button>
+                              </div> 
+        
+                        </div>
+                         <div class="options__container">
+                             <button class="hamburger__button" id="menuButton">
+                                   <span class="hamburger__line hamburger__line--white"></span>
+                                <span class="hamburger__line hamburger__line--white"></span>
+                                <span class="hamburger__line hamburger__line--white"></span>
+                             </button>
+                             <div class="options__menu" id="optionsMenu">
+                                 <%--<button class="options__button">Espa&ntilde;ol</button>
+                                 <button class="options__button" >Ingl&eacute;s</button>--%>
          
-                                <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                              <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                           </div>
-                       </div>
-                  </asp:Panel>
+                                  <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                                <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                                <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                                <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
+                             </div>
+                         </div>
+                        <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+                    </asp:Panel>
                  <%-- <div class="form__input-container form__input-container--main form__input-container--no-gap">
                       <asp:TextBox ID="txtBuscqueda" Width="300" Height="30" class="form__input form__input--dark" placeholder="Ingresa tu busqueda" runat="server"></asp:TextBox>
                       <asp:Button ID="btnBusqueda" Height="30" Font-Size="Small" class="button button--orange button--border" OnClick="btnBusqueda_Click"  runat="server" Text="Buscar" />

@@ -47,15 +47,22 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons header__nav-buttons--with-text">
-       
-                    <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" CausesValidation="false" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                    <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
-                </div>
                 <div class="repetitive-buttons">
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='suscribete.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='suscribete_us.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <div class="header__nav-buttons header__nav-buttons--with-text">
+                          <button
+                              class="header__button header__button--text header__button--bg-orange"
+                            type="button" onclick="location.href='suscribete.aspx';">
+                              Suscr&iacute;bete
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                           type="button" onclick="location.href='login.aspx';">
+                              Iniciar Sesi&oacute;n
+                          </button>
+                      </div> 
+    
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -66,11 +73,14 @@
                      <div class="options__menu" id="optionsMenu">
                          <%--<button class="options__button">Espa&ntilde;ol</button>
                          <button class="options__button" >Ingl&eacute;s</button>--%>
-             
-                          <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Español" />
-                        <input class="options__button" type="button" onclick="location.href='suscribete_us.aspx';" value="Ingles" />
+         
+                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                      </div>
                  </div>
+                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
             </nav>
             </header>
             <main class="main main--flex">
@@ -113,8 +123,8 @@
                             >
                                 Email
                             </label>
-                            <asp:TextBox class="form__input form__input--dark" ID="email" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="email" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                            <asp:TextBox class="form__input form__input--dark" ValidationGroup="formulario" ID="email" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="formulario" ControlToValidate="email" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form__input-container">
                             <label
@@ -123,8 +133,8 @@
                             >
                                 Celular
                             </label>
-                            <asp:TextBox class="form__input form__input--dark" ID="celular" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="celular" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                            <asp:TextBox class="form__input form__input--dark" ValidationGroup="formulario" ID="celular" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="formulario" ControlToValidate="celular" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form__input-container">
                             <label
@@ -133,8 +143,8 @@
                             >
                                 Nombre completo
                             </label>
-                            <asp:TextBox class="form__input form__input--dark" ID="nombre" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="nombre" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                            <asp:TextBox class="form__input form__input--dark" ID="nombre" ValidationGroup="formulario" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="formulario" ControlToValidate="nombre" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form__input-container">
                             <label
@@ -152,10 +162,10 @@
                             >
                                 Contrase&ntilde;a
                             </label>
-                             <asp:TextBox class="form__input form__input--dark" TextMode="Password" ID="password" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="Password" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                             <asp:TextBox class="form__input form__input--dark" ValidationGroup="formulario" TextMode="Password" ID="password" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="formulario" ControlToValidate="Password" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
                         </div>
-                        <asp:Button class="button button--orange full-width button--border" OnClick="btnSiguiente_Click" ID="btnSiguiente" runat="server" Text="Siguiente" />
+                        <asp:Button class="button button--orange full-width button--border" ValidationGroup="formulario" OnClick="btnSiguiente_Click" ID="btnSiguiente" runat="server" Text="Siguiente" />
         
                     </form>
             </section>
@@ -216,5 +226,7 @@
                 </div>
             </footer>
     </form>
+     <script src="js/open-menu.js"></script>
+ <script src="js/open-submenu.js"></script>
 </body>
 </html>

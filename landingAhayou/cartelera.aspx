@@ -97,28 +97,41 @@
                             <asp:ImageButton ID="btnBusqueda1" class="header__button--search" Height="46px" ImageUrl="~/imgs/icons/search.svg" ValidationGroup="busqueda" OnClick="btnBusqueda_Click" runat="server" />
                     </div>
                 <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
-                    <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
-                    <div class="repetitive-buttons">
+                <div class="repetitive-buttons">
                     <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                     <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                    </div>
-                     <div class="options__container">
-                         <button class="hamburger__button" id="menuButton">
-                               <span class="hamburger__line hamburger__line--white"></span>
-                            <span class="hamburger__line hamburger__line--white"></span>
-                            <span class="hamburger__line hamburger__line--white"></span>
-                         </button>
-                         <div class="options__menu" id="optionsMenu">
-                             <%--<button class="options__button">Espa&ntilde;ol</button>
-                             <button class="options__button" >Ingl&eacute;s</button>--%>
+                        <div class="header__nav-buttons header__nav-buttons--with-text">
+                          <button
+                              class="header__button header__button--text header__button--bg-orange"
+                            type="button" onclick="location.href='suscribete.aspx';">
+                              Suscr&iacute;bete
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                           type="button" onclick="location.href='login.aspx';">
+                              Iniciar Sesi&oacute;n
+                          </button>
+                      </div> 
+        
+                </div>
+                 <div class="options__container">
+                     <button class="hamburger__button" id="menuButton">
+                           <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                     </button>
+                     <div class="options__menu" id="optionsMenu">
+                         <%--<button class="options__button">Espa&ntilde;ol</button>
+                         <button class="options__button" >Ingl&eacute;s</button>--%>
          
-                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                         </div>
+                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                      </div>
-                </asp:Panel>
+                 </div>
+                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+            </asp:Panel>
                 
                    
      
@@ -318,7 +331,7 @@
         <main class="main">
             
             <div
-                    class="container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container playlist__start"
+                    class="background container--flex container--flex-column container--justify-content-center container--align-center container--no-border-radius container--gap-big playlist__container playlist__start"
                 >
                            
                    <asp:Repeater ID="Repeater2" DataSourceID="odsSecciones" OnItemDataBound="Repeater2_ItemDataBound" runat="server">
@@ -349,13 +362,17 @@
                                             <asp:Label ID="lblNro" runat="server" Visible="false" Text='<%# Eval("contenido") %>'></asp:Label>
                                                 <a
                                                     href=' <%# "mas_informacion.aspx?ID=" + Eval("codigo") %>'
-                                                    class="playlist__movie container--justify-content-center carousel__item"
+                                                    class="playlist__movie container--justify-content-center carousel__item" style="text-align:center"
                                                     >
                                                     <img
                                                         src='<%# Eval("contenido") %>'
                                                         alt="Pelicula"
                                                     /><!--Put the name of the movie in the alt-->
+                                                    <asp:Label ID="lblGratis" class="ribbon--under container--align-end container--orange" 
+                                                        Visible='<%# Eval("gratis").ToString().Equals("SI".ToString()) ? Convert.ToBoolean(1) : Convert.ToBoolean(0) %>'
+                                                        Width="100" Font-Bold="true"  runat="server" Text="GRATUITO"></asp:Label>
                                                     </a>
+                                            
                                         </ItemTemplate>
                                         </asp:Repeater>
            
@@ -373,11 +390,11 @@
 
                        </ItemTemplate>
                 </asp:Repeater>
-                </div>
+               <%-- </div>
                 
             <div
                 class="background background__two container--flex container--flex-column container--justify-content-start container--align-start container--no-border-radius container--gap-big playlist__container"
-            >
+            >--%>
 
                     <asp:Repeater ID="Repeater4" DataSourceID="odsSecciones" OnItemDataBound="Repeater4_ItemDataBound" runat="server">
                            <ItemTemplate>
@@ -422,6 +439,9 @@
                                                               Recien agregados
                                                           </p>
                                                       </div>--%>
+                                                  <asp:Label ID="lblGratis" class="ribbon--under container--orange" 
+                                                    Visible='<%# Eval("gratis").ToString().Equals("SI".ToString()) ? Convert.ToBoolean(1) : Convert.ToBoolean(0) %>'
+                                                    Width="200" Font-Bold="true"  runat="server" Text="GRATUITO"></asp:Label>
                                                   </a>
                                             </ItemTemplate>
                                      </asp:Repeater>

@@ -34,15 +34,15 @@ namespace landingAhayou
                 if (Session["usuario"] == null)
                 {
                     lblUsuario.Text = "";
-                    btnLogin.Visible = true;
-                    btnSuscribete.Visible = true;
+                    //btnLogin.Visible = true;
+                    //btnSuscribete.Visible = true;
                 }
                 else
                 {
                     lblCodPlanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
                     lblUsuario.Text = Session["usuario"].ToString();
-                    btnLogin.Visible = false;
-                    btnSuscribete.Visible = false;
+                    //btnLogin.Visible = false;
+                    //btnSuscribete.Visible = false;
                 }
               
 

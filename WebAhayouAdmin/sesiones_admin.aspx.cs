@@ -25,6 +25,18 @@ namespace WebAhayouAdmin
                     MultiView1.ActiveViewIndex = 0;
                     lblUsuario.Text = Session["usuario"].ToString();
                     lblCodMenuRol.Text = Request.QueryString["RME"].ToString();
+                    DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            //if (dr["DESCRIPCION"].ToString().ToUpper() == "EDITAR")
+                            //    bEdit.Visible = true;
+                            if (dr["DESCRIPCION"].ToString().ToUpper() == "ELIMINAR")
+                                lblEliminar.Text="SI";
+                        }
+
+                    }
                     //DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
                     //if (dt.Rows.Count > 0)
                     //{
@@ -61,18 +73,20 @@ namespace WebAhayouAdmin
                 //Button bEdit = (Button)e.Item.FindControl("btnEditar");
                 Button bEliminar = (Button)e.Item.FindControl("btnEliminar");
                 bEliminar.Visible = false;
-                DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
-                if (dt.Rows.Count > 0)
-                {
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        //if (dr["DESCRIPCION"].ToString().ToUpper() == "EDITAR")
-                        //    bEdit.Visible = true;
-                        if (dr["DESCRIPCION"].ToString().ToUpper() == "ELIMINAR")
-                            bEliminar.Visible = true;
-                    }
+                if(lblEliminar.Text=="SI")
+                    bEliminar.Visible = true;
+                //DataTable dt = Clases.Ingreso_app.PR_SEG_GET_OPCIONES_ROLES(Int64.Parse(lblCodMenuRol.Text), lblUsuario.Text);
+                //if (dt.Rows.Count > 0)
+                //{
+                //    foreach (DataRow dr in dt.Rows)
+                //    {
+                //        //if (dr["DESCRIPCION"].ToString().ToUpper() == "EDITAR")
+                //        //    bEdit.Visible = true;
+                //        if (dr["DESCRIPCION"].ToString().ToUpper() == "ELIMINAR")
+                //            bEliminar.Visible = true;
+                //    }
 
-                }
+                //}
             }
         }
 

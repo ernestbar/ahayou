@@ -299,13 +299,19 @@
     transition: color, border-bottom, font-size 0.3s;
 }
 
-.header__pag-button--selected {
+.header__pag-button--selected,
+.header__pag-button:hover {
     color: #adff2f;
     font-size: 3em;
     position: relative;
 }
 
-.header__pag-button--selected::after {
+.header__pag-button:hover {
+    cursor: pointer;
+}
+
+.header__pag-button--selected::after,
+.header__pag-button:hover::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -521,7 +527,8 @@
         letter-spacing: -2px;
     }
 
-    .header__pag-button--selected {
+    .header__pag-button--selected,
+    .header__pag-button:hover {
         font-size: 2em;
     }
 }
@@ -556,7 +563,8 @@
         font-size: 1.25em;
     }
 
-    .header__pag-button--selected {
+    .header__pag-button--selected,
+    .header__pag-button:hover {
         font-size: 1.75em;
     }
 
@@ -762,7 +770,7 @@
         font-size: 0.65em;
     }
 
-    .header__nav-buttons{
+    .header__nav-buttons {
         gap: 20px 10px;
     }
 }
@@ -798,7 +806,8 @@
         letter-spacing: -2px;
     }
 
-    .header__pag-button--selected {
+    .header__pag-button--selected,
+    .header__pag-button:hover {
         font-size: 1.75em;
     }
 }
@@ -822,7 +831,8 @@
         letter-spacing: -2px;
     }
 
-    .header__pag-button--selected {
+    .header__pag-button--selected,
+    .header__pag-button:hover {
         font-size: 1.5em;
     }
 }
@@ -865,6 +875,17 @@
     .header__nav-buttons--only-img {
         grid-column: 5;
         grid-row: 1;
+    }
+}
+
+@media (max-height: 768px) and (max-width: 340px) {
+    .header__nav-buttons--with-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__button--text {
+        width: 100%;
     }
 }
 

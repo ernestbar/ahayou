@@ -37,6 +37,7 @@
 
 
 
+
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
     <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
    <script>
@@ -90,13 +91,24 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <asp:Panel ID="Panel_logout" class="header__nav-buttons header__nav-buttons--only-img" runat="server">
-                    <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                    <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
-                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+                
+                <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
                     <div class="repetitive-buttons">
-                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                            <div class="header__nav-buttons header__nav-buttons--with-text">
+                              <button
+                                  class="header__button header__button--text header__button--bg-orange"
+                                type="button" onclick="location.href='suscribete.aspx';">
+                                  Suscr&iacute;bete
+                              </button>
+                              <button
+                                  class="header__button header__button--text header__button--bg-green"
+                               type="button" onclick="location.href='login.aspx';">
+                                  Iniciar Sesi&oacute;n
+                              </button>
+                          </div> 
+                        
                     </div>
                      <div class="options__container">
                          <button class="hamburger__button" id="menuButton">
@@ -110,70 +122,76 @@
          
                               <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                             <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                            <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                            <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                          </div>
                      </div>
+                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
                 </asp:Panel>
-                 <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
-                     <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
-                     <div
-                         class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
-                     >
-                         <div class="container--flex container--flex-column">
-                             <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
-                                 <ItemTemplate>
-                                     <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfiles_Click" runat="server">
-                                          <img
-                                              src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
-                                              alt="Foto perfil"
-                                          />
-                                          <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
 
-                                     </asp:LinkButton>
+   
      
-                                 </ItemTemplate>
-                             </asp:Repeater>
-                             <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
-                                  <img
-                                      src="imgs/icons/administration.svg"
-                                      alt="Foto perfil"
-                                  />
-                                  <p class="text--small text text--light">
-                                      Cuenta
-                                  </p>
+                <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
+                    <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
+                    <div
+                        class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
+                    >
+                        <div class="container--flex container--flex-column">
+                            <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
+                                <ItemTemplate>
+                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") + "|"+Eval("pin")  %>' OnClick="lbtnPerfiles_Click" runat="server">
+                                         <img
+                                             src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
+                                             alt="Foto perfil"
+                                         />
+                                         <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
 
-                             </asp:LinkButton>
+                                    </asp:LinkButton>
+                     
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
+                                 <img
+                                     src="imgs/icons/administration.svg"
+                                     alt="Foto perfil"
+                                 />
+                                 <p class="text--small text text--light">
+                                     Cuenta
+                                 </p>
+
+                            </asp:LinkButton>
         
            
-                             <a href="home.aspx" class="options__button--flex">
-                                 <img
-                                     src="imgs/flags/spain.png"
-                                     alt="Foto perfil"
-                                 />
-                                 <p class="text--small text text--light">
-                                     Idioma español
-                                 </p>
-                             </a>
-                             <a href="home_us.aspx" class="options__button--flex">
-                                 <img
-                                     src="imgs/flags/eeuu.png"
-                                     alt="Foto perfil"
-                                 />
-                                 <p class="text--small text text--light">
-                                     Idioma ingles
-                                 </p>
-                             </a>
-                         </div>
+                            <a href="cartelera.aspx" class="options__button--flex">
+                                <img
+                                    src="imgs/flags/spain.png"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Idioma español
+                                </p>
+                            </a>
+                            <a href="cartelera_us.aspx" class="options__button--flex">
+                                <img
+                                    src="imgs/flags/eeuu.png"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Idioma ingles
+                                </p>
+                            </a>
+                        </div>
     
-                         <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">
-                          <ItemTemplate>
-                              <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
-                          </ItemTemplate>
-                      </asp:Repeater>
-                         <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
+                        <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">
+                         <ItemTemplate>
+                             <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
+                         </ItemTemplate>
+                     </asp:Repeater>
+                        <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
     
-                     </div>
-        
-                 </asp:Panel>
+                    </div>
+                        
+                </asp:Panel>
             </nav>
             <section class="header__main-content carousel">
                 <div class="header__items-container">
@@ -287,10 +305,11 @@
                     </div>
                     </div>
                 <div class="header__pag-buttons">
-                    <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" OnItemDataBound="Repeater1_ItemDataBound" runat="server">
+                    <asp:Repeater ID="Repeater1" DataSourceID="odsRotador1" runat="server">
 	                    <ItemTemplate>
-                         <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>
-                          <button id=' <%# Eval("Numero") %>' class="header__pag-button header__pag-button--selected carousel__button">
+
+                        <%-- <asp:Label ID="lblIdNumero" runat="server" Text=' <%# Eval("Numero") %>' Visible="false"></asp:Label>--%>
+                          <button  class="header__pag-button header__pag-button--selected carousel__button">
                          <%--<button class='<%# "header__pag-button carousel__button " + Eval("Numero").ToString().Replace("01","selected") %>'>--%>
                               <%# Eval("Numero") %>
                           </button>
@@ -521,8 +540,6 @@
         <script src="js/open-menu.js"></script>
         <script src="js/header-movies-responsive.js"></script>
         <script src="js/movie-container-hover.js"></script>
-
-        <script defer src="js/carousel.js"></script>
         <script src="js/open-submenu.js"></script>
         <script src="js/header-movies-responsive.js"></script>
         <script src="js/movie-container-hover.js"></script>

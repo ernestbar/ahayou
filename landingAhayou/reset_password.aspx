@@ -153,7 +153,8 @@
             </footer>
     </form>
      <script src="js/footer-visited-color.js"></script>
-     <script src="js/open-menu.js"></script>
+      <script src="js/open-menu.js"></script>
+    <script src="js/open-submenu.js"></script>
      <script src="js/show-validation-alert.js" defer></script>
 </body>
 </html>

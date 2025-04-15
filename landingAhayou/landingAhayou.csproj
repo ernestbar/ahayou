@@ -72,7 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="avisos_legales.aspx" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Newtonsoft.Json.dll" />
@@ -121,10 +120,8 @@
     <Content Include="cambio_password.aspx" />
     <Content Include="cartelera.aspx" />
     <Content Include="centro_ayuda.aspx" />
-    <Content Include="checkout.js" />
     <Content Include="contacto.aspx" />
     <Content Include="contacto_us.aspx" />
-    <Content Include="contacts.html" />
     <Content Include="contenidos.aspx" />
     <Content Include="contenidos_us.aspx" />
     <Content Include="centro_ayuda_us.aspx" />
@@ -229,7 +226,6 @@
     <Content Include="css\welcome.css" />
     <Content Include="cuenta_suscriptor.aspx" />
     <Content Include="forma_pago.aspx" />
-    <Content Include="help-center.html" />
     <Content Include="home.aspx" />
     <Content Include="home_us.aspx" />
     <Content Include="Imagenes\fondo-AHAYOU.png" />
@@ -486,6 +482,7 @@
     <Content Include="imgs\icons\arrow-down.svg" />
     <Content Include="imgs\icons\bell.svg" />
     <Content Include="imgs\icons\cellphone.svg" />
+    <Content Include="imgs\icons\dislike-favorites.svg" />
     <Content Include="imgs\icons\exit.svg" />
     <Content Include="imgs\icons\help-center.svg" />
     <Content Include="imgs\icons\home.svg" />
@@ -493,6 +490,7 @@
     <Content Include="imgs\icons\lock.svg" />
     <Content Include="imgs\icons\play.svg" />
     <Content Include="imgs\icons\profile.svg" />
+    <Content Include="imgs\icons\remove.svg" />
     <Content Include="imgs\icons\return.svg" />
     <Content Include="imgs\icons\search.svg" />
     <Content Include="imgs\icons\shield-check.svg" />
@@ -571,13 +569,8 @@
     <Content Include="login.aspx" />
     <Content Include="Logs\Readme.txt" />
     <Content Include="mas_informacion.aspx" />
-    <Content Include="more-information.html" />
     <Content Include="perfiles.aspx" />
     <Content Include="pin_perfil.aspx" />
-    <Content Include="playlist.html" />
-    <Content Include="privacidad.aspx" />
-    <Content Include="privacy.html" />
-    <Content Include="profile-pin.html" />
     <Content Include="reset_password.aspx" />
     <Content Include="resultado_busqueda.aspx" />
     <Content Include="return.js" />
@@ -586,22 +579,13 @@
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="selecciona_plan.aspx" />
     <Content Include="service-worker.js" />
-    <Content Include="style.css" />
     <Content Include="suscribete.aspx" />
     <Content Include="sw.js" />
-    <Content Include="terminos_uso.aspx" />
     <Content Include="verificar_correo.aspx" />
     <Content Include="ver_streaming.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="avisos_legales.aspx.cs">
-      <DependentUpon>avisos_legales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="avisos_legales.aspx.designer.cs">
-      <DependentUpon>avisos_legales.aspx</DependentUpon>
-    </Compile>
     <Compile Include="cambio_password.aspx.cs">
       <DependentUpon>cambio_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -723,13 +707,6 @@
     <Compile Include="pin_perfil.aspx.designer.cs">
       <DependentUpon>pin_perfil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="privacidad.aspx.cs">
-      <DependentUpon>privacidad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="privacidad.aspx.designer.cs">
-      <DependentUpon>privacidad.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reset_password.aspx.cs">
       <DependentUpon>reset_password.aspx</DependentUpon>
@@ -758,13 +735,6 @@
     </Compile>
     <Compile Include="suscribete.aspx.designer.cs">
       <DependentUpon>suscribete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="terminos_uso.aspx.cs">
-      <DependentUpon>terminos_uso.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="terminos_uso.aspx.designer.cs">
-      <DependentUpon>terminos_uso.aspx</DependentUpon>
     </Compile>
     <Compile Include="verificar_correo.aspx.cs">
       <DependentUpon>verificar_correo.aspx</DependentUpon>

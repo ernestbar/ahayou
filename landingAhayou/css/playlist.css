@@ -7,8 +7,12 @@
 */
 
 .playlist__start {
-    background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),
-        url("../imgs/backgrounds/fondo-AHAYOU_2.png");
+    background: linear-gradient(
+        to top,
+        transparent 0%,
+        #000000a0 90%,
+        #000 95%
+    );
 }
 
 .playlist__number {
@@ -117,6 +121,10 @@
     .playlist__number {
         font-size: 10em;
     }
+
+    .playlist__container--with-arrows {
+        gap: 10px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -128,5 +136,15 @@
 @media (max-width: 330px) {
     .playlist__number {
         font-size: 5em;
+    }
+}
+
+@media (max-width: 270px) {
+    .playlist__number {
+        display: none;
+    }
+
+    .playlist__movie--second > img {
+        width: 100%;
     }
 }

@@ -42,24 +42,6 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.ObjectDataSource odsAvatares;
 
         /// <summary>
-        /// Control btnSuscribete.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSuscribete;
-
-        /// <summary>
-        /// Control btnCargarLogin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCargarLogin;
-
-        /// <summary>
         /// Control lblUsuario.
         /// </summary>
         /// <remarks>

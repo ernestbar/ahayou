@@ -33,6 +33,33 @@ namespace WebAhayouAdmin
         protected global::System.Web.UI.WebControls.Label lblUsuario;
 
         /// <summary>
+        /// Control lblNuevo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNuevo;
+
+        /// <summary>
+        /// Control lblEditar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEditar;
+
+        /// <summary>
+        /// Control lblEliminar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEliminar;
+
+        /// <summary>
         /// Control lblSesionID.
         /// </summary>
         /// <remarks>

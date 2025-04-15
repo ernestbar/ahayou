@@ -40,8 +40,8 @@ namespace landingAhayou
                     Panel_logout.Visible = true;
                     Panel_login.Visible = false;
                     lblUsuario.Text = "";
-                    btnLogin.Visible = true;
-                    btnSuscribete.Visible = true;
+                    //btnLogin.Visible = true;
+                    //btnSuscribete.Visible = true;
                    
 
                 }
@@ -64,8 +64,8 @@ namespace landingAhayou
                     else
                         lblCodigoPlan.Text = Session["codigo_plan"].ToString();
 
-                    btnLogin.Visible = false;
-                    btnSuscribete.Visible = false;
+                    //btnLogin.Visible = false;
+                    //btnSuscribete.Visible = false;
                     imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
                     DataTable dt = new DataTable();
 
@@ -87,6 +87,11 @@ namespace landingAhayou
        
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
+            if (Request.Cookies["Sesion"] != null)
+            {
+                Sesiones obj = new Sesiones("D", lblUsuario.Text, Request.Cookies["Sesion"].ToString(), lblUsuario.Text);
+                obj.ABM();
+            }
             Session.Abandon();
             Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
@@ -249,8 +254,14 @@ namespace landingAhayou
         {
             LinkButton obj = (LinkButton)sender;
             string id = obj.CommandArgument.ToString();
+            if (lblUsuario.Text == "")
+                Response.Redirect("login.aspx");
+            else
+            {
+                string url_final = id + lblUsuario.Text;
+                Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
+            }
             
-            Response.Redirect("mas_informacion.aspx?ID="+id);
         }
 
         protected void lbtnNuevoAgregado_Click(object sender, EventArgs e)

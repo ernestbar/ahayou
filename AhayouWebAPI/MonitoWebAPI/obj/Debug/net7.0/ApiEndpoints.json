@@ -829,6 +829,37 @@
     ]
   },
   {
+    "ContainingType": "AhayouWebAPI.Controllers.ResultadoStripeController",
+    "Method": "RespuestaStripe",
+    "RelativePath": "api/ResultadoStripe/RespuestaStripe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oUsuario",
+        "Type": "AhayouClases.Firebase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "AhayouWebAPI.Controllers.SesionesController",
     "Method": "SesionesABM",
     "RelativePath": "api/Sesiones/SesionesABM",
