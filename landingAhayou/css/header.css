@@ -140,6 +140,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    min-width: 75px;
 }
 
 /*
@@ -498,7 +499,7 @@
     }
 
     .header__list {
-        width: 100%;
+        width: 75%;
     }
 
     .header__list:not(
@@ -759,6 +760,10 @@
 @media (max-width: 350px) {
     .header__button {
         font-size: 0.65em;
+    }
+
+    .header__nav-buttons{
+        gap: 20px 10px;
     }
 }
 

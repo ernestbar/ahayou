@@ -123,7 +123,7 @@
 																	<th class="text-nowrap">TIEMPO MIN</th>
 																	<th class="text-nowrap">CONTENIDO</th>
 																	<th >CONTENIDO MOBILE</th>
-																	<th >CONTENIDO PLAY LIST</th>
+																	
 													<th class="text-nowrap" data-orderable="false">OPCIONES</th>
 				
 													</tr>
@@ -145,7 +145,7 @@
 
 															</asp:Literal></td>
 														<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("CONTENIDO_MOBILE") %>'></asp:Label></td>
-														<td><asp:Label ID="Label51" runat="server" Text='<%# Eval("CONTENIDO_PLAYLIST") %>'></asp:Label></td>
+														
 																	
 																	<%--<td><asp:Label ID="Label5" runat="server" Text='<%# Eval("DESC_ESTADO") %>'></asp:Label></td>--%>
 													<td>

@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="css/hamburger.css" />
 
 
+
     <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
     <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
    <script>
@@ -89,7 +90,7 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
+                <asp:Panel ID="Panel_logout" class="header__nav-buttons header__nav-buttons--only-img" runat="server">
                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
                     <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
                     <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
@@ -191,7 +192,7 @@
                                                                 
                                        <%--<div class="header__item carousel__item active" data-bg=' <%# Eval("contenido") %>'>--%>
                                             <h2 class="header__title">
-                                                <b>Streaming</b> con <b>Alma Boliviana</b>
+                                                Streaming <span>con</span> Alma Boliviana
                                             </h2>
                                             <p class="header__description">
                                                 Una experiencia mejorada no te pierdas los
@@ -302,7 +303,7 @@
         <main>
             <section class="new-releases carousel">
                 <h2 class="new-releases__title">
-                    <span>Nuevos</span>&nbsp;<span>agregados</span>
+                     Nuevos <span>agregados</span>
                 </h2>
                 <div class="new-releases__content">
                     <div class="arrow__container arrow--rotate carousel__arrow--prev" >
@@ -336,7 +337,7 @@
             </section>
             <section class="plans">
                 <h2 class="plans__title">
-                    <span>Elige</span><span>&nbsp;tu Plan</span>
+                    <span>Elige</span> tu Plan
                 </h2>
                 <div class="plans__list">
                      <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
@@ -377,7 +378,7 @@
             </section>
             <section class="frequent-questions" id="frequent-questions">
                 <h2 class="frequent-questions__title">
-                    <span>Preguntas</span>&nbsp;<span>frecuentes</span>
+                    <span>Preguntas</span> frecuentes
                 </h2>
                  <div class="frequent-questions__content container-common">
                     <div class="frequent-questions__image">

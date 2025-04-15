@@ -9,8 +9,8 @@
 */
 
 .web-app-section {
-    background: url("../imgs/backgrounds/landingpage-AHAYOU_05.png") center / 100%
-        100% repeat-y;
+    background: url("../imgs/backgrounds/landingpage-AHAYOU_05.png") center /
+        100% 100% repeat-y;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -74,10 +74,6 @@
     font-weight: bold;
     color: var(--color-primary);
 }
-
-/* .web-app-section__title span:nth-child(2) {
-    font-weight: 300;
-} */
 
 .web-app-section__container-description {
     display: flex;
@@ -191,6 +187,12 @@
 @media (max-width: 490px) {
     .web-app-section__title {
         font-size: 2.5em;
+    }
+}
+
+@media (max-width: 320px) {
+    .web-app-section__title {
+        font-size: 2em;
     }
 }
 

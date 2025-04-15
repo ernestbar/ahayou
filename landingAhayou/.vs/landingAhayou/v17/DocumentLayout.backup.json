@@ -1,42 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\landingAhayou\\",
+  "WorkspaceRootPath": "C:\\GUSTAVO\\ahayou\\landingAhayou\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\mas_informacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\mas_informacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\ver_streaming.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:ver_streaming.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\clases\\sesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:clases\\sesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\clases\\suscriptores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:clases\\suscriptores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|c:\\gustavo\\ahayou\\landingahayou\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\mas_informacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\mas_informacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:mas_informacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cartelera.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\ver_streaming.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:ver_streaming.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\clases\\sesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:clases\\sesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|C:\\GUSTAVO\\ahayou\\landingAhayou\\clases\\suscriptores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:clases\\suscriptores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,63 +118,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "login.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\login.aspx.cs",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\login.aspx.cs",
               "RelativeDocumentMoniker": "login.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\login.aspx.cs*",
-              "RelativeToolTip": "login.aspx.cs*",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowDEAAABTAAAAAAAAAA==",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\login.aspx.cs",
+              "RelativeToolTip": "login.aspx.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDEAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T20:37:03.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Suscriptores.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Suscriptores.cs",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\Clases\\Suscriptores.cs",
               "RelativeDocumentMoniker": "Clases\\Suscriptores.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Suscriptores.cs",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\Clases\\Suscriptores.cs",
               "RelativeToolTip": "Clases\\Suscriptores.cs",
               "ViewState": "AgIAAHwAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:31:57.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T20:31:57.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Sesiones.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Sesiones.cs",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\Clases\\Sesiones.cs",
               "RelativeDocumentMoniker": "Clases\\Sesiones.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Sesiones.cs",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\Clases\\Sesiones.cs",
               "RelativeToolTip": "Clases\\Sesiones.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAQwG8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:31:15.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T20:31:15.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ver_streaming.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\ver_streaming.aspx.cs",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\ver_streaming.aspx.cs",
               "RelativeDocumentMoniker": "ver_streaming.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\ver_streaming.aspx.cs",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\ver_streaming.aspx.cs",
               "RelativeToolTip": "ver_streaming.aspx.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAUwBYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:30:35.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T20:30:35.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "home.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\home.aspx",
               "RelativeDocumentMoniker": "home.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\home.aspx",
               "RelativeToolTip": "home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -183,11 +180,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "cartelera.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\cartelera.aspx",
               "RelativeDocumentMoniker": "cartelera.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\cartelera.aspx",
               "RelativeToolTip": "cartelera.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -196,42 +193,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "cartelera.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx.cs",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\cartelera.aspx.cs",
               "RelativeDocumentMoniker": "cartelera.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cartelera.aspx.cs",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\cartelera.aspx.cs",
               "RelativeToolTip": "cartelera.aspx.cs",
               "ViewState": "AgIAAEoBAAAAAAAAAAAAABYBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T19:49:49.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T19:49:49.211Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "mas_informacion.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\mas_informacion.aspx.cs",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\mas_informacion.aspx.cs",
               "RelativeDocumentMoniker": "mas_informacion.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\mas_informacion.aspx.cs",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\mas_informacion.aspx.cs",
               "RelativeToolTip": "mas_informacion.aspx.cs",
               "ViewState": "AgIAAN0AAAAAAAAAAAAAwOEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T19:29:56.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T19:29:56.008Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "mas_informacion.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\mas_informacion.aspx",
+              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\landingAhayou\\mas_informacion.aspx",
               "RelativeDocumentMoniker": "mas_informacion.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\mas_informacion.aspx",
+              "ToolTip": "C:\\GUSTAVO\\ahayou\\landingAhayou\\mas_informacion.aspx",
               "RelativeToolTip": "mas_informacion.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-14T19:28:12.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T19:28:12.581Z"
             }
           ]
         }

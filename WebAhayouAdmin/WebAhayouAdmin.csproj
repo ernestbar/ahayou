@@ -14131,6 +14131,7 @@
     <Content Include="reporte_vista_contenidos.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
+    <Content Include="sesiones_admin.aspx" />
     <Content Include="suscriptores_admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -14173,6 +14174,7 @@
     <Compile Include="Clases\Redes_sociales.cs" />
     <Compile Include="Clases\Reportes.cs" />
     <Compile Include="Clases\Roles.cs" />
+    <Compile Include="Clases\Sesiones.cs" />
     <Compile Include="Clases\Suscriptores.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="clasificacion_contenido_admin.aspx.cs">
@@ -14441,6 +14443,13 @@
     </Compile>
     <Compile Include="roles_admin.aspx.designer.cs">
       <DependentUpon>roles_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sesiones_admin.aspx.cs">
+      <DependentUpon>sesiones_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sesiones_admin.aspx.designer.cs">
+      <DependentUpon>sesiones_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="suscriptores_admin.aspx.cs">
       <DependentUpon>suscriptores_admin.aspx</DependentUpon>

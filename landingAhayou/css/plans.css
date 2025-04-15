@@ -21,8 +21,7 @@
 }
 
 .plans,
-.plans__list,
-.plans__title {
+.plans__list {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -479,11 +478,22 @@
     .plans__list {
         gap: 15px 50px;
     }
+
+    .plans__title {
+        font-size: 3.5em;
+    }
 }
 
 @media (max-width: 370px) {
     .plans__item-price > div {
         right: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .plans__title {
+        font-size: 2.5em;
+        letter-spacing: -2.5px;
     }
 }
 

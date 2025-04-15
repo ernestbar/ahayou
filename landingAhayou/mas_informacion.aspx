@@ -338,7 +338,7 @@
                                         class="container--flex container--flex-column full-width more-information__video"
                                     >     
                                     <div style="width:350px">
-                                        <%# Eval("nombre_contenido_str") %>9oi
+                                        <%# Eval("nombre_contenido_str") %>
                                     </div>
                                      
                                     <%--<div style="width:600px;height:300px" class="container--flex container--flex-column full-width more-information__video">

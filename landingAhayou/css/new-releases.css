@@ -102,11 +102,7 @@
     letter-spacing: -5px;
 }
 
-.new-releases__title span:nth-child(1) {
-    font-weight: bold;
-}
-
-.new-releases__title span:nth-child(2) {
+.new-releases__title span {
     font-weight: var(--second-font-weight);
     color: var(--color-secondary);
 }

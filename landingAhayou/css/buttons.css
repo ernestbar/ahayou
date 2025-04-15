@@ -100,10 +100,16 @@
     }
 }
 
+@media (max-width: 420px) {
+    .button {
+        font-size: 0.95em;
+    }
+}
+
 @media (max-width: 320px) {
     .button {
         height: fit-content;
-        font-size: 0.95em;
+        font-size: 0.8em;
     }
 }
 
