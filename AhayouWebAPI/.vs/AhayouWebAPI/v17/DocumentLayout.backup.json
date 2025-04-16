@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\",
+  "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\gustavo\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\resultadostripecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\resultadostripecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\resultadostripecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|c:\\gustavo\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\enviarcorreocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\enviarcorreocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitoclases\\plan_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\plan_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|c:\\gustavo\\ahayou\\ahayouwebapi\\monitoclases\\firebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\firebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitoclases\\plan_pagos_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\plan_pagos_suscriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|c:\\gustavo\\ahayou\\ahayouwebapi\\monitoclases\\correo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\correo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitoclases\\pagosesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D758115A-53E2-41F7-BAAE-82C3B920C506}|MonitoClases\\AhayouClases.csproj|solutionrelative:monitoclases\\pagosesiones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\pagosplansuscriptorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\pagosplansuscriptorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|e:\\ernesto\\ahayou\\ahayouwebapi\\monitowebapi\\controllers\\suscriptorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8031D-CFEE-4E7F-8FB5-BE448F591199}|MonitoWebAPI\\AhayouWebAPI.csproj|solutionrelative:monitowebapi\\controllers\\suscriptorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,54 +106,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Correo.cs",
-              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoClases\\Correo.cs",
-              "RelativeDocumentMoniker": "MonitoClases\\Correo.cs",
-              "ToolTip": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoClases\\Correo.cs",
-              "RelativeToolTip": "MonitoClases\\Correo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ResultadoStripeController.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\ResultadoStripeController.cs",
+              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\ResultadoStripeController.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\ResultadoStripeController.cs*",
+              "RelativeToolTip": "MonitoWebAPI\\Controllers\\ResultadoStripeController.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswDAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T02:04:21.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Firebase.cs",
-              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoClases\\Firebase.cs",
-              "RelativeDocumentMoniker": "MonitoClases\\Firebase.cs",
-              "ToolTip": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoClases\\Firebase.cs",
-              "RelativeToolTip": "MonitoClases\\Firebase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T02:04:13.719Z",
+              "WhenOpened": "2025-04-16T19:12:50.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EnviarCorreoController.cs",
-              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\EnviarCorreoController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\EnviarCorreoController.cs",
-              "ToolTip": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\EnviarCorreoController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\EnviarCorreoController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCoAAAAQAAAAAAAAAA==",
+              "Title": "Plan_suscriptor.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\Plan_suscriptor.cs",
+              "RelativeDocumentMoniker": "MonitoClases\\Plan_suscriptor.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\Plan_suscriptor.cs",
+              "RelativeToolTip": "MonitoClases\\Plan_suscriptor.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA9wBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T02:02:22.385Z",
+              "WhenOpened": "2025-04-16T19:12:40.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ResultadoStripeController.cs",
-              "DocumentMoniker": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\ResultadoStripeController.cs",
-              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\ResultadoStripeController.cs",
-              "ToolTip": "C:\\GUSTAVO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\ResultadoStripeController.cs",
-              "RelativeToolTip": "MonitoWebAPI\\Controllers\\ResultadoStripeController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAADwv2cAAABAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PagoSesiones.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\PagoSesiones.cs",
+              "RelativeDocumentMoniker": "MonitoClases\\PagoSesiones.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\PagoSesiones.cs",
+              "RelativeToolTip": "MonitoClases\\PagoSesiones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T01:49:05.538Z",
+              "WhenOpened": "2025-04-16T18:28:41.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Plan_pagos_suscriptor.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\Plan_pagos_suscriptor.cs",
+              "RelativeDocumentMoniker": "MonitoClases\\Plan_pagos_suscriptor.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoClases\\Plan_pagos_suscriptor.cs",
+              "RelativeToolTip": "MonitoClases\\Plan_pagos_suscriptor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T18:28:15.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SuscriptoresController.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "RelativeToolTip": "MonitoWebAPI\\Controllers\\SuscriptoresController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAwwJMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:35:51.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PagosPlanSuscriptorController.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
+              "RelativeDocumentMoniker": "MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\AhayouWebAPI\\MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
+              "RelativeToolTip": "MonitoWebAPI\\Controllers\\PagosPlanSuscriptorController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAALYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:35:45.804Z",
               "EditorCaption": ""
             }
           ]

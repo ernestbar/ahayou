@@ -226,7 +226,7 @@
                                 </h3>
                                 <p class="text text--bold"></p>
                             </div>
-                              <asp:Button class="button button--orange full-width button--border" CommandArgument='<%# Eval("url_pasarela") %>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Comprar" />
+                              <asp:Button class="button button--orange full-width button--border" CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Comprar" />
                         </div>
                     </article>
                     </ItemTemplate>

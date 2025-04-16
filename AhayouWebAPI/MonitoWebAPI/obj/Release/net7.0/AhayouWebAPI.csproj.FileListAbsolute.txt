@@ -148,3 +148,4 @@ C:\GITHUB\ahayou\AhayouWebAPI\MonitoWebAPI\obj\Release\net7.0\refint\AhayouWebAP
 C:\GITHUB\ahayou\AhayouWebAPI\MonitoWebAPI\obj\Release\net7.0\AhayouWebAPI.pdb
 C:\GITHUB\ahayou\AhayouWebAPI\MonitoWebAPI\obj\Release\net7.0\AhayouWebAPI.genruntimeconfig.cache
 C:\GITHUB\ahayou\AhayouWebAPI\MonitoWebAPI\obj\Release\net7.0\ref\AhayouWebAPI.dll
+E:\ERNESTO\ahayou\AhayouWebAPI\MonitoWebAPI\bin\Release\net7.0\Newtonsoft.Json.dll

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,8 @@ namespace AhayouClases
         public string plan_ingles { get; set; }
         public string cod_moneda { get; set; }
         public string moneda { get; set; }
+
+        
     }
+
 }
