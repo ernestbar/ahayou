@@ -32,6 +32,7 @@ namespace AhayouWebAPI.Controllers
 
         [Route("[action]")]
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GuardarUsuario([FromBody] Suscriptores oUsuario)
@@ -108,6 +109,7 @@ namespace AhayouWebAPI.Controllers
 
         [Route("[action]/{nombre_usuario}/{password}")]
         [HttpGet]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult LoginSuscriptor(string nombre_usuario, string password)

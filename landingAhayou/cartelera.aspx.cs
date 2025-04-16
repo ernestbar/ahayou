@@ -289,7 +289,7 @@ namespace landingAhayou
         {
             if (Request.Cookies["Sesion"] != null)
             {
-                Sesiones obj = new Sesiones("D", lblUsuario.Text, Request.Cookies["Sesion"].ToString(), lblUsuario.Text);
+                Sesiones obj = new Sesiones("D", lblUsuario.Text, Request.Cookies["Sesion"].Value, lblUsuario.Text);
                 obj.ABM();
             }
             Session.Abandon();
