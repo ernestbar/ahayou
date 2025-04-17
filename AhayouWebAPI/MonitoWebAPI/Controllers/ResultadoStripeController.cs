@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
@@ -42,16 +43,30 @@ namespace AhayouWebAPI.Controllers
 
                 using var reader = new StreamReader(Request.Body, Encoding.UTF8);
                 var str = reader.ReadToEndAsync();
+                string city = (string)JObject.Parse(reader.ToString());
+                
                 var json = JsonConvert.DeserializeObject<dynamic>(str.Result);
+                var result = JsonConvert.DeserializeAnonymousType<dynamic>(json.data, null);
                 string aux = "";
-                foreach (var key in json.Root)
+                if (result.data != null)
                 {
-                    if (key.indexOf("payment_status") != -1)
-                    {             //If the index contains "image"
-                        aux = json[key];                //Then image is set to your image array
-                        break;                                  //Exit the loop
-                    }
+                    
+
+                    //dynamic data = JObject.Parse(result.data);
+                    aux = result.data[0].payment_status;
+                    
+
                 }
+
+                //string aux = "";
+                //foreach (var key in json.Root)
+                //{
+                //    if (key.indexOf("payment_status") != -1)
+                //    {             //If the index contains "image"
+                //        aux = json[key];                //Then image is set to your image array
+                //        break;                                  //Exit the loop
+                //    }
+                //}
                 if (aux == "paid")
                 {
                     string estado_id = "";
