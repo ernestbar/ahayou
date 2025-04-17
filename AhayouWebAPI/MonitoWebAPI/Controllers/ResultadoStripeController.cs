@@ -43,38 +43,20 @@ namespace AhayouWebAPI.Controllers
 
                 using var reader = new StreamReader(Request.Body, Encoding.UTF8);
                 var str = reader.ReadToEndAsync();
-                string city = (string)JObject.Parse(reader.ToString());
-                
-                var json = JsonConvert.DeserializeObject<dynamic>(str.Result);
-                var result = JsonConvert.DeserializeAnonymousType<dynamic>(json.data, null);
-                string aux = "";
-                if (result.data != null)
-                {
-                    
+                string[] status1 =str.Result.Split("\"payment_status\":");
+                string[] status2 = status1[1].Split("\"");
 
-                    //dynamic data = JObject.Parse(result.data);
-                    aux = result.data[0].payment_status;
-                    
-
-                }
-
-                //string aux = "";
-                //foreach (var key in json.Root)
-                //{
-                //    if (key.indexOf("payment_status") != -1)
-                //    {             //If the index contains "image"
-                //        aux = json[key];                //Then image is set to your image array
-                //        break;                                  //Exit the loop
-                //    }
-                //}
-                if (aux == "paid")
+                string[] idclient1 = str.Result.Split("\"client_reference_id\":");
+                string[] idclient2 = idclient1[1].Split("\"");
+                                
+                if (status2[1] == "paid")
                 {
                     string estado_id = "";
                     SqlConnection conexion = new SqlConnection(CadenaConexion);
                     conexion.Open();
                     SqlCommand comando = new SqlCommand("PR_SEG_VERIFICA_ESTADO_IDSESION", conexion);
                     comando.CommandType = CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("PI_ID",0);
+                    comando.Parameters.AddWithValue("PI_ID",idclient2[1]);
                     SqlDataAdapter da = new SqlDataAdapter(comando);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -87,12 +69,11 @@ namespace AhayouWebAPI.Controllers
                     {
                         SqlConnection conexion1 = new SqlConnection(CadenaConexion);
                         conexion.Open();
-                        SqlCommand comando1 = new SqlCommand("PR_STR_ABM_PLAN_PAGO_SUSCRIPTOR", conexion1);
+                        SqlCommand comando1 = new SqlCommand("PR_STR_ABM_PLAN_PAGO_SUSCRIPTOR_IDSESION", conexion1);
                         comando1.CommandType = CommandType.StoredProcedure;
                         comando1.Parameters.AddWithValue("@PV_TIPO_OPERACION", "I");
-                        comando1.Parameters.AddWithValue("@PV_USUARIO_SUSCRIPTOR", "");
-                        comando1.Parameters.AddWithValue("@PI_CODIGO_PLAN", "");
-                        comando1.Parameters.AddWithValue("@PV_DETALLES", "");
+                        comando1.Parameters.AddWithValue("@PB_ID", idclient2[1]);
+                        comando1.Parameters.AddWithValue("@PV_DETALLES", str.Result);
                         comando1.Parameters.AddWithValue("@PV_USUARIO", "ADM");
                         comando1.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                         comando1.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;

@@ -586,41 +586,31 @@
 					</div>
 				</div>
 </div>		</div>
-				<div class="col-xl-12 col-md-12">
+				<div class="col-lg-12 col-md-12">
 					<div class="card p-4 border-0 h-100 rounded-5">
-				<div class="d-flex align-items-center mb-3">
-					<%--<img src="../assets/img/user/user-5.jpg" class="rounded-circle me-3 w-50px" alt="Client 1">--%>
-					<div>
-						<h5 class="mb-0">Contenido playlist:</h5>
-						<%--<small class="text-muted">CEO, Company</small>--%>
-					</div>
-				</div>
-				<div class="mb-4 d-flex">
-					<i class="fa fa-quote-left fa-2x text-body text-opacity-15"></i>
-					<div class="p-3 fs-5">
-						<div class="text-warning d-flex mb-2">
-							<%--<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
-							<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
-							<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
-							<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>
-							<iconify-icon icon="ic:baseline-star" class="fs-18px"></iconify-icon>--%>
+						<div class="d-flex align-items-center mb-3">
+							<%--<img src="../assets/img/user/user-5.jpg" class="rounded-circle me-3 w-50px" alt="Client 1">--%>
+							<div>
+								<h5 class="mb-0">Contenido playlist:</h5>
+								<%--<small class="text-muted">CEO, Company</small>--%>
+							</div>
 						</div>
-						<table id="data-table" width="100%" class="table table-striped table-bordered align-middle text-nowrap" style="background-color:white;">
-							<thead>
-								<tr>
-									<th style="width:800px;height:400px"> 
-										<asp:Literal ID="litPlaylist" runat="server"></asp:Literal> </th>
-									</tr>
-								</thead>
-							
-					</table>
+					<div class="mb-4 d-flex">
+						<i class="fa fa-quote-left fa-2x text-body text-opacity-15"></i>
+						<div class="p-3 fs-5">
+				
+							<div style="width:900px;height:350px">
+								<asp:Literal ID="litPlaylist" runat="server"></asp:Literal>
+							</div>
 						
-					</div>
-					<div class="d-flex align-items-end">
-						<i class="fa fa-quote-right fa-2x text-body text-opacity-15"></i>
+							
+						
+						</div>
+						<div class="d-flex align-items-end">
+							<i class="fa fa-quote-right fa-2x text-body text-opacity-15"></i>
+						</div>
 					</div>
 				</div>
-</div>
 
 				</div>
 			</div>
