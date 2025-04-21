@@ -306,9 +306,11 @@ namespace landingAhayou
             DataTable dtCont = Clases.Contenidos.PR_STR_GET_CONTENIDO_STR_IND(id);
             string pelicula = "";
             string url_streaming = "";
+            string es_gratis = "";
             foreach (DataRow drCont in dtCont.Rows)
             {
                 pelicula = drCont["contenido_peliculas"].ToString();
+                es_gratis = drCont["es_gratuita"].ToString();
             }
 
             if (pelicula == "SI")
@@ -339,7 +341,7 @@ namespace landingAhayou
                     }
                 }
             }
-            Session["url_streaming"] = url_streaming;
+            Session["url_streaming"] = url_streaming + "|" + es_gratis;
             if (Sesiones.PR_PAR_VALIDA_ACCESO_POR_SESIONES(lblUsuario.Text) == true)
             {
                 Response.Redirect("ver_streaming.aspx");

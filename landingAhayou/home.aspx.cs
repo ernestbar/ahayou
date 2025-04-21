@@ -252,16 +252,21 @@ namespace landingAhayou
         }
         protected void lbtnSeleccionPlan_Click(object sender, EventArgs e)
         {
-            LinkButton obj = (LinkButton)sender;
-            string id = obj.CommandArgument.ToString();
             if (lblUsuario.Text == "")
+            {
                 Response.Redirect("login.aspx");
+            }
             else
             {
-                string url_final = id + lblUsuario.Text;
+                LinkButton obj = (LinkButton)sender;
+                string[] id = obj.CommandArgument.ToString().Split('|');
+                Int64 ID = Clases.PagosSuscriptores.PR_REG_DEVUELVE_IDSESION(lblUsuario.Text, Int64.Parse(id[1]));
+
+                string url_final = id[0] + ID.ToString();
                 Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
             }
             
+
         }
 
         protected void lbtnNuevoAgregado_Click(object sender, EventArgs e)

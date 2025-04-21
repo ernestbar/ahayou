@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AhayouWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc24d1acd2e7065d01e89b4431b2df5d542aa8d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf5f2d013da9903660ed8c6bf0056380dda4aebd")]
 [assembly: System.Reflection.AssemblyProductAttribute("AhayouWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AhayouWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

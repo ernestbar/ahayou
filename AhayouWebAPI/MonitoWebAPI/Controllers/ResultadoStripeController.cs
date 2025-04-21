@@ -1,4 +1,5 @@
 ﻿using AhayouClases;
+using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
@@ -36,27 +37,42 @@ namespace AhayouWebAPI.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult RespuestaStripe()
+        public async Task<IActionResult> RespuestaStripe()
         {
             try
             {
 
                 using var reader = new StreamReader(Request.Body, Encoding.UTF8);
-                var str = reader.ReadToEndAsync();
-                string[] status1 =str.Result.Split("\"payment_status\":");
+                var str = await reader.ReadToEndAsync();
+                string data = str.Replace("\\", "");
+
+                string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "archivos", "miarchivo.txt");
+                // Crear el directorio si no existe
+                var directorio = Path.GetDirectoryName(rutaArchivo);
+                if (!Directory.Exists(directorio))
+                {
+                    Directory.CreateDirectory(directorio);
+                }
+
+                // Escribir contenido en el archivo (añadir al final)
+                await System.IO.File.AppendAllTextAsync(rutaArchivo, str + "\n");
+
+
+               
+                string[] status1 = data.Split("payment_status");
                 string[] status2 = status1[1].Split("\"");
 
-                string[] idclient1 = str.Result.Split("\"client_reference_id\":");
+                string[] idclient1 = data.Split("client_reference_id");
                 string[] idclient2 = idclient1[1].Split("\"");
-                                
-                if (status2[1] == "paid")
+                string id_session = idclient2[2];
+                if (status2[2].Contains("paid"))
                 {
                     string estado_id = "";
                     SqlConnection conexion = new SqlConnection(CadenaConexion);
                     conexion.Open();
                     SqlCommand comando = new SqlCommand("PR_SEG_VERIFICA_ESTADO_IDSESION", conexion);
                     comando.CommandType = CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("PI_ID",idclient2[1]);
+                    comando.Parameters.AddWithValue("PI_ID", id_session);
                     SqlDataAdapter da = new SqlDataAdapter(comando);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -68,12 +84,12 @@ namespace AhayouWebAPI.Controllers
                     if (estado_id == "PENDIENTE")
                     {
                         SqlConnection conexion1 = new SqlConnection(CadenaConexion);
-                        conexion.Open();
+                        conexion1.Open();
                         SqlCommand comando1 = new SqlCommand("PR_STR_ABM_PLAN_PAGO_SUSCRIPTOR_IDSESION", conexion1);
                         comando1.CommandType = CommandType.StoredProcedure;
                         comando1.Parameters.AddWithValue("@PV_TIPO_OPERACION", "I");
-                        comando1.Parameters.AddWithValue("@PB_ID", idclient2[1]);
-                        comando1.Parameters.AddWithValue("@PV_DETALLES", str.Result);
+                        comando1.Parameters.AddWithValue("@PB_ID", id_session);
+                        comando1.Parameters.AddWithValue("@PV_DETALLES", str);
                         comando1.Parameters.AddWithValue("@PV_USUARIO", "ADM");
                         comando1.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                         comando1.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
