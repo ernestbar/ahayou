@@ -172,18 +172,10 @@
                      <div
                         class="form__input-container form__input-container--row form__input-container--no-gap"
                     >
-                        <input
-                            type="text"
-                            name="question"
-                            placeholder="Escribe una pregunta, un tema o un problema"
-                            id="question"
-                            autocomplete="false"
-                            class="form__input form--shadow-left"
-                        />
+                         <asp:TextBox class="form__input form--shadow-left" placeholder="Escribe una pregunta, un tema o un problema" ID="txtConsulta" runat="server"></asp:TextBox>
+                        
                          <asp:ImageButton ID="ibtnEnviar" class="button button--orange form--shadow-right" OnClick="ibtnEnviar_Click" ImageUrl="~/imgs/etc/arrow.svg" runat="server" />
-                        <%--<button type="submit" class="form__button form--shadow-right">
-                            <img src="imgs/etc/arrow.svg" alt="Enviar" />
-                        </button>--%>
+                        
                     </div>
                     </form>
             </div>

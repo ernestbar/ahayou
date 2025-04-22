@@ -291,5 +291,21 @@ namespace landingAhayou
 
             }
         }
+
+        protected void lbtnSolicitarPIN_Click(object sender, EventArgs e)
+        {
+            Pines obj = new Pines("U", lblUsuario.Text, lblUsuario.Text);
+            obj.ABM();
+
+            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            string mensaje = @"<p><strong>Estimado usuari@ Ahayou</strong></p>
+            <p><strong>&nbsp;</strong></p>
+            <p>Hemos realizado el reseteo de su PIN, su nuevo PIN es: " + obj.PB_PIN + " </p>" +
+            @"<p>Atentamente.</p>
+            <p><strong>Equipo de soporte Ahayou.</strong></p>";
+            Clases.enviar_correo objC = new Clases.enviar_correo();
+            objC.enviar(lblUsuario.Text, "Cambio de PIN usuario: " + lblUsuario.Text, mensaje, "");
+        }
     }
 }

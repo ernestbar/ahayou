@@ -264,49 +264,7 @@ namespace landingAhayou
             Response.Redirect("home.aspx");
         }
 
-        protected void lbtnReproducir_Click(object sender, EventArgs e)
-        {
-            LinkButton obj = (LinkButton)sender;
-            string id = obj.CommandArgument.ToString();
-            DataTable dtCont = Clases.Contenidos.PR_STR_GET_CONTENIDO_STR_IND(id);
-            string pelicula = "";
-            string url_streaming = "";
-            foreach (DataRow drCont in dtCont.Rows)
-            {
-                pelicula = drCont["contenido_peliculas"].ToString();
-            }
-
-            if (pelicula == "SI")
-            {
-                string cod_contenido_pelicula = "";
-                DataTable dtP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA(id);
-                foreach (DataRow dr in dtP.Rows)
-                {
-                    cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
-                }
-
-                DataTable dtCP = Clases.Contenidos.PR_STR_GET_CONTENIDO_PELICULA_IND(cod_contenido_pelicula);
-                foreach (DataRow dr in dtCP.Rows)
-                {
-                    url_streaming = dr["contenido_mobile"].ToString();
-                }
-            }
-            else
-            {
-                DataTable dtT = Clases.Contenidos.PR_STR_GET_CONTENIDO_TEMPORADAS(id);
-                DataTable dtTemp1 = new DataTable();
-                foreach (DataRow dr in dtT.Rows)
-                {
-                    //cod_contenido_pelicula = dr["cod_contenido_pelicula"].ToString();
-                    if (dr["episodio"].ToString() == "1")
-                    {
-                        url_streaming = dr["contenido_mobile"].ToString();
-                    }
-                }
-            }
-            Session["url_streaming"] = url_streaming;
-            Response.Redirect("ver_streaming.aspx");
-        }
+        
 
         protected void lbtnPerfiles_Click(object sender, EventArgs e)
         {
@@ -315,6 +273,7 @@ namespace landingAhayou
             string[] id = obj.CommandArgument.ToString().Split('|');
             Session["cod_perfil_suscriptor"] = id[0];
             lblPerfilSuscriptor.Text = id[0];
+            Session["pin"] = id[1];
             if (id[1] == "0")
                 Response.Redirect("cartelera.aspx");
             else

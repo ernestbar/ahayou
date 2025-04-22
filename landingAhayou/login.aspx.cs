@@ -45,9 +45,9 @@ namespace landingAhayou
                     }
                     else
                     {
-                        Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(1);
-                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(1);
-                        Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(30);
+                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
+                        Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(30);
                     }
                     Response.Cookies["UserName"].Value = email.Text.Trim();
                     Response.Cookies["Password"].Value = password.Text.Trim();
@@ -64,8 +64,8 @@ namespace landingAhayou
                         {
                             Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
                             Session["codigo_plan"] = dr["codigo_plan"];
-                            //Response.Cookies["cod_plan_susucriptor"].Value = dr["cod_plan_suscriptor"].ToString();
-                            //Response.Cookies["codigo_plan"].Value = dr["codigo_plan"].ToString();
+                            Response.Cookies["cod_plan_susucriptor"].Value = dr["cod_plan_suscriptor"].ToString();
+                            Response.Cookies["codigo_plan"].Value = dr["codigo_plan"].ToString();
                         }
                         Response.Redirect("perfiles.aspx");
                     }

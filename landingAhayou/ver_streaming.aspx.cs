@@ -165,6 +165,7 @@ namespace landingAhayou
             string[] id = obj.CommandArgument.ToString().Split('|');
             Session["cod_perfil_suscriptor"] = id[0];
             lblPerfilSuscriptor.Text = id[0];
+            Session["pin"] = id[1];
             if (id[1] == "0")
                 Response.Redirect("cartelera.aspx");
             else

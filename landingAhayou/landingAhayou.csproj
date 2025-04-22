@@ -118,7 +118,9 @@
     <Content Include="bin\WebAhayouAdmin.dll" />
     <Content Include="bin\WebAhayouAdmin.pdb" />
     <Content Include="cambio_password.aspx" />
+    <Content Include="cambio_password_us.aspx" />
     <Content Include="cartelera.aspx" />
+    <Content Include="cartelera_us.aspx" />
     <Content Include="centro_ayuda.aspx" />
     <Content Include="contacto.aspx" />
     <Content Include="contacto_us.aspx" />
@@ -160,7 +162,9 @@
     <Content Include="css\web-app-section.css" />
     <Content Include="css\welcome.css" />
     <Content Include="cuenta_suscriptor.aspx" />
+    <Content Include="cuenta_suscriptor_us.aspx" />
     <Content Include="forma_pago.aspx" />
+    <Content Include="forma_pago_us.aspx" />
     <Content Include="home.aspx" />
     <Content Include="home_us.aspx" />
     <Content Include="Imagenes\fondo-AHAYOU.png" />
@@ -502,22 +506,32 @@
     <Content Include="js\stop-autoplay.js" />
     <Content Include="js\web-app-title.js" />
     <Content Include="login.aspx" />
+    <Content Include="login_us.aspx" />
     <Content Include="Logs\Readme.txt" />
     <Content Include="mas_informacion.aspx" />
+    <Content Include="mas_informacion_us.aspx" />
     <Content Include="perfiles.aspx" />
+    <Content Include="perfiles_us.aspx" />
     <Content Include="pin_perfil.aspx" />
+    <Content Include="pin_perfil_us.aspx" />
     <Content Include="reset_password.aspx" />
+    <Content Include="reset_password_us.aspx" />
     <Content Include="resultado_busqueda.aspx" />
+    <Content Include="resultado_busqueda_us.aspx" />
     <Content Include="return.js" />
     <Content Include="Scripts\konami.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\pwacompat.min.js" />
     <Content Include="selecciona_plan.aspx" />
+    <Content Include="selecciona_plan_us.aspx" />
     <Content Include="service-worker.js" />
     <Content Include="suscribete.aspx" />
+    <Content Include="suscribete_us.aspx" />
     <Content Include="sw.js" />
     <Content Include="verificar_correo.aspx" />
+    <Content Include="verificar_correo_us.aspx" />
     <Content Include="ver_streaming.aspx" />
+    <Content Include="ver_streaming_us.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -528,12 +542,26 @@
     <Compile Include="cambio_password.aspx.designer.cs">
       <DependentUpon>cambio_password.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cambio_password_us.aspx.cs">
+      <DependentUpon>cambio_password_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cambio_password_us.aspx.designer.cs">
+      <DependentUpon>cambio_password_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cartelera.aspx.cs">
       <DependentUpon>cartelera.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cartelera.aspx.designer.cs">
       <DependentUpon>cartelera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cartelera_us.aspx.cs">
+      <DependentUpon>cartelera_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cartelera_us.aspx.designer.cs">
+      <DependentUpon>cartelera_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="centro_ayuda.aspx.cs">
       <DependentUpon>centro_ayuda.aspx</DependentUpon>
@@ -594,12 +622,26 @@
     <Compile Include="cuenta_suscriptor.aspx.designer.cs">
       <DependentUpon>cuenta_suscriptor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cuenta_suscriptor_us.aspx.cs">
+      <DependentUpon>cuenta_suscriptor_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cuenta_suscriptor_us.aspx.designer.cs">
+      <DependentUpon>cuenta_suscriptor_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="forma_pago.aspx.cs">
       <DependentUpon>forma_pago.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forma_pago.aspx.designer.cs">
       <DependentUpon>forma_pago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forma_pago_us.aspx.cs">
+      <DependentUpon>forma_pago_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forma_pago_us.aspx.designer.cs">
+      <DependentUpon>forma_pago_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -622,12 +664,26 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="login_us.aspx.cs">
+      <DependentUpon>login_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_us.aspx.designer.cs">
+      <DependentUpon>login_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mas_informacion.aspx.cs">
       <DependentUpon>mas_informacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mas_informacion.aspx.designer.cs">
       <DependentUpon>mas_informacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mas_informacion_us.aspx.cs">
+      <DependentUpon>mas_informacion_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mas_informacion_us.aspx.designer.cs">
+      <DependentUpon>mas_informacion_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="perfiles.aspx.cs">
       <DependentUpon>perfiles.aspx</DependentUpon>
@@ -636,12 +692,26 @@
     <Compile Include="perfiles.aspx.designer.cs">
       <DependentUpon>perfiles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="perfiles_us.aspx.cs">
+      <DependentUpon>perfiles_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfiles_us.aspx.designer.cs">
+      <DependentUpon>perfiles_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pin_perfil.aspx.cs">
       <DependentUpon>pin_perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pin_perfil.aspx.designer.cs">
       <DependentUpon>pin_perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pin_perfil_us.aspx.cs">
+      <DependentUpon>pin_perfil_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pin_perfil_us.aspx.designer.cs">
+      <DependentUpon>pin_perfil_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reset_password.aspx.cs">
@@ -651,12 +721,26 @@
     <Compile Include="reset_password.aspx.designer.cs">
       <DependentUpon>reset_password.aspx</DependentUpon>
     </Compile>
+    <Compile Include="reset_password_us.aspx.cs">
+      <DependentUpon>reset_password_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reset_password_us.aspx.designer.cs">
+      <DependentUpon>reset_password_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="resultado_busqueda.aspx.cs">
       <DependentUpon>resultado_busqueda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="resultado_busqueda.aspx.designer.cs">
       <DependentUpon>resultado_busqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resultado_busqueda_us.aspx.cs">
+      <DependentUpon>resultado_busqueda_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resultado_busqueda_us.aspx.designer.cs">
+      <DependentUpon>resultado_busqueda_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="selecciona_plan.aspx.cs">
       <DependentUpon>selecciona_plan.aspx</DependentUpon>
@@ -665,12 +749,26 @@
     <Compile Include="selecciona_plan.aspx.designer.cs">
       <DependentUpon>selecciona_plan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="selecciona_plan_us.aspx.cs">
+      <DependentUpon>selecciona_plan_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="selecciona_plan_us.aspx.designer.cs">
+      <DependentUpon>selecciona_plan_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="suscribete.aspx.cs">
       <DependentUpon>suscribete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="suscribete.aspx.designer.cs">
       <DependentUpon>suscribete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="suscribete_us.aspx.cs">
+      <DependentUpon>suscribete_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="suscribete_us.aspx.designer.cs">
+      <DependentUpon>suscribete_us.aspx</DependentUpon>
     </Compile>
     <Compile Include="verificar_correo.aspx.cs">
       <DependentUpon>verificar_correo.aspx</DependentUpon>
@@ -679,12 +777,26 @@
     <Compile Include="verificar_correo.aspx.designer.cs">
       <DependentUpon>verificar_correo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="verificar_correo_us.aspx.cs">
+      <DependentUpon>verificar_correo_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verificar_correo_us.aspx.designer.cs">
+      <DependentUpon>verificar_correo_us.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ver_streaming.aspx.cs">
       <DependentUpon>ver_streaming.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ver_streaming.aspx.designer.cs">
       <DependentUpon>ver_streaming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ver_streaming_us.aspx.cs">
+      <DependentUpon>ver_streaming_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ver_streaming_us.aspx.designer.cs">
+      <DependentUpon>ver_streaming_us.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -693,7 +805,6 @@
     <Content Include="Images\Icons\iconoss.zip" />
     <Content Include="Images\Icons\manifest.json" />
     <Content Include="manifest.json" />
-    <Content Include="manifest2.json" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
     <Content Include="bin\roslyn\csi.exe.config" />

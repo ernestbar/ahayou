@@ -277,6 +277,7 @@
                     </div>
                     <asp:Button class="button button--orange full-width button--border" ValidationGroup="datosgenerales" OnClick="btnGuardar_Click"   ID="btnGuardar" runat="server"  Text="Guardar datos generales" />
                     <asp:LinkButton ID="lbtnCmabiarPass" Font-Size="X-Large" OnClick="lbtnCmabiarPass_Click" runat="server">Cambiar Contrase&ntilde;a</asp:LinkButton>
+                    <asp:LinkButton ID="lbtnSolicitarPIN" Font-Size="X-Large" OnClick="lbtnSolicitarPIN_Click" runat="server">Solicitar PIN</asp:LinkButton>
                     <div class="form__input-container">
                         <label
                             for="password"

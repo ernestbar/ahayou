@@ -1,4 +1,5 @@
-﻿using System;
+﻿using landingAhayou.Clases;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,7 +13,67 @@ namespace landingAhayou
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                if (Session["usuario"] == null)
+                {
+                    Panel_logout.Visible = false;
+                    Panel_login.Visible = false;
+                    lblUsuario.Text = "";
+                    //btnLogin.Visible = false;
+                    //btnSuscribete.Visible = false;
 
+                }
+                else
+                {
+                    Panel_logout.Visible = false;
+                    Panel_login.Visible = false;
+                    lblUsuario.Text = Session["usuario"].ToString();
+                    if (Session["cod_plan_suscriptor"] == null)
+                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = false; }
+                    else
+                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                    if (Session["cod_perfil_suscriptor"] == null)
+                        lblPerfilSuscriptor.Text = "0";
+                    else
+                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                    if (Session["codigo_plan"] == null)
+                        lblCodigoPlan.Text = "0";
+                    else
+                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+
+                    //btnLogin.Visible = false;
+                    //btnSuscribete.Visible = false;
+                    imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                    DataTable dt = new DataTable();
+
+                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                        {
+                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                        }
+                    }
+                    if (Session["menu"] == null) { lblMenu.Text = "0"; }
+                    else { lblMenu.Text = Session["menu"].ToString(); }
+                }
+
+            }
+        }
+        protected void lbtnPerfiles_Click(object sender, EventArgs e)
+        {
+
+            LinkButton obj = (LinkButton)sender;
+            string[] id = obj.CommandArgument.ToString().Split('|');
+            Session["cod_perfil_suscriptor"] = id[0];
+            lblPerfilSuscriptor.Text = id[0];
+            if (id[1] == "0")
+                Response.Redirect("cartelera_us.aspx");
+            else
+                Response.Redirect("pin_perfil_us.aspx");
         }
         protected void ibtnEnviar_Click(object sender, ImageClickEventArgs e)
         {
@@ -21,8 +82,56 @@ namespace landingAhayou
             foreach (DataRow dr in dt.Rows)
             {
                 if (dr["red_social"].ToString() == "WHATSAPP")
-                    Response.Redirect(dr["URL"].ToString());
+                    Response.Redirect(dr["URL"].ToString() + " " + txtConsulta.Text);
             }
+        }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login_us.aspx");
+        }
+
+        protected void btnSuscribete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("suscribete_us.aspx");
+        }
+        protected void btnMenu_Click(object sender, EventArgs e)
+        {
+            Button obj = (Button)sender;
+            string id = obj.CommandArgument.ToString();
+            lblMenu.Text = id;
+            Session["menu"] = id;
+            Response.Redirect("cartelera_us.aspx");
+        }
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect("home_us.aspx");
+        }
+        protected void lbtnCuenta_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                {
+
+                    if (dr["es_principal"].ToString() == "SI")
+                        Response.Redirect("cuenta_suscriptor_us.aspx");
+                    else
+                    {
+                        string script = string.Format("alert('{0}');", "Only the main profile can edit the account.");
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+                    }
+
+                }
+            }
+
         }
     }
 }

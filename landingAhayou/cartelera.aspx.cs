@@ -146,19 +146,19 @@ namespace landingAhayou
 
                     //btnLogin.Visible = false;
                     //btnSuscribete.Visible = false;
-                    imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
-                    DataTable dt = new DataTable();
+                    //imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                    //DataTable dt = new DataTable();
 
-                    dt=Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                    //dt=Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
                     
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
-                        {
-                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                    //foreach (DataRow dr in dt.Rows)
+                    //{
+                    //    if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                    //    {
+                    //        imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
                                 
-                        }
-                    }
+                    //    }
+                    //}
                     if (Session["menu"] == null) { lblMenu.Text = "0"; }
                     else { lblMenu.Text = Session["menu"].ToString(); }
                 }
@@ -361,6 +361,7 @@ namespace landingAhayou
             string[] id = obj.CommandArgument.ToString().Split('|');
             Session["cod_perfil_suscriptor"] = id[0];
             lblPerfilSuscriptor.Text = id[0];
+            Session["pin"]= id[1];
             if (id[1]=="0")
                 Response.Redirect("cartelera.aspx");
             else

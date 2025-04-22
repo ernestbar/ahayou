@@ -82,7 +82,7 @@ namespace landingAhayou
             foreach (DataRow dr in dt.Rows) 
             {
                 if (dr["red_social"].ToString() == "WHATSAPP")
-                    Response.Redirect(dr["URL"].ToString());
+                    Response.Redirect(dr["URL"].ToString() + " " + txtConsulta.Text);
             }
         }
         protected void btnLogin_Click(object sender, EventArgs e)
