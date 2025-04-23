@@ -52,7 +52,10 @@ namespace landingAhayou
                             lblCodigoPlan.Text = "0";
                         else
                             lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
                         //btnLogin.Visible = false;
                         //btnSuscribete.Visible = false;
                         imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
@@ -107,7 +110,10 @@ namespace landingAhayou
                             lblCodigoPlan.Text = "0";
                         else
                             lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
                         //btnLogin.Visible = false;
                         //btnSuscribete.Visible = false;
                         imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
@@ -142,7 +148,10 @@ namespace landingAhayou
                         lblCodigoPlan.Text = "0";
                     else
                         lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
+                    if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                    {
+                        lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                    }
                     //btnLogin.Visible = false;
                     //btnSuscribete.Visible = false;
                     imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
@@ -175,13 +184,16 @@ namespace landingAhayou
 
         protected void btnComprar_Click(object sender, EventArgs e)
         {
-            Button obj = (Button)sender;
-            string[] id = obj.CommandArgument.ToString().Split('|');
-            Int64 ID = Clases.PagosSuscriptores.PR_REG_DEVUELVE_IDSESION(lblUsuario.Text, Int64.Parse(id[1]));
-
-            string url_final = id[0] + ID.ToString();
-            Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
-            //Response.Redirect("forma_pago.aspx");
+            if (Panel_login.Visible == false)
+                Response.Redirect("login.aspx");
+            else
+            {
+                Button obj = (Button)sender;
+                string[] id = obj.CommandArgument.ToString().Split('|');
+                Int64 ID = Clases.PagosSuscriptores.PR_REG_DEVUELVE_IDSESION(lblUsuario.Text, Int64.Parse(id[1]));
+                string url_final = id[0] + ID.ToString();
+                Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
+            }
         }
         protected void btnMenu_Click(object sender, EventArgs e)
         {
@@ -212,6 +224,7 @@ namespace landingAhayou
             Session["cod_perfil_suscriptor"] = id[0];
             lblPerfilSuscriptor.Text = id[0];
             Session["pin"] = id[1];
+            Response.Cookies["cod_perfil_suscriptor"].Value = id[0];
             if (id[1] == "0")
                 Response.Redirect("cartelera_us.aspx");
             else

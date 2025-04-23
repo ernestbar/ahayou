@@ -85,7 +85,7 @@
         
           <header class="header">
             <nav class="header__nav">
-                <a href="cartelera.aspx" class="header__logo">
+                <a href="cartelera_us.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -104,12 +104,12 @@
                             <div class="header__nav-buttons header__nav-buttons--with-text">
                               <button
                                   class="header__button header__button--text header__button--bg-orange"
-                                type="button" onclick="location.href='suscribete.aspx';">
+                                type="button" onclick="location.href='suscribete_us.aspx';">
                                   Suscribe
                               </button>
                               <button
                                   class="header__button header__button--text header__button--bg-green"
-                               type="button" onclick="location.href='login.aspx';">
+                               type="button" onclick="location.href='login_us.aspx';">
                                   Login
                               </button>
                           </div> 

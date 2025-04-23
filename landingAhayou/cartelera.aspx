@@ -423,7 +423,7 @@
                                               <a
                                                       href=' <%# "mas_informacion.aspx?ID=" + Eval("codigo") %>'
                                                       class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
-                                                  >
+                                                  style="text-align:center">
                                                       <div class="playlist__number">
                                                           <p class="text--only-stroke text--green">
                                                               <%# Eval("numero") %>
@@ -439,7 +439,7 @@
                                                               Recien agregados
                                                           </p>
                                                       </div>--%>
-                                                  <asp:Label ID="lblGratis" class="ribbon--under container--orange" 
+                                                  <asp:Label ID="lblGratis" class="ribbon--under container--align-end container--orange" 
                                                     Visible='<%# Eval("gratis").ToString().Equals("SI".ToString()) ? Convert.ToBoolean(1) : Convert.ToBoolean(0) %>'
                                                     Width="200" Font-Bold="true"  runat="server" Text="GRATUITO"></asp:Label>
                                                   </a>

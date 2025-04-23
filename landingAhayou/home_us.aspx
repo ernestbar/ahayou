@@ -84,7 +84,7 @@
          <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
          <header class="header header--main" id="header__movies">
             <nav class="header__nav">
-                <a href="home.aspx" class="header__logo">
+                <a href="home_us.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"

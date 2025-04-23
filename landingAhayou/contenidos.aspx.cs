@@ -42,7 +42,10 @@ namespace landingAhayou
                         lblCodigoPlan.Text = "0";
                     else
                         lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
+                    if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                    {
+                        lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                    }
                     //btnLogin.Visible = false;
                     //btnSuscribete.Visible = false;
                     imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
@@ -101,6 +104,7 @@ namespace landingAhayou
             LinkButton obj = (LinkButton)sender;
             string id = obj.CommandArgument.ToString();
             //Session["usuario"] = lblUsuario.Text;
+            Response.Cookies["cod_perfil_suscriptor"].Value = id;
             Session["cod_perfil_suscriptor"] = id;
             lblPerfilSuscriptor.Text = id;
             Response.Redirect("cartelera.aspx");

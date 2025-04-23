@@ -84,7 +84,7 @@
         <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
          <header class="header header--main" id="header__movies">
             <nav class="header__nav">
-                <a href="cartelera.aspx" class="header__logo">
+                <a href="cartelera_us.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -103,12 +103,12 @@
                         <div class="header__nav-buttons header__nav-buttons--with-text">
                           <button
                               class="header__button header__button--text header__button--bg-orange"
-                            type="button" onclick="location.href='suscribete.aspx';">
+                            type="button" onclick="location.href='suscribete_us.aspx';">
                               Suscribe
                           </button>
                           <button
                               class="header__button header__button--text header__button--bg-green"
-                           type="button" onclick="location.href='login.aspx';">
+                           type="button" onclick="location.href='login_us.aspx';">
                               Login
                           </button>
                       </div> 
@@ -420,28 +420,28 @@
                                     <asp:Repeater ID="Repeater3"  runat="server">
                                         <ItemTemplate>
                                               <a
-                                                      href=' <%# "mas_informacion_us.aspx?ID=" + Eval("codigo") %>'
-                                                      class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
-                                                  >
-                                                      <div class="playlist__number">
-                                                          <p class="text--only-stroke text--green">
-                                                              <%# Eval("numero") %>
-                                                          </p>
-                                                      </div>
-                                                  <%--<asp:ImageButton ID="ibtnContenidoNormal" ImageUrl='<%# Eval("contenido") %>'  runat="server" />--%>
-                                                      <img
-                                                          src='<%# Eval("contenido") %>'
-                                                          alt="Pelicula" 
-                                                      /><!--Put the name of the movie in the alt-->
-                                                      <%--<div class="ribbon--under container--orange">
-                                                          <p class="text text--bold">
-                                                              Recien agregados
-                                                          </p>
-                                                      </div>--%>
-                                                  <asp:Label ID="lblGratis" class="ribbon--under container--orange" 
-                                                    Visible='<%# Eval("gratis").ToString().Equals("SI".ToString()) ? Convert.ToBoolean(1) : Convert.ToBoolean(0) %>'
-                                                    Width="200" Font-Bold="true"  runat="server" Text="GRATUITO"></asp:Label>
-                                                  </a>
+                                                    href=' <%# "mas_informacion_us.aspx?ID=" + Eval("codigo") %>'
+                                                    class="playlist__movie playlist__movie--second container--flex container--flex-column container--justify-content-center container--align-end container--no-border-radius carousel__item"
+                                                style="text-align:center">
+                                                    <div class="playlist__number">
+                                                        <p class="text--only-stroke text--green">
+                                                            <%# Eval("numero") %>
+                                                        </p>
+                                                    </div>
+                                                <%--<asp:ImageButton ID="ibtnContenidoNormal" ImageUrl='<%# Eval("contenido") %>'  runat="server" />--%>
+                                                    <img
+                                                        src='<%# Eval("contenido") %>'
+                                                        alt="Pelicula" 
+                                                    /><!--Put the name of the movie in the alt-->
+                                                    <%--<div class="ribbon--under container--orange">
+                                                        <p class="text text--bold">
+                                                            Recien agregados
+                                                        </p>
+                                                    </div>--%>
+                                                <asp:Label ID="lblGratis" class="ribbon--under container--align-end container--orange" 
+                                                  Visible='<%# Eval("gratis").ToString().Equals("SI".ToString()) ? Convert.ToBoolean(1) : Convert.ToBoolean(0) %>'
+                                                  Width="200" Font-Bold="true"  runat="server" Text="GRATUITO"></asp:Label>
+                                                </a>
                                             </ItemTemplate>
                                      </asp:Repeater>
                                         </div>

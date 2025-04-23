@@ -55,7 +55,10 @@ namespace landingAhayou
                             lblCodigoPlan.Text = "0";
                         else
                             lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
                         //btnLogin.Visible = false;
                         //btnSuscribete.Visible = false;
                         imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
@@ -111,7 +114,10 @@ namespace landingAhayou
                             lblCodigoPlan.Text = "0";
                         else
                             lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
                         //btnLogin.Visible = false;
                         //btnSuscribete.Visible = false;
                         imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
@@ -147,6 +153,11 @@ namespace landingAhayou
                     else
                         lblCodigoPlan.Text = Session["codigo_plan"].ToString();
                     lblCodContenidoStr.Text = Request.QueryString["ID"];
+
+                    if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                    {
+                        lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                    }
                     imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
                     DataTable dt = new DataTable();
                     dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
@@ -203,6 +214,7 @@ namespace landingAhayou
             string[] id = obj.CommandArgument.ToString().Split('|');
             Session["cod_perfil_suscriptor"] = id[0];
             lblPerfilSuscriptor.Text = id[0];
+            Response.Cookies["cod_perfil_suscriptor"].Value = id[0];
             if (id[1] == "0")
                 Response.Redirect("cartelera_us.aspx");
             else
@@ -296,7 +308,7 @@ namespace landingAhayou
                     }
                 }
             }
-            Session["url_streaming"] = url_streaming + "|" + es_gratis;
+            Session["url_streaming"] = url_streaming + "|" + es_gratis + "|" + id;
             if (Sesiones.PR_PAR_VALIDA_ACCESO_POR_SESIONES(lblUsuario.Text) == true)
             {
                 Response.Redirect("ver_streaming_us.aspx");
@@ -320,9 +332,9 @@ namespace landingAhayou
                 es_gratis = drCont["es_gratuita"].ToString();
             }
             if (id[0] != "")
-                Session["url_streaming"] = id[0] + "|" + es_gratis;
+                Session["url_streaming"] = id[0] + "|" + es_gratis + "|" + id[1];
             else
-                Session["url_streaming"] = id[2] + "|" + es_gratis;
+                Session["url_streaming"] = id[2] + "|" + es_gratis + "|" + id[1];
 
             if (Sesiones.PR_PAR_VALIDA_ACCESO_POR_SESIONES(lblUsuario.Text) == true)
             {

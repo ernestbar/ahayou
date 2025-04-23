@@ -58,6 +58,8 @@ namespace landingAhayou
             Session["usuario"] = lblUsuario.Text;
             Session["cod_perfil_suscriptor"] = id[0];
             Session["pin"] = id[1];
+            Response.Cookies["cod_perfil_suscriptor"].Expires = DateTime.Now.AddDays(30);
+            Response.Cookies["cod_perfil_suscriptor"].Value = id[0];
             if (id[1] == "0")
                 Response.Redirect("cartelera_us.aspx");
             else

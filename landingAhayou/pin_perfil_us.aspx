@@ -50,7 +50,7 @@
  
    <header class="header">
      <nav class="header__nav">
-         <a href="pin_perfil.aspx" class="header__logo">
+         <a href="pin_perfil_us.aspx" class="header__logo">
              <img
                  class="header__logo-img"
                  src="imgs/logos/logo-ahayou.png"
@@ -65,12 +65,12 @@
                         <div class="header__nav-buttons header__nav-buttons--with-text">
                           <button
                               class="header__button header__button--text header__button--bg-orange"
-                            type="button" onclick="location.href='suscribete.aspx';">
+                            type="button" onclick="location.href='suscribete_us.aspx';">
                               Suscribe
                           </button>
                           <button
                               class="header__button header__button--text header__button--bg-green"
-                           type="button" onclick="location.href='login.aspx';">
+                           type="button" onclick="location.href='login_us.aspx';">
                               Login
                           </button>
                       </div> 
@@ -184,12 +184,10 @@
             <h1>Enter your PIN to access this profile</h1>
 
             <div class="pin__inputs">
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox1" required runat="server"></asp:TextBox>
-                
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox2" required runat="server"></asp:TextBox>
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox3" required runat="server"></asp:TextBox>
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox4" required runat="server"></asp:TextBox>
-                
+                 <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox1" required runat="server"></asp:TextBox>
+                 <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox2" required runat="server"></asp:TextBox>
+                 <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox3" required runat="server"></asp:TextBox>
+                 <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox4" required runat="server"></asp:TextBox>
             </div>
             <p class="text text--red">
                 Your PIN must have 4 numbers.

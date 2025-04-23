@@ -184,11 +184,10 @@
             <h1>Ingresa tu PIN para acceder a este perfil</h1>
 
             <div class="pin__inputs">
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox1" required runat="server"></asp:TextBox>
-                
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox2" required runat="server"></asp:TextBox>
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox3" required runat="server"></asp:TextBox>
-                <asp:TextBox class="form__input form__input--dark pin__input" autocomplete="off" maxlength="1" ID="TextBox4" required runat="server"></asp:TextBox>
+                <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox1" required runat="server"></asp:TextBox>
+                <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox2" required runat="server"></asp:TextBox>
+                <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox3" required runat="server"></asp:TextBox>
+                <asp:TextBox class="form__input form__input--dark pin__input" TextMode="Number" autocomplete="off" maxlength="1" ID="TextBox4" required runat="server"></asp:TextBox>
                 
             </div>
             <p class="text text--red">

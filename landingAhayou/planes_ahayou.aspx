@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="selecciona_plan_us.aspx.cs" Inherits="landingAhayou.selecciona_plan_us" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="planes_ahayou.aspx.cs" Inherits="landingAhayou.planes_ahayou" %>
 
 <!DOCTYPE html>
 
@@ -55,7 +55,7 @@
         <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
         <header class="header">
             <nav class="header__nav">
-                <a href="cartelera_us.aspx" class="header__logo">
+                <a href="home.aspx" class="header__logo">
                     <img
                         class="header__logo-img"
                         src="imgs/logos/logo-ahayou.png"
@@ -64,18 +64,18 @@
                 </a>
                 <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
                     <div class="repetitive-buttons">
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='planes_ahayou.aspx';" />
+                        <input class="header__button header__button--icon" type="button" onclick="location.href='planes_ahayou_us.aspx';" />
                             <div class="header__nav-buttons header__nav-buttons--with-text">
                               <button
                                   class="header__button header__button--text header__button--bg-orange"
-                                type="button" onclick="location.href='suscribete_us.aspx';">
-                                  Suscribe
+                                type="button" onclick="location.href='suscribete.aspx';">
+                                  Suscr&iacute;bete
                               </button>
                               <button
                                   class="header__button header__button--text header__button--bg-green"
-                               type="button" onclick="location.href='login_us.aspx';">
-                                  Login
+                               type="button" onclick="location.href='login.aspx';">
+                                  Iniciar Sesi&oacute;n
                               </button>
                           </div> 
         
@@ -90,75 +90,13 @@
                              <%--<button class="options__button">Espa&ntilde;ol</button>
                              <button class="options__button" >Ingl&eacute;s</button>--%>
          
-                               <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Spanish" />
-                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="English" />
-                            <input class="options__button" type="button" onclick="location.href='suscribete_us.aspx';" value="Suscribe" />
-                            <input class="options__button" type="button" onclick="location.href='login_us.aspx';" value="Login" />
+                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                            <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                            <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                          </div>
                      </div>
                     <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
-                </asp:Panel>
-                <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
-                    <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
-                    <div
-                        class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
-                    >
-                        <div class="container--flex container--flex-column">
-                            <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
-                                <ItemTemplate>
-                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") + "|"+Eval("pin")  %>' OnClick="lbtnPerfiles_Click" runat="server">
-                                         <img
-                                             src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
-                                             alt="Foto perfil"
-                                         />
-                                         <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
-
-                                    </asp:LinkButton>
-         
-                                </ItemTemplate>
-                            </asp:Repeater>
-       
-        
-                            <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
-                                   <img
-                                       src="imgs/icons/administration.svg"
-                                       alt="Foto perfil"
-                                   />
-                                   <p class="text--small text text--light">
-                                       Account
-                                   </p>
-
-                              </asp:LinkButton>
-        
-         
-                              <a href="cartelera.aspx" class="options__button--flex">
-                                  <img
-                                      src="imgs/flags/spain.png"
-                                      alt="Foto perfil"
-                                  />
-                                  <p class="text--small text text--light">
-                                      Spanish
-                                  </p>
-                              </a>
-                              <a href="cartelera_us.aspx" class="options__button--flex">
-                                  <img
-                                      src="imgs/flags/eeuu.png"
-                                      alt="Foto perfil"
-                                  />
-                                  <p class="text--small text text--light">
-                                      English
-                                  </p>
-                              </a>
-                        </div>
-    
-                        <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">
-                         <ItemTemplate>
-                             <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido_ingles") %>' />
-                         </ItemTemplate>
-                     </asp:Repeater>
-                        <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Logout" />
-    
-                    </div>
                 </asp:Panel>
             </nav>
         </header>
@@ -167,9 +105,9 @@
                 class="container--flex container--flex-column full-width plans-selection full-height"
             >
                 <span class="text text--light text--center full-width">
-                    STEP 3 of 4
+                   TE PRESENTAMOS NUESTROS PLANES DE STREAMING
                 </span>
-                <h1>Select the ideal plan for you</h1>
+                <h1>Selecciona el plan ideal para ti</h1>
                 <div
                     class="plans-selection__list container--flex-wrap container--flex container--justify-content-center"
                 >
@@ -182,21 +120,21 @@
                             class="container-common container--green container--small-rounded container--no-border plans-selection__padding"
                         >
                             <h2 class="text text--bold text--black">
-                               <%# Eval("plan_ingles") %>
+                               <%# Eval("planes") %>
                             </h2>
                         </div>
                         <div
                             class="plans-selection__padding plans-selection--gap container--flex container--flex-column"
                         >
                             <div>
-                                <h3 class="text text--light"> <%# Eval("plan_ingles") %></h3>
+                                <h3 class="text text--light"> <%# Eval("planes") %></h3>
                                 <p class="text text--bold"><%# Eval("moneda") %> <%# Eval("monto") %></p>
                             </div>
                             <div>
                                 <h3 class="text text--light">
                                     Calidad de audio y video
                                 </h3>
-                                <p class="text text--bold"><%# Eval("caracteristicas_ingles").ToString().Replace("|","<br />") %></p>
+                                <p class="text text--bold"><%# Eval("caracteristicas").ToString().Replace("|","<br />") %></p>
                             </div>
                           <%--  <div>
                                 <h3 class="text text--light">
@@ -214,19 +152,19 @@
                             </div>--%>
                              <div>
                                  <h3 class="text text--light">
-                                    Compatible devices
+                                     Dispositivos compatibles
                                  </h3>
                                  <p class="text text--bold">
-                                     TV, computer, phone, tablet
+                                     TV, computadora, tel&eacute;fono, tablet
                                  </p>
                              </div>
                             <div>
                                 <h3 class="text text--light">
-                                    <%# Eval("ahorro_mes") %>
+                                    <%# Eval("ahorro") %>
                                 </h3>
                                 <p class="text text--bold"></p>
                             </div>
-                              <asp:Button class="button button--orange full-width button--border" CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Buy" />
+                              <asp:Button class="button button--orange full-width button--border" CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Comprar" />
                         </div>
                     </article>
                     </ItemTemplate>
@@ -246,19 +184,19 @@
             </div>
             <div class="footer__content">
                 <div class="footer__list">
-                     <div class="footer__list-item">
+                    <div class="footer__list-item">
                         <a href="#frequent-questions">
-                            FAQ
+                            Preguntas frecuentes
                         </a>
-                        <a href="contenidos_us.aspx?t=privacidad" target="_blank">Privacy</a>
+                        <a href="contenidos.aspx?t=privacidad" target="_blank">Privacidad</a>
                     </div>
                     <div class="footer__list-item">
-                        <a href="centro_ayuda_us.aspx" target="_blank">Help center</a>
-                         <a href="contenidos_us.aspx?t=avisos legales" target="_blank">Legal notices</a>
+                        <a href="centro_ayuda.aspx" target="_blank">Centro de Ayuda</a>
+                         <a href="contenidos.aspx?t=avisos legales" target="_blank">Avisos Legales</a>
                     </div>
                     <div class="footer__list-item">
-                        <a href="contenidos_us.aspx?t=terminos de uso" target="_blank">Terms of use</a>
-                        <a href="contacto_us.aspx" target="_blank">Contact</a>
+                        <a href="contenidos.aspx?t=terminos de uso" target="_blank">T&eacute;rminos de uso</a>
+                        <a href="contacto.aspx" target="_blank">Contacto</a>
                     </div>
                 </div>
                 <div class="footer__data">
