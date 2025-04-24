@@ -16,6 +16,7 @@ namespace landingAhayou
         {
             if (!Page.IsPostBack)
             {
+                lblCodContenidoStr.Text = Request.QueryString["ID"];
                 if (Session["usuario"] == null)
                 {
                     Panel_logout.Visible = true;
@@ -77,6 +78,32 @@ namespace landingAhayou
                         }
                         if (Session["menu"] == null) { lblMenu.Text = "0"; }
                         else { lblMenu.Text = Session["menu"].ToString(); }
+
+                        DataTable dt2 = new DataTable();
+                        dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
+                        foreach (DataRow dr2 in dt2.Rows)
+                        {
+                            if (dr2["trailers"].ToString() == "SI")
+                            {
+                                lblTituloTrailers.Visible = true;
+                                Panel_trailers.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTrailers.Visible = false;
+                                Panel_trailers.Visible = false;
+                            }
+                            if (dr2["temporadas_episodios"].ToString() == "SI")
+                            {
+                                lblTituloTemporadas.Visible = true;
+                                Panel_temporadas.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTemporadas.Visible = false;
+                                Panel_temporadas.Visible = false;
+                            }
+                        }
                     }
                     else
                         Response.Redirect("login.aspx");
@@ -136,66 +163,97 @@ namespace landingAhayou
                         }
                         if (Session["menu"] == null) { lblMenu.Text = "0"; }
                         else { lblMenu.Text = Session["menu"].ToString(); }
-                    }
-                    Panel_logout.Visible = false;
-                    Panel_login.Visible = true;
-                    lblUsuario.Text = Session["usuario"].ToString();
-                    if (Session["cod_plan_suscriptor"] == null)
-                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
-                    else
-                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
-                    if (Session["cod_perfil_suscriptor"] == null)
-                        lblPerfilSuscriptor.Text = "0";
-                    else
-                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
 
-                    if (Session["codigo_plan"] == null)
-                        lblCodigoPlan.Text = "0";
-                    else
-                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-                    lblCodContenidoStr.Text = Request.QueryString["ID"];
-
-                    if (Request.Cookies["cod_perfil_suscriptor"] != null)
-                    {
-                        lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
-                    }
-
-                    imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
-                    DataTable dt = new DataTable();
-                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                        DataTable dt2 = new DataTable();
+                        dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
+                        foreach (DataRow dr2 in dt2.Rows)
                         {
-                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            if (dr2["trailers"].ToString() == "SI")
+                            {
+                                lblTituloTrailers.Visible = true;
+                                Panel_trailers.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTrailers.Visible = false;
+                                Panel_trailers.Visible = false;
+                            }
+                            if (dr2["temporadas_episodios"].ToString() == "SI")
+                            {
+                                lblTituloTemporadas.Visible = true;
+                                Panel_temporadas.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTemporadas.Visible = false;
+                                Panel_temporadas.Visible = false;
+                            }
                         }
-                    }
 
-                    DataTable dt2 = new DataTable();
-                    dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
-                    foreach (DataRow dr2 in dt2.Rows)
+                    }
+                    else 
                     {
-                        if (dr2["trailers"].ToString() == "SI")
-                        {
-                            lblTituloTrailers.Visible = true;
-                            Panel_trailers.Visible = true;
-                        }
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
                         else
-                        {
-                            lblTituloTrailers.Visible = false;
-                            Panel_trailers.Visible = false;
-                        }
-                        if (dr2["temporadas_episodios"].ToString() == "SI")
-                        {
-                            lblTituloTemporadas.Visible = true;
-                            Panel_temporadas.Visible = true;
-                        }
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
                         else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                        lblCodContenidoStr.Text = Request.QueryString["ID"];
+
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
                         {
-                            lblTituloTemporadas.Visible = false;
-                            Panel_temporadas.Visible = false;
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
+
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt = new DataTable();
+                        dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            }
+                        }
+
+                        DataTable dt2 = new DataTable();
+                        dt2 = Contenidos.PR_STR_GET_CONTENIDO_STR_IND(lblCodContenidoStr.Text);
+                        foreach (DataRow dr2 in dt2.Rows)
+                        {
+                            if (dr2["trailers"].ToString() == "SI")
+                            {
+                                lblTituloTrailers.Visible = true;
+                                Panel_trailers.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTrailers.Visible = false;
+                                Panel_trailers.Visible = false;
+                            }
+                            if (dr2["temporadas_episodios"].ToString() == "SI")
+                            {
+                                lblTituloTemporadas.Visible = true;
+                                Panel_temporadas.Visible = true;
+                            }
+                            else
+                            {
+                                lblTituloTemporadas.Visible = false;
+                                Panel_temporadas.Visible = false;
+                            }
                         }
                     }
+                    
 
                     //if (Session["cod_plan_suscriptor"] == null)
                     //    Response.Redirect("selecciona_plan.aspx");
@@ -217,6 +275,7 @@ namespace landingAhayou
             Session["cod_perfil_suscriptor"] = id[0];
             lblPerfilSuscriptor.Text = id[0];
             Response.Cookies["cod_perfil_suscriptor"].Value = id[0];
+            Session["pin"] = id[1];
             if (id[1] == "0")
                 Response.Redirect("cartelera.aspx");
             else

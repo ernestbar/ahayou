@@ -131,41 +131,43 @@ namespace landingAhayou
                         //else { lblMenu.Text = Session["menu"].ToString(); }
                         Repeater2.DataBind();
                     }
-
-                    Panel_logout.Visible = false;
-                    Panel_login.Visible = true;
-                    lblUsuario.Text = Session["usuario"].ToString();
-                    if (Session["cod_plan_suscriptor"] == null)
-                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
                     else
-                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
-                    if (Session["cod_perfil_suscriptor"] == null)
-                        lblPerfilSuscriptor.Text = "0";
-                    else
-                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
-
-                    if (Session["codigo_plan"] == null)
-                        lblCodigoPlan.Text = "0";
-                    else
-                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-
-                    //btnLogin.Visible = false;
-                    //btnSuscribete.Visible = false;
-                    imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
-                    DataTable dt = new DataTable();
-
-                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-
-                    foreach (DataRow dr in dt.Rows)
                     {
-                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt = new DataTable();
+
+                        dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt.Rows)
                         {
-                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            }
                         }
+                        //if (Session["menu"] == null) { lblMenu.Text = "0"; }
+                        //else { lblMenu.Text = Session["menu"].ToString(); }
+                        Repeater2.DataBind();
                     }
-                    //if (Session["menu"] == null) { lblMenu.Text = "0"; }
-                    //else { lblMenu.Text = Session["menu"].ToString(); }
-                    Repeater2.DataBind();
                 }
 
             }

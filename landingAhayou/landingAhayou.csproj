@@ -530,7 +530,7 @@
     <Content Include="suscribete.aspx" />
     <Content Include="suscribete_us.aspx" />
     <Content Include="sw.js" />
-    <Content Include="test_wowza.aspx" />
+    <Content Include="test.aspx" />
     <Content Include="verificar_correo.aspx" />
     <Content Include="verificar_correo_us.aspx" />
     <Content Include="ver_streaming.aspx" />
@@ -787,12 +787,12 @@
     <Compile Include="suscribete_us.aspx.designer.cs">
       <DependentUpon>suscribete_us.aspx</DependentUpon>
     </Compile>
-    <Compile Include="test_wowza.aspx.cs">
-      <DependentUpon>test_wowza.aspx</DependentUpon>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test_wowza.aspx.designer.cs">
-      <DependentUpon>test_wowza.aspx</DependentUpon>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="verificar_correo.aspx.cs">
       <DependentUpon>verificar_correo.aspx</DependentUpon>

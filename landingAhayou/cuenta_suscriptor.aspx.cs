@@ -39,6 +39,51 @@ namespace landingAhayou
                             //Response.Redirect("perfiles.aspx");
                         }
                         Session["usuario"] = email;
+
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt3 = new DataTable();
+
+                        dt3 = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt3.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+
+                            }
+                        }
+                        Clases.Suscriptores objS = new Suscriptores(lblUsuario.Text);
+                        txtNombreCompleto.Text = objS.PV_NOMBRE_COMPLETO;
+                        txtCelular.Text = objS.PV_CELULAR;
+                        txtCodigo_aux.Text = objS.PV_CODIGO_AUXILIAR;
+                        lblCuenta.Text = objS.PV_EMAIL;
+                    }
+                    else
+                    {
+                        Response.Redirect("login.aspx");
                     }
                 }
                 else
@@ -59,48 +104,94 @@ namespace landingAhayou
                             //Response.Redirect("perfiles.aspx");
                         }
                         Session["usuario"] = email;
-                    }
 
-                    Panel_logout.Visible = false;
-                    Panel_login.Visible = true;
-                    lblUsuario.Text = Session["usuario"].ToString();
-                    if (Session["cod_plan_suscriptor"] == null)
-                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
-                    else
-                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
-                    if (Session["cod_perfil_suscriptor"] == null)
-                        lblPerfilSuscriptor.Text = "0";
-                    else
-                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
 
-                    if (Session["codigo_plan"] == null)
-                        lblCodigoPlan.Text = "0";
-                    else
-                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-                    if (Request.Cookies["cod_perfil_suscriptor"] != null)
-                    {
-                        lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
-                    }
-                    //btnLogin.Visible = false;
-                    //btnSuscribete.Visible = false;
-                    imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
-                    DataTable dt = new DataTable();
-
-                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
                         {
-                            imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
                         }
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt3 = new DataTable();
+
+                        dt3 = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt3.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+
+                            }
+                        }
+                        Clases.Suscriptores objS = new Suscriptores(lblUsuario.Text);
+                        txtNombreCompleto.Text = objS.PV_NOMBRE_COMPLETO;
+                        txtCelular.Text = objS.PV_CELULAR;
+                        txtCodigo_aux.Text = objS.PV_CODIGO_AUXILIAR;
+                        lblCuenta.Text = objS.PV_EMAIL;
+
+                    }
+                    else
+                    {
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt = new DataTable();
+
+                        dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            }
+                        }
+
+                        Clases.Suscriptores objS = new Suscriptores(lblUsuario.Text);
+                        txtNombreCompleto.Text = objS.PV_NOMBRE_COMPLETO;
+                        txtCelular.Text = objS.PV_CELULAR;
+                        txtCodigo_aux.Text = objS.PV_CODIGO_AUXILIAR;
+                        lblCuenta.Text = objS.PV_EMAIL;
                     }
 
-                    Clases.Suscriptores objS = new Suscriptores(lblUsuario.Text);
-                    txtNombreCompleto.Text = objS.PV_NOMBRE_COMPLETO;
-                    txtCelular.Text = objS.PV_CELULAR;
-                    txtCodigo_aux.Text = objS.PV_CODIGO_AUXILIAR;
-                    lblCuenta.Text = objS.PV_EMAIL;
+                    
                     //if (Session["menu"] == null) { lblMenu.Text = "0"; }
                     //else { lblMenu.Text = Session["menu"].ToString(); }
                     //Repeater2.DataBind();
