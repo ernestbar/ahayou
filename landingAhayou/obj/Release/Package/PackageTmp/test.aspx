@@ -1,160 +1,36 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="test.aspx.cs" Inherits="landingAhayou.test" %>
 
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest2.json">
-    <link rel="apple-touch-icon" href="icon-192x192.png"> <!-- Placeholder for apple-touch-icon -->
-    <title>PWA Sample App</title>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js')
-                    .then(registration => {
-                        console.log('Service Worker registered with scope:', registration.scope);
-                    })
-                    .catch(error => {
-                        console.error('Service Worker registration failed:', error);
-                    });
-            });
-        }
-    </script>
-    <style>
-        /* Moved styles for Install Button */
-        #install-button {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>Flowplayer Embed Example</title>
+     <script>
+         // Wait for Flowplayer to fully load and initialize the player
+         document.addEventListener("flowplayer-ready", function (event) {
+             const player = event.detail;
 
-        /* Moved styles for iOS Instructions */
-        #ios-instructions {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            padding: 10px;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            max-width: 300px;
-        }
-
-        /* Moved styles for iOS Close Button */
-        #ios-close-btn {
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+             // Add 'ended' event listener
+             player.on("ended", function () {
+                 console.log("Video has ended!");
+                 // You can add any additional logic here
+             });
+         });
+     </script>
 </head>
-
+    
 <body>
-    <header>
-        <h1>Welcome to the PWA Sample App</h1>
-    </header>
-    <main>
-        <h2>Home Page</h2>
-        <p>This is a sample Progressive Web App demonstrating the install button and offline capabilities.</p>
-    </main>
-    <footer>
-        <p>&copy; 2023 PWA Sample App</p>
-    </footer>
+    <form id="form1" runat="server">
+        <div id="async-player" data-player-id="cdcc4202-ef0b-4e03-a43a-d1fcf6d83157">
+            <script src="//cdn.flowplayer.com/players/ffdf2c44-aa29-4df8-a270-3a199a1b119e/native/flowplayer.async.js">
+                {
+                  "src": "f576651c-4cc6-4664-84fa-bb3b35ef1aba"
+                }
+            </script>
+        </div>
 
-    <!-- Install Button -->
-    <button id="install-button">
-        Install App
-    </button>
-
-    <!-- iOS Instructions -->
-    <div id="ios-instructions">
-        <p>To install this app on your iPhone or iPad:</p>
-        <ol>
-            <li>Tap the <strong>Share</strong> button in Safari.</li>
-            <li>Scroll down and select <strong>Add to Home Screen</strong>.</li>
-            <li>Follow the on-screen instructions.</li>
-        </ol>
-        <button id="ios-close-btn">
-            Got it
-        </button>
-    </div>
-    <script>
-        let deferredPrompt;
-
-        function isIOS() {
-            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-        }
-
-        if (isIOS()) {
-            const iosInstructions = document.getElementById('ios-instructions');
-            iosInstructions.style.display = 'block';
-
-            document.getElementById('ios-close-btn').addEventListener('click', () => {
-                iosInstructions.style.display = 'none';
-            });
-        }
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            document.getElementById('install-button').style.display = 'block';
-        });
-
-        document.getElementById('install-button').addEventListener('click', async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                console.log(`User response: ${outcome}`);
-                deferredPrompt = null;
-            }
-        });
-
-        window.addEventListener('appinstalled', () => {
-            console.log('PWA installed');
-            document.getElementById('install-button').style.display = 'none';
-        });
-    </script>
+       
+    </form>
 </body>
-
 </html>

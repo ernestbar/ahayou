@@ -32,27 +32,13 @@ namespace AhayouWebAPI.Controllers
 
         [Route("[action]")]
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult SesionesABM([FromBody] Sesiones oSesion)
         {
             try
             {
-                //if (!ModelState.IsValid)
-                //{
-                //    var errores = (from state in ModelState.Values
-                //                   from error in state.Errors
-                //                   select error.ErrorMessage).ToList();
-
-                //    oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
-                //    oRespuestaAPI.exitoso = false;
-                //    oRespuestaAPI.mensajesError = errores;
-                //    oRespuestaAPI.resultado = oSesion;
-                //    return Ok(oRespuestaAPI);
-                //}
-
-                //string id = oSesion.PV_USUARIOREG;
-                //string operacion = id == "" ? "I" : "U";
 
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();
@@ -65,7 +51,6 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.VarChar, 30).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_ERROR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
-                comando.Parameters.Add("@PV_EMAILOUT", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.ExecuteNonQuery();
                 conexion.Close();
 
@@ -125,6 +110,51 @@ namespace AhayouWebAPI.Controllers
                         select new Sesiones()
                         {
                             PV_ACCESO_PERMITIDO = (Int32)dr[0],
+
+                        }).ToList();
+
+                oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
+                oRespuestaAPI.exitoso = true;
+                oRespuestaAPI.mensajesError = new List<string>() { "" };
+                oRespuestaAPI.resultado = oRol;
+                return Ok(oRespuestaAPI);
+            }
+            catch (Exception ex)
+            {
+                oRespuestaAPI.codigoEstado = HttpStatusCode.BadRequest;
+                oRespuestaAPI.exitoso = false;
+                oRespuestaAPI.mensajesError = new List<string>() { ex.Message };
+                oRespuestaAPI.resultado = oRol;
+                return BadRequest(oRespuestaAPI);
+            }
+        }
+
+        [Route("[action]/{pv_usuario}")]
+        [HttpGet]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult PR_GET_DISPOSITIVOS_SESION(string pv_usuario)
+        {
+            List<SesionesLista> oRol = new List<SesionesLista>();
+            try
+            {
+                SqlConnection conexion = new SqlConnection(CadenaConexion);
+                conexion.Open();
+                SqlCommand comando = new SqlCommand("PR_GET_DISPOSITIVOS_SESION", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@pv_usuario", pv_usuario);
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                conexion.Close();
+
+                oRol = (from DataRow dr in dt.Rows
+                        select new SesionesLista()
+                        {
+                            dispositivo = (string)dr["dispositivo"],
+                            idsesion = (Guid)dr["idsesion"],
+                            FechaLogin = (DateTime)dr["FechaLogin"]
 
                         }).ToList();
 

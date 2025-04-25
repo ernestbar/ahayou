@@ -19,21 +19,36 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="css/common/default-background.css" />
-        <link rel="stylesheet" href="css/common/containers.css" />
-        <link rel="stylesheet" href="css/common/alerts.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/common/buttons.css" />
-        <link rel="stylesheet" href="css/common/hamburger.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/alerts.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
         <link rel="stylesheet" href="css/type-payment.css" />
+
+         <script src="https://js.stripe.com/v3/"></script>
+       <%-- <script src="checkout.js" defer></script>--%>
 </head>
 <body>
     <form id="form1" runat="server">
+         <asp:ObjectDataSource ID="odsMenus" runat="server" SelectMethod="PR_PAR_GET_MENU_CARTELERA" TypeName="landingAhayou.Clases.Carteleras">
+            </asp:ObjectDataSource>
+             <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="PR_PAR_GET_PERFILES_SUSCRIPTOR" TypeName="landingAhayou.Clases.Suscriptores">
+                 <SelectParameters>
+                     <asp:ControlParameter ControlID="lblplanSuscriptor" Name="pV_COD_PLAN_SUSCRIPTOR" />
+                 </SelectParameters>
+             </asp:ObjectDataSource>
+            <asp:Label ID="lblMundo" runat="server" Visible="false" Text="BO"></asp:Label>
+             <asp:Label ID="lblplanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+             <asp:Label ID="lblPerfilSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
+             <asp:Label ID="lblCodigoPlan" runat="server" Visible="false" Text=""></asp:Label>
+             <asp:Label ID="lblMenu" runat="server" Visible="false" Text="0"></asp:Label>
           <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
           </asp:ObjectDataSource>
           <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_AVATARES" TypeName="landingAhayou.Clases.Avatares">
@@ -47,39 +62,109 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons">
-                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                        <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnInicia" OnClick="btnInicia_Click" runat="server" Text="Iniciar Session" />
-                </div>
-                <div class="header__nav-buttons">
-                    <div>
-                        <%--<button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                     <%--   <button
-                            class="header__button header__button--icon"
-                        ></button>--%>
+                <asp:Panel ID="Panel_logout" class="header__nav-buttons" runat="server">
+                    <div class="repetitive-buttons">
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                         <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                        <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                            <div class="header__nav-buttons header__nav-buttons--with-text">
+                              <button
+                                  class="header__button header__button--text header__button--bg-orange"
+                                type="button" onclick="location.href='suscribete.aspx';">
+                                  Suscr&iacute;bete
+                              </button>
+                              <button
+                                  class="header__button header__button--text header__button--bg-green"
+                               type="button" onclick="location.href='login.aspx';">
+                                  Iniciar Sesi&oacute;n
+                              </button>
+                          </div> 
+        
                     </div>
-                </div>
-                 <div class="options__container">
-                     <button class="hamburger__button" id="menuButton">
-                           <span class="hamburger__line hamburger__line--white"></span>
-                        <span class="hamburger__line hamburger__line--white"></span>
-                        <span class="hamburger__line hamburger__line--white"></span>
-                     </button>
-                     <div class="options__menu" id="optionsMenu">
-                         <%--<button class="options__button">Espa&ntilde;ol</button>
-                         <button class="options__button" >Ingl&eacute;s</button>--%>
-                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                     <div class="options__container">
+                         <button class="hamburger__button" id="menuButton">
+                               <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                         </button>
+                         <div class="options__menu" id="optionsMenu">
+                             <%--<button class="options__button">Espa&ntilde;ol</button>
+                             <button class="options__button" >Ingl&eacute;s</button>--%>
+         
+                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                            <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                            <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
+                         </div>
                      </div>
-                 </div>
+                    <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+                </asp:Panel>
+                <asp:Panel ID="Panel_login" class="header__nav-buttons submenu__container options__container--second" runat="server">
+                    <asp:ImageButton class="header__button header__button--with-img submenu__button" ID="imgPerfil" runat="server" />
+                    <div
+                        class="submenu options__menu options__menu--flex options__menu--black options__menu--big"
+                    >
+                        <div class="container--flex container--flex-column">
+                            <asp:Repeater ID="Repeater7" DataSourceID="odsAvatares" runat="server">
+                                <ItemTemplate>
+                                    <asp:LinkButton class="options__button--flex" ID="lbtnPerfiles" CommandArgument='<%# Eval("cod_perfil_suscriptor") %>' OnClick="lbtnPerfiles_Click" runat="server">
+                                         <img
+                                             src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
+                                             alt="Foto perfil"
+                                         />
+                                         <p class="text--small text--light"><%# Eval("nombre_perfil") %></p>
+
+                                    </asp:LinkButton>
+     
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
+                                 <img
+                                     src="imgs/icons/administration.svg"
+                                     alt="Foto perfil"
+                                 />
+                                 <p class="text--small text text--light">
+                                     Cuenta
+                                 </p>
+
+                            </asp:LinkButton>
+        
+           
+                            <a href="forma_pago.aspx" class="options__button--flex">
+                                <img
+                                    src="imgs/flags/spain.png"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Idioma español
+                                </p>
+                            </a>
+                            <a href="forma_pago_us.aspx" class="options__button--flex">
+                                <img
+                                    src="imgs/flags/eeuu.png"
+                                    alt="Foto perfil"
+                                />
+                                <p class="text--small text text--light">
+                                    Idioma ingles
+                                </p>
+                            </a>
+                        </div>
+    
+                        <asp:Repeater ID="Repeater8" DataSourceID="odsMenus" runat="server">
+                         <ItemTemplate>
+                             <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
+                         </ItemTemplate>
+                     </asp:Repeater>
+                        <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
+    
+                    </div>
+        
+                </asp:Panel>
             </nav>
         </header>
         <main class="main main--flex">
+            <asp:Label runat="server" id="Label1"></asp:Label>
+             
+           
             <section
                 class="container__wrapper container--shiny container--padding-width"
             >
@@ -123,6 +208,10 @@
                             <path d="M20 28v-8a12 12 0 0 1 24 0v8" />
                         </svg>
                     </div>
+                    <%--<div id="checkout">
+                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                      </div>--%>
+                    <iframe runat="server" id="ifrmPago" frameborder="0" style="width:100%;height:100%" ></iframe>
                     <div
                         class="full-width container-common container--flex container--flex-row container--justify-content-space-between container--align-center container--white type-payment__container"
                     >
@@ -213,6 +302,10 @@
     <script src="js/footer-visited-color.js"></script>
         <script src="js/open-menu.js"></script>
         <script src="js/show-validation-alert.js" defer></script>
+
+     <script src="js/open-submenu.js"></script>
+     
+   
 </body>
 </html>
 

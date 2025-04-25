@@ -1,59 +1,96 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const maxWidth = 768;
+    document.querySelectorAll(".carousel__container").forEach((carousel) => {
+        let currentPage = 0;
+        let itemsPerPage = 4;
+        const list = carousel.querySelector(".carousel__list");
+        const items = list.querySelectorAll(".carousel__item");
+        let totalPages = Math.ceil(items.length / itemsPerPage);
+        const nextButton = carousel.querySelector(".carousel__arrow--next");
+        const prevButton = carousel.querySelector(".carousel__arrow--prev");
 
-    document.querySelectorAll(".carousel").forEach((carousel) => {
-        const slides = carousel.querySelectorAll(".carousel__item");
-        const buttons = carousel.querySelectorAll(".carousel__button");
-        const prevArrow = carousel.querySelector(".carousel__arrow--prev");
-        const nextArrow = carousel.querySelector(".carousel__arrow--next");
-        const header = document.getElementById("header__movies");
-        let currentIndex = 0;
-
-        function showSlide(index) {
-            if (!slides[index]) return;
-
-            slides.forEach((slide, i) => {
-                slide.classList.toggle("active", i === index);
-            });
-
-            buttons.forEach((button, i) => {
-                button.classList.toggle("selected", i === index);
-            });
-
-            const bgImage = slides[index].getAttribute("data-bg");
+        function updateItemsPerPage() {
             const screenWidth = window.innerWidth;
-
-            if (bgImage) {
-                if (index !== 0 && screenWidth > maxWidth) {
-                    header.style.background = `radial-gradient(circle at right, rgba(0, 0, 0, 0) 20%, #000 80%), linear-gradient(to bottom, transparent 0%, #000000a0 85%,#000 95%), url(${bgImage}) center/cover no-repeat`;
-                    header.style.backgroundPosition = "top";
-                    header.style.objectFit = "fill";
-                } else {
-                    header.style.background = `linear-gradient(to bottom, transparent 0%, #000000a0 75%,#000 95%), url('${
-                        index !== 0 && screenWidth <= maxWidth
-                            ? "/imgs/backgrounds/fondo_header_movil.jpg"
-                            : bgImage
-                    }')`;
-                    header.style.backgroundPosition = "center";
-                    header.style.backgroundSize = "cover";
-                }
+            if (screenWidth >= 1300) {
+                itemsPerPage = 4;
+            } else if (screenWidth >= 1000) {
+                itemsPerPage = 3;
+            } else if (screenWidth >= 750) {
+                itemsPerPage = 2;
+            } else {
+                itemsPerPage = 1;
             }
 
-            currentIndex = index;
+            totalPages = Math.ceil(items.length / itemsPerPage);
+
+            if (currentPage >= totalPages) {
+                currentPage = totalPages - 1;
+            }
+
+            showPage();
         }
 
-        prevArrow.addEventListener("click", () => {
-            let newIndex = (currentIndex - 1 + slides.length) % slides.length;
-            showSlide(newIndex);
-        });
+        function showPage(direction = null) {
+            if (direction) {
+                list.classList.remove("show");
+                list.classList.add(
+                    direction === "next" ? "slide-in" : "slide-out"
+                );
 
-        nextArrow.addEventListener("click", () => {
-            let newIndex = (currentIndex + 1) % slides.length;
-            showSlide(newIndex);
-        });
+                setTimeout(() => {
+                    updateVisibleItems();
+                    list.classList.remove("slide-out", "slide-in");
+                    list.classList.add("show");
+                }, 300);
+            } else {
+                updateVisibleItems();
+            }
+        }
 
-        window.addEventListener("resize", () => showSlide(currentIndex));
+        function updateVisibleItems() {
+            items.forEach((item) => (item.style.display = "none"));
 
-        showSlide(0);
+            const start = currentPage * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            for (let i = start; i < end && i < items.length; i++) {
+                items[i].style.display = "flex";
+            }
+
+            prevButton.classList.toggle("button--disabled", currentPage === 0);
+            nextButton.classList.toggle(
+                "button--disabled",
+                currentPage >= totalPages - 1
+            );
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+            } else {
+                currentPage = 0;
+            }
+            showPage("next");
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+            } else {
+                currentPage = totalPages - 1;
+            }
+            showPage("prev");
+        }
+
+        function resizeHandler() {
+            updateItemsPerPage();
+            showPage();
+        }
+
+        updateItemsPerPage();
+        showPage();
+
+        nextButton.addEventListener("click", nextPage);
+        prevButton.addEventListener("click", prevPage);
+        window.addEventListener("resize", resizeHandler);
     });
 });

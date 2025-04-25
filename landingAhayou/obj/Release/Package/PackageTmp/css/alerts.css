@@ -1,0 +1,37 @@
+@import url("main.css");
+
+/*
+    ALERTS.CSS
+
+    Description: This css file is used for the alert
+    container for the actions of login page and
+    other forms.
+*/
+
+.alert {
+    display: none;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.alert--show {
+    display: block;
+}
+
+.alert,
+.alert * {
+    color: #000;
+}
+
+.alert__text {
+    text-align: justify;
+    font-size: 1.15em;
+}
+
+.alert__text--center {
+    text-align: center;
+}
+
+.alert__text--bold {
+    font-weight: bold;
+}

@@ -29,8 +29,23 @@
     </asp:ContentPlaceHolder>
 
 
-	  <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
-  <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
+	<link rel="manifest" href="manifestadmin.json" />
+	<script src="Scripts/pwacompat.min.js"></script>
+
+	 <script>
+     if ('serviceWorker' in navigator) {
+         window.addEventListener('load', () => {
+             navigator.serviceWorker.register('swa.js')
+                 .then(registration => {
+                     console.log('Service Worker registered with scope:', registration.scope);
+                 })
+                 .catch(error => {
+                     console.error('Service Worker registration failed:', error);
+                 });
+         });
+     }
+     </script>
+
 </head>
 <body style="background-image:url('Imagenes/fondo_negro.png'); background-repeat: no-repeat; background-size: 100% 100%;">
     <form id="form1" runat="server" >
@@ -223,5 +238,41 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/demo/form-wysiwyg.demo.js"></script>
 	  
+	<script>
+        let deferredPrompt;
+
+        function isIOS() {
+            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        if (isIOS()) {
+            const iosInstructions = document.getElementById('ios-instructions');
+            iosInstructions.style.display = 'block';
+
+            document.getElementById('ios-close-btn').addEventListener('click', () => {
+                iosInstructions.style.display = 'none';
+            });
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('downloadContainer').style.display = 'block';
+        });
+
+        document.getElementById('downloadContainer').addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+            }
+        });
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed');
+            document.getElementById('downloadContainer').style.display = 'none';
+        });
+    </script>
 </body>
 </html>

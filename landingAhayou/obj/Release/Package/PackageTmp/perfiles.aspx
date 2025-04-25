@@ -18,14 +18,14 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
         <link rel="stylesheet" href="css/profiles.css" />
-        <link rel="stylesheet" href="css/common/default-background.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,48 +36,51 @@
                  <asp:ControlParameter ControlID="lblCodPlanSuscriptor" Name="pV_COD_PLAN_SUSCRIPTOR" />
              </SelectParameters>
  </asp:ObjectDataSource>
-        <asp:Label ID="lblCodPlanSuscriptor" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblCodPlanSuscriptor" runat="server" Visible="false" Text=""></asp:Label>
       <header class="header">
           <nav class="header__nav">
-              <a href="home.aspx" class="header__logo">
-                  <img
-                      class="header__logo-img"
-                      src="imgs/logos/logo-ahayou.png"
-                      alt="Logo Ahayou"
-                  />
-              </a>
-              <div class="header__nav-buttons">
-                 <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                 <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />   
-                  <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-              </div>
-              <div class="header__nav-buttons">
-                  <div>
-                      <%--<button
-                          class="header__button header__button--icon"
-                      ></button>--%>
-                   <%--   <button
-                          class="header__button header__button--icon"
-                      ></button>--%>
-                      <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                      <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                      
-                  </div>
-              </div>
-               <div class="options__container">
-                   <button class="hamburger__button" id="menuButton">
-                         <span class="hamburger__line hamburger__line--white"></span>
-                      <span class="hamburger__line hamburger__line--white"></span>
-                      <span class="hamburger__line hamburger__line--white"></span>
-                   </button>
-                   <div class="options__menu" id="optionsMenu">
-                       <%--<button class="options__button">Espa&ntilde;ol</button>
-                       <button class="options__button" >Ingl&eacute;s</button>--%>
-                        <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                      <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                   </div>
-               </div>
-          </nav>
+                <a href="home.aspx" class="header__logo">
+                    <img
+                        class="header__logo-img"
+                        src="imgs/logos/logo-ahayou.png"
+                        alt="Logo Ahayou"
+                    />
+                </a>
+                <div class="repetitive-buttons">
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <div class="header__nav-buttons header__nav-buttons--with-text">
+                          <button
+                              class="header__button header__button--text header__button--bg-orange"
+                            type="button" onclick="location.href='suscribete.aspx';">
+                              Suscr&iacute;bete
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                           type="button" onclick="location.href='login.aspx';">
+                              Iniciar Sesi&oacute;n
+                          </button>
+                      </div> 
+    
+                </div>
+                 <div class="options__container">
+                     <button class="hamburger__button" id="menuButton">
+                           <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                        <span class="hamburger__line hamburger__line--white"></span>
+                     </button>
+                     <div class="options__menu" id="optionsMenu">
+                         <%--<button class="options__button">Espa&ntilde;ol</button>
+                         <button class="options__button" >Ingl&eacute;s</button>--%>
+         
+                          <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                        <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
+                     </div>
+                 </div>
+                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+            </nav>
       </header>
         <main class="main main--flex">
             <section class="profiles">
@@ -85,49 +88,18 @@
                 <div class="profiles__container">
                       <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" runat="server">
                         <ItemTemplate>
-                            <asp:LinkButton class="profiles__item" ID="lbtnPerfil" OnClick="lbtnPerfil_Click" runat="server"> <img
+                            <asp:LinkButton class="profiles__item" ID="lbtnPerfil" CommandArgument='<%# Eval("cod_perfil_suscriptor")+"|"+ Eval("pin") %>' OnClick="lbtnPerfil_Click" runat="server"> <img
                                      src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
                                      alt="Foto de perfil"
                                      class="profiles__item-image"
                                  />
                                  <span class="profiles__item-text"><%# Eval("nombre_perfil") %></span>
-
                             </asp:LinkButton>
-<%--                            <button class="profiles__item">
-                                    <img
-                                        src='<%# "data:image/jpg;base64," + Eval("AVATAR") %>'
-                                        alt="Foto de perfil"
-                                        class="profiles__item-image"
-                                    />
-                                    <span class="profiles__item-text"><%# Eval("codigo_avatar") %></span>
-                                </button>--%>
+
                         </ItemTemplate>
                           </asp:Repeater>
                     
-                    <%--<button class="profiles__item">
-                        <img
-                            src="imgs/etc/profile_image.png"
-                            alt="Foto de perfil"
-                            class="profiles__item-image"
-                        />
-                        <span class="profiles__item-text">Perfil 2</span>
-                    </button>
-                    <button class="profiles__item">
-                        <img
-                            src="imgs/etc/profile_image.png"
-                            alt="Foto de perfil"
-                            class="profiles__item-image"
-                        />
-                        <span class="profiles__item-text">Perfil 3</span>
-                    </button>
-                    <button class="profiles__item">
-                        <img
-                            src="imgs/etc/profile_image.png"
-                            alt="Foto de perfil"
-                            class="profiles__item-image"
-                        />
-                        <span class="profiles__item-text">Perfil 4</span>
-                    </button>--%>
+                    
                 </div>
             </section>
         </main>
@@ -186,6 +158,7 @@
         </footer>
     </form>
     <script src="js/footer-visited-color.js"></script>
-        <script src="js/open-menu.js"></script>
+         <script src="js/open-menu.js"></script>
+        <script src="js/open-submenu.js"></script>
 </body>
 </html>

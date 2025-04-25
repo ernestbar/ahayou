@@ -15,6 +15,6 @@ namespace AhayouClases
         public string PV_ESTADOPR { get; set; }
         public string PV_DESCRIPCIONPR { get; set; }
         public string PV_ERROR { get; set; }
-        public Int64 PB_PIN { get; set; }
+        public string PB_PIN { get; set; }
     }
 }

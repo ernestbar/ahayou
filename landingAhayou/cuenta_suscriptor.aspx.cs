@@ -402,5 +402,37 @@ namespace landingAhayou
             Clases.enviar_correo objC = new Clases.enviar_correo();
             objC.enviar(lblUsuario.Text, "Cambio de PIN usuario: " + lblUsuario.Text, mensaje, "");
         }
+
+        
+
+        protected void lbtnEliminarSuscriptor_Click(object sender, EventArgs e)
+        {
+            Clases.Suscriptores obj = new Suscriptores("D", lblUsuario.TemplateSourceDirectory, "", "", "", "", "", "", lblUsuario.Text);
+            obj.ABM();
+
+            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            if (Request.Cookies["Sesion"] != null)
+            {
+                Sesiones obj1 = new Sesiones("D", lblUsuario.Text, Request.Cookies["Sesion"].Value, lblUsuario.Text);
+                obj1.ABM();
+            }
+            Session.Abandon();
+            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect("home.aspx");
+        }
+
+        protected void ibtnEliminarSession_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton obj1 = (ImageButton)sender;
+            string id = obj1.CommandArgument.ToString();
+            Sesiones obj = new Sesiones("D", lblUsuario.Text, id, lblUsuario.Text);
+            obj.ABM();
+            string script = string.Format("alert('{0}');", obj.PV_DESCRIPCIONPR);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
+            Repeater3.DataBind();
+        }
     }
 }

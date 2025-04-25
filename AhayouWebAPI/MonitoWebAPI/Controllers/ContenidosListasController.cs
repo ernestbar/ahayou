@@ -69,7 +69,6 @@ namespace AhayouWebAPI.Controllers
                 comando.Parameters.Add("@PV_ESTADOPR", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_DESCRIPCIONPR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.Parameters.Add("@PV_ERROR", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
-                comando.Parameters.Add("@PV_EMAILOUT", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                 comando.ExecuteNonQuery();
                 conexion.Close();
 

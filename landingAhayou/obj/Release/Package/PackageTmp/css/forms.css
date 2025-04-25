@@ -1,25 +1,38 @@
 @import url("main.css");
 
-.form-wrapper {
-    width: 35%;
+/*
+    FORMS.CSS
+
+    Description: This css file is intended for the styles of all
+    forms in all the pages, including containers, labels, and
+    others.
+*/
+
+:root {
+    --color-shadow: rgba(0, 0, 0, 0.3);
 }
 
-.form-wrapper,
+/*
+    Component: Form
+
+    Description: Principal container class for a form.
+*/
+
 .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.form {
     gap: 20px;
     width: 100%;
 }
 
-.form-wrapper * {
-    color: #000;
-}
+/*
+    Section: Form's texts
+
+    Description: Styles for form labels, titles and other
+    texts. This include its colors and font size.
+*/
 
 .form__label,
 .form__title {
@@ -33,6 +46,10 @@
 }
 
 .form__label {
+    pointer-events: none;
+}
+
+.form__label--first {
     font-size: 1.6em;
     font-weight: bold;
     letter-spacing: -1px;
@@ -42,63 +59,72 @@
     color: var(--color-white);
 }
 
-.form__input-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.form__label--second {
+    font-size: 1.25em;
     width: 100%;
+    font-weight: 300;
+    text-align: justify;
 }
 
-.form--shadow {
-    border-radius: 5px;
+.form__label--center {
+    text-align: center;
 }
 
-.form--shadow-left {
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3), 0 -5px 10px rgba(0, 0, 0, 0.3),
-        0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.form--shadow-right {
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3), 0 -5px 10px rgba(0, 0, 0, 0.3),
-        0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.form__input,
-.form__button {
-    height: 56px;
-}
-
-.form__button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+.form__label--bold {
     font-weight: bold;
-    border: none;
+}
+
+.form__link {
+    font-size: 1.25em;
+    font-weight: 300;
+    text-align: center;
+    text-underline-offset: 7.5px;
+    text-decoration-thickness: 1px;
+}
+
+.form__link:hover {
     cursor: pointer;
-    font-size: 1.5em;
-    border-radius: 5px;
-    padding: 5px 20px;
-    transition: background-color 0.3s;
-    word-wrap: break-word;
 }
 
-.form__button > img {
-    width: 100%;
-    height: 100%;
-}
+/*
+    Component: Form input
 
-.form__button:hover {
-    background-color: #b24100;
-    transition: background-color 0.3s;
-}
+    Description: Styles for form inputs, including the flex properties,
+    height, width, spaces, colors and others.
+*/
 
 .form__input {
+    height: 56px;
     width: 100%;
     border-radius: 5px;
     padding: 5px 20px;
     border: none;
     color: #000;
     font-size: 1em;
+    z-index: 100;
+}
+
+.form__input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.form__input-container--main,
+.form__input-container--row,
+.form__input-container--checkbox {
+    flex-direction: row;
+}
+
+.form__input-container--checkbox {
+    justify-content: start;
+}
+
+.form__input-container--no-gap {
+    gap: 0;
 }
 
 .form__input--specific-width {
@@ -106,7 +132,7 @@
 }
 
 .form__input::placeholder {
-    color: #9f9f9f;
+    color: var(--color-gray);
     font-size: 1.1em;
 }
 
@@ -117,41 +143,117 @@
     font-size: 1.25em;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 1400px) {
-    .form-wrapper {
-        width: 50%;
-    }
+.form__input--dark {
+    position: relative;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-white-border);
 }
+
+.form--shadow {
+    border-radius: 5px;
+}
+
+.form--shadow-left {
+    box-shadow: -5px 0 10px var(--color-shadow), 0 -5px 10px var(--color-shadow),
+        0 5px 10px var(--color-shadow);
+}
+
+.form--shadow-right {
+    box-shadow: 5px 0 10px var(--color-shadow), 0 -5px 10px var(--color-shadow),
+        0 5px 10px var(--color-shadow);
+}
+
+/*
+    Component: Form checkbox
+
+    Description: Styles for input checkbox.
+*/
+
+.form__checkbox {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-white);
+}
+
+.form__checkbox,
+.form__checkbox--second {
+    appearance: none;
+    padding: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.form__checkbox--second {
+    width: 35px;
+    height: 35px;
+    border: 5px solid var(--color-white);
+}
+
+.form__checkbox--sky-blue {
+    border: 2.5px solid var(--color-sky-blue) !important;
+}
+
+.form__checkbox:not(.form__checkbox--second)::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    clip-path: polygon(
+        15% 60%,
+        35% 80%,
+        80% 30%,
+        77.5% 27.5%,
+        35% 75%,
+        17.5% 57.5%
+    );
+    transition: 120ms transform ease-in-out;
+}
+
+.form__checkbox--sky-blue::before {
+    background-color: var(--color-sky-blue) !important;
+}
+
+.form__checkbox--second:checked {
+    background-color: var(--color-primary);
+}
+
+.form__checkbox:not(.form__checkbox--second):checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form__checkbox:hover,
+.form__checkbox--second:hover {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    background-color: var(--color-dark);
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the form inputs, texts, and others.
+*/
 
 @media (max-width: 992px) {
     .form__input--big-font::placeholder,
     .form__input--big-font,
-    .form__button {
+    .form__label--second,
+    .form__link {
         font-size: 1.15em;
-    }
-}
-
-@media (max-width: 900px) {
-    .form-wrapper {
-        width: 60%;
-    }
-}
-
-@media (max-width: 768px) {
-    .form-wrapper {
-        width: 75%;
     }
 }
 
 @media (max-width: 640px) {
     .form__title {
         font-size: 2.5em;
-    }
-
-    .form-wrapper {
-        width: 90%;
     }
 
     .form__input--specific-width {
@@ -162,21 +264,20 @@
         padding: 0 50px;
     }
 
-    .web-app-section__description,
-    .form__label {
+    .form__label--first {
         font-size: 1.25rem;
     }
 
     .form__input--big-font::placeholder,
     .form__input--big-font,
-    .form__button {
+    .form__label--second,
+    .form__link {
         font-size: 1.05em;
     }
 }
 
 @media (max-width: 500px) {
-    .form__input,
-    .form__button {
+    .form__input {
         height: 48px;
         padding: 5px 10px;
     }
@@ -189,6 +290,38 @@
     .form__input::placeholder {
         font-size: 0.9em;
     }
+
+    .form__input--big-font::placeholder,
+    .form__input--big-font,
+    .form__label--second,
+    .form__link {
+        font-size: 1em;
+    }
+
+    .form__input--big-font,
+    .form__input--big-font::placeholder {
+        letter-spacing: 0px;
+    }
+
+    .form__checkbox {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .form__checkbox--second {
+        border: 2.5px solid var(--color-white);
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .form__input--big-font::placeholder,
+    .form__input--big-font,
+    .form__label--second,
+    .form__link {
+        font-size: 0.95em;
+    }
 }
 
 @media (max-width: 320px) {
@@ -196,27 +329,33 @@
         padding: 0 5px;
     }
 
-    .form__input,
-    .form__button {
+    .form__input {
         height: 40px;
     }
 
-    .form__button {
-        white-space:nowrap;
+    .form__label--first {
+        font-size: 1em;
     }
 
-    .form__label {
-        font-size: 1em;
+    .form__input--big-font::placeholder,
+    .form__input--big-font,
+    .form__label--second,
+    .form__link {
+        font-size: 0.8em;
+    }
+
+    .form__checkbox {
+        width: 25px !important;
+        height: 25px !important;
     }
 }
 
 @media (max-height: 640px) {
-    .form__input,
-    .form__button {
+    .form__input {
         height: 48px;
     }
 
-    .form__label {
+    .form__label--first {
         font-size: 1.25em;
         flex: 1;
     }

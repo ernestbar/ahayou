@@ -51,6 +51,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.ObjectDataSource odsPlanes;
 
         /// <summary>
+        /// Control odsSesiones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsSesiones;
+
+        /// <summary>
         /// Control odsRedesSociales.
         /// </summary>
         /// <remarks>
@@ -364,6 +373,24 @@ namespace landingAhayou
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEdicionAvatar;
+
+        /// <summary>
+        /// Control Repeater3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater3;
+
+        /// <summary>
+        /// Control lbtnEliminarSuscriptor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnEliminarSuscriptor;
 
         /// <summary>
         /// Control Repeater5.

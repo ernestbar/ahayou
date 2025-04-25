@@ -19,21 +19,21 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="css/common/default-background.css" />
-        <link rel="stylesheet" href="css/common/containers.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
+        <link rel="stylesheet" href="css/containers.css" />
         <link rel="stylesheet" href="css/login.css" />
-        <link rel="stylesheet" href="css/common/alerts.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/common/buttons.css" />
-        <link rel="stylesheet" href="css/common/hamburger.css" />
+        <link rel="stylesheet" href="css/alerts.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btnLogin">
           <asp:ObjectDataSource ID="odsRedesSociales" runat="server" SelectMethod="PR_PAR_GET_REDES_SOCIALES_STR" TypeName="landingAhayou.Clases.Contenidos">
           </asp:ObjectDataSource>
           <asp:ObjectDataSource ID="odsAvatares" runat="server" SelectMethod="PR_PAR_GET_AVATARES" TypeName="landingAhayou.Clases.Avatares">
@@ -47,22 +47,22 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons">
-                     <asp:Button class="header__button header__button--text header__button--bg-orange" CausesValidation="false" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                        <asp:Button class="header__button header__button--text header__button--bg-green"  CausesValidation="false" ID="btnInicia" OnClick="btnInicia_Click" runat="server" Text="Iniciar Session" />
-                </div>
-                <div class="header__nav-buttons">
-                    <div>
-                        <%--<button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                     <%--   <button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                        <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                    </div>
+                <div class="repetitive-buttons">
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <div class="header__nav-buttons header__nav-buttons--with-text">
+                          <button
+                              class="header__button header__button--text header__button--bg-orange"
+                            type="button" onclick="location.href='suscribete.aspx';">
+                              Suscr&iacute;bete
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                           type="button" onclick="location.href='login.aspx';">
+                              Iniciar Sesi&oacute;n
+                          </button>
+                      </div> 
+    
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -73,10 +73,14 @@
                      <div class="options__menu" id="optionsMenu">
                          <%--<button class="options__button">Espa&ntilde;ol</button>
                          <button class="options__button" >Ingl&eacute;s</button>--%>
+         
                           <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                         <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                      </div>
                  </div>
+                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
             </nav>
         </header>
         <main class="main main--flex">
@@ -101,7 +105,7 @@
                                     for="email"
                                     class="form__label form__label--second"
                                 >
-                                    Email o n&uacute;mero de celular
+                                    Ingresa tu Email
                                 </label>
                                 <%--<input
                                     type="email"
@@ -114,7 +118,7 @@
                                 />--%>
                                 <asp:TextBox class="form__input form__input--dark" ID="email" runat="server"></asp:TextBox>
                             </div>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* Proporcione un email" ForeColor="Red" ControlToValidate="email"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* Proporcione un email" ForeColor="Orange" ControlToValidate="email"></asp:RequiredFieldValidator>
                             <div class="form__input-container">
                                 
                                 <label
@@ -133,7 +137,7 @@
                                  <asp:TextBox class="form__input form__input--dark" TextMode="Password" ID="password" runat="server"></asp:TextBox>
                                 
                             </div>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"  ErrorMessage="* Proporcione un password" ForeColor="Red" ControlToValidate="password"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"  ErrorMessage="* Proporcione un password" ForeColor="Orange" ControlToValidate="password"></asp:RequiredFieldValidator>
                             <%--<input
                                 type="submit"
                                 value="Suscríbete"
@@ -162,18 +166,20 @@
                             <div
                                 class="form__input-container form__input-container--checkbox"
                             >
-                                <input
+                               <asp:CheckBox ID="cbRecuerdame" class="form__input" Font-Size="X-Large" Text="Recordarme este dispositivo" runat="server" />
+                               <%-- <input
                                     type="checkbox"
                                     name="remember"
                                     id="remember"
                                     class="form__input form__checkbox"
                                 />
-                                <label
+                                 --%>
+                                <%--<label
                                     for="remember"
                                     class="form__label form__label--second"
                                 >
                                     Recordarme este dispositivo
-                                </label>
+                                </label>--%>
                             </div>
                         </form>
                         <p class="login-footer__text">
@@ -253,7 +259,8 @@
         </footer>
     </form>
     <script src="js/footer-visited-color.js"></script>
-        <script src="js/open-menu.js"></script>
+         <script src="js/open-menu.js"></script>
+        <script src="js/open-submenu.js"></script>
         <script src="js/show-validation-alert.js" defer></script>
 </body>
 </html>

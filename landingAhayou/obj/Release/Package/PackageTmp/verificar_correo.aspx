@@ -19,17 +19,17 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/common/main.css" />
-        <link rel="stylesheet" href="css/header/header.css" />
-        <link rel="stylesheet" href="css/header/header-options.css" />
-        <link rel="stylesheet" href="css/forms/forms.css" />
-        <link rel="stylesheet" href="css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="css/common/default-background.css" />
-        <link rel="stylesheet" href="css/common/containers.css" />
-        <link rel="stylesheet" href="css/common/alerts.css" />
-        <link rel="stylesheet" href="css/common/footer.css" />
-        <link rel="stylesheet" href="css/common/buttons.css" />
-        <link rel="stylesheet" href="css/common/hamburger.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/default-background.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/alerts.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,22 +46,22 @@
                         alt="Logo Ahayou"
                     />
                 </a>
-                <div class="header__nav-buttons">
-                     <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                        <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnInicia" OnClick="btnInicia_Click" runat="server" Text="Iniciar Session" />
-                </div>
-                <div class="header__nav-buttons">
-                    <div>
-                        <%--<button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                     <%--   <button
-                            class="header__button header__button--icon"
-                        ></button>--%>
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                        <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                        <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                    </div>
+                <div class="repetitive-buttons">
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                    <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                        <div class="header__nav-buttons header__nav-buttons--with-text">
+                          <button
+                              class="header__button header__button--text header__button--bg-orange"
+                            type="button" onclick="location.href='suscribete.aspx';">
+                              Suscr&iacute;bete
+                          </button>
+                          <button
+                              class="header__button header__button--text header__button--bg-green"
+                           type="button" onclick="location.href='login.aspx';">
+                              Iniciar Sesi&oacute;n
+                          </button>
+                      </div> 
+    
                 </div>
                  <div class="options__container">
                      <button class="hamburger__button" id="menuButton">
@@ -72,10 +72,14 @@
                      <div class="options__menu" id="optionsMenu">
                          <%--<button class="options__button">Espa&ntilde;ol</button>
                          <button class="options__button" >Ingl&eacute;s</button>--%>
+         
                           <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                         <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
+                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
                      </div>
                  </div>
+                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
             </nav>
         </header>
         <main class="main main--flex">
@@ -113,7 +117,8 @@
                 <p class="text text--light text--center full-width">
                     Haz clic en el enlace que enviamos a
                     <span class="text--bold"
-                        >gustrago.zalles.arrieta1@gmail.com</span
+                        >
+                        <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label> </span
                     >
                     para completar la verificación.
                 </p>
@@ -122,7 +127,7 @@
                     cuenta y recibir comunicaciones importantes de AHAYOU.
                 </p>
                
-                <asp:Button class="button button--green full-width button--border" ID="Button1" OnClick="Button1_Click" runat="server" Text="Omitir" />
+                <asp:Button class="button button--green full-width button--border" ID="Button1" OnClick="Button1_Click" runat="server" Text="Siguiente" />
             </section>
         </main>
         
@@ -181,8 +186,9 @@
         </footer>
     </form>
     <script src="js/footer-visited-color.js"></script>
-        <script src="js/open-menu.js"></script>
-        <script src="js/show-validation-alert.js" defer></script>
+    <script src="js/open-menu.js"></script>
+    <script src="js/open-submenu.js"></script>
+    <script src="js/show-validation-alert.js" defer></script>
 </body>
 </html>
 

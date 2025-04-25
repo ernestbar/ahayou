@@ -11256,10 +11256,12 @@
     <Content Include="contenido_trailers_admin.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dominios_admin.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="formato_contenido_admin.aspx" />
     <Content Include="fotos_peliculas\0\banner_principal.png" />
     <Content Include="fotos_peliculas\0\banner_principal1.png" />
     <Content Include="fotos_peliculas\0\banner_principal3.png" />
+    <Content Include="fotos_peliculas\0\banner_principal_ahayou.png" />
     <Content Include="fotos_peliculas\0\header-img.jpg" />
     <Content Include="fotos_peliculas\0\sillon app.png" />
     <Content Include="fotos_peliculas\10\FotoHorizontalPelicula_71_20241213155319PLATO-PACEÑO-AFICHE-HORIZONTAL-MINIATURA-1200X900.jpg" />
@@ -11332,6 +11334,7 @@
     <Content Include="fotos_peliculas\1\FotoVerticalPelicula_1_20241213145051Fuertes 3.png" />
     <Content Include="fotos_peliculas\1\foto_horizontal.jpg" />
     <Content Include="fotos_peliculas\1\foto_horizontal.png" />
+    <Content Include="fotos_peliculas\1\foto_horizontal_ahayou.png" />
     <Content Include="fotos_peliculas\1\foto_miniatura.png" />
     <Content Include="fotos_peliculas\1\foto_titulo.png" />
     <Content Include="fotos_peliculas\1\foto_titulo3.png" />
@@ -11404,6 +11407,10 @@
     <Content Include="Imagenes\logo-ahayou.png" />
     <Content Include="Imagenes\logo1.jpg" />
     <Content Include="Imagenes\sin_imagen.png" />
+    <Content Include="Imagenes\usuarios\123123123.jpg" />
+    <Content Include="Imagenes\usuarios\2307752.jpg" />
+    <Content Include="Imagenes\usuarios\3386105.jpg" />
+    <Content Include="Imagenes\usuarios\34343434.jpg" />
     <Content Include="Images\4306889.png" />
     <Content Include="Images\4518930_mcdonalds_icon.png" />
     <Content Include="Images\Avatars\boy.png" />
@@ -11604,11 +11611,8 @@
     <Content Include="Images\VerAhora.png" />
     <Content Include="Images\WebApp_img.png" />
     <Content Include="Images\Whatsapp_37229.png" />
-    <Content Include="js\konami.js" />
-    <Content Include="js\main.js" />
-    <Content Include="js\pwacompat.min.js" />
-    <Content Include="js\scripts.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Logs\readme.txt" />
     <Content Include="menus_admin.aspx" />
     <Content Include="menu_rol_admin.aspx" />
     <Content Include="opciones_admin.aspx" />
@@ -11636,6 +11640,7 @@
     <Content Include="reporte_vista_contenidos.aspx" />
     <Content Include="roles_admin.aspx" />
     <Content Include="Scripts\pwacompat.min.js" />
+    <Content Include="swa.js" />
     <Content Include="sesiones_admin.aspx" />
     <Content Include="suscriptores_admin.aspx" />
     <Content Include="Web.config" />
@@ -15501,7 +15506,7 @@
     <Content Include="assets\webfonts\fa-solid-900.woff2" />
     <Content Include="assets\webfonts\fa-v4compatibility.ttf" />
     <Content Include="assets\webfonts\fa-v4compatibility.woff2" />
-    <Content Include="manifest.json" />
+    <Content Include="manifestadmin.json" />
     <Content Include="Images\Icons\.DS_Store" />
     <Content Include="Images\Icons\iconos.zip" />
     <Content Include="Images\Icons\iconoss.zip" />
@@ -15520,6 +15525,7 @@
     <Content Include="assets\plugins\bootstrap3-wysihtml5-bower\src\templates\lists.hbs" />
     <None Include="packages.config" />
     <Content Include="Principal.Master" />
+    <None Include="Properties\PublishProfiles\AhayouAdmin - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\AhayouWebAdmin - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\AhayouWebAdmin - Web Deploy1.pubxml" />
     <None Include="Web.Debug.config">
@@ -21314,9 +21320,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logs\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

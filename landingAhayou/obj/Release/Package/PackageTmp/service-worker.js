@@ -1,6 +1,6 @@
 const CACHE_NAME = 'pwa-cache-v1';
 const urlsToCache = [
-    'index.html',
+    'https://landingahayou.azurewebsites.net/home.aspx',
     'manifest.json',
     'icon-192x192.png',
     'icon-512x512.png'

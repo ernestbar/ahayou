@@ -19,18 +19,18 @@
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="/css/common/main.css" />
-        <link rel="stylesheet" href="/css/header/header.css" />
-        <link rel="stylesheet" href="/css/header/header-options.css" />
-        <link rel="stylesheet" href="/css/common/vanilla-page.css" />
-        <link rel="stylesheet" href="/css/common/containers.css" />
-        <link rel="stylesheet" href="/css/common/check.css" />
-        <link rel="stylesheet" href="/css/common/footer.css" />
-        <link rel="stylesheet" href="/css/common/buttons.css" />
-        <link rel="stylesheet" href="/css/common/hamburger.css" />
-        <link rel="stylesheet" href="/css/common/arrow.css" />
-        <link rel="stylesheet" href="/css/settings.css" />
-        <link rel="stylesheet" href="/css/plans-selection.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/header-options.css" />
+        <link rel="stylesheet" href="css/vanilla-page.css" />
+        <link rel="stylesheet" href="css/containers.css" />
+        <link rel="stylesheet" href="css/check.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
+        <link rel="stylesheet" href="css/arrow.css" />
+        <link rel="stylesheet" href="css/settings.css" />
+        <link rel="stylesheet" href="css/plans-selection.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,45 +38,39 @@
  </asp:ObjectDataSource>
          <header class="header">
                     <nav class="header__nav">
-                        <a href="home.aspx" class="header__logo">
-                            <img
-                                class="header__logo-img"
-                                src="imgs/logos/logo-ahayou.png"
-                                style="background-color:black"
-                                alt="Logo Ahayou"
-                            />
-                        </a>
-                        <div class="header__nav-buttons">
-                             <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
-                                <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnInicia" OnClick="btnInicia_Click" runat="server" Text="Iniciar Session" />
-                        </div>
-                        <div class="header__nav-buttons">
-                            <div>
-                                <%--<button
-                                    class="header__button header__button--icon"
-                                ></button>--%>
-                             <%--   <button
-                                    class="header__button header__button--icon"
-                                ></button>--%>
-                                <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
-                                <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
-                                <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
-                            </div>
-                        </div>
-                         <div class="options__container">
-                             <button class="hamburger__button" id="menuButton">
-                                   <span class="hamburger__line hamburger__line--white"></span>
-                                <span class="hamburger__line hamburger__line--white"></span>
-                                <span class="hamburger__line hamburger__line--white"></span>
-                             </button>
-                             <div class="options__menu" id="optionsMenu">
-                                 <%--<button class="options__button">Espa&ntilde;ol</button>
-                                 <button class="options__button" >Ingl&eacute;s</button>--%>
-                                  <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
-                                <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                             </div>
+                    <a href="home.aspx" class="header__logo">
+                        <img
+                            class="header__logo-img"
+                            src="imgs/logos/logo-ahayou.png"
+                            alt="Logo Ahayou"
+                            style="background-color:black"
+                        />
+                    </a>
+                    <div class="header__nav-buttons header__nav-buttons--with-text">
+       
+                        <asp:Button class="header__button header__button--text header__button--bg-orange" ID="btnSuscribete" OnClick="btnSuscribete_Click" runat="server" Text="Suscribete" />
+                        <asp:Button class="header__button header__button--text header__button--bg-green" ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Iniciar Session" />
+                        <asp:Label ID="lblUsuario" Visible="false" runat="server" Text=""></asp:Label>
+                    </div>
+                    <div class="repetitive-buttons">
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
+                            <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
+                    </div>
+                     <div class="options__container" style="background-color:black">
+                         <button class="hamburger__button" id="menuButton">
+                               <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                            <span class="hamburger__line hamburger__line--white"></span>
+                         </button>
+                         <div class="options__menu" id="optionsMenu">
+                             <%--<button class="options__button">Espa&ntilde;ol</button>
+                             <button class="options__button" >Ingl&eacute;s</button>--%>
+             
+                              <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
+                            <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
                          </div>
-                    </nav>
+                     </div>
+                </nav>
                 </header>
 
         <main class="main main--flex">
@@ -98,6 +92,7 @@
                             cont&aacute;ctanos.
                         </p>
                         <p>El equipo de AHAYOU</p>
+                        <p><asp:Label ID="lblAviso" runat="server" Text=""></asp:Label></p>
                     </div>
                     <asp:Button class="button button--orange full-width button--border" OnClick="btnReset_Click" ID="btnReset" runat="server" Text="Resetear contraseña" />
                 </div>
@@ -158,7 +153,8 @@
             </footer>
     </form>
      <script src="js/footer-visited-color.js"></script>
-     <script src="js/open-menu.js"></script>
+      <script src="js/open-menu.js"></script>
+    <script src="js/open-submenu.js"></script>
      <script src="js/show-validation-alert.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,9 @@
+/*
+    LOGIN.CSS
+
+    Description: Styles for login texts in login.html page
+*/
+
 .login-footer__text {
     width: 100%;
     text-align: justify;
@@ -10,6 +16,13 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from 
+    login.css
+*/
 
 @media (max-width: 640px) {
     .login-footer__text {

@@ -75,11 +75,11 @@ namespace AhayouWebAPI.Controllers
 
                 if (string.IsNullOrEmpty(comando.Parameters["@PB_PIN"].Value.ToString()))
                 {
-                    oUsuario.PB_PIN = 0;
+                    oUsuario.PB_PIN = "0";
                 }
                 else
                 {
-                    oUsuario.PB_PIN = (Int64)comando.Parameters["@PB_PIN"].Value;
+                    oUsuario.PB_PIN = (string)comando.Parameters["@PB_PIN"].Value;
                 }
 
 

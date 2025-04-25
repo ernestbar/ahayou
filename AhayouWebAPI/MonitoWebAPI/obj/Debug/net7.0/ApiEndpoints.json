@@ -953,6 +953,37 @@
   },
   {
     "ContainingType": "AhayouWebAPI.Controllers.SesionesController",
+    "Method": "PR_GET_DISPOSITIVOS_SESION",
+    "RelativePath": "api/Sesiones/PR_GET_DISPOSITIVOS_SESION/{pv_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pv_usuario",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AhayouWebAPI.Controllers.SesionesController",
     "Method": "SesionesABM",
     "RelativePath": "api/Sesiones/SesionesABM",
     "HttpMethod": "POST",

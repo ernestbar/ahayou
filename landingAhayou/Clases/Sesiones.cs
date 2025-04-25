@@ -51,7 +51,7 @@ namespace landingAhayou.Clases
         #region Métodos que NO requieren constructor
 
 
-        public static DataTable PR_PAR_GET_SESIONES()
+        public static DataTable PR_GET_DISPOSITIVOS_SESION(string pV_USUARIO)
         {
 
             try
@@ -60,7 +60,8 @@ namespace landingAhayou.Clases
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "PR_PAR_GET_SESIONES";
+                    cmd.CommandText = "PR_GET_DISPOSITIVOS_SESION";
+                    cmd.Parameters.AddWithValue("PV_USUARIO", pV_USUARIO);
                     cmd.Connection = conn;
                     conn.Open();
                     var dataReader = cmd.ExecuteReader();

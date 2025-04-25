@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             buttons.forEach((button, i) => {
-                button.classList.toggle("header__pag-button--selected", i === index);
+                button.classList.toggle(
+                    "header__pag-button--selected",
+                    i === index
+                );
             });
 
             const bgImage = slides[index].getAttribute("data-bg");
@@ -34,12 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
             currentIndex = index;
         }
 
-        prevArrow.addEventListener("click", () => {
+        if (buttons && buttons.length > 0) {
+            buttons.forEach((b, bIndex) => {
+                b.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    showSlide(bIndex);
+                });
+            });
+        }
+
+        prevArrow.addEventListener("click", (e) => {
+            e.preventDefault();
             let newIndex = (currentIndex - 1 + slides.length) % slides.length;
             showSlide(newIndex);
         });
 
-        nextArrow.addEventListener("click", () => {
+        nextArrow.addEventListener("click", (e) => {
+            e.preventDefault();
             let newIndex = (currentIndex + 1) % slides.length;
             showSlide(newIndex);
         });

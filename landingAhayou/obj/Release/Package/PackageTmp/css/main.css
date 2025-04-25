@@ -1,13 +1,43 @@
+/*
+    MAIN.CSS
+
+    Description: This css file is intended for all the pages.
+*/
+
+/*
+    Section: colors and size
+    Description: Here are all the colors and size used in every css file.
+    These can be imported with the next line on css code:
+    @import url("main.css");
+*/
+
 :root {
     --color-primary: #ff5d00;
     --color-secondary: #21b08d;
     --color-white: #fff;
     --second-font-weight: 100;
-    --titles-font-size: 8em;
+    --main-title-font-size: 8em;
+    --h1-title-font-size: 3em;
     --container-bg-color: #0000002e;
-    --container-bg-color-2: #00000078;
+    --container-bg-color-2: #ffffff14;
+    --color-dark: #00000070;
+    --color-dark-2: #181818;
+    --color-dark-solid: #101010;
     --color-green-yellow: #93c900;
+    --color-green-dark: #7ba800;
+    --color-green-dark-hover: #5c7d00;
+    --color-white-border: #ffffffab;
+    --color-gray-border: #cdcbcf;
+    --color-turquoise: #08c494;
+    --color-sky-blue: #6bc7ec;
+    --color-gray: #9b999f;
 }
+
+/*
+    Section: HTML and body styles
+    Description: These section is focused on declaring de common
+    styles for html and body for all the pages.
+*/
 
 * {
     box-sizing: border-box;
@@ -36,13 +66,155 @@ body {
     width: 100%;
 }
 
+/*
+    Section: Texts
+    Description: These are the styles for fonts size, colors and
+    other properties for h1, h2 and common texts in all the pages.
+*/
+
+h1 {
+    font-size: var(--h1-title-font-size);
+    letter-spacing: -2px;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+}
+
 h2 {
-    font-size: var(--titles-font-size);
+    font-size: var(--main-title-font-size);
     word-wrap: break-word;
     width: 100%;
 }
 
-/* SCROLLBAR */
+.text {
+    font-size: 1.15em;
+}
+
+.text--large {
+    font-size: 1.75em;
+}
+
+.text--extra-large {
+    font-size: 2.5em;
+}
+
+.text--small {
+    font-size: 0.9em;
+}
+
+.text--right {
+    justify-content: right;
+}
+
+.text--light {
+    font-weight: 300;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+.text--orange {
+    color: var(--color-primary);
+}
+
+.text--black {
+    color: #000 !important;
+}
+
+.text--white {
+    color: var(--color-white) !important;
+}
+
+.text--green {
+    color: var(--color-green-yellow) !important;
+}
+
+.text--red {
+    color: #ff0000 !important;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--left {
+    text-align: left;
+}
+
+.text--right {
+    text-align: right;
+}
+
+.text--justify {
+    text-align: justify;
+}
+
+.text--sky-blue {
+    color: var(--color-sky-blue) !important;
+}
+
+.text--link {
+    text-decoration: none;
+}
+
+.text--letter-spacing-small {
+    letter-spacing: -2px;
+}
+
+.text--only-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+/*
+    Section: Width, height, and common properties
+    Description: These are the styles for make full width, height, and
+    other properties in any element.
+*/
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.display-block {
+    display: block;
+}
+
+/*
+    Component: Icon
+    Description: These are the styles for a little icon, with
+    its colors and size.
+*/
+
+.icon--little {
+    width: 30px;
+    height: 30px;
+}
+
+.icon--white-fill {
+    fill: var(--color-white);
+}
+
+.icon--orange-fill {
+    fill: var(--color-primary);
+}
+
+.icon--orange-stroke {
+    stroke: var(--color-primary);
+    fill: none;
+}
+
+/*
+    Component: Scrollbar
+    Description: These are the styles for all the scrollbars in
+    a page, excluding the body scrollbar.
+*/
 
 *:not(body)::-webkit-scrollbar {
     width: 10px;
@@ -65,45 +237,100 @@ h2 {
 }
 
 /* Firefox */
+
 @-moz-document url-prefix() {
     *:not(body) {
         scrollbar-width: thin;
     }
 }
 
-/* RESPONSIVE */
+/*
+    Section: Responsive
+    Description: These are the media queries and styles for
+    diferents widths and heights, specially for texts
+*/
 
-@media (max-width: 1280px), (max-height: 640px) {
+@media (max-width: 1280px) {
     h2 {
         font-size: 6em;
     }
 }
 
-@media (max-width: 1024px), (max-height: 460px) {
+@media (max-width: 1024px) {
     h2 {
         font-size: 5em;
     }
 }
 
-@media (max-width: 640px), (max-height: 380px) {
-    h2 {
-        font-size: 4em;
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.5em;
     }
 }
 
-@media (max-width: 520px), (max-height: 340px) {
+@media (max-width: 640px) {
+    h2 {
+        font-size: 4em;
+    }
+
+    .text {
+        font-size: 1em;
+    }
+
+    .text--large {
+        font-size: 1.5em;
+    }
+
+    h1,
+    .text--extra-large {
+        font-size: 2em;
+    }
+
+    .text--small {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 2em;
+    }
+
     h2 {
         font-size: 3em;
     }
 }
 
-@media (max-height: 300px) {
+@media (max-width: 420px) {
+    h2 {
+        font-size: 3.5em;
+    }
+
+    .text {
+        font-size: 0.8em;
+    }
+
+    .text--large {
+        font-size: 1.25em;
+    }
+
+    h1,
+    .text--extra-large {
+        font-size: 1.75em;
+    }
+
+    .text--small {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 320px) {
     h2 {
         font-size: 2.5em;
     }
 }
 
-@media (max-height: 220px) {
+@media (max-width: 260px) {
     h2 {
         font-size: 2em;
     }

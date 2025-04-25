@@ -53,7 +53,7 @@ namespace AhayouWebAPI.Controllers
                 }
 
                 string id = oUsuario.pv_usuarioi;
-                string operacion = id == "" ? "I" : "U";
+                //string operacion = id == "" ? "I" : "U";
 
                 SqlConnection conexion = new SqlConnection(CadenaConexion);
                 conexion.Open();

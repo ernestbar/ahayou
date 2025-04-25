@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <meta charset="utf-8" />
-	<title>Ahayou Admin Login</title>
+	<title>Ahayou administrador</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -20,7 +20,22 @@
 	<link href="assets/plugins/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
 	<link href="assets/plugins/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" />
 	<!-- ================== END page-css ================== -->
-	
+	 <link rel="manifest" href="manifestadmin.json" />
+	<script src="Scripts/pwacompat.min.js"></script>
+
+	 <script>
+		 if ('serviceWorker' in navigator) {
+			 window.addEventListener('load', () => {
+				 navigator.serviceWorker.register('swa.js')
+					 .then(registration => {
+						 console.log('Service Worker registered with scope:', registration.scope);
+					 })
+					 .catch(error => {
+						 console.error('Service Worker registration failed:', error);
+					 });
+			 });
+		 }
+	 </script>
 </head>
 <body>
     <form id="form1" runat="server" defaultbutton="btnIngresar">
@@ -95,5 +110,41 @@
 	<script src="assets/js/vendor.min.js"></script>
 	<script src="assets/js/app.min.js"></script>
 	<!-- ================== END core-js ================== -->
+	<script>
+        let deferredPrompt;
+
+        function isIOS() {
+            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        if (isIOS()) {
+            const iosInstructions = document.getElementById('ios-instructions');
+            iosInstructions.style.display = 'block';
+
+            document.getElementById('ios-close-btn').addEventListener('click', () => {
+                iosInstructions.style.display = 'none';
+            });
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('downloadContainer').style.display = 'block';
+        });
+
+        document.getElementById('downloadContainer').addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+            }
+        });
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed');
+            document.getElementById('downloadContainer').style.display = 'none';
+        });
+    </script>
 </body>
 </html>

@@ -1,5 +1,15 @@
 @import url("main.css");
 
+/*
+    HEADER-MOVIES.CSS
+
+    Description: This css file is used for the movie component,
+    a component used for involve the movie item from the header
+    in index.html. These styles includes all the properties of
+    the container like display, size, background, hovers, and
+    others.
+*/
+
 .movie {
     width: 100%;
     padding: 10px;
@@ -15,8 +25,8 @@
 }
 
 .movie__container--second {
-    gap: 5px;
     width: 100%;
+    gap: 5px;
     height: 480px;
     border-radius: 20px;
     padding: 10px;
@@ -26,50 +36,78 @@
     transition: transform 0.3s ease;
 }
 
-    .movie__container--second:hover {
-        transform: scale(1.05, 1.05);
-        transition: transform 0.3s ease;
-    }
+.movie__container--second > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.movie__container--second:hover {
+    transform: scale(1.05, 1.05);
+}
 
 .movie__container > div {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px 10px;
-    position: relative;
     justify-content: center;
+    width: 100%;
 }
 
 .movie__container:not(.movie__container--second) {
     justify-content: end;
-    max-height: 100%;
+    height: inherit;
 }
 
-    .movie__container:not(.movie__container--second) > div:nth-of-type(2),
-    .movie__container:not(.movie__container--second):hover > div:nth-of-type(2) {
-        opacity: 1;
-        transition: all 0.75s ease;
-    }
+.movie__container:not(.movie__container--second) > div:nth-of-type(2) {
+    opacity: 1;
+    transition: opacity 0.75s ease;
+}
 
-@media (min-height: 501px) {
-    .movie__container:not(.movie__container--second) > div:nth-of-type(2) {
-        opacity: 0;
-    }
+.movie__container:not(.movie__container--second):hover > div:nth-of-type(2) {
+    opacity: 1;
+}
 
-    .movie__container:not(.movie__container--second):hover > div:nth-of-type(2) {
-        opacity: 1;
-    }
+.movie__container--active {
+    display: flex;
+}
+
+/*
+    Component: movie__container--second img, movie__image
+
+    Description: Style for the img of movie__container--second and
+    movie__image
+*/
+
+.movie__container--second img {
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+    border-radius: 20px;
+    mask-image: linear-gradient(#000 80%, transparent);
 }
 
 .movie__image {
     width: 100%;
-    height: auto;
-    object-fit: fill;
+    height: 125px;
+    object-fit: contain;
 }
+
+/*
+    Section: Movie's texts
+
+    Description: Style for all the span, p and other text tags
+    for movie component
+*/
 
 .movie__container span,
 .movie__container p {
-    text-align: justify;
     width: 100%;
+    text-align: justify;
 }
 
 .movie__format {
@@ -82,8 +120,8 @@
 
 .movie__detail-1,
 .movie__gender {
-    letter-spacing: 1px;
     font-size: 1.1em;
+    letter-spacing: 1px;
 }
 
 .movie__detail-2 {
@@ -92,29 +130,8 @@
 }
 
 .movie__description {
-    font-size: 1.25em;
+    font-size: 1.15em;
     font-weight: 500;
-}
-
-.movie__container--active {
-    display: flex;
-}
-
-.movie__container--second img {
-    width: 100%;
-    height: 80%;
-    object-fit: fill;
-    border-radius: 20px;
-    mask-image: linear-gradient(#000 80%, transparent);
-}
-
-.movie__container--second > div {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 }
 
 .movie__title--small {
@@ -144,13 +161,116 @@
     border-left: 1px solid #8b8b8b;
 }
 
-    .movie__data-item--small:nth-child(-n + 2) {
-        border-top: none;
-    }
+.movie__data-item--small:nth-child(-n + 2) {
+    border-top: none;
+}
 
-    .movie__data-item--small:nth-child(2n + 1) {
-        border-left: none;
+.movie__data-item--small:nth-child(2n + 1) {
+    border-left: none;
+}
+
+/*
+    Component: movie__buttons, movie__button
+
+    Description: Style for the container and button component
+    for the header movies section. It includes spaces, colors,
+    backgrounds and other styles.
+*/
+
+.movie__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.movie__button {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 56px;
+    font-weight: bold;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.movie__button--white {
+    background-color: var(--color-white);
+}
+
+.movie__button--white:hover {
+    background-color: #b4b4b4;
+}
+
+.movie__button--gray,
+.movie__button--black:hover {
+    background-color: var(--color-gray);
+}
+
+.movie__button--black,
+.movie__button--gray:hover {
+    background-color: var(--color-dark-2);
+}
+
+.movie__button--only-icon {
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    padding: 0;
+}
+
+.movie__button--only-icon > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    max-width: none !important;
+}
+
+.movie__button > img {
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.movie__button > p {
+    flex: 5;
+    font-size: 1em;
+}
+
+.movie__button--white > p {
+    color: #000;
+}
+
+.movie__button--gray > p {
+    color: var(--color-white);
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the movie container and its children component.
+*/
+
+@media (max-width: 1200px) {
+    .movie__container:not(.movie__container--second) {
+        width: 75%;
     }
+}
 
 @media (max-width: 992px) {
     .header__items-container:has(.movie__container) {
@@ -182,11 +302,21 @@
     }
 }
 
-@media (max-width: 992px) and (min-width: 500px) {
+@media (max-width: 400px) {
+    .movie__button {
+        justify-content: center;
+    }
+
+    .movie__button > p {
+        display: none;
+    }
+}
+
+/* @media (max-width: 992px) and (min-width: 500px) {
     .movie__container:not(.movie__container--second) {
         width: 75%;
     }
-}
+} */
 
 @media (max-width: 640px), (max-height: 768px) {
     .movie__detail-2 {
@@ -220,6 +350,22 @@
     }
 }
 
+@media (max-width: 300px) {
+    .movie__detail-2 {
+        font-size: 1em;
+    }
+
+    .movie__description,
+    .movie__format {
+        font-size: 0.9em;
+    }
+
+    .movie__detail-1,
+    .movie__gender {
+        font-size: 0.8em;
+    }
+}
+
 @media (max-width: 420px) {
     .movie__title--small {
         font-size: 1em;
@@ -235,5 +381,16 @@
 @media (max-height: 786px) {
     .movie__container--second {
         height: 440px;
+    }
+}
+
+@media (min-height: 501px) {
+    .movie__container:not(.movie__container--second) > div:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .movie__container:not(.movie__container--second):hover
+        > div:nth-of-type(2) {
+        opacity: 1;
     }
 }
