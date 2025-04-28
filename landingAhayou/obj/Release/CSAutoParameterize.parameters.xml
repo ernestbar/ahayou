@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="connDB-Web.config Connection String" description="connDB Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source = ahayouserver.database.windows.net; Initial Catalog = ahayou; User ID=ahayouuser; Password=__Ahayou24" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="E:\\ERNESTO\\ahayou\\landingAhayou\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connDB']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\GUSTAVO\\ahayou\\landingAhayou\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connDB']/@connectionString" />
   </parameter>
 </parameters>

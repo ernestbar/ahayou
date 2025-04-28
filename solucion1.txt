@@ -1,0 +1,15 @@
+"id": "home.aspx",
+
+
+🔨 2. Marca el archivo como "Contenido" y "Copiar si es más reciente"
+En Visual Studio:
+
+Haz clic derecho en manifest.json > Propiedades
+
+Establece:
+
+Build Action (Acción de compilación): Content
+
+Copy to Output Directory (Copiar al directorio de salida): Copy if newer (o "Copiar si es más reciente")
+
+Esto le dice a Visual Studio que debe incluirlo en el paquete de publicación.
