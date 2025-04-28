@@ -1,12 +1,12 @@
 {
-  "name": "Ahayou",
+  "name": "Ahayou Bolivia",
   "short_name": "Ahayou",
   "theme_color": "#ffffff",
   "background_color": "#66cc99",
   "display": "standalone",
   "orientation": "Portrait",
   "Scope": "/",
-  "id": "home.aspx",
+  "id": "AhayouWebSite",
   "start_url": "https://landingahayou.azurewebsites.net/home.aspx",
   "icons": [
     {

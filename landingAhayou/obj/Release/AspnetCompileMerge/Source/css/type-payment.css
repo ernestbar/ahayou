@@ -1,0 +1,43 @@
+/*
+    TYPE-PAYMENT.CSS
+
+    Description: This css file is used for the type-payment.html
+    page. Its is based in changing the images files.
+*/
+
+.type-payment__image {
+    width: 60px;
+    height: 40px;
+    object-fit: fill;
+}
+
+.type-payment__image:hover {
+    cursor: pointer;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles in type-payment.html
+    page.
+*/
+
+@media (max-width: 1200px) {
+    .type-payment__container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .type-payment__image {
+        width: 40px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 280px) {
+    .type-payment__image {
+        width: 30px;
+        height: 10px;
+    }
+}

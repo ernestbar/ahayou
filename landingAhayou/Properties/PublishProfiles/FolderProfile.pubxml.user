@@ -5,12 +5,15 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>E:\ERNESTO\AhayouC\LandingPublish</_PublishTargetUrl>
-    <History>True|2025-03-20T21:18:02.1837494Z||;False|2025-03-20T17:15:06.9910392-04:00||;False|2025-03-20T17:13:54.2031300-04:00||;False|2025-03-20T17:13:33.4825650-04:00||;</History>
+    <History>False|2025-04-28T15:36:50.2746549Z||;False|2025-04-28T11:36:27.0972925-04:00||;False|2025-04-28T11:35:52.2786615-04:00||;False|2025-04-28T10:27:57.2791299-04:00||;True|2025-04-28T09:41:55.5961642-04:00||;True|2025-03-20T17:18:02.1837494-04:00||;False|2025-03-20T17:15:06.9910392-04:00||;False|2025-03-20T17:13:54.2031300-04:00||;False|2025-03-20T17:13:33.4825650-04:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include=".gitignore">
       <publishTime>02/19/2025 09:28:13</publishTime>
+    </File>
+    <File Include="bin/manifest.json">
+      <publishTime>04/25/2025 16:14:41</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>02/14/2025 12:53:07</publishTime>
@@ -166,37 +169,67 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/14/2025 12:53:08</publishTime>
     </File>
     <File Include="bin/WebAhayouAdmin.dll">
-      <publishTime>03/20/2025 17:15:06</publishTime>
+      <publishTime>04/28/2025 09:41:53</publishTime>
+    </File>
+    <File Include="bin/WebAhayouAdmin.dll.config">
+      <publishTime>04/28/2025 09:34:55</publishTime>
     </File>
     <File Include="bin/WebAhayouAdmin.pdb">
-      <publishTime>03/20/2025 17:15:06</publishTime>
+      <publishTime>04/28/2025 09:41:53</publishTime>
     </File>
     <File Include="cambio_password.aspx">
-      <publishTime>03/20/2025 09:13:34</publishTime>
+      <publishTime>04/15/2025 16:18:55</publishTime>
+    </File>
+    <File Include="cambio_password_us.aspx">
+      <publishTime>04/23/2025 12:19:24</publishTime>
+    </File>
+    <File Include="cartelera.aspx">
+      <publishTime>04/23/2025 12:04:14</publishTime>
+    </File>
+    <File Include="cartelera_us.aspx">
+      <publishTime>04/23/2025 12:25:07</publishTime>
     </File>
     <File Include="centro_ayuda.aspx">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/22/2025 11:02:47</publishTime>
     </File>
     <File Include="centro_ayuda_us.aspx">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/23/2025 12:19:24</publishTime>
     </File>
     <File Include="contacto.aspx">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/22/2025 11:06:55</publishTime>
     </File>
     <File Include="contacto_us.aspx">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/23/2025 12:19:24</publishTime>
     </File>
     <File Include="contacts.html">
       <publishTime>03/06/2025 11:54:50</publishTime>
     </File>
     <File Include="contenidos.aspx">
-      <publishTime>03/18/2025 13:54:10</publishTime>
+      <publishTime>04/15/2025 14:25:56</publishTime>
     </File>
     <File Include="contenidos_us.aspx">
-      <publishTime>03/18/2025 13:54:10</publishTime>
+      <publishTime>04/23/2025 12:19:24</publishTime>
+    </File>
+    <File Include="css/alerts.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/arrow.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/aside.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/backgrounds-divs.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/buttons.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/carousel.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/check.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/common/alerts.css">
       <publishTime>03/19/2025 09:00:28</publishTime>
@@ -235,28 +268,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/19/2025 09:00:28</publishTime>
     </File>
     <File Include="css/containers.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/default-background.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/footer.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/forms.css">
-      <publishTime>03/07/2025 09:45:53</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/forms/forms.css">
       <publishTime>03/19/2025 09:00:28</publishTime>
     </File>
     <File Include="css/frequent-questions.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/hamburger.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/header-movies.css">
-      <publishTime>03/10/2025 08:40:41</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/header-options.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/header.css">
-      <publishTime>03/20/2025 16:37:08</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/header/header-movies.css">
       <publishTime>03/19/2025 09:00:28</publishTime>
@@ -268,55 +307,82 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/19/2025 09:00:28</publishTime>
     </File>
     <File Include="css/information.css">
-      <publishTime>03/07/2025 09:45:53</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/login.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/main.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/more-information.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/new-releases.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/pin.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/plans-selection.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/plans.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/playlist.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/privacy.css">
       <publishTime>02/27/2025 16:38:41</publishTime>
     </File>
     <File Include="css/profiles.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/ribbon.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/search-results.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/settings.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="css/show-list.css">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/type-payment.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/vanilla-page.css">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/web-app-section.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="css/welcome.css">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="cuenta_suscriptor.aspx">
+      <publishTime>04/25/2025 13:33:42</publishTime>
+    </File>
+    <File Include="cuenta_suscriptor_us.aspx">
+      <publishTime>04/25/2025 13:42:14</publishTime>
     </File>
     <File Include="forma_pago.aspx">
-      <publishTime>03/20/2025 15:51:48</publishTime>
+      <publishTime>04/15/2025 14:25:56</publishTime>
+    </File>
+    <File Include="forma_pago_us.aspx">
+      <publishTime>04/23/2025 12:19:24</publishTime>
     </File>
     <File Include="help-center.html">
       <publishTime>03/06/2025 11:54:50</publishTime>
     </File>
     <File Include="home.aspx">
-      <publishTime>03/20/2025 10:03:29</publishTime>
+      <publishTime>04/21/2025 14:13:13</publishTime>
     </File>
     <File Include="home_us.aspx">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/23/2025 12:19:24</publishTime>
     </File>
     <File Include="Imagenes/fondo-AHAYOU.png">
       <publishTime>02/14/2025 12:52:44</publishTime>
@@ -1020,6 +1086,21 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="img/tv.png">
       <publishTime>02/14/2025 12:53:07</publishTime>
     </File>
+    <File Include="imgs/avatars/Avatar 12.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/avatars/Avatar 3.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/avatars/Avatar 6.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/avatars/Avatar 7.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/avatars/Avatar 8.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
     <File Include="imgs/backgrounds/avengers.jpg">
       <publishTime>02/27/2025 16:38:41</publishTime>
     </File>
@@ -1027,103 +1108,139 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/27/2025 16:38:41</publishTime>
     </File>
     <File Include="imgs/backgrounds/fondo-AHAYOU.png">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/backgrounds/fondo-AHAYOU_2.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/fondo_header_movil.jpg">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/backgrounds/franja colores.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/header-img.jpg">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/horizontal/avengers.jpg">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/horizontal/barbara.png">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/horizontal/cobra-kai.jpeg">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/horizontal/max_jutam.png">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/horizontal/plato_paceno.png">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/horizontal/spiderman-claro.jpg">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/landingpage-AHAYOU_01.png">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/landingpage-AHAYOU_02.png">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/landingpage-AHAYOU_03.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/landingpage-AHAYOU_04.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/landingpage-AHAYOU_05.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/vertical/el_chaco.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/vertical/fuertes.jpg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/backgrounds/vertical/sirena.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/etc/arrow.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/etc/electronics.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/etc/profile_image.png">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/flags/eeuu.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/flags/spain.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/add.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/administration.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/alert.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/arrow-down.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/bell.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/cellphone.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/dislike-favorites.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/exit.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/help-center.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/home.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/like-favorites.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/lock.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/play.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/profile.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/remove.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/return.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/icons/search.svg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/shield-check.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/icons/shield.svg">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/barbara.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/Cobra-Kai-logo.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/facebook.svg">
       <publishTime>02/20/2025 17:35:55</publishTime>
@@ -1138,52 +1255,52 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/20/2025 17:35:55</publishTime>
     </File>
     <File Include="imgs/logos/logo-ahayou-2.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/logo-ahayou.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/logo1.jpg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/max_jutam.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/plato_paceno.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/pwa_logo.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/black/facebook.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/black/Instagram.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/black/linkedln.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/black/whatsapp.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/black/x.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/white/facebook.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/white/Instagram.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/white/linkedln.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/white/whatsapp.svg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/social-media/white/x.png">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/logos/TWITTER.svg">
       <publishTime>02/18/2025 14:10:23</publishTime>
@@ -1194,86 +1311,167 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="imgs/logos/x.png">
       <publishTime>02/20/2025 17:35:55</publishTime>
     </File>
+    <File Include="imgs/movies/dia_que_murio_el_silencio.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/dia_que_murio_el_silencio_vertical.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/fuertes.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/fuertes_vertical.jpg">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/katari.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/katari_vertical.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/santa_clara.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
+    <File Include="imgs/movies/santa_clara_vertical.png">
+      <publishTime>04/15/2025 11:49:08</publishTime>
+    </File>
     <File Include="imgs/rotator/El_día_que_murió_el_silencio_-_afiche_%28BC%29.jpg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/rotator/engaño.jpg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/rotator/rio.jpg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/rotator/soren.jpg">
-      <publishTime>03/06/2025 11:54:37</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/type-payment/american express.png">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/type-payment/mastercard.png">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="imgs/type-payment/visa.png">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 11:49:08</publishTime>
     </File>
     <File Include="js/carousel-header-index.js">
-      <publishTime>03/06/2025 11:54:33</publishTime>
+      <publishTime>04/15/2025 13:41:44</publishTime>
     </File>
     <File Include="js/carousel-new-releases.js">
-      <publishTime>03/06/2025 11:54:33</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/carousel.js">
-      <publishTime>02/27/2025 16:38:41</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/detect-mobile.js">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/footer-visited-color.js">
-      <publishTime>03/06/2025 11:54:34</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/header-background-handler.js">
-      <publishTime>03/06/2025 11:54:35</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/header-movies-responsive.js">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/movie-container-hover.js">
-      <publishTime>03/10/2025 08:40:50</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/open-accordion-image.js">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/open-menu.js">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/open-sidebar.js">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="js/open-submenu.js">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="js/pin.js">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="js/show-list.js">
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="js/show-one-bg.js">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/show-validation-alert.js">
-      <publishTime>03/19/2025 09:00:28</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="js/stop-autoplay.js">
+      <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="js/web-app-title.js">
-      <publishTime>03/06/2025 11:54:36</publishTime>
+      <publishTime>04/15/2025 10:59:32</publishTime>
+    </File>
+    <File Include="libman.json">
+      <publishTime>04/07/2025 09:17:28</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>03/20/2025 16:20:11</publishTime>
+      <publishTime>04/15/2025 16:18:10</publishTime>
+    </File>
+    <File Include="login_us.aspx">
+      <publishTime>04/22/2025 15:26:39</publishTime>
     </File>
     <File Include="Logs/Readme.txt">
       <publishTime>02/14/2025 12:52:47</publishTime>
     </File>
     <File Include="manifest.json">
-      <publishTime>02/18/2025 08:51:23</publishTime>
+      <publishTime>04/25/2025 16:14:41</publishTime>
     </File>
     <File Include="manifest2.json">
       <publishTime>03/18/2025 16:12:44</publishTime>
     </File>
+    <File Include="mas_informacion.aspx">
+      <publishTime>04/15/2025 14:28:25</publishTime>
+    </File>
+    <File Include="mas_informacion_us.aspx">
+      <publishTime>04/23/2025 12:16:04</publishTime>
+    </File>
     <File Include="perfiles.aspx">
-      <publishTime>03/20/2025 10:39:06</publishTime>
+      <publishTime>04/15/2025 16:17:55</publishTime>
+    </File>
+    <File Include="perfiles_us.aspx">
+      <publishTime>04/23/2025 12:19:24</publishTime>
+    </File>
+    <File Include="pin_perfil.aspx">
+      <publishTime>04/25/2025 11:25:35</publishTime>
+    </File>
+    <File Include="pin_perfil_us.aspx">
+      <publishTime>04/25/2025 11:25:35</publishTime>
+    </File>
+    <File Include="planes_ahayou.aspx">
+      <publishTime>04/23/2025 12:48:32</publishTime>
+    </File>
+    <File Include="planes_ahayou_us.aspx">
+      <publishTime>04/23/2025 12:52:37</publishTime>
     </File>
     <File Include="privacy.html">
       <publishTime>03/06/2025 11:54:50</publishTime>
     </File>
+    <File Include="README.md">
+      <publishTime>04/07/2025 09:17:28</publishTime>
+    </File>
     <File Include="reset_password.aspx">
-      <publishTime>03/20/2025 16:09:49</publishTime>
+      <publishTime>04/15/2025 16:17:39</publishTime>
+    </File>
+    <File Include="reset_password_us.aspx">
+      <publishTime>04/23/2025 12:19:24</publishTime>
+    </File>
+    <File Include="resultado_busqueda.aspx">
+      <publishTime>04/15/2025 14:28:25</publishTime>
+    </File>
+    <File Include="resultado_busqueda_us.aspx">
+      <publishTime>04/23/2025 12:17:47</publishTime>
+    </File>
+    <File Include="return.js">
+      <publishTime>04/07/2025 09:17:28</publishTime>
     </File>
     <File Include="Scripts/konami.js">
       <publishTime>03/18/2025 14:12:40</publishTime>
@@ -1285,25 +1483,40 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/14/2025 12:52:47</publishTime>
     </File>
     <File Include="selecciona_plan.aspx">
-      <publishTime>03/20/2025 15:39:28</publishTime>
+      <publishTime>04/16/2025 16:51:22</publishTime>
+    </File>
+    <File Include="selecciona_plan_us.aspx">
+      <publishTime>04/23/2025 12:19:23</publishTime>
     </File>
     <File Include="service-worker.js">
-      <publishTime>03/18/2025 16:14:26</publishTime>
+      <publishTime>04/25/2025 16:14:51</publishTime>
     </File>
     <File Include="suscribete.aspx">
-      <publishTime>03/20/2025 14:05:30</publishTime>
+      <publishTime>04/15/2025 16:03:38</publishTime>
+    </File>
+    <File Include="suscribete_us.aspx">
+      <publishTime>04/23/2025 12:18:51</publishTime>
     </File>
     <File Include="sw.js">
       <publishTime>03/18/2025 15:41:50</publishTime>
     </File>
     <File Include="test.aspx">
-      <publishTime>03/18/2025 16:08:26</publishTime>
+      <publishTime>04/24/2025 15:51:45</publishTime>
     </File>
     <File Include="verificar_correo.aspx">
-      <publishTime>03/20/2025 15:51:48</publishTime>
+      <publishTime>04/15/2025 16:18:58</publishTime>
+    </File>
+    <File Include="verificar_correo_us.aspx">
+      <publishTime>04/23/2025 12:19:18</publishTime>
+    </File>
+    <File Include="ver_streaming.aspx">
+      <publishTime>04/15/2025 14:31:12</publishTime>
+    </File>
+    <File Include="ver_streaming_us.aspx">
+      <publishTime>04/23/2025 12:19:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/20/2025 17:13:33</publishTime>
+      <publishTime>04/28/2025 09:41:54</publishTime>
     </File>
   </ItemGroup>
 </Project>

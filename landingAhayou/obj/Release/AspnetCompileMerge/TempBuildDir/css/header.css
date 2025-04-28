@@ -1,0 +1,940 @@
+@import url("main.css");
+
+/*
+    HEADER.CSS
+
+    Description: This css file is used for the header
+    container. Including all its properties with
+    modifiers like size, colors, backgrounds and others.
+    Its also includes other containers for the header__nav
+    header__main-content, header__list and others
+*/
+
+.header {
+    width: 100%;
+    background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            #000000a0 75%,
+            #000 95%
+        ),
+        url("../imgs/backgrounds/header-img.jpg");
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: auto 4fr auto;
+    height: max-content;
+}
+
+.header--main {
+    min-height: 100vh;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 24px 200px;
+    width: 100%;
+    grid-row: 1;
+    gap: 0 50px;
+}
+
+.header__items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    gap: 75px;
+    grid-row: 2;
+}
+
+.header__main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.header__main-content > *:nth-child(1) {
+    flex-grow: 3;
+}
+
+.header__main-content > *:nth-child(2) {
+    flex-grow: 1;
+}
+
+.header__main-content:has(
+        .header__list:has(.header__item:first-of-type.carousel__item--active)
+    ) {
+    gap: 100px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.header__list:has(.header__item:first-of-type.carousel__item--active) {
+    height: 60vh;
+}
+
+/*
+    Component: header__item
+
+    Description: Styles for a header__item that must be
+    inside a header__list, these header__item can be a full
+    screen height item to show a text, or a movie container.
+*/
+
+.header__item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    transition: translate 0.3s ease;
+}
+
+.header__item.carousel__item--active {
+    display: flex;
+}
+
+.header__item.carousel__item--active {
+    translate: 0px 0px;
+
+    @starting-style {
+        translate: 0px 100px;
+    }
+}
+
+.header__item:first-of-type {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+    Component: header__logo
+
+    Description: Styles for a header__logo, that like its
+    name says is the logo of the header, including its image
+    and container
+*/
+
+.header__logo {
+    height: 4em;
+    margin-right: auto;
+}
+
+.header__logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    min-width: 75px;
+}
+
+/*
+    Component: header__nav-buttons
+
+    Description: Styles for a header__nav-buttons. Its is
+    used to be the container for the idiom buttons.
+*/
+
+.header__nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__nav-buttons--with-text {
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.header__nav-input {
+    gap: 5px;
+}
+
+.repetitive-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0 10px;
+}
+
+/*
+    Component: header__button
+
+    Description: Styles for a header__button, a generic
+    button for the header__nav. Its includes properties
+    like fonts size and text, background colors, images
+    and others
+*/
+
+.header__button {
+    font-size: 1em;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__button--text {
+    width: 120px;
+    padding: 5px;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+.header__button--bg-orange {
+    background-color: var(--color-primary);
+    transition: background-color 0.3s;
+}
+
+.header__button--bg-orange:hover {
+    background-color: #d54e00;
+}
+
+.header__button--bg-green {
+    background-color: var(--color-secondary);
+    transition: background-color 0.3s;
+}
+
+.header__button--bg-green:hover {
+    background-color: #1fa180;
+}
+
+.header__button--icon,
+.header__button--with-img {
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    transition: background-color 0.3s;
+}
+
+.header__button--icon {
+    width: 2em;
+    height: 2em;
+}
+
+.header__button--with-img {
+    width: 4em;
+    height: 4em;
+}
+
+.header__button--icon:hover {
+    background-color: #00000052;
+}
+
+.header__button--icon:nth-child(1) {
+    background-image: url("../imgs/flags/spain.png");
+}
+
+.header__button--icon:nth-child(2) {
+    background-image: url("../imgs/flags/eeuu.png");
+}
+
+.header__button--icon > img,
+.header__button--with-img > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.header__button--with-img {
+    background-image: none;
+}
+
+.header__title {
+    font-weight: 700;
+    letter-spacing: -10px;
+}
+
+.header__title > span {
+    font-weight: 100;
+}
+
+.header__description {
+    color: #efefef;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/*
+    Component: header__button
+
+    Description: Styles for a header__pag-buttons, that
+    are buttons that indicates the number of pages that
+    are in the header__list.
+*/
+
+.header__pag-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+    width: 100%;
+    grid-row: 3;
+}
+
+.header__pag-button {
+    border: none;
+    padding: 5px 10px;
+    font-size: 2em;
+    background-color: transparent;
+    transition: color, border-bottom, font-size 0.3s;
+}
+
+.header__pag-button--selected,
+.header__pag-button:hover {
+    color: #adff2f;
+    font-size: 3em;
+    position: relative;
+}
+
+.header__pag-button:hover {
+    cursor: pointer;
+}
+
+.header__pag-button--selected::after,
+.header__pag-button:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    height: 5px;
+    background-color: #adff2f;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+/*
+    Component: header__nav-input
+
+    Description: Styles for a header__nav-input, that
+    contains styles for button and input for the search
+    header nav.
+*/
+
+.header__input {
+    padding: 5px 10px;
+    color: #000;
+    font-size: 1.25rem;
+    height: 46px;
+    border-radius: 10px;
+    width: 250px;
+    border: none;
+}
+
+.header__input:focus {
+    outline: none;
+    border: 2.5px solid var(--color-primary);
+}
+
+.header__button--search {
+    height: 46px;
+    width: 46px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-white);
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__button--search > img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    object-fit: fill;
+}
+
+.header__button--search:hover {
+    background-color: #b4b4b4;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the header component and its childrens. These is
+    focused on header__list and header containers to
+    show its items, by changing display values, heights
+    and other properties
+*/
+
+@media (max-width: 1800px) {
+    .header__input {
+        font-size: 1.15em;
+    }
+}
+
+@media (max-width: 1600px) {
+    .header__items-container {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header__nav {
+        padding: 24px 100px;
+    }
+
+    .header__title {
+        letter-spacing: -5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__items-container {
+        gap: 25px;
+    }
+
+    .header__input {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header > * {
+        flex-grow: 1;
+    }
+
+    .header__nav {
+        display: grid;
+        width: 100%;
+        height: 150px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        z-index: 500;
+        place-items: center;
+    }
+
+    .header--main > .header__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .header__logo,
+    .header__nav-buttons--with-text,
+    .header__nav-input {
+        grid-column: 2;
+    }
+
+    .header__logo {
+        grid-row: 1;
+        margin: auto 0;
+    }
+
+    .header__nav-buttons--only-img {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__nav-buttons--with-text,
+    .header__nav-input {
+        grid-row: 2;
+    }
+
+    .header__items-container {
+        height: 100%;
+        padding: 50px;
+        display: flex;
+    }
+
+    .header__pag-buttons {
+        height: 20%;
+    }
+
+    .header__main-content {
+        position: relative;
+        height: 70vh;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 100px;
+        gap: 0;
+    }
+
+    .header__item {
+        position: relative;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        min-height: 160px;
+    }
+
+    .header__title {
+        letter-spacing: -2.5px;
+        line-height: 0.8;
+    }
+
+    .header__description {
+        position: absolute;
+        width: 100%;
+        font-size: 1.3em;
+        letter-spacing: -1px;
+        bottom: 0;
+    }
+
+    .header__list {
+        width: 75%;
+    }
+
+    .header__list:not(
+            :has(
+                    .header__item:first-of-type.header__item.carousel__item--active
+                )
+        ) {
+        height: inherit;
+    }
+
+    .header__input {
+        width: auto;
+    }
+}
+
+@media (max-width: 992px), (max-height: 768px) {
+    .header__pag-button {
+        font-size: 1.5em;
+        letter-spacing: -2px;
+    }
+
+    .header__pag-button--selected,
+    .header__pag-button:hover {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__nav {
+        gap: 0;
+        padding: 24px;
+    }
+
+    .repetitive-buttons {
+        display: none !important;
+    }
+
+    .header__item.carousel__item--active:not(:first-of-type) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .header__nav {
+        padding: 24px 5px;
+    }
+
+    .header__description {
+        font-size: 1em;
+    }
+
+    .header__pag-button {
+        font-size: 1.25em;
+    }
+
+    .header__pag-button--selected,
+    .header__pag-button:hover {
+        font-size: 1.75em;
+    }
+
+    .header__items-container {
+        gap: 35px;
+    }
+
+    .header__input {
+        width: 100%;
+    }
+
+    .header__button--with-img {
+        width: 4em;
+        height: 4em;
+    }
+}
+
+@media (max-width: 600px), (max-height: 600px) {
+    .header__pag-buttons {
+        gap: 1em;
+    }
+
+    .header__items-container {
+        padding: 0 25px;
+    }
+}
+
+@media (max-height: 768px) and (max-width: 560px) {
+    .header__nav {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        height: 75px;
+        padding: 15px;
+        gap: 0 5px;
+    }
+
+    .header__logo {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .header__pag-buttons {
+        margin-bottom: 30px;
+    }
+
+    .header__nav-buttons--with-text,
+    .header__nav-input {
+        grid-column: 3 / span 3;
+        width: 100%;
+        grid-row: 1;
+    }
+
+    .header__nav-buttons--only-img {
+        grid-column: 6;
+        grid-row: 1;
+    }
+
+    .header__nav-input {
+        height: 75%;
+    }
+
+    .header__input {
+        height: inherit;
+        width: 100%;
+    }
+
+    .header__button--search {
+        height: inherit;
+        width: 40px;
+    }
+}
+
+@media (max-width: 560px) and (min-height: 768px) {
+    .header__items-container {
+        gap: 20px;
+    }
+
+    .header__logo {
+        width: 100%;
+        height: 3em;
+    }
+
+    .header__logo,
+    .header__nav-buttons--with-text,
+    .header__nav-input {
+        grid-column: 1/3;
+    }
+
+    .header__nav-buttons--with-text,
+    .header__nav-input {
+        width: 100%;
+    }
+
+    .header__button--text {
+        padding: 5px;
+        width: 50%;
+    }
+
+    .header__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .header__items-container {
+        gap: 10px;
+    }
+
+    .header__logo {
+        height: 2em;
+    }
+
+    .header__button--text {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 300px) {
+    .header__nav-buttons--with-text {
+        white-space: normal;
+    }
+}
+
+/* RESPONSIVE HEIGHT */
+
+@media (max-height: 600px) and (max-width: 900px) {
+    .header__title {
+        font-size: 2.5em !important;
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-height: 600px) and (min-width: 900px) {
+    .header__title {
+        font-size: 4em !important;
+        letter-spacing: -5px;
+    }
+}
+
+@media (max-height: 600px) {
+    .header__main-content {
+        gap: 5px;
+        width: 100%;
+    }
+
+    .header__items-container {
+        height: 100%;
+        padding: 0;
+    }
+
+    .header__item {
+        position: relative;
+        height: 100%;
+    }
+
+    .header__description {
+        width: 100%;
+        font-size: 1em;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 480px) and (min-height: 740px) and (max-height: 860px),
+    (max-width: 400px) and (min-height: 340px) and (max-height: 900px) {
+    .header__button {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 550px) and (max-height: 350px),
+    (max-width: 560px) and (max-height: 768px),
+    (max-width: 740px) and (max-height: 400px),
+    (max-width: 320px) and (min-height: 768px),
+    (min-width: 768px) and (max-height: 600px) {
+    .header__button--text {
+        padding: 2.5px;
+    }
+}
+
+@media (max-width: 740px) {
+    .header__button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__button,
+    .header__input {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 370px) {
+    .header__button {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 350px) {
+    .header__button {
+        font-size: 0.65em;
+    }
+
+    .header__nav-buttons {
+        gap: 20px 10px;
+    }
+}
+
+@media (max-width: 310px) {
+    .header__button {
+        font-size: 0.55em;
+    }
+}
+
+@media (max-width: 280px) {
+    .header__button {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-height: 300px) and (min-width: 992px) {
+    .header__title {
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-height: 450px) and (min-width: 900px) {
+    .header__title {
+        font-size: 3em !important;
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-height: 450px) {
+    .header__pag-button {
+        font-size: 1.25em;
+        letter-spacing: -2px;
+    }
+
+    .header__pag-button--selected,
+    .header__pag-button:hover {
+        font-size: 1.75em;
+    }
+}
+
+@media (max-height: 300px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header__nav {
+        position: relative;
+    }
+
+    .header__title {
+        font-size: 2.5em !important;
+        letter-spacing: -2.5px;
+    }
+
+    .header__pag-button {
+        font-size: 1em;
+        letter-spacing: -2px;
+    }
+
+    .header__pag-button--selected,
+    .header__pag-button:hover {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-height: 220px) {
+    .header__title {
+        font-size: 2em !important;
+    }
+}
+
+@media (max-height: 480px) and (min-height: 260px),
+    (min-width: 992px) and (max-height: 520px) and (min-height: 480px) {
+    .header__list:has(.header__item:first-of-type.carousel__item--active) {
+        height: 60vh;
+    }
+}
+
+@media (max-height: 768px) and (min-width: 560px) {
+    .header__nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        height: 75px;
+        padding: 15px;
+        gap: 0 5px;
+    }
+
+    .header__logo {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .header__nav-buttons--with-text,
+    .header__nav-input {
+        grid-column: 3 / 5;
+        width: 100%;
+        grid-row: 1;
+    }
+
+    .header__nav-buttons--only-img {
+        grid-column: 5;
+        grid-row: 1;
+    }
+}
+
+@media (max-height: 768px) and (max-width: 340px) {
+    .header__nav-buttons--with-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__button--text {
+        width: 100%;
+    }
+}
+
+@media (max-height: 768px) and (min-height: 480px) and (max-width: 768px) {
+    .header__item.carousel__item--active:first-of-type {
+        height: 60vh;
+    }
+}
+
+@media (max-height: 600px) {
+    .header__main-content:not(
+            :has(
+                    .header__item:first-of-type.header__item.carousel__item--active
+                )
+        ) {
+        min-height: 550px;
+    }
+}
+
+@media (max-height: 460px) {
+    .header__item.carousel__item--active {
+        height: 100%;
+    }
+
+    .header__item.carousel__item--active:first-of-type {
+        height: 60vh;
+    }
+}
+
+@media (max-height: 420px) {
+    .header__items-container {
+        padding: 0 25px;
+    }
+}
+
+@media (max-height: 360px) {
+    .header__nav {
+        height: 60px;
+        padding: 0 5px;
+    }
+}
+
+@media (max-height: 300px) {
+    .header__main-content {
+        margin-top: 75px;
+    }
+
+    .header__item.carousel__item--active:first-of-type {
+        height: fit-content;
+        align-items: center;
+    }
+}

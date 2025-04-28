@@ -1,0 +1,569 @@
+@import url("main.css");
+
+/*
+    PLANS.CSS
+
+    Description: This css file is used for plans section in
+    index.html page. Its includes all its containers, texts,
+    items, and others.
+*/
+
+.plans {
+    background-image: url("../imgs/backgrounds/landingpage-AHAYOU_03.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: row;
+    padding-top: 75px;
+}
+
+.plans,
+.plans__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+.plans__list {
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.plans__list > * {
+    text-decoration: none;
+}
+
+.plans__list,
+.plans__title {
+    flex-basis: 50%;
+}
+
+.plans__item,
+.plans__item--type-2 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.plans__item {
+    flex-direction: column;
+    width: 50%;
+    text-decoration: none;
+    height: 200px;
+}
+
+.plans__item--type-2 {
+    flex-direction: row;
+    width: 100%;
+}
+
+.plans__item--type-2 > * {
+    flex-basis: 100%;
+}
+
+.plans__item-title {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    width: 75%;
+    line-height: 0.75em;
+    display: inline-block;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.plans__item-content {
+    flex: 4;
+    gap: 30px;
+    height: 100%;
+}
+
+.price__content {
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*
+    Component: Texts
+
+    Description: Styles for the texts inside the plans
+    section.
+*/
+
+.plans__item-price {
+    flex: 2;
+}
+
+.plans__item-content,
+.plans__item-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.plans__item-content,
+.plans__item-price,
+.plans__item-footer {
+    background-color: var(--container-bg-color-2);
+}
+
+.bs,
+.price__content,
+.plans__item-price > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plans__item-price > div {
+    position: relative;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    right: 40px;
+}
+
+.bs {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #000;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.plans__title {
+    font-size: var(--main-title-font-size);
+    color: var(--color-white);
+    letter-spacing: -5px;
+    text-align: center;
+}
+
+.plans__title span:nth-child(1) {
+    color: var(--color-primary);
+}
+
+.price__number,
+.price__description {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.price__number {
+    color: var(--color-primary);
+    font-size: 3.5em;
+    letter-spacing: -5px;
+    width: 100%;
+    display: inline-block;
+    line-height: 0.8;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.price__description {
+    color: var(--color-secondary);
+    font-size: 1.1em;
+    letter-spacing: -0.5px;
+    line-height: 0.8;
+}
+
+.plans__item-footer {
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    font-size: 1.2em;
+}
+
+.plans__item-footer--hidden {
+    visibility: hidden;
+}
+
+.plans__item-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom right, var(--color-white), #000)
+        border-box;
+    mask: linear-gradient(var(--color-white) 0 0) padding-box,
+        linear-gradient(var(--color-white) 0 0);
+    mask-composite: exclude;
+}
+
+.plans__item-descriptions {
+    display: inline-block;
+    list-style-position: inside;
+}
+
+.plans__item-descriptions > li {
+    font-weight: 300;
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.plans__item-descriptions > li::marker {
+    font-size: 0.6em;
+}
+
+.plans__item-footer > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*
+    Component: Scrollbar
+
+    Description: Styles for the scrollbar inside plans
+    section.
+*/
+
+.plans__list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.plans__list::-webkit-scrollbar {
+    height: 10px;
+}
+
+/*
+    Section: Items gradient
+
+    Description: Styles for the plans__item to
+    create a striped background
+*/
+
+.plans__item:nth-child(4n - 3) .plans__gradient {
+    background: repeating-radial-gradient(
+        circle at left,
+        var(--color-primary) 0px,
+        var(--color-primary) 20px,
+        transparent 20px,
+        transparent 40px
+    ) !important;
+}
+
+.plans__item:nth-child(4n - 2) .plans__gradient {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-turquoise) 0px,
+        var(--color-turquoise) 20px,
+        transparent 20px,
+        transparent 40px
+    ) !important;
+}
+
+.plans__item:nth-child(4n - 1) .plans__gradient {
+    background: repeating-linear-gradient(
+            -45deg,
+            var(--color-turquoise) -10px,
+            var(--color-turquoise) 10px,
+            transparent 10px,
+            transparent 30px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            var(--color-primary) 0px,
+            var(--color-primary) 20px,
+            transparent 20px,
+            transparent 40px
+        ) !important;
+    background-size: 100% 50% !important;
+    background-position: 0 0, 0 100% !important;
+    background-repeat: repeat-x !important;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles plans
+    section in index.html page.
+*/
+
+@media (max-width: 1800px) {
+    .plans__item {
+        width: 70%;
+    }
+
+    .plans__title {
+        font-size: 7em;
+    }
+}
+
+@media (max-width: 1400px) {
+    .plans__item {
+        width: 90%;
+    }
+
+    .plans__title {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 1024px), (max-height: 460px) {
+    .plans__title {
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .plans__list:not(.plans__list--second) {
+        justify-content: start;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 992px) and (max-height: 1280px) {
+    .plans__list {
+        justify-content: start;
+    }
+}
+
+@media (min-width: 992px) and (max-height: 580px) {
+    .plans__list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px), (max-height: 580px) {
+    .plans {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .plans__list:not(.plans__list--second) {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        margin-left: 15px;
+        gap: 25px;
+    }
+
+    .plans__item {
+        flex: 0 0 auto;
+        height: 200px;
+        min-width: 400px;
+        max-width: 480px;
+        width: auto;
+    }
+
+    .plans__item-content {
+        gap: 15px;
+    }
+
+    .plans__item-price > div {
+        width: 125px;
+        height: 125px;
+        right: 25px;
+    }
+
+    .price__description:first-of-type {
+        position: relative;
+        left: 10px;
+    }
+
+    .bs {
+        top: 2.5px;
+        left: 2.5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .price__content {
+        gap: 2.5px;
+    }
+
+    .price__number {
+        font-size: 3em;
+    }
+
+    .price__description,
+    .bs {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .plans__item-title {
+        font-size: 1.75em;
+    }
+
+    .plans__item-descriptions > li,
+    .plans__item-footer {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 640px) {
+    .plans__item {
+        width: 90%;
+    }
+
+    .plans__title {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 576px), (max-height: 640px) {
+    .plans__item-title {
+        font-size: 1.5em;
+    }
+
+    .plans__item-descriptions > li,
+    .plans__item-footer {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    .plans__list--second {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        max-width: fit-content;
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .plans__item-price > div {
+        width: 125px;
+        height: 125px;
+    }
+
+    .bs {
+        top: 2.5px;
+        left: 2.5px;
+    }
+
+    .price__description,
+    .bs {
+        font-size: 1em;
+    }
+
+    .price__description:first-of-type {
+        position: relative;
+        left: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .plans__list {
+        gap: 15px 50px;
+    }
+
+    .plans__title {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 370px) {
+    .plans__item-price > div {
+        right: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .plans__title {
+        font-size: 2.5em;
+        letter-spacing: -2.5px;
+    }
+}
+
+/* RESPONSIVE HEIGHT */
+
+@media (max-height: 830px) {
+    .plans__list {
+        padding: 50px 15px;
+    }
+}
+
+@media (max-height: 680px) {
+    .plans__item-price > div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bs {
+        top: 2px;
+        left: 2px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .price__number {
+        font-size: 2.5em;
+    }
+
+    .price__description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-height: 560px) {
+    .plans__title {
+        font-size: 4em;
+    }
+}
+
+@media (max-height: 500px) {
+    .plans__list {
+        padding: 15px 0;
+    }
+}
+
+@media (max-height: 460px) {
+    .plans__list {
+        padding: 0;
+    }
+}
+
+@media (max-height: 340px) {
+    .plans__title {
+        font-size: 3em;
+        letter-spacing: -2.5px;
+    }
+
+    .plans__list {
+        padding: 0;
+    }
+}
+
+@media (max-height: 300px) {
+    .plans__title {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-height: 220px) {
+    .plans__title {
+        font-size: 2em;
+    }
+}

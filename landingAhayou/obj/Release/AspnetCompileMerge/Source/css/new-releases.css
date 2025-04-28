@@ -1,0 +1,143 @@
+@import url("main.css");
+
+/*
+    NEW-RELEASES.CSS
+
+    Description: Styles for new-releases section inside
+    index.html. It is based in changing the background
+    image, containers and its texts.
+*/
+
+.new-releases,
+.new-releases__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-releases {
+    background: linear-gradient(to top, transparent 0%, #000000a0 90%, #000 95%),
+        url("../imgs/backgrounds/landingpage-AHAYOU_02.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px 0;
+    padding-bottom: 10px;
+    padding-top: 25px;
+}
+
+.new-releases__content {
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.new-releases__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
+    justify-content: center;
+    gap: 0 20px;
+    width: 80%;
+    transition: transform 0.3s ease;
+}
+
+.new-releases__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: var(--container-bg-color-2);
+}
+
+.new-releases__item:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.new-releases__list.slide-out,
+.new-releases__list.slide-in {
+    opacity: 0;
+}
+
+.new-releases__list.slide-out {
+    transform: translateX(-25%);
+}
+
+.new-releases__list.slide-in {
+    transform: translateX(25%);
+}
+
+.new-releases__list.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.new-releases__item > img {
+    width: 100%;
+    height: 85%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.new-releases__item > div {
+    margin-top: 10px;
+    width: 100%;
+    height: 15%;
+}
+
+/*
+    Section: Texts
+
+    Description: Styles for texts in new-realeses.css
+*/
+
+.new-releases__title {
+    text-align: center;
+    letter-spacing: -5px;
+}
+
+.new-releases__title span {
+    font-weight: var(--second-font-weight);
+    color: var(--color-secondary);
+}
+
+.new-releases__item > div > h3 {
+    font-weight: bold;
+}
+
+.new-releases__item > div > h3,
+.new-releases__item > div > p {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from 
+    new-releases.css
+*/
+
+@media (max-width: 320px) {
+    .new-releases__title {
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-height: 768px) {
+    .new-releases__item {
+        height: 440px;
+    }
+}
+
+@media (max-height: 700px) {
+    .new-releases__item {
+        height: 400px;
+    }
+}

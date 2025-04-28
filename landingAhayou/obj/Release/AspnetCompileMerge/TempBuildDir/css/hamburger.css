@@ -1,0 +1,87 @@
+/*
+    HAMBURGER.CSS
+
+    Description: This css file is intended for a hamburger button,
+    including its lines, container and other elements. It can be
+    used in any page.
+*/
+
+/*
+    Component: hamburger__button
+    Description: Principal Css class for the button of the hamburger.
+*/
+
+.hamburger__button {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger__button:hover {
+    background-color: var(--color-primary);
+}
+
+/*
+    Component: hamburger__line
+    Description: Css class for the lines that compose the hamburger.
+    These include its modifiers for the colors and position on the
+    hamburger__button
+*/
+
+.hamburger__line {
+    position: absolute;
+    width: 90%;
+    height: 5px;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger__line--white {
+    background-color: var(--color-white);
+}
+
+.hamburger__line--black {
+    background-color: #000;
+}
+
+.hamburger__line:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger__line:nth-child(3) {
+    top: 75%;
+}
+
+/*
+    Section: Responsive hamburger
+    Description: Media queries that change the position and size
+    of the lines and the hamburger__button respectively.
+*/
+
+@media (max-width: 480px) {
+    .hamburger__button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .hamburger__line:nth-child(1) {
+        top: 30%;
+    }
+
+    .hamburger__line:nth-child(3) {
+        top: 70%;
+    }
+
+    .hamburger__line {
+        height: 3px;
+    }
+}

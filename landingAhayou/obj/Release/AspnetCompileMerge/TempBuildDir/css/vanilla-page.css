@@ -1,0 +1,80 @@
+@import url("main.css");
+
+/*
+    VANILLA-PAGE.CSS
+
+    Description: This css file is intended for a vanilla page.
+    In other words, these are simply styles for a page. For
+    example, this body has a white background color.
+*/
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(
+        to bottom,
+        #393c3e 0%,
+        #393c3e 5%,
+        #e4f1f2 30%,
+        #e4f1f2 40%,
+        #e6e6e6 50%,
+        var(--color-white) 80%,
+        var(--color-white) 100%
+    );
+    display: grid;
+    min-height: 100dvh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 4fr auto;
+    gap: 50px;
+    overflow-x: auto;
+}
+
+/*
+    Component: Header
+
+    Description: Style for the header.
+*/
+
+.header {
+    background: none;
+}
+
+/*
+    Component: Main
+
+    Description: Styles for the main tag.
+*/
+
+.main--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.main--flex-column {
+    flex-direction: column;
+}
+
+/*
+    Component: Footer
+
+    Description: Styles for the footer tag.
+*/
+
+.footer {
+    margin-bottom: 24px;
+    margin: 0 auto;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    this css file.
+*/
+
+@media (max-height: 420px) {
+    body {
+        gap: 25px 50px;
+    }
+}

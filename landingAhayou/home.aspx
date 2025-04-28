@@ -38,8 +38,8 @@
 
 
 
-    <link rel="manifest" href="<%=  this.ResolveClientUrl("~/")   %>manifest.json" />
-    <script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>
+    <link rel="manifest" href="manifest.json" />
+    <%--<script src="<%=  this.ResolveClientUrl("~/")   %>Scripts/pwacompat.min.js"></script>--%>
    <script>
        if ('serviceWorker' in navigator) {
            window.addEventListener('load', () => {

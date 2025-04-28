@@ -1,0 +1,101 @@
+/*
+    INFORMATION.CSS
+
+    Description: Styles for privacy and other long text
+    pages. Its is based in changing containers and styles
+    from these pages.
+*/
+
+.main--information {
+    padding: 0 100px;
+}
+
+.information__article {
+    margin-top: 100px;
+    margin-right: 0;
+    margin-bottom: 100px;
+    margin-left: 30%;
+}
+
+.information__content {
+    margin-top: 20px;
+}
+
+.information__content,
+.information__paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*
+    Section: Texts
+*/
+
+.information__title {
+    color: var(--color-primary);
+    font-size: 3em;
+}
+
+.information__paragraphs > p,
+.information__paragraphs > li {
+    color: #000;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.information__paragraphs--points {
+    list-style: none;
+}
+
+.information__paragraphs--points > li {
+    text-indent: 2em;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from 
+    login.css
+*/
+
+@media (max-width: 992px) {
+    .information__article {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-height: 360px) {
+    .information__article {
+        margin-top: 50px;
+    }
+}
+
+@media (max-height: 200px) {
+    .information__article {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .information__title {
+        font-size: 2em;
+    }
+
+    .main--information {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main--information {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    .information__title {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,232 @@
+@import url("main.css");
+
+/*
+    HEADER.CSS
+
+    Description: This css file is used for the options__container,
+    that is a modal to show the options of the buttons of the
+    header (is a modal if the screen has a specific weight). It
+    must be combinend with hamburger.css.
+*/
+
+.options__container,
+.options__container--second {
+    position: relative;
+}
+
+.options__container {
+    display: none;
+}
+
+.options__container--second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options__menu,
+.options__menu--flex {
+    display: none;
+    position: absolute;
+    background-color: var(--color-primary);
+    top: 100%;
+    left: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    z-index: 1000;
+    border-radius: 15px;
+    transform: translate(-50%);
+}
+
+.options__menu--flex {
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.options__menu::before,
+.options__menu--black::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 16px;
+    border-style: solid;
+    border-top-width: 0;
+    cursor: auto;
+}
+
+.options__menu--left {
+    left: -30%;
+}
+
+.options__menu--left::before {
+    left: 75%;
+}
+
+.options__menu::before {
+    border-color: transparent transparent var(--color-primary) transparent;
+}
+
+.options__menu--big {
+    width: 15em;
+}
+
+.options__menu--black {
+    background-color: var(--color-dark-solid);
+}
+
+.options__menu--black::before {
+    border-color: transparent transparent var(--color-dark-solid) transparent;
+}
+
+.options__menu.options__menu--active {
+    display: block;
+}
+
+.options__menu--flex.options__menu--active {
+    display: flex;
+}
+
+/*
+    Component: options__button
+
+    Description: Styles for a options__button, a button
+    for the options__menu container.
+*/
+
+.options__button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    word-wrap: break-word;
+    font-size: 1em;
+}
+
+.options__button:not(:last-child) {
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.options__button:hover {
+    background-color: #bf4600;
+    transition: background-color 0.3s ease;
+}
+
+.options__button--last {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid var(--color-white);
+    transition: background-color 0.3s ease;
+}
+
+.options__button--flex {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    cursor: pointer;
+    gap: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.options__button--flex > img {
+    flex: 1;
+    max-width: 17.5%;
+    border-radius: 100%;
+    height: auto;
+    aspect-ratio: 1 /1;
+}
+
+.options__button--flex > p {
+    display: flex;
+    align-items: center;
+    flex: 5;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.options__button--flex:last-of-type > p {
+    border-bottom: none;
+}
+
+/*
+    Section: Responsive
+
+    Description: Media queries that change styles from
+    the options modal of the header.
+*/
+
+@media (max-width: 992px) {
+    .options__container {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .options__container {
+        display: inline-block;
+    }
+
+    .options__menu:not(.options__menu--big) {
+        width: 125px;
+    }
+
+    .options__menu--big {
+        width: 10em;
+    }
+
+    .options__button {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 480px) {
+    .options__menu:not(.options__menu--big) {
+        width: 100px;
+    }
+
+    .options__menu--big {
+        width: 7.5em;
+    }
+
+    .options__button {
+        font-size: 0.6em;
+    }
+
+    .options__button--flex {
+        justify-content: center;
+    }
+
+    .options__button--flex > p {
+        display: none;
+    }
+
+    .options__button--flex > img {
+        max-width: 50%;
+    }
+}
+
+@media (max-height: 768px) and (max-width: 560px) {
+    .options__container {
+        grid-column: 6;
+        grid-row: 1;
+    }
+}
+
+@media (max-height: 768px) and (min-width: 560px) {
+    .options__container {
+        grid-column: 5;
+        grid-row: 1;
+    }
+}
