@@ -46,19 +46,19 @@ namespace AhayouWebAPI.Controllers
                 var str = await reader.ReadToEndAsync();
                 string data = str.Replace("\\", "");
 
-                string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "archivos", "miarchivo.txt");
-                // Crear el directorio si no existe
-                var directorio = Path.GetDirectoryName(rutaArchivo);
-                if (!Directory.Exists(directorio))
-                {
-                    Directory.CreateDirectory(directorio);
-                }
+                //string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "archivos", "miarchivo.txt");
+                //// Crear el directorio si no existe
+                //var directorio = Path.GetDirectoryName(rutaArchivo);
+                //if (!Directory.Exists(directorio))
+                //{
+                //    Directory.CreateDirectory(directorio);
+                //}
 
                 // Escribir contenido en el archivo (añadir al final)
-                await System.IO.File.AppendAllTextAsync(rutaArchivo, str + "\n");
+                //await System.IO.File.AppendAllTextAsync(rutaArchivo, str + "\n");
 
 
-               
+
                 string[] status1 = data.Split("payment_status");
                 string[] status2 = status1[1].Split("\"");
 
