@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "E:\\ERNESTO\\ahayou\\landingAhayou\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\selecciona_plan_us.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:selecciona_plan_us.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\selecciona_plan.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:selecciona_plan.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\selecciona_plan_us.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:selecciona_plan_us.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cuenta_suscriptor.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cuenta_suscriptor.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\home_us.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:home_us.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\selecciona_plan.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:selecciona_plan.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\clases\\avatares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:clases\\avatares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cambio_password_us.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cambio_password_us.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\cambio_password.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:cambio_password.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|e:\\ernesto\\ahayou\\landingahayou\\pagar_stripe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3915B790-67F3-4781-B003-F80FF1D2E0B2}|landingAhayou.csproj|solutionrelative:pagar_stripe.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,46 +114,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "home_us.aspx",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\home_us.aspx",
-              "RelativeDocumentMoniker": "home_us.aspx",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\home_us.aspx",
-              "RelativeToolTip": "home_us.aspx",
+              "DocumentIndex": 0,
+              "Title": "selecciona_plan_us.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan_us.aspx",
+              "RelativeDocumentMoniker": "selecciona_plan_us.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan_us.aspx",
+              "RelativeToolTip": "selecciona_plan_us.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-28T20:22:35.428Z",
+              "WhenOpened": "2025-05-02T18:53:31.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "service-worker.js",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\service-worker.js",
-              "RelativeDocumentMoniker": "service-worker.js",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\service-worker.js",
-              "RelativeToolTip": "service-worker.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-28T19:54:28.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "manifest.json",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\manifest.json",
-              "RelativeDocumentMoniker": "manifest.json",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\manifest.json",
-              "RelativeToolTip": "manifest.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-28T17:45:06.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "home.aspx",
               "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\home.aspx",
               "RelativeDocumentMoniker": "home.aspx",
@@ -161,59 +135,85 @@
               "RelativeToolTip": "home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-28T18:50:58.708Z",
+              "WhenOpened": "2025-05-02T18:22:11.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Avatares.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Avatares.cs",
-              "RelativeDocumentMoniker": "Clases\\Avatares.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\Clases\\Avatares.cs",
-              "RelativeToolTip": "Clases\\Avatares.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAAAI8AAAAdAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "selecciona_plan.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan.aspx",
+              "RelativeDocumentMoniker": "selecciona_plan.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan.aspx",
+              "RelativeToolTip": "selecciona_plan.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-02T18:21:29.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "selecciona_plan_us.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan_us.aspx.cs",
+              "RelativeDocumentMoniker": "selecciona_plan_us.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan_us.aspx.cs",
+              "RelativeToolTip": "selecciona_plan_us.aspx.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAowMYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:02:20.889Z",
+              "WhenOpened": "2025-05-02T18:21:01.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "cambio_password_us.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cambio_password_us.aspx.cs",
-              "RelativeDocumentMoniker": "cambio_password_us.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cambio_password_us.aspx.cs",
-              "RelativeToolTip": "cambio_password_us.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBEAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:02:17.596Z",
+              "Title": "service-worker.js",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\service-worker.js",
+              "RelativeDocumentMoniker": "service-worker.js",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\service-worker.js",
+              "RelativeToolTip": "service-worker.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-02T18:20:58.703Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "cambio_password.aspx.cs",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cambio_password.aspx.cs",
-              "RelativeDocumentMoniker": "cambio_password.aspx.cs",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cambio_password.aspx.cs",
-              "RelativeToolTip": "cambio_password.aspx.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAwBIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:02:08.28Z",
+              "Title": "pagar_stripe.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\pagar_stripe.aspx",
+              "RelativeDocumentMoniker": "pagar_stripe.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\pagar_stripe.aspx",
+              "RelativeToolTip": "pagar_stripe.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-02T17:21:43.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-28T17:46:51.986Z",
+              "DocumentIndex": 5,
+              "Title": "selecciona_plan.aspx.cs",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan.aspx.cs",
+              "RelativeDocumentMoniker": "selecciona_plan.aspx.cs",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\selecciona_plan.aspx.cs",
+              "RelativeToolTip": "selecciona_plan.aspx.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAcwMgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T16:54:28.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "cuenta_suscriptor.aspx",
+              "DocumentMoniker": "E:\\ERNESTO\\ahayou\\landingAhayou\\cuenta_suscriptor.aspx",
+              "RelativeDocumentMoniker": "cuenta_suscriptor.aspx",
+              "ToolTip": "E:\\ERNESTO\\ahayou\\landingAhayou\\cuenta_suscriptor.aspx",
+              "RelativeToolTip": "cuenta_suscriptor.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-02T14:52:01.594Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="selecciona_plan.aspx.cs" Inherits="landingAhayou.selecciona_plan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagar_stripe.aspx.cs" Inherits="landingAhayou.pagar_stripe" %>
 
 <!DOCTYPE html>
 
@@ -162,84 +162,8 @@
                 </asp:Panel>
             </nav>
         </header>
-        <main class="main main--flex">
-             <section
-                class="container--flex container--flex-column full-width plans-selection full-height"
-            >
-                <span class="text text--light text--center full-width">
-                    PASO 3 de 4
-                </span>
-                <h1>Selecciona el plan ideal para ti</h1>
-                <div
-                    class="plans-selection__list container--flex-wrap container--flex container--justify-content-center"
-                >
-                <asp:Repeater ID="Repeater2" DataSourceID="odsPlanes" runat="server">
-                    <ItemTemplate>
-                    <article
-                        class="plans-selection__item container--shiny container--padding-normal container--flex container--flex-column plans-selection--gap"
-                    >
-                        <div
-                            class="container-common container--green container--small-rounded container--no-border plans-selection__padding"
-                        >
-                            <h2 class="text text--bold text--black">
-                               <%# Eval("planes") %>
-                            </h2>
-                        </div>
-                        <div
-                            class="plans-selection__padding plans-selection--gap container--flex container--flex-column"
-                        >
-                            <div>
-                                <h3 class="text text--light"> <%# Eval("planes") %></h3>
-                                <p class="text text--bold"><%# Eval("moneda") %> <%# Eval("monto") %></p>
-                            </div>
-                            <div>
-                                <h3 class="text text--light">
-                                    Calidad de audio y video
-                                </h3>
-                                <p class="text text--bold"><%# Eval("caracteristicas").ToString().Replace("|","<br />") %></p>
-                            </div>
-                          <%--  <div>
-                                <h3 class="text text--light">
-                                    Resoluci&oacute;n
-                                </h3>
-                                <p class="text text--bold">720p (HD)</p>
-                            </div>
-                           
-                            <div>
-                                <h3 class="text text--light">
-                                    Dispositivos del hogar en los se puede ver
-                                    Ahayou al mismo tiempo
-                                </h3>
-                                <p class="text text--bold">1</p>
-                            </div>--%>
-                             <div>
-                                 <h3 class="text text--light">
-                                     Dispositivos compatibles
-                                 </h3>
-                                 <p class="text text--bold">
-                                     TV, computadora, tel&eacute;fono, tablet
-                                 </p>
-                             </div>
-                            <div>
-                                <h3 class="text text--light">
-                                    <%# Eval("ahorro") %>
-                                </h3>
-                                <p class="text text--bold"></p>
-                            </div>
-                              <asp:Button class="button button--orange full-width button--border" OnClientClick="return confirm('Una vez que Ud. elija su plan correspondiente la plataforma lo enviará a una pantalla a realizar su pago, una vez que realice el pago y el pago sea éxitos proceda a presionar el botón de retroceder del browser o vuela a ingresar a la página www.ahayou.bo.')"  CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Comprar" />
-                        </div>
-                    </article>
-                    </ItemTemplate>
-            </asp:Repeater>
-                    <h1 style="border:2px solid;color:orange">
-                    ADVERTENCIA: Una vez que Ud. elija su plan correspondiente la plataforma lo enviará a una pantalla a realizar su pago, una vez que realice el pago y el pago sea éxitos proceda a presionar el botón de retroceder del browser o vuela a ingresar a la página www.ahayou.bo.
-                </h1>
-                </div>
-                
-            </section>
-            
-        </main>
-                    
+        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+        
         <footer class="footer">
             <div class="footer__image-container">
                 <img
@@ -297,7 +221,7 @@
     <script src="js/footer-visited-color.js"></script>
         <script src="js/open-menu.js"></script>
         <script src="js/show-validation-alert.js" defer></script>
+
         <script src="js/open-submenu.js"></script>
 </body>
 </html>
-

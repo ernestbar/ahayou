@@ -205,7 +205,7 @@
                                             <div
                                                 class="arrow green absolute arrow__corner"
                                             ></div>
-                                            <h3 class="plans__item-title" style="width:250px;">
+                                            <h3 class="plans__item-title">
                                                 <%# Eval("plan_ingles") %>
                                             </h3>
                                             <%--<ul class="plans__item-descriptions">

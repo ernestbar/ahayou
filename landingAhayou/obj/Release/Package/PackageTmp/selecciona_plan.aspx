@@ -226,16 +226,20 @@
                                 </h3>
                                 <p class="text text--bold"></p>
                             </div>
-                              <asp:Button class="button button--orange full-width button--border" CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Comprar" />
+                              <asp:Button class="button button--orange full-width button--border" OnClientClick="return confirm('Una vez que Ud. elija su plan correspondiente la plataforma lo enviará a una pantalla a realizar su pago, una vez que realice el pago y el pago sea éxitos proceda a presionar el botón de retroceder del browser o vuela a ingresar a la página www.ahayou.bo.')"  CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Comprar" />
                         </div>
                     </article>
                     </ItemTemplate>
             </asp:Repeater>
-            
+                    <h1 style="border:2px solid;color:orange">
+                    ADVERTENCIA: Una vez que Ud. elija su plan correspondiente la plataforma lo enviará a una pantalla a realizar su pago, una vez que realice el pago y el pago sea éxitos proceda a presionar el botón de retroceder del browser o vuela a ingresar a la página www.ahayou.bo.
+                </h1>
                 </div>
+                
             </section>
+            
         </main>
-        
+                    
         <footer class="footer">
             <div class="footer__image-container">
                 <img
@@ -293,7 +297,6 @@
     <script src="js/footer-visited-color.js"></script>
         <script src="js/open-menu.js"></script>
         <script src="js/show-validation-alert.js" defer></script>
-
         <script src="js/open-submenu.js"></script>
 </body>
 </html>

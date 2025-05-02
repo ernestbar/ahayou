@@ -285,7 +285,7 @@
                             
                         </label>
                         <asp:Panel ID="Panel_perfil" runat="server">
-                             <section class="profiles" style="width:100px">
+                             <section class="profiles" style="width:70px">
                                <asp:Repeater ID="Repeater1" DataSourceID="odsAvatares" runat="server">
                              <ItemTemplate>
                                  <asp:LinkButton class="profiles__item" ID="lbtnPerfil" OnClick="lbtnPerfil_Click" CommandArgument='<%# Eval("cod_perfil_suscriptor")+"|"+ Eval("pin")+"|"+ Eval("nombre_perfil") %>'  runat="server"> <img

@@ -226,12 +226,14 @@
                                 </h3>
                                 <p class="text text--bold"></p>
                             </div>
-                              <asp:Button class="button button--orange full-width button--border" CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Buy" />
+                              <asp:Button class="button button--orange full-width button--border"  OnClientClick="return confirm('Once you choose your corresponding plan, the platform will send you to a screen to make your payment. Once you make the payment and the payment is successful, proceed to press the browser's back button or re-enter the www.ahayou.bo page.')"  CommandArgument='<%# Eval("url_pasarela")+"|"+ Eval("codigo_plan")%>' OnClick="btnComprar_Click" ID="btnComprar" runat="server" Text="Buy" />
                         </div>
                     </article>
                     </ItemTemplate>
             </asp:Repeater>
-            
+                <h1 style="border:2px solid;color:orange">
+                    WARNING: Once you choose your corresponding plan, the platform will send you to a screen to make your payment. Once you make the payment and the payment is successful, proceed to press the browser's back button or re-enter the www.ahayou.bo page.
+                </h1>
                 </div>
             </section>
         </main>

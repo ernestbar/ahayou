@@ -197,7 +197,9 @@ namespace landingAhayou
                 string[] id = obj.CommandArgument.ToString().Split('|');
                 Int64 ID = Clases.PagosSuscriptores.PR_REG_DEVUELVE_IDSESION(lblUsuario.Text, Int64.Parse(id[1]));
                 string url_final = id[0] + ID.ToString();
-                Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
+                Session["url_stripe"] = url_final;
+                Response.Redirect(url_final);
+                //Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
             }
             
         }

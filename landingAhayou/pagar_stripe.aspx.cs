@@ -9,12 +9,20 @@ using System.Web.UI.WebControls;
 
 namespace landingAhayou
 {
-    public partial class selecciona_plan_us : System.Web.UI.Page
+    public partial class pagar_stripe : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
+                string ifrm = @"<iframe
+                          id=""inlineFrameExample""
+                          title=""Inline Frame Example""
+                          width=""100%""
+                          height=""100%""
+                          src='"+ Session["url_stripe"].ToString() + "'>"+
+                        "</iframe>";
+                Literal1.Text = ifrm;
                 if (Session["usuario"] == null)
                 {
                     Panel_logout.Visible = true;
@@ -172,18 +180,19 @@ namespace landingAhayou
                         if (Session["menu"] == null) { lblMenu.Text = "0"; }
                         else { lblMenu.Text = Session["menu"].ToString(); }
                     }
+
                 }
 
             }
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login_us.aspx");
+            Response.Redirect("login.aspx");
         }
 
         protected void btnSuscribete_Click(object sender, EventArgs e)
         {
-            Response.Redirect("suscribete_us.aspx");
+            Response.Redirect("suscribete.aspx");
         }
 
         protected void btnComprar_Click(object sender, EventArgs e)
@@ -196,9 +205,11 @@ namespace landingAhayou
                 string[] id = obj.CommandArgument.ToString().Split('|');
                 Int64 ID = Clases.PagosSuscriptores.PR_REG_DEVUELVE_IDSESION(lblUsuario.Text, Int64.Parse(id[1]));
                 string url_final = id[0] + ID.ToString();
-                Response.Redirect(url_final);
+                Session["url_stripe"] = url_final;
+                Response.Redirect("pagar_stripe.aspx");
                 //Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
             }
+
         }
         protected void btnMenu_Click(object sender, EventArgs e)
         {
@@ -206,7 +217,7 @@ namespace landingAhayou
             string id = obj.CommandArgument.ToString();
             lblMenu.Text = id;
             Session["menu"] = id;
-            Response.Redirect("cartelera_us.aspx");
+            Response.Redirect("cartelera.aspx");
         }
         protected void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -219,7 +230,7 @@ namespace landingAhayou
             Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["Sesion"].Expires = DateTime.Now.AddDays(-1);
-            Response.Redirect("home_us.aspx");
+            Response.Redirect("home.aspx");
         }
         protected void lbtnPerfiles_Click(object sender, EventArgs e)
         {
@@ -231,9 +242,9 @@ namespace landingAhayou
             Session["pin"] = id[1];
             Response.Cookies["cod_perfil_suscriptor"].Value = id[0];
             if (id[1] == "0")
-                Response.Redirect("cartelera_us.aspx");
+                Response.Redirect("cartelera.aspx");
             else
-                Response.Redirect("pin_perfil_us.aspx");
+                Response.Redirect("pin_perfil.aspx");
         }
 
         protected void lbtnCuenta_Click(object sender, EventArgs e)
@@ -249,10 +260,10 @@ namespace landingAhayou
                     {
 
                         if (dr["es_principal"].ToString() == "SI")
-                            Response.Redirect("cuenta_suscriptor_us.aspx");
+                            Response.Redirect("cuenta_suscriptor.aspx");
                         else
                         {
-                            string script = string.Format("alert('{0}');", "Only the main profile can edit the account.");
+                            string script = string.Format("alert('{0}');", "Solo el perfil principal puede editar la cuenta.");
                             ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
                         }
 
@@ -261,7 +272,7 @@ namespace landingAhayou
             }
             else
             {
-                Response.Redirect("selecciona_plan_us.aspx");
+                Response.Redirect("selecciona_plan.aspx");
             }
 
         }
