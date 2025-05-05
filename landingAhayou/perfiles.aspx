@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="css/vanilla-page.css" />
         <link rel="stylesheet" href="css/profiles.css" />
         <link rel="stylesheet" href="css/default-background.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -50,7 +51,7 @@
                     <input class="header__button header__button--icon" type="button" onclick="location.href='home.aspx';" />
                     <input class="header__button header__button--icon" type="button" onclick="location.href='home_us.aspx';" />
                         <div class="header__nav-buttons header__nav-buttons--with-text">
-                          <button
+                         <%-- <button
                               class="header__button header__button--text header__button--bg-orange"
                             type="button" onclick="location.href='suscribete.aspx';">
                               Suscr&iacute;bete
@@ -59,7 +60,7 @@
                               class="header__button header__button--text header__button--bg-green"
                            type="button" onclick="location.href='login.aspx';">
                               Iniciar Sesi&oacute;n
-                          </button>
+                          </button>--%>
                       </div> 
     
                 </div>
@@ -75,8 +76,8 @@
          
                           <input class="options__button" type="button" onclick="location.href='home.aspx';" value="Español" />
                         <input class="options__button" type="button" onclick="location.href='home_us.aspx';" value="Ingles" />
-                        <input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
-                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />
+                        <%--<input class="options__button" type="button" onclick="location.href='suscribete.aspx';" value="Suscribete" />
+                        <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />--%>
                      </div>
                  </div>
                 <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
