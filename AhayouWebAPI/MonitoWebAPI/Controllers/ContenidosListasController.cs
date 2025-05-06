@@ -73,10 +73,10 @@ namespace AhayouWebAPI.Controllers
                 conexion.Close();
 
                 oUsuario.PV_DESCRIPCIONPR = (string)comando.Parameters["@PV_DESCRIPCIONPR"].Value;
-                if (string.IsNullOrEmpty(comando.Parameters["@error"].Value.ToString()))
+                if (string.IsNullOrEmpty(comando.Parameters["@PV_ERROR"].Value.ToString()))
                     error = "";
                 else
-                    error = (string)comando.Parameters["@error"].Value;
+                    error = (string)comando.Parameters["@PV_ERROR"].Value;
 
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
                 oRespuestaAPI.exitoso = error == "" ? true : false;
