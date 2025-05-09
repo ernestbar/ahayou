@@ -7,6 +7,7 @@
 <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ahayou</title>
+        <meta name="description" content="Plataforma de streaming con películas, series y cortos bolivianos. Disfruta contenido con alma boliviana estés donde estés. Cine, cultura e identidad en un solo lugar." />
 
         <link
             rel="icon"
@@ -37,6 +38,26 @@
         <link rel="stylesheet" href="css/vanilla-page.css" />
         <link rel="stylesheet" href="css/default-background.css" />
         <link rel="stylesheet" href="css/search-results.css" />
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97CDTXJNPZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-97CDTXJNPZ');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W3ZD3NZB');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
     <form id="form1" runat="server">
