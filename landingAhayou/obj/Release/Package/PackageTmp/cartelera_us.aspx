@@ -7,7 +7,7 @@
 <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ahayou</title>
-
+        <meta name="description" content="Streaming platform with Bolivian films, series, and short films. Enjoy content with a Bolivian soul wherever you are. Cinema, culture, and identity all in one place." />
         <link
             rel="icon"
             href="imgs/logos/logo-ahayou-2.png"
@@ -37,6 +37,27 @@
         <link rel="stylesheet" href="css/vanilla-page.css" />
         <link rel="stylesheet" href="css/default-background.css" />
         <link rel="stylesheet" href="css/search-results.css" />
+
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97CDTXJNPZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-97CDTXJNPZ');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W3ZD3NZB');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
     <form id="form1" runat="server">
@@ -153,6 +174,7 @@
                                      
                                 </ItemTemplate>
                             </asp:Repeater>
+                            <asp:Label ID="lblNusuario" class="text--small text text--light" ForeColor="Orange" runat="server" Text=""></asp:Label>
                             <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
                                  <img
                                      src="imgs/icons/administration.svg"

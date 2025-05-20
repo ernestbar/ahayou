@@ -87,6 +87,15 @@ namespace landingAhayou
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
+        /// Control valRangeTxtcontactId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator valRangeTxtcontactId;
+
+        /// <summary>
         /// Control nombre.
         /// </summary>
         /// <remarks>

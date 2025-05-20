@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/buttons.css" />
         <link rel="stylesheet" href="css/hamburger.css" />
+       
 </head>
 <body>
     <form id="form1" runat="server">
@@ -135,6 +136,7 @@
                             </label>
                             <asp:TextBox class="form__input form__input--dark" ValidationGroup="formulario" ID="celular" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="formulario" ControlToValidate="celular" runat="server" ErrorMessage="* required" ForeColor="Orange"></asp:RequiredFieldValidator>
+                            <asp:RangeValidator runat="server" ID = "valRangeTxtcontactId" ValidationGroup="formulario"  controlToValidate="celular" Type ="Integer" Minimumvalue = "0" Maximumvalue ="2147483647" ForeColor="Orange" ErrorMessage="Only numbers" Display="Dynamic"></asp:RangeValidator>
                         </div>
                         <div class="form__input-container">
                             <label
@@ -165,7 +167,7 @@
                              <asp:TextBox class="form__input form__input--dark" ValidationGroup="formulario" TextMode="Password" ID="password" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="formulario" ControlToValidate="Password" runat="server" ErrorMessage="* required" ForeColor="Orange"></asp:RequiredFieldValidator>
                         </div>
-                        <asp:Button class="button button--orange full-width button--border" ValidationGroup="formulario" OnClick="btnSiguiente_Click" ID="btnSiguiente" runat="server" Text="Next" />
+                        <asp:Button class="button button--orange full-width button--border " ValidationGroup="formulario" OnClick="btnSiguiente_Click" ID="btnSiguiente" runat="server" Text="Next" />
         
                     </form>
             </section>
@@ -228,5 +230,6 @@
     </form>
      <script src="js/open-menu.js"></script>
  <script src="js/open-submenu.js"></script>
+   
 </body>
 </html>

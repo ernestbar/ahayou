@@ -80,7 +80,7 @@
                         <input class="options__button" type="button" onclick="location.href='login.aspx';" value="Login" />--%>
                      </div>
                  </div>
-                <asp:Label ID="lblUsuario" runat="server" Visible="false" Text=""></asp:Label>
+                <asp:Label ID="lblUsuario" runat="server" Visible="true" Text=""></asp:Label>
             </nav>
       </header>
         <main class="main main--flex">

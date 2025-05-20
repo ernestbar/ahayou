@@ -170,6 +170,7 @@
                      
                                 </ItemTemplate>
                             </asp:Repeater>
+                            <asp:Label ID="lblNusuario" class="text--small text text--light" ForeColor="Orange" runat="server" Text=""></asp:Label>
                             <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
                                  <img
                                      src="imgs/icons/administration.svg"
@@ -178,9 +179,9 @@
                                  <p class="text--small text text--light">
                                      Cuenta
                                  </p>
-
+                                 
                             </asp:LinkButton>
-        
+                           
            
                             <a href="cartelera.aspx" class="options__button--flex">
                                 <img
@@ -207,6 +208,7 @@
                              <asp:Button ID="btnMenu" class="options__button--last text--light text--center text--small" CommandArgument='<%# Eval("cod_formato_contenido") %>' OnClick="btnMenu_Click" runat="server" Text='<%# Eval("formato_contenido") %>' />
                          </ItemTemplate>
                      </asp:Repeater>
+                        
                         <asp:Button class="options__button--last text--light text--center text--small" OnClick="btnCerrar_Click" ID="btnCerrar" runat="server" Text="Cerrar Sessión" />
     
                     </div>

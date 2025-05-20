@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>E:\publishLanding</_PublishTargetUrl>
-    <History>True|2025-05-02T19:00:10.2454160Z||;True|2025-05-02T12:56:02.0451877-04:00||;True|2025-05-02T12:48:31.4958199-04:00||;</History>
+    <History>False|2025-05-14T15:56:06.8333375Z||;False|2025-05-14T11:55:30.2099676-04:00||;False|2025-05-14T11:54:33.8926887-04:00||;True|2025-05-14T11:50:51.9199976-04:00||;True|2025-05-14T11:32:16.0263553-04:00||;True|2025-05-14T10:39:58.8080226-04:00||;True|2025-05-14T09:11:10.8794995-04:00||;True|2025-05-14T08:45:14.5559644-04:00||;True|2025-05-02T15:00:10.2454160-04:00||;True|2025-05-02T12:56:02.0451877-04:00||;True|2025-05-02T12:48:31.4958199-04:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -11,13 +11,13 @@
       <publishTime>02/19/2025 09:28:13</publishTime>
     </File>
     <File Include="bin/manifest.json">
-      <publishTime>05/02/2025 10:51:20</publishTime>
+      <publishTime>02/05/2025 10:51:20</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>03/05/2023 18:41:40</publishTime>
+      <publishTime>05/03/2023 18:41:40</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/08/2023 03:09:56</publishTime>
+      <publishTime>08/03/2023 03:09:56</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>02/15/2022 01:38:32</publishTime>
@@ -59,10 +59,10 @@
       <publishTime>02/15/2022 01:21:10</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>10/04/2021 20:47:54</publishTime>
+      <publishTime>04/10/2021 20:47:54</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>10/04/2021 20:49:46</publishTime>
+      <publishTime>04/10/2021 20:49:46</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.CurrentVersions.targets">
       <publishTime>02/15/2022 01:33:08</publishTime>
@@ -182,25 +182,25 @@
       <publishTime>02/15/2022 01:38:42</publishTime>
     </File>
     <File Include="bin/WebAhayouAdmin.dll">
-      <publishTime>05/02/2025 15:00:09</publishTime>
+      <publishTime>05/14/2025 11:50:50</publishTime>
     </File>
     <File Include="bin/WebAhayouAdmin.dll.config">
       <publishTime>04/28/2025 16:33:30</publishTime>
     </File>
     <File Include="bin/WebAhayouAdmin.pdb">
-      <publishTime>05/02/2025 15:00:09</publishTime>
+      <publishTime>05/14/2025 11:50:50</publishTime>
     </File>
     <File Include="cambio_password.aspx">
-      <publishTime>04/15/2025 16:18:55</publishTime>
+      <publishTime>05/14/2025 11:06:04</publishTime>
     </File>
     <File Include="cambio_password_us.aspx">
-      <publishTime>04/23/2025 12:19:24</publishTime>
+      <publishTime>05/14/2025 11:06:03</publishTime>
     </File>
     <File Include="cartelera.aspx">
-      <publishTime>04/23/2025 12:04:14</publishTime>
+      <publishTime>05/14/2025 11:07:45</publishTime>
     </File>
     <File Include="cartelera_us.aspx">
-      <publishTime>04/23/2025 12:25:07</publishTime>
+      <publishTime>05/14/2025 11:07:45</publishTime>
     </File>
     <File Include="centro_ayuda.aspx">
       <publishTime>04/22/2025 11:02:47</publishTime>
@@ -323,10 +323,10 @@
       <publishTime>04/15/2025 10:59:32</publishTime>
     </File>
     <File Include="cuenta_suscriptor.aspx">
-      <publishTime>05/02/2025 10:52:52</publishTime>
+      <publishTime>05/14/2025 11:07:45</publishTime>
     </File>
     <File Include="cuenta_suscriptor_us.aspx">
-      <publishTime>04/29/2025 10:46:20</publishTime>
+      <publishTime>05/14/2025 11:07:45</publishTime>
     </File>
     <File Include="forma_pago.aspx">
       <publishTime>04/15/2025 14:25:56</publishTime>
@@ -335,10 +335,10 @@
       <publishTime>04/23/2025 12:19:24</publishTime>
     </File>
     <File Include="home.aspx">
-      <publishTime>04/28/2025 16:24:12</publishTime>
+      <publishTime>05/14/2025 11:02:48</publishTime>
     </File>
     <File Include="home_us.aspx">
-      <publishTime>04/28/2025 16:22:53</publishTime>
+      <publishTime>05/14/2025 11:07:20</publishTime>
     </File>
     <File Include="Imagenes/fondo-AHAYOU.png">
       <publishTime>02/14/2025 12:52:44</publishTime>
@@ -1379,28 +1379,28 @@
       <publishTime>02/14/2025 12:52:47</publishTime>
     </File>
     <File Include="manifest.json">
-      <publishTime>05/02/2025 10:51:20</publishTime>
+      <publishTime>02/05/2025 10:51:20</publishTime>
     </File>
     <File Include="mas_informacion.aspx">
-      <publishTime>04/15/2025 14:28:25</publishTime>
+      <publishTime>05/14/2025 11:07:45</publishTime>
     </File>
     <File Include="mas_informacion_us.aspx">
-      <publishTime>04/23/2025 12:16:04</publishTime>
+      <publishTime>05/14/2025 11:07:42</publishTime>
     </File>
     <File Include="pagar_stripe.aspx">
-      <publishTime>05/02/2025 10:45:17</publishTime>
+      <publishTime>02/05/2025 10:45:17</publishTime>
     </File>
     <File Include="perfiles.aspx">
-      <publishTime>04/15/2025 16:17:55</publishTime>
+      <publishTime>05/14/2025 11:11:12</publishTime>
     </File>
     <File Include="perfiles_us.aspx">
-      <publishTime>04/23/2025 12:19:24</publishTime>
+      <publishTime>05/14/2025 11:11:12</publishTime>
     </File>
     <File Include="pin_perfil.aspx">
-      <publishTime>04/25/2025 11:25:35</publishTime>
+      <publishTime>05/14/2025 11:08:49</publishTime>
     </File>
     <File Include="pin_perfil_us.aspx">
-      <publishTime>04/25/2025 11:25:35</publishTime>
+      <publishTime>05/14/2025 11:08:59</publishTime>
     </File>
     <File Include="planes_ahayou.aspx">
       <publishTime>04/23/2025 12:48:32</publishTime>
@@ -1418,10 +1418,10 @@
       <publishTime>04/23/2025 12:19:24</publishTime>
     </File>
     <File Include="resultado_busqueda.aspx">
-      <publishTime>04/15/2025 14:28:25</publishTime>
+      <publishTime>05/14/2025 11:11:12</publishTime>
     </File>
     <File Include="resultado_busqueda_us.aspx">
-      <publishTime>04/23/2025 12:17:47</publishTime>
+      <publishTime>05/14/2025 11:11:12</publishTime>
     </File>
     <File Include="return.js">
       <publishTime>04/07/2025 09:17:28</publishTime>
@@ -1436,13 +1436,13 @@
       <publishTime>02/14/2025 12:52:47</publishTime>
     </File>
     <File Include="selecciona_plan.aspx">
-      <publishTime>05/02/2025 14:53:12</publishTime>
+      <publishTime>02/05/2025 14:53:12</publishTime>
     </File>
     <File Include="selecciona_plan_us.aspx">
-      <publishTime>05/02/2025 14:57:44</publishTime>
+      <publishTime>05/14/2025 11:11:11</publishTime>
     </File>
     <File Include="service-worker.js">
-      <publishTime>05/02/2025 10:50:49</publishTime>
+      <publishTime>02/05/2025 10:50:49</publishTime>
     </File>
     <File Include="suscribete.aspx">
       <publishTime>04/15/2025 16:03:38</publishTime>
@@ -1463,13 +1463,13 @@
       <publishTime>04/23/2025 12:19:18</publishTime>
     </File>
     <File Include="ver_streaming.aspx">
-      <publishTime>04/15/2025 14:31:12</publishTime>
+      <publishTime>05/14/2025 11:11:11</publishTime>
     </File>
     <File Include="ver_streaming_us.aspx">
-      <publishTime>04/23/2025 12:19:23</publishTime>
+      <publishTime>05/14/2025 11:11:05</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/02/2025 12:48:29</publishTime>
+      <publishTime>02/05/2025 12:48:29</publishTime>
     </File>
   </ItemGroup>
 </Project>

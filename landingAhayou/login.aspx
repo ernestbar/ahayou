@@ -182,9 +182,10 @@
                                 </label>--%>
                             </div>
                         </form>
+                         
                         <p class="login-footer__text">
-                            ¿Primera vez en Ahayou?&nbsp;
-                            <asp:LinkButton class="login-footer__link" OnClick="lbtnSuscribete_Click"  CausesValidation="false" ID="lbtnSuscribete" runat="server">Suscribete ya.</asp:LinkButton>
+                           <strong>¿Primera vez en Ahayou?</strong>
+                            <asp:LinkButton class=" button button--orange login-footer__link" OnClick="lbtnSuscribete_Click"  CausesValidation="false" ID="lbtnSuscribete" runat="server">Suscribete ya.</asp:LinkButton>
                         </p>
                         <p class="text text--light full-width">
                             Esta página está protegida por Google reCAPTCHA para

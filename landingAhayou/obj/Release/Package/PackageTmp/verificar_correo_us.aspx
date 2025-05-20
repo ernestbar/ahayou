@@ -115,15 +115,15 @@
                 </div>
                 <h1>Excellent! Now let's check your email.</h1>
                 <p class="text text--light text--center full-width">
-                    Click on the link we sent to
+                    Click on the link we sent to login
                     <span class="text--bold"
                         >
                         <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label> </span
                     >
-                   to complete the verification.
+                   or press next to choose your plan.
                 </p>
                 <p class="text text--light text--center full-width">
-                    By verifying your email, you can improve account security and receive important communications from AHAYOU.
+                    If you received the email, it means your subscription was successful, and you will be able to receive important communications from AHAYOU.
                 </p>
                
                 <asp:Button class="button button--green full-width button--border" ID="Button1" OnClick="Button1_Click" runat="server" Text="Next" />

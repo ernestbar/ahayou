@@ -33,13 +33,13 @@ E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\vbc.exe.config
 E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\vbc.rsp
 E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\VBCSCompiler.exe
 E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\VBCSCompiler.exe.config
+E:\ERNESTO\ahayou\landingAhayou\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ERNESTO\ahayou\landingAhayou\bin\Newtonsoft.Json.xml
 E:\ERNESTO\ahayou\landingAhayou\obj\Release\landingAhayou.csproj.AssemblyReference.cache
 E:\ERNESTO\ahayou\landingAhayou\obj\Release\landingAhayou.csproj.CoreCompileInputs.cache
 E:\ERNESTO\ahayou\landingAhayou\obj\Release\landingA.744EE97A.Up2Date
 E:\ERNESTO\ahayou\landingAhayou\obj\Release\WebAhayouAdmin.dll
 E:\ERNESTO\ahayou\landingAhayou\obj\Release\WebAhayouAdmin.pdb
-E:\ERNESTO\ahayou\landingAhayou\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\ERNESTO\ahayou\landingAhayou\bin\Newtonsoft.Json.xml
 E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\Microsoft.Win32.Primitives.dll
 E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\System.AppContext.dll
 E:\ERNESTO\ahayou\landingAhayou\bin\roslyn\System.Console.dll

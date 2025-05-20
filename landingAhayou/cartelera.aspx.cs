@@ -40,6 +40,7 @@ namespace landingAhayou
                         Session["usuario"] = email;
                         Panel_logout.Visible = false;
                         Panel_login.Visible = true;
+                        lblNusuario.Text = email;
                         lblUsuario.Text = Session["usuario"].ToString();
                         if (Session["cod_plan_suscriptor"] == null)
                         { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
@@ -96,6 +97,7 @@ namespace landingAhayou
                             //Response.Redirect("perfiles.aspx");
                         }
                         Session["usuario"] = email;
+                        lblNusuario.Text = email;
                         Panel_logout.Visible = false;
                         Panel_login.Visible = true;
                         lblUsuario.Text = Session["usuario"].ToString();
@@ -141,6 +143,7 @@ namespace landingAhayou
                         Panel_logout.Visible = false;
                         Panel_login.Visible = true;
                         lblUsuario.Text = Session["usuario"].ToString();
+                        lblNusuario.Text = Session["usuario"].ToString();
                         if (Session["cod_plan_suscriptor"] == null)
                         { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
                         else

@@ -19,7 +19,10 @@ namespace landingAhayou
             {
                 if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
                 {
+                    Panel_logout.Visible = false;
+                    Panel_login.Visible = true;
                     string email = Request.Cookies["UserName"].Value;
+                    lblNusuario.Text = email;
                     DataTable dt = new DataTable();
                     dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(email);
                     if (dt.Rows.Count > 0)
@@ -28,53 +31,18 @@ namespace landingAhayou
                         foreach (DataRow dr in dt.Rows)
                         {
                             Session["cod_plan_suscriptor"] = dr["cod_plan_suscriptor"];
+                            lblplanSuscriptor.Text = dr["cod_plan_suscriptor"].ToString();
                             Session["codigo_plan"] = dr["codigo_plan"];
+                            lblCodigoPlan.Text = dr["codigo_plan"].ToString();
                         }
-                        Response.Redirect("perfiles.aspx");
+                        Response.Redirect("perfiles_us.aspx");
                     }
-                    Session["usuario"]=email;
-                }
-
-                if (Session["usuario"] == null)
-                {
-                    Panel_logout.Visible = true;
-                    Panel_login.Visible = false;
-                    lblUsuario.Text = "";
-                    //btnLogin.Visible = true;
-                    //btnSuscribete.Visible = true;
-                   
-
-                }
-                else
-                {
-                    Panel_logout.Visible = false;
-                    Panel_login.Visible = true;
-                    lblUsuario.Text = Session["usuario"].ToString();
-                    if (Session["cod_plan_suscriptor"] == null)
-                    { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
-                    else
-                        lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
-                    if (Session["cod_perfil_suscriptor"] == null)
-                        lblPerfilSuscriptor.Text = "0";
-                    else
-                        lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
-
-                    if (Session["codigo_plan"] == null)
-                        lblCodigoPlan.Text = "0";
-                    else
-                        lblCodigoPlan.Text = Session["codigo_plan"].ToString();
-                    if (Request.Cookies["cod_perfil_suscriptor"] != null)
-                    {
-                        lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
-                    }
-                    //btnLogin.Visible = false;
-                    //btnSuscribete.Visible = false;
                     imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
-                    DataTable dt = new DataTable();
+                    DataTable dt1 = new DataTable();
 
-                    dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+                    dt1 = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
 
-                    foreach (DataRow dr in dt.Rows)
+                    foreach (DataRow dr in dt1.Rows)
                     {
                         if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
                         {
@@ -83,6 +51,60 @@ namespace landingAhayou
                     }
                     if (Session["menu"] == null) { lblMenu.Text = "0"; }
                     else { lblMenu.Text = Session["menu"].ToString(); }
+                    Session["usuario"] = email;
+                }
+                else
+                {
+                    if (Session["usuario"] == null)
+                    {
+                        Panel_logout.Visible = true;
+                        Panel_login.Visible = false;
+                        lblUsuario.Text = "";
+                        //btnLogin.Visible = true;
+                        //btnSuscribete.Visible = true;
+
+
+                    }
+                    else
+                    {
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
+                        lblUsuario.Text = Session["usuario"].ToString();
+                        lblNusuario.Text = Session["usuario"].ToString();
+                        if (Session["cod_plan_suscriptor"] == null)
+                        { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
+                        else
+                            lblplanSuscriptor.Text = Session["cod_plan_suscriptor"].ToString();
+                        if (Session["cod_perfil_suscriptor"] == null)
+                            lblPerfilSuscriptor.Text = "0";
+                        else
+                            lblPerfilSuscriptor.Text = Session["cod_perfil_suscriptor"].ToString();
+
+                        if (Session["codigo_plan"] == null)
+                            lblCodigoPlan.Text = "0";
+                        else
+                            lblCodigoPlan.Text = Session["codigo_plan"].ToString();
+                        if (Request.Cookies["cod_perfil_suscriptor"] != null)
+                        {
+                            lblPerfilSuscriptor.Text = Request.Cookies["cod_perfil_suscriptor"].Value;
+                        }
+                        //btnLogin.Visible = false;
+                        //btnSuscribete.Visible = false;
+                        imgPerfil.ImageUrl = "~/imgs/icons/profile.svg";
+                        DataTable dt = new DataTable();
+
+                        dt = Suscriptores.PR_PAR_GET_PERFILES_SUSCRIPTOR(lblplanSuscriptor.Text);
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (dr["cod_perfil_suscriptor"].ToString() == lblPerfilSuscriptor.Text)
+                            {
+                                imgPerfil.ImageUrl = "data:image/jpg;base64," + dr["AVATAR"].ToString();
+                            }
+                        }
+                        if (Session["menu"] == null) { lblMenu.Text = "0"; }
+                        else { lblMenu.Text = Session["menu"].ToString(); }
+                    }
                 }
 
             }
@@ -266,7 +288,8 @@ namespace landingAhayou
                 Int64 ID = Clases.PagosSuscriptores.PR_REG_DEVUELVE_IDSESION(lblUsuario.Text, Int64.Parse(id[1]));
 
                 string url_final = id[0] + ID.ToString();
-                Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
+                Response.Redirect(url_final);
+                //Response.Write("<script>window.open('" + url_final + "','_blank');</script>");
             }
             
 

@@ -118,7 +118,8 @@
                                 </ItemTemplate>
                             </asp:Repeater>
        
-        
+                            <asp:Label ID="lblNusuario" class="text--small text text--light" ForeColor="Orange" runat="server" Text=""></asp:Label>
+
                             <asp:LinkButton class="options__button--flex" OnClick="lbtnCuenta_Click" ID="lbtnCuenta" runat="server">
                                    <img
                                        src="imgs/icons/administration.svg"

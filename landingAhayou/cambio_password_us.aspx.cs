@@ -34,7 +34,11 @@ namespace landingAhayou
                     //btnSuscribete.Visible = true;
                     if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
                     {
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
                         string email = Request.Cookies["UserName"].Value;
+                        lblNusuario.Text = email;
+                        DataTable dt2 = new DataTable();
                         DataTable dt = new DataTable();
                         dt = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(email);
                         if (dt.Rows.Count > 0)
@@ -54,7 +58,10 @@ namespace landingAhayou
                 {
                     if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
                     {
+                        Panel_logout.Visible = false;
+                        Panel_login.Visible = true;
                         string email = Request.Cookies["UserName"].Value;
+                        lblNusuario.Text = email;
                         DataTable dt2 = new DataTable();
                         dt2 = Clases.Suscriptores.PR_PAR_GET_PLAN_SUSCRIPTOR(email);
                         if (dt2.Rows.Count > 0)
@@ -69,11 +76,12 @@ namespace landingAhayou
                         }
                         Session["usuario"] = email;
                     }
-
+                   
                     Panel_logout.Visible = false;
                     Panel_login.Visible = true;
                     lblUsuario.Text = Session["usuario"].ToString();
                     email.Text = Session["usuario"].ToString();
+                    lblNusuario.Text = Session["usuario"].ToString();
                     if (Session["cod_plan_suscriptor"] == null)
                     { lblplanSuscriptor.Text = "0"; Repeater8.Visible = true; }
                     else

@@ -113,18 +113,18 @@
                         />
                     </svg>
                 </div>
-                <h1>¡Excelente! Ahora verifiquemos tu mail</h1>
+                <h1>¡Excelente! Ahora verifiquemos tu email</h1>
                 <p class="text text--light text--center full-width">
                     Haz clic en el enlace que enviamos a
                     <span class="text--bold"
                         >
                         <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label> </span
                     >
-                    para completar la verificación.
+                    para logearte o presiona siguiente para elegir tu plan.
                 </p>
                 <p class="text text--light text--center full-width">
-                    Al verificar tu email, podrás mejorar la seguridad de la
-                    cuenta y recibir comunicaciones importantes de AHAYOU.
+                    Si recibiste el correo, quiere decir que tu suscripcion fue exitosa
+                    y podrás recibir comunicaciones importantes de AHAYOU.
                 </p>
                
                 <asp:Button class="button button--green full-width button--border" ID="Button1" OnClick="Button1_Click" runat="server" Text="Siguiente" />

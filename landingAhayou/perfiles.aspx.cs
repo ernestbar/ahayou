@@ -30,7 +30,7 @@ namespace landingAhayou
                         //Response.Redirect("perfiles.aspx");
                     }
                     Session["usuario"] = email;
-                    
+                    lblUsuario.Text = email;
                 }
                 if (Session["usuario"] == null)
                 {
