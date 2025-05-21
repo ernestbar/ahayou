@@ -192,6 +192,7 @@
                             <div>
                                 <h3 class="text text--light"> <%# Eval("planes") %></h3>
                                 <p class="text text--bold"><%# Eval("moneda") %> <%# Eval("monto") %></p>
+                                 <p><%# Eval("pago_mes") %></p>
                             </div>
                             <div>
                                 <h3 class="text text--light">

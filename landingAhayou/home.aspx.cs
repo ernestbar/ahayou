@@ -52,6 +52,7 @@ namespace landingAhayou
                     if (Session["menu"] == null) { lblMenu.Text = "0"; }
                     else { lblMenu.Text = Session["menu"].ToString(); }
                     Session["usuario"] = email;
+                    lblUsuario.Text = email;
                 }
                 else
                 {

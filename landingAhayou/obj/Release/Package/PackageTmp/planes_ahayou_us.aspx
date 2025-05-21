@@ -130,6 +130,7 @@
                             <div>
                                 <h3 class="text text--light"> <%# Eval("plan_ingles") %></h3>
                                 <p class="text text--bold"><%# Eval("moneda") %> <%# Eval("monto") %></p>
+                                <p><%# Eval("pago_mes_ingles") %></p>
                             </div>
                             <div>
                                 <h3 class="text text--light">

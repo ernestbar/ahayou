@@ -184,8 +184,8 @@
                             </div>
                         </form>
                         <p class="login-footer__text">
-                            First time at Ahayou?
-                            <asp:LinkButton class="login-footer__link" OnClick="lbtnSuscribete_Click"  CausesValidation="false" ID="lbtnSuscribete" runat="server">Subscribe now.</asp:LinkButton>
+                            <strong>First time at Ahayou?</strong>    
+                            <asp:LinkButton class=" button button--orange login-footer__link" OnClick="lbtnSuscribete_Click"  CausesValidation="false" ID="lbtnSuscribete" runat="server">Subscribe now.</asp:LinkButton>
                         </p>
                         <p class="text text--light full-width">
                             This page is protected by Google reCAPTCHA to verify that you are not a robot.<br />

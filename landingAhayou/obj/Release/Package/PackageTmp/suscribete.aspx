@@ -135,6 +135,7 @@
                             </label>
                             <asp:TextBox class="form__input form__input--dark" ValidationGroup="formulario" ID="celular" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="formulario" ControlToValidate="celular" runat="server" ErrorMessage="* Campo requerido" ForeColor="Orange"></asp:RequiredFieldValidator>
+                            <asp:RangeValidator runat="server" ID = "valRangeTxtcontactId" ValidationGroup="formulario"  controlToValidate="celular" Type ="Integer" Minimumvalue = "0" Maximumvalue ="2147483647" ForeColor="Orange" ErrorMessage="Solo numeros" Display="Dynamic"></asp:RangeValidator>
                         </div>
                         <div class="form__input-container">
                             <label
