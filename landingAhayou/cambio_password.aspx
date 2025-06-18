@@ -231,7 +231,7 @@
                         <div class="form__input-container">
                             <asp:TextBox ID="txtPassword2" TextMode="Password"  placeholder="Contraseña nueva (6-60 caracteres)" class="form__input container--border-gray" runat="server"></asp:TextBox>
                         </div>
-                        <asp:CompareValidator ID="cfvNumeroCelular" runat="server"  ControlToCompare="txtPassword" ValidationGroup="password" ControlToValidate="txtPassword2" Operator="Equal" Type="Integer" Display="Dynamic" ErrorMessage="* Las nuevas contraseñas no coinciden." ></asp:CompareValidator>
+                        <asp:CompareValidator ID="cfvNumeroCelular" runat="server"  ControlToCompare="txtPassword" ValidationGroup="password" ControlToValidate="txtPassword2" Operator="Equal" Display="Dynamic" ErrorMessage="* Las nuevas contraseñas no coinciden." ></asp:CompareValidator>
                         <p><asp:Label ID="lblAviso" runat="server" Text=""></asp:Label></p>
                         <%--<div
                             class="form__input-container form__input-container--checkbox"

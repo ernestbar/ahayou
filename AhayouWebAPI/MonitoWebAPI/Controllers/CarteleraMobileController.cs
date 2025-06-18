@@ -53,12 +53,12 @@ namespace AhayouWebAPI.Controllers
                         select new Cartelera_mobile()
                         {
                             numero = (string)dr["numero"],
-                            descripcion = (string)dr["descripcion"],
-                            descripcion_ingles = (string)dr["descripcion_ingles"],
-                            codigo = (string)dr["codigo"],
-                            contenido = (string)dr["contenido"],
-                            gratis = (string)dr["gratis"],
-                            tiempo_visto = (string)dr["tiempo_visto"],
+                            descripcion =dr["descripcion"] == DBNull.Value ? "" : (string)dr["descripcion"],
+                            descripcion_ingles = dr["descripcion_ingles"] == DBNull.Value ? "" : (string)dr["descripcion_ingles"],
+                            codigo  = dr["codigo"] == DBNull.Value ? "" : (string)dr["codigo"],
+                            contenido = dr["contenido"] == DBNull.Value ? "" : (string)dr["contenido"],
+                            gratis = dr["gratis"] == DBNull.Value ? "" : (string)dr["gratis"],
+                            tiempo_visto = dr["tiempo_visto"] == DBNull.Value ? "" : (string)dr["tiempo_visto"],
                         }).ToList();
 
                 oRespuestaAPI.codigoEstado = HttpStatusCode.OK;
